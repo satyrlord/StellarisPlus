@@ -1,0 +1,92 @@
+objectTypes = {
+	pdxmesh = {
+		name = "machine_01_corvette_frame_mesh"
+		file = "gfx/models/ships/machine_01/machine_01_corvette_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "machine_01_orbital_station_frame_mesh"
+		file = "gfx/models/ships/machine_01/machine_01_orbital_station_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "machine_01_orbital_station_mesh"
+		file = "gfx/models/ships/machine_01/machine_01_orbital_station.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	# Aliases for third-party entity references that are present in this mod but don't ship their own meshes.
+	# These point at vanilla frame meshes to keep entities loadable.
+	pdxmesh = {
+		name = "mammalian_01_dreadnought_frame_mesh"
+		file = "gfx/models/ships/mammalian_01/mammalian_01_battleship_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "mammalian_01_battlecruiser_frame_mesh"
+		file = "gfx/models/ships/mammalian_01/mammalian_01_battleship_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "mammalian_01_SCX_dreadnought_frame_mesh"
+		file = "gfx/models/ships/mammalian_01/mammalian_01_battleship_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	pdxmesh = {
+		name = "molluscoid_01_SCX_dreadnought_frame_mesh"
+		file = "gfx/models/ships/molluscoid_01/molluscoid_01_battleship_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	# Some entities reference this mesh name without the usual _mesh suffix.
+	pdxmesh = {
+		name = "molluscoid_01_juggernaut_frame"
+		file = "gfx/models/ships/juggernauts/molluscoid_01/molluscoid_01_juggernaut_frame.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+}

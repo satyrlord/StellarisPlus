@@ -4,7 +4,7 @@ param(
 	[string]$SourceLogsDir = "$env:USERPROFILE\Documents\Paradox Interactive\Stellaris\logs",
 
 	# Path to the workspace inbox folder
-	[string]$InboxDir = (Join-Path (Split-Path -Parent $PSScriptRoot) 'help\_logs_inbox'),
+	[string]$InboxDir,
 
 	# Also copy exception.txt if present
 	[switch]$IncludeException,
@@ -15,6 +15,16 @@ param(
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
+
+$scriptDir = if ($PSScriptRoot) { $PSScriptRoot } elseif ($PSCommandPath) { Split-Path -Parent $PSCommandPath } else { $null }
+
+if ([string]::IsNullOrWhiteSpace($InboxDir)) {
+	$repoRoot = if ($scriptDir) { Split-Path -Parent $scriptDir } else { $null }
+	if (-not $repoRoot) {
+		throw 'Unable to resolve workspace root to compute InboxDir.'
+	}
+	$InboxDir = Join-Path $repoRoot 'help\_logs_inbox'
+}
 
 $logFiles = @(
 	'debug.log',
@@ -58,7 +68,7 @@ Get-ChildItem -LiteralPath $InboxDir -File -ErrorAction SilentlyContinue |
 
 # 2) Launch sptest -Wait
 if (-not $NoLaunch) {
-	$testScript = Join-Path $PSScriptRoot 'stellarisplus-test.ps1'
+	$testScript = Join-Path $scriptDir 'stellarisplus-test.ps1'
 	if (-not (Test-Path -LiteralPath $testScript)) {
 		throw "Missing test launcher script: $testScript"
 	}

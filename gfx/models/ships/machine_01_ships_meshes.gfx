@@ -385,7 +385,7 @@ objectTypes = {
 	pdxmesh = {
 		name = "machine_01_upgraded_orbital_habitat_frame_mesh"
 		file = "gfx/models/ships/Habitat_Assets/machine_01_super_habitat_rig.mesh"
-		animation = { id = "rotate"			type = "machine_01_super_habitat_frame_idle" }								
+		# Intentionally no animations: entities using this mesh use state_time to avoid animated-mesh warnings.
 		scale = 1.0
 	}
 

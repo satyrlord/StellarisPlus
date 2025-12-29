@@ -28,7 +28,7 @@ entity = {
 	#scale = @spyorb_scale
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle" 
+	state = { name = "idle" state_time = 5
 		event = { time = 0 node = "core" particle = "avian_01_colossus_inner_core_effect" keep_particle = yes trigger_once = yes }
 		start_event = { trigger_once = yes sound = { soundeffect = "spy_orb_hum_dome" } }
 	}
@@ -42,7 +42,7 @@ entity = {
 	#scale = @spyorb_scale
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle" 
+	state = { name = "idle" state_time = 5
 		#start_event = { time = 0 node = "effect_01" particle = "matde_platform_beam_effect" keep_particle = yes trigger_once = yes }
 		start_event = { time = 0 node = "effect_02" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
 		start_event = { time = 0 node = "effect_03" particle = "matde_core_small_beam_effect" keep_particle = yes trigger_once = yes }
@@ -57,7 +57,7 @@ entity = {
 	#scale = @spyorb_scale
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle" 
+	state = { name = "idle" state_time = 5
 		start_event = { trigger_once = yes sound = { soundeffect = "spy_orb_hum_antennas" } }
 		start_event = { time = 0 node = "effect_01" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes }	
 		start_event = { time = 0 node = "effect_02" particle = "generic_075_exhaust_circle_moving" keep_particle = yes trigger_once = yes }

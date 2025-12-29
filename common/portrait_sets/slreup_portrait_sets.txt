@@ -1,9 +1,5 @@
 HumanoidSL_set = {
 	species_class = HUM
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-	archetype = BIOLOGICAL	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_amazonian"	
 		"sl_banshee"	
@@ -19,7 +15,6 @@ HumanoidSL_set = {
 		"sl_mermaid"				
 		"sl_militarium"	
 		"sl_norse"		
-		"sl_savagedespoiler"		
 		"sl_shogun"			
 		"sl_UNE"		
 		"sl_wakanda"			
@@ -39,23 +34,13 @@ HumanoidSL_set = {
 		"sl_mermaid"		
 		"sl_militarium"	
 		"sl_norse"			
-		"sl_savagedespoiler"			
 		"sl_shogun"		
 		"sl_UNE"		
 		"sl_wakanda"			
 	}
-	
-	graphical_culture = humanoid_01
-	
-	move_pop_sound_effect = "moving_pop_confirmation"
-		
 }
 NecroidSL_set = {
 	species_class = NECROID
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-	archetype = BIOLOGICAL	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_banshee"
 		"sl_deathless"			
@@ -68,18 +53,9 @@ NecroidSL_set = {
 		"sl_demon"	
 		"sl_drow"			
 	}
-	
-	graphical_culture = necroid_01
-	
-	move_pop_sound_effect = "moving_pop_confirmation"
-		
 }
 ToxoidSL_set = {
 	species_class = TOX
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-	archetype = BIOLOGICAL	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_toxic"
 	
@@ -87,36 +63,18 @@ ToxoidSL_set = {
 	non_randomized_portraits = {
 		"sl_toxic"		
 	}
-	
-	graphical_culture = toxoid_01
-	
-	move_pop_sound_effect = "molluscoid_pops_move"
-		
 }
 PlantoidSL_set = {
 	species_class = PLANT
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-	archetype = BIOLOGICAL	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_nymph"		
 	}
 	non_randomized_portraits = {
 		"sl_nymph"	
 	}
-	
-	graphical_culture = plantoid_01
-	
-	move_pop_sound_effect = "moving_pop_confirmation"
-		
 }
 LithoidSL_set = {
 	species_class = LITHOID
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-	archetype = LITHOID	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_crystaloid"	
 		"sl_diamondgiant"			
@@ -125,63 +83,9 @@ LithoidSL_set = {
 		"sl_crystaloid"		
 		"sl_diamondgiant"			
 	}
-	
-	graphical_culture = lithoid_01
-	
-	move_pop_sound_effect = "reptilian_pops_move"
-		
 }
 MachineSL_set = {
 	species_class = MACHINE
-	possible = {
-		OR = {
-			AND = {
-				host_has_dlc = "The Machine Age"
-				authority = {
-					NOT = {
-						value = auth_hive_mind
-					}
-				}
-			}
-			AND = {
-				authority = { # Prunes every potential authority except machine intelligence
-					NOR = {
-						value = auth_democratic
-						value = auth_oligarchic
-						value = auth_dictatorial
-						value = auth_imperial
-						value = auth_hive_mind
-						value = auth_ancient_machine_intelligence
-						value = auth_corporate
-						text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE
-					}
-				}
-				ethics = { # Prunes every potential etchic except gestalt consciousness
-					NOR = {
-						value = ethic_fanatic_authoritarian
-						value = ethic_authoritarian
-						value = ethic_fanatic_egalitarian
-						value = ethic_egalitarian
-						value = ethic_fanatic_xenophobe
-						value = ethic_xenophobe
-						value = ethic_fanatic_xenophile
-						value = ethic_xenophile
-						value = ethic_fanatic_militarist
-						value = ethic_militarist
-						value = ethic_fanatic_pacifist
-						value = ethic_pacifist
-						value = ethic_fanatic_spiritualist
-						value = ethic_spiritualist
-						value = ethic_fanatic_materialist
-						value = ethic_materialist
-					}			
-				}
-			}
-		}
-	}	
-	archetype = MACHINE	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_deathmachine"	
 		"sl_android"		
@@ -190,18 +94,9 @@ MachineSL_set = {
 		"sl_deathmachine"
 		"sl_android"			
 	}
-	
-	graphical_culture = synthetics_01
-	
-	move_pop_sound_effect = "robot_pops_move"
-		
 }
 ReptilianSL_set = {
 	species_class = REP
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-	archetype = BIOLOGICAL	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_dragon"	
 		"sl_snake"			
@@ -210,54 +105,27 @@ ReptilianSL_set = {
 		"sl_dragon"	
 		"sl_snake"			
 	}
-	
-	graphical_culture = reptilian_01
-	
-	move_pop_sound_effect = "reptilian_pops_move"
-		
 }
 FungoidSL_set = {
 	species_class = FUN
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-	archetype = BIOLOGICAL	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_fungoid"			
 	}
 	non_randomized_portraits = {
 		"sl_fungoid"		
 	}
-	
-	graphical_culture = fungoid_01
-	
-	move_pop_sound_effect = "fungoid_pops_move"
-		
 }
 AvianSL_set = {
 	species_class = AVI
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-	archetype = BIOLOGICAL	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_harpy"			
 	}
 	non_randomized_portraits = {
 		"sl_harpy"		
 	}
-	
-	graphical_culture = avian_01
-	
-	move_pop_sound_effect = "avian_pops_move"
-		
 }
 MammalianSL_set = {
 	species_class = MAM
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-	archetype = BIOLOGICAL	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_kitsune"	
 		"sl_were"			
@@ -266,18 +134,9 @@ MammalianSL_set = {
 		"sl_kitsune"		
 		"sl_were"			
 	}
-	
-	graphical_culture = mammalian_01
-	
-	move_pop_sound_effect = "moving_pop_confirmation"
-		
 }
 AquaticSL_set = {
 	species_class = AQUATIC
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-	archetype = BIOLOGICAL	
-	spawn_enabled = yes
-	randomized = yes	
 	portraits = {
 		"sl_mermaid"			
 		"sl_oceanid"			
@@ -286,9 +145,4 @@ AquaticSL_set = {
 		"sl_mermaid"	
 		"sl_oceanid"			
 	}
-	
-	graphical_culture = aquatic_01
-	
-	move_pop_sound_effect = "molluscoid_pops_move"
-		
 }

@@ -50,69 +50,69 @@ decision_planet_luxuries_boost = {
 		category = decisions
 		cost = {
 			trigger = {
-				num_pops < 10
+				planet_pop_count < 10
 			}
 			consumer_goods = 100
 		}
 		cost = {
 			trigger = {
-				num_pops >= 10
-				num_pops < 20
+				planet_pop_count >= 10
+				planet_pop_count < 20
 			}
 			consumer_goods = 200
 		}
 		cost = {
 			trigger = {
-				num_pops >= 20
-				num_pops < 30
+				planet_pop_count >= 20
+				planet_pop_count < 30
 			}
 			consumer_goods = 300
 		}	
 		cost = {
 			trigger = {
-				num_pops >= 30
-				num_pops < 40
+				planet_pop_count >= 30
+				planet_pop_count < 40
 			}
 			consumer_goods = 400
 		}	
 		cost = {
 			trigger = {
-				num_pops >= 40
-				num_pops < 50
+				planet_pop_count >= 40
+				planet_pop_count < 50
 			}
 			consumer_goods = 500
 		}			
 		cost = {
 			trigger = {
-				num_pops >= 50
-				num_pops < 60
+				planet_pop_count >= 50
+				planet_pop_count < 60
 			}
 			consumer_goods = 600
 		}
 		cost = {
 			trigger = {
-				num_pops >= 60
-				num_pops < 70
+				planet_pop_count >= 60
+				planet_pop_count < 70
 			}
 			consumer_goods = 700
 		}			
 		cost = {
 			trigger = {
-				num_pops >= 70
-				num_pops < 85
+				planet_pop_count >= 70
+				planet_pop_count < 85
 			}
 			consumer_goods = 800
 		}
 		cost = {
 			trigger = {
-				num_pops >= 85
-				num_pops < 100
+				planet_pop_count >= 85
+				planet_pop_count < 100
 			}
 			consumer_goods = 900
 		}
 		cost = {
 			trigger = {
-				num_pops >= 100
+				planet_pop_count >= 100
 			}
 			consumer_goods = 1000
 		}				

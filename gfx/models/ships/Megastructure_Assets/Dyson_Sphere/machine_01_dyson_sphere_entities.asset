@@ -120,7 +120,7 @@ entity = {
 	locator = { name = "root"	position = { 0 	0  0 } }	
 	
 	default_state = "dyson_idle"
-	state = { name = "dyson_idle" animation = "ringspin" animation_speed = 0.7 }
+	state = { name = "dyson_idle" state_time = 10 }
 	
 	attach = { "root" = "machine_01_dyson_sphere_frame_entity"    }
 	

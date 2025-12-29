@@ -16,16 +16,6 @@ TEH = {
 
 	#possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
-	portraits = {
-	}
-	
-	custom_portraits = {#add additional portraits when customizing species
-	}
-	
-	# These should not be used for randomly generated species
-	non_randomized_portraits = {
-    }
-	
 	graphical_culture = terrahuman_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
@@ -35,16 +25,6 @@ BMA = {
 
 	#possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
-	portraits = {
-	}
-	
-	custom_portraits = {#add additional portraits when customizing species
-	}
-	
-	# These should not be used for randomly generated species
-	non_randomized_portraits = {
-    }
-	
 	graphical_culture = biomass_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }
@@ -54,16 +34,6 @@ SLV = {
 
 	#possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 
-	portraits = {
-	}
-	
-	custom_portraits = {#add additional portraits when customizing species
-	}
-	
-	# These should not be used for randomly generated species
-	non_randomized_portraits = {
-    }
-	
 	graphical_culture = salvager_01
 	move_pop_sound_effect = "moving_pop_confirmation"
 }

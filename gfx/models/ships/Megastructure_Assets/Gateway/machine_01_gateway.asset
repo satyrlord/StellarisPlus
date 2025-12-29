@@ -34,7 +34,7 @@ entity = {
 	locator = { name = "Portal"	position = { 0 0 0 } }
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle" state_time = 4
+	state = { name = "idle" state_time = 4
 		start_event = { trigger_once = yes sound = { soundeffect = "megastructure_gate_way_station_hum" stop_on_state_change = yes } }
 		start_event = { trigger_once = yes sound = { soundeffect = "megastructure_gate_way_portal_hum" stop_on_state_change = yes } }
 	
@@ -49,7 +49,7 @@ entity = {
 		event = { time = 0 node = "core" particle = "lithoid_01_collosus_core" keep_particle = yes trigger_once = yes life = 15}
 
 	}
-	state = { name = "death" animation = "death" looping = no
+	state = { name = "death" state_time = 8 looping = no
 		event = { time = 7.63 node = "root" particle = "dreadnought_explosion_particle" keep_particle = yes }
 		event = { time = 2.1 node = "root" particle = "gateway_portal_death_residue_effect" keep_particle = yes }
 		
@@ -73,7 +73,7 @@ entity = {
 		start_event = { trigger_once = yes sound = { soundeffect = "megastructure_gate_way_station_hum" stop_on_state_change = yes } }
 		start_event = { trigger_once = yes sound = { soundeffect = "megastructure_gate_way_portal_hum" stop_on_state_change = yes } }
 	}
-	state = { name = "death" animation = "death" looping = no
+	state = { name = "death" state_time = 8 looping = no
 		event = { time = 7.63 node = "root" particle = "dreadnought_explosion_particle" keep_particle = yes }
 		event = { time = 2.1 node = "root" particle = "gateway_portal_death_residue_effect" keep_particle = yes }
 		
@@ -92,7 +92,7 @@ entity = {
 	locator = { name = "Portal"	position = { 0 0 0 } }
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle" state_time = 4
+	state = { name = "idle" state_time = 4
 		start_event = { trigger_once = yes sound = { soundeffect = "megastructure_gate_way_station_hum" stop_on_state_change = yes } }
 		start_event = { trigger_once = yes sound = { soundeffect = "megastructure_gate_way_portal_hum" stop_on_state_change = yes } }
 	
@@ -107,7 +107,7 @@ entity = {
 		event = { time = 0 node = "core" particle = "lithoid_01_collosus_core" keep_particle = yes trigger_once = yes life = 15}
 
 	}
-	state = { name = "death" animation = "death" looping = no
+	state = { name = "death" state_time = 8 looping = no
 		event = { time = 7.63 node = "root" particle = "dreadnought_explosion_particle" keep_particle = yes }
 		event = { time = 2.1 node = "root" particle = "gateway_portal_death_residue_effect" keep_particle = yes }
 		

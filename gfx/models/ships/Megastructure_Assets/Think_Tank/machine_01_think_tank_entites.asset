@@ -116,7 +116,7 @@ entity = {
 		start_event = { node = "reactorinvert" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
 		
 	}
-	state = { name = "construction"
+	state = { name = "construction" animation = "think_tank_idle" animation_speed = 1
 		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
 	}
 
@@ -145,7 +145,7 @@ entity = {
 		start_event = { node = "reactorinvert" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
 		
 	}
-	state = { name = "construction"
+	state = { name = "construction" animation = "think_tank_idle" animation_speed = 1.5
 		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
 	}
 
@@ -172,7 +172,7 @@ entity = {
 		start_event = { node = "reactor" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
 		start_event = { node = "reactorinvert" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }	
 	}
-	state = { name = "construction"
+	state = { name = "construction" animation = "think_tank_idle" animation_speed = 2.0
 		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
 	}
 	

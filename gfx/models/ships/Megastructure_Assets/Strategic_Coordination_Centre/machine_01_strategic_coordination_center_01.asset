@@ -28,7 +28,7 @@ entity = {
 
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle"
+	state = { name = "idle" state_time = 5
 		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 		event = { time = 0 node = "light_locator_03" particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
@@ -46,7 +46,7 @@ entity = {
 
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle"
+	state = { name = "idle" state_time = 5
 		event = { time = 0 node = "light_locator_01"  particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 		event = { time = 0 node = "light_locator_02"  particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }
 		event = { time = 0 node = "light_locator_03"  particle = "ship_light_blue_effect" trigger_once = yes keep_particle = yes }

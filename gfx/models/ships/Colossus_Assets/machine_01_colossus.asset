@@ -5,10 +5,10 @@ entity = {
 	pdxmesh = "machine_01_colossus_frame_mesh"
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-	state = { name = "moving" animation = "idle" }
-	state = { name = "working" animation = "idle" }
-	state = { name = "death" animation = "closed_death" looping = no 
+	state = { name = "idle" state_time = 5 }
+	state = { name = "moving" state_time = 5 }
+	state = { name = "working" state_time = 5 }
+	state = { name = "death" state_time = 14 looping = no 
 		event = { time = 13.46 node = "core_effect" particle = "dreadnought_explosion_particle" sound = { soundeffect = ship_destroyed } }
 		chance = {
 			if_current_state = {
@@ -19,7 +19,7 @@ entity = {
 			}
 		}
 	}
-	state = { name = "death" animation = "opened_death" looping = no 
+	state = { name = "death" state_time = 10 looping = no 
 		event = { time = 9.8 node = "core_effect" particle = "dreadnought_explosion_particle" sound = { soundeffect = ship_destroyed } }
 		chance = {
 			if_current_state = {
