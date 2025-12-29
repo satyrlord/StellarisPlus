@@ -1,5 +1,9 @@
 ﻿l_english:
  TEH:0 "Terrahuman"
+ TEH_desc: "A human-adjacent species class intended to pair with the Terrahuman shipset and visuals."
  BMA:0 "Biomass"
+ BMA_desc: "A biomass-focused species class intended to pair with the Biomass shipset and visuals."
  SLV:0 "Salvager"
+ SLV_desc: "A scavenger-engineered species class intended to pair with the Salvager shipset and visuals."
  EMI:0 "Empira"
+ EMI_desc: "A species class intended to pair with the Empira shipset and visuals."
