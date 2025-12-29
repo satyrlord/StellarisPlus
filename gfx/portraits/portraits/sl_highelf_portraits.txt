@@ -1,0 +1,364 @@
+portraits = {
+    sl_highelf_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	
+	"gfx/models/portraits/sl_highelf/female_highelf_38.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_39.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_40.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_41.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_42.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_43.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_44.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_45.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_46.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_47.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_48.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_49.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_50.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_51.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_52.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_53.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_54.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_55.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_56.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_57.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_58.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_59.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_60.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_61.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_62.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_63.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_64.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_65.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_66.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_67.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_68.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_69.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_70.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_71.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_72.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_73.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_74.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_75.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_76.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_77.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_78.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_79.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_80.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_81.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_82.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_83.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_84.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_85.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_86.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_87.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_88.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_89.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_90.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_highelf_female_ruler_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_highelf/female_highelf_01.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_02.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_03.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_04.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_05.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_06.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_07.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_08.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_09.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_10.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_11.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_12.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_13.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_14.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_15.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_16.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_17.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_18.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_19.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_20.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_21.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_22.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_23.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_24.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_25.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_26.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_27.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_28.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_29.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_30.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_31.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_32.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_33.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_34.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_35.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_36.dds"
+	"gfx/models/portraits/sl_highelf/female_highelf_37.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_highelf_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_highelf/male_highelf_31.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_32.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_33.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_34.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_35.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_36.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_37.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_38.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_39.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_40.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_41.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_42.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_43.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_44.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_45.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_46.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_47.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_48.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_49.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_50.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_51.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_52.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_53.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_54.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_55.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_56.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_57.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_58.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_59.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_60.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_61.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_62.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_63.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_64.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_65.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_66.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_67.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_68.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_69.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_70.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_highelf_male_ruler_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_highelf/male_highelf_01.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_02.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_03.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_04.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_05.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_06.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_07.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_08.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_09.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_10.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_11.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_12.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_13.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_14.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_15.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_16.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_17.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_18.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_19.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_20.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_21.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_23.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_24.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_25.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_26.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_27.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_28.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_29.dds"
+	"gfx/models/portraits/sl_highelf/male_highelf_30.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+	sl_highelf = {
+		default = sl_highelf_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_highelf_female_01
+					sl_highelf_female_ruler_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+						}
+					}
+				}
+				portraits = {
+					sl_highelf_male_01
+					sl_highelf_male_ruler_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_highelf_female_01
+					sl_highelf_female_ruler_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_highelf_male_01
+					sl_highelf_male_ruler_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_highelf_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_highelf_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_highelf_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_highelf_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = commander
+				}
+				portraits = {
+					sl_highelf_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {
+					sl_highelf_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female			
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_highelf_female_ruler_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male				
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_highelf_male_ruler_01
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_highelf_female_ruler_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_highelf_male_ruler_01
+				}
+			}			
+		}
+	}
+}

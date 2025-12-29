@@ -1,0 +1,244 @@
+portraits = {
+	sl_were_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_were/male_were_01.dds"
+	"gfx/models/portraits/sl_were/male_were_02.dds"
+	"gfx/models/portraits/sl_were/male_were_03.dds"
+	"gfx/models/portraits/sl_were/male_were_04.dds"
+	"gfx/models/portraits/sl_were/male_were_05.dds"
+	"gfx/models/portraits/sl_were/male_were_06.dds"
+	"gfx/models/portraits/sl_were/male_were_07.dds"
+	"gfx/models/portraits/sl_were/male_were_08.dds"
+	"gfx/models/portraits/sl_were/male_were_09.dds"
+	"gfx/models/portraits/sl_were/male_were_10.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_were_male_ruler_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_were/male_were_11.dds"
+	"gfx/models/portraits/sl_were/male_were_12.dds"
+	"gfx/models/portraits/sl_were/male_were_13.dds"
+	"gfx/models/portraits/sl_were/male_were_14.dds"
+	"gfx/models/portraits/sl_were/male_were_15.dds"
+	"gfx/models/portraits/sl_were/male_were_16.dds"
+	"gfx/models/portraits/sl_were/male_were_17.dds"
+	"gfx/models/portraits/sl_were/male_were_18.dds"
+	"gfx/models/portraits/sl_were/male_were_19.dds"
+	"gfx/models/portraits/sl_were/male_were_20.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_were_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_were/female_were_01.dds"
+	"gfx/models/portraits/sl_were/female_were_02.dds"
+	"gfx/models/portraits/sl_were/female_were_03.dds"
+	"gfx/models/portraits/sl_were/female_were_04.dds"
+	"gfx/models/portraits/sl_were/female_were_05.dds"
+	"gfx/models/portraits/sl_were/female_were_06.dds"
+	"gfx/models/portraits/sl_were/female_were_07.dds"
+	"gfx/models/portraits/sl_were/female_were_08.dds"
+	"gfx/models/portraits/sl_were/female_were_09.dds"
+	"gfx/models/portraits/sl_were/female_were_10.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_were_female_ruler_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_were/female_were_11.dds"
+	"gfx/models/portraits/sl_were/female_were_12.dds"
+	"gfx/models/portraits/sl_were/female_were_13.dds"
+	"gfx/models/portraits/sl_were/female_were_14.dds"
+	"gfx/models/portraits/sl_were/female_were_15.dds"
+	"gfx/models/portraits/sl_were/female_were_16.dds"
+	"gfx/models/portraits/sl_were/female_were_17.dds"
+	"gfx/models/portraits/sl_were/female_were_18.dds"
+	"gfx/models/portraits/sl_were/female_were_19.dds"
+	"gfx/models/portraits/sl_were/female_were_20.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+	sl_were = {
+		default = sl_were_male_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_were_female_01
+					sl_were_female_ruler_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+						}
+					}
+				}
+				portraits = {
+					sl_were_male_01
+					sl_were_male_ruler_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_were_female_01
+					sl_were_female_ruler_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_were_male_01
+					sl_were_male_ruler_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_were_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_were_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_were_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_were_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = commander
+				}
+				portraits = {
+					sl_were_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {
+					sl_were_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female			
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_were_female_ruler_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male				
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_were_male_ruler_01
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_were_female_ruler_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_were_male_ruler_01
+				}
+			}			
+		}
+	}
+}

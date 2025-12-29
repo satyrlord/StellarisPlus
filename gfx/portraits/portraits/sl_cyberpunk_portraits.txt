@@ -1,0 +1,395 @@
+portraits = {	
+    sl_cyberpunk_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_01.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_02.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_03.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_04.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_05.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_06.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_07.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_08.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_09.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_10.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_11.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_12.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_13.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_14.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_15.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_16.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_17.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_18.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_19.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_20.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_21.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_22.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_23.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_24.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_25.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_26.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_27.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_28.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_29.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_30.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_31.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_32.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_33.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_34.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_35.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_36.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_37.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_38.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_39.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_40.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_61.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_62.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_63.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_64.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_65.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_66.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_67.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_68.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_69.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_70.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_71.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_72.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_73.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_74.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_75.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_cyberpunk_female_scientist_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_41.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_42.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_43.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_44.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_45.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_46.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_47.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_48.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_49.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_50.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_51.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_52.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_53.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_54.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_55.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_56.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_57.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_58.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_59.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_60.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_cyberpunk_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_01.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_02.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_03.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_04.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_05.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_06.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_07.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_08.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_09.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_10.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_11.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_12.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_13.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_14.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_15.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_16.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_17.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_18.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_19.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_20.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_21.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_22.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_23.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_24.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_25.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_26.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_27.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_28.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_29.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_30.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_cyberpunk_male_scientist_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_31.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_32.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_33.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_34.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_35.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_36.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_37.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_38.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_39.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_40.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_41.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_42.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_43.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_44.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_45.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_46.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_47.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_48.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_49.dds"
+	"gfx/models/portraits/sl_cyberpunk/male_cyberpunk_50.dds"
+
+
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_cyberpunk_indeterminable_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_01.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_02.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_03.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_04.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_05.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_06.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_07.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_08.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_09.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_10.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_11.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_12.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_13.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_14.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_15.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_16.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_17.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_18.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_19.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_20.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_21.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_22.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_23.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_24.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_25.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_26.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_27.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_28.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_29.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_30.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_31.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_32.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_33.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_34.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_35.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_36.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_37.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_38.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_39.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_40.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_61.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_62.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_63.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_64.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_65.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_66.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_67.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_68.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_69.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_70.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_71.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_72.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_73.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_74.dds"
+	"gfx/models/portraits/sl_cyberpunk/female_cyberpunk_75.dds"
+
+
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+	sl_cyberpunk = {
+		default = sl_cyberpunk_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_cyberpunk_female_01
+					sl_cyberpunk_female_scientist_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					sl_cyberpunk_male_01
+					sl_cyberpunk_male_scientist_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_cyberpunk_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_cyberpunk_male_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_cyberpunk_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_cyberpunk_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_cyberpunk_female_scientist_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_cyberpunk_male_scientist_01
+				}
+			}						
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {
+					sl_cyberpunk_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = commander
+				}
+				portraits = {
+					sl_cyberpunk_male_01
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable					
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_cyberpunk_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_cyberpunk_male_01
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_cyberpunk_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_cyberpunk_male_01
+				}
+			}			
+		}
+	}
+}

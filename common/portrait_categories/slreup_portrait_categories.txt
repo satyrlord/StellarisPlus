@@ -1,0 +1,81 @@
+humanoids = {
+	name = HUM   ## With this method like seen here you can put your portraits in one of the existing categories like Humanoids/Molluscoids etc. or you do it like in Oceanid mod and make your own one 
+	sets = {
+        HumanoidSL_set
+
+	}
+}
+plantoids = {
+	name = PLANT   
+	sets = {
+        PlantoidSL_set
+
+	}
+}
+machines = {
+	name = MACHINE
+
+	sets = {
+		MachineSL_set
+	}
+}
+reptilians = {
+	name = REP
+
+	sets = {
+		ReptilianSL_set
+		
+	}
+}
+fungoids = {
+	name = FUN
+
+	sets = {
+		FungoidSL_set
+		
+	}
+}
+necroids = {
+	name = NECROID
+
+	sets = {
+		NecroidSL_set
+	}
+}
+lithoids = {
+	name = LITHOID
+
+	sets = {
+		LithoidSL_set
+	}
+}
+avians = {
+	name = AVI
+
+	sets = {
+		AvianSL_set
+	}
+}
+mammalians = {
+	name = MAM
+
+	sets = {
+		MammalianSL_set
+		
+	}
+}
+aquatics = {
+	name = AQUATIC
+
+	sets = {
+		AquaticSL_set
+		
+	}
+}
+toxoids = {
+	name = TOX
+
+	sets = {
+		ToxoidSL_set
+	}
+}

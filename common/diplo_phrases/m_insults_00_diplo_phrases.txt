@@ -1,0 +1,2126 @@
+action_insult = {
+	propose = {
+		07_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		08_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		09_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		10_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		11_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		12_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		13_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes						
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		14_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		15_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		16_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		17_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		18_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		19_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		20_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		21_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		22_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		23_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		24_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		25_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		26_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		27_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes						
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		28_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		29_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		30_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		31_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		32_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		33_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		34_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	propose = {
+		35_INSULT_PROPOSE = {
+			trigger = {
+				NOT = {
+					FROM = {
+						OR = {
+							is_xenophobe = yes							
+							has_ethic = ethic_gestalt_consciousness
+						}
+						NOT = { is_same_species = ROOT }
+						NOT = { is_subspecies = ROOT }
+						is_megacorp = no
+					}
+				}
+			}
+		}
+	}
+	
+	propose = {
+		08_INSULT_PROPOSE_XENOPHOBE = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				FROM = {					
+					is_xenophobe = yes											
+					NOT = { is_same_species = ROOT }
+					is_subspecies = ROOT
+				}
+				NOT = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	propose = {
+		09_INSULT_PROPOSE_XENOPHOBE = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				FROM = {					
+					is_xenophobe = yes											
+					NOT = { is_same_species = ROOT }
+					is_subspecies = ROOT
+				}
+				NOT = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	propose = {
+		10_INSULT_PROPOSE_XENOPHOBE = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				FROM = {					
+					is_xenophobe = yes											
+					NOT = { is_same_species = ROOT }
+					is_subspecies = ROOT
+				}
+				NOT = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	propose = {
+		11_INSULT_PROPOSE_XENOPHOBE = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				FROM = {					
+					is_xenophobe = yes											
+					NOT = { is_same_species = ROOT }
+					is_subspecies = ROOT
+				}
+				NOT = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	propose = {
+		12_INSULT_PROPOSE_XENOPHOBE = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				FROM = {					
+					is_xenophobe = yes											
+					NOT = { is_same_species = ROOT }
+					is_subspecies = ROOT
+				}
+				NOT = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	propose = {
+		13_INSULT_PROPOSE_XENOPHOBE = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				FROM = {
+					is_xenophobe = yes										
+					NOT = { is_same_species = ROOT }
+					is_subspecies = ROOT
+				}
+				NOT = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	propose = {
+		14_INSULT_PROPOSE_XENOPHOBE = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				FROM = {
+					is_xenophobe = yes
+					NOT = { is_same_species = ROOT }
+					is_subspecies = ROOT
+				}
+				NOT = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	propose = {
+		15_INSULT_PROPOSE_XENOPHOBE = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				FROM = {
+					is_xenophobe = yes
+					NOT = { is_same_species = ROOT }
+					is_subspecies = ROOT
+				}
+				NOT = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	
+	propose = {
+		05_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		06_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		07_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		08_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		09_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		10_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		11_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		12_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		13_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		14_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		15_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	propose = {
+		16_INSULT_PROPOSE_PAC_MIL = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_militarist = yes
+				FROM = { is_pacifist = yes }
+			}
+		}
+	}
+	
+	propose = {
+		05_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	propose = {
+		06_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	propose = {
+		07_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	propose = {
+		08_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	propose = {
+		09_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	propose = {
+		10_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	propose = {
+		11_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	propose = {
+		12_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	propose = {
+		13_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	propose = {
+		14_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	propose = {
+		15_INSULT_PROPOSE_MIL_PAC = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_pacifist = yes
+				FROM = { is_militarist = yes }
+			}
+		}
+	}
+	
+	propose = {
+		05_INSULT_PROPOSE_MAT_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_materialist = yes }
+			}
+		}
+	}
+	propose = {
+		06_INSULT_PROPOSE_MAT_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_materialist = yes }
+			}
+		}
+	}
+	propose = {
+		07_INSULT_PROPOSE_MAT_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_materialist = yes }
+			}
+		}
+	}
+	propose = {
+		08_INSULT_PROPOSE_MAT_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_materialist = yes }
+			}
+		}
+	}
+	propose = {
+		09_INSULT_PROPOSE_MAT_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_materialist = yes }
+			}
+		}
+	}
+	propose = {
+		10_INSULT_PROPOSE_MAT_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_materialist = yes }
+			}
+		}
+	}
+	propose = {
+		11_INSULT_PROPOSE_MAT_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_materialist = yes }
+			}
+		}
+	}
+	propose = {
+		12_INSULT_PROPOSE_MAT_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_materialist = yes }
+			}
+		}
+	}
+	propose = {
+		13_INSULT_PROPOSE_MAT_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_materialist = yes }
+			}
+		}
+	}
+	propose = {
+		14_INSULT_PROPOSE_MAT_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_materialist = yes }
+			}
+		}
+	}
+	propose = {
+		05_INSULT_PROPOSE_SPI_MAT = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_materialist = yes
+				FROM = { is_spiritualist = yes }
+			}
+		}
+	}
+	propose = {
+		06_INSULT_PROPOSE_SPI_MAT = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_materialist = yes
+				FROM = { is_spiritualist = yes }
+			}
+		}
+	}
+	propose = {
+		07_INSULT_PROPOSE_SPI_MAT = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_materialist = yes
+				FROM = { is_spiritualist = yes }
+			}
+		}
+	}
+	propose = {
+		08_INSULT_PROPOSE_SPI_MAT = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_materialist = yes
+				FROM = { is_spiritualist = yes }
+			}
+		}
+	}
+	propose = {
+		09_INSULT_PROPOSE_SPI_MAT = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_materialist = yes
+				FROM = { is_spiritualist = yes }
+			}
+		}
+	}
+	propose = {
+		10_INSULT_PROPOSE_SPI_MAT = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_materialist = yes
+				FROM = { is_spiritualist = yes }
+			}
+		}
+	}
+	propose = {
+		11_INSULT_PROPOSE_SPI_MAT = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_materialist = yes
+				FROM = {is_spiritualist = yes }
+			}
+		}
+	}
+	propose = {
+		12_INSULT_PROPOSE_SPI_MAT = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_materialist = yes
+				FROM = { is_spiritualist = yes }
+			}
+		}
+	}
+	propose = {
+		13_INSULT_PROPOSE_SPI_MAT = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_materialist = yes
+				FROM = { is_spiritualist = yes }
+			}
+		}
+	}
+	propose = {
+		14_INSULT_PROPOSE_SPI_MAT = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_materialist = yes
+				FROM = { is_spiritualist = yes }
+			}
+		}
+	}
+	propose = {
+		01_INSULT_PROPOSE_SPI_SPI = {
+			trigger = {
+				FROM = { 
+					NOR = {
+						has_ethic = ethic_gestalt_consciousness
+						is_megacorp = yes
+					}
+				}
+				is_spiritualist = yes
+				FROM = { is_spiritualist = yes }
+			}
+		}
+	}
+	
+	propose = {
+		05_INSULT_PROPOSE_COL_IND = {
+			trigger = {
+				is_egalitarian = yes
+				FROM = {
+					is_authoritarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		06_INSULT_PROPOSE_COL_IND = {
+			trigger = {
+				is_egalitarian = yes
+				FROM = {
+					is_authoritarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		07_INSULT_PROPOSE_COL_IND = {
+			trigger = {
+				is_egalitarian = yes
+				FROM = {
+					is_authoritarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		08_INSULT_PROPOSE_COL_IND = {
+			trigger = {
+				is_egalitarian = yes
+				FROM = {
+					is_authoritarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		09_INSULT_PROPOSE_COL_IND = {
+			trigger = {
+				is_egalitarian = yes
+				FROM = {
+					is_authoritarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		10_INSULT_PROPOSE_COL_IND = {
+			trigger = {
+				is_egalitarian = yes
+				FROM = {
+					is_authoritarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		11_INSULT_PROPOSE_COL_IND = {
+			trigger = {
+				is_egalitarian = yes
+				FROM = {
+					is_authoritarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		12_INSULT_PROPOSE_COL_IND = {
+			trigger = {
+				is_egalitarian = yes
+				FROM = {
+					is_authoritarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	
+	propose = {
+		05_INSULT_PROPOSE_IND_COL = {
+			trigger = {
+				is_authoritarian = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		06_INSULT_PROPOSE_IND_COL = {
+			trigger = {
+				is_authoritarian = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		07_INSULT_PROPOSE_IND_COL = {
+			trigger = {
+				is_authoritarian = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		08_INSULT_PROPOSE_IND_COL = {
+			trigger = {
+				is_authoritarian = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		09_INSULT_PROPOSE_IND_COL = {
+			trigger = {
+				is_authoritarian = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		10_INSULT_PROPOSE_IND_COL = {
+			trigger = {
+				is_authoritarian = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	
+	propose = {
+		05_INSULT_PROPOSE_PHO_PHI = {
+			trigger = {
+				is_xenophile = yes
+				FROM = {
+					is_xenophobe = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		06_INSULT_PROPOSE_PHO_PHI = {
+			trigger = {
+				is_xenophile = yes
+				FROM = {
+					is_xenophobe = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		07_INSULT_PROPOSE_PHO_PHI = {
+			trigger = {
+				is_xenophile = yes
+				FROM = {
+					is_xenophobe = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	
+	propose = {
+		05_INSULT_PROPOSE_PHI_PHO = {
+			trigger = {
+				is_xenophobe = yes
+				FROM = {
+					is_xenophile = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		06_INSULT_PROPOSE_PHI_PHO = {
+			trigger = {
+				is_xenophobe = yes
+				FROM = {
+					is_xenophile = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		07_INSULT_PROPOSE_PHI_PHO = {
+			trigger = {
+				is_xenophobe = yes
+				FROM = {
+					is_xenophile = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		08_INSULT_PROPOSE_PHI_PHO = {
+			trigger = {
+				is_xenophobe = yes
+				FROM = {
+					is_xenophile = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		09_INSULT_PROPOSE_PHI_PHO = {
+			trigger = {
+				is_xenophobe = yes
+				FROM = {
+					is_xenophile = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	propose = {
+		10_INSULT_PROPOSE_PHI_PHO = {
+			trigger = {
+				is_xenophobe = yes
+				FROM = {
+					is_xenophile = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	
+	# Organics to Machines 
+	
+	propose = {
+		ORG_TO_MECH_INSULT_PROPOSE_06 = {
+			trigger = {
+				is_machine_empire = yes
+				FROM = {
+					NOR = {
+						is_machine_empire = yes
+						is_species_class = ROBOT
+					}
+				}
+			}
+			weight = {
+				weight = 20
+			}
+		}
+	}
+	propose = {
+		ORG_TO_MECH_INSULT_PROPOSE_07 = {
+			trigger = {
+				is_machine_empire = yes
+				FROM = {
+					NOR = {
+						is_machine_empire = yes
+						is_species_class = ROBOT
+					}
+				}
+			}
+			weight = {
+				weight = 20
+			}
+		}
+	}
+	
+	# Machines to Machines
+	
+	propose = {
+		MECH_INSULT_PROPOSE_07 = {
+			trigger = {
+				FROM = {
+					is_machine_empire = yes
+				}
+				OR = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	propose = {
+		MECH_INSULT_PROPOSE_08 = {
+			trigger = {
+				FROM = {
+					is_machine_empire = yes
+				}
+				OR = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	
+	# Machines to Organics
+	
+	propose = {
+		MECH_ORG_INSULT_PROPOSE_05 = {
+			trigger = {
+				FROM = {
+					is_machine_empire = yes
+				}
+				NOR = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	propose = {
+		MECH_ORG_INSULT_PROPOSE_06 = {
+			trigger = {
+				FROM = {
+					is_machine_empire = yes
+				}
+				NOR = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	propose = {
+		MECH_ORG_INSULT_PROPOSE_07 = {
+			trigger = {
+				FROM = {
+					is_machine_empire = yes
+				}
+				NOR = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	
+	# Lithoids insults
+	propose = {
+		LITH_INSULT_PROPOSE_01 = {
+			trigger = {				
+				is_lithoid_empire = yes			
+				FROM = { 
+					NOT = { is_lithoid_empire = yes }
+				}
+			}
+		}
+	}
+	propose = {
+		LITH_INSULT_PROPOSE_02 = {
+			trigger = {
+				is_lithoid_empire = yes	
+			}
+		}
+	}
+	propose = {
+		LITH_INSULT_PROPOSE_03 = {
+			trigger = {				
+				is_lithoid_empire = yes				
+				FROM = { 
+					NOT = { is_lithoid_empire = yes }
+				}
+			}
+		}
+	}
+	propose = {
+		LITH_INSULT_PROPOSE_04 = {
+			trigger = {
+				is_lithoid_empire = yes	
+			}
+		}
+	}
+	propose = {
+		LITH_INSULT_PROPOSE_05 = {
+			trigger = {
+				is_lithoid_empire = yes	
+			}
+		}
+	}
+	
+	# Any Empire insulting DS
+	
+	# Machine Empire insulting DS
+	
+	# Portrait specific insults 
+	propose = {
+		01_INSULT_PROPOSE_MOL = {
+			trigger = {
+				OR = {
+						species_portrait = mol1
+						species_portrait = mol2
+				}
+				FROM = { 
+					NOR = {
+						species_portrait = mol1
+						species_portrait = mol2
+					}
+				}
+			}
+		}
+	}
+	
+	# Exterminator insulting Organics
+	
+	propose = {
+		E_INSULT_PROPOSE_08 = {
+			weight = { weight = 50 }
+			trigger = {
+				FROM = { has_ai_personality = exterminators }
+				NOR = {
+					is_machine_empire = yes
+					is_species_class = ROBOT
+				}
+			}
+		}
+	}
+	
+	# Nude vs Clothes
+	
+	propose = {
+		01_INSULT_NUDE = {
+			trigger = {
+				wears_clothes = no
+				FROM = {
+					wears_clothes = yes
+					NOR = {
+						is_machine_empire = yes
+						is_species_class = ROBOT
+					} 
+				}
+			}
+		}
+		02_INSULT_NUDE = {
+			trigger = {
+				wears_clothes = no
+				FROM = {
+					wears_clothes = yes
+					NOR = {
+						is_machine_empire = yes
+						is_species_class = ROBOT
+					} 
+				}
+			}
+		}
+	}
+	
+	# Megacorp to Egalitarian
+	
+	propose = {
+	    CORP_TO_EG_INSULT_PROPOSE_01 = {
+			trigger = {
+				is_egalitarian = yes
+				is_megacorp = no
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+	    CORP_TO_EG_INSULT_PROPOSE_02 = {
+			trigger = {
+				is_egalitarian = yes
+				is_megacorp = no
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_TO_EG_INSULT_PROPOSE_03 = {
+			trigger = {
+				is_egalitarian = yes
+				is_megacorp = no
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_TO_EG_INSULT_PROPOSE_04 = {
+			trigger = {
+				is_egalitarian = yes
+				is_megacorp = no
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_TO_EG_INSULT_PROPOSE_05 = {
+			trigger = {
+				is_egalitarian = yes
+				is_megacorp = no
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+	}
+	
+	# Egalitarian to Megacorp
+	
+	propose = {
+	    TO_CORP_INSULT_PROPOSE_EG_02 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+		TO_CORP_INSULT_PROPOSE_EG_03 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+		TO_CORP_INSULT_PROPOSE_EG_04 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+		TO_CORP_INSULT_PROPOSE_EG_05 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+		TO_CORP_INSULT_PROPOSE_EG_06 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+		TO_CORP_INSULT_PROPOSE_EG_07 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_egalitarian = yes
+					is_megacorp = no
+				}
+			}
+		}
+	}
+	
+	# Customer to Megacorp
+	
+	propose = {
+	    TO_CORP_INSULT_PROPOSE_03 = {
+			trigger = {
+				is_megacorp = yes
+			}
+		}
+		TO_CORP_INSULT_PROPOSE_04 = {
+			trigger = {
+				is_megacorp = yes
+			}
+		}
+		TO_CORP_INSULT_PROPOSE_05 = {
+			trigger = {
+				is_megacorp = yes
+			}
+		}
+		TO_CORP_INSULT_PROPOSE_06 = {
+			trigger = {
+				is_megacorp = yes
+			}
+		}
+		TO_CORP_INSULT_PROPOSE_07 = {
+			trigger = {
+				is_megacorp = yes
+			}
+		}
+		TO_CORP_INSULT_PROPOSE_08 = {
+			trigger = {
+				is_megacorp = yes
+			}
+		}
+	}
+	
+	# Megacorp to Customer
+	
+	propose = {
+	    CORP_INSULT_PROPOSE_04 = {
+			trigger = {
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_INSULT_PROPOSE_05 = {
+			trigger = {
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_INSULT_PROPOSE_06 = {
+			trigger = {
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_INSULT_PROPOSE_07 = {
+			trigger = {
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_INSULT_PROPOSE_08 = {
+			trigger = {
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_INSULT_PROPOSE_09 = {
+			trigger = {
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}		
+	}
+	
+	# Megacorp to Megacorp
+	
+	propose = {
+	    CORP_CORP_INSULT_PROPOSE_02 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_03 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_04 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_05 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_06 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_07 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_08 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_09 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_10 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_11 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_12 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_INSULT_PROPOSE_13 = {
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+	}	
+	
+	# Insult Accept
+	
+	accept =  {
+        DS_INSULT_ACCEPT_02 = {
+			trigger = {
+				OR = {
+					has_ai_personality = devouring_swarm
+					has_ai_personality = rampant_wilderness
+				}
+				FROM = {
+					NOR = {
+						is_machine_empire = yes
+						is_individual_machine = yes
+						is_species_class = ROBOT
+					}
+				}
+			}
+		}
+        05_INSULT_ACCEPT_HOSTILE = {
+			trigger = {
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					is_megacorp = yes
+				}
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM
+ 					is_unfriendly_to = FROM
+				}
+			}
+		}
+		06_INSULT_ACCEPT_HOSTILE = {
+			trigger = {
+				NOR = {
+					has_ethic = ethic_gestalt_consciousness
+					is_megacorp = yes
+				}
+				OR = {
+					is_hostile_to = FROM
+					is_domineering_to = FROM					
+				}
+			}
+			weight = { weight = 1 }
+		}
+    }
+}	
+
+action_form_commercial_pact = {
+	propose = {
+	     04_FORM_COMMERCIAL_PACT_PROPOSE = {
+			trigger = {
+				always = yes
+			}
+		}	
+    }	
+}	
+	
+action_declare_war = {	
+	propose = {
+		CORP_CORP_DOW_PROPOSE_01 = {
+			weight = { weight = 3 }
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+		CORP_CORP_DOW_PROPOSE_02 = {
+			weight = { weight = 3 }
+			trigger = {
+				is_megacorp = yes
+				FROM = {
+					is_megacorp = yes
+				}
+			}
+		}
+	}
+}

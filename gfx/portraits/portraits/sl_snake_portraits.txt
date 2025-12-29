@@ -1,0 +1,170 @@
+portraits = {	
+	sl_snake_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_snake/female_snake_01.dds"
+	"gfx/models/portraits/sl_snake/female_snake_02.dds"
+	"gfx/models/portraits/sl_snake/female_snake_03.dds"
+	"gfx/models/portraits/sl_snake/female_snake_04.dds"
+	"gfx/models/portraits/sl_snake/female_snake_05.dds"
+	"gfx/models/portraits/sl_snake/female_snake_06.dds"
+	"gfx/models/portraits/sl_snake/female_snake_07.dds"
+	"gfx/models/portraits/sl_snake/female_snake_08.dds"
+	"gfx/models/portraits/sl_snake/female_snake_09.dds"
+	"gfx/models/portraits/sl_snake/female_snake_10.dds"
+	"gfx/models/portraits/sl_snake/female_snake_11.dds"
+	"gfx/models/portraits/sl_snake/female_snake_12.dds"
+	"gfx/models/portraits/sl_snake/female_snake_13.dds"
+	"gfx/models/portraits/sl_snake/female_snake_14.dds"
+	"gfx/models/portraits/sl_snake/female_snake_15.dds"
+	"gfx/models/portraits/sl_snake/female_snake_16.dds"
+	"gfx/models/portraits/sl_snake/female_snake_17.dds"
+	"gfx/models/portraits/sl_snake/female_snake_18.dds"
+	"gfx/models/portraits/sl_snake/female_snake_19.dds"
+	"gfx/models/portraits/sl_snake/female_snake_20.dds"
+	"gfx/models/portraits/sl_snake/female_snake_21.dds"
+	"gfx/models/portraits/sl_snake/female_snake_22.dds"
+	"gfx/models/portraits/sl_snake/female_snake_23.dds"
+	"gfx/models/portraits/sl_snake/female_snake_24.dds"
+	"gfx/models/portraits/sl_snake/female_snake_25.dds"
+	"gfx/models/portraits/sl_snake/female_snake_26.dds"
+	"gfx/models/portraits/sl_snake/female_snake_27.dds"
+	"gfx/models/portraits/sl_snake/female_snake_28.dds"
+	"gfx/models/portraits/sl_snake/female_snake_29.dds"
+	"gfx/models/portraits/sl_snake/female_snake_30.dds"
+	"gfx/models/portraits/sl_snake/female_snake_31.dds"
+	"gfx/models/portraits/sl_snake/female_snake_32.dds"
+	"gfx/models/portraits/sl_snake/female_snake_33.dds"
+	"gfx/models/portraits/sl_snake/female_snake_34.dds"
+	"gfx/models/portraits/sl_snake/female_snake_35.dds"
+	"gfx/models/portraits/sl_snake/female_snake_36.dds"
+	"gfx/models/portraits/sl_snake/female_snake_37.dds"
+	"gfx/models/portraits/sl_snake/female_snake_38.dds"
+	"gfx/models/portraits/sl_snake/female_snake_39.dds"
+	"gfx/models/portraits/sl_snake/female_snake_40.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_snake_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_snake/male_snake_01.dds"
+	"gfx/models/portraits/sl_snake/male_snake_02.dds"
+	"gfx/models/portraits/sl_snake/male_snake_03.dds"
+	"gfx/models/portraits/sl_snake/male_snake_04.dds"
+	"gfx/models/portraits/sl_snake/male_snake_05.dds"
+	"gfx/models/portraits/sl_snake/male_snake_06.dds"
+	"gfx/models/portraits/sl_snake/male_snake_07.dds"
+	"gfx/models/portraits/sl_snake/male_snake_08.dds"
+	"gfx/models/portraits/sl_snake/male_snake_09.dds"
+	"gfx/models/portraits/sl_snake/male_snake_10.dds"
+	"gfx/models/portraits/sl_snake/male_snake_11.dds"
+	"gfx/models/portraits/sl_snake/male_snake_12.dds"
+	"gfx/models/portraits/sl_snake/male_snake_13.dds"
+	"gfx/models/portraits/sl_snake/male_snake_14.dds"
+	"gfx/models/portraits/sl_snake/male_snake_15.dds"
+	"gfx/models/portraits/sl_snake/male_snake_16.dds"
+	"gfx/models/portraits/sl_snake/male_snake_17.dds"
+	"gfx/models/portraits/sl_snake/male_snake_18.dds"
+	"gfx/models/portraits/sl_snake/male_snake_19.dds"
+	"gfx/models/portraits/sl_snake/male_snake_20.dds"
+	"gfx/models/portraits/sl_snake/male_snake_21.dds"
+	"gfx/models/portraits/sl_snake/male_snake_22.dds"
+	"gfx/models/portraits/sl_snake/male_snake_23.dds"
+	"gfx/models/portraits/sl_snake/male_snake_24.dds"
+	"gfx/models/portraits/sl_snake/male_snake_25.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_snake = {
+        default = sl_snake_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_snake_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_snake_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_snake_female_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_snake_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_snake_male_01
+				}
+			}			
+		}
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_snake_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_snake_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_snake_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_snake_male_01
+                }
+            }
+        }
+    }
+}

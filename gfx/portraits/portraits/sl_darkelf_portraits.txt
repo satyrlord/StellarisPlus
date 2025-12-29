@@ -1,0 +1,313 @@
+portraits = {
+	sl_dark_elf_fighter_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_darkelf/female_darkelf_01.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_02.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_03.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_04.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_05.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_06.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_07.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_08.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_09.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_10.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_11.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_12.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_13.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_14.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_15.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_16.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_17.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_18.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_19.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_20.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_21.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_22.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_23.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_24.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_25.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_26.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_27.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_28.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_29.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_30.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_31.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_32.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_33.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_34.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_35.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_36.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_37.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_38.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_39.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_40.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_dark_elf_ruler_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_darkelf/female_darkelf_41.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_42.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_43.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_44.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_45.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_46.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_47.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_48.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_49.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_50.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_51.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_52.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_53.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_54.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_55.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_56.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_57.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_58.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_59.dds"
+	"gfx/models/portraits/sl_darkelf/female_darkelf_60.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_dark_elf_fighter_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_male"
+		character_textures = {
+	"gfx/models/portraits/sl_darkelf/male_darkelf_01.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_02.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_03.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_04.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_05.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_06.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_07.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_08.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_09.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_10.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_11.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_12.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_13.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_14.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_15.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_16.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_17.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_18.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_19.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_20.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_21.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_22.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_23.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_24.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_25.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_26.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_27.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_28.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_29.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_30.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_dark_elf_ruler_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_male"
+		character_textures = {
+	"gfx/models/portraits/sl_darkelf/male_darkelf_31.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_32.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_33.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_34.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_35.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_36.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_37.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_38.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_39.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_40.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_41.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_42.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_43.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_44.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_45.dds"
+	"gfx/models/portraits/sl_darkelf/male_darkelf_46.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+	sl_darkelf = {
+		default = sl_dark_elf_ruler_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_dark_elf_ruler_female_01
+					sl_dark_elf_fighter_female_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					sl_dark_elf_ruler_male_01
+					sl_dark_elf_fighter_male_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_dark_elf_ruler_female_01
+					sl_dark_elf_fighter_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_dark_elf_ruler_male_01
+					sl_dark_elf_fighter_male_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_dark_elf_fighter_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_dark_elf_fighter_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_dark_elf_fighter_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_dark_elf_fighter_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = commander
+				}
+				portraits = {
+					sl_dark_elf_fighter_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {
+					sl_dark_elf_fighter_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable					
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_dark_elf_ruler_female_01	
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_dark_elf_ruler_male_01				
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_dark_elf_ruler_female_01				
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_dark_elf_ruler_male_01
+				}
+			}			
+		}
+	}
+}

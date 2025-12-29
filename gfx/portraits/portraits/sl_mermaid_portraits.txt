@@ -1,0 +1,185 @@
+portraits = {	
+	sl_mermaid_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_mermaid/female_mermaid_01.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_02.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_03.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_04.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_05.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_06.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_07.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_08.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_09.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_10.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_11.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_12.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_13.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_14.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_15.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_16.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_17.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_18.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_19.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_20.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_21.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_22.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_23.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_24.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_25.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_26.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_27.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_28.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_29.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_30.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_31.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_32.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_33.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_34.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_35.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_36.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_37.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_38.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_39.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_40.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_41.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_42.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_43.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_44.dds"
+	"gfx/models/portraits/sl_mermaid/female_mermaid_45.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_mermaid_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_mermaid/male_mermaid_01.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_02.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_03.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_04.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_05.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_06.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_07.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_08.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_09.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_10.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_11.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_12.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_13.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_14.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_15.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_16.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_17.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_18.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_19.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_20.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_21.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_22.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_23.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_24.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_25.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_26.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_27.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_28.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_29.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_30.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_31.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_32.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_33.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_34.dds"
+	"gfx/models/portraits/sl_mermaid/male_mermaid_35.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_mermaid = {
+        default = sl_mermaid_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_mermaid_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_mermaid_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_mermaid_female_01
+                }
+            }
+        }
+
+        pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_mermaid_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_mermaid_male_01
+				}
+			}			
+		}
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_mermaid_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_mermaid_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_mermaid_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_mermaid_male_01
+                }
+            }
+        }
+    }
+}

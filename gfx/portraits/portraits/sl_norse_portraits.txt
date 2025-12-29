@@ -1,0 +1,190 @@
+portraits = {	
+	sl_norse_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_norse/female_norse_01.dds"
+	"gfx/models/portraits/sl_norse/female_norse_02.dds"
+	"gfx/models/portraits/sl_norse/female_norse_03.dds"
+	"gfx/models/portraits/sl_norse/female_norse_04.dds"
+	"gfx/models/portraits/sl_norse/female_norse_05.dds"
+	"gfx/models/portraits/sl_norse/female_norse_06.dds"
+	"gfx/models/portraits/sl_norse/female_norse_07.dds"
+	"gfx/models/portraits/sl_norse/female_norse_08.dds"
+	"gfx/models/portraits/sl_norse/female_norse_09.dds"
+	"gfx/models/portraits/sl_norse/female_norse_10.dds"
+	"gfx/models/portraits/sl_norse/female_norse_11.dds"
+	"gfx/models/portraits/sl_norse/female_norse_12.dds"
+	"gfx/models/portraits/sl_norse/female_norse_13.dds"
+	"gfx/models/portraits/sl_norse/female_norse_14.dds"
+	"gfx/models/portraits/sl_norse/female_norse_15.dds"
+	"gfx/models/portraits/sl_norse/female_norse_16.dds"
+	"gfx/models/portraits/sl_norse/female_norse_17.dds"
+	"gfx/models/portraits/sl_norse/female_norse_18.dds"
+	"gfx/models/portraits/sl_norse/female_norse_19.dds"
+	"gfx/models/portraits/sl_norse/female_norse_20.dds"
+	"gfx/models/portraits/sl_norse/female_norse_21.dds"
+	"gfx/models/portraits/sl_norse/female_norse_22.dds"
+	"gfx/models/portraits/sl_norse/female_norse_23.dds"
+	"gfx/models/portraits/sl_norse/female_norse_24.dds"
+	"gfx/models/portraits/sl_norse/female_norse_25.dds"
+	"gfx/models/portraits/sl_norse/female_norse_26.dds"
+	"gfx/models/portraits/sl_norse/female_norse_27.dds"
+	"gfx/models/portraits/sl_norse/female_norse_28.dds"
+	"gfx/models/portraits/sl_norse/female_norse_29.dds"
+	"gfx/models/portraits/sl_norse/female_norse_30.dds"
+	"gfx/models/portraits/sl_norse/female_norse_31.dds"
+	"gfx/models/portraits/sl_norse/female_norse_32.dds"
+	"gfx/models/portraits/sl_norse/female_norse_33.dds"
+	"gfx/models/portraits/sl_norse/female_norse_34.dds"
+	"gfx/models/portraits/sl_norse/female_norse_35.dds"
+	"gfx/models/portraits/sl_norse/female_norse_36.dds"
+	"gfx/models/portraits/sl_norse/female_norse_37.dds"
+	"gfx/models/portraits/sl_norse/female_norse_38.dds"
+	"gfx/models/portraits/sl_norse/female_norse_39.dds"
+	"gfx/models/portraits/sl_norse/female_norse_40.dds"
+	"gfx/models/portraits/sl_norse/female_norse_41.dds"
+	"gfx/models/portraits/sl_norse/female_norse_42.dds"
+	"gfx/models/portraits/sl_norse/female_norse_43.dds"
+	"gfx/models/portraits/sl_norse/female_norse_44.dds"
+	"gfx/models/portraits/sl_norse/female_norse_45.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_norse_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_norse/male_norse_01.dds"
+	"gfx/models/portraits/sl_norse/male_norse_02.dds"
+	"gfx/models/portraits/sl_norse/male_norse_03.dds"
+	"gfx/models/portraits/sl_norse/male_norse_04.dds"
+	"gfx/models/portraits/sl_norse/male_norse_05.dds"
+	"gfx/models/portraits/sl_norse/male_norse_06.dds"
+	"gfx/models/portraits/sl_norse/male_norse_07.dds"
+	"gfx/models/portraits/sl_norse/male_norse_08.dds"
+	"gfx/models/portraits/sl_norse/male_norse_09.dds"
+	"gfx/models/portraits/sl_norse/male_norse_10.dds"
+	"gfx/models/portraits/sl_norse/male_norse_11.dds"
+	"gfx/models/portraits/sl_norse/male_norse_12.dds"
+	"gfx/models/portraits/sl_norse/male_norse_13.dds"
+	"gfx/models/portraits/sl_norse/male_norse_14.dds"
+	"gfx/models/portraits/sl_norse/male_norse_15.dds"
+	"gfx/models/portraits/sl_norse/male_norse_16.dds"
+	"gfx/models/portraits/sl_norse/male_norse_17.dds"
+	"gfx/models/portraits/sl_norse/male_norse_18.dds"
+	"gfx/models/portraits/sl_norse/male_norse_19.dds"
+	"gfx/models/portraits/sl_norse/male_norse_20.dds"
+	"gfx/models/portraits/sl_norse/male_norse_21.dds"
+	"gfx/models/portraits/sl_norse/male_norse_22.dds"
+	"gfx/models/portraits/sl_norse/male_norse_23.dds"
+	"gfx/models/portraits/sl_norse/male_norse_24.dds"
+	"gfx/models/portraits/sl_norse/male_norse_25.dds"
+	"gfx/models/portraits/sl_norse/male_norse_26.dds"
+	"gfx/models/portraits/sl_norse/male_norse_27.dds"
+	"gfx/models/portraits/sl_norse/male_norse_28.dds"
+	"gfx/models/portraits/sl_norse/male_norse_29.dds"
+	"gfx/models/portraits/sl_norse/male_norse_30.dds"
+	"gfx/models/portraits/sl_norse/male_norse_31.dds"
+	"gfx/models/portraits/sl_norse/male_norse_32.dds"
+	"gfx/models/portraits/sl_norse/male_norse_33.dds"
+	"gfx/models/portraits/sl_norse/male_norse_34.dds"
+	"gfx/models/portraits/sl_norse/male_norse_35.dds"
+	"gfx/models/portraits/sl_norse/male_norse_36.dds"
+	"gfx/models/portraits/sl_norse/male_norse_37.dds"
+	"gfx/models/portraits/sl_norse/male_norse_38.dds"
+	"gfx/models/portraits/sl_norse/male_norse_39.dds"
+	"gfx/models/portraits/sl_norse/male_norse_40.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_norse = {
+        default = sl_norse_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_norse_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_norse_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_norse_female_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_norse_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_norse_male_01
+				}
+			}			
+		}
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_norse_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_norse_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_norse_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_norse_male_01
+                }
+            }
+        }
+    }
+}

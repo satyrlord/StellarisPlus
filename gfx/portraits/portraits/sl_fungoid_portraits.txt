@@ -1,0 +1,167 @@
+portraits = {	
+	sl_fungoid_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "cute_fungoid_greetings"
+		character_textures = {
+	"gfx/models/portraits/sl_fungoid/female_fungoid_01.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_02.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_03.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_04.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_05.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_06.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_07.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_08.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_09.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_10.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_11.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_12.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_13.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_14.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_15.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_16.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_17.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_18.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_19.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_20.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_21.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_22.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_23.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_24.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_25.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_26.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_27.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_28.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_29.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_30.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_31.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_32.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_33.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_34.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_35.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_36.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_37.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_38.dds"
+	"gfx/models/portraits/sl_fungoid/female_fungoid_39.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_fungoid_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "fungoid_01_greetings"
+		character_textures = {
+	"gfx/models/portraits/sl_fungoid/male_fungoid_01.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_02.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_03.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_04.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_05.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_06.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_07.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_08.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_09.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_10.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_11.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_12.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_13.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_14.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_15.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_16.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_17.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_18.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_19.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_20.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_21.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_22.dds"
+	"gfx/models/portraits/sl_fungoid/male_fungoid_23.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_fungoid = {
+        default = sl_fungoid_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_fungoid_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_fungoid_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_fungoid_female_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_fungoid_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_fungoid_male_01
+				}
+			}			
+		}
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_fungoid_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_fungoid_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_fungoid_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_fungoid_male_01
+                }
+            }
+        }
+    }
+}

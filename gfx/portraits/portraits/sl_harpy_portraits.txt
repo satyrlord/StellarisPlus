@@ -1,0 +1,98 @@
+portraits = {
+	
+	sl_harpy_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_f_female"
+		character_textures = {
+	"gfx/models/portraits/sl_harpy/female_harpy_01.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_02.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_03.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_04.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_05.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_06.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_07.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_08.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_09.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_10.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_11.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_12.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_13.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_14.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_15.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_16.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_17.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_18.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_19.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_20.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_21.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_22.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_23.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_24.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_25.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_26.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_27.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_28.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_29.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_30.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_31.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_32.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_33.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_34.dds"
+	"gfx/models/portraits/sl_harpy/female_harpy_35.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_harpy = {
+        default = sl_harpy_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_harpy_female_01
+                }
+            }               
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_harpy_female_01
+                }
+            }
+        }
+
+        pop = { # for planet-bound pops
+            add = {
+                portraits = {
+                    sl_harpy_female_01
+                }
+            }
+        }
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_harpy_female_01
+                }
+            }         
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+					sl_harpy_female_01
+                }
+            }       
+        }
+    }
+}

@@ -1,0 +1,113 @@
+portraits = {
+	
+	sl_kitsune_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_f_female"
+		character_textures = {
+	"gfx/models/portraits/sl_kitsune/female_kitsune_01.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_02.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_03.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_04.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_05.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_06.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_07.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_08.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_09.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_10.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_11.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_12.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_13.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_14.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_15.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_16.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_17.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_18.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_19.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_20.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_21.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_22.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_23.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_24.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_25.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_26.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_27.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_28.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_29.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_30.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_31.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_32.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_33.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_34.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_35.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_36.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_37.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_38.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_39.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_40.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_41.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_42.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_43.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_44.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_45.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_46.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_47.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_48.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_49.dds"
+	"gfx/models/portraits/sl_kitsune/female_kitsune_50.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_kitsune = {
+        default = sl_kitsune_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_kitsune_female_01
+                }
+            }               
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_kitsune_female_01
+                }
+            }
+        }
+
+        pop = { # for planet-bound pops
+            add = {
+                portraits = {
+                    sl_kitsune_female_01
+                }
+            }
+        }
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_kitsune_female_01
+                }
+            }         
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+					sl_kitsune_female_01
+                }
+            }       
+        }
+    }
+}

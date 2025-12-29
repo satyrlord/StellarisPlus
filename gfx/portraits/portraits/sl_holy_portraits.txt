@@ -1,0 +1,311 @@
+portraits = {
+    sl_holy_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_holy/female_holy_01.dds"
+	"gfx/models/portraits/sl_holy/female_holy_02.dds"
+	"gfx/models/portraits/sl_holy/female_holy_03.dds"
+	"gfx/models/portraits/sl_holy/female_holy_04.dds"
+	"gfx/models/portraits/sl_holy/female_holy_05.dds"
+	"gfx/models/portraits/sl_holy/female_holy_06.dds"
+	"gfx/models/portraits/sl_holy/female_holy_07.dds"
+	"gfx/models/portraits/sl_holy/female_holy_08.dds"
+	"gfx/models/portraits/sl_holy/female_holy_09.dds"
+	"gfx/models/portraits/sl_holy/female_holy_10.dds"
+	"gfx/models/portraits/sl_holy/female_holy_11.dds"
+	"gfx/models/portraits/sl_holy/female_holy_12.dds"
+	"gfx/models/portraits/sl_holy/female_holy_13.dds"
+	"gfx/models/portraits/sl_holy/female_holy_14.dds"
+	"gfx/models/portraits/sl_holy/female_holy_15.dds"
+	"gfx/models/portraits/sl_holy/female_holy_16.dds"
+	"gfx/models/portraits/sl_holy/female_holy_17.dds"
+	"gfx/models/portraits/sl_holy/female_holy_18.dds"
+	"gfx/models/portraits/sl_holy/female_holy_19.dds"
+	"gfx/models/portraits/sl_holy/female_holy_20.dds"
+	"gfx/models/portraits/sl_holy/female_holy_21.dds"
+	"gfx/models/portraits/sl_holy/female_holy_22.dds"
+	"gfx/models/portraits/sl_holy/female_holy_23.dds"
+	"gfx/models/portraits/sl_holy/female_holy_24.dds"
+	"gfx/models/portraits/sl_holy/female_holy_25.dds"
+	"gfx/models/portraits/sl_holy/female_holy_26.dds"
+	"gfx/models/portraits/sl_holy/female_holy_27.dds"
+	"gfx/models/portraits/sl_holy/female_holy_28.dds"
+	"gfx/models/portraits/sl_holy/female_holy_29.dds"
+	"gfx/models/portraits/sl_holy/female_holy_30.dds"
+	"gfx/models/portraits/sl_holy/female_holy_31.dds"
+	"gfx/models/portraits/sl_holy/female_holy_32.dds"
+	"gfx/models/portraits/sl_holy/female_holy_33.dds"
+	"gfx/models/portraits/sl_holy/female_holy_34.dds"
+	"gfx/models/portraits/sl_holy/female_holy_35.dds"
+	"gfx/models/portraits/sl_holy/female_holy_36.dds"
+	"gfx/models/portraits/sl_holy/female_holy_37.dds"
+	"gfx/models/portraits/sl_holy/female_holy_38.dds"
+	"gfx/models/portraits/sl_holy/female_holy_39.dds"
+	"gfx/models/portraits/sl_holy/female_holy_40.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_holy_female_ruler_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_holy/female_holy_41.dds"
+	"gfx/models/portraits/sl_holy/female_holy_42.dds"
+	"gfx/models/portraits/sl_holy/female_holy_43.dds"
+	"gfx/models/portraits/sl_holy/female_holy_44.dds"
+	"gfx/models/portraits/sl_holy/female_holy_45.dds"
+	"gfx/models/portraits/sl_holy/female_holy_46.dds"
+	"gfx/models/portraits/sl_holy/female_holy_47.dds"
+	"gfx/models/portraits/sl_holy/female_holy_48.dds"
+	"gfx/models/portraits/sl_holy/female_holy_49.dds"
+	"gfx/models/portraits/sl_holy/female_holy_50.dds"
+	"gfx/models/portraits/sl_holy/female_holy_51.dds"
+	"gfx/models/portraits/sl_holy/female_holy_52.dds"
+	"gfx/models/portraits/sl_holy/female_holy_53.dds"
+	"gfx/models/portraits/sl_holy/female_holy_54.dds"
+	"gfx/models/portraits/sl_holy/female_holy_55.dds"
+	"gfx/models/portraits/sl_holy/female_holy_56.dds"
+	"gfx/models/portraits/sl_holy/female_holy_57.dds"
+	"gfx/models/portraits/sl_holy/female_holy_58.dds"
+	"gfx/models/portraits/sl_holy/female_holy_59.dds"
+	"gfx/models/portraits/sl_holy/female_holy_60.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_holy_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_holy/male_holy_01.dds"
+	"gfx/models/portraits/sl_holy/male_holy_02.dds"
+	"gfx/models/portraits/sl_holy/male_holy_03.dds"
+	"gfx/models/portraits/sl_holy/male_holy_04.dds"
+	"gfx/models/portraits/sl_holy/male_holy_05.dds"
+	"gfx/models/portraits/sl_holy/male_holy_06.dds"
+	"gfx/models/portraits/sl_holy/male_holy_07.dds"
+	"gfx/models/portraits/sl_holy/male_holy_08.dds"
+	"gfx/models/portraits/sl_holy/male_holy_09.dds"
+	"gfx/models/portraits/sl_holy/male_holy_10.dds"
+	"gfx/models/portraits/sl_holy/male_holy_11.dds"
+	"gfx/models/portraits/sl_holy/male_holy_12.dds"
+	"gfx/models/portraits/sl_holy/male_holy_13.dds"
+	"gfx/models/portraits/sl_holy/male_holy_14.dds"
+	"gfx/models/portraits/sl_holy/male_holy_15.dds"
+	"gfx/models/portraits/sl_holy/male_holy_16.dds"
+	"gfx/models/portraits/sl_holy/male_holy_17.dds"
+	"gfx/models/portraits/sl_holy/male_holy_18.dds"
+	"gfx/models/portraits/sl_holy/male_holy_19.dds"
+	"gfx/models/portraits/sl_holy/male_holy_20.dds"
+	"gfx/models/portraits/sl_holy/male_holy_21.dds"
+	"gfx/models/portraits/sl_holy/male_holy_22.dds"
+	"gfx/models/portraits/sl_holy/male_holy_23.dds"
+	"gfx/models/portraits/sl_holy/male_holy_24.dds"
+	"gfx/models/portraits/sl_holy/male_holy_25.dds"
+	"gfx/models/portraits/sl_holy/male_holy_26.dds"
+	"gfx/models/portraits/sl_holy/male_holy_27.dds"
+	"gfx/models/portraits/sl_holy/male_holy_28.dds"
+	"gfx/models/portraits/sl_holy/male_holy_29.dds"
+	"gfx/models/portraits/sl_holy/male_holy_30.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_holy_male_ruler_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_holy/male_holy_31.dds"
+	"gfx/models/portraits/sl_holy/male_holy_32.dds"
+	"gfx/models/portraits/sl_holy/male_holy_33.dds"
+	"gfx/models/portraits/sl_holy/male_holy_34.dds"
+	"gfx/models/portraits/sl_holy/male_holy_35.dds"
+	"gfx/models/portraits/sl_holy/male_holy_36.dds"
+	"gfx/models/portraits/sl_holy/male_holy_37.dds"
+	"gfx/models/portraits/sl_holy/male_holy_38.dds"
+	"gfx/models/portraits/sl_holy/male_holy_39.dds"
+	"gfx/models/portraits/sl_holy/male_holy_40.dds"
+	"gfx/models/portraits/sl_holy/male_holy_41.dds"
+	"gfx/models/portraits/sl_holy/male_holy_42.dds"
+	"gfx/models/portraits/sl_holy/male_holy_43.dds"
+	"gfx/models/portraits/sl_holy/male_holy_44.dds"
+	"gfx/models/portraits/sl_holy/male_holy_45.dds"
+	"gfx/models/portraits/sl_holy/male_holy_46.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+	sl_holy = {
+		default = sl_holy_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_holy_female_01
+					sl_holy_female_ruler_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+						}
+					}
+				}
+				portraits = {
+					sl_holy_male_01
+					sl_holy_male_ruler_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_holy_female_01
+					sl_holy_female_ruler_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_holy_male_01
+					sl_holy_male_ruler_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_holy_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_holy_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_holy_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_holy_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = commander
+				}
+				portraits = {
+					sl_holy_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {
+					sl_holy_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female			
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_holy_female_ruler_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male				
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+
+				}
+				portraits = {
+					sl_holy_male_ruler_01
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_holy_female_ruler_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_holy_male_ruler_01
+				}
+			}			
+		}
+	}
+}

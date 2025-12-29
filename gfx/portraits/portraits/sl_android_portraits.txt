@@ -1,0 +1,182 @@
+portraits = {
+	
+	sl_android_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_android/female_android_01.dds"
+	"gfx/models/portraits/sl_android/female_android_02.dds"
+	"gfx/models/portraits/sl_android/female_android_03.dds"
+	"gfx/models/portraits/sl_android/female_android_04.dds"
+	"gfx/models/portraits/sl_android/female_android_05.dds"
+	"gfx/models/portraits/sl_android/female_android_06.dds"
+	"gfx/models/portraits/sl_android/female_android_07.dds"
+	"gfx/models/portraits/sl_android/female_android_08.dds"
+	"gfx/models/portraits/sl_android/female_android_09.dds"
+	"gfx/models/portraits/sl_android/female_android_10.dds"
+	"gfx/models/portraits/sl_android/female_android_11.dds"
+	"gfx/models/portraits/sl_android/female_android_12.dds"
+	"gfx/models/portraits/sl_android/female_android_13.dds"
+	"gfx/models/portraits/sl_android/female_android_14.dds"
+	"gfx/models/portraits/sl_android/female_android_15.dds"
+	"gfx/models/portraits/sl_android/female_android_16.dds"
+	"gfx/models/portraits/sl_android/female_android_17.dds"
+	"gfx/models/portraits/sl_android/female_android_18.dds"
+	"gfx/models/portraits/sl_android/female_android_19.dds"
+	"gfx/models/portraits/sl_android/female_android_20.dds"
+	"gfx/models/portraits/sl_android/female_android_21.dds"
+	"gfx/models/portraits/sl_android/female_android_22.dds"
+	"gfx/models/portraits/sl_android/female_android_23.dds"
+	"gfx/models/portraits/sl_android/female_android_24.dds"
+	"gfx/models/portraits/sl_android/female_android_25.dds"
+	"gfx/models/portraits/sl_android/female_android_26.dds"
+	"gfx/models/portraits/sl_android/female_android_27.dds"
+	"gfx/models/portraits/sl_android/female_android_28.dds"
+	"gfx/models/portraits/sl_android/female_android_29.dds"
+	"gfx/models/portraits/sl_android/female_android_30.dds"
+	"gfx/models/portraits/sl_android/female_android_31.dds"
+	"gfx/models/portraits/sl_android/female_android_32.dds"
+	"gfx/models/portraits/sl_android/female_android_33.dds"
+	"gfx/models/portraits/sl_android/female_android_34.dds"
+	"gfx/models/portraits/sl_android/female_android_35.dds"
+	"gfx/models/portraits/sl_android/female_android_36.dds"
+	"gfx/models/portraits/sl_android/female_android_37.dds"
+	"gfx/models/portraits/sl_android/female_android_38.dds"
+	"gfx/models/portraits/sl_android/female_android_39.dds"
+	"gfx/models/portraits/sl_android/female_android_40.dds"
+	"gfx/models/portraits/sl_android/female_android_41.dds"
+	"gfx/models/portraits/sl_android/female_android_42.dds"
+	"gfx/models/portraits/sl_android/female_android_43.dds"
+	"gfx/models/portraits/sl_android/female_android_44.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_android_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_android/male_android_01.dds"
+	"gfx/models/portraits/sl_android/male_android_02.dds"
+	"gfx/models/portraits/sl_android/male_android_03.dds"
+	"gfx/models/portraits/sl_android/male_android_04.dds"
+	"gfx/models/portraits/sl_android/male_android_05.dds"
+	"gfx/models/portraits/sl_android/male_android_06.dds"
+	"gfx/models/portraits/sl_android/male_android_07.dds"
+	"gfx/models/portraits/sl_android/male_android_08.dds"
+	"gfx/models/portraits/sl_android/male_android_09.dds"
+	"gfx/models/portraits/sl_android/male_android_10.dds"
+	"gfx/models/portraits/sl_android/male_android_11.dds"
+	"gfx/models/portraits/sl_android/male_android_12.dds"
+	"gfx/models/portraits/sl_android/male_android_13.dds"
+	"gfx/models/portraits/sl_android/male_android_14.dds"
+	"gfx/models/portraits/sl_android/male_android_15.dds"
+	"gfx/models/portraits/sl_android/male_android_16.dds"
+	"gfx/models/portraits/sl_android/male_android_17.dds"
+	"gfx/models/portraits/sl_android/male_android_18.dds"
+	"gfx/models/portraits/sl_android/male_android_19.dds"
+	"gfx/models/portraits/sl_android/male_android_20.dds"
+	"gfx/models/portraits/sl_android/male_android_21.dds"
+	"gfx/models/portraits/sl_android/male_android_22.dds"
+	"gfx/models/portraits/sl_android/male_android_23.dds"
+	"gfx/models/portraits/sl_android/male_android_24.dds"
+	"gfx/models/portraits/sl_android/male_android_25.dds"
+	"gfx/models/portraits/sl_android/male_android_26.dds"
+	"gfx/models/portraits/sl_android/male_android_27.dds"
+	"gfx/models/portraits/sl_android/male_android_28.dds"
+	"gfx/models/portraits/sl_android/male_android_29.dds"
+	"gfx/models/portraits/sl_android/male_android_30.dds"
+	"gfx/models/portraits/sl_android/male_android_31.dds"
+	"gfx/models/portraits/sl_android/male_android_32.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_android = {
+        default = sl_android_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_android_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_android_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_android_female_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_android_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_android_male_01
+				}
+			}			
+		}
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_android_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_android_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_android_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_android_male_01
+                }
+            }
+        }
+    }
+}

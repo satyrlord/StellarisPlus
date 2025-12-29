@@ -1,0 +1,350 @@
+portraits = {
+   sl_shogun_fighter_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_shogun/female_shogun_01.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_02.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_03.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_04.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_05.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_06.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_07.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_08.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_09.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_10.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_11.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_12.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_13.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_14.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_15.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_16.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_17.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_18.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_19.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_20.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_21.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_22.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_23.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_25.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_26.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_27.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_28.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_29.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_30.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_31.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_32.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_33.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_34.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_35.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_shogun_governor_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_shogun/female_shogun_36.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_37.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_38.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_39.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_40.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_41.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_42.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_43.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_44.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_45.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_46.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_47.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_48.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_49.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_50.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_51.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_52.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_53.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_54.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_55.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_shogun_scientist_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_shogun/female_shogun_56.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_57.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_58.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_59.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_60.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_61.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_62.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_63.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_64.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_65.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_66.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_67.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_68.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_69.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_70.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_71.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_72.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_73.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_74.dds"
+	"gfx/models/portraits/sl_shogun/female_shogun_75.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_shogun_fighter_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_shogun/male_shogun_01.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_02.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_03.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_04.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_05.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_06.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_07.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_08.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_09.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_10.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_11.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_12.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_13.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_14.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_15.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_16.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_17.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_18.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_19.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_20.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_21.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_22.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_23.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_24.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_shogun_governor_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_shogun/male_shogun_34.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_35.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_36.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_37.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_38.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_39.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_40.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_41.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_42.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_43.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_44.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_45.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_shogun_scientist_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_shogun/male_shogun_25.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_26.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_27.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_28.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_29.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_30.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_31.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_32.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_33.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_46.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_47.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_48.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_49.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_50.dds"
+	"gfx/models/portraits/sl_shogun/male_shogun_51.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+}
+
+portrait_groups = {
+	sl_shogun = {
+		default = sl_shogun_fighter_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_shogun_fighter_female_01
+					sl_shogun_scientist_female_01
+					sl_shogun_governor_female_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					sl_shogun_fighter_male_01
+					sl_shogun_scientist_male_01
+					sl_shogun_governor_male_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_shogun_fighter_female_01
+					sl_shogun_scientist_female_01
+					sl_shogun_governor_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_shogun_fighter_male_01
+					sl_shogun_scientist_male_01
+					sl_shogun_governor_male_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_shogun_fighter_female_01
+					sl_shogun_scientist_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_shogun_fighter_male_01
+					sl_shogun_scientist_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_shogun_scientist_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_shogun_scientist_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = commander
+				}
+				portraits = {				
+					sl_shogun_fighter_female_01		
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {					
+					sl_shogun_fighter_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable					
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_shogun_governor_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_shogun_governor_male_01
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_shogun_governor_female_01
+				}	
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_shogun_governor_male_01 
+				}
+			}			
+		}
+	}
+}

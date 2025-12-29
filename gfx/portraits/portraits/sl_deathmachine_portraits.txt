@@ -1,0 +1,166 @@
+portraits = {
+	
+	sl_deathmachine_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "necroid_portrait_11_reaper"
+		character_textures = {
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_01.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_02.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_03.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_04.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_05.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_06.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_07.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_08.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_09.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_10.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_11.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_12.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_13.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_14.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_15.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_16.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_17.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_18.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_19.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_20.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_21.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_22.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_23.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_24.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_25.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_26.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_27.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_28.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_29.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_30.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_31.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_32.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_33.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_34.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_35.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_36.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_deathmachine_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "necroid_portrait_11_reaper"
+		character_textures = {
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_01.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_02.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_03.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_04.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_05.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_06.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_07.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_08.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_09.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_10.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_11.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_12.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_13.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_14.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_15.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_16.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_17.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_18.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_19.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_20.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_21.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_22.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_23.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_24.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_25.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_26.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_27.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_28.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_29.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_30.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_31.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_32.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_33.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_34.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_35.dds"
+	"gfx/models/portraits/sl_deathmachine/male_deathmachine_36.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_deathmachine = {
+        default = sl_deathmachine_male_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_deathmachine_male_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_deathmachine_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_deathmachine_male_01
+                }
+            }
+        }
+
+        pop = { # for planet-bound pops
+            add = {
+                portraits = {
+                    sl_deathmachine_male_01
+					sl_deathmachine_male_01
+                }
+            }
+        }
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_deathmachine_male_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_deathmachine_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                 sl_deathmachine_male_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_deathmachine_male_01
+                }
+            }
+        }
+    }
+}

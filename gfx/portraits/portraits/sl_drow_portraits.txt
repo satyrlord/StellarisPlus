@@ -1,0 +1,214 @@
+portraits = {	
+	sl_drow_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_drow/female_drow_01.dds"
+	"gfx/models/portraits/sl_drow/female_drow_02.dds"
+	"gfx/models/portraits/sl_drow/female_drow_03.dds"
+	"gfx/models/portraits/sl_drow/female_drow_04.dds"
+	"gfx/models/portraits/sl_drow/female_drow_05.dds"
+	"gfx/models/portraits/sl_drow/female_drow_06.dds"
+	"gfx/models/portraits/sl_drow/female_drow_07.dds"
+	"gfx/models/portraits/sl_drow/female_drow_08.dds"
+	"gfx/models/portraits/sl_drow/female_drow_09.dds"
+	"gfx/models/portraits/sl_drow/female_drow_10.dds"
+	"gfx/models/portraits/sl_drow/female_drow_11.dds"
+	"gfx/models/portraits/sl_drow/female_drow_12.dds"
+	"gfx/models/portraits/sl_drow/female_drow_13.dds"
+	"gfx/models/portraits/sl_drow/female_drow_14.dds"
+	"gfx/models/portraits/sl_drow/female_drow_15.dds"
+	"gfx/models/portraits/sl_drow/female_drow_16.dds"
+	"gfx/models/portraits/sl_drow/female_drow_17.dds"
+	"gfx/models/portraits/sl_drow/female_drow_18.dds"
+	"gfx/models/portraits/sl_drow/female_drow_19.dds"
+	"gfx/models/portraits/sl_drow/female_drow_20.dds"
+	"gfx/models/portraits/sl_drow/female_drow_21.dds"
+	"gfx/models/portraits/sl_drow/female_drow_22.dds"
+	"gfx/models/portraits/sl_drow/female_drow_23.dds"
+	"gfx/models/portraits/sl_drow/female_drow_24.dds"
+	"gfx/models/portraits/sl_drow/female_drow_25.dds"
+	"gfx/models/portraits/sl_drow/female_drow_26.dds"
+	"gfx/models/portraits/sl_drow/female_drow_27.dds"
+	"gfx/models/portraits/sl_drow/female_drow_28.dds"
+	"gfx/models/portraits/sl_drow/female_drow_29.dds"
+	"gfx/models/portraits/sl_drow/female_drow_30.dds"
+	"gfx/models/portraits/sl_drow/female_drow_31.dds"
+	"gfx/models/portraits/sl_drow/female_drow_32.dds"
+	"gfx/models/portraits/sl_drow/female_drow_33.dds"
+	"gfx/models/portraits/sl_drow/female_drow_34.dds"
+	"gfx/models/portraits/sl_drow/female_drow_35.dds"
+	"gfx/models/portraits/sl_drow/female_drow_36.dds"
+	"gfx/models/portraits/sl_drow/female_drow_37.dds"
+	"gfx/models/portraits/sl_drow/female_drow_38.dds"
+	"gfx/models/portraits/sl_drow/female_drow_39.dds"
+	"gfx/models/portraits/sl_drow/female_drow_40.dds"
+	"gfx/models/portraits/sl_drow/female_drow_41.dds"
+	"gfx/models/portraits/sl_drow/female_drow_42.dds"
+	"gfx/models/portraits/sl_drow/female_drow_43.dds"
+	"gfx/models/portraits/sl_drow/female_drow_44.dds"
+	"gfx/models/portraits/sl_drow/female_drow_45.dds"
+	"gfx/models/portraits/sl_drow/female_drow_46.dds"
+	"gfx/models/portraits/sl_drow/female_drow_47.dds"
+	"gfx/models/portraits/sl_drow/female_drow_48.dds"
+	"gfx/models/portraits/sl_drow/female_drow_49.dds"
+	"gfx/models/portraits/sl_drow/female_drow_50.dds"
+	"gfx/models/portraits/sl_drow/female_drow_51.dds"
+	"gfx/models/portraits/sl_drow/female_drow_52.dds"
+	"gfx/models/portraits/sl_drow/female_drow_53.dds"
+	"gfx/models/portraits/sl_drow/female_drow_54.dds"
+	"gfx/models/portraits/sl_drow/female_drow_55.dds"
+	"gfx/models/portraits/sl_drow/female_drow_56.dds"
+	"gfx/models/portraits/sl_drow/female_drow_57.dds"
+	"gfx/models/portraits/sl_drow/female_drow_58.dds"
+	"gfx/models/portraits/sl_drow/female_drow_59.dds"
+	"gfx/models/portraits/sl_drow/female_drow_60.dds"
+	"gfx/models/portraits/sl_drow/female_drow_61.dds"
+	"gfx/models/portraits/sl_drow/female_drow_62.dds"
+	"gfx/models/portraits/sl_drow/female_drow_63.dds"
+	"gfx/models/portraits/sl_drow/female_drow_65.dds"
+	"gfx/models/portraits/sl_drow/female_drow_66.dds"
+	"gfx/models/portraits/sl_drow/female_drow_67.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_drow_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_drow/male_drow_01.dds"
+	"gfx/models/portraits/sl_drow/male_drow_02.dds"
+	"gfx/models/portraits/sl_drow/male_drow_03.dds"
+	"gfx/models/portraits/sl_drow/male_drow_04.dds"
+	"gfx/models/portraits/sl_drow/male_drow_05.dds"
+	"gfx/models/portraits/sl_drow/male_drow_06.dds"
+	"gfx/models/portraits/sl_drow/male_drow_07.dds"
+	"gfx/models/portraits/sl_drow/male_drow_08.dds"
+	"gfx/models/portraits/sl_drow/male_drow_09.dds"
+	"gfx/models/portraits/sl_drow/male_drow_10.dds"
+	"gfx/models/portraits/sl_drow/male_drow_11.dds"
+	"gfx/models/portraits/sl_drow/male_drow_12.dds"
+	"gfx/models/portraits/sl_drow/male_drow_13.dds"
+	"gfx/models/portraits/sl_drow/male_drow_14.dds"
+	"gfx/models/portraits/sl_drow/male_drow_15.dds"
+	"gfx/models/portraits/sl_drow/male_drow_16.dds"
+	"gfx/models/portraits/sl_drow/male_drow_17.dds"
+	"gfx/models/portraits/sl_drow/male_drow_18.dds"
+	"gfx/models/portraits/sl_drow/male_drow_19.dds"
+	"gfx/models/portraits/sl_drow/male_drow_20.dds"
+	"gfx/models/portraits/sl_drow/male_drow_21.dds"
+	"gfx/models/portraits/sl_drow/male_drow_22.dds"
+	"gfx/models/portraits/sl_drow/male_drow_23.dds"
+	"gfx/models/portraits/sl_drow/male_drow_24.dds"
+	"gfx/models/portraits/sl_drow/male_drow_25.dds"
+	"gfx/models/portraits/sl_drow/male_drow_26.dds"
+	"gfx/models/portraits/sl_drow/male_drow_27.dds"
+	"gfx/models/portraits/sl_drow/male_drow_28.dds"
+	"gfx/models/portraits/sl_drow/male_drow_29.dds"
+	"gfx/models/portraits/sl_drow/male_drow_30.dds"
+	"gfx/models/portraits/sl_drow/male_drow_31.dds"
+	"gfx/models/portraits/sl_drow/male_drow_32.dds"
+	"gfx/models/portraits/sl_drow/male_drow_33.dds"
+	"gfx/models/portraits/sl_drow/male_drow_34.dds"
+	"gfx/models/portraits/sl_drow/male_drow_35.dds"
+	"gfx/models/portraits/sl_drow/male_drow_36.dds"
+	"gfx/models/portraits/sl_drow/male_drow_37.dds"
+	"gfx/models/portraits/sl_drow/male_drow_38.dds"
+	"gfx/models/portraits/sl_drow/male_drow_39.dds"
+	"gfx/models/portraits/sl_drow/male_drow_40.dds"
+	"gfx/models/portraits/sl_drow/male_drow_41.dds"
+	"gfx/models/portraits/sl_drow/male_drow_42.dds"
+	"gfx/models/portraits/sl_drow/male_drow_43.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_drow = {
+        default = sl_drow_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_drow_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_drow_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_drow_female_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_drow_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_drow_male_01
+				}
+			}			
+		}
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_drow_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_drow_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_drow_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_drow_male_01
+                }
+            }
+        }
+    }
+}

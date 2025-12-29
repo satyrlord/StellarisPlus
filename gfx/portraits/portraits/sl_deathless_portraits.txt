@@ -1,0 +1,344 @@
+portraits = {
+   sl_deathless_fighter_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "necroid_portrait_16_death_worshipper"
+		character_textures = {
+				"gfx/models/portraits/sl_deathless/female_deathless_17.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_18.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_19.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_20.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_21.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_22.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_23.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_24.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_25.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_26.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_27.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_28.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_29.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_30.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_32.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_33.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_34.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_35.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_36.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_37.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_38.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_39.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_40.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_deathless_governor_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "necroid_portrait_16_death_worshipper"
+		character_textures = {
+				"gfx/models/portraits/sl_deathless/female_deathless_01.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_02.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_03.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_04.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_05.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_06.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_07.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_08.dds"			
+				"gfx/models/portraits/sl_deathless/female_deathless_31.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_41.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_42.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_43.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_44.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_45.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_46.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_47.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_48.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_57.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_58.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_59.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_60.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_61.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_62.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_63.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_64.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_72.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_73.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_74.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_75.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_76.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_77.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_78.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_79.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_deathless_scientist_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "necroid_portrait_16_death_worshipper"
+		character_textures = {
+				"gfx/models/portraits/sl_deathless/female_deathless_09.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_10.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_11.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_12.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_13.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_14.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_15.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_16.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_49.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_50.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_51.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_52.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_53.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_54.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_55.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_56.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_65.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_66.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_67.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_68.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_69.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_70.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_71.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_80.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_81.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_82.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_83.dds"
+				"gfx/models/portraits/sl_deathless/female_deathless_84.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_deathless_fighter_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "necroid_portrait_16_death_worshipper"
+		character_textures = {
+				"gfx/models/portraits/sl_deathless/male_deathless_13.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_14.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_16.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_20.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_21.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_22.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_25.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_27.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_29.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_30.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_31.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_32.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_33.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_34.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_35.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_deathless_governor_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "necroid_portrait_16_death_worshipper"
+		character_textures = {
+				"gfx/models/portraits/sl_deathless/male_deathless_01.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_02.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_03.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_04.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_05.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_06.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_07.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_08.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_09.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_10.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_11.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_12.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_15.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_17.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_19.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_deathless_scientist_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "necroid_portrait_16_death_worshipper"
+		character_textures = {
+				"gfx/models/portraits/sl_deathless/male_deathless_18.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_23.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_24.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_26.dds"
+				"gfx/models/portraits/sl_deathless/male_deathless_28.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+}
+
+portrait_groups = {
+	sl_deathless = {
+		default = sl_deathless_governor_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_deathless_fighter_female_01
+					sl_deathless_scientist_female_01
+					sl_deathless_governor_female_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					sl_deathless_fighter_male_01
+					sl_deathless_scientist_male_01
+					sl_deathless_governor_male_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_deathless_fighter_female_01
+					sl_deathless_scientist_female_01
+					sl_deathless_governor_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_deathless_fighter_male_01
+					sl_deathless_scientist_male_01
+					sl_deathless_governor_male_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_deathless_fighter_female_01
+					sl_deathless_scientist_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_deathless_fighter_male_01
+					sl_deathless_scientist_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_deathless_scientist_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_deathless_scientist_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = commander
+				}
+				portraits = {				
+					sl_deathless_fighter_female_01		
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {					
+					sl_deathless_fighter_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable					
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_deathless_governor_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_deathless_governor_male_01
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_deathless_governor_female_01
+				}	
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_deathless_governor_male_01 
+				}
+			}			
+		}
+	}
+}

@@ -1,0 +1,378 @@
+portraits = {
+   sl_egypt_admiral_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_egypt/female_egypt_01.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_02.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_03.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_04.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_05.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_06.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_07.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_08.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_09.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_10.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_egypt_general_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_egypt/female_egypt_11.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_12.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_13.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_14.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_15.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_16.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_17.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_18.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_19.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_20.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_21.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_22.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_23.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_24.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_25.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_26.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_27.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_egypt_governor_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_egypt/female_egypt_28.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_29.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_30.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_31.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_32.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_33.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_34.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_35.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_36.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_37.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_38.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_39.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_40.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_41.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_42.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_43.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_44.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_45.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_46.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_47.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_egypt_scientist_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_egypt/female_egypt_48.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_49.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_50.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_51.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_52.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_53.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_54.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_55.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_56.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_57.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_58.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_59.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_60.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_61.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_62.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_63.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_64.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_65.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_66.dds"
+	"gfx/models/portraits/sl_egypt/female_egypt_67.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_egypt_admiral_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_egypt/male_egypt_01.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_02.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_03.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_04.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_05.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_06.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_07.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_08.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_09.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_10.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_egypt_general_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_egypt/male_egypt_11.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_12.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_13.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_14.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_15.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_16.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_17.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_18.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_19.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_20.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_21.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_22.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_23.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_24.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_25.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_26.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_egypt_governor_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_egypt/male_egypt_27.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_28.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_29.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_30.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_31.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_32.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_33.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_34.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_35.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_36.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_37.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_38.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_39.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_40.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_41.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_42.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_43.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_44.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_45.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_egypt_scientist_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_egypt/male_egypt_46.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_47.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_48.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_49.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_50.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_51.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_52.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_53.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_54.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_55.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_56.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_57.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_58.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_59.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_60.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_61.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_62.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_63.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_64.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_65.dds"
+	"gfx/models/portraits/sl_egypt/male_egypt_66.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+}
+
+portrait_groups = {
+	sl_egypt = {
+		default = sl_egypt_governor_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_egypt_admiral_female_01
+					sl_egypt_general_female_01
+					sl_egypt_scientist_female_01
+					sl_egypt_governor_female_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					sl_egypt_admiral_male_01
+					sl_egypt_general_male_01
+					sl_egypt_scientist_male_01
+					sl_egypt_governor_male_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_egypt_admiral_female_01
+					sl_egypt_general_female_01
+					sl_egypt_scientist_female_01
+					sl_egypt_governor_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_egypt_admiral_male_01
+					sl_egypt_general_male_01
+					sl_egypt_scientist_male_01
+					sl_egypt_governor_male_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_egypt_admiral_female_01
+					sl_egypt_general_female_01
+					sl_egypt_scientist_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_egypt_admiral_male_01
+					sl_egypt_general_male_01
+					sl_egypt_scientist_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_egypt_scientist_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_egypt_scientist_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = commander
+				}
+				portraits = {				
+					sl_egypt_general_female_01	
+					sl_egypt_admiral_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {					
+					sl_egypt_general_male_01
+					sl_egypt_admiral_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable					
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_egypt_governor_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_egypt_governor_male_01
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_egypt_governor_female_01
+				}	
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_egypt_governor_male_01 
+				}
+			}			
+		}
+	}
+}

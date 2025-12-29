@@ -1,0 +1,240 @@
+portraits = {
+	sl_giant_male_fire = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "lithoid_portrait_11_levitating"
+		character_textures = {
+	"gfx/models/portraits/sl_giant/male_giant_01.dds"
+	"gfx/models/portraits/sl_giant/male_giant_02.dds"
+	"gfx/models/portraits/sl_giant/male_giant_03.dds"
+	"gfx/models/portraits/sl_giant/male_giant_04.dds"
+	"gfx/models/portraits/sl_giant/male_giant_05.dds"
+	"gfx/models/portraits/sl_giant/male_giant_06.dds"
+	"gfx/models/portraits/sl_giant/male_giant_07.dds"
+	"gfx/models/portraits/sl_giant/male_giant_08.dds"
+	"gfx/models/portraits/sl_giant/male_giant_09.dds"
+	"gfx/models/portraits/sl_giant/male_giant_10.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_giant_female_earth = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "lithoid_portrait_6_symbiotic"
+		character_textures = {
+	"gfx/models/portraits/sl_giant/female_giant_11.dds"
+	"gfx/models/portraits/sl_giant/female_giant_12.dds"
+	"gfx/models/portraits/sl_giant/female_giant_13.dds"
+	"gfx/models/portraits/sl_giant/female_giant_14.dds"
+	"gfx/models/portraits/sl_giant/female_giant_15.dds"
+	"gfx/models/portraits/sl_giant/female_giant_16.dds"
+	"gfx/models/portraits/sl_giant/female_giant_17.dds"
+	"gfx/models/portraits/sl_giant/female_giant_18.dds"
+	"gfx/models/portraits/sl_giant/female_giant_19.dds"
+	"gfx/models/portraits/sl_giant/female_giant_20.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_giant_female_diamond = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "lithoid_portrait_6_symbiotic"
+		character_textures = {
+	"gfx/models/portraits/sl_giant/female_giant_01.dds"
+	"gfx/models/portraits/sl_giant/female_giant_02.dds"
+	"gfx/models/portraits/sl_giant/female_giant_03.dds"
+	"gfx/models/portraits/sl_giant/female_giant_04.dds"
+	"gfx/models/portraits/sl_giant/female_giant_05.dds"
+	"gfx/models/portraits/sl_giant/female_giant_06.dds"
+	"gfx/models/portraits/sl_giant/female_giant_07.dds"
+	"gfx/models/portraits/sl_giant/female_giant_08.dds"
+	"gfx/models/portraits/sl_giant/female_giant_09.dds"
+	"gfx/models/portraits/sl_giant/female_giant_10.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_giant_female_ice = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "lithoid_portrait_6_symbiotic"
+		character_textures = {
+	"gfx/models/portraits/sl_giant/female_giant_21.dds"
+	"gfx/models/portraits/sl_giant/female_giant_22.dds"
+	"gfx/models/portraits/sl_giant/female_giant_23.dds"
+	"gfx/models/portraits/sl_giant/female_giant_24.dds"
+	"gfx/models/portraits/sl_giant/female_giant_25.dds"
+	"gfx/models/portraits/sl_giant/female_giant_26.dds"
+	"gfx/models/portraits/sl_giant/female_giant_27.dds"
+	"gfx/models/portraits/sl_giant/female_giant_28.dds"
+	"gfx/models/portraits/sl_giant/female_giant_29.dds"
+	"gfx/models/portraits/sl_giant/female_giant_30.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+	sl_earthgiant = {
+		default = sl_giant_female_earth
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_giant_female_earth
+				}
+			}			
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_giant_female_earth
+					sl_giant_female_ice
+					sl_giant_female_diamond
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_giant_male_fire
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_giant_female_earth
+					sl_giant_female_ice
+					sl_giant_female_diamond
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_giant_male_fire
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_giant_female_earth
+					sl_giant_female_ice
+					sl_giant_female_diamond
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_giant_male_fire
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = general
+				}
+				portraits = {
+					sl_giant_female_earth
+					sl_giant_female_ice
+					sl_giant_female_diamond
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = general
+				}
+				portraits = {
+					sl_giant_male_fire
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable					
+					}
+					leader_class = admiral
+				}
+				portraits = {
+					sl_giant_female_earth
+					sl_giant_female_ice
+					sl_giant_female_diamond
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = admiral
+				}
+				portraits = {
+					sl_giant_male_fire
+				}
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = female			
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = general}
+					NOT = { leader_class = admiral}
+				}
+				portraits = {
+					sl_giant_female_earth				
+				}
+			}	
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_giant_female_earth
+				}
+			}			
+		}
+	}
+}

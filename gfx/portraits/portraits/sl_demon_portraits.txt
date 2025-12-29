@@ -1,0 +1,179 @@
+portraits = {	
+	sl_demon_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_demon/female_demon_01.dds"
+	"gfx/models/portraits/sl_demon/female_demon_02.dds"
+	"gfx/models/portraits/sl_demon/female_demon_03.dds"
+	"gfx/models/portraits/sl_demon/female_demon_04.dds"
+	"gfx/models/portraits/sl_demon/female_demon_05.dds"
+	"gfx/models/portraits/sl_demon/female_demon_06.dds"
+	"gfx/models/portraits/sl_demon/female_demon_07.dds"
+	"gfx/models/portraits/sl_demon/female_demon_08.dds"
+	"gfx/models/portraits/sl_demon/female_demon_09.dds"
+	"gfx/models/portraits/sl_demon/female_demon_10.dds"
+	"gfx/models/portraits/sl_demon/female_demon_11.dds"
+	"gfx/models/portraits/sl_demon/female_demon_12.dds"
+	"gfx/models/portraits/sl_demon/female_demon_13.dds"
+	"gfx/models/portraits/sl_demon/female_demon_14.dds"
+	"gfx/models/portraits/sl_demon/female_demon_15.dds"
+	"gfx/models/portraits/sl_demon/female_demon_16.dds"
+	"gfx/models/portraits/sl_demon/female_demon_17.dds"
+	"gfx/models/portraits/sl_demon/female_demon_18.dds"
+	"gfx/models/portraits/sl_demon/female_demon_19.dds"
+	"gfx/models/portraits/sl_demon/female_demon_20.dds"
+	"gfx/models/portraits/sl_demon/female_demon_21.dds"
+	"gfx/models/portraits/sl_demon/female_demon_22.dds"
+	"gfx/models/portraits/sl_demon/female_demon_23.dds"
+	"gfx/models/portraits/sl_demon/female_demon_24.dds"
+	"gfx/models/portraits/sl_demon/female_demon_25.dds"
+	"gfx/models/portraits/sl_demon/female_demon_26.dds"
+	"gfx/models/portraits/sl_demon/female_demon_27.dds"
+	"gfx/models/portraits/sl_demon/female_demon_28.dds"
+	"gfx/models/portraits/sl_demon/female_demon_29.dds"
+	"gfx/models/portraits/sl_demon/female_demon_30.dds"
+	"gfx/models/portraits/sl_demon/female_demon_31.dds"
+	"gfx/models/portraits/sl_demon/female_demon_32.dds"
+	"gfx/models/portraits/sl_demon/female_demon_33.dds"
+	"gfx/models/portraits/sl_demon/female_demon_34.dds"
+	"gfx/models/portraits/sl_demon/female_demon_35.dds"
+	"gfx/models/portraits/sl_demon/female_demon_36.dds"
+	"gfx/models/portraits/sl_demon/female_demon_37.dds"
+	"gfx/models/portraits/sl_demon/female_demon_38.dds"
+	"gfx/models/portraits/sl_demon/female_demon_39.dds"
+	"gfx/models/portraits/sl_demon/female_demon_40.dds"
+	"gfx/models/portraits/sl_demon/female_demon_41.dds"
+	"gfx/models/portraits/sl_demon/female_demon_42.dds"
+	"gfx/models/portraits/sl_demon/female_demon_43.dds"
+	"gfx/models/portraits/sl_demon/female_demon_44.dds"
+	"gfx/models/portraits/sl_demon/female_demon_45.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_demon_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_demon/male_demon_01.dds"
+	"gfx/models/portraits/sl_demon/male_demon_02.dds"
+	"gfx/models/portraits/sl_demon/male_demon_03.dds"
+	"gfx/models/portraits/sl_demon/male_demon_04.dds"
+	"gfx/models/portraits/sl_demon/male_demon_05.dds"
+	"gfx/models/portraits/sl_demon/male_demon_06.dds"
+	"gfx/models/portraits/sl_demon/male_demon_07.dds"
+	"gfx/models/portraits/sl_demon/male_demon_08.dds"
+	"gfx/models/portraits/sl_demon/male_demon_09.dds"
+	"gfx/models/portraits/sl_demon/male_demon_10.dds"
+	"gfx/models/portraits/sl_demon/male_demon_11.dds"
+	"gfx/models/portraits/sl_demon/male_demon_12.dds"
+	"gfx/models/portraits/sl_demon/male_demon_13.dds"
+	"gfx/models/portraits/sl_demon/male_demon_14.dds"
+	"gfx/models/portraits/sl_demon/male_demon_15.dds"
+	"gfx/models/portraits/sl_demon/male_demon_16.dds"
+	"gfx/models/portraits/sl_demon/male_demon_17.dds"
+	"gfx/models/portraits/sl_demon/male_demon_18.dds"
+	"gfx/models/portraits/sl_demon/male_demon_19.dds"
+	"gfx/models/portraits/sl_demon/male_demon_20.dds"
+	"gfx/models/portraits/sl_demon/male_demon_21.dds"
+	"gfx/models/portraits/sl_demon/male_demon_22.dds"
+	"gfx/models/portraits/sl_demon/male_demon_23.dds"
+	"gfx/models/portraits/sl_demon/male_demon_24.dds"
+	"gfx/models/portraits/sl_demon/male_demon_25.dds"
+	"gfx/models/portraits/sl_demon/male_demon_26.dds"
+	"gfx/models/portraits/sl_demon/male_demon_27.dds"
+	"gfx/models/portraits/sl_demon/male_demon_28.dds"
+	"gfx/models/portraits/sl_demon/male_demon_29.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_demon = {
+        default = sl_demon_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_demon_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_demon_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_demon_female_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_demon_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_demon_male_01
+				}
+			}			
+		}
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_demon_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_demon_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_demon_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_demon_male_01
+                }
+            }
+        }
+    }
+}

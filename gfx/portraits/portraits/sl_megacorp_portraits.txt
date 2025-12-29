@@ -1,0 +1,375 @@
+portraits = {
+   sl_megacorp_fighter_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_megacorp/female_megacorp_31.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_32.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_33.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_34.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_35.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_36.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_37.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_38.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_39.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_40.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_41.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_42.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_43.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_44.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_45.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_46.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_47.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_48.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_49.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_50.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_51.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_52.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_53.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_54.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_55.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_56.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_57.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_58.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_59.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_60.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_megacorp_governor_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_megacorp/female_megacorp_01.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_02.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_03.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_04.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_05.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_06.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_07.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_08.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_09.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_10.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_11.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_12.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_13.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_14.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_15.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_16.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_17.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_18.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_19.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_20.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_21.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_22.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_23.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_24.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_25.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_26.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_27.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_28.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_29.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_30.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_megacorp_scientist_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_megacorp/male_megacorp_41.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_42.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_43.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_44.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_45.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_46.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_47.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_48.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_49.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_50.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_51.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_52.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_53.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_54.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_55.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_56.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_57.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_58.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_59.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_60.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_megacorp_fighter_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_megacorp/male_megacorp_21.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_22.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_23.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_24.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_25.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_26.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_27.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_28.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_29.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_30.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_31.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_32.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_33.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_34.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_35.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_36.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_37.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_38.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_39.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_40.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_megacorp_governor_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_megacorp/male_megacorp_01.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_02.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_03.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_04.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_05.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_06.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_07.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_08.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_09.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_10.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_11.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_12.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_13.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_14.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_15.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_16.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_17.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_18.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_19.dds"
+	"gfx/models/portraits/sl_megacorp/male_megacorp_20.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_megacorp_scientist_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_megacorp/female_megacorp_61.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_62.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_63.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_64.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_65.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_66.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_67.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_68.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_69.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_70.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_71.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_72.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_73.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_74.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_75.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_76.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_77.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_78.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_79.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_80.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_81.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_82.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_83.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_84.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_85.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_86.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_87.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_88.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_89.dds"
+	"gfx/models/portraits/sl_megacorp/female_megacorp_90.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+}
+
+portrait_groups = {
+	sl_megacorp = {
+		default = sl_megacorp_fighter_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_megacorp_fighter_female_01
+					sl_megacorp_scientist_female_01
+					sl_megacorp_governor_female_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					sl_megacorp_fighter_male_01
+					sl_megacorp_scientist_male_01
+					sl_megacorp_governor_male_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_megacorp_fighter_female_01
+					sl_megacorp_scientist_female_01
+					sl_megacorp_governor_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_megacorp_fighter_male_01
+					sl_megacorp_scientist_male_01
+					sl_megacorp_governor_male_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_megacorp_fighter_female_01
+					sl_megacorp_scientist_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_megacorp_fighter_male_01
+					sl_megacorp_scientist_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, fighters, fighters, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_megacorp_scientist_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_megacorp_scientist_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = commander
+				}
+				portraits = {				
+					sl_megacorp_fighter_female_01		
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {					
+					sl_megacorp_fighter_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable					
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_megacorp_governor_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_megacorp_governor_male_01
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_megacorp_governor_female_01
+				}	
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_megacorp_governor_male_01 
+				}
+			}			
+		}
+	}
+}

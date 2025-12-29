@@ -92,3 +92,33 @@ Integrated Workshop mods:
   Source: backup/3118844461/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3118844461
   Author: Walshicus https://steamcommunity.com/profiles/76561198037869976/myworkshopfiles/?appid=281990
+
+- 2D Galaxy with Circles (Workshop ID: 827354193)
+  Source: backup/827354193/
+  Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=827354193
+  Author: SeeleDE
+
+- NoSkullOnlyNumber (Workshop ID: 3257903117)
+  Source: backup/3257903117/
+  Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3257903117
+  Author: Aeryn
+
+- Permanent Decisions - Encourage Planetary Growth / Distribute Luxury Goods (Workshop ID: 1783381443)
+  Source: backup/1783381443/
+  Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=1783381443
+  Author: Wulli
+
+- Astronomical Emblem Pack (Smaller Groups) (Workshop ID: 2212643108)
+  Source: backup/2212643108/
+  Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2212643108
+  Author: Aelarion
+
+- More Insults (Workshop ID: 1223822935)
+  Source: backup/1223822935/
+  Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=1223822935
+  Author: Hong Meiling
+
+- Stellar Legions MAIN Reupload (Workshop ID: 3439854455)
+  Source: backup/3439854455/
+  Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3439854455
+  Author: Hann3o

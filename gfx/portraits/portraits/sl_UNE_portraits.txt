@@ -1,0 +1,485 @@
+portraits = {
+   sl_UNE_admiral_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_UNE/female_UNE_31.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_32.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_33.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_34.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_35.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_36.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_37.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_38.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_39.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_40.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_41.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_42.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_43.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_44.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_45.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_46.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_47.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_48.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_49.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_50.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_51.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_52.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_53.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_54.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_55.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_56.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_57.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_58.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_59.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_60.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_UNE_general_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_UNE/female_UNE_01.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_02.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_03.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_04.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_05.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_06.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_07.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_08.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_09.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_10.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_11.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_12.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_13.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_14.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_15.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_16.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_17.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_18.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_19.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_20.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_21.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_22.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_23.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_24.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_25.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_26.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_27.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_28.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_29.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_30.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_UNE_governor_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_UNE/female_UNE_91.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_92.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_93.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_94.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_95.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_96.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_97.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_98.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_99.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_100.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_101.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_102.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_103.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_104.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_105.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_106.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_107.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_108.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_109.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_110.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_111.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_112.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_113.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_114.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_115.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_116.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_117.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_118.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_119.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_120.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_UNE_scientist_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_UNE/female_UNE_61.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_62.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_63.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_64.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_65.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_66.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_67.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_68.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_69.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_70.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_71.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_72.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_73.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_74.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_75.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_76.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_77.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_78.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_79.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_80.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_81.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_82.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_83.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_84.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_85.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_86.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_87.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_88.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_89.dds"
+	"gfx/models/portraits/sl_UNE/female_UNE_90.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_UNE_admiral_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_UNE/male_UNE_31.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_32.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_33.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_34.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_35.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_36.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_37.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_38.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_39.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_40.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_41.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_42.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_43.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_44.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_45.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_46.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_47.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_48.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_49.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_50.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_51.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_52.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_53.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_54.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_55.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_56.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_57.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_58.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_59.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_60.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_UNE_general_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_UNE/male_UNE_01.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_02.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_03.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_04.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_05.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_06.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_07.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_08.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_09.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_10.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_11.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_12.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_13.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_14.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_15.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_16.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_17.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_18.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_19.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_20.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_21.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_22.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_23.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_24.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_25.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_26.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_27.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_28.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_29.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_30.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_UNE_governor_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_UNE/male_UNE_91.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_92.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_93.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_94.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_95.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_96.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_97.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_98.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_99.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_100.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_101.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_102.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_103.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_104.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_105.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_106.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_107.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_108.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_109.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_110.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_111.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_112.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_113.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_114.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_115.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_116.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_117.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_118.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_119.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_120.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_UNE_scientist_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_UNE/male_UNE_61.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_62.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_63.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_64.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_65.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_66.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_67.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_68.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_69.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_70.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_71.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_72.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_73.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_74.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_75.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_76.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_77.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_78.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_79.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_80.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_81.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_82.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_83.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_84.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_85.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_86.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_87.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_88.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_89.dds"
+	"gfx/models/portraits/sl_UNE/male_UNE_90.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+}
+
+portrait_groups = {
+	sl_UNE = {
+		default = sl_UNE_general_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_UNE_admiral_female_01
+					sl_UNE_general_female_01
+					sl_UNE_scientist_female_01
+					sl_UNE_governor_female_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					sl_UNE_admiral_male_01
+					sl_UNE_general_male_01
+					sl_UNE_scientist_male_01
+					sl_UNE_governor_male_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_UNE_admiral_female_01
+					sl_UNE_general_female_01
+					sl_UNE_scientist_female_01
+					sl_UNE_governor_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_UNE_admiral_male_01
+					sl_UNE_general_male_01
+					sl_UNE_scientist_male_01
+					sl_UNE_governor_male_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_UNE_admiral_female_01
+					sl_UNE_general_female_01
+					sl_UNE_scientist_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_UNE_admiral_male_01
+					sl_UNE_general_male_01
+					sl_UNE_scientist_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_UNE_scientist_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					sl_UNE_scientist_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = commander
+				}
+				portraits = {				
+					sl_UNE_general_female_01 		
+           			sl_UNE_admiral_female_01		
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {					
+					sl_UNE_general_male_01
+					sl_UNE_admiral_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable					
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_UNE_governor_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_UNE_governor_male_01
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_UNE_governor_female_01
+				}	
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_UNE_governor_male_01 
+				}
+			}			
+		}
+	}
+}

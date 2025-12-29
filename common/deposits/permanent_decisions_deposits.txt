@@ -1,0 +1,142 @@
+d_food_boost = {	
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			food = 8.33
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_luxuries_boost_0 = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 0.83
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_luxuries_boost_1 = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 1.67
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_luxuries_boost_2 = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 2.5
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_luxuries_boost_3 = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 3.33
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_luxuries_boost_4 = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 4.16
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_luxuries_boost_5 = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 5
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_luxuries_boost_6 = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 5.83
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_luxuries_boost_7 = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 6.67
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_luxuries_boost_8 = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 7.5
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_luxuries_boost_9 = {
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			consumer_goods = 8.33
+		}
+	}
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}

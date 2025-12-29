@@ -50,10 +50,11 @@ entity = {
 	locator = { name = "part1" }
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle" animation_speed = 1 }
-	start_event = { node = "part1" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
-	start_event = { node = "part1" particle = "lithoid_01_science_core" keep_particle = yes trigger_once = yes }
-	event = { time = 0 node = "part1" particle = "ion_cannon_core_effect" keep_particle = yes trigger_once = yes  }
+	state = { name = "idle" animation = "idle" animation_speed = 1
+		start_event = { node = "part1" particle = "matde_black_hole_effect" keep_particle = yes trigger_once = yes }
+		start_event = { node = "part1" particle = "lithoid_01_science_core" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "part1" particle = "ion_cannon_core_effect" keep_particle = yes trigger_once = yes  }
+	}
 	
 	state = { name = "death" state_time = 6.6 looping = no 
 		event = { time = 6.5 node = "part1" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }

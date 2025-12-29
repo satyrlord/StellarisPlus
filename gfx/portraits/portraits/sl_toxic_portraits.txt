@@ -1,0 +1,179 @@
+portraits = {	
+	sl_toxic_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "tox_portrait_06"
+		character_textures = {
+	"gfx/models/portraits/sl_toxic/female_toxic_01.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_02.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_03.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_04.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_05.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_06.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_07.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_08.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_09.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_10.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_11.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_12.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_13.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_14.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_15.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_16.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_17.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_18.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_19.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_20.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_21.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_22.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_23.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_24.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_25.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_26.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_27.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_28.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_29.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_30.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_31.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_32.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_33.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_34.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_35.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_36.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_37.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_38.dds"
+	"gfx/models/portraits/sl_toxic/female_toxic_39.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_toxic_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "tox_portrait_08"
+		character_textures = {
+	"gfx/models/portraits/sl_toxic/male_toxic_01.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_02.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_03.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_04.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_05.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_06.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_07.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_08.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_09.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_10.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_11.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_12.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_13.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_14.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_15.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_16.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_17.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_18.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_19.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_20.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_21.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_22.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_23.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_24.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_25.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_26.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_27.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_28.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_29.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_30.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_31.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_32.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_33.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_34.dds"
+	"gfx/models/portraits/sl_toxic/male_toxic_35.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_toxic = {
+        default = sl_toxic_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_toxic_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_toxic_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_toxic_female_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_toxic_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_toxic_male_01
+				}
+			}			
+		}
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_toxic_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_toxic_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_toxic_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_toxic_male_01
+                }
+            }
+        }
+    }
+}

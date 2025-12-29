@@ -1,0 +1,262 @@
+portraits = {	
+	sl_amazonian_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_amazonian/female_amazonian_01.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_02.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_03.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_04.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_05.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_06.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_07.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_08.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_09.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_10.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_11.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_12.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_13.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_14.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_15.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_16.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_17.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_18.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_19.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_20.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_21.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_22.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_23.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_24.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_25.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_26.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_27.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_28.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_29.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_30.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_31.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_32.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_33.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_34.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_35.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_36.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_37.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_38.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_39.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_40.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_41.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_42.dds"	
+	"gfx/models/portraits/sl_amazonian/female_amazonian_43.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_44.dds"
+	"gfx/models/portraits/sl_amazonian/female_amazonian_45.dds"		
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_amazonian_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_amazonian/male_amazonian_01.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_02.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_03.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_04.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_05.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_06.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_07.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_08.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_09.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_10.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_11.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_12.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_13.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_14.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_15.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_16.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_17.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_18.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_19.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_20.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_21.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_22.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_23.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_24.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_25.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_26.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_27.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_28.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_29.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_30.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_31.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_32.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_33.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_34.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_35.dds"		
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_amazonian_indeterminable_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_amazonian/male_amazonian_01.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_02.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_03.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_04.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_05.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_06.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_07.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_08.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_09.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_10.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_11.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_12.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_13.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_14.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_15.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_16.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_17.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_18.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_19.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_20.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_21.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_22.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_23.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_24.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_25.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_26.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_27.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_28.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_29.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_30.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_31.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_32.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_33.dds"
+	"gfx/models/portraits/sl_amazonian/male_amazonian_34.dds"	
+	"gfx/models/portraits/sl_amazonian/male_amazonian_35.dds"
+
+
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_amazonian = {
+        default = sl_amazonian_male_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_amazonian_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_amazonian_male_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = indeterminable }
+                }
+                portraits = {
+                    sl_amazonian_indeterminable_01
+                }
+            }               
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_amazonian_male_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_amazonian_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_amazonian_male_01
+				}				
+			}
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+					NOR = {											species = { species_gender = male }
+					}					
+				}
+				portraits = {
+					sl_amazonian_indeterminable_01
+				}				
+			}			
+		}
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_amazonian_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_amazonian_male_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = indeterminable
+                }
+                portraits = {
+                   sl_amazonian_indeterminable_01
+                }
+            } 			
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_amazonian_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_amazonian_male_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = indeterminable
+                }
+                portraits = {
+                   sl_amazonian_indeterminable_01
+                }
+            }			
+        }
+    }
+}

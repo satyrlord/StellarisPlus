@@ -1,0 +1,211 @@
+portraits = {	
+	sl_crystaloid_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_f_female"
+		character_textures = {
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_01.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_02.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_03.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_04.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_05.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_06.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_07.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_08.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_09.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_10.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_11.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_12.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_13.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_14.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_15.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_16.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_17.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_18.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_19.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_20.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_21.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_22.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_23.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_24.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_25.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_26.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_27.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_28.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_29.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_30.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_31.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_32.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_33.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_34.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_35.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_37.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_38.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_39.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_40.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_41.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_42.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_43.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_44.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_45.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_46.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_47.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_48.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_49.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_50.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_51.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_52.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_53.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_54.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_55.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_56.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_57.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_58.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_59.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_60.dds"	
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_crystaloid_indeterminable_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_f_female"
+		character_textures = {
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_01.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_02.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_03.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_04.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_05.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_06.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_07.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_08.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_09.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_10.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_11.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_12.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_13.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_14.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_15.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_16.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_17.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_18.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_19.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_20.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_21.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_22.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_23.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_24.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_25.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_26.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_27.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_28.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_29.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_30.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_31.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_32.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_33.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_34.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_35.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_37.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_38.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_39.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_40.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_41.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_42.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_43.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_44.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_45.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_46.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_47.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_48.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_49.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_50.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_51.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_52.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_53.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_54.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_55.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_56.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_57.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_58.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_59.dds"
+	"gfx/models/portraits/sl_crystaloid/female_crystaloid_60.dds"
+
+
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_crystaloid = {
+        default = sl_crystaloid_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_crystaloid_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = indeterminable }
+                }
+                portraits = {
+                    sl_crystaloid_indeterminable_01
+                }
+            }               
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_crystaloid_female_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+            add = {
+                portraits = {
+                    sl_crystaloid_female_01
+                }
+            }		
+		}
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_crystaloid_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = indeterminable
+                }
+                portraits = {
+                   sl_crystaloid_indeterminable_01
+                }
+            } 			
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_crystaloid_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = indeterminable
+                }
+                portraits = {
+                   sl_crystaloid_indeterminable_01
+                }
+            }			
+        }
+    }
+}

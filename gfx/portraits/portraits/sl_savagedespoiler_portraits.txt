@@ -1,0 +1,175 @@
+portraits = {
+	
+	sl_despoiler_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_01.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_02.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_03.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_04.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_05.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_06.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_07.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_08.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_09.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_10.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_11.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_12.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_13.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_14.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_15.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_16.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_17.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_18.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_19.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_20.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_21.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_22.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_23.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_24.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_25.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_26.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_27.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_28.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_29.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_30.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_31.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_32.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_33.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_34.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_35.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_36.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_37.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_38.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_39.dds"
+	"gfx/models/portraits/sl_savagedespoilers/female_despoiler_40.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_despoiler_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_01.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_02.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_03.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_04.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_05.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_06.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_07.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_08.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_09.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_10.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_11.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_12.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_13.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_14.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_15.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_16.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_17.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_18.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_19.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_20.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_21.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_22.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_23.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_24.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_25.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_26.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_27.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_28.dds"
+	"gfx/models/portraits/sl_savagedespoilers/male_despoiler_29.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_despoiler = {
+        default = sl_despoiler_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_despoiler_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_despoiler_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_despoiler_female_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_despoiler_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_despoiler_male_01
+				}
+			}			
+		}
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_despoiler_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_despoiler_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_despoiler_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_despoiler_male_01
+                }
+            }
+        }
+    }
+}

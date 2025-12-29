@@ -1,0 +1,112 @@
+portraits = {
+	
+	sl_oceanid_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_f_female"
+		character_textures = {
+	"gfx/models/portraits/sl_oceanid/female_oceanid_01.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_02.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_03.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_04.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_05.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_06.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_07.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_08.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_09.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_10.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_11.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_12.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_13.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_14.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_15.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_16.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_17.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_18.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_19.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_20.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_21.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_22.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_23.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_24.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_25.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_26.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_27.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_28.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_29.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_30.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_31.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_32.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_33.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_34.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_35.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_37.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_38.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_39.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_40.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_41.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_42.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_43.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_44.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_45.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_46.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_47.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_48.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_49.dds"
+	"gfx/models/portraits/sl_oceanid/female_oceanid_50.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_oceanid = {
+        default = sl_oceanid_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_oceanid_female_01
+                }
+            }               
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_oceanid_female_01
+                }
+            }
+        }
+
+        pop = { # for planet-bound pops
+            add = {
+                portraits = {
+                    sl_oceanid_female_01
+                }
+            }
+        }
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_oceanid_female_01
+                }
+            }         
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+					sl_oceanid_female_01
+                }
+            }       
+        }
+    }
+}

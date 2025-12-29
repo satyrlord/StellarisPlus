@@ -1,0 +1,365 @@
+portraits = {
+   sl_militarium_admiral_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_militarium/female_militarium_01.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_02.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_03.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_04.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_05.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_06.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_07.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_08.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_09.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_10.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_11.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_12.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_13.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_14.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_15.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_militarium_general_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_militarium/female_militarium_16.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_17.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_18.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_19.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_20.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_21.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_22.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_23.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_24.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_25.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_26.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_27.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_28.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_29.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_30.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_militarium_governor_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_militarium/female_militarium_46.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_47.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_48.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_49.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_50.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_51.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_52.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_53.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_54.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_55.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_56.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_57.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_58.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_59.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_60.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_militarium_scientist_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_militarium/female_militarium_31.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_32.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_33.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_34.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_35.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_36.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_37.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_38.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_39.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_40.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_41.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_42.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_43.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_44.dds"
+	"gfx/models/portraits/sl_militarium/female_militarium_45.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_militarium_admiral_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_militarium/male_militarium_01.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_02.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_03.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_04.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_05.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_06.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_07.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_08.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_09.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_10.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_11.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_12.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_13.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_14.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_15.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_militarium_general_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_militarium/male_militarium_16.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_17.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_18.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_19.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_20.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_21.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_22.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_23.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_24.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_25.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_26.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_27.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_28.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_29.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_30.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	sl_militarium_governor_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_militarium/male_militarium_46.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_47.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_48.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_49.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_50.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_51.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_52.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_53.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_54.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_55.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_56.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_57.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_58.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_59.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_60.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+	militarium__scientist_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+	"gfx/models/portraits/sl_militarium/male_militarium_31.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_32.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_33.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_34.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_35.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_36.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_37.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_38.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_39.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_40.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_41.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_42.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_43.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_44.dds"
+	"gfx/models/portraits/sl_militarium/male_militarium_45.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}	
+}
+
+portrait_groups = {
+	sl_militarium = {
+		default = sl_militarium_general_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = female
+						}
+					}
+				}
+				portraits = {
+					sl_militarium_admiral_female_01
+					sl_militarium_general_female_01
+					sl_militarium_scientist_female_01
+					sl_militarium_governor_female_01
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { 
+						OR = {
+							gender = male
+							gender = indeterminable
+						}
+					}
+				}
+				portraits = {
+					sl_militarium_admiral_male_01
+					sl_militarium_general_male_01
+					militarium__scientist_male_01
+					sl_militarium_governor_male_01
+				}
+			}	
+		}
+		species = {
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = male } }
+				}
+				portraits = {
+					sl_militarium_admiral_female_01
+					sl_militarium_general_female_01
+					sl_militarium_scientist_female_01
+					sl_militarium_governor_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOT = { species = { species_gender = female } }
+				}
+				portraits = {
+					sl_militarium_admiral_male_01
+					sl_militarium_general_male_01
+					militarium__scientist_male_01
+					sl_militarium_governor_male_01
+				}
+			}			
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_militarium_admiral_female_01
+					sl_militarium_general_female_01
+					sl_militarium_scientist_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_militarium_admiral_male_01
+					sl_militarium_general_male_01
+					militarium__scientist_male_01
+				}
+			}			
+		}
+		
+ 		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable						
+					}
+					leader_class = scientist	
+				}
+				portraits = {
+					sl_militarium_scientist_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					leader_class = scientist
+				}
+				portraits = {
+					militarium__scientist_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+					leader_class = commander
+				}
+				portraits = {				
+					sl_militarium_general_female_01
+					sl_militarium_admiral_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable					
+					}
+					leader_class = commander
+				}
+				portraits = {					
+					sl_militarium_general_male_01
+					sl_militarium_admiral_male_01
+				}
+			}			
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable					
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_militarium_governor_female_01
+				}
+			}	
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable						
+					}
+					NOT = { leader_class = scientist}
+					NOT = { leader_class = commander}
+				}
+				portraits = {
+					sl_militarium_governor_male_01
+				}
+			}			
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					OR = {
+						gender = female
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_militarium_governor_female_01
+				}	
+			}
+			add = {
+				trigger = {
+					OR = {
+						gender = male
+						gender = indeterminable
+					}
+				}
+				portraits = {
+					sl_militarium_governor_male_01 
+				}
+			}			
+		}
+	}
+}

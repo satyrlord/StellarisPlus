@@ -1,0 +1,109 @@
+portraits = {
+	
+	sl_nymph_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_f_female"
+		character_textures = {
+	"gfx/models/portraits/sl_nymph/female_nymph_01.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_02.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_03.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_04.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_05.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_06.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_07.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_08.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_09.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_10.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_11.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_12.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_13.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_14.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_15.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_16.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_17.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_18.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_19.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_20.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_21.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_22.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_23.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_24.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_25.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_26.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_27.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_28.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_29.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_30.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_31.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_32.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_33.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_34.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_35.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_36.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_37.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_38.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_39.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_40.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_41.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_42.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_43.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_44.dds"
+	"gfx/models/portraits/sl_nymph/female_nymph_45.dds"
+
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_nymph = {
+        default = sl_nymph_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_nymph_female_01
+                }
+            }               
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_nymph_female_01
+                }
+            }
+        }
+
+        pop = { # for planet-bound pops
+            add = {
+                portraits = {
+                    sl_nymph_female_01
+                }
+            }
+        }
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_nymph_female_01
+                }
+            }         
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+					sl_nymph_female_01
+                }
+            }       
+        }
+    }
+}

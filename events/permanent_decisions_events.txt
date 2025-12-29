@@ -1,0 +1,64 @@
+namespace = permanent_decisions
+
+planet_event = {
+	id = permanent_decisions.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = { has_modifier = planet_luxuries_boost }
+
+	immediate = {
+		remove_deposit = d_luxuries_boost_0
+		remove_deposit = d_luxuries_boost_1
+		remove_deposit = d_luxuries_boost_2
+		remove_deposit = d_luxuries_boost_3
+		remove_deposit = d_luxuries_boost_4
+		remove_deposit = d_luxuries_boost_5
+		remove_deposit = d_luxuries_boost_6
+		remove_deposit = d_luxuries_boost_7
+		remove_deposit = d_luxuries_boost_8
+		remove_deposit = d_luxuries_boost_9
+
+		if = {
+  			limit = { num_pops < 10 }
+  			add_deposit = d_luxuries_boost_0
+		}
+		else_if = {
+  			limit = { num_pops < 20 }
+  			add_deposit = d_luxuries_boost_1
+		}
+		else_if = {
+  			limit = { num_pops < 30 }
+  			add_deposit = d_luxuries_boost_2
+		}
+		else_if = {
+  			limit = { num_pops < 40 }
+  			add_deposit = d_luxuries_boost_3
+		}
+		else_if = {
+  			limit = { num_pops < 50 }
+  			add_deposit = d_luxuries_boost_4
+		}
+		else_if = {
+  			limit = { num_pops < 60 }
+  			add_deposit = d_luxuries_boost_5
+		}
+		else_if = {
+  			limit = { num_pops < 70 }
+  			add_deposit = d_luxuries_boost_6
+		}
+		else_if = {
+  			limit = { num_pops < 85 }
+  			add_deposit = d_luxuries_boost_7
+		}
+		else_if = {
+  			limit = { num_pops < 100 }
+  			add_deposit = d_luxuries_boost_8
+		}
+		else = {
+  			add_deposit = d_luxuries_boost_9
+		}
+
+		planet_event = { id = permanent_decisions.0 days = 3600 }
+	}
+}

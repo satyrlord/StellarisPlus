@@ -1,0 +1,41 @@
+StellarisPlus integration preflight — collision report
+Generated: 2025-12-29 19:14:45
+Backup IDs: 827354193, 3257903117, 1783381443, 2212643108, 1223822935, 3439854455
+
+== Summary ==
+Total candidate files: 4659
+Collisions with root (same path already exists): 0
+Duplicate paths across these mods: 0
+
+== Candidate files by mod & top folder ==
+-- 827354193 --
+  2D_Galaxy_with_Circles.jpg      1
+  common              1
+
+-- 3257903117 --
+  common              1
+  events              1
+
+-- 1783381443 --
+  common              3
+  events              1
+  localisation        1
+
+-- 2212643108 --
+  flags            1760
+  localisation        8
+
+-- 1223822935 --
+  common              1
+  localisation        1
+
+-- 3439854455 --
+  gfx              2878
+  common              2
+
+== Collisions with root (grouped by top folder) ==
+
+== Duplicate paths across mods (top 200) ==
+
+== Root collisions (top 400, sorted) ==
+

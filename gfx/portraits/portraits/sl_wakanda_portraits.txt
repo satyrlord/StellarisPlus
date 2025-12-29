@@ -1,0 +1,188 @@
+portraits = {	
+	sl_wakanda_female_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_a_female"
+		character_textures = {
+	"gfx/models/portraits/sl_wakanda/female_wakanda_01.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_02.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_03.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_04.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_05.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_06.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_07.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_08.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_09.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_10.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_11.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_12.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_13.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_14.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_15.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_16.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_17.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_18.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_19.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_20.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_21.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_22.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_23.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_24.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_25.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_26.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_27.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_28.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_29.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_30.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_31.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_32.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_33.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_34.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_35.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_36.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_37.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_38.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_39.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_40.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_41.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_42.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_43.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_44.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_45.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_46.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_47.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_48.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_49.dds"
+	"gfx/models/portraits/sl_wakanda/female_wakanda_50.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+	sl_wakanda_male_01 = {
+		entity = "sl_humanoid_01_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+	"gfx/models/portraits/sl_wakanda/male_wakanda_01.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_02.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_03.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_04.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_05.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_06.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_07.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_08.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_09.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_10.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_11.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_12.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_13.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_14.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_15.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_16.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_17.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_18.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_19.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_20.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_21.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_22.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_23.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_24.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_25.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_26.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_27.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_28.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_29.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_30.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_31.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_32.dds"
+	"gfx/models/portraits/sl_wakanda/male_wakanda_33.dds"
+			}
+		custom_attachment_label = "HAIR_STYLE"
+	}
+}
+
+portrait_groups = {
+    sl_wakanda = {
+        default = sl_wakanda_female_01
+        game_setup = {
+            add = {
+                trigger = {
+                    ruler = { gender = female }
+                }
+                portraits = {
+                    sl_wakanda_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    ruler = { gender = male }
+                }
+                portraits = {
+                    sl_wakanda_male_01
+                }
+            }
+        }
+
+        species = { # generic portrait for a species
+            add = {
+                portraits = { 
+                    sl_wakanda_female_01
+                }
+            }
+        }
+
+       pop = { #for a specific pop
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = male }
+					}
+				}
+				portraits = {
+					sl_wakanda_female_01
+				}
+			}		
+			add = {
+				trigger = {
+					NOR = {											species = { species_gender = female }
+					}
+				}
+				portraits = {
+					sl_wakanda_male_01
+				}
+			}			
+		}
+
+        leader = { # scientists, generals, admirals, governor
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                   sl_wakanda_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                   sl_wakanda_male_01
+                }
+            }
+        }
+
+        ruler = { # portraits used for rulers
+            add = {
+                trigger = {
+                    gender = female
+                }
+                portraits = {
+                 sl_wakanda_female_01
+                }
+            }
+            add = {
+                trigger = {
+                    gender = male
+                }
+                portraits = {
+                    sl_wakanda_male_01
+                }
+            }
+        }
+    }
+}
