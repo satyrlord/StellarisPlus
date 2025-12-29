@@ -1,0 +1,99 @@
+@juggernaut_scale = 40
+
+entity = {
+	name = "chaos_01_juggernaut_entity"
+	pdxmesh = "chaos_01_3parts_frame_mesh"
+ 
+	default_state = "idle"
+	state = { name = "idle"	 animation = "idle" animation_blend_time = 0.25
+	}
+	state = { name = "moving"	animation = "idle" animation_blend_time = 0.25
+	}
+	state = { name = "death" animation = "death" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 8.15 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 8.15 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.15 node = "part2_locator" particle = "ship_burn_particle" }
+		event = { time = 8.15 node = "part2_locator" particle = "ship_explosion_air_vent_particle" }
+		
+		event = { time = 8.3 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 18.56 node = "part1" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 18.56 node = "part2" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death2" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 3.05 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.05 node = "part2_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.05 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 4.6 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 4.6 node = "part1_locator" particle = "ship_burn_particle" }
+		event = { time = 4.6 node = "part2_locator" particle = "ship_burn_particle" }
+
+		event = { time = 18.56 node = "part1" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 18.56 node = "part2" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death3" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 1.05 node = "part2_local_explosion_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.6 node = "part2_local_explosion_locator1" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.4 node = "part2_local_explosion_locator2" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.6 node = "part2_local_explosion_locator3" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.83 node = "part2_local_explosion_locator4" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.1 node = "part2_local_explosion_locator5" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.5 node = "part2_local_explosion_locator6" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 7.93 node = "part2_explosion_locator" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_burn_particle" }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 12.83 node = "part1" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+
+ 
+    scale = 5.0
+	game_data = {
+		size = @juggernaut_scale
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "chaos_01_juggernaut_core_section_entity"
+	pdxmesh = "chaos_01_blackstone_hull_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"
+		event = { trigger_once = yes sound = { soundeffect = juggernaut_humanoid_idle } }
+	}
+	state = { name = "moving"	
+		event = { sound = { soundeffect = juggernaut_humanoid_move } }
+	}
+	state = { name = "death" looping = no 
+	}
+	attach = { upper = "chaos_01_juggernaut_parts_entity" }
+	attach = { bottom = "chaos_01_juggernaut_parts_entity" }
+}
+
+entity = {
+	name = "chaos_01_juggernaut_parts_entity"
+	pdxmesh = "chaos_01_blackstone_parts_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "rotate"
+	}
+	state = { name = "moving"
+	}
+	state = { name = "death" animation = "idle" looping = no animation_blend_time = 4
+	}
+}
+
+animation = {
+	name = "chaos_01_blackstone_parts_idle_animation"
+	file = "chaos_01_s8_parts_idle.anim"
+}
+
+animation = {
+	name = "chaos_01_blackstone_parts_rotate_animation"
+	file = "chaos_01_s8_parts_rotation.anim"
+}

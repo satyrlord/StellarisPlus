@@ -1,0 +1,22 @@
+objectTypes = {
+	
+	pdxmesh = {
+		name = "chaos_02_blackstone_hull_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s8_hull.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_02_blackstone_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s8_parts.mesh"
+				animation = { id = "idle"			type = "chaos_01_blackstone_parts_idle_animation" }
+				animation = { id = "rotate"			type = "chaos_01_blackstone_parts_rotate_animation" }	
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+}

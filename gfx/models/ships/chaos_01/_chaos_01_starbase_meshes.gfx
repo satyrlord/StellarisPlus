@@ -1,0 +1,140 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "chaos_01_starbase_frame_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_starbase_frame.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_outpost_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_outpost.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+	pdxmesh = {
+		name = "chaos_01_starport_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_starport.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_starport_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_starport_parts.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_starhold_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_starhold.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_starhold_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_starhold_parts.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_starfort_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_starfort.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_starfort_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_starfort_parts.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_citadel_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_citadel.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_citadel_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_citadel_parts.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_starbase_turret_section_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_starbase_turret_section.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_orbital_station_miscellaneous_section_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_orbital_station_miscellaneous_section.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+		####### Ion Cannon  #######	
+	
+	pdxmesh = {
+		name = "chaos_01_ion_cannon_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_ion_cannon.mesh"
+		scale = 0.2
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_ion_cannon_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_ion_cannon_parts.mesh"
+		scale = 0.2
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_ion_cannon_core_mesh"
+		file = "gfx/models/ships/starbases/mammalian_01_ion_cannon_core.mesh"
+		scale = 0.1
+		meshsettings = {
+			texture_diffuse = "chaos_01_ion_cannon_core.dds"
+		}
+	}
+
+}

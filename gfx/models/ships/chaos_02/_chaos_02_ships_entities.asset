@@ -1,0 +1,2139 @@
+	@destroyer_scale = 7.0
+	@corvette_scale = 6.0
+	@cruiser_scale = 10.5
+	@battleship_scale = 12.0
+	@missile_scale = 1.0
+	@transport_scale = 6.0
+	@constructor_scale = 10.0
+	@military_station_large = 12.0
+	@orbital_station = 17
+	@research_station = 13
+	@mining_station = 13
+	@terraforming_station = 13
+		
+	@small_trail_W = 10
+	@small_trail_L = 60
+	@medium_trail_W = 25
+	@medium_trail_L = 150
+	@large_trail_W = 50
+	@large_trail_L =  300
+	
+	###################################################################################
+	###																				###
+	###									WEAPONS										###
+	###																				###
+	###################################################################################
+	
+	entity = {
+		name = "chaos_02_missle_entity"
+		pdxmesh = "arthropoid_01_missile_mesh"
+		
+		default_state = idle
+		state = { name = "idle" animation = "idle" }
+	state = { name = "stop" animation = "miss" looping = no }
+	
+	
+		scale = 1.25
+	}
+	
+	
+	entity = {
+		name = "chaos_02_turret_energy_torpedo_entity"
+		pdxmesh = "chaos_02_turret_missile_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	entity = {
+		name = "chaos_02_turret_torpedo_entity"
+		pdxmesh = "chaos_02_turret_missile_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	entity = {
+		name = "chaos_02_turret_missile_large_entity"
+		pdxmesh = "chaos_02_turret_missile_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	entity = {
+		name = "chaos_02_turret_missile_medium_entity"
+		pdxmesh = "chaos_02_turret_missile_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	entity = {
+		name = "chaos_02_turret_missile_small_entity"
+		pdxmesh = "chaos_02_turret_missile_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	
+	
+	entity = {
+		name = "chaos_02_large_kinetic_gun_entity"
+		pdxmesh = "chaos_02_turret_projectile_large_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	entity = {
+		name = "chaos_02_medium_kinetic_gun_entity"
+		pdxmesh = "chaos_02_turret_projectile_medium_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	entity = {
+		name = "chaos_02_small_kinetic_gun_entity"
+		pdxmesh = "chaos_02_turret_projectile_small_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	
+	
+	entity = {
+		name = "chaos_02_turret_point_defence_entity"
+		pdxmesh = "chaos_02_turret_laser_small_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	
+	
+	entity = {
+		name = "chaos_02_large_laser_gun_entity"
+		pdxmesh = "chaos_02_turret_laser_large_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	entity = {
+		name = "chaos_02_medium_laser_gun_entity"
+		pdxmesh = "chaos_02_turret_laser_medium_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	entity = {
+		name = "chaos_02_small_laser_gun_entity"
+		pdxmesh = "chaos_02_turret_laser_small_mesh"
+		
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	entity = {
+		name = "chaos_02_turret_xl_entity"
+		pdxmesh = "chaos_02_turret_xl_mesh"
+
+		state = { name = "idle"	}
+		state = { name = "attack" looping = no next_state = "idle"
+		}
+		scale = 1.0
+	}
+	
+	
+	
+
+
+# ##################
+# Critter Weapons
+# ##################
+
+
+# Amoeba Weapons
+
+entity = {
+	name = "chaos_02_small_space_amoeba_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_small_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+entity = {
+	name = "chaos_02_medium_space_amoeba_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_medium_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+entity = {
+	name = "chaos_02_large_space_amoeba_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_large_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Space Cloud Weapons
+
+entity = {
+	name = "chaos_02_small_space_cloud_weapon_entity"
+	pdxmesh = "chaos_02_turret_laser_small_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+entity = {
+	name = "chaos_02_large_space_cloud_weapon_entity"
+	pdxmesh = "chaos_02_turret_laser_large_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Crystal Weapons
+
+entity = {
+	name = "chaos_02_small_crystal_ship_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_small_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+entity = {
+	name = "chaos_02_medium_crystal_ship_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_medium_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+entity = {
+	name = "chaos_02_large_crystal_ship_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_large_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Mining Drone Weapons
+
+entity = {
+	name = "chaos_02_small_mining_drone_weapon_entity"
+	pdxmesh = "chaos_02_turret_laser_small_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+entity = {
+	name = "chaos_02_medium_mining_drone_weapon_entity"
+	pdxmesh = "chaos_02_turret_laser_medium_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Space Whale Weapons
+
+entity = {
+	name = "chaos_02_small_space_whale_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_small_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+entity = {
+	name = "chaos_02_medium_space_whale_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_medium_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+entity = {
+	name = "chaos_02_large_space_whale_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_large_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+# Swarm Weapons
+
+entity = {
+	name = "chaos_02_small_scourge_projectile_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_small_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+entity = {
+	name = "chaos_02_medium_scourge_projectile_weapon_entity"
+	pdxmesh = "chaos_02_turret_projectile_medium_mesh"
+	
+	state = { name = "idle"	}
+	state = { name = "attack" looping = no next_state = "idle"
+	}
+	scale = 1.0
+}
+
+	
+	
+	###################################################################################
+	###																				###
+	###									COMBAT SHIPS								###
+	###																				###
+	###################################################################################
+	
+	
+	
+	
+	######################           CORVETTE             ########################
+	
+	entity = {
+		name = "chaos_02_corvette_entity"
+		pdxmesh = "molluscoid_01_corvette_frame_mesh"
+	
+		default_state = "idle"
+	state = { name = "idle"	 animation = "idle" animation_blend_time = 0.25
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_corvette_hum" } }
+	}
+	state = { name = "moving"	animation = "idle" animation_blend_time = 0.25
+	event = { trigger_once = yes sound = { soundeffect = moving_out_corvette } }
+	}
+	state = { name = "death" animation = "death2" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 3.46 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.79 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.5 node = "part1" particle = "ship_burn_particle" }
+		event = { time = 0.5 node = "part1" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 8.9 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.46 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.5 node = "part1" particle = "ship_burn_particle" }
+		event = { time = 0.5 node = "part1" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 10.83 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death3" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	
+		event = { time = 0.0 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.6 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 2.83 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.26 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.9 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 4.1 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+		scale = 1.0
+		attach = { part1	= "chaos_02_s1_hull_entity" }
+		attach = { part1	= "chaos_02_s1_parts_entity" }
+		
+		game_data = {
+			size = @corvette_scale
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_s1_hull_entity"
+		pdxmesh = "chaos_02_s1_hull_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_s1_parts_entity"
+		pdxmesh = "chaos_02_s1_parts_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 
+		event = { time = 0 node = "engine_small_01" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_02" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_03" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_04" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_05" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_06" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		}
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_corvette_M1S1_entity"
+		pdxmesh = "chaos_02_corvette_M1S1_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+	}
+	
+	entity = {
+		name = "chaos_02_corvette_S3_entity"
+		pdxmesh = "chaos_02_corvette_S3_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+	}
+
+	
+	
+	
+	
+	###################            DESTROYER             ########################
+	
+	# FRAME
+	
+	entity = {
+		name = "chaos_02_destroyer_entity"
+		pdxmesh = "molluscoid_01_destroyer_frame_mesh"
+	
+		default_state = "idle"
+	state = { name = "idle"		animation = "idle" animation_blend_time = 0.25
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_destroyer_hum" } }
+	}
+	state = { name = "moving"	animation = "idle" animation_blend_time = 0.25 
+		event = { trigger_once = yes sound = { soundeffect = "moving_out_destroyer" } }
+	}
+	state = { name = "death" animation = "death" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 8.15 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 8.15 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.15 node = "part2_locator" particle = "ship_burn_particle" }
+		event = { time = 8.15 node = "part2_locator" particle = "ship_explosion_air_vent_particle" }
+		
+		event = { time = 8.3 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 18.56 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 18.56 node = "part2" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death2" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 3.05 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.05 node = "part2_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.05 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 4.6 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 4.6 node = "part1_locator" particle = "ship_burn_particle" }
+		event = { time = 4.6 node = "part2_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 18.56 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 18.56 node = "part2" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death3" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 1.05 node = "part2_local_explosion_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.6 node = "part2_local_explosion_locator1" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.4 node = "part2_local_explosion_locator2" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.6 node = "part2_local_explosion_locator3" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.83 node = "part2_local_explosion_locator4" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.1 node = "part2_local_explosion_locator5" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.5 node = "part2_local_explosion_locator6" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 7.93 node = "part2_explosion_locator" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_burn_particle" }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 12.83 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+		scale = 1.0
+		attach = { part1	= "chaos_02_s2_hull_entity" }
+		attach = { part1	= "chaos_02_s2_parts_entity" }
+		
+		game_data = {
+			size = @destroyer_scale
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_s2_hull_entity"
+		pdxmesh = "chaos_02_s2_hull_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_s2_parts_entity"
+		pdxmesh = "chaos_02_s2_parts_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 
+		event = { time = 0 node = "engine_medium_01" particle = "mammalian_01_2_35_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "mammalian_01_2_35_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		}
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	# BOW
+	
+	entity = {
+		name = "chaos_02_destroyer_bow_L1_entity"
+		pdxmesh = "chaos_02_destroyer_bow_L1_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+	}
+	
+	entity = {
+		name = "chaos_02_destroyer_bow_M1S2_entity"
+		pdxmesh = "chaos_02_destroyer_bow_M1S2_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+	}
+	
+	entity = {
+		name = "chaos_02_destroyer_bow_S3_entity"
+		pdxmesh = "chaos_02_destroyer_bow_S3_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+	}
+	
+	
+	
+	# STERN
+	
+	entity = {
+		name = "chaos_02_destroyer_stern_M1_entity"
+		pdxmesh = "chaos_02_destroyer_stern_M1_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+
+	}
+	
+	entity = {
+		name = "chaos_02_destroyer_stern_S2_entity"
+		pdxmesh = "chaos_02_destroyer_stern_S2_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+
+	}
+	
+	
+	
+	##################         	 CRUISER           ########################
+	
+	entity = {
+		name = "chaos_02_cruiser_entity"
+		pdxmesh = "chaos_01_3parts_frame_mesh"
+	
+		default_state = "idle"
+	state = { name = "idle"		animation = "idle" animation_blend_time = 0.25
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_cruiser_hum" } }
+	}
+	state = { name = "moving"	animation = "idle" animation_blend_time = 0.25 
+		event = { trigger_once = yes sound = { soundeffect = "moving_out_cruiser" } }
+	}
+	state = { name = "death" animation = "death" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 8.15 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 8.15 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.15 node = "part2_locator" particle = "ship_burn_particle" }
+		event = { time = 8.15 node = "part2_locator" particle = "ship_explosion_air_vent_particle" }
+		
+		event = { time = 8.3 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 18.56 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 18.56 node = "part2" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death2" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 3.05 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.05 node = "part2_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.05 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 4.6 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 4.6 node = "part1_locator" particle = "ship_burn_particle" }
+		event = { time = 4.6 node = "part2_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 18.56 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 18.56 node = "part2" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death3" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 1.05 node = "part2_local_explosion_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.6 node = "part2_local_explosion_locator1" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.4 node = "part2_local_explosion_locator2" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.6 node = "part2_local_explosion_locator3" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.83 node = "part2_local_explosion_locator4" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.1 node = "part2_local_explosion_locator5" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.5 node = "part2_local_explosion_locator6" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 7.93 node = "part2_explosion_locator" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_burn_particle" }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 12.83 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+		scale = 1.0
+		attach = { ship_main	= "chaos_02_s3_hull_entity" }
+		attach = { ship_main	= "chaos_02_s3_parts_entity" }
+		
+		game_data = {
+			size = @cruiser_scale
+			emissive_recolor_crunch = 2.0
+		}
+	}
+
+
+	entity = {
+		name = "chaos_02_s3_hull_entity"
+		pdxmesh = "chaos_02_s3_hull_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 
+		event = { time = 0 node = "engine_medium_01" particle = "mammalian_01_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "mammalian_01_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_03" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_04" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_01" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_02" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_03" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_04" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_05" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_06" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		}
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_s3_parts_entity"
+		pdxmesh = "chaos_02_s3_parts_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	
+	
+	# BOW
+	entity = {
+		name = "chaos_02_cruiser_bow_L1_entity"
+		pdxmesh = "chaos_02_cruiser_bow_L1_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }	
+		state = { name = "death" state_time = 5 }			
+	}
+	
+	entity = {
+		name = "chaos_02_cruiser_bow_M1S2_entity"
+		pdxmesh = "chaos_02_cruiser_bow_M1S2_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }		
+	}
+	
+	entity = {
+		name = "chaos_02_cruiser_bow_M2_entity"
+		pdxmesh = "chaos_02_cruiser_bow_M2_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }	
+		state = { name = "death" state_time = 5 }		
+	}
+	
+	# MID
+	
+	entity = {
+		name = "chaos_02_cruiser_mid_S2HB_entity"
+		pdxmesh = "chaos_02_cruiser_mid_S2HB_mesh"
+		
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 }
+	state = { name = "moving" state_time = 5 }
+	state = { name = "death" state_time = 5 }	
+	}
+	
+	
+	entity = {
+		name = "chaos_02_cruiser_mid_L1M1_entity"
+		pdxmesh = "chaos_02_cruiser_mid_L1M1_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }
+	}
+	
+	entity = {
+		name = "chaos_02_cruiser_mid_M3_entity"
+		pdxmesh = "chaos_02_cruiser_mid_M3_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }
+	}
+	
+	entity = {
+		name = "chaos_02_cruiser_mid_M2S2_entity"
+		pdxmesh = "chaos_02_cruiser_mid_M2S2_mesh"
+		
+		default_state = "idle"	
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }	
+		state = { name = "death" state_time = 5 }		
+	}
+	
+	
+	
+	# STERN
+	entity = {
+		name = "chaos_02_cruiser_stern_M1_entity"
+		pdxmesh = "chaos_02_cruiser_stern_M1_mesh"
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }	
+
+	}
+	
+	entity = {
+		name = "chaos_02_cruiser_stern_S2_entity"
+		pdxmesh = "chaos_02_cruiser_stern_S2_mesh"
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }	
+
+	}
+	
+	
+	
+	##################         	 BATTLESHIP           ########################
+	
+	entity = {
+		name = "chaos_02_battleship_entity"
+		pdxmesh = "chaos_01_3parts_frame_mesh"
+	
+		default_state = "idle"
+	state = { name = "idle"		animation = "idle" animation_blend_time = 0.25
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_battleship_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_battleship_bass" } }
+	}
+	state = { name = "moving"	animation = "idle" animation_blend_time = 0.25 
+		event = { trigger_once = yes sound = { soundeffect = "moving_out_battleship" } }
+	}
+	state = { name = "death" animation = "death" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 8.15 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 8.15 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.15 node = "part2_locator" particle = "ship_burn_particle" }
+		event = { time = 8.15 node = "part2_locator" particle = "ship_explosion_air_vent_particle" }
+		
+		event = { time = 8.3 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 18.56 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 18.56 node = "part2" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death2" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 3.05 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.05 node = "part2_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.05 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 4.6 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 4.6 node = "part1_locator" particle = "ship_burn_particle" }
+		event = { time = 4.6 node = "part2_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 18.56 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 18.56 node = "part2" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death3" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 1.05 node = "part2_local_explosion_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.6 node = "part2_local_explosion_locator1" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.4 node = "part2_local_explosion_locator2" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.6 node = "part2_local_explosion_locator3" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.83 node = "part2_local_explosion_locator4" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.1 node = "part2_local_explosion_locator5" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.5 node = "part2_local_explosion_locator6" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 7.93 node = "part2_explosion_locator" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_burn_particle" }
+		event = { time = 7.93 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 12.83 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+		scale = 1.0
+		attach = { ship_main	= "chaos_02_s4_hull_entity" }
+		attach = { ship_main	= "chaos_02_s4_parts_entity" }
+		
+		game_data = {
+			size = @battleship_scale
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_s4_hull_entity"
+		pdxmesh = "chaos_02_s4_hull_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 
+		event = { time = 0 node = "engine_large_01" particle = "mammalian_01_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_02" particle = "mammalian_01_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_01" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_03" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_04" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_05" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_06" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_07" particle = "mammalian_01_1_5_ship_exhaust_oblong_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_08" particle = "mammalian_01_2_35_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		}
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_s4_parts_entity"
+		pdxmesh = "chaos_02_s4_parts_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	
+	
+	# BOW
+	entity = {
+		name = "chaos_02_battleship_bow_L1M1S2_entity"
+		pdxmesh = "chaos_02_battleship_bow_L1M1S2_mesh"
+		
+		default_state = idle	
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }				
+	}
+	
+	entity = {
+		name = "chaos_02_battleship_bow_L2_entity"
+		pdxmesh = "chaos_02_battleship_bow_L2_mesh"
+			
+		default_state = idle	
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }				
+	}
+	
+	entity = {
+		name = "chaos_02_battleship_bow_M1S2SHB_entity"
+		pdxmesh = "chaos_02_battleship_bow_M1S2SHB_mesh"
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }
+
+	}
+	
+	entity = {
+		name = "chaos_02_battleship_bow_XL1_entity"
+		pdxmesh = "chaos_02_battleship_bow_XL1_mesh"
+	
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }
+
+	}
+	
+	#MID
+	
+	entity = {
+		name = "chaos_02_battleship_mid_L2M2_entity"
+		pdxmesh = "chaos_02_battleship_mid_L2M2_mesh"
+		
+		default_state = idle	
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }						
+	}
+	
+	entity = {
+		name = "chaos_02_battleship_mid_L3_entity"
+		pdxmesh = "chaos_02_battleship_mid_L3_mesh"
+		
+		default_state = idle	
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }			
+	}
+	
+	entity = {
+		name = "chaos_02_battleship_mid_M4SHB_entity"
+		pdxmesh = "chaos_02_battleship_mid_M4SHB_mesh"
+
+		default_state = idle	
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }				
+	}
+	
+	entity = {
+		name = "chaos_02_battleship_mid_S4LHB_entity"
+		pdxmesh = "chaos_02_battleship_mid_S4LHB_mesh"
+
+		default_state = idle	
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }				
+		
+	}
+	
+	# STERN
+	
+	entity = {
+		name = "chaos_02_battleship_stern_L1_entity"
+		pdxmesh = "chaos_02_battleship_stern_L1_mesh"
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		}
+	
+	entity = {
+		name = "chaos_02_battleship_stern_M2_entity"
+		pdxmesh = "chaos_02_battleship_stern_m2_mesh"
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }
+	}
+
+	
+	###################################################################################
+	###																				###
+	###								SMALL SHIPS										###
+	###																				###
+	###################################################################################
+
+	entity = {
+		name = "chaos_02_bomber_entity"	
+		pdxmesh = "chaos_02_bomber_mesh"
+		scale = 1.0
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+
+	entity = {
+		name = "chaos_02_droppod_entity"	
+		pdxmesh = "chaos_02_droppod_mesh"
+		default_state = "idle"
+		state = { name = "idle"
+			start_event = { trigger_once = yes node = "root" particle = "ship_burn_particle" }
+		}
+		scale = 1.0
+		attach = { root	= "chaos_02_droppod_parts_entity" }
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_droppod_parts_entity"	
+		pdxmesh = "chaos_02_droppod_parts_mesh"
+		scale = 1.0
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+
+	entity = {
+		name = "chaos_02_fighter_entity"	
+		pdxmesh = "chaos_02_fighter_mesh"
+		scale = 1.0
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	###################################################################################
+	###																				###
+	###								CIVILIAN SHIPS									###
+	###																				###
+	###################################################################################
+
+
+	entity = {
+		name = "chaos_02_constructor_entity"
+		pdxmesh = "molluscoid_01_corvette_frame_mesh"
+	
+		default_state = "idle"
+	state = { name = "idle"	 animation = "idle" animation_blend_time = 0.25
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_corvette_hum" } }
+	}
+	state = { name = "moving"	animation = "idle" animation_blend_time = 0.25
+	event = { trigger_once = yes sound = { soundeffect = "moving_out_construction" } }
+	}
+	state = { name = "death" animation = "death2" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 3.46 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.79 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.5 node = "part1" particle = "ship_burn_particle" }
+		event = { time = 0.5 node = "part1" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 8.9 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.46 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.5 node = "part1" particle = "ship_burn_particle" }
+		event = { time = 0.5 node = "part1" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 10.83 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death3" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	
+		event = { time = 0.0 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.6 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 2.83 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.26 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.9 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 4.1 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "working"	 animation = "idle" animation_blend_time = 0.25
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_corvette_hum" } }
+	}
+	state = { name = "working_looping"	 animation = "idle" animation_blend_time = 0.25
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_corvette_hum" } }
+	}
+		scale = 1.0
+		attach = { part1	= "chaos_02_s7_parts_entity" }
+		
+		game_data = {
+			size = @corvette_scale
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_construction_ship_entity"
+		pdxmesh = "chaos_02_s7_hull_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		state = { name = "working"		state_time = 5 }
+		state = { name = "working_looping"		state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_colonizer_entity"
+		pdxmesh = "molluscoid_01_corvette_frame_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"	 						animation = "idle" animation_blend_time = 0 }
+		state = { name = "moving"						animation = "idle" animation_blend_time = 2 }
+		state = { name = "working" 						animation = "idle" looping = no next_state = working_looping }
+		state = { name = "working_looping"				animation = "idle" }
+		state = { name = "death" animation = "death3" 	animation_blend_time = 0.0 chance = 1 looping = no 
+			event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" }
+		}
+		
+		game_data = {
+			size = @transport_scale
+			emissive_recolor_crunch = 2.0
+		}
+	}
+
+	entity = { name = "chaos_02_sponsored_colonizer_entity" clone = "chaos_02_colonizer_entity" }
+	
+	entity = {
+		name = "chaos_02_colony_ship_entity"
+		pdxmesh = "molluscoid_01_corvette_frame_mesh"
+	
+		default_state = "idle"
+	state = { name = "idle"	 animation = "idle" animation_blend_time = 0.25
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_science_ship_hum" } }
+	}
+	state = { name = "moving"	animation = "idle" animation_blend_time = 0.25
+	event = { trigger_once = yes sound = { soundeffect = moving_out_colony_ship } }
+	}
+	state = { name = "death" animation = "death2" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 3.46 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.79 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.5 node = "part1" particle = "ship_burn_particle" }
+		event = { time = 0.5 node = "part1" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 8.9 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.46 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.5 node = "part1" particle = "ship_burn_particle" }
+		event = { time = 0.5 node = "part1" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 10.83 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death3" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	
+		event = { time = 0.0 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.6 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 2.83 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.26 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.9 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 4.1 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+		scale = 1.0
+		attach = { part1	= "chaos_02_transport_ship_entity" }
+		attach = { part1	= "chaos_02_s7_parts_entity" }
+		
+		game_data = {
+			size = @transport_scale
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+entity = {
+ name = "chaos_02_science_entity"	
+	pdxmesh = "chaos_01_emptyframe_mesh"
+	
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		locator = { name = "part1" position = { 0 0 0 } }
+
+}
+	
+	entity = {
+		name = "chaos_02_science_ship_entity"
+		pdxmesh = "molluscoid_01_corvette_frame_mesh"
+	
+		default_state = "idle"
+	state = { name = "idle"	 animation = "idle" animation_blend_time = 0.25
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_science_ship_hum" } }
+	}
+	state = { name = "moving"	animation = "idle" animation_blend_time = 0.25
+	event = { trigger_once = yes sound = { soundeffect = moving_out_science } }
+	}
+	state = { name = "death" animation = "death2" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 3.46 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.79 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.5 node = "part1" particle = "ship_burn_particle" }
+		event = { time = 0.5 node = "part1" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 8.9 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.46 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.5 node = "part1" particle = "ship_burn_particle" }
+		event = { time = 0.5 node = "part1" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 10.83 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death3" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	
+		event = { time = 0.0 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.6 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 2.83 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.26 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.9 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 4.1 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+		scale = 1.0
+		attach = { part1	= "chaos_02_s1_hull_entity" }
+		attach = { part1	= "chaos_02_s1_parts_entity" }
+		
+		game_data = {
+			size = @corvette_scale
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_transport_entity"
+		pdxmesh = "molluscoid_01_corvette_frame_mesh"
+	
+		default_state = "idle"
+	state = { name = "idle"	 animation = "idle" animation_blend_time = 0.25
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_corvette_hum" } }
+	}
+	state = { name = "moving"	animation = "idle" animation_blend_time = 0.25
+	event = { trigger_once = yes sound = { soundeffect = "moving_out_transport" } }
+	}
+	state = { name = "death" animation = "death2" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 3.46 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 6.79 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.5 node = "part1" particle = "ship_burn_particle" }
+		event = { time = 0.5 node = "part1" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 8.9 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.46 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 0.5 node = "part1" particle = "ship_burn_particle" }
+		event = { time = 0.5 node = "part1" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 10.83 node = "part1" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	state = { name = "death" animation = "death3" animation_blend_time = 0.0 chance = 1 looping = no
+		event = { time = 4.63 node = "ship_main" particle = "large_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	
+		event = { time = 0.0 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 1.6 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 2.83 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.26 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 3.9 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		event = { time = 4.1 node = "ship_main" particle = "ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+		scale = 1.0
+		attach = { part1	= "chaos_02_s7_parts_entity" }
+		
+		game_data = {
+			size = @transport_scale
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_transport_ship_entity"
+		pdxmesh = "chaos_02_s7_hull_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_s7_parts_entity"
+		pdxmesh = "chaos_02_s7_parts_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 
+		event = { time = 0 node = "engine_small_01" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_02" particle = "mammalian_01_1_45_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_01" particle = "mammalian_01_2_35_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "mammalian_01_2_35_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		}
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+	
+	
+	
+		
+		
+		
+	###################################################################################
+	###																				###
+	###									STATIONS									###
+	###																				###
+	###################################################################################
+
+	entity = {
+		name = "chaos_02_orbital_station_assemblyyard_section_entity"
+		pdxmesh = "chaos_02_orbital_station_miscellaneous_section_mesh"
+		scale = 1.0
+		default_state = idle
+		state = { name = "idle" state_time = 5
+			start_event = { trigger_once = yes sound = { soundeffect = "spaceport_hum_idle" } } }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }	
+		locator = { name = "root" 	position = { 0 0 0 } }
+		attach = { root	= "chaos_02_starbase_section_parts_entity" }
+
+		game_data = {
+				emissive_recolor_crunch = 2.0
+		}		
+	}
+
+	entity = {
+		name = "chaos_02_orbital_station_hangarbay_section_entity"
+		pdxmesh = "chaos_02_orbital_station_hangar_section_mesh"
+		scale = 1.0
+
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }		
+		locator = { name = "root" 	position = { 0 0 0 } }
+		attach = { root	= "chaos_02_starbase_section_parts_entity" }
+
+		game_data = {
+				emissive_recolor_crunch = 2.0
+		}
+	}
+	
+
+	entity = {
+		name = "chaos_02_orbital_station_refinery_section_entity"
+		pdxmesh = "chaos_02_orbital_station_miscellaneous_section_mesh"
+		scale = 1.0
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		locator = { name = "root" 	position = { 0 0 0 } }
+		attach = { root	= "chaos_02_starbase_section_parts_entity" }
+
+		game_data = {
+				emissive_recolor_crunch = 2.0
+		}		
+	}
+	
+	entity = {
+		name = "chaos_02_starbase_section_parts_entity"
+		pdxmesh = "chaos_02_starbase_section_parts_mesh"
+		
+		default_state = "idle"
+		state = { name = "idle"		state_time = 5 }
+		state = { name = "moving"	state_time = 5 }
+		state = { name = "death" state_time = 5 }
+		scale = 1.00
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+
+	entity = {
+		name = "chaos_02_orbital_station_science_section_entity"
+		pdxmesh = "chaos_02_orbital_station_miscellaneous_section_mesh"
+		scale = 1.0
+
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }	
+		locator = { name = "root" 	position = { 0 0 0 } }
+		attach = { root	= "chaos_02_starbase_section_parts_entity" }
+
+		game_data = {
+				emissive_recolor_crunch = 2.0
+		}		
+	}
+	
+	entity = {
+		name = "chaos_02_mining_station_entity"
+		pdxmesh = "molluscoid_01_mining_station_frame_mesh"
+
+		scale = 1.0
+		locator = { name = "part1" 		position = { 0 	0 	0 } }
+
+		default_state = "idle"
+		state = { name = "idle" state_time = 5}
+		state = { name = "death" state_time = 2 looping = no
+		event = { time = 1.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+	}
+	
+	game_data = {
+		size = @mining_station
+		emissive_recolor_crunch = 2.0
+		}
+	}
+
+	entity = {
+		name = "chaos_02_mining_station_section_entity"
+		pdxmesh = "chaos_02_stations_mesh"
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5
+			start_event = { trigger_once = yes sound = { soundeffect = "amb_mining_station_signals" } }	}
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 looping = no
+			event = { time = 0.0 node = "light_locator_01" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "light_locator_02" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "light_locator_04" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 2.0 node = "light_locator_05" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 3.0 node = "light_locator_06" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" }  }
+			event = { time = 4.0 node = "light_locator_03" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		
+			event = { time = 4.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		}
+	}
+	
+	
+	entity = {
+		name = "chaos_02_terraform_station_entity"
+		pdxmesh = "chaos_02_stations_mesh"
+		
+		scale = 1.0 
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5
+			start_event = { trigger_once = yes sound = { soundeffect = "amb_terraforming_station_idle_hum" } } }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 looping = no
+			event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 2.0 node = "explosion_4" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 3.0 node = "explosion_5" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 4.0 node = "explosion_4" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		
+			event = { time = 4.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		}
+		
+		game_data = {
+			size = @terraforming_station
+			emissive_recolor_crunch = 5.0
+		}
+	}
+	
+	entity = {
+		name = "chaos_02_research_station_entity"
+		pdxmesh = "molluscoid_01_science_station_frame_mesh"
+
+		scale = 1.0	
+		locator = { name = "part1" 			position = { 0 	0 	0 } }
+
+		default_state = "idle"
+		state = { name = "idle" state_time = 5	}
+		state = { name = "death" state_time = 2 looping = no
+			event = { time = 1.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		}
+	
+		scale = 1.0
+
+		game_data = {
+			size = @research_station
+			emissive_recolor_crunch = 2.0
+		}
+	}
+
+	entity = {
+		name = "chaos_02_research_station_section_entity"
+		pdxmesh = "chaos_02_stations_mesh"
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5
+			start_event = { trigger_once = yes sound = { soundeffect = "amb_research_station_signals" } } }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 looping = no
+			event = { time = 0.0 node = "light_locator_01" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "light_locator_02" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "light_locator_04" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 2.0 node = "light_locator_05" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 3.0 node = "light_locator_06" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 4.0 node = "light_locator_03" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		
+			event = { time = 4.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		}
+	}
+
+	entity = {
+		name = "chaos_02_observation_station_entity"
+		pdxmesh = "chaos_02_stations_mesh"
+
+		scale = 1.0
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5
+			start_event = { trigger_once = yes sound = { soundeffect = "amb_research_station_signals" } } }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 looping = no
+			event = { time = 0.0 node = "light_locator_01" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "light_locator_02" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "light_locator_04" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 2.0 node = "light_locator_05" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 3.0 node = "light_locator_06" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 4.0 node = "light_locator_03" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		
+			event = { time = 4.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		}
+		
+		game_data = {
+			size = @research_station
+			emissive_recolor_crunch = 5.0
+		}
+	}
+
+	
+
+	entity = {
+		name = "chaos_02_wormhole_station_entity"
+		pdxmesh = "chaos_02_stations_mesh"
+
+		scale = 1.0
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5
+			start_event = { trigger_once = yes sound = { soundeffect = "amb_research_station_signals" } } }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 looping = no
+			event = { time = 0.0 node = "light_locator_01" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "light_locator_02" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "light_locator_04" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 2.0 node = "light_locator_05" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 3.0 node = "light_locator_06" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 4.0 node = "light_locator_03" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		
+			event = { time = 4.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		}
+		
+		game_data = {
+			size = @research_station
+			emissive_recolor_crunch = 5.0
+		}
+	}
+
+	entity = {
+		name = "chaos_02_military_station_small_entity"
+		pdxmesh = "chaos_02_military_station_small_mesh"
+		
+		scale = 1.0
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5
+			start_event = { trigger_once = yes sound = { soundeffect = "defense_station_idle_hum" } } }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 3 looping = no
+			event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			
+			event = { time = 2.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		}
+		
+		game_data = {
+			emissive_recolor_crunch = 5.0
+		}
+	}
+    
+	entity = {
+		name = "chaos_02_military_station_section_light_entity"
+		pdxmesh = "chaos_02_military_station_section_light_mesh"	
+		scale = 1.0
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }	
+	}
+	
+	entity = {
+		name = "chaos_02_military_station_section_medium_entity"
+		pdxmesh = "chaos_02_military_station_section_medium_mesh"	
+		scale = 1.0
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }	
+	}
+	
+	entity = {
+		name = "chaos_02_military_station_section_heavy_entity"
+		pdxmesh = "chaos_02_military_station_section_heavy_mesh"	
+		scale = 1.0
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }	
+	}
+	
+	entity = {
+		name = "chaos_02_military_station_section_hangar_entity"
+		pdxmesh = "chaos_02_military_station_section_heavy_mesh"	
+		scale = 1.0
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5 }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 5 }	
+	}
+
+	entity = {
+		name = "chaos_02_wormhole_main_entity"
+		pdxmesh = "blue_white_star_icon_mesh"
+		scale = 10.0
+	}
+
+	entity = {
+		name = "chaos_02_outpost_station_entity"
+		locator = { name = "part1" 		position = { 0 0 0 } }
+
+		default_state = idle
+		state = { name = "idle" state_time = 5
+			start_event = { trigger_once = yes sound = { soundeffect = "defense_station_idle_hum" } } 
+		}
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 3 looping = no
+			event = { time = 2.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes }
+		}
+		scale = 1.0
+		
+		game_data = {
+			emissive_recolor_crunch = 2.0
+		}
+	}
+
+	entity = {
+		name = "chaos_02_outpost_station_section_entity"
+		pdxmesh = "chaos_02_military_station_small_mesh"
+
+		scale = 1.0
+		
+		default_state = idle
+		state = { name = "idle" state_time = 5
+			start_event = { trigger_once = yes sound = { soundeffect = "amb_outpost_station_idle" } } }
+		state = { name = "moving" state_time = 5 }
+		state = { name = "death" state_time = 3 looping = no
+			event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+		}
+		
+	}
+	
+##################         	 HABITAT ENTITIES           ########################
+
+
+entity = {
+	name = "chaos_02_habitat_phase_01_entity"
+	pdxmesh = "chaos_02_starbase_frame_mesh"
+
+	default_state = "habitat_idle"
+	state = { name = "habitat_idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "starbase_hum_stage_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "starbase_hum_stage_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "starbase_hum_stage_03" } }
+	}
+	state = { name = "death"
+		event = { time = 3.4 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 3.4 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.4 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.0 node = "part2_back_locator" particle = "ship_explosion_air_vent_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 3.4 node = "part2_front_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 8.0 node = "part2_back_locator" particle = "ship_burn_particle" }
+		event = { time = 3.4 node = "part2_front_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.0 node = "part3_locator" particle = "ship_burn_particle" }
+		event = { time = 8.0 node = "part3_locator" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 8.0 node = "part3_locator" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 10.3 node = "explosion_locator6" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 19.73 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_explosion_large } }
+		event = { time = 19.73 node = "explosion_locator3" particle = "small_player_ship_explosion_particle" }
+	}
+	state = { name = "death"
+		event = { time = 5.16 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 5.16 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 5.16 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 5.16 node = "part2_front_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 5.16 node = "part2_front_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_burn_particle" }
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_explosion_particle" }
+	
+		event = { time = 11.9 node = "part3_explosion_locator" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 18.0 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_explosion_large } }
+		event = { time = 18.0 node = "part1" particle = "small_player_ship_explosion_particle" }
+	}
+	
+	state = { name = "death"
+		event = { time = 1.7 node = "explosion_locator1" particle = "ship_burn_particle" }
+		event = { time = 1.7 node = "explosion_locator1" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 2.16 node = "explosion_locator2" particle = "ship_burn_particle" }
+		event = { time = 2.16 node = "explosion_locator2" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 3.9 node = "explosion_locator3" particle = "ship_burn_particle" }
+		event = { time = 3.9 node = "explosion_locator3" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		
+		event = { time = 7.5 node = "explosion_locator4" particle = "ship_burn_particle" }
+		event = { time = 7.5 node = "explosion_locator4" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 4.9 node = "explosion_locator5" particle = "ship_burn_particle" }
+		event = { time = 4.9 node = "explosion_locator5" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 17.5 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+
+	state = { name = "construction" looping = yes }
+	
+	scale = 1.0
+	attach = { part1 = "chaos_02_starbase_citadel_section_entity" }
+	attach = { part1 = "chaos_02_citadel_parts_entity" }
+	attach = { part2 = "chaos_02_orbital_station_refinery_section_entity" }
+	attach = { part3 = "chaos_02_orbital_station_refinery_section_entity" }
+
+	game_data = {
+		shader_type = ship
+		size = @starbase_scale
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "chaos_02_habitat_phase_02_entity"
+	pdxmesh = "chaos_02_starbase_frame_mesh"
+
+	default_state = "habitat_idle"
+	state = { name = "habitat_idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "starbase_hum_stage_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "starbase_hum_stage_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "starbase_hum_stage_03" } }
+	}
+	state = { name = "death"
+		event = { time = 3.4 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 3.4 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.4 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.0 node = "part2_back_locator" particle = "ship_explosion_air_vent_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 3.4 node = "part2_front_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 8.0 node = "part2_back_locator" particle = "ship_burn_particle" }
+		event = { time = 3.4 node = "part2_front_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.0 node = "part3_locator" particle = "ship_burn_particle" }
+		event = { time = 8.0 node = "part3_locator" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 8.0 node = "part3_locator" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 10.3 node = "explosion_locator6" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 19.73 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_explosion_large } }
+		event = { time = 19.73 node = "explosion_locator3" particle = "small_player_ship_explosion_particle" }
+	}
+	state = { name = "death"
+		event = { time = 5.16 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 5.16 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 5.16 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 5.16 node = "part2_front_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 5.16 node = "part2_front_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_burn_particle" }
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_explosion_particle" }
+	
+		event = { time = 11.9 node = "part3_explosion_locator" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 18.0 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_explosion_large } }
+		event = { time = 18.0 node = "part1" particle = "small_player_ship_explosion_particle" }
+	}
+	
+	state = { name = "death"
+		event = { time = 1.7 node = "explosion_locator1" particle = "ship_burn_particle" }
+		event = { time = 1.7 node = "explosion_locator1" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 2.16 node = "explosion_locator2" particle = "ship_burn_particle" }
+		event = { time = 2.16 node = "explosion_locator2" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 3.9 node = "explosion_locator3" particle = "ship_burn_particle" }
+		event = { time = 3.9 node = "explosion_locator3" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		
+		event = { time = 7.5 node = "explosion_locator4" particle = "ship_burn_particle" }
+		event = { time = 7.5 node = "explosion_locator4" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 4.9 node = "explosion_locator5" particle = "ship_burn_particle" }
+		event = { time = 4.9 node = "explosion_locator5" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 17.5 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+
+	state = { name = "construction" looping = yes }
+	
+	scale = 1.0
+	attach = { part1 = "chaos_02_starbase_citadel_section_entity" }
+	attach = { part1 = "chaos_02_citadel_parts_entity" }
+	attach = { part2 = "chaos_02_orbital_station_refinery_section_entity" }
+	attach = { part3 = "chaos_02_orbital_station_refinery_section_entity" }
+	attach = { part4 = "chaos_02_orbital_station_refinery_section_entity" }
+	attach = { part5 = "chaos_02_orbital_station_refinery_section_entity" }
+
+	game_data = {
+		shader_type = ship
+		size = @starbase_scale
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+entity = {
+	name = "chaos_02_habitat_phase_03_entity"
+	pdxmesh = "chaos_02_starbase_frame_mesh"
+
+	default_state = "habitat_idle"
+	state = { name = "habitat_idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "starbase_hum_stage_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "starbase_hum_stage_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "starbase_hum_stage_03" } }
+	}
+	state = { name = "death"
+		event = { time = 3.4 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 3.4 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 3.4 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.0 node = "part2_back_locator" particle = "ship_explosion_air_vent_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 3.4 node = "part2_front_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 8.0 node = "part2_back_locator" particle = "ship_burn_particle" }
+		event = { time = 3.4 node = "part2_front_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 8.0 node = "part3_locator" particle = "ship_burn_particle" }
+		event = { time = 8.0 node = "part3_locator" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 8.0 node = "part3_locator" particle = "ship_explosion_air_vent_particle" }
+	
+		event = { time = 10.3 node = "explosion_locator6" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 19.73 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_explosion_large } }
+		event = { time = 19.73 node = "explosion_locator3" particle = "small_player_ship_explosion_particle" }
+	}
+	state = { name = "death"
+		event = { time = 5.16 node = "part1_locator" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		event = { time = 5.16 node = "part1_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 5.16 node = "part1_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 5.16 node = "part2_front_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 5.16 node = "part2_front_locator" particle = "ship_burn_particle" }
+		
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_burn_particle" }
+		event = { time = 11.9 node = "part2_back_locator" particle = "ship_explosion_particle" }
+	
+		event = { time = 11.9 node = "part3_explosion_locator" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		
+		event = { time = 18.0 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_explosion_large } }
+		event = { time = 18.0 node = "part1" particle = "small_player_ship_explosion_particle" }
+	}
+	
+	state = { name = "death"
+		event = { time = 1.7 node = "explosion_locator1" particle = "ship_burn_particle" }
+		event = { time = 1.7 node = "explosion_locator1" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 2.16 node = "explosion_locator2" particle = "ship_burn_particle" }
+		event = { time = 2.16 node = "explosion_locator2" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 3.9 node = "explosion_locator3" particle = "ship_burn_particle" }
+		event = { time = 3.9 node = "explosion_locator3" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+		
+		event = { time = 7.5 node = "explosion_locator4" particle = "ship_burn_particle" }
+		event = { time = 7.5 node = "explosion_locator4" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 4.9 node = "explosion_locator5" particle = "ship_burn_particle" }
+		event = { time = 4.9 node = "explosion_locator5" particle = "ship_explosion_particle" sound = { soundeffect = "ship_explosion"} }
+	
+		event = { time = 17.5 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+
+	state = { name = "construction" looping = yes }
+	
+	scale = 1.0
+	attach = { part1 = "chaos_02_starbase_citadel_section_entity" }
+	attach = { part1 = "chaos_02_citadel_parts_entity" }
+	attach = { part2 = "chaos_02_orbital_station_refinery_section_entity" }
+	attach = { part3 = "chaos_02_orbital_station_refinery_section_entity" }
+	attach = { part4 = "chaos_02_orbital_station_refinery_section_entity" }
+	attach = { part5 = "chaos_02_orbital_station_refinery_section_entity" }
+	attach = { part6 = "chaos_02_orbital_station_refinery_section_entity" }
+	attach = { part7 = "chaos_02_orbital_station_refinery_section_entity" }
+
+	game_data = {
+		shader_type = ship
+		size = @starbase_scale
+		emissive_recolor_crunch = 2.0
+	}
+}
+
+	##################         	 CONSTRUCTION ENTITIES           ########################
+
+	entity = {
+		name = "chaos_02_outpost_station_construction_entity"
+		pdxmesh = "chaos_02_military_station_small_mesh"	
+			default_state = "idle"
+			state = { name = "idle" state_time = 5
+				event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+			}
+	
+		scale = 1.0
+		
+	}
+
+	entity = {
+		name = "chaos_02_military_station_small_construction_entity"
+		pdxmesh = "chaos_02_military_station_small_mesh"	
+			default_state = "idle"
+			state = { name = "idle" state_time = 5
+				event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+			}
+		
+		attach = { part1	= "chaos_02_military_station_section_light_entity" }
+		attach = { part2	= "chaos_02_military_station_section_light_entity" }
+	
+		scale = 1.0
+		
+	}
+	entity = {
+		name = "chaos_02_military_station_medium_construction_entity"
+		pdxmesh = "chaos_02_military_station_small_mesh"	
+			default_state = "idle"
+			state = { name = "idle" state_time = 5
+				event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+			}
+		
+		attach = { part1	= "chaos_02_military_station_section_light_entity" }
+		attach = { part2	= "chaos_02_military_station_section_light_entity" }
+		attach = { part3	= "chaos_02_military_station_section_light_entity" }
+		attach = { part4	= "chaos_02_military_station_section_light_entity" }
+		
+		scale = 1.0
+		
+	}
+	entity = {
+		name = "chaos_02_military_station_large_construction_entity"
+		pdxmesh = "chaos_02_military_station_small_mesh"	
+			default_state = "idle"
+			state = { name = "idle" state_time = 5
+				event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+			}
+		
+		attach = { part1	= "chaos_02_military_station_section_light_entity" }
+		attach = { part2	= "chaos_02_military_station_section_light_entity" }
+		attach = { part3	= "chaos_02_military_station_section_light_entity" }
+		attach = { part4	= "chaos_02_military_station_section_light_entity" }
+		attach = { part5	= "chaos_02_military_station_section_light_entity" }
+		attach = { part6	= "chaos_02_military_station_section_light_entity" }
+		attach = { part7	= "chaos_02_military_station_section_light_entity" }
+		attach = { part8	= "chaos_02_military_station_section_light_entity" }
+		
+		scale = 1.0
+	}
+	
+	entity = {
+		name = "chaos_02_orbital_station_construction_entity"
+		pdxmesh = "chaos_02_stations_mesh"	
+			default_state = "idle"
+			state = { name = "idle" state_time = 5
+				event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+			}
+	}
+	entity = {
+		name = "chaos_02_mining_station_construction_entity"
+		pdxmesh = "chaos_02_stations_mesh"
+			default_state = "idle"
+			state = { name = "idle" state_time = 5
+				event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+			}
+		scale = 1.0
+		game_data = {
+			size = @mining_station
+			emissive_recolor_crunch = 50.0
+		}
+	}
+	entity = {
+		name = "chaos_02_research_station_construction_entity"
+		pdxmesh = "chaos_02_stations_mesh"
+			default_state = "idle"
+			state = { name = "idle" state_time = 5
+				event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+			}
+		scale = 1.0
+	}
+	entity = {
+		name = "chaos_02_wormhole_station_construction_entity"
+		pdxmesh = "chaos_02_stations_mesh"
+			default_state = "idle"
+			state = { name = "idle" state_time = 5
+			event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+			}
+		scale = 1.0
+	}
+	entity = {
+		name = "chaos_02_terraform_station_construction_entity"
+		pdxmesh = "chaos_02_stations_mesh"
+			default_state = "idle"
+			state = { name = "idle" state_time = 5
+				event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+			}
+		scale = 1.0
+	}
+	entity = {
+		name = "chaos_02_observation_station_construction_entity"
+		pdxmesh = "chaos_02_stations_mesh"
+			default_state = "idle"
+			state = { name = "idle" state_time = 5
+			event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+			}
+		scale = 1.0
+	}
+
+
+		
+		
+		

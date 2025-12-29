@@ -1,0 +1,551 @@
+objectTypes = {
+
+
+	#######  Civilian Ships  #######
+	
+	pdxmesh = {
+		name = "chaos_01_emptyframe_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_empty_frame.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+				
+	pdxmesh = {
+		name = "chaos_01_s7_hull_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s7_hull.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_s7_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s7_parts.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	
+	#######  Turrets  #######	
+	
+	pdxmesh = {
+		name = "chaos_01_turret_laser_large_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_turret_laser_large.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_turret_laser_medium_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_turret_laser_medium.mesh"	
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_turret_laser_small_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_turret_laser_small.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_turret_projectile_large_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_turret_projectile_large.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_turret_projectile_medium_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_turret_projectile_medium.mesh"	
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_turret_projectile_small_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_turret_projectile_small.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_turret_missile_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_turret_missile.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_turret_xl_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_turret_xl.mesh"	
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+		
+	#######  escorts  ########
+	
+	pdxmesh = {
+		name = "chaos_01_bomber_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_fighter.mesh"
+		scale = 0.2
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "chaos_01_fighter_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_bomber.mesh"
+		scale = 0.2
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "chaos_01_droppod_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_droppod.mesh"
+		scale = 0.2
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_droppod_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_droppod_parts.mesh"
+		scale = 0.2
+		meshsettings = {			
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	#######  corvette sections  #######	
+	
+	pdxmesh = {
+		name = "chaos_01_s1_hull_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s1_hull.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_s1_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s1_parts.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_corvette_M1S1_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_corvette_M1S1.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+	pdxmesh = {
+		name = "chaos_01_corvette_S3_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_corvette_S3.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+
+	
+	
+	
+	#######  destroyer frame  #######
+	
+	pdxmesh = {
+		name = "chaos_01_s2_hull_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s2_hull.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_s2_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s2_parts.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	#######  destroyer bow sections  #######	
+	
+	pdxmesh = {
+		name = "chaos_01_destroyer_bow_L1_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_destroyer_bow_L1.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_destroyer_bow_M1S2_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_destroyer_bow_M1S2.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+	pdxmesh = {
+		name = "chaos_01_destroyer_bow_S3_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_destroyer_bow_S3.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	#######  destroyer stern sections  #######	
+		
+	pdxmesh = {
+		name = "chaos_01_destroyer_stern_S2_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_destroyer_stern_S2.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_destroyer_stern_M1_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_destroyer_stern_M1.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	
+	#######  cruiser frame  #######
+	
+	
+	pdxmesh = {
+		name = "chaos_01_3parts_frame_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_3parts_frame.mesh"
+				animation = { id = "idle"			type = "chaos_01_3parts_frame_idle_animation" }
+				animation = { id = "death"			type = "chaos_01_3parts_frame_death_animation" }
+				animation = { id = "death2"			type = "chaos_01_3parts_frame_death2_animation" }
+				animation = { id = "death3"			type = "chaos_01_3parts_frame_death3_animation" }
+				animation = { id = "attack"			type = "chaos_01_3parts_frame_idle_animation" }				
+				animation = { id = "moving"			type = "chaos_01_3parts_frame_idle_animation" }				
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+			texture_diffuse = "chaos_blank.dds"
+			texture_normal = "chaos_blank.dds"
+			texture_specular = "chaos_blank.dds"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_s3_hull_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s3_hull.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_s3_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s3_parts.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	#######  cruiser bow sections  #######	
+	
+	pdxmesh = {
+		name = "chaos_01_cruiser_bow_L1_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_cruiser_bow_L1.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+	pdxmesh = {
+		name = "chaos_01_cruiser_bow_M1S2_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_cruiser_bow_M1S2.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_cruiser_bow_M2_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_cruiser_bow_M2.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+	#######  cruiser mid sections  #######			
+		
+	
+	pdxmesh = {
+		name = "chaos_01_cruiser_mid_S2HB_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_cruiser_mid_S2HB.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_cruiser_mid_L1M1_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_cruiser_mid_L1M1.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+				
+	pdxmesh = {
+		name = "chaos_01_cruiser_mid_M3_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_cruiser_mid_M3.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}		
+	
+	pdxmesh = {
+		name = "chaos_01_cruiser_mid_M2S2_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_cruiser_mid_M2S2.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	#######  cruiser stern sections  #######	
+		
+	pdxmesh = {
+		name = "chaos_01_cruiser_stern_S2_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_cruiser_stern_S2.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}		
+	
+	pdxmesh = {
+		name = "chaos_01_cruiser_stern_M1_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_cruiser_stern_M1.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+
+
+	
+	
+	
+	#######  Battleship frame  #######
+	
+	pdxmesh = {
+		name = "chaos_01_s4_hull_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s4_hull.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_s4_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_s4_parts.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	#######  Battleship bow sections  #######	
+	
+	pdxmesh = {
+		name = "chaos_01_battleship_bow_L1M1S2_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_battleship_bow_L1M1S2.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+	pdxmesh = {
+		name = "chaos_01_battleship_bow_L2_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_battleship_bow_L2.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+	pdxmesh = {
+		name = "chaos_01_battleship_bow_M1S2SHB_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_battleship_bow_M1S2SHB.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_battleship_bow_XL1_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_battleship_bow_XL1.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+		
+	#######  Battleship mid sections  #######			
+		
+	pdxmesh = {
+		name = "chaos_01_battleship_mid_L2M2_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_battleship_mid_L2M2.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+	pdxmesh = {
+		name = "chaos_01_battleship_mid_L3_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_battleship_mid_L3.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+	pdxmesh = {
+		name = "chaos_01_battleship_mid_M4SHB_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_battleship_mid_M4SHB.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+	pdxmesh = {
+		name = "chaos_01_battleship_mid_S4LHB_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_battleship_mid_S4LHB.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+		
+		
+	#######  Battleship stern sections  #######	
+		
+	pdxmesh = {
+		name = "chaos_01_battleship_stern_L1_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_battleship_stern_L1.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+		
+	pdxmesh = {
+		name = "chaos_01_battleship_stern_m2_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_battleship_stern_M2.mesh"
+		scale = 0.6
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	#######  Stations  #######	
+
+	pdxmesh = {
+		name = "chaos_01_stations_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_stations.mesh"
+		scale = 0.6
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_military_station_small_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_military_station_small.mesh"
+		scale = 0.6
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_military_station_section_heavy_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_military_station_section_heavy.mesh"
+		scale = 0.6
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_military_station_section_medium_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_military_station_section_medium.mesh"
+		scale = 0.6
+	}	
+	
+	pdxmesh = {
+		name = "chaos_01_military_station_section_light_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_military_station_section_light.mesh"
+		scale = 0.6
+	}
+	
+	pdxmesh = {
+		name = "chaos_01_orbital_station_hangar_section_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_orbital_station_hangar_section.mesh"
+		scale = 0.6
+	}
+
+	pdxmesh = {
+		name = "chaos_01_starbase_section_parts_mesh"
+		file = "gfx/models/ships/chaos_01/chaos_01_starbase_section_parts.mesh"
+		scale = 0.6
+	}
+
+}
+
+	
