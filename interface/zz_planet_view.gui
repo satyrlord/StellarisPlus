@@ -5233,7 +5233,7 @@ guiTypes = {
 		buttonType = {
 			name = "zone_info_button"
 			position = { x = 0 y = 0 }
-			size = { x = secondary_zone_size_x y = @[52 * ROW_FACTOR - 2] }
+			size = { x = @secondary_zone_size_x y = @[52 * ROW_FACTOR - 2] }
 			quadTextureSprite = "GFX_district_hover"
 			clicksound = "menu_slide_open"
 		}
