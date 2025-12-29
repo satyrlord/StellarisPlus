@@ -28,7 +28,7 @@ objectTypes = {
 	
 		pdxmesh = {
 		name = "machine_01_old_battleship_bow_M2S4_mesh"
-		file = "gfx/models/ships/Old_Assets/machine_01_battleship_bow_M2S4.mesh"
+		file = "gfx/models/ships/Old_Assets/machine_01_battleship_bow_M3S2.mesh"
 		scale = 1.0
 	}
 	
@@ -87,7 +87,7 @@ objectTypes = {
 				####carrier sec####
 	pdxmesh = {
 		name = "machine_01_old_battleship_mid_2_M4SHB_mesh"
-		file = "gfx/models/ships/Old_Assets/machine_01_battleship_mid_2_M4SHB.mesh"
+		file = "gfx/models/ships/Old_Assets/machine_01_battleship_mid_M4SHB.mesh"
 		scale = 1.0
 	}
 		

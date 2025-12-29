@@ -25,7 +25,7 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "machine_01_matter_decompressor_destroyed_01_mesh"
-		file = "gfx/models/ships/Megastructure_Assets/Matter_Decompressor/machine_01_matter_decompressor_destroyed.mesh"
+		file = "gfx/models/ships/Megastructure_Assets/Matter_Decompressor/machine_01_matter_decompressor_stage_4.mesh"
 
 	}
 	
