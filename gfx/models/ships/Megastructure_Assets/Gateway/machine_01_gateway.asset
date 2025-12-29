@@ -1,16 +1,3 @@
-
-
-animation = {
-	name = "gateway_idle_animation"
-	file = "gateway_idle.anim"
-}
-
-animation = {
-	name = "gateway_death_animation"
-	file = "gateway_death.anim"
-}
-
-
 #####################################################
 #####											#####
 #####					Machine					#####

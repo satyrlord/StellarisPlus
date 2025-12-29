@@ -77,7 +77,6 @@ objectTypes = {
 	pdxmesh = {
 		name = "machine_01_cruiser_frame_mesh"
 		file = "gfx/models/ships/Cruiser_Assets/machine_01_cruiser_frame.mesh"
-		animation = { id = "death"	type = "machine_01_cruiser_frame_death_animation" }
 	}
 	
 	pdxmesh = {

@@ -31,22 +31,17 @@
 
 animation = {
 	name = "machine_01_cruiser_frame_death_animation"
-	file = "gfx/models/ships/Cruiser_assets/machine_01_cruiser_death.anim"
+	file = "Cruiser_Assets/machine_01_cruiser_death.anim"
 }
 
 animation = {
 	name = "machine_01_cruiser_frame_death2_animation"
-	file = "gfx/models/ships/Cruiser_assets/machine_01_cruiser_death.anim"
+	file = "Cruiser_Assets/machine_01_cruiser_death.anim"
 }
 
 animation = {
 	name = "machine_01_cruiser_frame_death3_animation"
-	file = "gfx/models/ships/cruiser_assets/machine_01_cruiser_death.anim"
-}
-
-animation = {
-	name = "machine_01_cruiser_frame_idle_animation"
-	file = "gfx/models/ships/cruiser_assets/machine_01_cruiser_frame_idle.anim"
+	file = "Cruiser_Assets/machine_01_cruiser_death.anim"
 }
 
 
@@ -90,34 +85,6 @@ animation = {
 animation = {
 	name = "machine_01_construction_working_looping_animation"
 	file = "Civilian_Assets/construction_ship/machine_01_new_constructor_working.anim"
-}
-
-
-
-
-
-
-
-
-
-animation = {
-	name = "machine_01_science_station_idle_animation"
-	file = "molluscoid_01_science_station_idle.anim"
-}
-
-animation = {
-	name = "machine_01_science_station_death_animation"
-	file = "molluscoid_01_science_station_death.anim"
-}
-
-animation = {
-	name = "machine_01_orbital_station_main_idle_animation"
-	file = "molluscoid_01_orbital_station_main_idle.anim"
-}
-
-animation = {
-	name = "machine_01_orbital_station_main_death_animation"
-	file = "molluscoid_01_orbital_station_main_death.anim"
 }
 
 animation = {

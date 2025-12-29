@@ -46,49 +46,49 @@ Integrated Workshop mods:
 - Machine Shipset (Workshop ID: 2077186491)
   Source: backup/2077186491/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2077186491
-  Author: Unknown (not present in descriptor.mod snapshot)
+  Author: Aryx https://steamcommunity.com/id/Aryx3D/myworkshopfiles/?appid=281990
 
 - Arkchitecture Shipsets (Workshop ID: 2379282804)
   Source: backup/2379282804/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2379282804
-  Author: Unknown (not present in descriptor.mod snapshot)
+  Author: Icen https://steamcommunity.com/id/Thisisntyouraccount/myworkshopfiles/?appid=281990
 
 - Starfleet NX Era Shipset (Workshop ID: 2667595705)
   Source: backup/2667595705/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2667595705
-  Author: Unknown (not present in descriptor.mod snapshot)
+  Author: Walshicus https://steamcommunity.com/profiles/76561198037869976/myworkshopfiles/?appid=281990
 
 - Klingon Shipset (Workshop ID: 2672884318)
   Source: backup/2672884318/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2672884318
-  Author: Unknown (not present in descriptor.mod snapshot)
+  Author: Walshicus https://steamcommunity.com/profiles/76561198037869976/myworkshopfiles/?appid=281990
 
 - Terran NX Era Shipset (Workshop ID: 2679512490)
   Source: backup/2679512490/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2679512490
-  Author: Unknown (not present in descriptor.mod snapshot)
+  Author: Walshicus https://steamcommunity.com/profiles/76561198037869976/myworkshopfiles/?appid=281990
 
 - Romulan Shipset (Workshop ID: 2702005349)
   Source: backup/2702005349/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2702005349
-  Author: Unknown (not present in descriptor.mod snapshot)
+  Author: Walshicus https://steamcommunity.com/profiles/76561198037869976/myworkshopfiles/?appid=281990
 
 - Starfleet TMP Era Shipset (Workshop ID: 2765125322)
   Source: backup/2765125322/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2765125322
-  Author: Unknown (not present in descriptor.mod snapshot)
+  Author: Walshicus https://steamcommunity.com/profiles/76561198037869976/myworkshopfiles/?appid=281990
 
 - Vulcan Shipset (Workshop ID: 2804194007)
   Source: backup/2804194007/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2804194007
-  Author: Unknown (not present in descriptor.mod snapshot)
+  Author: Walshicus https://steamcommunity.com/profiles/76561198037869976/myworkshopfiles/?appid=281990
 
 - Borg Shipset (Workshop ID: 2953073033)
   Source: backup/2953073033/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2953073033
-  Author: Unknown (not present in descriptor.mod snapshot)
+  Author: Walshicus https://steamcommunity.com/profiles/76561198037869976/myworkshopfiles/?appid=281990
 
 - Starfleet TNG Era Shipset (Workshop ID: 3118844461)
   Source: backup/3118844461/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3118844461
-  Author: Unknown (not present in descriptor.mod snapshot)
+  Author: Walshicus https://steamcommunity.com/profiles/76561198037869976/myworkshopfiles/?appid=281990
