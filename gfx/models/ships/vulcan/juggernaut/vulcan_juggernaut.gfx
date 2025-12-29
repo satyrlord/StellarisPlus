@@ -1,0 +1,10 @@
+objectTypes = {
+	pdxmesh = {
+		name = "vulcan_juggernaut_mesh"
+		file = "gfx/models/ships/vulcan/juggernaut/vulcan_juggernaut.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "vulcan_kal_cheroth" index = 0 texture_diffuse = "vulcan_kal_cheroth_diffuse.dds" texture_normal = "vulcan_kal_cheroth_normal.dds" texture_specular = "vulcan_kal_cheroth_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "vulcan_kal_cheroth" index = 1 texture_diffuse = "vulcan_talkyr_hull_diffuse.dds" texture_normal = "vulcan_dkyr_hull_normal.dds" texture_specular = "vulcan_dkyr_hull_specular.dds" shader = "PdxMeshShip" }
+	}
+}

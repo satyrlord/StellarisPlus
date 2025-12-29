@@ -1,0 +1,21 @@
+objectTypes = {
+    pdxmesh = {
+        name = "starfleet_tmp_citadel_mesh"
+        file = "gfx/models/ships/starfleet_tmp/starbase/starfleet_tmp_citadel.mesh"
+        scale = 1
+		
+        meshsettings = { name = "bigdoor" texture_diffuse = "starfleet_tmp_ESD_BigDoor_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "starfleet_tmp_ESD_BigDoor_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "hangar" texture_diffuse = "starfleet_tmp_ESD_Hangar_diffuse.dds" texture_normal = "starfleet_tmp_ESD_Hangar_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }
+
+        meshsettings = { name = "hull1" texture_diffuse = "starfleet_tmp_starbase_01_diffuse.dds" texture_normal = "starfleet_tmp_starbase_01_normal.dds" texture_specular = "starfleet_tmp_starbase_01_specular.dds" shader = "PdxMeshShip" }
+		meshsettings = { name = "hull2" texture_diffuse = "starfleet_tmp_starbase_02_diffuse.dds" texture_normal = "starfleet_tmp_starbase_02_normal.dds" texture_specular = "starfleet_tmp_starbase_02_specular.dds" shader = "PdxMeshShip" }
+		meshsettings = { name = "hull3" texture_diffuse = "starfleet_tmp_starbase_03_diffuse.dds" texture_normal = "starfleet_tmp_starbase_03_normal.dds" texture_specular = "starfleet_tmp_starbase_03_specular.dds" shader = "PdxMeshShip" }
+		
+        meshsettings = { name = "hull4" texture_diffuse = "starfleet_tmp_ESD_h4_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "starfleet_tmp_ESD_h4_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "hull5" texture_diffuse = "starfleet_tmp_ESD_h5_diffuse.dds" texture_normal = "starfleet_tmp_ESD_h5_normal.dds" texture_specular = "starfleet_tmp_ESD_h5_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "hull6" texture_diffuse = "starfleet_tmp_ESD_h6_diffuse.dds" texture_normal = "starfleet_tmp_ESD_h6_normal.dds" texture_specular = "starfleet_tmp_ESD_h6_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "hull7" texture_diffuse = "starfleet_tmp_ESD_h7_diffuse.dds" texture_normal = "starfleet_tmp_ESD_h7_normal.dds" texture_specular = "starfleet_tmp_ESD_h7_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "lights" texture_diffuse = "starfleet_tmp_ESD-Lights1_diffuse.dds" texture_normal = "starfleet_tmp_ESD-Lights1_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "top" texture_diffuse = "starfleet_tmp_starbase_saucer_01_diffuse.dds" texture_normal = "starfleet_tmp_starbase_saucer_01_normal.dds" texture_specular = "starfleet_tmp_starbase_saucer_01_specular.dds" shader = "PdxMeshShip" }
+    }
+}

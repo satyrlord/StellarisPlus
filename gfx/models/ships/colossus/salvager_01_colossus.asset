@@ -1,0 +1,79 @@
+entity = {
+	name = "salvager_01_colossus_entity"
+	pdxmesh = "molluscoid_01_colossus_frame_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	state = { name = "moving" animation = "idle" }
+	state = { name = "working" animation = "idle" }
+	state = { name = "death" animation = "closed_death" looping = no 
+		event = { time = 13.46 node = "frame_ship" particle = "dreadnought_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 100
+				"moving" = 100
+				"death" = 0
+				"working" = 0
+			}
+		}
+	}
+	state = { name = "death" animation = "opened_death" looping = no 
+		event = { time = 9.8 node = "ship_explosion" particle = "dreadnought_explosion_particle" sound = { soundeffect = ship_destroyed } }
+		chance = {
+			if_current_state = {
+				"idle" = 0
+				"moving" = 0
+				"death" = 0
+				"working" = 100
+			}
+		}
+	}
+	
+	game_data = {
+		size = 24
+	}
+}
+
+entity = {
+	name = "salvager_01_colossus_ship_entity"
+	pdxmesh = "salvager_01_colossus_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5
+		start_event = { sound = { soundeffect = "mammalian_colossus_idle" } }
+		
+		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_04" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 0 node = "small_engine_01" particle = "generic_06_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "small_engine_02" particle = "generic_06_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "small_engine_03" particle = "generic_06_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "small_engine_04" particle = "generic_06_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "large_engine_01" particle = "generic_1_5_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "large_engine_02" particle = "generic_1_5_exhaust_line_idle" trigger_once = yes keep_particle = yes }
+	}
+	state = { name = "moving" state_time = 5
+		event = { sound = { soundeffect = "moving_out_colossus" } }
+		
+		event = { time = 0 node = "light_locator_01" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_03" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_04" particle = "ship_light_blue_effect" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 0 node = "small_engine_01" particle = "generic_075_exhaust_line_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "small_engine_02" particle = "generic_075_exhaust_line_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "small_engine_03" particle = "generic_075_exhaust_line_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "small_engine_04" particle = "generic_075_exhaust_line_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "large_engine_01" particle = "generic_2_5_exhaust_line_moving" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "large_engine_02" particle = "generic_2_5_exhaust_line_moving" trigger_once = yes keep_particle = yes }
+	}
+	state = { name = "death" state_time = 13.3 looping = no 
+		event = { time = 0.0 node = "explosion_locator_01" particle = "ship_explosion_particle" sound = { soundeffect = "ship_destroyed" } keep_particle = yes trigger_once = yes }
+		event = { time = 3.0 node = "explosion_locator_02" particle = "juggernaut_hull_explosion_effect" sound = { soundeffect = "ship_destroyed" } keep_particle = yes trigger_once = yes }
+		event = { time = 4.0 node = "explosion_locator_03" particle = "ship_explosion_particle" sound = { soundeffect = "ship_destroyed" } keep_particle = yes trigger_once = yes }
+		event = { time = 6.0 node = "explosion_locator_04" particle = "juggernaut_hull_explosion_effect" sound = { soundeffect = "ship_destroyed" } keep_particle = yes trigger_once = yes }
+		event = { time = 8.0 node = "explosion_locator_05" particle = "ship_explosion_particle" sound = { soundeffect = "ship_destroyed" } keep_particle = yes trigger_once = yes }
+	}
+}

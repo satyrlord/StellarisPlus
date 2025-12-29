@@ -1,0 +1,14 @@
+objectTypes = {
+	pdxmesh = {
+		name = "klingon_science_mesh"
+		file = "gfx/models/ships/klingon/science/klingon_science.mesh"
+		scale = 1.0
+
+        meshsettings = { name = "bussard_orange" texture_diffuse = "bussard_glow_orange.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "deflector_red" texture_diffuse = "deflector_01_red_diffuse.dds" texture_normal = "Deflector_TMP_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "glow_impulse" texture_diffuse = "discovery_red_engine_2_diffuse.dds" texture_normal = "discovery_engine_2_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "glow_red" texture_diffuse = "glow_red_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "hull_01" texture_diffuse = "klingon_maveq_hull_01_diffuse.dds" texture_normal = "klingon_maveq_hull_01_normal.dds" texture_specular = "klingon_maveq_hull_01_specular.dds" shader = "PdxMeshShip" }
+
+	}
+}

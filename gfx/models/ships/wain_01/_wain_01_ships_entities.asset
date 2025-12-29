@@ -2671,7 +2671,7 @@ entity = {
 		event = { time = 17.5 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
 
-	state = { name = "construction" looping = yes }
+	state = { name = "construction" animation = "idle" looping = yes }
 	
 	scale = 1.0
 	attach = { part1 = "wain_01_starbase_citadel_section_entity" }
@@ -2752,7 +2752,7 @@ entity = {
 		event = { time = 17.5 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
 
-	state = { name = "construction" looping = yes }
+	state = { name = "construction" animation = "idle" looping = yes }
 	
 	scale = 1.0
 	attach = { part1 = "wain_01_starbase_citadel_section_entity" }
@@ -2835,7 +2835,7 @@ entity = {
 		event = { time = 17.5 node = "part2" particle = "small_player_ship_explosion_particle" sound = { soundeffect = ship_destroyed } }
 	}
 
-	state = { name = "construction" looping = yes }
+	state = { name = "construction" animation = "idle" looping = yes }
 	
 	scale = 1.0
 	attach = { part1 = "wain_01_starbase_citadel_section_entity" }

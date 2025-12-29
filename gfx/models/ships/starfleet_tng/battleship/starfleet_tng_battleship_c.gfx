@@ -1,0 +1,16 @@
+################
+# Battleship
+################
+objectTypes = {
+	pdxmesh = {
+		name = "starfleet_tng_battleship_c_mesh"
+		file = "gfx/models/ships/starfleet_tng/battleship/starfleet_tng_battleship_c.mesh"
+		scale = 1.1
+
+        meshsettings = { name = "starfleet_horizon_engineering_bottom" texture_diffuse = "starfleet_horizon_engineering_bottom_diffuse.dds" texture_normal = "starfleet_horizon_engineering_bottom_normal.dds" texture_specular = "starfleet_horizon_engineering_bottom_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_horizon_engineering_top" texture_diffuse = "starfleet_horizon_engineering_top_diffuse.dds" texture_normal = "starfleet_horizon_engineering_top_normal.dds" texture_specular = "starfleet_horizon_engineering_top_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_horizon_phasers" texture_diffuse = "starfleet_horizon_phasers_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_horizon_saucer_bottom" texture_diffuse = "starfleet_horizon_saucer_bottom_diffuse.dds" texture_normal = "starfleet_horizon_saucer_bottom_normal.dds" texture_specular = "starfleet_horizon_saucer_bottom_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_horizon_saucer_top" texture_diffuse = "starfleet_horizon_saucer_top_diffuse.dds" texture_normal = "starfleet_horizon_saucer_top_normal.dds" texture_specular = "starfleet_horizon_saucer_top_specular.dds" shader = "PdxMeshShip" }
+	}
+}

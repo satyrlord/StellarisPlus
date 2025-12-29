@@ -1,0 +1,9 @@
+objectTypes = {
+    pdxmesh = {
+        name = "romulan_colony_ship_mesh"
+        file = "gfx/models/ships/romulan/colony_ship/romulan_colony_ship.mesh"
+        scale = 1
+
+        meshsettings = { name = "romulan_colony_ship" texture_diffuse = "romulan_colony_ship_diffuse.dds" texture_normal = "romulan_colony_ship_normal.dds" texture_specular = "romulan_colony_ship_specular.dds" shader = "PdxMeshShip" }
+    }
+}

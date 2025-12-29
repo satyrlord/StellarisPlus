@@ -1,0 +1,14 @@
+objectTypes = {
+	pdxmesh = {
+		name = "terran_nx_science_mesh"
+		file = "gfx/models/ships/terran_nx/science/terran_nx_science.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "bridge" texture_diffuse = "discovery_window_diffuse.dds" texture_normal = "discovery_window_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "bussard_blue" texture_diffuse = "bussard_glow_navy_blue.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "glow_white" texture_diffuse = "glow_white_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "impulse_red" texture_diffuse = "discovery_red_engine_2_diffuse.dds" texture_normal = "discovery_engine_2_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "hull_grey" texture_diffuse = "hull_tos_dark.dds" texture_normal = "hull_tos_normal.dds" texture_specular = "hull_tos_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "starfleet_freedom" texture_diffuse = "terran_freedom_01_diffuse.dds" texture_normal = "terran_freedom_01_normal.dds" texture_specular = "terran_freedom_01_specular.dds" shader = "PdxMeshShip" }
+	}
+}

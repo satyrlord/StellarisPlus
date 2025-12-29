@@ -1,0 +1,44 @@
+objectTypes = {
+	pdxmesh = {
+		name = "biomass_01_warpgate_mesh"
+		file = "gfx/models/ships/megastructures/gateway/biomass_01_warpgate.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "polySurfaceShape1"
+			texture_normal = "biomass_01_station_small_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.001"
+			texture_normal = "biomass_01_station_small_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.002"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.003"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.004"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.005"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
+

@@ -1,0 +1,22 @@
+################
+# Battleship
+################
+objectTypes = {
+	pdxmesh = {
+		name = "klingon_battleship_b_mesh"
+		file = "gfx/models/ships/klingon/battleship/klingon_battleship_b.mesh"
+		scale = 1.0
+        
+        meshsettings = { name = "bussard_green" texture_diffuse = "bussard_glow_green.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "bussard_red" texture_diffuse = "bussard_glow.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "impulse_red" texture_diffuse = "discovery_red_engine_2_diffuse.dds" texture_normal = "discovery_engine_2_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        
+        meshsettings = { name = "klingon_horcha" index = 0 texture_diffuse = "klingon_neghvar_01_diffuse.dds" texture_normal = "klingon_neghvar_01_normal.dds" texture_specular = "klingon_neghvar_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "klingon_horcha" index = 1 texture_diffuse = "klingon_neghvar_02_diffuse.dds" texture_normal = "klingon_neghvar_02_normal.dds" texture_specular = "klingon_neghvar_02_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "klingon_horcha" index = 2 texture_diffuse = "klingon_neghvar_decals_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "AlphaBlendNoDepth" }
+        
+        meshsettings = { name = "klingon_horcha" index = 3 texture_diffuse = "klingon_vorcha_01_diffuse.dds" texture_normal = "klingon_vorcha_01_normal.dds" texture_specular = "klingon_vorcha_01_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "klingon_horcha" index = 4 texture_diffuse = "klingon_vorcha_02_diffuse.dds" texture_normal = "klingon_vorcha_02_normal.dds" texture_specular = "klingon_vorcha_02_specular.dds" shader = "PdxMeshShip" }   
+        meshsettings = { name = "klingon_horcha" index = 5 texture_diffuse = "klingon_vorcha_decals_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "AlphaBlendNoDepth" }
+	}
+}

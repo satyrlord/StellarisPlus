@@ -1,0 +1,10 @@
+objectTypes = {
+	pdxmesh = {
+		name = "romulan_corvette_mesh"
+		file = "gfx/models/ships/romulan/corvette/romulan_corvette.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "romulan_lanora" index = 0 texture_diffuse = "romulan_lanora_diffuse.dds" texture_normal = "romulan_lanora_normal.dds" texture_specular = "romulan_lanora_specular.dds" shader = "PdxMeshShip" }
+		meshsettings = { name = "romulan_lanora" index = 1 texture_diffuse = "romulan_lanora_diffuse.dds" texture_normal = "romulan_lanora_normal.dds" texture_specular = "romulan_lanora_specular.dds" shader = "PdxMeshShip" }
+	}
+}

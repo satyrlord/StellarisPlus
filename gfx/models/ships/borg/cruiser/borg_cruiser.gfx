@@ -1,0 +1,19 @@
+objectTypes = {
+	pdxmesh = {
+		name = "borg_cruiser_mesh"
+		file = "gfx/models/ships/borg/cruiser/borg_sphere.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "hull_borg" texture_diffuse = "borg_hull_01_diffuse.dds" texture_normal = "borg_hull_01_normal.dds" texture_specular = "borg_hull_01_specular.dds" shader = "PdxMeshShip" }
+	}
+    
+    pdxmesh = {
+		name = "borg_cruiser_mesh_b"
+		file = "gfx/models/ships/borg/cruiser/borg_diamond.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "hull_borg" texture_diffuse = "borg_hull_01_diffuse.dds" texture_normal = "borg_hull_01_normal.dds" texture_specular = "borg_hull_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "hull_grey" texture_diffuse = "hull_type_3_dark_grey_diffuse.dds" texture_normal = "hull_type_3_normal.dds" texture_specular = "hull_type_3_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "glow_purple" texture_diffuse = "glow_purple_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }
+	}
+}

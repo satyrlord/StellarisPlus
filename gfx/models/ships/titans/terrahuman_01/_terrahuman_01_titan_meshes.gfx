@@ -1,0 +1,21 @@
+objectTypes = {	
+	pdxmesh = {
+		name = "terrahuman_01_titan_bow_mesh"
+		file = "gfx/models/ships/titans/terrahuman_01/terrahuman_01_titan_bow.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_titan_mid_mesh"
+		file = "gfx/models/ships/titans/terrahuman_01/terrahuman_01_titan_mid.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_titan_stern_mesh"
+		file = "gfx/models/ships/titans/terrahuman_01/terrahuman_01_titan_stern.mesh"
+		scale = 1.0
+	}
+}
+
+

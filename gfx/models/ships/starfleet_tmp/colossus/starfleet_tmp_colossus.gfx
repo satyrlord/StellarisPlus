@@ -1,0 +1,32 @@
+################
+# Battleship
+################
+objectTypes = {
+	pdxmesh = {
+		name = "starfleet_tmp_colossus_mesh"
+		file = "gfx/models/ships/starfleet_tmp/colossus/starfleet_tmp_colossus.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "deflector_blue" texture_diffuse = "Deflector_TMP.dds" texture_normal = "Deflector_TMP_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "glow_blue" texture_diffuse = "glow_blue_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "glow_grid_blue" texture_diffuse = "glow_warp_grid_mid_blue.dds" texture_normal = "glow_warp_grid_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "impulse_red" texture_diffuse = "discovery_red_engine_2_diffuse.dds" texture_normal = "discovery_engine_2_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        
+        meshsettings = { name = "solid_red" texture_diffuse = "solid_maroon.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        
+       
+        meshsettings = { name = "starfleet_excelsior_01" texture_diffuse = "starfleet_excelsior_hull_01_diffuse.dds" texture_normal = "starfleet_excelsior_hull_01_normal.dds" texture_specular = "starfleet_excelsior_hull_01_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "starfleet_excelsior_02" texture_diffuse = "starfleet_excelsior_hull_02_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "starfleet_excelsior_hull_02_specular.dds" shader = "PdxMeshShip" }
+        
+        
+        
+        
+        
+        meshsettings = { name = "starfleet_miranda_02" texture_diffuse = "starfleet_miranda_02_diffuse.dds" texture_normal = "starfleet_miranda_02_normal.dds" texture_specular = "starfleet_miranda_02_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "starfleet_proxima_02" texture_diffuse = "starfleet_proxima_02_diffuse.dds" texture_normal = "starfleet_proxima_02_normal.dds" texture_specular = "starfleet_proxima_02_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "starfleet_proxima_05" texture_diffuse = "starfleet_proxima_05_diffuse.dds" texture_normal = "starfleet_proxima_05_normal.dds" texture_specular = "starfleet_proxima_05_specular.dds" shader = "PdxMeshShip" }
+        
+        meshsettings = { name = "starfleet_logo" texture_diffuse = "starfleet_logo_1_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "AlphaBlendNoDepth" }
+        meshsettings = { name = "windows" texture_diffuse = "windows_starfleet_01.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshAlphaAdditiveAnimateUV" }
+	}
+}

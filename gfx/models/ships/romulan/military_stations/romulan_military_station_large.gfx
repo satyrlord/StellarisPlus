@@ -1,0 +1,13 @@
+objectTypes = {
+    pdxmesh = {
+        name = "romulan_military_station_large_mesh"
+        file = "gfx/models/ships/romulan/military_stations/romulan_military_station_large.mesh"
+        scale = 1
+
+        meshsettings = { name = "machinery_green" texture_diffuse = "machinery_grey_diffuse.dds" texture_normal = "machinery_normal.dds" texture_specular = "machinery_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "romulan_defence_01" texture_diffuse = "romulan_defence_01_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "romulan_defence_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "romulan_defence_02" texture_diffuse = "romulan_defence_02_diffuse.dds" texture_normal = "romulan_defence_02_normal.dds" texture_specular = "romulan_defence_02_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "romulan_defence_03" texture_diffuse = "romulan_defence_03_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "romulan_defence_03_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "windows" texture_diffuse = "rom_windows_01_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshAlphaAdditiveAnimateUV" }
+    }
+}

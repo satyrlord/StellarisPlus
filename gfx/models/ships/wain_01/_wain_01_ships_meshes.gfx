@@ -502,7 +502,7 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "wain_01_battleship_bow_L1S4_mesh"
-		file = "gfx/models/ships/wain_01/wain_01_empty.mesh"
+		file = "gfx/models/ships/wain_01/wain_01_battleship_bow_L2.mesh"
 		scale = 1.0
 		meshsettings = {
 			shader = "PdxMeshShip"
@@ -511,7 +511,7 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "wain_01_battleship_bow_M2S4_mesh"
-		file = "gfx/models/ships/wain_01/wain_01_empty.mesh"
+		file = "gfx/models/ships/wain_01/wain_01_battleship_bow_M1S2SHB.mesh"
 		scale = 1.0
 		meshsettings = {
 			shader = "PdxMeshShip"
@@ -520,7 +520,7 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "wain_01_battleship_bow_M3S2_mesh"
-		file = "gfx/models/ships/wain_01/wain_01_empty.mesh"
+		file = "gfx/models/ships/wain_01/wain_01_battleship_bow_M1S2SHB.mesh"
 		scale = 1.0
 		meshsettings = {
 			shader = "PdxMeshShip"
@@ -572,7 +572,7 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "wain_01_battleship_mid_L2S4_mesh"
-		file = "gfx/models/ships/wain_01/wain_01_empty.mesh"
+		file = "gfx/models/ships/wain_01/wain_01_battleship_mid_L2M2.mesh"
 		scale = 1.0
 		meshsettings = {
 			shader = "PdxMeshShip"
@@ -581,7 +581,7 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "wain_01_battleship_mid_L1M4_mesh"
-		file = "gfx/models/ships/wain_01/wain_01_empty.mesh"
+		file = "gfx/models/ships/wain_01/wain_01_battleship_mid_L2M2.mesh"
 		scale = 1.0
 		meshsettings = {
 			shader = "PdxMeshShip"
@@ -614,7 +614,7 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "wain_01_battleship_stern_M1S2_mesh"
-		file = "gfx/models/ships/wain_01/wain_01_empty.mesh"
+		file = "gfx/models/ships/wain_01/wain_01_battleship_stern_M2.mesh"
 		scale = 1.0
 
 		meshsettings = {
@@ -624,7 +624,7 @@ objectTypes = {
 	
 	pdxmesh = {
 		name = "wain_01_battleship_stern_S4_mesh"
-		file = "gfx/models/ships/wain_01/wain_01_empty.mesh"
+		file = "gfx/models/ships/wain_01/wain_01_battleship_stern_M2.mesh"
 		scale = 1.0
 
 		meshsettings = {
@@ -941,15 +941,6 @@ objectTypes = {
 	pdxmesh = {
 		name = "wain_01_transport_parts_mesh"
 		file = "gfx/models/ships/wain_01/wain_01_transport_parts.mesh"
-		scale = 1.0
-		meshsettings = {
-			shader = "PdxMeshShip"
-		}
-	}
-	
-	pdxmesh = {
-		name = "wain_01_empty_mesh"
-		file = "gfx/models/ships/wain_01/wain_01_empty.mesh"
 		scale = 1.0
 		meshsettings = {
 			shader = "PdxMeshShip"

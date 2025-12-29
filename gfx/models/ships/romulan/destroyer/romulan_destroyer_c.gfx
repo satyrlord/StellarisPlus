@@ -1,0 +1,9 @@
+objectTypes = {
+	pdxmesh = {
+		name = "romulan_destroyer_c_mesh"
+		file = "gfx/models/ships/romulan/destroyer/romulan_destroyer_c.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "romulan_tkela" index = 0 texture_diffuse = "romulan_tkela_diffuse.dds" texture_normal = "romulan_tkela_normal.dds" texture_specular = "romulan_tkela_specular.dds" shader = "PdxMeshShip" }
+	}
+}

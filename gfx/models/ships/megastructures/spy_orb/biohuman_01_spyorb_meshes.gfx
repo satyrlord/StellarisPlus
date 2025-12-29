@@ -1,0 +1,150 @@
+objectTypes = {
+	pdxmesh = {
+		name = "biomass_01_spyorb_frame_mesh"
+		file = "gfx/models/ships/molluscoid_01/molluscoid_01_destroyer_frame.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"			type = "biomass_01_spyorb_frame_idle_animation" }
+	}
+	
+	pdxmesh = {
+		name = "biomass_01_spy1_mesh"
+		file = "gfx/models/ships/megastructures/spy_orb/biomass_01_spy1.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "polySurface2Shape"
+			index = 0
+			texture_normal = "biomass_01_warship_small_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface15Shape"
+			texture_normal = "biomass_01_queen_normal.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "biomass_01_spy2_mesh"
+		file = "gfx/models/ships/megastructures/spy_orb/biomass_01_spy2.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "polySurface2Shape"
+			index = 0
+			texture_normal = "biomass_01_warship_small_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface15Shape"
+			texture_normal = "biomass_01_queen_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "large_swarmShape"
+			texture_normal = "biomass_01_warship_large_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "large_swarmShape.001"
+			texture_normal = "biomass_01_warship_large_normal.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "biomass_01_spy3_mesh"
+		file = "gfx/models/ships/megastructures/spy_orb/biomass_01_spy3.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "polySurface2Shape"
+			index = 0
+			texture_normal = "biomass_01_warship_small_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface15Shape"
+			texture_normal = "biomass_01_queen_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "large_swarmShape"
+			texture_normal = "biomass_01_warship_large_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "large_swarmShape.001"
+			texture_normal = "biomass_01_warship_large_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "biomass_01_spy4_mesh"
+		file = "gfx/models/ships/megastructures/spy_orb/biomass_01_spy4.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "polySurface2Shape"
+			index = 0
+			texture_normal = "biomass_01_warship_small_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface15Shape"
+			texture_normal = "biomass_01_queen_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "large_swarmShape"
+			texture_normal = "biomass_01_warship_large_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "large_swarmShape.001"
+			texture_normal = "biomass_01_warship_large_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "BodyShape"
+			texture_diffuse = "stellaritebiomass_diffuse.dds"
+			texture_specular = "stellaritebiomass_specular.dds"
+			texture_normal = "stellaritebiomass_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "MembraneShape"
+			texture_diffuse = "stellaritebiomass_membrane_diffuse.dds"
+			texture_specular = "stellaritebiomass_membrane_specular.dds"
+			texture_normal = "stellaritebiomass_membrane_normal.dds"
+			shader = "PdxMeshExtraDimensionalShip"
+		}
+	}
+}
+

@@ -1,0 +1,6 @@
+# This species class should only be used for its ship set
+BORG = {
+	# playable = { has_nemesis = yes }
+	# randomized = { always = no }
+	graphical_culture = borg
+}

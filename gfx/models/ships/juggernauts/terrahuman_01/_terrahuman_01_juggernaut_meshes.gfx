@@ -1,0 +1,22 @@
+objectTypes = {	
+	pdxmesh = {
+		name = "terrahuman_01_juggernaut_mesh"
+		file = "gfx/models/ships/juggernauts/terrahuman_01/terrahuman_01_juggernaut.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "body1Shape"
+			index = 0
+			texture_diffuse = "mammalian_01_strategic_coordination_center_diffuse.dds"
+			texture_normal = "mammalian_01_strategic_coordination_center_normal.dds"
+			texture_specular = "mammalian_01_strategic_coordination_center_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_juggernaut_core2_section_mesh"
+		file = "gfx/models/ships/juggernauts/terrahuman_01/terrahuman_01_juggernaut_core2_section.mesh"
+		scale = 1.0
+	}
+}

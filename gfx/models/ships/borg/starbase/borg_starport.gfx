@@ -1,0 +1,14 @@
+objectTypes = {
+	pdxmesh = {
+		name = "borg_starport_mesh"
+		file = "gfx/models/ships/borg/starbase/borg_starport.mesh"
+		scale = 1.0
+        meshsettings = {
+            name = "borg_starport"
+            texture_diffuse = "borg_hull_01_diffuse.dds"
+            texture_normal = "borg_hull_01_normal.dds"
+            texture_specular = "borg_hull_01_specular.dds"
+            shader = "PdxMeshShip"
+        }
+	}
+}

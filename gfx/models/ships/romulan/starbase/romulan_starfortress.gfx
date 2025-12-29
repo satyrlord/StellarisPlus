@@ -1,0 +1,10 @@
+objectTypes = {
+    pdxmesh = {
+        name = "romulan_starfortress_mesh"
+        file = "gfx/models/ships/romulan/starbase/romulan_starfortress.mesh"
+        scale = 1
+		
+		# meshsettings = { name = "romulan_starbase" index = 0 texture_diffuse = "romulan_starbase_01_diffuse.dds" texture_normal = "romulan_starbase_01_normal.dds" texture_specular = "romulan_starbase_01_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "romulan_starbase" index = 0 texture_diffuse = "romulan_starbase_02_diffuse.dds" texture_normal = "romulan_starbase_02_normal.dds" texture_specular = "romulan_starbase_02_specular.dds" shader = "PdxMeshShip" }
+    }
+}

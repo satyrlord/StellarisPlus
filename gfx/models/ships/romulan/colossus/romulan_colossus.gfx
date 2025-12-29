@@ -1,0 +1,10 @@
+objectTypes = {
+	pdxmesh = {
+		name = "romulan_colossus_mesh"
+		file = "gfx/models/ships/romulan/colossus/romulan_colossus.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "reman_scimitar" index = 0 texture_diffuse = "reman_scimitar_01_diffuse.dds" texture_normal = "reman_scimitar_01_normal.dds" texture_specular = "reman_scimitar_01_specular.dds" shader = "PdxMeshShip" }
+		meshsettings = { name = "reman_scimitar" index = 1 texture_diffuse = "reman_scimitar_02_diffuse.dds" texture_normal = "reman_scimitar_02_normal.dds" texture_specular = "reman_scimitar_02_specular.dds" shader = "PdxMeshShip" }
+	}
+}

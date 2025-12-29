@@ -1,0 +1,106 @@
+objectTypes = {
+	pdxmesh = {
+		name = "empira_01_small_turret_pointdefense_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_small_turret_pointdefense.mesh"
+		scale = 0.7
+	}
+	pdxmesh = {
+		name = "empira_01_small_turret_projectile_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_small_turret_projectile.mesh"
+		scale = 0.7
+	}
+	pdxmesh = {
+		name = "empira_01_small_turret_laser_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_small_turret_laser.mesh"
+		scale = 0.7
+	}
+	
+	pdxmesh = {
+		name = "empira_01_medium_turret_projectile_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_medium_turret_projectile.mesh"
+		scale = 0.7
+	}
+	pdxmesh = {
+		name = "empira_01_medium_turret_laser_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_medium_turret_laser.mesh"
+		scale = 0.7
+	}
+	
+	pdxmesh = {
+		name = "empira_01_medium_turret_missile_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_medium_turret_missile.mesh"
+		scale = 0.7
+	}
+	
+	pdxmesh = {
+		name = "empira_01_large_turret_projectile_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_large_turret_projectile.mesh"
+		scale = 0.6
+	}
+	
+	pdxmesh = {
+		name = "empira_01_large_turret_laser_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_large_turret_laser.mesh"
+		scale = 0.7
+	}
+	
+	pdxmesh = {
+		name = "empira_01_corvette_S3_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_corvette_s3.mesh"
+		scale = 1.0
+	}
+	pdxmesh = {
+		name = "empira_01_corvette_M1S1_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_corvette_m1s1.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "empira_01_destroyer_bow_S3_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_destroyer_bow_s3.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "empira_01_destroyer_bow_M1S2_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_destroyer_bow_m1s2.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "empira_01_destroyer_bow_L1_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_destroyer_bow_l1.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "empira_01_destroyer_stern_M1_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_destroyer_stern_M1.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "empira_01_destroyer_stern_S2_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_destroyer_stern_S2.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "empira_01_cruiser_bow_L1_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_cruiser_bow_l1.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "empira_01_cruiser_bow_M1S2_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_cruiser_bow_m1s2.mesh"
+		scale = 1.0
+	}
+	
+	pdxmesh = {
+		name = "empira_01_cruiser_bow_M2_mesh"
+		file = "gfx/models/ships/empira_01/empira_01_cruiser_bow_m2.mesh"
+		scale = 1.0
+	}
+}
+

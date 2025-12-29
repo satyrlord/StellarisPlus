@@ -1,0 +1,491 @@
+objectTypes = {
+	### Turrets
+	pdxmesh = {
+		name = "terrahuman_01_turret_projectile_large_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_large_turret.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "terrahuman_01_turret_projectile_medium_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_medium_turret.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "terrahuman_01_turret_projectile_small_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_small_turret.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_turret_point_defence_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_point_defence.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_turret_laser_large_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_large_laser_turret.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "terrahuman_01_turret_laser_medium_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_medium_laser_turret.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	
+	pdxmesh = {
+		name = "terrahuman_01_turret_laser_small_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_small_laser_turret.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_turret_missile_medium_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_medium_missile_turret.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_turret_xl_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_xl_turret.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	### Corvette
+	pdxmesh = {
+		name = "terrahuman_01_corvette_M1S1_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_corvette_m1s1.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_corvette_s3_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_corvette_s3.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_corvette_s1_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_corvette_s1.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_crisis_corvette_M1S1_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_crisis_corvette_m1s1.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_crisis_corvette_s3_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_crisis_corvette_s3.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	## Destroyer
+	pdxmesh = {
+		name = "terrahuman_01_destroyer_bow_L1_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_destroyer_bow_L1.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_destroyer_bow_m1s2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_destroyer_bow_m1s2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_destroyer_bow_s3_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_destroyer_bow_s3.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_destroyer_stern_m1_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_destroyer_stern_m1.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_destroyer_stern_s2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_destroyer_stern_s2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_crisis_destroyer_m2s2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_crisis_destroyer_m2s2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_crisis_destroyer_l1s2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_crisis_destroyer_l1s2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	## Cruiser
+	pdxmesh = {
+		name = "terrahuman_01_cruiser_bow_L1_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_cruiser_bow_L1.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_cruiser_bow_M1S2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_cruiser_bow_m1s2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_cruiser_bow_M2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_cruiser_bow_m2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_cruiser_mid_S2HB_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_cruiser_mid_S2HB.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_cruiser_mid_L1M1_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_cruiser_mid_L1M1.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_cruiser_mid_M3_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_cruiser_mid_M3.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_cruiser_mid_M2S2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_cruiser_mid_M2S2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_cruiser_stern_M1_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_cruiser_stern_m1.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_cruiser_stern_S2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_cruiser_stern_S2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_crisis_cruiser_L1M2S2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_crisis_cruiser_l1m2s2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	## Battleship
+	pdxmesh = {
+		name = "terrahuman_01_battleship_bow_L1M1S2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_bow_L1M1S2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_bow_L1S4_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_bow_L1S4.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_bow_L2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_bow_L2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_bow_M1S2SHB_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_bow_M1S2HB.mesh"
+		scale = 1.0
+		meshsettings = {
+			name = "body1Shape"
+			index = 0
+			texture_diffuse = "mammalian_01_strategic_coordination_center_diffuse.dds"
+			texture_normal = "mammalian_01_strategic_coordination_center_normal.dds"
+			texture_specular = "mammalian_01_strategic_coordination_center_specular.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_bow_M2S4_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_bow_M2S4.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_bow_M3S2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_bow_M3S2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_bow_XL1_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_bow_XL1.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_mid_L2S4_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_mid_L2S4.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_mid_L1M4_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_mid_L1M4.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_mid_L2M2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_mid_L2M2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_mid_L3_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_mid_L3.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_mid_M4SHB_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_mid_M4HB.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_mid_S4LHB_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_mid_S4HB.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_stern_L1_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_stern_L1.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_stern_M1S2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_stern_M1S2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_stern_M2_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_stern_M2.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_battleship_stern_S4_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_battleship_stern_S4.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	## Smallcraft
+	
+	pdxmesh = {
+		name = "terrahuman_01_bomber_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_bomber.mesh"
+		scale = 1.0
+		meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	## Civilian Ships
+	
+	pdxmesh = {
+		name = "terrahuman_01_construction_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_construction_ship.mesh"
+		scale = 1.0
+
+		animation = { id = "idle"				type = "humanoid_01_construction_ship_idle_animation" }
+		animation = { id = "working_looping"	type = "humanoid_01_construction_ship_working_looping_animation" }
+		animation = { id = "working"			type = "humanoid_01_construction_ship_working_animation" }
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_colony_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_colony_ship.mesh"
+		scale = 1.0
+		
+		#animation = { id = "idle"			type = "ark_ship_idle_animation" }
+		#animation = { id = "death"			type = "ark_ship_death_animation" }
+		
+		meshsettings = {
+			name = "mammalian_01_citadel_meshShape.002"
+			texture_diffuse = "mammalian_01_stations_diffuse"
+			texture_specular = "mammalian_01_stations_specular"
+			texture_normal = "mammalian_01_stations_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+	}
+	
+	pdxmesh = {
+		name = "terrahuman_01_science_mesh"
+		file = "gfx/models/ships/terrahuman_01/terrahuman_01_science_ship.mesh"
+		scale = 1.0
+		
+	}
+}

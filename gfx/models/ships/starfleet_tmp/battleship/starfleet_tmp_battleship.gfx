@@ -1,0 +1,16 @@
+################
+# Battleship
+################
+objectTypes = {
+	pdxmesh = {
+		name = "starfleet_tmp_battleship_mesh"
+		file = "gfx/models/ships/starfleet_tmp/battleship/starfleet_tmp_battleship.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "starfleet_constitution_tmp" texture_diffuse = "starfleet_constitution_tmp_diffuse.dds" texture_normal = "starfleet_constitution_tmp_normal.dds" texture_specular = "starfleet_constitution_tmp_specular.dds" shader = "PdxMeshShip" }
+		meshsettings = { name = "starfleet_constitution_tmp_02" texture_diffuse = "starfleet_constitution_tmp_diffuse.dds" texture_normal = "starfleet_constitution_tmp_normal.dds" texture_specular = "starfleet_constitution_tmp_specular.dds" shader = "AlphaBlendNoDepth" }
+		meshsettings = { name = "starfleet_constitution_tmp_03" texture_diffuse = "solid_invisible.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "AlphaBlendNoDepth" }
+		meshsettings = { name = "starfleet_constitution_tmp_decals" texture_diffuse = "starfleet_constitution_tmp_decals_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "AlphaBlendNoDepth" }
+		meshsettings = { name = "starfleet_constitution_tmp_windows" texture_diffuse = "starfleet_constitution_tmp_windows_diffuse.dds" texture_normal = "starfleet_constitution_tmp_windows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshAlphaAdditiveAnimateUV" }
+	}
+}

@@ -1,0 +1,22 @@
+objectTypes = {
+    pdxmesh = {
+        name = "starfleet_nx_starfortress_mesh"
+        file = "gfx/models/ships/starfleet_nx/starbase/starfleet_nx_starfortress.mesh"
+        scale = 1
+		
+		meshsettings = {
+            name = "hangar"
+            index = 0
+            texture_diffuse = "ESD_Hangar_diffuse.dds"
+            texture_normal = "ESD_Hangar_normal.dds"
+            texture_specular = "nospec.dds"
+            shader = "PdxMeshShip"
+        }
+
+        meshsettings = { name = "hull1" texture_diffuse = "starfleet_starbase_01_diffuse.dds" texture_normal = "starfleet_starbase_01_normal.dds" texture_specular = "starfleet_starbase_01_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "hull2" texture_diffuse = "starfleet_starbase_02_diffuse.dds" texture_normal = "starfleet_starbase_02_normal.dds" texture_specular = "starfleet_starbase_02_specular.dds" shader = "PdxMeshShip" }
+		meshsettings = { name = "hull3" texture_diffuse = "starfleet_starbase_03_diffuse.dds" texture_normal = "starfleet_starbase_03_normal.dds" texture_specular = "starfleet_starbase_03_specular.dds" shader = "PdxMeshShip" }
+
+        meshsettings = { name = "top" texture_diffuse = "starfleet_starbase_saucer_01_diffuse.dds" texture_normal = "starfleet_starbase_saucer_01_normal.dds" texture_specular = "starfleet_starbase_saucer_01_specular.dds" shader = "PdxMeshShip" }
+    }
+}

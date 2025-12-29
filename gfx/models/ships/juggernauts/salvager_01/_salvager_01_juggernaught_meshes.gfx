@@ -1,0 +1,28 @@
+objectTypes = {
+
+	pdxmesh = {
+		name = "salvager_01_juggernaut_mesh"
+		file = "gfx/models/ships/juggernauts/salvager_01/salvager_01_juggernaught.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "pirate_destroyer_LPShape"
+			shader = "PdxMeshShip"
+			texture_diffuse = "salvager_01_destroyer_diffuse.dds"
+		}
+		
+		meshsettings = {
+			name = "pirate_destroyer_LPShape.001"
+			shader = "PdxMeshShip"
+			texture_diffuse = "salvager_01_destroyer_diffuse.dds"
+		}
+		
+		meshsettings = {
+			shader = "PdxMeshShip"
+			name = "pirate_corvette_LPShape"
+			texture_diffuse = "salvager_01_corvette_01_diffuse.dds"
+			texture_specular = "salvager_01_corvette_01_spec.dds"
+		}
+	}
+}
+

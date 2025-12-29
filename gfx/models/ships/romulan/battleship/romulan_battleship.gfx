@@ -1,0 +1,15 @@
+################
+# Battleship
+################
+objectTypes = {
+	pdxmesh = {
+		name = "romulan_battleship_mesh"
+		file = "gfx/models/ships/romulan/battleship/romulan_battleship.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "romulan_mogai" index = 0 texture_diffuse = "romulan_mogai_01_diffuse.dds" texture_normal = "romulan_mogai_01_normal.dds" texture_specular = "romulan_mogai_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "romulan_mogai" index = 1 texture_diffuse = "romulan_mogai_02_diffuse.dds" texture_normal = "romulan_mogai_02_normal.dds" texture_specular = "romulan_mogai_02_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "romulan_mogai" index = 2 texture_diffuse = "romulan_mogai_01_diffuse.dds" texture_normal = "romulan_mogai_01_normal.dds" texture_specular = "romulan_mogai_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "romulan_mogai" index = 3 texture_diffuse = "romulan_mogai_02_diffuse.dds" texture_normal = "romulan_mogai_02_normal.dds" texture_specular = "romulan_mogai_02_specular.dds" shader = "PdxMeshShip" } 
+	}
+}

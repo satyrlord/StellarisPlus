@@ -1,0 +1,10 @@
+objectTypes = {
+	pdxmesh = {
+		name = "vulcan_colossus_mesh"
+		file = "gfx/models/ships/vulcan/colossus/vulcan_colossus.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "vulcan_shvhal" texture_diffuse = "vulcan_shvhal_diffuse.dds" texture_normal = "vulcan_shvhal_normal.dds" texture_specular = "vulcan_shvhal_specular.dds" shader = "PdxMeshShip" }          
+        meshsettings = { name = "windows" texture_diffuse = "son_windows_01_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshAlphaAdditiveAnimateUV" }
+	}
+}

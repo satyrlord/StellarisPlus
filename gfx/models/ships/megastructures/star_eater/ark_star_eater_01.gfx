@@ -1,0 +1,17 @@
+objectTypes = {
+	pdxmesh = {
+		name = "biomass_01_star_eater_01_mesh"
+		file = "gfx/models/ships/megastructures/star_eater/biomass_01_star_eater_01.mesh"
+
+		animation = { id = "idle"		type = "biomass_01_star_eater_01_idle_animation" }
+		animation = { id = "open"		type = "biomass_01star_eater_01_open_animation" }
+		animation = { id = "opening"	type = "biomass_01_star_eater_01_opening_animation" }
+		animation = { id = "closing"	type = "biomass_01_star_eater_01_closing_animation" }
+		animation = { id = "closed_death"	type = "biomass_01_star_eater_01_death_closed_animation" }
+		animation = { id = "opened_death"	type = "biomass_01_star_eater_01_death_open_animation" }
+		
+
+	}
+}
+
+

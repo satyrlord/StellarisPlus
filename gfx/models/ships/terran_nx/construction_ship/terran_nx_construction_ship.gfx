@@ -1,0 +1,16 @@
+objectTypes = {
+    pdxmesh = {
+        name = "terran_nx_construction_ship_mesh"
+        file = "gfx/models/ships/terran_nx/construction_ship/terran_nx_construction_ship.mesh"
+        scale = 1.0
+       
+        meshsettings = { name = "starfleet_construction_ship" index = 0 texture_diffuse = "terran_nx_construction_ship_diffuse.dds" texture_normal = "terran_nx_construction_ship_normal.dds" texture_specular = "terran_nx_construction_ship_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_construction_ship" index = 1 texture_diffuse = "terran_neptune_hull_01_diffuse.dds" texture_normal = "terran_neptune_hull_01_normal.dds" texture_specular = "terran_neptune_hull_01_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "starfleet_construction_ship" index = 2 texture_diffuse = "terran_intrepid_01a_diffuse.dds" texture_normal = "terran_intrepid_01_normal.dds" texture_specular = "terran_intrepid_01_specular.dds" shader = "PdxMeshShip" }
+        
+        
+        meshsettings = { name = "starfleet_construction_ship" index = 3 texture_diffuse = "bussard_glow_navy_blue.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_construction_ship" index = 4 texture_diffuse = "bussard_glow.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_construction_ship" index = 5 texture_diffuse = "bussard_glow_blue.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+    }
+}

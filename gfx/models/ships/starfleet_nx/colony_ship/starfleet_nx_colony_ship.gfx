@@ -1,0 +1,17 @@
+objectTypes = {
+	pdxmesh = {
+		name = "starfleet_nx_colony_ship_mesh"
+		file = "gfx/models/ships/starfleet_nx/colony_ship/starfleet_nx_colony_ship.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "bussard_blue" texture_diffuse = "bussard_glow_blue.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "bussard_light_blue" texture_diffuse = "bussard_glow_light_blue.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "bussard_red" texture_diffuse = "bussard_glow.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "glow_white" texture_diffuse = "glow_white_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_conestoga_command" texture_diffuse = "starfleet_conestoga_command_diffuse.dds" texture_normal = "starfleet_conestoga_command_normal.dds" texture_specular = "starfleet_conestoga_command_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_conestoga_details" texture_diffuse = "starfleet_conestoga_details_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "starfleet_conestoga_details_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_conestoga_hull_bottom" texture_diffuse = "starfleet_conestoga_hull_bottom_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "starfleet_conestoga_hull_bottom_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_conestoga_hull_top" texture_diffuse = "starfleet_conestoga_hull_top_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "starfleet_conestoga_hull_top_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_conestoga_nacelles" texture_diffuse = "starfleet_conestoga_nacelles_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "starfleet_conestoga_nacelles_specular.dds" shader = "PdxMeshShip" }
+	}
+}

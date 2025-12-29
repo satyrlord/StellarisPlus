@@ -1,0 +1,13 @@
+objectTypes = {
+	pdxmesh = {
+		name = "klingon_corvette_mesh"
+		file = "gfx/models/ships/klingon/corvette/klingon_corvette.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "bussard_orange" texture_diffuse = "bussard_glow_orange.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "bussard_red" texture_diffuse = "bussard_glow.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "glow_impulse" texture_diffuse = "discovery_red_engine_2_diffuse.dds" texture_normal = "discovery_engine_2_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "hull_01" texture_diffuse = "klingon_borghel_hull_01_diffuse.dds" texture_normal = "klingon_borghel_hull_01_normal.dds" texture_specular = "klingon_borghel_hull_01_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "windows_round" texture_diffuse = "windows_01_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshAlphaAdditiveAnimateUV" }
+	}
+}

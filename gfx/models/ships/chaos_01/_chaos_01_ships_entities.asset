@@ -5,6 +5,7 @@
 	@missile_scale = 1.0
 	@transport_scale = 6.0
 	@constructor_scale = 10.0
+	@starbase_scale = 16.0
 	@military_station_large = 12.0
 	@orbital_station = 17
 	@research_station = 13

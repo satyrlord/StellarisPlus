@@ -1,0 +1,121 @@
+entity = {
+	name = "biomass_01_mega_shipyard_01_stage_1_entity"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 6.5 }
+	state = { name = "death" state_time = 6.6 looping = no 
+		event = { time = 6.5 node = "ship_main" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	
+	locator = { name = "ship_main" }
+	
+	attach = { ship_main = "biomass_01_mega_shipyard_01_stage_1_section_entity" }
+}
+
+entity = {
+	name = "biomass_01_mega_shipyard_01_stage_1_section_entity"
+	pdxmesh = "biomass_01_megaship1_mesh"
+	default_state = "idle"
+	state = { name = "idle"
+		event = { time = 0 node = "exhaust_1" particle = "mega_shipyard_core_lightning_exhaust_effect" keep_particle = yes trigger_once = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "mega_shipyard_idle" } }
+	}	
+	state = { name = "death" looping = no
+		event = { time = 2.1 node = "explosion_locator_01" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 2.6 node = "explosion_locator_02" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 3.1 node = "explosion_locator_03" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 3.4 node = "explosion_locator_04" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 4.2 node = "explosion_locator_05" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 4.6 node = "explosion_locator_06" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+	}
+}
+
+entity = {
+	name = "biomass_01_mega_shipyard_01_stage_2_entity"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 6.5 }
+	state = { name = "death" state_time = 6.6 looping = no 
+		event = { time = 6.5 node = "ship_main" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	
+	locator = { name = "ship_main" }
+	
+	attach = { ship_main = "biomass_01_mega_shipyard_01_stage_2_section_entity" }
+}
+
+entity = {
+	name = "biomass_01_mega_shipyard_01_stage_2_section_entity"
+	pdxmesh = "biomass_01_megaship2_mesh"
+	default_state = "idle"
+	state = { name = "idle"
+		event = { time = 2.0 node = "powercore1" particle = "mega_shipyard_core_lightning_effect" keep_particle = yes trigger_once = no sound = {soundeffect = mega_shipyard_electricity_amb }}
+		event = { time = 3.0 node = "powercore2" particle = "mega_shipyard_core_lightning_effect" keep_particle = yes trigger_once = no sound = { soundeffect = mega_shipyard_electricity_amb }}
+		event = { time = 4.3 node = "powercore3" particle = "mega_shipyard_core_lightning_effect" keep_particle = yes trigger_once = no sound = { soundeffect = mega_shipyard_electricity_amb }}
+		event = { time = 0 node = "smoke_locator_01"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "smoke_locator_02"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "smoke_locator_03"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "smoke_locator_04"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "smoke_locator_05"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "smoke_locator_06"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }
+		
+		#event = { time = 0 node = "exhaust_1" particle = "mega_shipyard_core_lightning_exhaust_effect" keep_particle = yes trigger_once = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "mega_shipyard_idle" } }
+	}	
+	state = { name = "death" looping = no
+		event = { time = 2.1 node = "explosion_locator_01" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 2.6 node = "explosion_locator_02" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 3.1 node = "explosion_locator_03" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 3.4 node = "explosion_locator_04" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 4.2 node = "explosion_locator_05" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 4.6 node = "explosion_locator_06" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+	}
+}
+
+entity = {
+	name = "biomass_01_mega_shipyard_01_stage_3_entity"
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 6.5 }
+	state = { name = "death" state_time = 6.6 looping = no 
+		event = { time = 6.5 node = "ship_main" particle = "juggernaut_explosion_particle" sound = { soundeffect = ship_destroyed } }
+	}
+	
+	locator = { name = "ship_main" }
+	
+	attach = { ship_main = "biomass_01_mega_shipyard_01_stage_3_section_entity" }
+}
+
+entity = {
+	name = "biomass_01_mega_shipyard_01_stage_3_section_entity"
+	pdxmesh = "biomass_01_megaship3_mesh"
+	default_state = "idle"
+	state = { name = "idle"
+		event = { time = 2.0 node = "powercore1" particle = "stellarite_body_effect" keep_particle = yes trigger_once = yes sound = {soundeffect = mega_shipyard_electricity_amb }}
+		event = { time = 3.0 node = "powercore2" particle = "stellarite_body_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = mega_shipyard_electricity_amb }}
+		event = { time = 4.3 node = "powercore3" particle = "stellarite_body_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = mega_shipyard_electricity_amb }}
+		event = { time = 0 node = "smoke_locator_01"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "smoke_locator_02"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "smoke_locator_03"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "smoke_locator_04"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "smoke_locator_05"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }	
+		event = { time = 0 node = "smoke_locator_06"	particle = "swarm_station_smoke_effect" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 2.0 node = "exhaust_1" particle = "stellarite_core_effect" keep_particle = yes trigger_once = yes sound = {soundeffect = mega_shipyard_electricity_amb }}
+		#event = { time = 5.0 node = "exhaust_1" particle = "stellarite_core_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = mega_shipyard_electricity_amb }}
+		#event = { time = 7.0 node = "exhaust_1" particle = "stellarite_core_effect" keep_particle = yes trigger_once = yes sound = { soundeffect = mega_shipyard_electricity_amb }}
+		event = { time = 0 node = "exhaust_1" particle = "lithoid_thruster_lightning_s_entity" keep_particle = yes trigger_once = yes }
+		
+		event = { trigger_once = yes sound = { soundeffect = "mega_shipyard_idle" } }
+	}	
+	state = { name = "death" looping = no
+		event = { time = 2.1 node = "explosion_locator_01" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 2.6 node = "explosion_locator_02" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 3.1 node = "explosion_locator_03" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 3.4 node = "explosion_locator_04" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 4.2 node = "explosion_locator_05" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+		event = { time = 4.6 node = "explosion_locator_06" particle = "juggernaut_hull_explosion_effect" keep_particle = yes trigger_once = no }
+	}
+}

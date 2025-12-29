@@ -1,0 +1,11 @@
+objectTypes = {
+	pdxmesh = {
+		name = "vulcan_corvette_mesh"
+		file = "gfx/models/ships/vulcan/corvette/vulcan_corvette.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "main_hull" texture_diffuse = "vahklas_body_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "vahklas_body_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "windows_and_glow" texture_diffuse = "vahklas_glows_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "wings_and_extras" texture_diffuse = "vahklas_wing_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "vahklas_wing_specular.dds" shader = "PdxMeshShip" }
+	}
+}

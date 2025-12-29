@@ -1,0 +1,9 @@
+objectTypes = {
+    pdxmesh = {
+        name = "klingon_military_station_large_mesh"
+        file = "gfx/models/ships/klingon/military_stations/klingon_military_station_large.mesh"
+        scale = 1
+
+        meshsettings = { name = "klingon_military_station_large" texture_diffuse = "klingon_military_station_large_diffuse.dds" texture_normal = "klingon_military_station_large_normal.dds" texture_specular = "klingon_military_station_large_specular.dds" shader = "PdxMeshShip" }
+    }
+}

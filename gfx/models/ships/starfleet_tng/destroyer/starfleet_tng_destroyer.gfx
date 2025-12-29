@@ -1,0 +1,15 @@
+objectTypes = {
+	pdxmesh = {
+		name = "starfleet_tng_destroyer_mesh"
+		file = "gfx/models/ships/starfleet_tng/destroyer/starfleet_tng_destroyer.mesh"    #Intrepid
+		scale = 1.0
+
+        meshsettings = { name = "glow_green" texture_diffuse = "glow_dark_green_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "glow_red" texture_diffuse = "glow_red_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "glow_white" texture_diffuse = "glow_white_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "solid_maroon" texture_diffuse = "solid_maroon.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_intrepid_class_01" texture_diffuse = "starfleet_intrepid_class_01_diffuse.dds" texture_normal = "starfleet_intrepid_class_01_normal.dds" texture_specular = "starfleet_intrepid_class_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_intrepid_class_02" texture_diffuse = "starfleet_intrepid_class_02_diffuse.dds" texture_normal = "starfleet_intrepid_class_02_normal.dds" texture_specular = "starfleet_intrepid_class_02_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_logo" texture_diffuse = "starfleet_logo_2_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "AlphaBlendNoDepth" }
+	}
+}

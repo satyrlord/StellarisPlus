@@ -1,0 +1,12 @@
+objectTypes = {
+	pdxmesh = {
+		name = "starfleet_tng_cruiser_b_mesh"
+		file = "gfx/models/ships/starfleet_tng/cruiser/starfleet_tng_cruiser_b.mesh"    #Olympic
+		scale = 1.0
+		
+		meshsettings = { name = "bussard_red" texture_diffuse = "bussard_red_diffuse.dds" texture_normal = "windows_01_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "glow_grid_blue" texture_diffuse = "glow_blue_diffuse.dds" texture_normal = "windows_01_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "solid_maroon" texture_diffuse = "solid_maroon.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_olympic" texture_diffuse = "starfleet_olympic_diffuse.dds" texture_normal = "starfleet_olympic_normal.dds" texture_specular = "starfleet_olympic_specular.dds" shader = "PdxMeshShip" }
+	}
+}

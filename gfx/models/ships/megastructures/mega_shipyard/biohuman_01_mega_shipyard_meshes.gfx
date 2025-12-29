@@ -1,0 +1,272 @@
+objectTypes = {
+	pdxmesh = {
+		name = "biomass_01_megaship1_mesh"
+		file = "gfx/models/ships/megastructures/mega_shipyard/biomass_01_megaship1.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "polySurfaceShape1"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.001"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.002"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.003"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.004"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.005"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.006"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.007"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.008"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface10Shape"
+			texture_normal = "biomass_01_fighter_pod_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface10Shape.001"
+			texture_normal = "biomass_01_fighter_pod_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface10Shape.002"
+			texture_normal = "biomass_01_fighter_pod_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.009"
+			texture_normal = "biomass_01_station_large_normal.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "biomass_01_megaship2_mesh"
+		file = "gfx/models/ships/megastructures/mega_shipyard/biomass_01_megaship2.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "polySurfaceShape1"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.001"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.002"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.003"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.004"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.005"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.006"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.007"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.008"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface10Shape"
+			texture_normal = "biomass_01_fighter_pod_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface10Shape.001"
+			texture_normal = "biomass_01_fighter_pod_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface10Shape.002"
+			texture_normal = "biomass_01_fighter_pod_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.009"
+			texture_normal = "biomass_01_station_large_normal.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "biomass_01_megaship3_mesh"
+		file = "gfx/models/ships/megastructures/mega_shipyard/biomass_01_megaship3.mesh"
+		scale = 1.0
+		
+		meshsettings = {
+			name = "polySurfaceShape1"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.001"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.002"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.003"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.004"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.005"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.006"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.007"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.008"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface10Shape"
+			texture_normal = "biomass_01_fighter_pod_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface10Shape.001"
+			texture_normal = "biomass_01_fighter_pod_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurface10Shape.002"
+			texture_normal = "biomass_01_fighter_pod_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.009"
+			texture_normal = "biomass_01_station_large_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.010"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.011"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "polySurfaceShape1.012"
+			texture_normal = "biomass_01_civilian_normal.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+}
+

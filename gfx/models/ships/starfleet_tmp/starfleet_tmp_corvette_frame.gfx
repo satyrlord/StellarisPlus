@@ -1,0 +1,18 @@
+objectTypes = {
+	pdxmesh = {
+		name = "starfleet_tmp_corvette_frame_mesh"
+		file = "gfx/models/ships/starfleet_tmp/starfleet_tmp_corvette_frame.mesh"
+				animation = { id = "idle"			type = "starfleet_tmp_corvette_frame_idle_animation" }
+				animation = { id = "death"			type = "starfleet_tmp_corvette_frame_death_animation" }
+				animation = { id = "death2"			type = "starfleet_tmp_corvette_frame_death2_animation" }
+				animation = { id = "death3"			type = "starfleet_tmp_corvette_frame_death3_animation" }
+				animation = { id = "attack"			type = "starfleet_tmp_corvette_frame_idle_animation" }				
+				animation = { id = "moving"			type = "starfleet_tmp_corvette_frame_moving_animation" }				
+		scale = 1.0
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+}

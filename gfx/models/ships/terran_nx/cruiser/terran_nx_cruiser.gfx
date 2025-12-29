@@ -1,0 +1,14 @@
+objectTypes = {
+	pdxmesh = {
+		name = "terran_nx_cruiser_mesh"
+		file = "gfx/models/ships/terran_nx/cruiser/terran_nx_cruiser.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "bussard_blue" texture_diffuse = "bussard_glow_blue.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "bussard_orange" texture_diffuse = "bussard_glow_orange.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "deflector_bronze" texture_diffuse = "tos_deflector_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "metallic_deflector_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_daedalus_01" texture_diffuse = "terran_daedalus_01_diffuse.dds" texture_normal = "terran_daedalus_01_normal.dds" texture_specular = "terran_daedalus_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_daedalus_02" texture_diffuse = "terran_daedalus_02_diffuse.dds" texture_normal = "terran_daedalus_02_normal.dds" texture_specular = "terran_daedalus_02_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_daedalus_03" texture_diffuse = "terran_daedalus_03_diffuse.dds" texture_normal = "terran_daedalus_03_normal.dds" texture_specular = "terran_daedalus_03_specular.dds" shader = "PdxMeshShip" }
+	}
+}

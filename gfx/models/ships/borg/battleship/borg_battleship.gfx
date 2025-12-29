@@ -1,0 +1,12 @@
+################
+# Battleship
+################
+objectTypes = {
+	pdxmesh = {
+		name = "borg_battleship_mesh"
+		file = "gfx/models/ships/borg/battleship/borg_cube.mesh"
+		scale = 1.0
+
+        meshsettings = { name = "hull_borg" texture_diffuse = "borg_hull_01_diffuse.dds" texture_normal = "borg_hull_01_normal.dds" texture_specular = "borg_hull_01_specular.dds" shader = "PdxMeshShip" }
+	}
+}

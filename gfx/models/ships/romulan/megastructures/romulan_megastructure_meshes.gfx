@@ -1,0 +1,101 @@
+objectTypes = {
+
+	
+	# pdxmesh = {
+		# name = "reptilian_01_orbital_station_frame_mesh"
+		# file = "gfx/models/ships/reptilian_01/reptilian_01_orbital_station_frame.mesh"
+		# scale = 1.0
+	# }
+	
+	pdxmesh = {
+		name = "romulan_orbital_station_mesh"
+		file = "gfx/models/ships/romulan/megastructures/romulan_orbital_station.mesh"
+        # file = "gfx/models/ships/reptilian_01/reptilian_01_orbital_station.mesh"
+		scale = 1.0
+        
+        meshsettings = {
+            name = "MeshShape"
+            # index = 0
+            texture_diffuse = "romulan_stations_diffuse.dds"
+            texture_normal = "reptilian_01_stations_normal.dds"
+            texture_specular = "romulan_stations_specular.dds"
+            shader = "PdxMeshShip"
+        }
+	}
+
+	pdxmesh = {
+		name = "romulan_orbital_station_habitat_section_mesh"
+		file = "gfx/models/ships/romulan/megastructures/romulan_orbital_station_habitat_section.mesh"
+		scale = 1.0
+
+		meshsettings = {
+			name = "module_bodyShape"
+			index = 0
+			texture_diffuse = "romulan_orbital_station_habitat_module_diffuse.dds"
+			texture_normal = "reptilian_01_orbital_station_habitat_module_normal.dds"
+			texture_specular = "romulan_orbital_station_habitat_module_specular.dds"
+			shader = "PdxMeshShip"
+		}
+
+		meshsettings = {
+			name = "module_bodyShape"
+			index = 1
+			texture_diffuse = "romulan_orbital_station_habitat_module_diffuse.dds"
+			texture_normal = "reptilian_01_orbital_station_habitat_module_normal.dds"
+			texture_specular = "romulan_orbital_station_habitat_module_specular.dds"
+			shader = "PdxMeshTerraAlphaBlend"
+		}
+	}
+	
+	pdxmesh = {
+		name = "romulan_upgraded_orbital_habitat_mesh"
+		file = "gfx/models/ships/romulan/megastructures/romulan_habitat_level_3.mesh"
+		scale = 1.0
+        
+        meshsettings = {
+            name = "New_Habitat_Level3"
+            index = 0
+            texture_diffuse = "romulan_habitat_level_3_diffuse.dds"
+            texture_normal = "reptilian_01_habitat_level_3_normal.dds"
+            texture_specular = "romulan_habitat_level_3_specular.dds"
+            shader = "PdxMeshShip"
+        }
+        meshsettings = {
+            name = "New_Habitat_Level3"
+            index = 1
+            texture_diffuse = "romulan_habitat_level_3_diffuse.dds"
+            texture_normal = "reptilian_01_habitat_level_3_normal.dds"
+            texture_specular = "romulan_habitat_level_3_specular.dds"
+            # shader = "PdxMeshTerraAlphaBlend"
+            shader = "AlphaBlend_00"
+        }
+        meshsettings = {
+            name = "modulesShape"
+            index = 0
+            texture_diffuse = "romulan_orbital_station_habitat_module_diffuse.dds"
+            texture_normal = "reptilian_01_orbital_station_habitat_module_normal.dds"
+            texture_specular = "romulan_orbital_station_habitat_module_specular.dds"
+            shader = "PdxMeshShip"
+        }
+        meshsettings = {
+            name = "modulesShape"
+            index = 1
+            texture_diffuse = "romulan_orbital_station_habitat_module_diffuse.dds"
+            texture_normal = "reptilian_01_orbital_station_habitat_module_normal.dds"
+            texture_specular = "romulan_orbital_station_habitat_module_specular.dds"
+            shader = "AlphaBlend_00"
+            # shader = "PdxMeshTerraAlphaBlend"
+        }
+        meshsettings = {
+            name = "core"
+            index = 0
+            texture_diffuse = "romulan_stations_diffuse.dds"
+            texture_normal = "reptilian_01_stations_normal.dds"
+            texture_specular = "romulan_stations_specular.dds"
+            shader = "PdxMeshShip"
+        }
+	}
+
+}
+
+	

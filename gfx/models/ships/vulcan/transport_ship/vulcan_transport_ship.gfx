@@ -1,0 +1,11 @@
+objectTypes = {
+    pdxmesh = {
+        name = "vulcan_transport_ship_mesh"
+        file = "gfx/models/ships/vulcan/transport_ship/vulcan_transport_ship.mesh"
+        scale = 1.0
+        
+        meshsettings = { name = "hull_dkyr" texture_diffuse = "vulcan_dkyr_hull_diffuse.dds" texture_normal = "vulcan_dkyr_hull_normal.dds" texture_specular = "vulcan_dkyr_hull_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "hull_shran" texture_diffuse = "vulcan_shran_hull_diffuse.dds" texture_normal = "vulcan_surak_hull_normal.dds" texture_specular = "vulcan_surak_hull_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "hull_talkyr" texture_diffuse = "vulcan_talkyr_hull_diffuse.dds" texture_normal = "vulcan_dkyr_hull_normal.dds" texture_specular = "vulcan_dkyr_hull_specular.dds" shader = "PdxMeshShip" }
+    }
+}

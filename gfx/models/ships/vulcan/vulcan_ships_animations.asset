@@ -1,0 +1,40 @@
+animation = {
+	name = "vulcan_corvette_frame_idle_animation"
+	file = "vulcan_corvette_frame_idle.anim"
+}
+
+animation = {
+	name = "vulcan_corvette_frame_death_animation"
+	file = "vulcan_corvette_frame_death.anim"
+}
+
+animation = {
+	name = "vulcan_corvette_frame_death2_animation"
+	file = "vulcan_corvette_frame_death2.anim"
+}
+
+animation = {
+	name = "vulcan_corvette_frame_death3_animation"
+	file = "vulcan_corvette_frame_death3.anim"
+}
+
+animation = {
+	name = "vulcan_corvette_frame_moving_animation"
+	file = "vulcan_corvette_frame_moving.anim"
+}
+
+animation = {
+	name = "vulcan_construction_idle_animation"
+	file = "vulcan_corvette_frame_idle.anim"
+}
+
+animation = {
+	name = "vulcan_construction_working_start_animation"
+	file = "vulcan_construction_working_start.anim"
+}
+
+animation = {
+	name = "vulcan_construction_working_looping_animation"
+	file = "vulcan_construction_working.anim"
+}
+

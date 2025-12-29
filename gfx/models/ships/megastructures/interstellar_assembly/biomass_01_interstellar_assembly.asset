@@ -1,0 +1,58 @@
+
+#####################################################
+#####											#####
+#####				Biomass						#####
+#####											#####
+#####################################################
+
+entity = {
+	name = "biomass_01_interstellar_assembly_stage_1_entity"
+	pdxmesh = "biomass_01_interstellar1_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+	}
+}
+
+entity = {
+	name = "biomass_01_interstellar_assembly_stage_2_entity"
+	pdxmesh = "biomass_01_interstellar2_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+	}
+}
+
+entity = {
+	name = "biomass_01_interstellar_assembly_stage_3_entity"
+	pdxmesh = "biomass_01_interstellar3_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+	}
+}
+
+entity = {
+	name = "biomass_01_interstellar_assembly_stage_4_entity"
+	pdxmesh = "biomass_01_interstellar4_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { node = "effect_1" particle = "interstellar_assembly_effect" keep_particle = yes trigger_once = yes }
+
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_hum" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_pulse" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "sfx_interstellar_assembly_beats" } }
+	}
+}

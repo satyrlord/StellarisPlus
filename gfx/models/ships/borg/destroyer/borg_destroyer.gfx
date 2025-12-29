@@ -1,0 +1,22 @@
+objectTypes = {
+	pdxmesh = {
+		name = "borg_destroyer_mesh"
+		file = "gfx/models/ships/borg/destroyer/borg_pyramid.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "hull_borg" texture_diffuse = "borg_hull_01_diffuse.dds" texture_normal = "borg_hull_01_normal.dds" texture_specular = "borg_hull_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "hull_grey" texture_diffuse = "hull_type_3_dark_grey_diffuse.dds" texture_normal = "hull_type_3_normal.dds" texture_specular = "hull_type_3_specular.dds" shader = "PdxMeshShip" }
+	}
+}
+
+
+objectTypes = {
+	pdxmesh = {
+		name = "borg_destroyer_b_mesh"
+		file = "gfx/models/ships/borg/destroyer/borg_prism.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "hull_borg" texture_diffuse = "borg_hull_01_diffuse.dds" texture_normal = "borg_hull_01_normal.dds" texture_specular = "borg_hull_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "hull_grey" texture_diffuse = "hull_type_3_dark_grey_diffuse.dds" texture_normal = "hull_type_3_normal.dds" texture_specular = "hull_type_3_specular.dds" shader = "PdxMeshShip" }
+	}
+}

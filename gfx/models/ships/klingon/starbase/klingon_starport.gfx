@@ -1,0 +1,9 @@
+objectTypes = {
+    pdxmesh = {
+        name = "klingon_starport_mesh"
+        file = "gfx/models/ships/klingon/starbase/klingon_starport.mesh"
+        scale = 1
+
+        meshsettings = { name = "klingon_starport" texture_diffuse = "klingon_starport_diffuse.dds" texture_normal = "klingon_starport_normal.dds" texture_specular = "klingon_starport_specular.dds" shader = "PdxMeshShip" }
+    }
+}

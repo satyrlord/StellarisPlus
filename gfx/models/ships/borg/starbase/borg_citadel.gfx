@@ -1,0 +1,23 @@
+objectTypes = {
+	pdxmesh = {
+		name = "borg_citadel_mesh"
+		file = "gfx/models/ships/borg/starbase/borg_citadel.mesh"
+		scale = 1.0
+        meshsettings = {
+            name = "hull_borg"
+            index = 0
+            texture_diffuse = "borg_hull_01_diffuse.dds"
+            texture_normal = "borg_hull_01_normal.dds"
+            texture_specular = "borg_hull_01_specular.dds"
+            shader = "PdxMeshShip"
+        }
+        meshsettings = {
+            name = "hull_grey"
+            index = 0
+            texture_diffuse = "hull_type_3_dark_grey_diffuse.dds"
+            texture_normal = "hull_type_3_normal.dds"
+            texture_specular = "hull_type_3_specular.dds"
+            shader = "PdxMeshShip"
+        }
+	}
+}

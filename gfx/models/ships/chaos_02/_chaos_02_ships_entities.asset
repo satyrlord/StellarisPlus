@@ -5,6 +5,7 @@
 	@missile_scale = 1.0
 	@transport_scale = 6.0
 	@constructor_scale = 10.0
+	@starbase_scale = 16.0
 	@military_station_large = 12.0
 	@orbital_station = 17
 	@research_station = 13
@@ -1764,7 +1765,7 @@ entity = {
 
 entity = {
 	name = "chaos_02_habitat_phase_01_entity"
-	pdxmesh = "chaos_02_starbase_frame_mesh"
+	pdxmesh = "chaos_01_starbase_frame_mesh"
 
 	default_state = "habitat_idle"
 	state = { name = "habitat_idle"
@@ -1845,7 +1846,7 @@ entity = {
 
 entity = {
 	name = "chaos_02_habitat_phase_02_entity"
-	pdxmesh = "chaos_02_starbase_frame_mesh"
+	pdxmesh = "chaos_01_starbase_frame_mesh"
 
 	default_state = "habitat_idle"
 	state = { name = "habitat_idle"
@@ -1928,7 +1929,7 @@ entity = {
 
 entity = {
 	name = "chaos_02_habitat_phase_03_entity"
-	pdxmesh = "chaos_02_starbase_frame_mesh"
+	pdxmesh = "chaos_01_starbase_frame_mesh"
 
 	default_state = "habitat_idle"
 	state = { name = "habitat_idle"

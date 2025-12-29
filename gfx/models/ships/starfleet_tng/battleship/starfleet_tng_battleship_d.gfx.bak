@@ -1,0 +1,20 @@
+################
+# Battleship
+################
+objectTypes = {
+	pdxmesh = {
+		name = "starfleet_tng_battleship_d_mesh"
+		file = "gfx/models/ships/starfleet_tng/battleship/starfleet_tng_battleship_d.mesh"
+		scale = 1.5
+
+        meshsettings = { name = "korolev_bridge" texture_diffuse = "starfleet_korolev_bridge_diffuse.dds" texture_normal = "starfleet_korolev_bridge_normal.dds" texture_specular = "starfleet_korolev_bridge_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "korolev_deflector_impulse" texture_diffuse = "starfleet_korolev_deflector_impulse_diffuse.dds" texture_normal = "starfleet_korolev_deflector_impulse_normal.dds" texture_specular = "starfleet_korolev_deflector_impulse_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "korolev_nacelle" texture_diffuse = "starfleet_korolev_nacelle_diffuse.dds" texture_normal = "starfleet_korolev_nacelle_normal.dds" texture_specular = "starfleet_korolev_nacelle_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "korolev_phasers" texture_diffuse = "starfleet_korolev_phasers_diffuse.dds" texture_normal = "starfleet_korolev_phasers_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "korolev_pylons" texture_diffuse = "starfleet_korolev_pylons_diffuse.dds" texture_normal = "starfleet_korolev_pylons_normal.dds" texture_specular = "starfleet_korolev_pylons_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "korolev_saucer_bottom" texture_diffuse = "starfleet_korolev_saucer_bottom_diffuse.dds" texture_normal = "starfleet_korolev_saucer_bottom_normal.dds" texture_specular = "starfleet_korolev_saucer_bottom_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "korolev_saucer_rim" texture_diffuse = "starfleet_korolev_saucer_rim_diffuse.dds" texture_normal = "starfleet_korolev_saucer_rim_normal.dds" texture_specular = "starfleet_korolev_saucer_rim_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "korolev_saucer_top" texture_diffuse = "starfleet_korolev_saucer_top_diffuse.dds" texture_normal = "starfleet_korolev_saucer_top_normal.dds" texture_specular = "starfleet_korolev_saucer_top_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "korolev_secondary_hull" texture_diffuse = "starfleet_korolev_secondary_hull_diffuse.dds" texture_normal = "starfleet_korolev_secondary_hull_normal.dds" texture_specular = "starfleet_korolev_secondary_hull_specular.dds" shader = "PdxMeshShip" }
+	}
+}

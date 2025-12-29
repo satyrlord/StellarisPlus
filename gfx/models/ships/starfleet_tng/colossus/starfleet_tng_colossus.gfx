@@ -1,0 +1,67 @@
+################
+# Battleship
+################
+objectTypes = {
+	pdxmesh = {
+		name = "starfleet_tng_colossus_mesh"
+		file = "gfx/models/ships/starfleet_tng/colossus/starfleet_tng_colossus.mesh"
+		scale = 1.0
+
+		meshsettings = {
+            name = "bussard_red"
+            index = 0
+            texture_diffuse = "bussard_glow.dds"
+            texture_normal = "bussard_glow_normal.dds"
+            texture_specular = "nospec.dds"
+            shader = "PdxMeshShip"
+        }
+        meshsettings = {
+            name = "glow_grid_blue"
+            index = 0
+            texture_diffuse = "glow_warp_grid_blue.dds"
+            texture_normal = "glow_warp_grid_normal.dds"
+            texture_specular = "nospec.dds"
+            shader = "PdxMeshShip"
+        }
+        meshsettings = {
+            name = "impulse_red"
+            index = 0
+            texture_diffuse = "galaxy_glow_engine_diffuse.dds"
+            texture_normal = "galaxy_glow_engine_normal.dds"
+            texture_specular = "nospec.dds"
+            shader = "PdxMeshShip"
+        }
+		meshsettings = {
+            name = "starfleet_excalibur_01"
+            index = 0
+            texture_diffuse = "starfleet_excalibur_01_diffuse.dds"
+            texture_normal = "starfleet_excalibur_01_normal.dds"
+            texture_specular = "starfleet_excalibur_01_specular.dds"
+            shader = "PdxMeshShip"
+        }
+        meshsettings = {
+            name = "starfleet_excalibur_02"
+            index = 0
+            texture_diffuse = "starfleet_excalibur_02_diffuse.dds"
+            texture_normal = "starfleet_excalibur_02_normal.dds"
+            texture_specular = "starfleet_excalibur_02_specular.dds"
+            shader = "PdxMeshShip"
+        }
+		meshsettings = {
+            name = "starfleet_excalibur_03"
+            index = 0
+            texture_diffuse = "starfleet_excalibur_03_diffuse.dds"
+            texture_normal = "nonormal.dds"
+            texture_specular = "starfleet_excalibur_03_specular.dds"
+            shader = "PdxMeshShip"
+        }
+		meshsettings = {
+            name = "starfleet_excalibur_04"
+            index = 0
+            texture_diffuse = "starfleet_excalibur_04_diffuse.dds"
+            texture_normal = "starfleet_excalibur_04_normal.dds"
+            texture_specular = "starfleet_excalibur_04_specular.dds"
+            shader = "PdxMeshShip"
+        }	
+	}
+}

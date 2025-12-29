@@ -1,0 +1,17 @@
+################
+# Battleship
+################
+objectTypes = {
+	pdxmesh = {
+		name = "terran_nx_titan_mesh"
+		file = "gfx/models/ships/terran_nx/titan/terran_nx_titan.mesh"
+		scale = 1.0
+
+		meshsettings = { name = "bussard_blue" texture_diffuse = "bussard_glow_blue.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "bussard_orange" texture_diffuse = "bussard_glow_orange.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "deflector" texture_diffuse = "deflector_02_diffuse.dds" texture_normal = "Deflector_TMP_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "starfleet_yorktown_01" texture_diffuse = "terran_yorktown_01_diffuse.dds" texture_normal = "terran_yorktown_01_normal.dds" texture_specular = "terran_yorktown_01_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "starfleet_yorktown_02" texture_diffuse = "terran_yorktown_02_diffuse.dds" texture_normal = "terran_yorktown_02_normal.dds" texture_specular = "terran_yorktown_02_specular.dds" shader = "PdxMeshShip" }
+        meshsettings = { name = "starfleet_yorktown_03" texture_diffuse = "terran_yorktown_03_diffuse.dds" texture_normal = "terran_yorktown_03_normal.dds" texture_specular = "terran_yorktown_03_specular.dds" shader = "PdxMeshShip" }
+	}
+}

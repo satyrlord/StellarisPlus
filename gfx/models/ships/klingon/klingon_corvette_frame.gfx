@@ -1,0 +1,18 @@
+objectTypes = {
+	pdxmesh = {
+		name = "klingon_corvette_frame_mesh"
+		file = "gfx/models/ships/klingon/klingon_corvette_frame.mesh"
+				animation = { id = "idle"			type = "klingon_corvette_frame_idle_animation" }
+				animation = { id = "death"			type = "klingon_corvette_frame_death_animation" }
+				animation = { id = "death2"			type = "klingon_corvette_frame_death2_animation" }
+				animation = { id = "death3"			type = "klingon_corvette_frame_death3_animation" }
+				animation = { id = "attack"			type = "klingon_corvette_frame_idle_animation" }				
+				animation = { id = "moving"			type = "klingon_corvette_frame_moving_animation" }				
+		scale = 1.0
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+}

@@ -1,0 +1,5 @@
+## Starbase Frame
+animation = {
+	name = "biomass_01_starbase_frame_idle_animation"
+	file = "biomass_01_starbase_frame_idle_looping_animation.anim"
+}

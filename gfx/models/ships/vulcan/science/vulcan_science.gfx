@@ -1,0 +1,10 @@
+objectTypes = {
+	pdxmesh = {
+		name = "vulcan_science_mesh"
+		file = "gfx/models/ships/vulcan/science/vulcan_science.mesh"
+		scale = 1.0
+
+        meshsettings = { name = "vulcan_dvahl" texture_diffuse = "vulcan_dvahl_diffuse.dds" texture_normal = "vulcan_dvahl_normal.dds" texture_specular = "vulcan_dvahl_specular.dds" shader = "PdxMeshShip" }
+
+	}
+}

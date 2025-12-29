@@ -1,0 +1,13 @@
+objectTypes = {
+    pdxmesh = {
+        name = "starfleet_nx_military_station_small_attach_mesh"
+        file = "gfx/models/ships/starfleet_nx/military_stations/starfleet_nx_military_station_small_attach.mesh"
+        scale = 1.0
+
+        meshsettings = { name = "gold" texture_diffuse = "gold_texture.dds" texture_normal = "nonormal.dds" texture_specular = "light_metal_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "grid" texture_diffuse = "grid_1_grey_diffuse.dds" texture_normal = "grid_1_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "hull_grey" texture_diffuse = "hull_fed_type_3_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "hull_red" texture_diffuse = "hull_fed_type_1_red_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "hull_fed_type_1_specular.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "windows" texture_diffuse = "windows_fed_tmp_1.dds" texture_normal = "windows_01_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshAlphaAdditiveAnimateUVNoDissolve" }
+    }
+}

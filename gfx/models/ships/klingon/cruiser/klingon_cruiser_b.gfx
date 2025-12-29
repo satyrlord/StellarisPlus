@@ -1,0 +1,13 @@
+objectTypes = {
+	pdxmesh = {
+		name = "klingon_cruiser_b_mesh"
+		file = "gfx/models/ships/klingon/cruiser/klingon_cruiser_b.mesh"
+		scale = 1.0
+		
+		meshsettings = { name = "bussard_dark_red" texture_diffuse = "bussard_glow.dds" texture_normal = "bussard_glow_dark_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "bussard_green" texture_diffuse = "bussard_glow_green.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "bussard_red" texture_diffuse = "bussard_glow.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" }  
+        meshsettings = { name = "ktinga_decal" texture_diffuse = "klingon_ktinga_decal_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "nospec.dds" shader = "AlphaBlendNoDepth" }  
+        meshsettings = { name = "ktinga_hull" texture_diffuse = "klingon_ktinga_diffuse.dds" texture_normal = "klingon_ktinga_normal.dds" texture_specular = "klingon_ktinga_specular.dds" shader = "PdxMeshShip" }
+	}
+}

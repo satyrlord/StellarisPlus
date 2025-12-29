@@ -1,0 +1,10 @@
+objectTypes = {
+    pdxmesh = {
+        name = "borg_military_station_large_attach_mesh"
+        file = "gfx/models/ships/borg/military_stations/borg_military_station_large_attach.mesh"
+        scale = 1.0
+
+        meshsettings = { name = "borg_hull" texture_diffuse = "borg_hull_01_diffuse.dds" texture_normal = "borg_hull_01_normal.dds" texture_specular = "borg_hull_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "grid_grey" texture_diffuse = "grey_tall_grid_diffuse.dds" texture_normal = "tall_grid_normal.dds" texture_specular = "tall_grid_specular.dds" shader = "PdxMeshShip" }
+    }
+}

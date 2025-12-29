@@ -1,0 +1,17 @@
+objectTypes = {
+    pdxmesh = {
+        name = "terran_nx_transport_ship_mesh"
+        file = "gfx/models/ships/terran_nx/transport_ship/terran_nx_transport_ship.mesh"
+        scale = 1.0
+        
+        meshsettings = { name = "bussard_red" texture_diffuse = "bussard_glow.dds" texture_normal = "bussard_glow_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "glow_blue" texture_diffuse = "glow_dark_blue_diffuse.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "grid_tall_grey" texture_diffuse = "grey_tall_grid_diffuse.dds" texture_normal = "tall_grid_normal.dds" texture_specular = "tall_grid_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "hull_bronze" texture_diffuse = "bronze_texture.dds" texture_normal = "nonormal.dds" texture_specular = "light_metal_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_intrepid_type" texture_diffuse = "terran_intrepid_01_diffuse.dds" texture_normal = "terran_intrepid_01_normal.dds" texture_specular = "terran_intrepid_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_j_01" texture_diffuse = "terran_j_01_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "terran_j_01_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_j_02" texture_diffuse = "terran_j_02_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "terran_j_02_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "starfleet_j_03" texture_diffuse = "terran_j_03_diffuse.dds" texture_normal = "nonormal.dds" texture_specular = "terran_j_03_specular.dds" shader = "PdxMeshShip" } 
+        meshsettings = { name = "windows_wide" texture_diffuse = "windows_fed_tmp_1.dds" texture_normal = "glows_normal.dds" texture_specular = "nospec.dds" shader = "PdxMeshAlphaAdditiveAnimateUVNoDissolve" }
+    }
+}
