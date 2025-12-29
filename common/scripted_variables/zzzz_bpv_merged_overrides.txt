@@ -1,0 +1,12 @@
+# Merged presets (load after zz_bpv_defines.txt)
+# Merge order (last wins):
+# 1) BPV Reborn - Zone Single Row Mode
+# 2) BPVR - More Building Slots
+# 3) BPVR - City 4 Zones
+# 4) BPVR - City 24 Slot
+# 5) BPVR - Zone 6 Slots
+
+# 3rd-party compatibility variables from the preset mods
+@KZ_VOY_default_bs = 24
+@ag_num_zone_buildings = 6
+@KZ_VOY_zone_fake_bs = 6

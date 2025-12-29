@@ -1,0 +1,118 @@
+@base_cost = 30
+@city_cost = 50
+@biomass_cost = 50
+
+@wilderness_district_build_long = 480
+@wilderness_district_build_short = 240
+
+# City (blue)
+district_craglands = {
+	base_buildtime = @wilderness_district_build_long
+
+	overlay_icon = GFX_district_government
+
+	show_on_uncolonized = {
+		uses_district_set = standard
+		exists = from
+		from = { is_wilderness_empire = yes }
+	}
+
+	potential = {
+		uses_district_set = standard
+		exists = owner
+		owner = { is_wilderness_empire = yes }
+		NAND = {
+			is_capital = yes
+			owner = {
+				has_menace_perk = menp_behemoth_mind_meld
+			}
+		}
+	}
+
+	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+
+	conversion_ratio = 1
+	convert_to = {
+		district_arcology_housing
+		district_rw_city
+		district_nexus
+		district_hive
+		district_city
+		district_mindlink
+	}
+
+	resources = {
+		category = planet_districts_cities
+		cost = {
+			minerals = 500
+		}
+		cost = {
+			biomass = @biomass_cost
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_domination_imperious_architecture
+			}
+		}
+		planet_defense_armies_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_prosperity_public_works
+			}
+		}
+		planet_housing_add = 50
+	}
+
+	inline_script = {
+		script = buildings/on_all_wilderness_buildings_districts
+	}
+
+	ai_resource_production = {
+		unity = 5
+		trigger = {
+			OR = {
+				has_building = building_commensal_clearing_1
+				has_building = building_commensal_clearing_2
+				has_building = building_commensal_clearing_3
+				has_building = building_commensal_clearing_4
+			}
+		}
+	}
+
+	exempt_from_ai_planet_specialization = yes
+	ai_estimate_without_unemployment = yes
+	additional_ai_weight = 10
+}
+
+# Industry (orange)
+#
+
+# Energy (yellow)
+
+
+
+
+# Mining (red)
+
+
+
+
+# Farming (green)
+
+
+

@@ -1,0 +1,180 @@
+@lathe_alloy_cost = 1000
+@lathe_logic_cost = 500
+@lathe_upkeep = 50
+@biomass_cost = 50
+
+@hab_cost = 500
+@hab_maintenance = 2
+@low_hab_maintenance = 0.2
+
+
+
+
+
+
+
+district_mindlink = {
+	overlay_icon = GFX_district_feral_insight
+	base_buildtime = 720
+
+	exempt_from_ai_planet_specialization = yes
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		exists = owner
+		is_capital = yes
+		owner = {
+			has_menace_perk = menp_behemoth_mind_meld
+		}
+	}
+
+	allow = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+
+	conversion_ratio = 1
+	convert_to = {
+		district_arcology_housing
+		district_rw_city
+		district_rw_hive
+		district_rw_nexus
+		district_city
+		district_nexus
+		district_hive
+		district_hab_housing
+		district_crashed_slaver_ship
+		district_craglands
+	}
+
+	resources = {
+		category = planet_districts_cities
+		cost = {
+			food = 1500
+		}
+		cost = {
+			trigger = {
+				owner = { is_wilderness_empire = yes }
+			}
+			biomass = @biomass_cost
+		}
+		upkeep = {
+			food = 2
+		}
+		produces = {
+			trigger = {
+				owner = { is_variable_set =  pops_transferred }
+				owner = { is_wilderness_empire = no }
+			}
+			unity = 1.5
+			physics_research = 0.5
+			society_research = 0.5
+			engineering_research = 0.5
+			mult = owner.value:transferred_pops_district_percent
+		}
+		produces = {
+			trigger = {
+				owner = { is_variable_set =  pops_transferred }
+				owner = { is_wilderness_empire = yes }
+			}
+			unity = 300
+			physics_research = 100
+			society_research = 100
+			engineering_research = 100
+			mult = owner.value:transferred_pops_district_percent
+		}
+	}
+
+	inline_script = {
+		script = buildings/on_all_wilderness_buildings_districts
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3000
+	}
+
+	triggered_planet_modifier = { #Regular modifiers
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_transference_volunteer_add = 1500
+		}
+	}
+
+	triggered_planet_modifier = { # Gestalt modifiers
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			planet_housing_add = 1000
+			job_transference_drone_add = 1500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_desc = { #same as transference drone so everyone gets it
+		trigger = {
+			exists = owner
+		}
+		text = job_transference_volunteer_effect_desc
+	}
+}

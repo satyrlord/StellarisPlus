@@ -1,0 +1,14 @@
+inline_script = {
+	script = "districts/BPV_district_slots"
+	SLOT_GOV = $GOVERNMENT$
+	SLOT1 = $SLOT1$
+	SLOT2 = $SLOT2$
+	SLOT3 = $SLOT3$
+	SLOT4 = $SLOT4$
+	SLOT5 = $SLOT5$
+	SLOT6 = $SLOT6$
+	SLOT7 = $SLOT7$
+	SLOT8 = $SLOT_END$
+	SLOT9 = $SLOT_END$
+	SLOT10 = $SLOT_END$
+}
