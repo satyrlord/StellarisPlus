@@ -1,5 +1,0 @@
-StellarisPlus integration merge log
-Generated: 2025-12-29 19:18:00
-Backup IDs: 827354193, 3257903117, 1783381443, 2212643108, 1223822935, 3439854455
-
-TOTAL newly-copied files (approx): 0
