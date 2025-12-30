@@ -18,7 +18,7 @@ machine_01 = {
 			graphical_culture = from
 		}
 	}
-	fallback = mammalian_01
+	fallback = cybernetics_01
 	ship_color = yes
 	ship_lighting = {
 		cam_light_1_dir = { 1.0 0.0 0.5 }
