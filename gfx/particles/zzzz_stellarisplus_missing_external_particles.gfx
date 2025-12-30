@@ -1,0 +1,36 @@
+objectTypes = {
+
+	# Placeholder particles for external content integrated into the mod
+	# (NSC/SCX/AJ assets reference these names, but their original particle packs are not present)
+
+	pdxparticle = {
+		name = "nsc_superdread_explosion_particle"
+		type = "spv2_placeholder_particle_file"
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "nsc_flagship_explosion_particle"
+		type = "spv2_placeholder_particle_file"
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "scx_capital_explosion_particle"
+		type = "spv2_placeholder_particle_file"
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "scx_supercapital_explosion_particle"
+		type = "spv2_placeholder_particle_file"
+		scale = 1.0
+	}
+
+	pdxparticle = {
+		name = "aj_titan2_explosion_particle"
+		type = "spv2_placeholder_particle_file"
+		scale = 1.0
+	}
+
+}
