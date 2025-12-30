@@ -14,10 +14,6 @@ objectTypes = {
 		name = "machine_01_colossus_frame_mesh"
 		file = "gfx/models/ships/Colossus_Assets/machine_01_colossus_frame.mesh"
 		
-		animation = { id = "idle"			type = "machine_01_colossus_frame_idle_animation" }
-		animation = { id = "closed_death"	type = "machine_01_colossus_frame_closed_death_animation" }
-		animation = { id = "opened_death"	type = "machine_01_colossus_frame_opened_death_animation" }
-		
 	}
 	
 	pdxmesh = {

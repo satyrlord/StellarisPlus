@@ -1,7 +1,7 @@
 objectTypes = {
 	pdxmesh = {
 		name = "machine_01_corvette_frame_mesh"
-		file = "gfx/models/ships/machine_01/machine_01_corvette_frame.mesh"
+		file = "gfx/models/ships/Corvette_Assets/machine_01_corvette_S3.mesh"
 		scale = 1.0
 
 		meshsettings = {
@@ -12,7 +12,7 @@ objectTypes = {
 
 	pdxmesh = {
 		name = "machine_01_orbital_station_frame_mesh"
-		file = "gfx/models/ships/machine_01/machine_01_orbital_station_frame.mesh"
+		file = "gfx/models/ships/Starbase_Assets/machine_01_orbital_station_frame.mesh"
 		scale = 1.0
 
 		meshsettings = {
@@ -23,7 +23,7 @@ objectTypes = {
 
 	pdxmesh = {
 		name = "machine_01_orbital_station_mesh"
-		file = "gfx/models/ships/machine_01/machine_01_orbital_station.mesh"
+		file = "gfx/models/ships/Starbase_Assets/machine_01_orbital_station_frame.mesh"
 		scale = 1.0
 
 		meshsettings = {
@@ -81,7 +81,7 @@ objectTypes = {
 	# Some entities reference this mesh name without the usual _mesh suffix.
 	pdxmesh = {
 		name = "molluscoid_01_juggernaut_frame"
-		file = "gfx/models/ships/juggernauts/molluscoid_01/molluscoid_01_juggernaut_frame.mesh"
+		file = "gfx/models/ships/molluscoid_01/molluscoid_01_battleship_frame.mesh"
 		scale = 1.0
 
 		meshsettings = {

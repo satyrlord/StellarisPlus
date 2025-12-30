@@ -1912,6 +1912,13 @@ entity = {
 }
 
 entity = {
+	name = "machine_01_ring_habitat_landmass_entity"
+	pdxmesh = "machine_01_ring_habitat_landmass_mesh"
+	scale = 1.5
+	
+}
+
+entity = {
 	name = "machine_01_mining_station_entity"
 	pdxmesh = "mammalian_01_mining_station_frame_mesh"
 

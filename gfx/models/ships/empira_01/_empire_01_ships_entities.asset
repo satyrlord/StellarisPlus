@@ -1635,7 +1635,7 @@ entity = {
 		}
 	}
 
-	entity = { name = "empira_01_sponsored_colonizer_entity" clone = "reptilian_01_colonizer_entity" }
+	entity = { name = "empira_01_sponsored_colonizer_entity" clone = "empira_01_colonizer_entity" }
 
 	entity = {
 		name = "empira_01_colony_ship_entity"

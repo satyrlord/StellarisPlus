@@ -36,24 +36,6 @@ $logFiles = @(
 )
 if ($IncludeException) { $logFiles += 'exception.txt' }
 
-$clipboardText = 'I have tested that your latest fix works as intended and copied the new logs to _logs_inbox. Analyze the logs the _log_inbox and check for any problems'
-
-function Set-SystemClipboardText {
-	param([Parameter(Mandatory=$true)][string]$Text)
-	try {
-		Set-Clipboard -Value $Text
-		return $true
-	} catch {
-		# Fallback for shells without Set-Clipboard
-		try {
-			$Text | & clip.exe
-			return $true
-		} catch {
-			return $false
-		}
-	}
-}
-
 # Ensure inbox exists
 if (-not (Test-Path -LiteralPath $InboxDir)) {
 	New-Item -ItemType Directory -Path $InboxDir -Force | Out-Null
@@ -88,14 +70,6 @@ foreach ($name in $logFiles) {
 	if (Test-Path -LiteralPath $src) {
 		Copy-Item -LiteralPath $src -Destination $dst -Force -ErrorAction SilentlyContinue
 	}
-}
-
-# 4) Copy the requested text to clipboard
-$clipboardOk = Set-SystemClipboardText -Text $clipboardText
-if ($clipboardOk) {
-	Write-Host 'Clipboard updated with confirmation text.' -ForegroundColor Green
-} else {
-	Write-Warning 'Failed to set clipboard text (Set-Clipboard and clip.exe both unavailable).'
 }
 
 Write-Host 'Collected logs:' -ForegroundColor Cyan

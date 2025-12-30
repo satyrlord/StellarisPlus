@@ -26,6 +26,10 @@ entity = {
 	name = "machine_01_juggernaut_core_section_entity"
 	pdxmesh = "machine_01_juggernaut_mesh"
 	
+	locator = { name = "strike_craft_locator_04" rotation = { 0 0 0 } }
+	locator = { name = "strike_craft_locator_05" rotation = { 0 0 0 } }
+	locator = { name = "strike_craft_locator_06" rotation = { 0 0 0 } }
+	
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
 		event = { time = 0 node = "engine_large_01" particle = "juggernaut_exhaust_idle_circle_m" trigger_once = yes keep_particle = yes }

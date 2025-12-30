@@ -336,6 +336,9 @@ entity = {
 	name = "biomass_01_starbase_turret_section_entity"
 	pdxmesh = "biomass_01_military_station_small_mesh"
 	
+	locator = { name = "medium_gun_01" position = { 0 0 0 } }
+	locator = { name = "medium_gun_02" position = { 0 0 0 } }
+	
 	default_state = "idle"
 	state = { name = "idle"
 		#start_event = { trigger_once = yes sound = { soundeffect = "swarm_small_station_idle" } }

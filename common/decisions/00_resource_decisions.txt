@@ -50,69 +50,69 @@ decision_planet_luxuries_boost = {
 		category = decisions
 		cost = {
 			trigger = {
-				planet_pop_count < 10
+				count_owned_pop_amount = { count < 10 }
 			}
 			consumer_goods = 100
 		}
 		cost = {
 			trigger = {
-				planet_pop_count >= 10
-				planet_pop_count < 20
+				count_owned_pop_amount = { count >= 10 }
+				count_owned_pop_amount = { count < 20 }
 			}
 			consumer_goods = 200
 		}
 		cost = {
 			trigger = {
-				planet_pop_count >= 20
-				planet_pop_count < 30
+				count_owned_pop_amount = { count >= 20 }
+				count_owned_pop_amount = { count < 30 }
 			}
 			consumer_goods = 300
 		}	
 		cost = {
 			trigger = {
-				planet_pop_count >= 30
-				planet_pop_count < 40
+				count_owned_pop_amount = { count >= 30 }
+				count_owned_pop_amount = { count < 40 }
 			}
 			consumer_goods = 400
 		}	
 		cost = {
 			trigger = {
-				planet_pop_count >= 40
-				planet_pop_count < 50
+				count_owned_pop_amount = { count >= 40 }
+				count_owned_pop_amount = { count < 50 }
 			}
 			consumer_goods = 500
 		}			
 		cost = {
 			trigger = {
-				planet_pop_count >= 50
-				planet_pop_count < 60
+				count_owned_pop_amount = { count >= 50 }
+				count_owned_pop_amount = { count < 60 }
 			}
 			consumer_goods = 600
 		}
 		cost = {
 			trigger = {
-				planet_pop_count >= 60
-				planet_pop_count < 70
+				count_owned_pop_amount = { count >= 60 }
+				count_owned_pop_amount = { count < 70 }
 			}
 			consumer_goods = 700
 		}			
 		cost = {
 			trigger = {
-				planet_pop_count >= 70
-				planet_pop_count < 85
+				count_owned_pop_amount = { count >= 70 }
+				count_owned_pop_amount = { count < 85 }
 			}
 			consumer_goods = 800
 		}
 		cost = {
 			trigger = {
-				planet_pop_count >= 85
-				planet_pop_count < 100
+				count_owned_pop_amount = { count >= 85 }
+				count_owned_pop_amount = { count < 100 }
 			}
 			consumer_goods = 900
 		}
 		cost = {
 			trigger = {
-				planet_pop_count >= 100
+				count_owned_pop_amount = { count >= 100 }
 			}
 			consumer_goods = 1000
 		}				

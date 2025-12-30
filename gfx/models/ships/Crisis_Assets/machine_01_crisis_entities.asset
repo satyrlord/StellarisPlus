@@ -1,3 +1,4 @@
+# spv2: crisis entities file (will be trimmed)
 @destroyer_scale = 10.5
 @corvette_scale = 6.5
 @cruiser_scale = 10.5
@@ -392,7 +393,7 @@ entity = {
 
 # FRAME
 entity = {
-	name = "machine_01_battleship_entity"
+	name = "spv2_crisisdup_machine_01_battleship_entity"
 	pdxmesh = "machine_01_battleship_frame_mesh"
 	
 	default_state = "idle"
@@ -468,7 +469,7 @@ entity = {
 
 # BOW
 entity = {
-	name = "machine_01_battleship_bow_L1M1S2_entity"
+	name = "spv2_crisisdup_machine_01_battleship_bow_L1M1S2_entity"
 	pdxmesh = "machine_01_battleship_bow_L1M1S2_mesh"
 	
 
@@ -488,7 +489,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_bow_L1S4_entity"
+	name = "spv2_crisisdup_machine_01_battleship_bow_L1S4_entity"
 	pdxmesh = "machine_01_battleship_bow_L1S4_mesh"
 	
 
@@ -508,7 +509,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_bow_L2_entity"
+	name = "spv2_crisisdup_machine_01_battleship_bow_L2_entity"
 	pdxmesh = "machine_01_battleship_bow_L2_mesh"
 	
 
@@ -528,7 +529,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_bow_M1S2SHB_entity"
+	name = "spv2_crisisdup_machine_01_battleship_bow_M1S2SHB_entity"
 	pdxmesh = "machine_01_battleship_bow_M1S2SHB_mesh"
 	
 		
@@ -553,7 +554,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_bow_M2S4_entity"
+	name = "spv2_crisisdup_machine_01_battleship_bow_M2S4_entity"
 	pdxmesh = "machine_01_battleship_bow_M2S4_mesh"
 	
 	
@@ -573,7 +574,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_bow_M3S2_entity"
+	name = "spv2_crisisdup_machine_01_battleship_bow_M3S2_entity"
 	pdxmesh = "machine_01_battleship_bow_M3S2_mesh"
 	
 
@@ -595,7 +596,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_bow_XL1_entity"
+	name = "spv2_crisisdup_machine_01_battleship_bow_XL1_entity"
 	pdxmesh = "machine_01_battleship_bow_XL1_mesh"
 		
 		
@@ -617,7 +618,7 @@ entity = {
 
 #MID
 entity = {
-	name = "machine_01_battleship_mid_L2S4_entity"
+	name = "spv2_crisisdup_machine_01_battleship_mid_L2S4_entity"
 	pdxmesh = "machine_01_battleship_mid_L2S4_mesh"
 	
 	
@@ -637,7 +638,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_mid_L1M4_entity"
+	name = "spv2_crisisdup_machine_01_battleship_mid_L1M4_entity"
 	pdxmesh = "machine_01_battleship_mid_L1M4_mesh"
 	
 		
@@ -663,7 +664,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_mid_L1M3_entity"
+	name = "spv2_crisisdup_machine_01_battleship_mid_L1M3_entity"
 	pdxmesh = "machine_01_battleship_mid_L1M4_mesh"
 	
 		
@@ -689,7 +690,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_mid_L2M2_entity"
+	name = "spv2_crisisdup_machine_01_battleship_mid_L2M2_entity"
 	pdxmesh = "machine_01_battleship_mid_L2M2_mesh"
 	
 		
@@ -715,7 +716,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_mid_L3_entity"
+	name = "spv2_crisisdup_machine_01_battleship_mid_L3_entity"
 	pdxmesh = "machine_01_battleship_mid_L3_mesh"
 	
 
@@ -742,7 +743,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_mid_M4SHB_entity"
+	name = "spv2_crisisdup_machine_01_battleship_mid_M4SHB_entity"
 	pdxmesh = "machine_01_battleship_mid_M4SHB_mesh"
 	
 
@@ -775,7 +776,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_mid_S4LHB_entity"
+	name = "spv2_crisisdup_machine_01_battleship_mid_S4LHB_entity"
 	pdxmesh = "machine_01_battleship_mid_S4LHB_mesh"
 	
 			
@@ -807,7 +808,7 @@ entity = {
 # STERN
 
 entity = {
-	name = "machine_01_battleship_stern_L1_entity"
+	name = "spv2_crisisdup_machine_01_battleship_stern_L1_entity"
 	pdxmesh = "machine_01_battleship_stern_L1_mesh"
 	
 
@@ -846,7 +847,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_stern_M1S2_entity"
+	name = "spv2_crisisdup_machine_01_battleship_stern_M1S2_entity"
 	pdxmesh = "machine_01_battleship_stern_M1S2_mesh"
 	
 		
@@ -876,7 +877,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_stern_M2_entity"
+	name = "spv2_crisisdup_machine_01_battleship_stern_M2_entity"
 	pdxmesh = "machine_01_battleship_stern_M2_mesh"
 	
 		
@@ -911,7 +912,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_battleship_stern_S4_entity"
+	name = "spv2_crisisdup_machine_01_battleship_stern_S4_entity"
 	pdxmesh = "machine_01_battleship_stern_S4_mesh"
 	
 			
@@ -945,7 +946,7 @@ entity = {
 ###################################################################################
 
 entity = {
-	name = "machine_01_missle_entity"
+	name = "spv2_crisisdup_machine_01_missle_entity"
 	pdxmesh = "arthropoid_01_missile_mesh"
 	
 	default_state = idle
@@ -957,7 +958,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_turret_energy_torpedo_entity"
+	name = "spv2_crisisdup_machine_01_turret_energy_torpedo_entity"
 	pdxmesh = "machine_01_turret_laser_large_mesh"
 	
 	state = { name = "idle"	}
@@ -967,7 +968,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_turret_torpedo_entity"
+	name = "spv2_crisisdup_machine_01_turret_torpedo_entity"
 	pdxmesh = "machine_01_turret_missile_large_mesh"
 	
 	state = { name = "idle"	}
@@ -977,7 +978,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_turret_missile_large_entity"
+	name = "spv2_crisisdup_machine_01_turret_missile_large_entity"
 	pdxmesh = "machine_01_turret_missile_large_mesh"
 	
 	state = { name = "idle"	}
@@ -987,7 +988,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_turret_missile_medium_entity"
+	name = "spv2_crisisdup_machine_01_turret_missile_medium_entity"
 	pdxmesh = "machine_01_turret_missile_medium_mesh"
 	
 	state = { name = "idle"	}
@@ -997,7 +998,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_turret_missile_small_entity"
+	name = "spv2_crisisdup_machine_01_turret_missile_small_entity"
 	pdxmesh = "machine_01_turret_missile_small_mesh"
 	
 	state = { name = "idle"	}
@@ -1007,7 +1008,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_large_kinetic_gun_entity"
+	name = "spv2_crisisdup_machine_01_large_kinetic_gun_entity"
 	pdxmesh = "machine_01_turret_projectile_large_mesh"
 	
 	state = { name = "idle"	}
@@ -1017,7 +1018,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_medium_kinetic_gun_entity"
+	name = "spv2_crisisdup_machine_01_medium_kinetic_gun_entity"
 	pdxmesh = "machine_01_turret_projectile_medium_mesh"
 	
 	state = { name = "idle"	}
@@ -1027,7 +1028,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_small_kinetic_gun_entity"
+	name = "spv2_crisisdup_machine_01_small_kinetic_gun_entity"
 	pdxmesh = "machine_01_turret_projectile_small_mesh"
 	
 	state = { name = "idle"	}
@@ -1040,7 +1041,7 @@ entity = {
 
 
 entity = {
-	name = "machine_01_turret_point_defence_entity"
+	name = "spv2_crisisdup_machine_01_turret_point_defence_entity"
 	pdxmesh = "machine_01_turret_point_defence_mesh"
 	
 	state = { name = "idle"	}
@@ -1054,7 +1055,7 @@ entity = {
 
 
 entity = {
-	name = "machine_01_large_laser_gun_entity"
+	name = "spv2_crisisdup_machine_01_large_laser_gun_entity"
 	pdxmesh = "machine_01_turret_laser_large_mesh"
 	
 	state = { name = "idle"	}
@@ -1064,7 +1065,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_medium_laser_gun_entity"
+	name = "spv2_crisisdup_machine_01_medium_laser_gun_entity"
 	pdxmesh = "machine_01_turret_laser_medium_mesh"
 	
 	state = { name = "idle"	}
@@ -1074,7 +1075,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_small_laser_gun_entity"
+	name = "spv2_crisisdup_machine_01_small_laser_gun_entity"
 	pdxmesh = "machine_01_turret_laser_small_mesh"
 	
 	state = { name = "idle"	}
@@ -1084,7 +1085,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_turret_xl_entity"
+	name = "spv2_crisisdup_machine_01_turret_xl_entity"
 	pdxmesh = "machine_01_turret_xl_mesh"
 	
 	state = { name = "idle"	}
@@ -1109,7 +1110,7 @@ entity = {
 # Amoeba Weapons
 
 entity = {
-	name = "machine_01_small_space_amoeba_weapon_entity"
+	name = "spv2_crisisdup_machine_01_small_space_amoeba_weapon_entity"
 	pdxmesh = "machine_01_turret_special_small_mesh"
 	
 	state = { name = "idle"	}
@@ -1119,7 +1120,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_medium_space_amoeba_weapon_entity"
+	name = "spv2_crisisdup_machine_01_medium_space_amoeba_weapon_entity"
 	pdxmesh = "machine_01_turret_special_medium_mesh"
 	
 	state = { name = "idle"	}
@@ -1129,7 +1130,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_large_space_amoeba_weapon_entity"
+	name = "spv2_crisisdup_machine_01_large_space_amoeba_weapon_entity"
 	pdxmesh = "machine_01_turret_special_large_mesh"
 	
 	state = { name = "idle"	}
@@ -1141,7 +1142,7 @@ entity = {
 # Space Cloud Weapons
 
 entity = {
-	name = "machine_01_small_space_cloud_weapon_entity"
+	name = "spv2_crisisdup_machine_01_small_space_cloud_weapon_entity"
 	pdxmesh = "machine_01_turret_special_small_mesh"
 	
 	state = { name = "idle"	}
@@ -1151,7 +1152,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_large_space_cloud_weapon_entity"
+	name = "spv2_crisisdup_machine_01_large_space_cloud_weapon_entity"
 	pdxmesh = "machine_01_turret_special_large_mesh"
 	
 	state = { name = "idle"	}
@@ -1163,7 +1164,7 @@ entity = {
 # Crystal Weapons
 
 entity = {
-	name = "machine_01_small_crystal_ship_weapon_entity"
+	name = "spv2_crisisdup_machine_01_small_crystal_ship_weapon_entity"
 	pdxmesh = "machine_01_turret_special_small_mesh"
 	
 	state = { name = "idle"	}
@@ -1173,7 +1174,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_medium_crystal_ship_weapon_entity"
+	name = "spv2_crisisdup_machine_01_medium_crystal_ship_weapon_entity"
 	pdxmesh = "machine_01_turret_special_medium_mesh"
 	
 	state = { name = "idle"	}
@@ -1183,7 +1184,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_large_crystal_ship_weapon_entity"
+	name = "spv2_crisisdup_machine_01_large_crystal_ship_weapon_entity"
 	pdxmesh = "machine_01_turret_special_large_mesh"
 	
 	state = { name = "idle"	}
@@ -1195,7 +1196,7 @@ entity = {
 # Mining Drone Weapons
 
 entity = {
-	name = "machine_01_small_mining_drone_weapon_entity"
+	name = "spv2_crisisdup_machine_01_small_mining_drone_weapon_entity"
 	pdxmesh = "machine_01_turret_special_small_mesh"
 	
 	state = { name = "idle"	}
@@ -1205,7 +1206,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_medium_mining_drone_weapon_entity"
+	name = "spv2_crisisdup_machine_01_medium_mining_drone_weapon_entity"
 	pdxmesh = "machine_01_turret_special_medium_mesh"
 	
 	state = { name = "idle"	}
@@ -1217,7 +1218,7 @@ entity = {
 # Space Whale Weapons
 
 entity = {
-	name = "machine_01_small_space_whale_weapon_entity"
+	name = "spv2_crisisdup_machine_01_small_space_whale_weapon_entity"
 	pdxmesh = "machine_01_turret_special_small_mesh"
 	
 	state = { name = "idle"	}
@@ -1227,7 +1228,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_medium_space_whale_weapon_entity"
+	name = "spv2_crisisdup_machine_01_medium_space_whale_weapon_entity"
 	pdxmesh = "machine_01_turret_special_medium_mesh"
 	
 	state = { name = "idle"	}
@@ -1237,7 +1238,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_large_space_whale_weapon_entity"
+	name = "spv2_crisisdup_machine_01_large_space_whale_weapon_entity"
 	pdxmesh = "machine_01_turret_special_large_mesh"
 	
 	state = { name = "idle"	}
@@ -1249,7 +1250,7 @@ entity = {
 # Swarm Weapons
 
 entity = {
-	name = "machine_01_small_scourge_projectile_weapon_entity"
+	name = "spv2_crisisdup_machine_01_small_scourge_projectile_weapon_entity"
 	pdxmesh = "machine_01_turret_special_small_mesh"
 	
 	state = { name = "idle"	}
@@ -1259,7 +1260,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_medium_scourge_projectile_weapon_entity"
+	name = "spv2_crisisdup_machine_01_medium_scourge_projectile_weapon_entity"
 	pdxmesh = "machine_01_turret_special_medium_mesh"
 	
 	state = { name = "idle"	}
@@ -1276,7 +1277,7 @@ entity = {
 ###################################################################################
 
 entity = {
-	name = "machine_01_bomber_entity"	
+	name = "spv2_crisisdup_machine_01_bomber_entity"	
 	pdxmesh = "machine_01_bomber_mesh"
 	scale = 0.6
 	
@@ -1286,7 +1287,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_droppod_entity"	
+	name = "spv2_crisisdup_machine_01_droppod_entity"	
 	pdxmesh = "machine_01_launcher_mesh"
 	scale = 0.85
 	
@@ -1296,7 +1297,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_fighter_entity"	
+	name = "spv2_crisisdup_machine_01_fighter_entity"	
 	pdxmesh = "machine_01_fighter_mesh"
 	scale = 0.6
 	
@@ -1311,7 +1312,7 @@ entity = {
 ###################################################################################
 
 entity = {
-	name = "machine_01_orbital_station_entity"
+	name = "spv2_crisisdup_machine_01_orbital_station_entity"
 	pdxmesh = "machine_01_orbital_station_frame_mesh"
 	
 	default_state = "idle"
@@ -1327,7 +1328,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_orbital_station_core_entity"
+	name = "spv2_crisisdup_machine_01_orbital_station_core_entity"
 	pdxmesh = "machine_01_orbital_station_mesh"
 	
 	default_state = "idle"
@@ -1358,7 +1359,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_orbital_station_assemblyyard_section_entity"
+	name = "spv2_crisisdup_machine_01_orbital_station_assemblyyard_section_entity"
 	pdxmesh = "machine_01_orbital_station_assemblyyard_section_mesh"
 	
 	
@@ -1376,7 +1377,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_orbital_station_hangarbay_section_entity"
+	name = "spv2_crisisdup_machine_01_orbital_station_hangarbay_section_entity"
 	pdxmesh = "machine_01_orbital_station_hangarbay_section_mesh"
 		
 	default_state = "idle"
@@ -1400,7 +1401,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_orbital_station_refinery_section_entity"
+	name = "spv2_crisisdup_machine_01_orbital_station_refinery_section_entity"
 	pdxmesh = "machine_01_orbital_station_refinery_section_mesh"
 	
 	game_data = {
@@ -1409,7 +1410,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_orbital_station_science_section_entity"
+	name = "spv2_crisisdup_machine_01_orbital_station_science_section_entity"
 	pdxmesh = "machine_01_orbital_station_science_section_mesh"
 	
 	default_state = "idle"
@@ -1424,7 +1425,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_orbital_station_hydroponics_section_entity"
+	name = "spv2_crisisdup_machine_01_orbital_station_hydroponics_section_entity"
 	pdxmesh = "machine_01_orbital_station_science_section_mesh"  ###will be given new model at some pt.###
 }
 
@@ -1433,7 +1434,7 @@ entity = {
 ###################################################
 
 entity = {
-	name = "machine_01_habitat_core_entity"  ####Shamfered-Triangular base for the habs.
+	name = "spv2_crisisdup_machine_01_habitat_core_entity"  ####Shamfered-Triangular base for the habs.
 	pdxmesh = "machine_01_habitat_core_mesh"
 	
 		game_data = {
@@ -1443,7 +1444,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_orbital_station_habitat_section_entity"  ###city section outriggers
+	name = "spv2_crisisdup_machine_01_orbital_station_habitat_section_entity"  ###city section outriggers
 	pdxmesh = "machine_01_orbital_station_habitat_section_mesh"
 
 	game_data = {
@@ -1453,7 +1454,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_habitat_phase_01_entity"
+	name = "spv2_crisisdup_machine_01_habitat_phase_01_entity"
 	pdxmesh = "machine_01_outpost_frame_mesh"	
 		default_state = "idle" 
 		state = { name = "idle" state_time = 5
@@ -1496,7 +1497,7 @@ entity = {
 
 
 entity = {
-	name = 		"machine_01_habitat_phase_02_entity"
+	name = 		"spv2_crisisdup_machine_01_habitat_phase_02_entity"
 	pdxmesh = 	"machine_01_outpost_frame_mesh"
 	
 	locator = { name = "part1"	position = { 0	0  0 } }	
@@ -1529,7 +1530,7 @@ game_data = {
 }
 
 entity = {
-	name = "machine_01_habitat_window_entity"
+	name = "spv2_crisisdup_machine_01_habitat_window_entity"
 	pdxmesh = "machine_01_habitat_window_mesh"
 
 
@@ -1544,7 +1545,7 @@ entity = {
 
 
 entity = {
-	name = "machine_01_habitat_phase_03_entity"
+	name = "spv2_crisisdup_machine_01_habitat_phase_03_entity"
 	pdxmesh = "machine_01_upgraded_orbital_habitat_frame_mesh"
 	locator = { name = explosion_effect position = { 0 3 0 } }
 	
@@ -1571,7 +1572,7 @@ sound = { soundeffect = "station_explosion_large" } }
 }
 
 entity = {
-	name = "machine_01_habitat_phase_03_section_entity"
+	name = "spv2_crisisdup_machine_01_habitat_phase_03_section_entity"
 	pdxmesh = "machine_01_upgraded_orbital_habitat_mesh"	
 	
 	scale = 1.5
@@ -1606,14 +1607,14 @@ entity = {
 	
 
 entity = {
-	name = "machine_01_ring_habitat_nightlights_entity"
+	name = "spv2_crisisdup_machine_01_ring_habitat_nightlights_entity"
 	pdxmesh = machine_01_ring_habitat_nightlights_mesh
 	scale = 1.5
 	
 }
 
 entity = {
-	name = "machine_01_mining_station_entity"
+	name = "spv2_crisisdup_machine_01_mining_station_entity"
 	pdxmesh = "mammalian_01_mining_station_frame_mesh"
 
 	locator = { name = "part1" 			position = { 0 	0 	0 } }
@@ -1637,7 +1638,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_mining_station_section_entity"
+	name = "spv2_crisisdup_machine_01_mining_station_section_entity"
 	pdxmesh = "machine_01_mining_station_mesh"
 
 	default_state = "idle"
@@ -1659,7 +1660,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_mining_station_construction_entity"
+	name = "spv2_crisisdup_machine_01_mining_station_construction_entity"
 	pdxmesh = "machine_01_mining_station_mesh"	
 		default_state = "idle"
 		state = { name = "idle" state_time = 5
@@ -1670,7 +1671,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_terraform_station_entity"
+	name = "spv2_crisisdup_machine_01_terraform_station_entity"
 	pdxmesh = "machine_01_mining_station_mesh"
 	
 	default_state = "idle"
@@ -1706,7 +1707,7 @@ entity = {
 
 
 entity = {
-	name = "machine_01_research_station_entity"
+	name = "spv2_crisisdup_machine_01_research_station_entity"
 	pdxmesh = "mammalian_01_science_station_frame_mesh"
 
 	locator = { name = "part1" 			position = { 0 	0 	0 } }
@@ -1729,7 +1730,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_research_station_section_entity"
+	name = "spv2_crisisdup_machine_01_research_station_section_entity"
 	pdxmesh = "machine_01_science_station_mesh"
 
 	default_state = "idle"
@@ -1756,7 +1757,7 @@ entity = {
 
 
 entity = {
-	name = "machine_01_research_station_construction_entity"
+	name = "spv2_crisisdup_machine_01_research_station_construction_entity"
 	pdxmesh = "machine_01_science_station_mesh"	
 		default_state = "idle"
 		state = { name = "idle" state_time = 5
@@ -1767,7 +1768,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_wormhole_station_entity"
+	name = "spv2_crisisdup_machine_01_wormhole_station_entity"
 	pdxmesh = "machine_01_science_station_mesh"
 	
 	default_state = "idle"
@@ -1796,7 +1797,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_observation_station_entity"
+	name = "spv2_crisisdup_machine_01_observation_station_entity"
 	pdxmesh = "machine_01_science_station_mesh"
 	
 	default_state = "idle"
@@ -1836,7 +1837,7 @@ entity = {
 #}
 
 entity = {
-	name = "machine_01_military_station_large_entity"
+	name = "spv2_crisisdup_machine_01_military_station_large_entity"
 	pdxmesh = "machine_01_military_station_large_mesh"
 	
 	default_state = "idle"
@@ -1869,7 +1870,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_military_station_medium_entity"
+	name = "spv2_crisisdup_machine_01_military_station_medium_entity"
 	pdxmesh = "machine_01_military_station_medium_mesh"
 	
 	default_state = "idle"
@@ -1902,7 +1903,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_military_station_small_entity"
+	name = "spv2_crisisdup_machine_01_military_station_small_entity"
 	pdxmesh = "machine_01_military_station_small_mesh"
 
 	
@@ -1932,7 +1933,7 @@ entity = {
 }	
 
 entity = {
-	name = "machine_01_military_station_section_heavy_entity"
+	name = "spv2_crisisdup_machine_01_military_station_section_heavy_entity"
 	pdxmesh = "machine_01_military_station_section_heavy_mesh"	
 	scale = 1.0
 	
@@ -1942,7 +1943,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_military_station_section_medium_entity"
+	name = "spv2_crisisdup_machine_01_military_station_section_medium_entity"
 	pdxmesh = "machine_01_military_station_section_medium_mesh"	
 	scale = 1.0
 	
@@ -1952,7 +1953,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_military_station_section_light_entity"
+	name = "spv2_crisisdup_machine_01_military_station_section_light_entity"
 	pdxmesh = "machine_01_military_station_section_light_mesh"	
 	scale = 1.0
 	
@@ -1962,7 +1963,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_outpost_station_entity"
+	name = "spv2_crisisdup_machine_01_outpost_station_entity"
 
 	default_state = "idle"
 	state = { name = "idle" state_time = 5
@@ -1980,8 +1981,8 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_outpost_station_section_entity"
-	clone = "machine_01_military_station_small_entity"
+	name = "spv2_crisisdup_machine_01_outpost_station_section_entity"
+	clone = "spv2_crisisdup_machine_01_military_station_small_entity"
 
 	state = { name = "idle" state_time = 5
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_outpost_station_idle" } }
@@ -2008,7 +2009,7 @@ entity = {
 ###################################################################################
 
 entity = {
- name = "machine_01_constructor_entity"
+ name = "spv2_crisisdup_machine_01_constructor_entity"
 	pdxmesh = "molluscoid_01_corvette_frame_mesh"
 	
 	default_state = "idle"
@@ -2032,7 +2033,7 @@ entity = {
 
 
 entity = {
- name = "machine_01_construction_ship_entity"
+ name = "spv2_crisisdup_machine_01_construction_ship_entity"
 	pdxmesh = "machine_01_construction_mesh"
 		
 	default_state = "idle"
@@ -2100,7 +2101,7 @@ entity = {
 }
 
 entity = {
-	name = "machine_01_colonizer_entity"
+	name = "spv2_crisisdup_machine_01_colonizer_entity"
 	pdxmesh = "machine_01_corvette_frame_mesh"
 	#locator = { name = "part1" 		position = { 0  0  0 } }
 	
@@ -2118,10 +2119,10 @@ entity = {
 	}
 }
 
-entity = { name = "machine_01_sponsored_colonizer_entity" clone = "machine_01_colonizer_entity" }
+entity = { name = "spv2_crisisdup_machine_01_sponsored_colonizer_entity" clone = "spv2_crisisdup_machine_01_colonizer_entity" }
 
 		entity = {
-			name = "machine_01_colony_ship_entity"	
+			name = "spv2_crisisdup_machine_01_colony_ship_entity"	
 			pdxmesh = "machine_01_colony_mesh"
 			
 			state = { name = "idle" state_time = 5
@@ -2191,7 +2192,7 @@ entity = { name = "machine_01_sponsored_colonizer_entity" clone = "machine_01_co
 	#}
 
 	entity = {
-		name = "machine_01_science_entity"
+		name = "spv2_crisisdup_machine_01_science_entity"
 		pdxmesh = "molluscoid_01_corvette_frame_mesh"
 	
 		default_state = "idle"
@@ -2205,7 +2206,7 @@ entity = { name = "machine_01_sponsored_colonizer_entity" clone = "machine_01_co
 	}
 
 entity = {
- name = "machine_01_science_ship_entity"
+ name = "spv2_crisisdup_machine_01_science_ship_entity"
 	pdxmesh = "machine_01_science_mesh"
 	
 	default_state = "idle"
@@ -2260,7 +2261,7 @@ entity = {
 
 
 entity = {
- name = "machine_01_transport_entity"
+ name = "spv2_crisisdup_machine_01_transport_entity"
 	pdxmesh = "machine_01_corvette_frame_mesh"
 	
 	default_state = "idle"
@@ -2280,7 +2281,7 @@ entity = {
 }
 
 entity = {
- name = "machine_01_transport_ship_entity"
+ name = "spv2_crisisdup_machine_01_transport_ship_entity"
 	pdxmesh = "machine_01_transport_mesh"
 	
 	default_state = "idle"
@@ -2328,4 +2329,5 @@ entity = {
 		}
 	}
 }
+
 
