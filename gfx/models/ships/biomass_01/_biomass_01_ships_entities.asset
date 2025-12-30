@@ -2358,8 +2358,8 @@ entity = {
 		event = { time = 0.5 node = "gib_locator_02" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
 		event = { time = 1.5 node = "gib_locator_03" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
 	
-		event = { time = 4.9 particle = "gib_locator_01" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
-		event = { time = 4.9 particle = "gib_locator_03" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		event = { time = 4.9 node = "gib_locator_01" particle = "large_ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		event = { time = 4.9 node = "gib_locator_03" particle = "large_ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
 	
     scale = 1.0
@@ -2607,8 +2607,8 @@ entity = {
 		event = { time = 0.5 node = "gib_locator_02" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
 		event = { time = 1.5 node = "gib_locator_03" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
 	
-		event = { time = 4.9 particle = "gib_locator_01" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
-		event = { time = 4.9 particle = "gib_locator_03" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		event = { time = 4.9 node = "gib_locator_01" particle = "large_ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		event = { time = 4.9 node = "gib_locator_03" particle = "large_ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
 	
     scale = 1.0
@@ -2629,8 +2629,8 @@ entity = {
 		event = { time = 0.5 node = "gib_locator_02" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
 		event = { time = 1.5 node = "gib_locator_03" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
 	
-		event = { time = 4.9 particle = "gib_locator_01" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
-		event = { time = 4.9 particle = "gib_locator_03" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		event = { time = 4.9 node = "gib_locator_01" particle = "large_ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		event = { time = 4.9 node = "gib_locator_03" particle = "large_ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
 	}
 	
     scale = 1.0
