@@ -4,6 +4,21 @@
 #gfxculture avian_01
 
 terrahuman_01 = {
+	ship_kinds = {
+		default_ship
+		space_amoeba
+		tiyanki
+		voidworm
+		cutholoid
+		crystalline_entity
+	}
+	ship_selection_weight = {
+		base = 0
+		modifier = {
+			set = 10
+			graphical_culture = from
+		}
+	}
 	fallback = mammalian_01 
 	ship_color = yes
 	ship_lighting = {
@@ -27,6 +42,21 @@ terrahuman_01 = {
 }
 
 biomass_01 = {
+	ship_kinds = {
+		default_ship
+		space_amoeba
+		tiyanki
+		voidworm
+		cutholoid
+		crystalline_entity
+	}
+	ship_selection_weight = {
+		base = 0
+		modifier = {
+			set = 10
+			graphical_culture = from
+		}
+	}
 	fallback = molluscoid_01 
 	ship_color = yes
 	ship_lighting = {
@@ -50,6 +80,21 @@ biomass_01 = {
 }
 
 salvager_01 = {
+	ship_kinds = {
+		default_ship
+		space_amoeba
+		tiyanki
+		voidworm
+		cutholoid
+		crystalline_entity
+	}
+	ship_selection_weight = {
+		base = 0
+		modifier = {
+			set = 10
+			graphical_culture = from
+		}
+	}
 	fallback = arthropoid_01 
 	ship_color = yes
 	ship_lighting = {
@@ -73,6 +118,21 @@ salvager_01 = {
 }
 
 empira_01 = {
+	ship_kinds = {
+		default_ship
+		space_amoeba
+		tiyanki
+		voidworm
+		cutholoid
+		crystalline_entity
+	}
+	ship_selection_weight = {
+		base = 0
+		modifier = {
+			set = 10
+			graphical_culture = from
+		}
+	}
 	fallback = reptilian_01 
 	ship_color = yes
 	ship_lighting = {

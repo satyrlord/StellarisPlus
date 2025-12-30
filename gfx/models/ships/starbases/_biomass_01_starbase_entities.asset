@@ -181,7 +181,7 @@ entity = {
 	pdxmesh = "biomass_01_starbase_frame_mesh"	
 	
 	default_state = "idle"
-	state = { name = "idle"
+	state = { name = "idle" animation = "idle"
 		start_event = { trigger_once = yes sound = { soundeffect = "swarm_big_station_idle" } }
 	}
 	
@@ -196,7 +196,7 @@ entity = {
 	pdxmesh = "biomass_01_starbase_frame_mesh"	
 	
 	default_state = "idle"
-	state = { name = "idle"
+	state = { name = "idle" animation = "idle"
 		start_event = { trigger_once = yes sound = { soundeffect = "swarm_big_station_idle" } }
 	}
 
@@ -211,7 +211,7 @@ entity = {
 	pdxmesh = "biomass_01_starbase_frame_mesh"	
 	
 	default_state = "idle"
-	state = { name = "idle"
+	state = { name = "idle" animation = "idle"
 		start_event = { trigger_once = yes sound = { soundeffect = "swarm_big_station_idle" } }
 	}
 
@@ -226,7 +226,7 @@ entity = {
 	pdxmesh = "biomass_01_starbase_frame_mesh"	
 	
 	default_state = "idle"
-	state = { name = "idle"
+	state = { name = "idle" animation = "idle"
 		start_event = { trigger_once = yes sound = { soundeffect = "swarm_big_station_idle" } }
 	}
 	
@@ -242,7 +242,7 @@ entity = {
 	pdxmesh = "biomass_01_starbase_frame_mesh"	
 	
 	default_state = "idle"
-	state = { name = "idle"
+	state = { name = "idle" animation = "idle"
 		start_event = { trigger_once = yes sound = { soundeffect = "swarm_big_station_idle" } }
 	}
 
@@ -257,7 +257,7 @@ entity = {
 	pdxmesh = "biomass_01_starbase_frame_mesh"	
 
 	default_state = "idle"
-	state = { name = "idle"
+	state = { name = "idle" animation = "idle"
 		start_event = { trigger_once = yes sound = { soundeffect = "swarm_big_station_idle" } }
 	}
 

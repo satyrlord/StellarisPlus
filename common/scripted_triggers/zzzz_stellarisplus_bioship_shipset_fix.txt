@@ -1,0 +1,15 @@
+#####################
+# Scripted Triggers #
+#       Ships       #
+#####################
+
+# StellarisPlus: terrahuman_01 and salvager_01 are regular shipsets.
+# Some upstream logic keys off country_uses_bio_ships to decide starting designs/ship sizes.
+# If these shipsets are treated as bio ships, normal empires can end up with no valid designs.
+
+country_uses_bio_ships = {
+	exists = this
+	uses_ship_category = bio_ship
+	NOT = { graphical_culture = terrahuman_01 }
+	NOT = { graphical_culture = salvager_01 }
+}

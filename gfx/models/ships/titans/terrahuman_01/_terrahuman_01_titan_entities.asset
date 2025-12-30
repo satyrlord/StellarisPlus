@@ -114,7 +114,7 @@ entity = {
 		start_event = { node = "root" particle = "ion_cannon_core_effect" keep_particle = yes trigger_once = yes }
 	}
 	
-	attach = { "root" = "ion_cannon_core_entity" }
+	attach = { "root" = "terrahuman_01_ion_cannon_core_entity" }
 }
 
 entity = {

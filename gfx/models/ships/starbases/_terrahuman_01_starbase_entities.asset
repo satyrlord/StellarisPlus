@@ -325,11 +325,11 @@ entity = {
 		start_event = { node = "root" particle = "ion_cannon_core_effect" keep_particle = yes trigger_once = yes }
 	}
 	
-	attach = { "root" = "ion_cannon_core_entity" }
+	attach = { "root" = "terrahuman_01_ion_cannon_core_entity" }
 }
 
 entity = {
-	name = "ion_cannon_core_entity"
+	name = "terrahuman_01_ion_cannon_core_entity"
 	pdxmesh = "mammalian_01_ion_cannon_core_mesh"
 	scale = 1.0
 	
