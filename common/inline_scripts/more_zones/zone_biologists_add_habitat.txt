@@ -1,0 +1,53 @@
+### REGULAR EMPIRES
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOT = {
+				has_country_flag = fallen_empire_1
+			}
+		}
+		planet_is_habitat_equivalent = yes
+	}
+	job_biologist_add = $LARGE_AMOUNT$
+	mult = owner.value:hab_void_dweller_jobs
+}
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_active_tradition = tr_virtuality_4
+			NOT = {
+				has_country_flag = fallen_empire_1
+			}
+		}
+		planet_is_habitat_equivalent = yes
+	}
+	job_biologist_add = $LARGE_AMOUNT$
+	mult = owner.value:hab_void_dweller_virtual_jobs
+}
+
+### GESTALT EMPIRES
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		planet_is_habitat_equivalent = yes
+	}
+	job_calculator_biologist_add = $LARGE_AMOUNT$
+	mult = owner.value:hab_void_dweller_jobs
+}
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+			has_active_tradition = tr_virtuality_4
+		}
+		planet_is_habitat_equivalent = yes
+	}
+	job_calculator_biologist_add = $LARGE_AMOUNT$
+	mult = owner.value:hab_void_dweller_virtual_jobs
+}

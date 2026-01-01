@@ -1,0 +1,57 @@
+icon = GFX_MZ_genomic_researcher
+base_buildtime = @zone_buildtime
+potential = { # planet scope
+    hidden_trigger = { exists = owner }
+    owner = {
+        has_country_flag = genomic_research_facility_unlocked
+        is_gestalt = no
+        is_wilderness_empire = no
+        is_ai = no						# AI isn't great at handling these
+    }
+}
+
+unlock = { # planet scope
+    hidden_trigger = { exists = owner }
+    owner = {
+        has_country_flag = genomic_research_facility_unlocked
+        is_gestalt = no
+        is_wilderness_empire = no
+    }
+}
+
+resources = {
+    category = planet_zones
+    cost = {
+        minerals = @zone_cost
+    }
+}
+
+included_building_sets = {
+    research
+    origin
+}
+
+include = {
+    building_genomic_facility
+    building_toxic_bath
+    building_medical_1
+    building_medical_2
+    building_medical_3
+    building_fe_clinic_1
+    building_fe_clinic_2
+    building_clone_vats
+}
+
+planet_modifier = {
+    zone_building_slots_add = @BPV_ZONE_SLOT
+}
+
+triggered_desc = {
+    trigger = {
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+        }
+    }
+    text = job_healthcare_effect_desc
+}

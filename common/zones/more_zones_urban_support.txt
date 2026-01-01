@@ -1,0 +1,298 @@
+# hybrid energy + mineral
+zone_MZ_urban_energy_minerals = {
+	icon = GFX_MZ_resource_energy_mineral_large
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = @[ BPV_ZONE_SLOT * BPV_compatibility_load ]
+
+	zone_sets = {
+		urban
+	}
+
+	included_building_sets = {
+		generator
+		mining
+		urban
+		fallen_empire_generator
+		fallen_empire_mining
+		automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = @[ BPV_ZONE_SLOT * BPV_compatibility_load ]
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_technician_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_technician_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+		planet_miners_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_miners_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 0
+}
+
+# hybrid mineral + food
+zone_MZ_urban_minerals_food = {
+	icon = GFX_MZ_resource_minerals_food_large
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	zone_sets = {
+		urban
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = @[ BPV_ZONE_SLOT * BPV_compatibility_load ]
+
+	included_building_sets = {
+		mining
+		farming
+		urban
+		fallen_empire_mining
+		hydroponics
+		automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = @[ BPV_ZONE_SLOT * BPV_compatibility_load ]
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_miners_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_miners_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+		planet_farmers_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_farmers_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 0
+}
+
+# hybrid food + energy
+zone_MZ_urban_food_energy = {
+	icon = GFX_MZ_resource_food_energy_large
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOT = {
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = @[ BPV_ZONE_SLOT * BPV_compatibility_load ]
+
+	zone_sets = {
+		urban
+	}
+
+	included_building_sets = {
+		farming
+		generator
+		urban
+		hydroponics
+		fallen_empire_generator
+		automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = @[ BPV_ZONE_SLOT * BPV_compatibility_load ]
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_farmers_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_farmers_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+		planet_technician_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_technician_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 0
+}
+
+# hybrid everything
+zone_MZ_urban_basic = {
+	icon = GFX_MZ_resource_basic_large
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = @[ BPV_ZONE_SLOT * BPV_compatibility_load ]
+
+	zone_sets = {
+		urban
+	}
+
+	included_building_sets = {
+		generator
+		mining
+		farming
+		urban
+		fallen_empire_generator
+		fallen_empire_mining
+		hydroponics
+		automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = @[ BPV_ZONE_SLOT * BPV_compatibility_load ]
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_technician_produces_mult = @[ zone_urban_rural_worker_produces_mult / 3 ]
+		planet_technician_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 3 ]
+		planet_miners_produces_mult = @[ zone_urban_rural_worker_produces_mult / 3 ]
+		planet_miners_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 3 ]
+		planet_farmers_produces_mult = @[ zone_urban_rural_worker_produces_mult / 3 ]
+		planet_farmers_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 3 ]
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 0
+}

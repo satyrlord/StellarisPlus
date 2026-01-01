@@ -1,0 +1,206 @@
+namespace = more_zones
+
+## Payback origin
+# recurring yearly check to see if revenge finished
+country_event = {
+    id = more_zones.1000
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_payback
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                NOT = { has_country_flag = payback_revenge_complete }
+            }
+            country_event = {
+                id = more_zones.1000
+                days = 360
+            }
+        }
+        else = {
+            country_event = {
+                id = more_zones.1001
+            }
+        }
+    }
+}
+# tell about new zone and give option to swap homeworld's enlightenment zone with it if it's still around
+# this is because you can't use manual build order to replace the zone it is conflicting with due to how condition triggers work
+country_event = {
+    id = more_zones.1001
+	title = "more_zones.1001.name"
+	desc = "more_zones.1001.desc"
+	picture = GFX_evt_genetic_ascension_purity
+	show_sound = event_construction
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_payback
+        has_country_flag = payback_revenge_complete
+    }
+
+    option = {
+        name = EXCELLENT
+		custom_tooltip = "more_zones.1001.a.tooltip"
+    }
+
+    option = {
+        name = "more_zones.1001.b"
+        trigger = {
+            any_planet_within_border = {
+                has_zone = {
+                    zone = zone_payback_enlightenment
+                }
+            }
+        }
+        allow = {
+            any_planet_within_border = {
+                has_zone = {
+                    zone = zone_payback_enlightenment
+                }
+            }
+        }
+        # really it should only be the home planet you started with, but just in case some multiple payback origins shenanigans happened
+		custom_tooltip = "more_zones.1001.b.tooltip"
+        hidden_effect = {
+            every_planet_within_border = {
+                limit = {
+                    has_zone = {
+                        zone = zone_payback_enlightenment
+                    }
+                }
+                add_zone = {
+                    district = district_city
+                    zone = zone_MZ_payback
+                    zone_slot = 1
+                    replace = yes
+                }
+            }
+        }
+    }
+}
+
+## Starlit Citadel origin
+# wait 2 years so the event chain has chance to begin
+country_event = {
+    id = more_zones.2000
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_starlit_citadel
+    }
+
+    immediate = {
+        country_event = {
+            id = more_zones.2001
+            days = 720
+        }
+    }
+}
+# recurring yearly check to see if event chains have been finished
+country_event = {
+    id = more_zones.2001
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_starlit_citadel
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                OR = {
+                    has_event_chain = abandoned_hatchery_chain_1
+                    has_event_chain = abandoned_hatchery_chain_2
+                    has_event_chain = abandoned_hatchery_chain_3
+                    has_event_chain = abandoned_hatchery_chain_4
+                }
+            }
+            country_event = {
+                id = more_zones.2001
+                days = 360
+            }
+        }
+        else = {
+            country_event = {
+                id = more_zones.2002
+            }
+        }
+    }
+}
+# tell about new zone
+country_event = {
+    id = more_zones.2002
+	title = "more_zones.2002.name"
+	desc = "more_zones.2002.desc"
+	picture = GFX_evt_astral_rift_microverse
+	show_sound = event_construction
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_starlit_citadel
+        NOR = {
+            has_event_chain = abandoned_hatchery_chain_1
+            has_event_chain = abandoned_hatchery_chain_2
+            has_event_chain = abandoned_hatchery_chain_3
+            has_event_chain = abandoned_hatchery_chain_4
+        }
+    }
+
+    option = {
+        name = EXCELLENT
+		custom_tooltip = "more_zones.2002.a.tooltip"
+    }
+}
+
+## Prosperous Unification origin
+# wait a day to let civic/origin initializers do their thing first
+country_event = {
+    id = more_zones.3000
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_default
+    }
+
+    immediate = {
+        country_event = {
+            id = more_zones.3001
+            days = 1
+        }
+    }
+}
+# replace Archive you start with for the better version
+country_event = {
+    id = more_zones.3001
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_default
+    }
+
+    immediate = {
+        every_planet_within_border = {
+            limit = {
+                has_zone = {
+                    zone = zone_research_unity
+                }
+            }
+            remove_building = building_research_lab_1
+            add_zone = {
+                district = district_city
+                zone = zone_MZ_default
+                zone_slot = slot_city_01
+                replace = yes
+            }
+        }
+    }
+}

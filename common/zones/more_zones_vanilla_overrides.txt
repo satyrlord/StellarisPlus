@@ -1,0 +1,90 @@
+# modify to provide double jobs for habitat research district, since the base district jobs are removed by them
+zone_research_physics = {
+	inline_script = {
+		script = zones/shared_research_physics_zone
+		AMOUNT = @scaling_district_1_job
+	}
+
+    inline_script = {
+        script = more_zones/zone_physicists_add_habitat
+        LARGE_AMOUNT = @scaling_district_1_job
+    }
+
+	triggered_desc = {
+		trigger = {
+			planet_is_habitat_equivalent = yes
+		}
+		text = MZ_remove_unspecialized_researcher_jobs
+	}
+
+	zone_sets = {
+		urban
+		habitat_research
+	}
+
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	ai_priority = 15
+}
+
+zone_research_society = {
+	inline_script = {
+		script = zones/shared_research_society_zone
+		AMOUNT = @scaling_district_1_job
+	}
+
+    inline_script = {
+        script = more_zones/zone_biologists_add_habitat
+        LARGE_AMOUNT = @scaling_district_1_job
+    }
+
+	triggered_desc = {
+		trigger = {
+			planet_is_habitat_equivalent = yes
+		}
+		text = MZ_remove_unspecialized_researcher_jobs
+	}
+
+	zone_sets = {
+		urban
+		habitat_research
+	}
+
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	ai_priority = 15
+}
+
+zone_research_engineering = {
+	inline_script = {
+		script = zones/shared_research_engineering_zone
+		AMOUNT = @scaling_district_1_job
+	}
+
+    inline_script = {
+        script = more_zones/zone_engineers_add_habitat
+        LARGE_AMOUNT = @scaling_district_1_job
+    }
+
+	triggered_desc = {
+		trigger = {
+			planet_is_habitat_equivalent = yes
+		}
+		text = MZ_remove_unspecialized_researcher_jobs
+	}
+
+	zone_sets = {
+		urban
+		habitat_research
+	}
+
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	ai_priority = 15
+}

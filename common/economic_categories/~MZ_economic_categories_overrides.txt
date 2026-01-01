@@ -1,0 +1,12 @@
+planet_soldiers = {
+	parent = planet_jobs_worker
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = pop_job
+}

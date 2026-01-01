@@ -1,0 +1,347 @@
+### Regular Empires
+# Planets
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_habitat_equivalent = no
+		planet_is_ecu_equivalent = no
+		planet_is_ring_world_equivalent = no
+	}
+	job_enforcer_add = $AMOUNT$
+}
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_habitat_equivalent = no
+		planet_is_ecu_equivalent = no
+		planet_is_ring_world_equivalent = no
+	}
+	job_telepath_add = $AMOUNT$
+    mult = 0.25
+}
+
+# Habitats
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_habitat_equivalent = yes
+	}
+	job_enforcer_add = $AMOUNT$
+	mult = owner.value:hab_void_dweller_jobs
+}
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = no
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_habitat_equivalent = yes
+	}
+	job_telepath_add = $AMOUNT$
+    mult = 0.25
+	mult = owner.value:hab_void_dweller_jobs
+}
+
+# Ecus
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_ecu_equivalent = yes
+	}
+	job_enforcer_add = $AMOUNT$
+	mult = 3
+}
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_ecu_equivalent = yes
+	}
+	job_telepath_add = $AMOUNT$
+    mult = 0.75
+}
+
+# Ringworld
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_ring_world_equivalent = yes
+	}
+	job_enforcer_add = $AMOUNT$
+	mult = 5
+}
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_ring_world_equivalent = yes
+	}
+	job_telepath_add = $AMOUNT$
+	mult = 1.25
+}
+
+# Description
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+			NOT = { has_valid_civic = civic_civil_education }
+		}
+	}
+	text = job_enforcer_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+			has_valid_civic = civic_civil_education
+		}
+	}
+	text = job_educator_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+	}
+	text = job_telepath_effect_desc
+}
+
+### Gestalt Empires
+# Planets
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_habitat_equivalent = no
+		planet_is_ecu_equivalent = no
+		planet_is_ring_world_equivalent = no
+	}
+	job_patrol_drone_add = $AMOUNT$
+}
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_habitat_equivalent = no
+		planet_is_ecu_equivalent = no
+		planet_is_ring_world_equivalent = no
+	}
+	job_telepath_drone_add = $AMOUNT$
+    mult = 0.25
+}
+
+# Habitats
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_habitat_equivalent = yes
+	}
+	job_patrol_drone_add = $AMOUNT$
+	mult = owner.value:hab_void_dweller_jobs
+}
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_habitat_equivalent = yes
+	}
+	job_telepath_drone_add = $AMOUNT$
+    mult = 0.25
+	mult = owner.value:hab_void_dweller_jobs
+}
+
+# Ecus
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_ecu_equivalent = yes
+	}
+	job_patrol_drone_add = $AMOUNT$
+	mult = 3
+}
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_ecu_equivalent = yes
+	}
+	job_telepath_drone_add = $AMOUNT$
+	mult = 0.75
+}
+
+# Ringworld
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_ring_world_equivalent = yes
+	}
+	job_patrol_drone_add = $AMOUNT$
+	mult = 5
+}
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+		}
+		planet_is_ring_world_equivalent = yes
+	}
+	job_telepath_drone_add = $AMOUNT$
+	mult = 1.25
+}
+
+# Description
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+			is_wilderness_empire = no
+		}
+	}
+	text = job_patrol_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+			is_wilderness_empire = no
+		}
+	}
+	text = job_telepath_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_wilderness_empire = yes
+		}
+	}
+	text = job_tamersymbiont_effect_desc
+}

@@ -1,0 +1,508 @@
+# Payback: beefed up medical zone with actual medical building capabilities. need to finsh MSI to gain access
+# because it needs to be so busted in order to be comparable to the one you start with, you can only build one per colony in city district
+zone_MZ_payback = {
+    icon = GFX_MZ_medical_worker
+    base_buildtime = @zone_buildtime
+	planet_limit = 1
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            has_country_flag = payback_revenge_complete
+            is_ai = no						# AI isn't great at handling these
+        }
+        NOR = {
+            has_zone = {
+                zone = zone_MZ_payback
+            }
+            has_zone = {
+                zone = zone_payback_enlightenment
+            }
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            has_country_flag = payback_revenge_complete
+        }
+        NOR = {
+            has_zone = {
+                zone = zone_MZ_payback
+            }
+            has_zone = {
+                zone = zone_payback_enlightenment
+            }
+        }
+    }
+
+    resources = {
+        category = planet_zones
+        cost = {
+            minerals = @zone_cost
+        }
+    }
+
+    included_building_sets = {
+        government
+        origin
+    }
+
+    include = {
+        building_genomic_facility
+        building_toxic_bath
+        building_medical_1
+        building_medical_2
+        building_medical_3
+        building_fe_clinic_1
+        building_fe_clinic_2
+        building_clone_vats
+    }
+
+    planet_modifier = {
+        zone_building_slots_add = @BPV_ZONE_SLOT
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_healthcare_effect_desc
+    }
+
+    # regular planet
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_habitat_equivalent = no
+            planet_is_ecu_equivalent = no
+            planet_is_ring_world_equivalent = no
+        }
+        job_healthcare_add = 40
+    }
+    # Habitats
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_habitat_equivalent = yes
+        }
+        job_healthcare_add = 20
+        mult = owner.value:hab_void_dweller_jobs
+    }
+    # Ecus
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_ecu_equivalent = yes
+        }
+        job_healthcare_add = 60
+    }
+    # Ringworlds
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_ring_world_equivalent = yes
+        }
+        job_healthcare_add = 100
+    }
+
+    ## toned down medical building capabilities
+    # shared
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_purity_heightened_attributes_tradition = yes
+					has_cloning_artificial_population_tradition = yes
+					has_mutation_somatic_subversiveness_tradition = yes
+				}
+			}
+            planet_is_ring_world_equivalent = no
+		}
+		organic_pop_bonus_workforce_mult = 0.01
+	}
+    # regular planet + habitat
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+            planet_is_ecu_equivalent = no
+            planet_is_ring_world_equivalent = no
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 100
+		}
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+            planet_is_ecu_equivalent = no
+            planet_is_ring_world_equivalent = no
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 100
+		}
+	}
+    # ecu
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+            planet_is_ecu_equivalent = yes
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+            planet_is_ecu_equivalent = yes
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+    # ring
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+            planet_is_ring_world_equivalent = yes
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 300
+		}
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+            planet_is_ring_world_equivalent = yes
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 300
+		}
+	}
+	triggered_district_planet_modifier = {   # extra for rings cuz they get less districts
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_purity_heightened_attributes_tradition = yes
+					has_cloning_artificial_population_tradition = yes
+					has_mutation_somatic_subversiveness_tradition = yes
+				}
+			}
+            planet_is_ring_world_equivalent = yes
+		}
+		organic_pop_bonus_workforce_mult = 0.02
+	}
+
+    zone_sets = {
+        urban
+		habitat_urban
+    }
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	convert_to = {
+		zone_MZ_medical
+	}
+}
+
+# Starlit Citadel: essentially Citadel Uplink building turned into a zone, with job upkeep reduction to ease up on alloys
+# essentially a soldier zone with job swapped for skywatchers. still 1 per planet limit cuz 200 range PD might be too much fun
+zone_MZ_starlit_citadel = {
+    icon = GFX_MZ_skywatcher
+    base_buildtime = @zone_buildtime
+	planet_limit = 1
+    potential = { # planet scope
+        days_passed > 720   # ensures you can't build it at start of the game when you don't have any event chains
+        exists = owner
+        owner = {
+            has_origin = origin_starlit_citadel
+            NOR = { # use this instead of country_flag = unlocks_warden_of_the_citadel since gestalts don't get that
+                has_event_chain = abandoned_hatchery_chain_1
+                has_event_chain = abandoned_hatchery_chain_2
+                has_event_chain = abandoned_hatchery_chain_3
+                has_event_chain = abandoned_hatchery_chain_4
+            }
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        days_passed > 720   # ensures you can't build it at start of the game when you don't have any event chains
+        exists = owner
+        owner = {
+            has_origin = origin_starlit_citadel
+            NOR = { # use this instead of country_flag = unlocks_warden_of_the_citadel since gestalts don't get that
+                has_event_chain = abandoned_hatchery_chain_1
+                has_event_chain = abandoned_hatchery_chain_2
+                has_event_chain = abandoned_hatchery_chain_3
+                has_event_chain = abandoned_hatchery_chain_4
+            }
+        }
+		exists = solar_system
+		solar_system = {
+			custom_tooltip = {
+				text = "requires_deep_space_citadel"
+				count_ship_in_system = {
+					limit = {
+						is_space_citadel_ship_size = yes
+					}
+					count > 0
+				}
+			}
+		}
+    }
+
+    resources = {
+        category = planet_zones
+        cost = {
+            minerals = @zone_cost
+        }
+    }
+
+    included_building_sets = {
+        fortress
+        automation
+        origin
+    }
+
+    inline_script = {
+        script = more_zones/zone_skywatchers_add
+        AMOUNT = @scaling_district_1_job
+    }
+
+    # soldier upkeep reduction
+	triggered_district_planet_modifier = {
+		potential = {
+            planet_is_ecu_equivalent = no
+            planet_is_ring_world_equivalent = no
+		}
+		planet_soldiers_upkeep_mult = -0.01
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+            planet_is_ecu_equivalent = yes
+		}
+		planet_soldiers_upkeep_mult = -0.02
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+            planet_is_ring_world_equivalent = yes
+		}
+		planet_soldiers_upkeep_mult = -0.03
+	}
+
+    planet_modifier = {
+        zone_building_slots_add = @BPV_ZONE_SLOT
+    }
+
+	zone_sets = {
+		urban
+		habitat_urban
+	}
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	convert_to = {
+		zone_fortress
+	}
+}
+
+# Prosperous Unification: quite literally just flat better archive. gives 125 jobs instead of 100
+# still going to limit to city district, as the whole point of this is the versatility, rather than specialization
+zone_MZ_default = {
+	icon = GFX_job_bureaucrat
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+            has_origin = origin_default
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+            has_origin = origin_default
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	zone_sets = {
+		urban
+		habitat_urban
+	}
+
+	included_building_sets = {
+		research
+		unity
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/zone_researchers_add
+		AMOUNT = @[scaling_district_2_jobs / 2]
+	}
+
+	inline_script = {
+		script = jobs/zone_unity_jobs_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = @BPV_ZONE_SLOT
+	}
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_research_unity_triggered_desc
+	}
+
+	convert_to = {
+		zone_research_unity
+		zone_habitat_research_unity
+	}
+
+	ai_priority = 9
+}
+
+# Primal Calling: Wrangler jobs in a zone
+# you can build it in habitats and ecus, but it incurs extra food upkeep
+zone_MZ_primal_calling = {
+    icon = GFX_MZ_wrangler
+    base_buildtime = @zone_buildtime
+    potential = { # planet scope
+        exists = owner
+        owner = {
+            has_origin = origin_primal_calling
+			has_encountered_every_fauna = yes
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        exists = owner
+        owner = {
+            has_origin = origin_primal_calling
+			has_encountered_every_fauna = yes
+        }
+    }
+
+    resources = {
+        category = planet_zones
+        cost = {
+            minerals = @zone_cost
+        }
+	}
+
+	resources = {
+		category = planet_districts_cities
+		upkeep = {	# extra food upkeep on ecus
+			food = 10
+			mult = value:count_districts|TYPE|city|
+			trigger = {
+            	uses_district_set = city_world
+			}
+		}
+		upkeep = {	# extra food upkeep on habitats
+			food = 5
+			mult = value:count_districts|TYPE|city|
+			trigger = {
+				planet_is_habitat_equivalent = yes
+			}
+		}
+    }
+
+    included_building_sets = {
+        food
+		urban
+        origin
+    }
+
+    inline_script = {
+        script = more_zones/zone_wranglers_add
+        AMOUNT = @scaling_district_1_job
+    }
+
+    planet_modifier = {
+        zone_building_slots_add = @BPV_ZONE_SLOT
+    }
+
+	zone_sets = {
+		urban
+		habitat_urban
+	}
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+}

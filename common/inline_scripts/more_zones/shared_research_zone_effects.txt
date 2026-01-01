@@ -1,0 +1,38 @@
+base_buildtime = @zone_buildtime
+potential = { # planet scope
+    hidden_trigger = { exists = owner }
+    owner = {
+        is_wilderness_empire = no
+    }
+}
+
+unlock = { # planet scope
+    hidden_trigger = { exists = owner }
+    owner = {
+        is_wilderness_empire = no
+    }
+}
+
+resources = {
+    category = planet_zones
+    cost = {
+        minerals = @zone_cost
+    }
+}
+
+included_building_sets = {
+    research
+	automation
+    origin
+}
+
+planet_modifier = {
+    zone_building_slots_add = @BPV_ZONE_SLOT
+}
+
+triggered_desc = {
+    trigger = {
+		planet_is_habitat_equivalent = yes
+    }
+    text = MZ_remove_unspecialized_researcher_jobs
+}

@@ -96,29 +96,39 @@ Integrated Workshop mods:
 - 2D Galaxy with Circles (Workshop ID: 827354193)
   Source: backup/827354193/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=827354193
-  Author: SeeleDE
+  Author: SeeleDE https://steamcommunity.com/profiles/76561198051415785/myworkshopfiles/?appid=281990
 
 - NoSkullOnlyNumber (Workshop ID: 3257903117)
   Source: backup/3257903117/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3257903117
-  Author: Aeryn
+  Author: Aeryn https://steamcommunity.com/id/Zoryn4163/myworkshopfiles/?appid=281990
 
 - Permanent Decisions - Encourage Planetary Growth / Distribute Luxury Goods (Workshop ID: 1783381443)
   Source: backup/1783381443/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=1783381443
-  Author: Wulli
+  Author: Wulli https://steamcommunity.com/id/thewulli/myworkshopfiles/?appid=281990
 
 - Astronomical Emblem Pack (Smaller Groups) (Workshop ID: 2212643108)
   Source: backup/2212643108/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2212643108
-  Author: Aelarion
+  Author: Aelarion https://steamcommunity.com/id/AelarionX/myworkshopfiles/?appid=281990
 
 - More Insults (Workshop ID: 1223822935)
   Source: backup/1223822935/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=1223822935
-  Author: Hong Meiling
+  Author: Hong Meiling https://steamcommunity.com/id/hong-meiling/myworkshopfiles/?appid=281990
 
 - Stellar Legions MAIN Reupload (Workshop ID: 3439854455)
   Source: backup/3439854455/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3439854455
-  Author: Hann3o
+  Author: Hann3o https://steamcommunity.com/profiles/76561198128187590/myworkshopfiles/?appid=281990
+
+- Simple Traditions (Workshop ID: 2436408502)
+  Source: backup/2436408502/
+  Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2436408502
+  Author: Drassi https://steamcommunity.com/profiles/76561198016849029/myworkshopfiles/?appid=281990
+
+- More Zones (district specializations) (Workshop ID: 3513435391)
+  Source: backup/3513435391/
+  Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3513435391
+  Author: Nobody https://steamcommunity.com/id/absolute_nobody/myworkshopfiles/?appid=281990

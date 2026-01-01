@@ -1,0 +1,58 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_MZ_resource_energy_mineral_large"
+		textureFile = "gfx/more_zones/icons/energy_minerals.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_resource_minerals_food_large"
+		textureFile = "gfx/more_zones/icons/minerals_food.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_resource_food_energy_large"
+		textureFile = "gfx/more_zones/icons/food_energy.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_resource_basic_large"
+		textureFile = "gfx/more_zones/icons/basic_resource.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_genomic_researcher"
+		textureFile = "gfx/interface/icons/jobs/job_genomic_researcher.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_telepath"
+		textureFile = "gfx/interface/icons/jobs/job_telepath.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_patrol_drone"
+		textureFile = "gfx/interface/icons/jobs/job_patrol_drone.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_research_physics_society_large"
+		textureFile = "gfx/more_zones/icons/physics_society.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_research_society_engineering_large"
+		textureFile = "gfx/more_zones/icons/society_engineering.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_research_engineering_physics_large"
+		textureFile = "gfx/more_zones/icons/engineering_physics.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_medical_worker"
+		textureFile = "gfx/interface/icons/jobs/job_healthcare.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_skywatcher"
+		textureFile = "gfx/interface/icons/jobs/job_skywatcher.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_wrangler"
+		textureFile = "gfx/interface/icons/jobs/job_wrangler.dds"
+    }
+    spriteType = {
+        name = "GFX_MZ_strata_elite"
+		textureFile = "gfx/interface/icons/pop_categories/pop_cat_ruler.dds"
+    }
+}

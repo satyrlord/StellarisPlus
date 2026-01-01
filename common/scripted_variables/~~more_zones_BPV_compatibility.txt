@@ -1,0 +1,6 @@
+# without BPV, this variable is used to make urban support zones have no building slots (vanilla behavior)
+# if BPV is installed, it will override this with 1, reflecting BPV behavior of forcing support zones to have equal building slots
+# this works regardless what load order is used, as filename ensures this is loaded last (scripted_variables uses FIOS)
+@BPV_compatibility_load = 0
+
+# Note: StellarisPlus includes BPV; @BPV_ZONE_SLOT is defined elsewhere.

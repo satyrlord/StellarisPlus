@@ -1,0 +1,7 @@
+on_game_start_country = {
+	events = {
+        more_zones.1000 # payback recurring check
+        #more_zones.2000 # starlit citadel recurring check
+        more_zones.3000 # prosperous unification initializer
+    }
+}

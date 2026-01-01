@@ -1,0 +1,22 @@
+base_buildtime = @zone_buildtime
+
+resources = {
+    category = planet_zones
+    cost = {
+        minerals = @zone_cost
+    }
+}
+
+included_building_sets = {
+    government
+	origin
+}
+
+include = {
+    building_fe_security_1
+    building_fe_security_2
+}
+
+planet_modifier = {
+    zone_building_slots_add = @BPV_ZONE_SLOT
+}
