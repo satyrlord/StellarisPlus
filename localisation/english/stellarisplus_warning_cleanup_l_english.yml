@@ -1,0 +1,13 @@
+﻿l_english:
+  # Warning cleanup: missing modifier localisation
+  mod_shipclass_research_station_build_speed_mult:0 "Research Station Build Speed"
+  mod_weapon_type_explosive_speed_mult:0 "Explosive Weapon Speed"
+  mod_planet_jobs_volatile_motes_upkeep_mult:0 "Volatile Motes Upkeep"
+  mod_planet_jobs_exotic_gases_upkeep_mult:0 "Exotic Gases Upkeep"
+  mod_planet_jobs_rare_crystals_upkeep_mult:0 "Rare Crystals Upkeep"
+  mod_station_researchers_energy_upkeep_mult:0 "Station Researchers Energy Upkeep"
+  mod_station_researchers_cost_mult:0 "Station Researchers Cost"
+
+  # Warning cleanup: missing leader-name localisation keys
+  Central:0 "Central"
+  Processor:0 "Processor"

@@ -1,6 +1,7 @@
 simple_traditions_galactic_university = { 
 	base_buildtime = 600
 	category = government
+	building_sets = { government research unity }
 	base_cap_amount = 1
 	icon = simple_traditions_university
 
@@ -65,6 +66,7 @@ simple_traditions_galactic_university = {
 simple_traditions_galactic_university_megacorp = { 
 	base_buildtime = 600
 	category = government
+	building_sets = { government research unity }
 	base_cap_amount = 1
 	icon = simple_traditions_university
 
@@ -129,6 +131,7 @@ simple_traditions_galactic_university_megacorp = {
 simple_traditions_galactic_university_hive = { 
 	base_buildtime = 600
 	category = government
+	building_sets = { government research unity }
 	base_cap_amount = 1
 	icon = simple_traditions_university
 
@@ -194,6 +197,7 @@ simple_traditions_galactic_university_hive = {
 simple_traditions_galactic_university_machine = { 
 	base_buildtime = 600
 	category = government
+	building_sets = { government research unity }
 	base_cap_amount = 1
 	icon = simple_traditions_university_machine
 

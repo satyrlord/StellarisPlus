@@ -12,7 +12,6 @@ spriteTypes = {
 		name = "GFX_tradition_category_tile_tradition_industry"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_industry.dds"
 		borderSize = { x=140 y=140 }
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_industry"
@@ -56,7 +55,6 @@ spriteTypes = {
 		name = "GFX_tradition_category_tile_tradition_research"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_research.dds"
 		borderSize = { x=140 y=140 }
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_research"
@@ -104,7 +102,6 @@ spriteTypes = {
 		name = "GFX_tradition_category_tile_tradition_navy"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_navy.dds"
 		borderSize = { x=140 y=140 }
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_navy"
@@ -144,7 +141,6 @@ spriteTypes = {
 		name = "GFX_tradition_category_tile_tradition_government"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_statecraft.dds"
 		borderSize = { x=140 y=140 }
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_government"
@@ -187,7 +183,6 @@ spriteTypes = {
 		name = "GFX_tradition_category_tile_tradition_leadership"
 		textureFile = "gfx/interface/tiles/tradition_category_tile_leadership.dds"
 		borderSize = { x=140 y=140 }
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 	}
 	spriteType = {
 		name = "GFX_tradition_category_bg_tradition_leadership"

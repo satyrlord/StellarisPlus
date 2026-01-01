@@ -1,5 +1,31 @@
 # StellarisPlus — Changelog
 
+Date: 2026-01-01
+Order: reverse chronological (latest changes first)
+
+- Gameplay merge: integrated two additional Workshop mods into the root mod
+  - Simple Traditions (Workshop ID: 2436408502) by Drassi
+  - More Zones (district specializations) (Workshop ID: 3513435391) by Nobody
+  - Note: content was moved from backup/<workshop_id>/ into the live root folders (common/, events/, gfx/, interface/, localisation/)
+
+- Compatibility fixes: updated integrated scripts for current StellarisPlus/BPV environment
+  - More Zones:
+    - Fixed multiple outdated tokens/syntax issues
+    - Corrected wrong-scope trigger usage (planet vs country scope)
+    - Stabilized zone placement logic to avoid add_zone failures on planets lacking required districts
+  - Simple Traditions:
+    - Removed/adjusted deprecated leader trait fields and scripted effects
+    - Updated building/tradition modifiers to valid job modifiers for this environment
+    - Removed invalid AI-weight triggers and missing designations
+
+- Credits: updated integrated mod attributions
+  - Updated credits.txt to include both newly integrated Workshop mods
+
+- Warning cleanup:
+  - Added building_sets to Simple Traditions Galactic University buildings
+  - Removed references to a missing gfx/FX/buttonstate_onlydisable.lua in Simple Traditions gfx definitions
+  - Added missing localisation keys for a tradition swap tooltip
+
 Date: 2025-12-29
 Order: reverse chronological (latest changes first)
 

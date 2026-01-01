@@ -193,6 +193,7 @@ country_event = {
                 has_zone = {
                     zone = zone_research_unity
                 }
+                has_district = district_city
             }
             remove_building = building_research_lab_1
             add_zone = {
