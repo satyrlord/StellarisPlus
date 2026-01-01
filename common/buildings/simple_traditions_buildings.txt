@@ -134,7 +134,8 @@ simple_traditions_galactic_university_hive = {
 
 	planet_modifier = {
 		job_synapse_drone_add = 2
-		planet_jobs_brain_drone_add = 2
+		job_brain_drone_physicist_add = 1
+		job_brain_drone_biologist_add = 1
 		job_maintenance_drone_add = 2
 	}
 	on_built = {
@@ -198,7 +199,8 @@ simple_traditions_galactic_university_machine = {
 
 	planet_modifier = {
 		job_coordinator_add = 1
-		planet_jobs_calculator_add = 2
+		job_calculator_physicist_add = 1
+		job_calculator_biologist_add = 1
 		job_evaluator_add = 2
 	}
 	on_built = {

@@ -40,9 +40,7 @@ tr_government_new_worlds = {
 		trigger = {
 			is_hive_empire = yes
 		}
-		modifier = {
-			planet_pop_growth_mult = 0.1
-		}
+		custom_tooltip = tr_government_new_worlds_hive_desc
 		weight = {
 			factor = 1
 		}

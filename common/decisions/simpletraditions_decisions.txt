@@ -482,10 +482,6 @@ decision_simple_planet_refinery = {
 	ai_weight = {
 		weight = 5
 		modifier = {
-			factor = 10
-			has_designation = col_refinery
-		}
-		modifier = {
 			factor = 2
 			OR = {
 				has_resource = {

@@ -45,7 +45,7 @@ tr_research_science_director = {
 		}
 
 		modifier = {
-			planet_jobs_calculator_add = 1
+			job_calculator_physicist_add = 1
 		}
 
 		weight = {
@@ -63,7 +63,7 @@ tr_research_science_director = {
 		}
 
 		modifier = {
-			planet_jobs_brain_drone_add = 1
+			job_brain_drone_physicist_add = 1
 		}
 
 		weight = {

@@ -3,13 +3,13 @@
 triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
+		OR = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
+			owner = { NOT = { has_origin = origin_toxic_knights } }
+		}
 		owner = {
 			is_worker_coop_empire = no
 			is_gestalt = no
-            OR = {
-                NOT = { has_planet_flag = toxic_knights_habitat }
-                NOT = { owner = { has_origin = origin_toxic_knights } }
-            }
 		}
 		planet_is_habitat_equivalent = no
 		planet_is_ecu_equivalent = no
@@ -22,13 +22,13 @@ triggered_district_planet_modifier = {
 triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
+		OR = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
+			owner = { NOT = { has_origin = origin_toxic_knights } }
+		}
 		owner = {
 			is_worker_coop_empire = no
 			is_gestalt = no
-            OR = {
-                NOT = { has_planet_flag = toxic_knights_habitat }
-                NOT = { owner = { has_origin = origin_toxic_knights } }
-            }
 		}
 		planet_is_habitat_equivalent = yes
 	}
@@ -40,13 +40,13 @@ triggered_district_planet_modifier = {
 triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
+		OR = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
+			owner = { NOT = { has_origin = origin_toxic_knights } }
+		}
 		owner = {
 			is_worker_coop_empire = no
 			is_gestalt = no
-            OR = {
-                NOT = { has_planet_flag = toxic_knights_habitat }
-                NOT = { owner = { has_origin = origin_toxic_knights } }
-            }
 		}
 		planet_is_ecu_equivalent = yes
 	}
@@ -58,13 +58,13 @@ triggered_district_planet_modifier = {
 triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
+		OR = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
+			owner = { NOT = { has_origin = origin_toxic_knights } }
+		}
 		owner = {
 			is_worker_coop_empire = no
 			is_gestalt = no
-            OR = {
-                NOT = { has_planet_flag = toxic_knights_habitat }
-                NOT = { owner = { has_origin = origin_toxic_knights } }
-            }
 		}
 		planet_is_ring_world_equivalent = yes
 	}
@@ -83,7 +83,7 @@ triggered_desc = {
 		}
 		OR = {
 			NOT = { has_planet_flag = toxic_knights_habitat }
-			NOT = { owner = { has_origin = origin_toxic_knights } }
+			owner = { NOT = { has_origin = origin_toxic_knights } }
 		}
 	}
 	text = job_politician_effect_desc

@@ -198,7 +198,7 @@ country_event = {
             add_zone = {
                 district = district_city
                 zone = zone_MZ_default
-                zone_slot = slot_city_01
+                zone_slot = 1
                 replace = yes
             }
         }

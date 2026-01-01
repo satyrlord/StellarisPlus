@@ -200,6 +200,7 @@ simple_tradition_version:0 "Simple Traditions v1.7.0"
 
   tr_government_new_worlds_hive:0 "New Worlds"
   tr_government_new_worlds_hive_delayed:0 "When settling a new world, there is little infrastructure and much work to be done, but before that, we need our people to get there."
+  tr_government_new_worlds_hive_desc:0 "A specialized approach to rapid hive expansion on newly founded colonies."
 
 # service arrangement
   tr_government_service_arrangement:0 "Service Arrangement"

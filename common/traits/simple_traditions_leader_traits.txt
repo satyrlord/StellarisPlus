@@ -359,9 +359,6 @@ leader_trait_simple_traditions_university_governor = {
 		planet_building_build_speed_mult = 0.1
 		planet_decision_enact_speed_mult = 0.1
 	}
-	modifier = {
-		country_trade_value_mult = 0.05
-	}
 	triggered_modifier = {
 		potential = {
 			is_ruler = yes
