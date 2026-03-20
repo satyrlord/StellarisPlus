@@ -2,3 +2,4 @@ backup/
 tmp/
 .github/
 .env.local
+pyrightconfig.json
