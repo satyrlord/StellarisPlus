@@ -1,0 +1,86 @@
+﻿l_polish:
+# Planetary ascension
+ PLANET_ASCENSION_EXCEED_CAP_MIN: "§RMaximum ascension tier reached.§!"
+ PLANET_ASCENSION_TEXT_NONE: "As §BReworked Planetary Ascension§! activated, Maximum Ascension Tier is fixed at §G10§!. \n§HDue to game engine limitations, planetary ascension effects are not displayed in the UI, but they are fully functional.§!"
+ PRA_plnt_ASCEND_effect: "Current §Y$COLONY_DESIGNATION$§! effect §G+[planet.PRA_sloc_plnt_ASCEND_show_designation]%§! \nCurrent §Y$MOD_EMPIRE_SIZE_COLONIES_MULT$§! §G-[planet.PRA_sloc_plnt_ASCEND_show_sprawl]%§!"
+ # Concepts
+ concept_planetary_ascension_desc: "The §HColony Ascension Tier§! of a £colony£ ['concept_colony'] increases the effects of the ['concept_designation'] and reduces the effect on £empire_sprawl£ ['concept_empire_size'].\n\nColonies can be ascended §G10§! times at most, and increases in £unity£ ['concept_unity'] cost based on the cumulative number of §HAscension Tiers§!."
+ # Added content
+ PRA_mod_cntr_SPRAWL_reduc: "Civilization Ascendance"
+ PRA_mod_cntr_SPRAWL_reduc_desc: "Each imperial ascension marks civilization's leap into a new epoch—dramatically enhancing societal efficiency while drastically reducing administrative burdens."
+ PRA_mod_cntr_SPRAWL_reduc_STATIC: ""
+ PRA_mod_cntr_SPRAWL_reduc_STATIC_desc: ""
+ edict_PRA_edict_SPRAWL_reduc:0 "$PRA_mod_cntr_SPRAWL_reduc$"
+ edict_PRA_edict_SPRAWL_reduc_desc:0 "$PRA_mod_cntr_SPRAWL_reduc_desc$"
+
+ ##smod
+ mod_PRA_smod_plnt_JOB_default: "Local Governance Value"
+ ## Buildings
+ RPA_building_GOV_empire_sprawl_N_tip: "Provides §YPopulation Sprawl Reduction§! and §YDistrict Sprawl Reduction§! based on §Y$mod_PRA_smod_plnt_JOB_default$§!, up to §G5§!."
+ RPA_building_GOV_empire_sprawl_C_tip: "$RPA_building_GOV_empire_sprawl_N_tip$\nReduces $MOD_EMPIRE_SIZE_PENALTY_MULT$ based on unlocked ['concept_ascension_perks'], but comsumes £unity£['concept_unity'] for upkeep."
+ RPA_building_GOV_empire_sprawl_1_N: "Local Administration Center I"
+ RPA_building_GOV_empire_sprawl_1_N_desc: "Massive administrative complex handling planetary governance. Reduces §YEmpire Sprawl§! impact and boosts planetary efficiency."
+ RPA_building_GOV_empire_sprawl_2_N: "Local Administration Center II"
+ RPA_building_GOV_empire_sprawl_2_N_desc: "$RPA_building_GOV_empire_sprawl_1_N_desc$"
+ RPA_building_GOV_empire_sprawl_3_N: "Local Administration Center III"
+ RPA_building_GOV_empire_sprawl_3_N_desc: "$RPA_building_GOV_empire_sprawl_1_N_desc$"
+ RPA_building_GOV_empire_sprawl_4_N: "Local Administration Center IV"
+ RPA_building_GOV_empire_sprawl_4_N_desc: "$RPA_building_GOV_empire_sprawl_1_N_desc$"
+ RPA_building_GOV_empire_sprawl_1_C: "Imperial Administration Hub I"
+ RPA_building_GOV_empire_sprawl_1_C_desc: "$RPA_building_GOV_empire_sprawl_1_N_desc$"
+ RPA_building_GOV_empire_sprawl_2_C: "Imperial Administration Hub II"
+ RPA_building_GOV_empire_sprawl_2_C_desc: "$RPA_building_GOV_empire_sprawl_1_N_desc$"
+ RPA_building_GOV_empire_sprawl_3_C: "Imperial Administration Hub III"
+ RPA_building_GOV_empire_sprawl_3_C_desc: "$RPA_building_GOV_empire_sprawl_1_N_desc$"
+ RPA_building_GOV_empire_sprawl_4_C: "Imperial Administration Hub IV"
+ RPA_building_GOV_empire_sprawl_4_C_desc: "$RPA_building_GOV_empire_sprawl_1_N_desc$"
+ ## Jobs
+ job_PRA_job_administer_DEFAULT:0 "Prefect"
+ job_PRA_job_administer_DEFAULT_plural:0 "$job_PRA_job_administer_DEFAULT$"
+ job_PRA_job_administer_DEFAULT_desc:0 "Regional administrators organizing populations. §GReduces Empire Sprawl§! but §Rlowers Unity§!."
+ mod_job_PRA_job_administer_DEFAULT_add:0 "$job_PRA_job_administer_DEFAULT$"
+ job_PRA_job_administer_DEFAULT_effect_desc:0 "£job_PRA_job_administer_DEFAULT£§EPrefects§! convert £unity£§Y$unity$§! into $mod_PRA_smod_plnt_JOB_default$. Ethos determines bonus effects. Cost scales with population; §Yextremist ethics§! gain double bonuses."
+ # Egalitarian
+ job_PRA_job_administer_EQUAL:0 "People's Commissar"
+ job_PRA_job_administer_EQUAL_plural:0 "$job_PRA_job_administer_EQUAL$"
+ job_PRA_job_administer_EQUAL_desc:0 "Coordinates through democratic councils. §GImproves efficiency§! but §Rweakens national identity§!."
+ mod_job_PRA_job_administer_EQUAL_add:0 "$job_PRA_job_administer_EQUAL$"
+ # Militarist
+ job_PRA_job_administer_MILIT:0 "Political Officer"
+ job_PRA_job_administer_MILIT_plural:0 "$job_PRA_job_administer_MILIT$"
+ job_PRA_job_administer_MILIT_desc:0 "Enforces discipline through military oversight. §GBoosts administration§! but §Rdiminishes collective bonds§!."
+ mod_job_PRA_job_administer_MILIT_add:0 "$job_PRA_job_administer_MILIT$"
+ # Spiritualist
+ job_PRA_job_administer_SPIRITUAL:0 "Ecclesiarch"
+ job_PRA_job_administer_SPIRITUAL_plural:0 "$job_PRA_job_administer_SPIRITUAL$"
+ job_PRA_job_administer_SPIRITUAL_desc:0 "Unites communities through rituals. §GSimplifies governance§! but §Rrisks spiritual fragmentation§!."
+ mod_job_PRA_job_administer_SPIRITUAL_add:0 "$job_PRA_job_administer_SPIRITUAL$"
+ # Materialist
+ job_PRA_job_administer_TECH:0 "Public Scholar"
+ job_PRA_job_administer_TECH_plural:0 "$job_PRA_job_administer_TECH$"
+ job_PRA_job_administer_TECH_desc:0 "Guides societal activities through science education. §GEnhances productivity§! but §Rcreates technocratic authority§!."
+ mod_job_PRA_job_administer_TECH_add:0 "$job_PRA_job_administer_TECH$"
+ # Corporate
+ job_PRA_job_administer_CORP:0 "Operations Manager"
+ job_PRA_job_administer_CORP_plural:0 "$job_PRA_job_administer_CORP$"
+ job_PRA_job_administer_CORP_desc:0 "Optimizes local operations via KPIs. §GCuts costs§! but §Rdilutes shared values§!."
+ mod_job_PRA_job_administer_CORP_add:0 "$job_PRA_job_administer_CORP$"
+ # Hive
+ job_PRA_job_administer_GESTALT:0 "Hive Lord"
+ job_PRA_job_administer_GESTALT_plural:0 "$job_PRA_job_administer_GESTALT$"
+ job_PRA_job_administer_GESTALT_desc:0 "Local synapse node coordinating biomass. §GEfficient distribution§! but §Rweakens central control§!."
+ mod_job_PRA_job_administer_GESTALT_add:0 "$job_PRA_job_administer_GESTALT$"
+ job_PRA_job_administer_GESTALT_effect_desc:0 "£job_PRA_job_administer_GESTALT£§EHive Lords§! convert £unity£§Y$unity$§! into $mod_PRA_smod_plnt_JOB_default$. Government type determines additional effects. Cost scales with population."
+ # Machine
+ job_PRA_job_administer_MACHINE:0 "Subnet Node"
+ job_PRA_job_administer_MACHINE_plural:0 "$job_PRA_job_administer_MACHINE$"
+ job_PRA_job_administer_MACHINE_desc:0 "Distributed processing unit optimizing resources. §GReduces CPU load§! but §Rcauses sync latency§!."
+ mod_job_PRA_job_administer_MACHINE_add:0 "$job_PRA_job_administer_MACHINE$"
+
+ ## Missing job type keys (engine expects key matching job name directly)
+ PRA_job_administer_EQUAL:0 "$job_PRA_job_administer_EQUAL$"
+ PRA_job_administer_MILIT:0 "$job_PRA_job_administer_MILIT$"
+ PRA_job_administer_SPIRITUAL:0 "$job_PRA_job_administer_SPIRITUAL$"
+ PRA_job_administer_TECH:0 "$job_PRA_job_administer_TECH$"
+ PRA_job_administer_CORP:0 "$job_PRA_job_administer_CORP$"
+ PRA_job_administer_MACHINE:0 "$job_PRA_job_administer_MACHINE$"

@@ -1,0 +1,6 @@
+﻿l_english:
+ job_gardener_desc:0 "$job_gardeners_desc$"
+ d_plentiful_traditions_m1_deposit:0 "Plentiful Traditions Mining Deposit"
+ d_plentiful_traditions_m1_deposit_desc:0 "A temporary orbital deposit created by Plentiful Traditions event content."
+ d_plentiful_traditions_miners_deposit:0 "Exhausted Plentiful Traditions Mining Deposit"
+ d_plentiful_traditions_miners_deposit_desc:0 "The remaining marker for a Plentiful Traditions orbital mining deposit after its yield has been spent."
