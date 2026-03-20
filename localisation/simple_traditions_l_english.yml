@@ -309,6 +309,7 @@ simple_tradition_version:0 "Simple Traditions v1.7.0"
 #   BUILDINGS
 ######################################
 # Buildings
+  job_culture_worker_effect_desc:0 "£job_culture_worker£ $job_culture_worker_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§!, increasing our empire's cultural output."
   simple_traditions_galactic_university:0 "Galactic University"
   simple_traditions_galactic_university_desc:0 "The finest and most expensive educational facility in the galaxy."
   simple_traditions_galactic_university_megacorp:0 "Galactic Academy"
