@@ -1,9 +1,0 @@
-objectTypes = {
-    pdxmesh = {
-        name = "vulcan_military_station_large_mesh"
-        file = "gfx/models/ships/vulcan/military_stations/vulcan_military_station_large.mesh"
-        scale = 1
-
-        meshsettings = { name = "hull_tpari" texture_diffuse = "vulcan_surak_hull_diffuse.dds" texture_normal = "vulcan_surak_hull_normal.dds" texture_specular = "vulcan_surak_hull_specular.dds" shader = "PdxMeshShip" }
-    }
-}

@@ -1,6 +1,0 @@
-category = {
-	name = "Effects"
-	soundeffects = {
-		athena_cruiser_engine_fire
-	}
-}

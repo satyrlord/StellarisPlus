@@ -1,9 +1,0 @@
-objectTypes = {
-    pdxmesh = {
-        name = "romulan_construction_ship_mesh"
-        file = "gfx/models/ships/romulan/construction_ship/romulan_construction_ship.mesh"
-        scale = 1
-
-        meshsettings = { name = "romulan_construction_ship" texture_diffuse = "romulan_construction_ship_diffuse.dds" texture_normal = "romulan_construction_ship_normal.dds" texture_specular = "romulan_construction_ship_specular.dds" shader = "PdxMeshShip" }
-    }
-}

@@ -1,9 +1,0 @@
-objectTypes = {
-	pdxmesh = {
-		name = "romulan_cruiser_c_mesh"
-		file = "gfx/models/ships/romulan/cruiser/romulan_cruiser_c.mesh"
-		scale = 1.0
-		
-        meshsettings = { name = "romulan_malem" texture_diffuse = "romulan_malem_diffuse.dds" texture_normal = "romulan_malem_normal.dds" texture_specular = "romulan_malem_specular.dds" shader = "PdxMeshShip" } 
-	}
-}

@@ -1,9 +1,0 @@
-objectTypes = {
-	pdxmesh = {
-		name = "vulcan_cruiser_mesh"
-		file = "gfx/models/ships/vulcan/cruiser/vulcan_cruiser.mesh"
-		scale = 1.0
-
-		meshsettings = { name = "hull_surak" texture_diffuse = "vulcan_surak_hull_diffuse.dds" texture_normal = "vulcan_surak_hull_normal.dds" texture_specular = "vulcan_surak_hull_specular.dds" shader = "PdxMeshShip" }
-	}
-}

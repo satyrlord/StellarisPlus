@@ -1,8 +1,0 @@
-objectTypes = {
-	pdxparticle = {
-		name = "chaos_cannon_core_effect"
-		type = "chaos_cannon_core_effect"
-		
-		scale = 0.3
-	}
-}

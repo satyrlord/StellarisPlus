@@ -1,6 +1,0 @@
-# This species class should only be used for its ship set
-TERRAN_NX = {
-	# playable = { has_nemesis = yes }
-	# randomized = { always = no }
-	graphical_culture = terran_nx
-}

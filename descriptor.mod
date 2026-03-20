@@ -5,4 +5,4 @@ tags={
 	"Buildings"
 }
 name="StellarisPlus"
-supported_version="v4.3.0"
+supported_version="v4.3.*"

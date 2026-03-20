@@ -1,9 +1,0 @@
-objectTypes = {
-    pdxmesh = {
-        name = "klingon_citadel_mesh"
-        file = "gfx/models/ships/klingon/starbase/klingon_citadel.mesh"
-        scale = 1
-		
-		meshsettings = { name = "klingon_citadel" texture_diffuse = "klingon_citadel_diffuse.dds" texture_normal = "klingon_citadel_normal.dds" texture_specular = "klingon_citadel_specular.dds" shader = "PdxMeshShip" }
-    }
-}
