@@ -12,4 +12,5 @@ The codebase relies on **alphabetical load order** via filename prefixes:
 - `000_*.txt` for “early” compatibility variables.
 - `!!!*.txt` for “very early” compatibility variables.
 
-Preserve existing prefixes when editing, and choose a prefix intentionally when adding new override files.
+Preserve existing prefixes when editing, and choose a prefix
+intentionally when adding new override files.

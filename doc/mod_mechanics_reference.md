@@ -1,6 +1,7 @@
 # StellarisPlus — Mod Mechanics Reference
 
-This document is the consolidated reference for core gameplay/script mechanics used by this mod.
+This document is the consolidated reference for core gameplay/script
+mechanics used by this mod.
 
 ---
 
@@ -17,5 +18,6 @@ Zones set building slots using these variables:
 
 Districts generate `zone_slots` using inline scripts:
 
-- `inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 ... }`
+- `inline_script = { script = districts/BPV_district_slots
+  GOVERNMENT = slot_city_government SLOT1 = slot_city_01 ... }`
 - Variants exist for different max slot counts (`BPV_district_slots2/4/6/8`).

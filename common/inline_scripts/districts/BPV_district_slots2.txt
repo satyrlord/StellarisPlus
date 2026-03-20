@@ -1,6 +1,6 @@
 inline_script = {
 	script = "districts/BPV_district_slots"
-	SLOT_GOV = $GOVERNMENT$
+	GOVERNMENT = $GOVERNMENT$
 	SLOT1 = $SLOT1$
 	SLOT2 = $SLOT_END$
 	SLOT3 = $SLOT_END$

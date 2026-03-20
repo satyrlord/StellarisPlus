@@ -23,7 +23,7 @@ if ([string]::IsNullOrWhiteSpace($InboxDir)) {
 	if (-not $repoRoot) {
 		throw 'Unable to resolve workspace root to compute InboxDir.'
 	}
-	$InboxDir = Join-Path $repoRoot 'help\_logs_inbox'
+	$InboxDir = Join-Path $repoRoot 'tmp' '_logs_inbox'
 }
 
 $logFiles = @(

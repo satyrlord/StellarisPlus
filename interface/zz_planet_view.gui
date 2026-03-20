@@ -131,7 +131,7 @@ guiTypes = {
 				size = { width = 415 height = 100%% }
 				background = {
 					name = "leader_background"
-					spriteType = "GFX_ui_planet_view_gradient"
+					spriteType = "GFX_planet_view_gradient"
 					alwaysTransparent = yes
 				}
 			}
@@ -1117,7 +1117,7 @@ guiTypes = {
 				buttonType = {
 					name = "button"
 					position = { x = 0 y = 0 }
-					spriteType = "GFX_ui_button_digsite"
+					spriteType = "GFX_icon_archaeology"
 					oversound = "mouse_over"
 				}
 			}
@@ -1896,17 +1896,17 @@ guiTypes = {
 						size = { width = 296 height = -5 }
 						iconType = {
 							name = "demographics_piechart"
-							spriteType = "GFX_species_piechart_50"
+							spriteType = "GFX_species_piechart_default"
 							position = { x = 67 y = 0 }
 						}
 						iconType = {
 							name = "demographics_piechart_hover"
-							spriteType = "GFX_species_piechart_50_hover_colored"
+							spriteType = "GFX_species_piechart_hover_colored"
 							position = { x = 67 y = 0 }
 						}
 						iconType = {
 							name = "demographics_piechart_overlay"
-							spriteType = "GFX_pie_chart_overlay_300"
+							spriteType = "GFX_pie_chart_overlay"
 							position = { x = 67 y = 50 }
 							centerPosition = yes
 							scale = 0.338
@@ -1963,7 +1963,7 @@ guiTypes = {
 					}
 					buttonType = {
 						name = "open_sector_view"
-						spriteType = "GFX_ui_button_empire_view"
+						spriteType = "GFX_sector_cap_icon"
 						position = { x = -42 y = 13 }
 						orientation = upper_right
 						pdx_tooltip = "OPEN_EMPIRE_VIEW_SECTOR"
@@ -2222,17 +2222,17 @@ guiTypes = {
 						}
 						iconType = {
 							name = "strata_piechart"
-							spriteType = "GFX_species_piechart_50"
+							spriteType = "GFX_species_piechart_default"
 							position = { x = 69 y = 45 }
 						}
 						iconType = {
 							name = "strata_piechart_hover"
-							spriteType = "GFX_species_piechart_50_hover_colored"
+							spriteType = "GFX_species_piechart_hover_colored"
 							position = { x = 69 y = 45 }
 						}
 						iconType = {
 							name = "strata_piechart_overlay"
-							spriteType = "GFX_pie_chart_overlay_300"
+							spriteType = "GFX_pie_chart_overlay"
 							position = { x = 69 y = 95 }
 							centerPosition = yes
 							scale = 0.338
@@ -2292,7 +2292,7 @@ guiTypes = {
 					}
 					iconType = {
 						name = "icon"
-						spriteType = "GFX_ui_army_icon"
+						spriteType = "GFX_army_icons"
 						position = { x = 17 y = 0 }
 						orientation = center_left
 						centerPosition = yes
@@ -2639,7 +2639,7 @@ guiTypes = {
 					}
 					iconType = {
 						name = "icon"
-						spriteType = "GFX_ui_army_icon"
+						spriteType = "GFX_army_icons"
 						position = { x = 17 y = 0 }
 						orientation = center_left
 						centerPosition = yes
@@ -3068,7 +3068,7 @@ guiTypes = {
 				}
 				iconType = {
 					name = "icon"
-					spriteType = "GFX_ui_corporate_icon"
+					spriteType = "GFX_megacorp_small"
 					position = { x = 15 y = 0 }
 					orientation = center_left
 					centerPosition = yes
@@ -3821,13 +3821,13 @@ guiTypes = {
 						}
 						iconType = {
 							name = "species_background"
-							spriteType = "GFX_ui_portrait_background_city"
+							spriteType = "GFX_planet_background"
 							position = { x = -300 y = 0 }
 							alwaysTransparent = yes
 						}
 						buttonType = {
 							name = "species_background_slide"
-							spriteType = "GFX_ui_portrait_background_city_slide"
+							spriteType = "GFX_planet_background_frame"
 							position = { x = 0 y = 0 }
 							alwaysTransparent = yes
 						}

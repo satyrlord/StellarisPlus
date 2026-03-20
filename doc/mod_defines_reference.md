@@ -1,6 +1,7 @@
 # StellarisPlus — File Types Reference
 
-This document describes the main file types in this mod and where changes usually go.
+This document describes the main file types in this mod and where
+changes usually go.
 
 ---
 

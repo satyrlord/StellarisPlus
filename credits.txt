@@ -128,6 +128,10 @@ Integrated Workshop mods:
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=2436408502
   Author: Drassi https://steamcommunity.com/profiles/76561198016849029/myworkshopfiles/?appid=281990
 
+- Plentiful Traditions 4.2.x (Workshop ID: 1311725711)
+  Source: root compatibility surface in interface/topbar_traditions_view.gui
+  Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=1311725711
+
 - More Zones (district specializations) (Workshop ID: 3513435391)
   Source: backup/3513435391/
   Workshop: https://steamcommunity.com/sharedfiles/filedetails/?id=3513435391

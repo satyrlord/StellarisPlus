@@ -1,7 +1,17 @@
+# Base slot template for BPV districts.  Accepts 11 parameters:
+# GOVERNMENT (government slot) and SLOT1 through SLOT10.
+# Wrapper scripts (BPV_district_slots2/4/6/8) fill unused
+# slots with SLOT_END so callers only supply active ones.
 zone_slots = {
 	$GOVERNMENT$
 	$SLOT1$
 	$SLOT2$
 	$SLOT3$
 	$SLOT4$
+	$SLOT5$
+	$SLOT6$
+	$SLOT7$
+	$SLOT8$
+	$SLOT9$
+	$SLOT10$
 }
