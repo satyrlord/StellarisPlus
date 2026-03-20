@@ -1,0 +1,381 @@
+# Generated species derive their names from here
+# Rule of thumb: at least one of each culture for each species, except mammalian and humanoid which gets at least ~4 per each
+
+### MAMMALIANS
+
+MAM = {
+	uskon = {
+		name = Uskonite
+		plural = Uskonites
+		home_planet = Uskon
+		home_system = Jumalaisen
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	seksia = {
+		name = Seksin
+		plural = Seksins
+		home_planet = Seksi
+		home_system = Tnnöss
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	maastarukkaan = {
+		name = Maastaran
+		plural = Maastarans
+		home_planet = Maastarukkaan
+		home_system = Eliksissa
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	pelaki = {
+		name = Pelkish
+		plural = Pelkish
+		home_planet = Pelki
+		home_system = Hmerkiksi
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	sekasisianeverlost = {
+		name = Reheellan
+		plural = Reheellans
+		home_planet = "Seksisia Never-Lost"
+		home_system = "Kautt Always-Seen"
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+### FUNGOID
+
+FUN = {
+	vielattiin = {
+		name = Vielttan
+		plural = Vielttans
+		home_planet = Vielttiin
+		home_system = "Nimetst Osinat" 
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	porian = {
+		name = Porish
+		plural = Porish
+		home_planet = Porian
+		home_system = Permaan 
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	tukijeeseen = {
+		name = Tulkoid
+		plural = Tulkoids
+		home_planet = "Tulki Jeeseen"
+		home_system = Tulkinn 
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	helsinaa = {
+		name = Helsinian
+		plural = Helsinians
+		home_planet = Helsinaa
+		home_system = Samaniskus 
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	tarinen = {
+		name = Tarinese
+		plural = Tarinese
+		home_planet = Tarinen
+		home_system = Alueesukaaos 
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+### ARTHROPOID
+
+ART = {
+	muinatta = {
+		name = Muinattan
+		plural = Muinattans
+		home_planet = Muinatta
+		home_system = Myöhykkeuksia
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	peramaan = {
+		name = Permoid
+		plural = Permoids
+		home_planet = Permaan
+		home_system = Ensimmisilla
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	suutprime = {
+		name = Suutoid
+		plural = Suutoids
+		home_planet = "Suut Prime"
+		home_system = Suut
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	uskomeri = {
+		name = Uskomerian
+		plural = Uskomerians
+		home_planet = Uskomeri
+		home_system = Phtaille
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+### REPTILIAN
+
+REP = {
+	haettava = {
+		name = Haettvian  
+		plural = Haettvians
+		home_planet = Haettv
+		home_system = Karjala
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	porihame = {
+		name = Porid  
+		plural = Porids
+		home_planet = Porihme
+		home_system = Liittuurihme
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	kanteella = {
+		name = Kanteellan  
+		plural = Kanteellans
+		home_planet = Kanteella
+		home_system = "Pelassa u Vanhoja"
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	ilmataviten = {
+		name = Ilmatavi  
+		plural = Ilmatavi
+		home_planet = Ilmataviten
+		home_system = Harisa
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+### AVIAN 
+
+AVI = {
+	paaosia = {
+		name = Posian 
+		plural = Posians
+		home_planet = Posia
+		home_system = Posia
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	samaasta = {
+		name = Samaastan 
+		plural = Samaastans
+		home_planet = Samaasta
+		home_system = Joismaistus
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	moniin = {
+		name = Moniin 
+		plural = Moniin
+		home_planet = Moniin
+		home_system = Uuden
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	tasita = {
+		name = Tsitian 
+		plural = Tsitians
+		home_planet = Tsita
+		home_system = Ksiisin-Karhalan
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+### MOLLUSCOID
+
+MOL = {
+	janiksia = {
+		name = Jniksian
+		plural = Jniksians
+		home_planet = Jniksia
+		home_system = Maailmiö
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	sankikaukan = {
+		name = Pos
+		plural = Pos
+		home_planet = Sankikaukan
+		home_system = Kuun'Joksia
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	helaman = {
+		name = Helmnese
+		plural = Helmnese
+		home_planet = Helmn
+		home_system = Osi
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	uskusla = {
+		name = Uskuslean
+		plural = Uskusleans
+		home_planet = Uskusla
+		home_system = "Jala Tapielvet"
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+### PLANTOID
+
+PLANT = {
+	lisia = {
+		name = Lisian
+		plural = Lisians
+		home_planet = Lisia
+		home_system = Selivt
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	varhaisessa = {
+		name = Varhaisoid
+		plural = Varhaisoids
+		home_planet = Varhaisessa
+		home_system = Joskemattanut
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	takuputhesapphiredragon = {
+		name = Tytee
+		plural = Tytee
+		home_planet = "Takupun the Sapphire Dragon"
+		home_system = "Tarsi Joita the Ruby Dragon"
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	ollevan = {
+		name = Ollevanese
+		plural = Ollevanese
+		home_planet = Ollevan
+		home_system = Suhaissan
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+### HUMANOIDS
+
+HUM = {
+	eteen = {
+		name = Eteenid
+		plural = Eteenids
+		home_planet = Eteen
+		home_system = Kertodella
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	taigalla = {
+		name = Taigallan
+		plural = Taigallans
+		home_planet = Taigalla
+		home_system = Lainaan
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	huoleva = {
+		name = Huolevan
+		plural = Huolevans
+		home_planet = Huoleva
+		home_system = Seppsana
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	olimpana = {
+		name = Olimpnian
+		plural = Olimpnians
+		home_planet = Olimpn
+		home_system = Olista
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+### LITHOIDS
+
+LITHOID = {
+	kuivanaa = {
+		name = Kuivanese
+		plural = Kuivanese
+		home_planet = Kuivanaa
+		home_system = Eurostosimea
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	suomen = {
+		name = Suomenian
+		plural = Suomenians
+		home_planet = Suomen
+		home_system = Kstu
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	taillastantherighteouscoward = {
+		name = "Muta Selyn"
+		plural = "Muta Selyn"
+		home_planet = "Taillastan the Righteous Coward"
+		home_system = "Kannisi the Courageous Betrayer"
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	elavarkin = {
+		name = Elvarkian
+		plural = Elvarkians
+		home_planet = "El Varkin"
+		home_system = Aikuneidella
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+### NECROIDS
+
+NECROID = {
+	paaosta = {
+		name = Postaean
+		plural = Postaeans
+		home_planet = Posta
+		home_system = Salta
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	poidellituakun = {
+		name = Vaisetan
+		plural = Vaisetans
+		home_planet = Poidellituakun
+		home_system = Vessvnnasity
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	johjoisava = {
+		name = Johjoisvian
+		plural = Johjoisvians
+		home_planet = Johjoisv
+		home_system = Kanrunnisia
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	jonena = {
+		name = Jonenian
+		plural = Jonenians
+		home_planet = Jonen
+		home_system = Osa'Tarus
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+### AQUATICS
+
+AQUATIC = {
+	maastysta = {
+		name = Tyteetin
+		plural = Tyteetin
+		home_planet = Maastyst
+		home_system = Karhanvet
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	itsisi = {
+		name = Itsisian
+		plural = Itsisians
+		home_planet = Itsisi
+		home_system = Suomaassa
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	vesto = {
+		name = Vestoid
+		plural = Vestoids
+		home_planet = Vestö
+		home_system = Mermen
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+	siperia = {
+		name = Siperian
+		plural = Siperians
+		home_planet = Siperia
+		home_system = Piikutus
+		name_list = "cybrxkhan_handmade_finnish"
+	}
+}
+
+

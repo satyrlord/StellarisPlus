@@ -1,0 +1,251 @@
+﻿### handmade Finnish
+### Names made using a markov generator, input was random text from Finnish-language wikipedia articles
+
+cybrxkhan_handmade_finnish = {	
+	category = "Mammalian"
+
+	ship_names = {
+		generic = {
+			Ahvenanmaa Aiheeros Aiheuttanut Aihin Aihteen Aikansana Aikkaa Aikkimaata Aikkimattaan Aikoittej Aikuten Aikutta Aikuttoi Ainaan Ainaisimen Ainaiss Ainat Ainen Ainoasta Ajatelisi Ajatuslaki Ajautaan Ajautteitn Ajauttoisen Ajoiden Ajois Ajoisekoin Ajoisen Ajoissuomala Ajoista Ajoitiin Alkuperia Alkuperin Alkuperinnyt Alueellisin Aluetta Aluettiin Aluett Asioittuna Asuksesta Asukset Asutta Asuttoiset Asuttua Asuttuu Autaan Auttanut Auttavaan Auttavan Autuneet Autuureissa Demilitetty Demilityksia Demiljelyn Demiljon Demiljoonaa Dempien Eleen Eleet Eliksi Eliksissa Elisnimi Elita Eliteelle Elitetty Elitys Elivaan Eliölajento Elessa Elimisilla Elisekoitta Elisesti Elisiin Elisin Elisin Elmn Elss Ensimenjn Ensimerkin Ensimmisinat Ensimmn Epiten Epit Erilainaista Erinat Erisialla Erst Esiin Esikrista Esikristen Esikrist Esille Esimmin Esimmn Esinat Esinki Esinkoa Eteeksist Eteen Eteet Eteetisti Etelee Etelettiin Etelevan Eteltiin Etelut Eteluun Etelessa Etelinein Etelin Etelisin Etelisinan Etelmn Ettiin Ettiinteit Ettyvn Etty Ettv Ett Euroopana Euroopassa Haettavasti Haettiin Haettyvt Haettv Harvaalla Harvaan Harvan Hautta Hauttavaan Hauttoi Hautuneet Hautunut Havumetsien Havumetst Helsin Helsinaa Helsinajaten Helsinnes Helvetin Helvetinusko Helvetisest Helvetistö Henki Henkin Huomattoi Hyvittavinen Hyvittu Hyvityksesta Hyvitykset Hyvitys Hyvityst Hmeen Idssn Ihmin Ihmisi Ihmisiin Ihmisiistö Ihmisilla Ihmisimen Ihmisin Ihmisi Ihmissuomen Ihmistö Ilman Ilmanista Ilmarinaiss Ilmarinaistö Ilmarintoja Ilmarisoitta Ilmeissuomen Itsuissa Itmerkiksi Jalaist Jalassa Jallisessa Jeeseen Jeesimmin Jeesimminen Johdolle Johdolloin Joiden Joisekoin Joisen Joisesta Joisi Joisten Jokansanan Jokantaruja Jokseksi Joksesta Joksest Joksi Joksialla Jolla Jollainoasta Jolle Jollee Jolleetiset Jollisen Jollisess Jollisiin Jollisuuten Jolloina Jonkaisi Jonkaltiin Jonkansa Joskematta Joskevn Joskunne Joskunnionia Joskuntiedot Jumala Jumalaina Jumalainen Jumalaisen Jumalaisessa Jumalaissa Jumalaista Jumalaist Jumalaiten Jumalamaa Jumalan Jumalassa Jumalasta Jumala Jumalisen Jumalisess Jumalisest Juureissa Juurina Juurinan Jniksi Jnimi Jnimisin Kahdelliskun Kahden Kahdolloin Kaikaan Kaikoitu Kaistenkin Kansana Kansantta Kansuksessa Kansuksi Kanteisessa Kanteita Kantiedot Kanttaan Karhaisen Karist Karjaanville Karjala Karjalaisen Karjalaisia Karjalaisiin Karjalana Karjalassa Karjalla Karukko Kasta Kastaa Kasviljelyn Kasvilla Kasvilleet Kasvill Kattavaalun Kattomun Kattuneetty Kauaksia Kauaksiin Kauaksistö Kaupunkien Kaupunkin Kerratta Kertomala Kertomalan Kertomun Kerisin Kerst Keskielivaan Keskiel Keskien Keskiole Keskiolella Keskiosia Keskiosialla Keskitty Kirjalle Kivin Korkein Korke Kosen Koskevan Koskevn Kosta Kostollut Kostouttoi Krisoiten Krista Kristaa Kristen Kristi Kristilla Kristus Krist Kuikaan Kuikaaos Kuikansoihin Kuinaa Kuinaisen Kuinaisess Kuinan Kuiten Kuitetti Kuitettu Kuitetty Kuivaalun Kuivaan Kuivat Kuivin Kuivineita Kuivinen Kulttu Kulttua Kulttuivaan Kulttuiviin Kulttunut Kunnakotka Kunnalle Kunnanmaan Kunne Kunnistin Kunnistö Kunnun Kunnuskon Kuntiedoill Kuole Kuoli Kuolle Kuollee Kutta Kuulehdoilla Kuulehdoille Kuuluun Kuuluvulla Kuuten Kuutenkinyt Kuutteit Ksitenki Ksitetty Ksitetty Ksitty Ksittyvn Ksitykseen Ksityksesta Ksityksest Ksitykset Ksityksi Ksitys Ksityst Kstyksella Kstykset Kst Kytettyvt Kytettv Kyttelut Kyttv Kytnnes Laajeja Laajento Lainaa Lainaisest Lainaisi Lainat Lainoasta Laisen Laista Laitsehalle Latin Leiseen Leisekoi Leisen Leisest Leiset Leissa Levittyy Levitys Linnyst Lisen Lisesta Lisinen Lista Lisuuteen Lisnimiteen Lisnkin Lisnky Loitt Luvaa Luvullaisen Lhinnan Lhteet Lhteless Lnne Lnnöss Maaalle Maailma Maailmanista Maailmanka Maailmarin Maailmaus Maailmeisen Maakun Maakunne Maakunnes Maakunnet Maakunniskus Maakunnistö Maakunnuskon Maansa Maansana Maasta Maastoutu Maatta Maattavan Maattoiset Maattunein Mahdeksi Mahden Mahdess Mahdoillisin Mahdolla Mahdolliset Mahdolloin Mahdollustus Mahtavaltiin Mahtavan Mahtavasta Mahtavilla Mahtavimpn Mahtavinen Meren Merkiksi Merkiksialle Merkin Merkita Merkitaru Merkitteiden Merkitykset Merkityksi Metsi Metsiin Metsiista Metsst Metstyyn Milinjalla Milinn Milita Milityksi Miljelyneet Miljonka Mityksesta Mitys Monelassa Monelasta Monelastaan Moniin Muina Muinaisen Muinaisin Muinaisti Muinaist Muinaisusko Muinan Muinanmaan Muinat Muinattaan Muissa Muiss Mukaa Mukaankaltai Mukaaos Mukasvilla Mukseksia Muksessa Muksess Muksesta Muksestille Muksestin Muksi Muksia Muksista Muttaan Muttavill Muttavin Muuten Muutta Myytt Myöhykkeella Myöhykkein Myöhin Niista Niistill Niistus Niistuslakin Niistö Nimenkin Nimeren Nimerkiksi Nimerkin Nimerkita Nimeydess Nimissuomea Nimiten Nimityksi Norjalla Norjalleet Norjallist Norjalousala Nuoriheeros Oleimaasta Oleisen Oleva Olevanhoilla Olevat Olevistille Olevittyypin Olimaasta Olimaisess Olimaisilla Olimpn Olisissa Olista Olisuuskosta Olisnky Olivaalueen Olivt Ollaistin Ollisessa Ollisesta Ollisimmisi Olliskus Ollist Olloin Ollustus Ortodella Ortomukaan Ortomuksen Ortomuksesta Osaiikkaa Osanan Osanka Osantaruja Osiin Osiis Osoihin Osoitsuiss Osoitt Osoitu Pahoisinkoa Paiteet Paitettiin Paitetty Paitsiihen Paitsui Palantiedot Palassa Palearkoin Paljonkanka Paljonkansa Palla Pallisill Pelasta Pelksitty Pelksitty Pelkin Peria Perian Perilaist Perinastaa Perinnakotka Perinto Perusta Perustus Periset Perisisessa Permaa Perttiin Piiri Piirteeksia Piirteella Piirteelleet Piirteiden Pimen Pimenki Pimukaan Pirstolla Pirstollista Pirstosta Pirstostosta Pirstoutu Pirstoutuu Piteetta Pitenkin Pitetty Pohja Pohjasta Pohjastosta Pohjoi Pohjoiden Pohjoisaaren Pohjoisaata Pohjoisen Pohjoisessa Pohjoisest Pohjoisiss Pohjukkoa Poikin Poikinyt Poikkein Poikkeuksek Poisekoitty Poisesta Poisimmissa Poisimmistin Poriheeros Poriheutu Pyyden Pyydessa Pyydesta Pyyhkin Pyyhkinn Phkin Phkinnalla Phkinyt Pasia Pasioiden Pkauaksi Pkaupunkin Posia Posiinto Posinasta Rajat Rajatel Rajatenki Rajautta Rangaisek Rangaisen Rangaiset Rangaiss Rangaisuskon Rannakoitta Rannalle Rannanmaata Rauhan Rauhansana Rauhansukaan Rehevistö Rinen Runouden Runoudessa Ruotsien Ruotsinki Ruotsinkoa Ruottomun Ryhtyessa Saaren Saata Saatta Saattoisaame Saiikkaan Salla Salliseksi Samaailma Samaan Sanrunouden Sanrunoutta Sanrunouttuu Sanrunoutu Sateet Satelut Sateluu Satel Satelm Saten Satenki Sekoi Sekoin Sekoitarinen Sekoitettiin Sekoitta Seksi Selisess Selisuurin Selitykseen Selityksesta Selitys Selivt Seliölajeja Seliölajen Sella Selle Sellee Sellisessa Selliset Senjn Seppsaata Seppsana Seuroopassa Siiheeros Silita Sille Sillista Sinat Sinattavaan Sinen Sinkoa Siperinaista Siperinat Siperinteit Sipermaa Siperst Sipertti Sitettv Sityksess Sityksisen Sitys Somalain Somatta Somenlahden Somenveden Suhteet Suhteluu Suhtelessa Suomaisesti Suomaissa Suomala Suomalaa Suomalana Suomalassa Suomala Suomat Suomatta Suomattaa Suomattavin Suomea Suomeenki Suomeenkin Suomen Suomess Suomuksen Suonet Suuteeksi Suuttaan Synnystn Synnyt Syntytari Syntytarin Syntyvt Syntyypilla Syntyypin Syntyyppien Silyn Silyneetin Sniksi Snimen Snkiosiin Taigalla Taikanteita Taisess Taisestaa Taisestaan Taiset Taisi Taissa Taista Taivaa Taivaan Taivat Takin Takoitu Takotka Tapauksi Tapauksia Tapiiri Tapiirteiden Tarin Tarinaisesti Tarinaisinen Tarinen Tarinto Tarist Tarkoita Tarkoitta Tarkoitt Tarktisen Tarktisessa Tarktisesta Tarktistö Taruja Tarukkaa Tarukkaan Tarukko Tarvaaluetti Tarvaan Tarvaasta Tarveesill Tasavan Tasavat Tekevat Tiedoill Tieteluun Tietel Tietelkin Tilla Till Todelleet Todellisinn Todoksessa Todoksesta Todoksi Todoksia Toisaa Toisaata Toisekoitiin Toisessa Toisesta Toisest Toisia Toisi Toissa Tulkin Tulkinnalla Tulkittua Tulkitt Tuneet Tunnan Tunne Tunnionia Tunniskien Tunnisteluun Tunnistelki Tunnun Tunut Tuonelassa Tuonelasta Tuonelastaa Tuonpuolevan Tuotsi Tuottomukaan Tuovat Tyypille Tyypilliset Tyypillisi Tyypill Tyypin Tyyppien Tlla Tll Tm Tnnes Tnnetaan Trkea Trkeimaa Trkeinaa Tstyksesta Tstyksest Tstykset Tst Tytett Tytnnetaan Tytnnöss Ukkoka Ukkoko Ukkoskematta Ukkoskus Ukkosta Ukonnoksen Ukonnosta Unionia Useinaantari Useit Uskomukaa Uskomukaan Uskomukset Uskon Uskosen Uskosta Uskostouttaa Usksityst Uuden Uudenkin Uudenmaa Uudess Uudesta Vahin Vaihenkin Vaihteen Vaihteltiin Vaikaan Vaikantta Vaikkein Vaikoin Vaikoinatta Vaikutta Vainaisi Vainaistö Vainajateet Vainat Vainen Vainoasta Valtaan Valtai Valtiin Varhaiset Varhaissa Varmuuhun Varmuun Varmuuteet Varmuuttu Varsin Varsina Varsinaan Varsinaista Varsinasta Varsinen Varsinki Varsinkiosia Varsinkoa Varsitykset Varsityksi Varsitys Vastaa Vastaan Vastouttoi Venan Verrateet Verrattoi Verrattua Verrotaa Verrotaan Versinen Versinkin Versinkinnan Versitys Vesilinnyst Vesilla Vesimenkin Vesimmin Vesimmisia Vesityksest Vieli Vielitykset Vielimi Vihansa Voikkeukset Voikkien Voitta Voittanut Voittu Vuoksesta Vuosiis Vuosin Vineitakin Vinen Vin Yhdeksissa Yhdeksista Yhdella Yhdellisess Yhden Yleimpn Yleisen Yleisesta Yleisin Yleissa Ylhlla Ylijumalan Ylijumalassa Ylijumala Ylijumalisia Ylimaan Ylimattamaan Ylinjallist Ylinnalle Ylin Ympn
+		}
+	
+		corvette = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		science = {
+		}
+		
+		colonizer = {
+		}
+		
+		constructor = {
+		}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+		
+		#orbital_station = { }
+		mining_station = { }
+		research_station = { }
+		#wormhole_station = { }
+		#terraform_station = { }
+		#observation_station = { }
+		#outpost_station = {	}
+	
+		military_station_small = {}
+	
+		military_station_medium = {}
+	
+		military_station_large = {}	
+	}
+	
+	Fleet_names = {
+		random_names = {
+			"Perinaisesta Navy" "Muinaista Navy" "Kulttu Navy" "Kuitettyvt Navy" "Karukko Navy" "Venan Navy" 
+		}
+		sequential_name = FANTASY_FINNISH_MARKOV_xxFLEETNAMES_ORD
+	}
+
+	###ARMIES
+	army_names = {
+			
+		generic = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxASSAULTARMY_ORD
+		}
+
+		machine_defense = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxMACHINEDEFENSE_ORD
+		}
+			
+		machine_assault_1 = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxMACHINEASSAULT1_ORD
+		}
+			
+		machine_assault_2 = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxMACHINEASSAULT2_ORD
+		}
+			
+		machine_assault_3 = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxMACHINEASSAULT3_ORD
+		}
+	
+		defense_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxDEFENSEARMY_ORD
+		}
+			
+		assault_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxASSAULTARMY_ORD
+		}
+		
+		slave_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxSLAVEARMY_ORD
+		}
+		
+		clone_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxCLONEARMY_ORD
+		}
+		
+		perfected_clone_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxCLONEARMY_ORD
+		}
+		
+		undead_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxUNDEADARMY_ORD
+		}
+		
+		robotic_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxROBOTICARMY_ORD
+		}
+		
+		robotic_defense_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxROBOTICDEFENSEARMY_ORD
+		}
+		
+		psionic_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxPSIONICARMY_ORD
+		}
+		
+		xenomorph_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxXENOMORPHARMY_ORD
+		}
+		
+		gene_warrior_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxGENEWARRIORARMY_ORD
+		}
+		
+		occupation_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxOCCUPATIONARMY_ORD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxROBOTICOCCUPATIONARMY_ORD
+		}
+
+		individual_machine_occupation_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_xxROBOTICOCCUPATIONARMY_ORD
+		}
+
+		primitive_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_PRIMITIVEARMYxx_SEQ
+		}
+		industrial_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_INDUSTRIALARMYxx_SEQ
+		}
+		postatomic_army = {
+			sequential_name = FANTASY_FINNISH_MARKOV_POSTATOMICARMYxx_SEQ
+		}
+		warpling_army = {
+			sequential_name = seq_warpling_army
+		}
+		
+		ember_legion = {
+			sequential_name = seq_ember_legion
+		}
+		
+		lm_imbued_army = {
+			sequential_name = seq_lm_imbued_army
+		}
+
+		abomination_army = {
+			sequential_name = seq_abomination_army
+		}
+		wilderness_pre_sapient_defence_army = {
+			sequential_name = seq_wilderness_pre_sapient_defence_army
+		}
+		wilderness_pre_sapient_assault_army = {
+			sequential_name = seq_wilderness_pre_sapient_assault_army
+		}
+	}
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				Aikkein Alueellaisiallisuuden Autteitme Elityksestin Elitys Elinsanaan Elki Ensimmn Eteet Eteleva Eteluu Etymologiastosta Hautunut Havuksess Helvetiset Ilmeissuonet Jalaisimmn Jeesimerkitty Joiden Joitus Joksi Jolleet Jonkaltaa Juuriheeros Jnimerkiksi Kahdolle Kankaisia Kantabaltapauksen Kantiedot Kaupunkielmn Keskielita Keskieliölajeja Kirjalasta Kirjallisi Kiviipurinlahdessa Kristi Kuiten Kuitenki Kuitetty Kuitett Kuitettv Kunnionia Kuntiedot Kuntien Kuolentunein Kuolevan Ksityksia Leisesta Lhteellist Lnnetaa Maakun Maakunnet Maasta Mahtavaltaivaalle Mahtavat Mahtavimpn Metsi Metsstyksesta Metstyypilla Metsvyöhemmin Metsvyöhemmisi Muinaissuopeuden Mukaaos Muksi Nimeren Olevist Olimat Ollee Olliseksi Olloin Ortodoksess Ortomukaan Osaiikkeukseen Pahoisimmisi Paitsehalleettuneetty Palle Pelassa Perinnuskomukset Permaan Perst Piirteen Poikin Poisessa Phkin Pasia Pkaupunkin Rehevistinusomenkin Ruotsinaa Ruottomalassa Saaren Sella Sillisiin Sinkoa Syntytarkoittuurihme Silyn Taisuurinteellaina Taivaansoitsui Tapiiri Tiedoisille Tietelevan Tulkinto Tuonelastin Tuonpuolle Tuottoiset Tuovat Tyypin Tyyppien Tlla Trkeinattoi Tytettv Uskomukaan Uskosta Vaiheuttavill Vaihteet Vaikuuluvulla Varsin Varsinattuneinaissa Vastostaan Vesitys Vielisillisess Voikkeimaan Voitty Yleimprittemminen Ympn	
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+	character_names = {
+
+		default = {
+			# A complete name
+			full_names = {
+				Ahvenan Ahvenjn Aihteeksi Aihteellisen Aihteen Aikutenkien Aikuuluvulla Ainaisti Ainanmaailma Ainat Ainen Ajautta Ajoisessa Ajoist Alkuperilain Alkupermaan Alueelle Alueenkinyt Aluettiin Aluettua Ansalla Ansana Ansanasana Asioitty Asioittyvn Asukaan Asuksistö Asuttoi Auttaan Autuu Avuksia Avuksi Avumetsst Demiljelyneet Eliksi Elisek Elisill Elitarukkaan Eliteen Elivaalla Elisesta Elisin Elttiin Ensimerkita Epit Epit Erinen Erinteet Esiin Esillisuutta Esimetsien Esimmineit Esimminen Esimmisinen Eteet Eteletty Eteltiin Eteltinuskon Eteless Etelisest Etelkin Etelm Ettiin Etty Eurooppalla Eurooppalle Haetta Harvan Hauttavaltaan Havuksi Helsinaissa Helsinen Helvetin Henkin Huole Huomat Huomessa Hyvittelut Hyvitykseksi Ihmin Ihmistö Ilmanist Ilmeissuomi Indoeuroopan Itsiin Jalaisessa Jalla Jeeseen Joiden Joidenmaan Joisesti Joisiin Joisi Jokansana Jokseen Jolle Jollisess Jollut Joskematta Joskeva Joskunne Jumalainaiss Jumalainat Jumalaisimen Jumalassa Jumala Jumalisen Juurintoja Jnimet Kahden Kaikutta Kaisest Kaista Kankaikkeella Kansalueen Kansaluett Kansoitta Kanttaan Karhaisessa Karjalainan Karjala Karjalleet Karukko Kasta Kasti Kastolla Kastollee Kasviljelyn Kasville Katta Kattanut Kerrattoi Kertodella Keskielmn Keskien Keskiolento Keskitteluu Keskityst Kirjaan Korkein Kosen Kosta Kostaan Krisoita Krisoitiin Krisoitta Krista Kristaan Kristi Kristilaista Kristö Kuinaa Kuinaissa Kuinajat Kuinasti Kuiten Kuitettiin Kuitettyyn Kuivaalla Kuivaan Kuivat Kulttu Kulttua Kulttunein Kunnalla Kunnallaisti Kunnioitt Kunnionia Kuntien Kuole Kuteella Kutta Kuttavaasta Kuttoi Kuuluvulla Kuuteeksi Kuuteet Ksiten Ksitenki Ksitenkin Ksitett Ksitta Ksittej Ksitty Ksitykseen Ksityksessa Ksityksesta Ksitykset Ksityst Kstyksia Kst Kytetty Kytett Kyttemmin Kytnnes Laajeja Laina Lainoasta Laista Laisuskon Laitsien Latin Latinuskosta Levan Liseli Lisen Lisnky Luvaan Lhinkoa Lhteella Lnnöss Maaalle Maaaluettiin Maailmanka Maailmiö Maakun Maakunnionia Maakunnioniin Maakuntiedot Maansa Maanvilla Maatta Maattois Maattua Mahdeksi Mahdenmaa Mahdessa Mahdolle Mahdolloin Mahdolloitu Mahtavaltio Mahtavan Mahtavanhoja Mahtavat Meren Merkiksi Merkitt Metsst Metstyyn Milintoja Monelastin Moniin Mosana Muinaissa Muinaista Muinaistö Muinajat Muinajateet Muinat Mukaa Mukaaos Mukaata Mukasvilla Mukasville Mukseksi Muksi Muksia Muksialle Muttaan Muttoi Muuten Muutta Myytt Myytt Myöhemminen Myöhykkein Niisten Nimenjn Nimerkiksi Nimetsst Nimisia Nimisinki Nimityksesta Norjala Norjalleet Norjalousalun Nuoriheeros Oleimaan Olimaan Olimpn Olimpritt Olisen Olisist Olivt Ollaisen Olloin Olloittaa Olloittu Osaiikkien Osanttanut Osiiheeros Osiiheuttoi Osinn Osoihinkin Osoitettiin Pahoiset Pahoissa Paholain Paholaisesta Paitetty Paitsin Paljonkaltai Pelassa Pelksityksi Pelksityst Pelmn Perilaisill Perinto Perusta Perustus Permaailma Perst Perttiin Piiri Piirteeksi Piirteen Piirteiden Pimerkiksi Pimukaan Pimuksi Pimuksiis Pirstosta Pitenkin Pitetty Pitme Pohja Pohjoisen Pohjoisin Pohjoitiinto Pohjukkaan Poikin Poikin Poikkein Poisia Poistenkin Poria Poriheeros Porihme Pyydett Pyyhkin Phkin Phkinnan Pasia Pasioiden Pasioitus Pkaupunkin Posia Rajatuslakin Rangaisesti Rangaisiin Rangaisissa Rannalleet Rannanmaaalla Rauhan Rikkieli Runouden Runouttois Ruotsien Ruottoi Ruottoisaa Ruottomaissa Ruottomalasta Ryhtyessa Saaren Saata Saatalopuuluu Saatta Saattuureissa Salainoasta Salue Samaakun Satelss Sekoitsehalla Sekoitu Seksi Seliksi Selityksestaa Selivt Sella Sellee Seppsaaren Seppsaattu Seuroopana Siiheeros Silitarukkoa Siperia Somenkin Suhteen Suomala Suomat Suomattoi Suomea Suomen Suomenjnky Suomewesimen Suonelassa Suonelastaan Suonpuolevan Suurihen Suuten Synnyt Syntytarinto Snki Taisessa Taissa Taisten Taivaa Taivaan Taivat Takoittu Takoitty Takotka Tapiirteiden Tarinattoi Taristarina Taristen Tarkoitsuisti Tarkoittej Tarktistö Taruja Tarukkaan Tarukko Tarvan Tasavaasta Tekeva Tiedoill Todelle Todoksessa Toisill Toissa Tulkinyt Tulkittunein Tunasana Tuneet Tunnun Tunut Tuonelassa Tuonpuolento Tuovat Tutkijoisen Tutkijoisesti Tutkijoisille Tyypilla Tyypillisen Tyypill Tyypin Tyyppien Tlla Tmrittavan Tnnessa Trkea Tytettiin Tytett Ukkoka Ukkosta Unioiden Unioitu Uskon Uuden Uudenkin Vahinkielm Vaihin Vaihteet Vaikkaan Vaikuuluun Vaikuuttanut Vaikuuttavat Vainaisessa Valtaan Valtapaa Valtiin Varhun Varmuuten Varsin Varsinaista Varsineit Varsin Varsinmöisen Varsinsaame Vastaan Vastinuskon Verrotaan Vesikrisoihin Vesikrista Vesimerkin Vieliksi Vielivt Vihansana Voitsuista Voittavin Vuoksess Vuoksesta Vuoksia Vuoksi Vin Vinmöisen Vkin Yhdeksisest Yhdellisten Yhdessa Yleissa Ylhlla
+			}
+			
+			# Always combined with a second name
+			first_names = {
+				
+			}
+			
+			# Always combined with a first name
+			second_names = {
+				
+			}
+			
+			regnal_first_names = {
+				Ainanmaailma Elisill Korkein Kuinaissa Kuivaalla Kuole Kyttemmin Liseli Lnnöss Mahdolloitu Olimpritt Osinn Pitme Pohjoisin Pasioitus Suomat Tarkoittej Tarvan Tasavaasta Vaikuuluun Valtapaa
+			}
+			
+			regnal_second_names = {
+				Elmn Euroopassa Joiden Jumalasta Jnimist Laisi Maakunne Mahdella Metstyypill Muinaisivaan Muutteiden Nuorihmeren Oleisissa Posiin Sanasavat Sinn Vaikaan Valtinusomen Varsin Vasti
+			}
+		}
+	}
+}
