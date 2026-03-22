@@ -1,54 +1,84 @@
-# StellarisPlus — Mod / UI Reference
+# StellarisPlus -- Mod / UI Reference
 
-This document covers BPV slot customization for end-users and
-compatibility guidance for mod developers.
+## Purpose & Scope
+
+Covers BPV slot customization for end-users and compatibility guidance
+for mod developers who want their custom districts and zones to
+integrate with the StellarisPlus dynamic slot system.
+
+---
+
+## Naming Conventions
+
+- BPV scripted variables follow `@BPV_UPPER_SNAKE_CASE` (e.g.
+  `@BPV_CITY_SLOT`, `@BPV_ZONE_SLOT`, `@BPV_CITY_ZONES`).
+- Inline script parameters use `$PARAM$` (e.g. `$GOVERNMENT$`,
+  `$SLOT1$`).
+- BPV inline script variants are suffixed by max slot count:
+  `BPV_district_slots`, `BPV_district_slots2`, `BPV_district_slots4`,
+  etc.
+
+## Code Style
+
+- Prefer referencing `@BPV_ZONE_SLOT` over hard-coding slot numbers.
+- Keep `zone_slots` block entries one per line, sequential (`$SLOT1$`,
+  `$SLOT2$`, ...).
+- Always include `$GOVERNMENT$` as the first entry in a `zone_slots`
+  block.
+
+## Error Handling
+
+- If `@BPV_ZONE_SLOT` is "not found" at runtime, the user likely does
+  not have a BPV-related mod installed. Ship a fallback definition at
+  lower priority (see Compatibility section below).
+- Slot count mismatches (e.g. zones showing fewer buildings than
+  expected) usually mean `@BPV_ZONE_SLOT` and
+  `DEFAULT_MAX_PLANET_BUILDINGS_PER_ZONE` are out of sync.
+
+## Testing
+
+- After changing slot variables, launch the game and verify building
+  slot counts on a planet view.
+- Confirm auxiliary zone visibility matches `@BPV_CITY_ZONES`.
+- Test with and without BPV-related mods to verify fallback behaviour.
 
 ---
 
 ## Customize Slot Counts
 
-If the preset slot numbers provided on the Workshop do not meet your
-needs, you can customize them as follows:
+Open the file `common/scripted_variables/zz_bpv_defines.txt` and edit
+the values to the right of the equals signs:
 
-Open the file `common/scripted_variables/zz_bpv_defines.txt` and edit the
-values to the right of the equals signs. Specifically:
+| Variable | Default | Description |
+| --- | --- | --- |
+| `@BPV_CITY_SLOT` | `24` | Building slots in the main city zone (central area of the city district) |
+| `@BPV_ZONE_SLOT` | `6` | Building slots in other zones (specialized, generator, mining, agriculture) |
+| `@BPV_CITY_ZONES` | `4` | Number of auxiliary zones in the main city district |
 
-`@BPV_CITY_SLOT` — The number of building slots in the main city zone
-(the central area of the city district). Default: `24`
+**Important**: The defaults above (24/6/4) reflect the StellarisPlus
+integrated preset. If you install additional mods that define these
+same variables with a later load-order prefix, their values will take
+priority and may override your edits here.
 
-`@BPV_ZONE_SLOT` — The number of building slots in other zones,
-including the specialized zones to the right of the city district, as
-well as other districts (such as generator, mining, and agriculture).
-Default: `6`
+### Changing Auxiliary Zone Building Slots
 
-`@BPV_CITY_ZONES` — The number of auxiliary zones in the main city
-district. Default: `4`
+In addition to editing `@BPV_ZONE_SLOT`, open
+`common/defines/zzzz_bpv_zone_slots_override.txt` and change the value
+to the right of `DEFAULT_MAX_PLANET_BUILDINGS_PER_ZONE`. This defines
+the default slot count for zones that do not have an explicitly forced
+slot number. Some zones in the game (such as industrial zones) do not
+have predefined slot numbers, so the game will use this value at
+runtime.
 
-**Important**: The defaults above (24/6/4) reflect the StellarisPlus integrated
-preset. If you install additional mods that define these same variables with a
-later load-order prefix, their values will take priority and may override your
-edits here.
+### Changing Auxiliary Zone Count
 
-For auxiliary zone numbers and auxiliary zone slot counts, additional
-edits are required:
-
-To change the building slots for auxiliary zones, in addition to editing
-@BPV_ZONE_SLOT, open the file
-`common/defines/zzzz_bpv_zone_slots_override.txt` and change the value to the
-right of `DEFAULT_MAX_PLANET_BUILDINGS_PER_ZONE`. This defines the
-default slot count for zones that do not have an explicitly forced slot
-number. Some zones in the game (such as industrial zones) do not have
-predefined slot numbers, so the game will use this value at runtime.
-
-To change the number of auxiliary zones in the main city district, in
-addition to editing `@BPV_CITY_ZONES`, you also need to open
-`common/inline_scripts/districts/BPV_district_slots.txt` and modify the code
-inside the curly braces. Add lines according to the rule, one per
-auxiliary zone, until you reach the desired number. For example, if you
-want the main city to have four auxiliary zones, the modified content
-should look like this:
+In addition to editing `@BPV_CITY_ZONES`, open
+`common/inline_scripts/districts/BPV_district_slots.txt` and modify
+the code inside the curly braces. Add lines according to the rule, one
+per auxiliary zone, until you reach the desired number.
 
 ```ParadoxScript
+# Example: four auxiliary zones
 zone_slots = {
  $GOVERNMENT$
  $SLOT1$
@@ -58,53 +88,38 @@ zone_slots = {
 }
 ```
 
-**Note**: The first line `$GOVERNMENT$` represents the main zone (the
-government/central area). Do not remove it. The auxiliary zones must be
-added sequentially in the format `SLOT` + number, starting from `1`,
-one per line.
-
-Due to game mechanics, this list must also match corresponding district
-data in the game to function correctly. Currently, this mod adjusts all
-vanilla districts to support up to 10 auxiliary zones. If your list
-defines more than 10 items, the extra entries will have no effect. If
-you want to increase the limit further, please refer to the Stellaris
-modding documentation and review how this mod implements these changes
-before making additional edits.
+- The first line `$GOVERNMENT$` represents the main zone (the
+  government/central area). Do not remove it.
+- Auxiliary zones must be added sequentially in the format `SLOT` +
+  number, starting from `1`, one per line.
+- This mod adjusts all vanilla districts to support up to 10 auxiliary
+  zones. Extra entries beyond 10 will have no effect.
+- Refer to the Stellaris modding documentation before increasing the
+  limit further.
 
 ---
 
 ## Guide For Mod Developers (Compatibility)
 
-If you are a mod developer and want your custom **districts** and
-**zones** to support the dynamic slot system provided by this mod, you
-can follow the methods below:
-
 ### Make Custom Zones Support Dynamic Slot Numbers
 
-The simplest way is **not to set the `max_buildings` property** when
-defining a zone.
-In this case, the game will use the global default slot value at runtime.
-This mod (and its sub-mods) override that global value with the number
-chosen by the user, so your zone will automatically adapt to the user’s
-preference.
+The simplest approach is **not to set the `max_buildings` property**
+when defining a zone. The game will use the global default slot value
+at runtime. This mod overrides that global value with the number
+chosen by the user, so your zone will automatically adapt.
 
-If you **want to explicitly set this parameter**, or need to use the
-user-defined slot number for other purposes, you can reference the
-global variable `@BPV_ZONE_SLOT` and then use it for `max_buildings` or
-any other logic.
+If you **want to explicitly set this parameter**, reference the global
+variable `@BPV_ZONE_SLOT` and use it for `max_buildings` or any other
+logic.
 
-**Note:** Users might not have installed any BPV-related mods. If you
-reference `@BPV_ZONE_SLOT` directly, errors may occur. To avoid this,
-please copy `common/scripted_variables/zz_bpv_defines.txt` from this mod into
-your own one, or merge its contents into your own definition files,
-placed at a **lower priority**. Under such circumstance, if the user
-doesn’t have BPV installed, the parameter will default to `3`, matching
-vanilla Stellaris behavior.
+**Fallback for users without BPV**: Copy
+`common/scripted_variables/zz_bpv_defines.txt` into your own mod at a
+**lower priority**. If the user does not have BPV installed, the
+parameter will default to `3`, matching vanilla Stellaris behaviour.
 
 ### Make Custom Districts Support Dynamic Zone Numbers
 
-To make your **custom districts** support dynamic zones, add the
-following after your original `zone_slots` definition:
+Add the following after your original `zone_slots` definition:
 
 ```ParadoxScript
 inline_script = {
@@ -116,21 +131,19 @@ inline_script = {
 }
 ```
 
-The actual number of zones visible in-game depends on the **user’s
-settings**. For example, if the user sets 4 auxiliary zones, then only
-`SLOT1`–`SLOT4` will appear. If you define fewer than 10 slots, the max
-shown will be limited to what you defined. For example, if you only
-define 4 slots, but the user sets 6, only 4 will appear.
+- The actual number of zones visible in-game depends on the **user's
+  settings**. If the user sets 4 auxiliary zones, only `SLOT1`--`SLOT4`
+  will appear.
+- If you define fewer than 10 slots, the max shown will be limited to
+  what you defined.
 
-**Note**: By default, vanilla city district only support 2 auxiliary
-zones (extra ones won’t display). For better compatibility, it’s
-recommended to repeat the same zone type from `SLOT2` to `SLOT10`.
-Under such circumstance, the second auxiliary zone will automatically
-repeat to match the user’s configured number. If you define more than
-two different auxiliary zone types, vanilla users may not see them
-unless you add extra compatibility logic.
+**Best practice**: Repeat the same zone type from `SLOT2` to `SLOT10`.
+The second auxiliary zone will automatically repeat to match the user's
+configured number. Vanilla city districts only support 2 auxiliary
+zones by default; extra ones won't display without compatibility logic.
 
-For city districts with only **2 auxiliary zones**, you can use this shorter script:
+For city districts with only **2 auxiliary zones**, use this shorter
+script:
 
 ```ParadoxScript
 inline_script = {
@@ -141,7 +154,13 @@ inline_script = {
 }
 ```
 
-If the user does not have this mod installed, the `inline_script`
-section will simply not execute (since the script file does not exist).
-In that case, the game will fall back to your original `zone_slots`
-definition, ensuring full compatibility.
+### Advanced Tips & Edge Cases
+
+- If the user does not have this mod installed, the `inline_script`
+  section will simply not execute (since the script file does not
+  exist). The game will fall back to your original `zone_slots`
+  definition, ensuring full compatibility.
+- If you define more than two different auxiliary zone types, vanilla
+  users may not see them unless you add extra compatibility logic.
+- The `zone_slots` list must match corresponding district data in the
+  game to function correctly.

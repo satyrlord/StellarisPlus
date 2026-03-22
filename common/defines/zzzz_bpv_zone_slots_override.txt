@@ -1,3 +1,0 @@
-NGameplay = {
-	DEFAULT_MAX_PLANET_BUILDINGS_PER_ZONE = 6
-}

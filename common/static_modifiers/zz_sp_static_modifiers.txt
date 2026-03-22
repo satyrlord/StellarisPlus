@@ -1,0 +1,722 @@
+# === merged from plentiful_traditions_static_modifiers.txt ===
+modifier_transformation_mastery = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_transformation_mastery.dds"
+	icon_frame = 1
+	planet_max_districts_add = 8
+	planet_pop_assembly_add = 0.25
+	founder_species_growth_mult = 0.25
+}
+
+modifier_plentiful_traditions_blockchain_1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_blockchain_1.dds"
+	icon_frame = 1
+	planet_pop_assembly_mult = 0.05
+	planet_jobs_robotic_produces_mult = 0.025
+}
+
+modifier_plentiful_traditions_blockchain_2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_blockchain_1.dds"
+	icon_frame = 1
+	planet_pop_assembly_mult = 0.1
+	planet_jobs_robotic_produces_mult = 0.05
+}
+
+modifier_plentiful_traditions_blockchain_3 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_blockchain_1.dds"
+	icon_frame = 1
+	planet_pop_assembly_mult = 0.15
+	planet_jobs_robotic_produces_mult = 0.075
+}
+
+modifier_plentiful_traditions_blockchain_4 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_blockchain_4.dds"
+	icon_frame = 1
+	planet_pop_assembly_mult = 0.2
+	planet_jobs_robotic_produces_mult = 0.1
+}
+
+modifier_plentiful_traditions_united1 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.008
+}
+
+modifier_plentiful_traditions_united2 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.016
+}
+
+modifier_plentiful_traditions_united3 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.024
+}
+
+modifier_plentiful_traditions_united4 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.032
+}
+
+modifier_plentiful_traditions_united5 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.04
+}
+
+modifier_plentiful_traditions_united6 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.048
+}
+
+modifier_plentiful_traditions_united7 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.056
+}
+
+modifier_plentiful_traditions_united8 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.064
+}
+
+modifier_plentiful_traditions_united9 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.072
+}
+
+modifier_plentiful_traditions_united10 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united.dds"
+	icon_frame = 1
+	planet_jobs_produces_mult = 0.08
+}
+
+modifier_plentiful_traditions_due1 = {
+	country_trust_growth = 0.05
+}
+
+modifier_plentiful_traditions_due2 = {
+	country_trust_growth = 0.1
+}
+
+modifier_plentiful_traditions_due3 = {
+	country_trust_growth = 0.15
+}
+
+modifier_plentiful_traditions_due4 = {
+	country_trust_growth = 0.2
+}
+
+modifier_plentiful_traditions_due5 = {
+	country_trust_growth = 0.25
+}
+
+modifier_plentiful_traditions_due6 = {
+	country_trust_growth = 0.3
+}
+
+modifier_plentiful_traditions_persuasion1 = {
+	country_trade_attractiveness = 0.05
+}
+
+modifier_plentiful_traditions_persuasion2 = {
+	country_trade_attractiveness = 0.1
+}
+
+modifier_plentiful_traditions_persuasion3 = {
+	country_trade_attractiveness = 0.15
+}
+
+modifier_plentiful_traditions_persuasion4 = {
+	country_trade_attractiveness = 0.2
+}
+
+modifier_plentiful_traditions_persuasion5 = {
+	country_trade_attractiveness = 0.25
+}
+
+modifier_plentiful_traditions_persuasion6 = {
+	country_trade_attractiveness = 0.3
+}
+
+modifier_plentiful_traditions_persuasion7 = {
+	country_trade_attractiveness = 0.35
+}
+
+modifier_plentiful_traditions_persuasion8 = {
+	country_trade_attractiveness = 0.4
+}
+
+modifier_plentiful_traditions_piety = {
+	planet_stability_add = 5
+    pop_happiness = 0.05
+#	icon_frame = 3
+#	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+}
+
+modifier_plentiful_traditions_slave1 = {
+    pop_happiness = 0.05
+	pop_category_slave_consumer_goods_upkeep_mult = -0.2
+}
+
+modifier_plentiful_traditions_terraforming_fine = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
+	icon_frame = 1
+    pop_happiness = 0.20
+}
+
+modifier_plentiful_traditions_doctrine1 = {
+	starbase_shipyard_build_cost_mult = -0.04
+}
+
+modifier_plentiful_traditions_doctrine2 = {
+	starbase_shipyard_build_cost_mult = -0.08
+}
+
+modifier_plentiful_traditions_doctrine3 = {
+	starbase_shipyard_build_cost_mult = -0.12
+}
+
+modifier_plentiful_traditions_doctrine4 = {
+	starbase_shipyard_build_cost_mult = -0.16
+}
+
+modifier_plentiful_traditions_doctrine5 = {
+	starbase_shipyard_build_cost_mult = -0.2
+}
+
+modifier_plentiful_traditions_trial = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_trial.dds"
+	icon_frame = 1
+	species_leader_exp_gain = 0.1
+}
+
+modifier_plentiful_traditions_embargo = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_embargo.dds"
+	icon_frame = 3
+	planet_jobs_consumer_goods_produces_mult = 0.2
+}
+
+modifier_plentiful_traditions_undertaking_positive = {
+	icon_frame = 1
+	icon = "gfx/interface/icons/modifiers/mod_country_physics_tech_research_speed.dds"
+	country_physics_tech_research_speed = 0.10
+}
+
+modifier_plentiful_traditions_undertaking_negative = {
+	icon_frame = 3
+	icon = "gfx/interface/icons/modifiers/mod_country_physics_tech_research_speed.dds"
+	country_physics_tech_research_speed = -0.15
+}
+
+modifier_plentiful_traditions_enraged = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_enraged.dds"
+	icon_frame = 1
+	country_unity_produces_mult = 0.1
+	country_base_influence_produces_add = 1
+}
+
+modifier_plentiful_traditions_empathetic = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_empathetic.dds"
+	icon_frame = 1
+	pop_happiness = 0.05
+}
+
+modifier_plentiful_traditions_pathfinder = {
+	icon = "gfx/interface/icons/modifiers/mod_country_all_tech_research_speed.dds"
+	icon_frame = 1
+	all_technology_research_speed = 0.03
+}
+
+modifier_plentiful_traditions_sequence = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_sequence.dds"
+	icon_frame = 1
+	planet_jobs_physics_research_produces_mult = 0.10
+}
+
+modifier_plentiful_traditions_lebensraum_enlargement_cooldown = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_holy_planet"
+	icon_frame = 1
+}
+
+modifier_plentiful_traditions_habitat_construction = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_holy_planet"
+	icon_frame = 1
+	country_base_minerals_produces_add = -20
+	country_base_energy_produces_add = -2
+}
+
+modifier_plentiful_traditions_transformation = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_united"
+	icon_frame = 1
+}
+
+modifier_plentiful_traditions_adaptive_foundry_cooldown = {
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_adaptive_foundry_1 = {
+	icon_frame = 1
+	planet_researchers_engineering_research_produces_mult = 0.05
+#	pop_environment_tolerance = -0.1
+#	planet_jobs_minerals_produces_mult = -0.05 #0.1
+#	planet_jobs_food_produces_mult = -0.1
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_adaptive_foundry_2 = {
+	icon_frame = 1
+	planet_researchers_engineering_research_produces_mult = 0.1
+#	pop_environment_tolerance = -0.2
+#	planet_jobs_minerals_produces_mult = -0.1
+#	planet_jobs_food_produces_mult = -0.2
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_adaptive_foundry_3 = {
+	icon_frame = 1
+	planet_researchers_engineering_research_produces_mult = 0.15
+#	pop_environment_tolerance = -0.3
+#	planet_jobs_minerals_produces_mult = -0.1.5
+#	planet_jobs_food_produces_mult = -0.3
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_adaptive_foundry_4 = {
+	icon_frame = 1
+	planet_researchers_engineering_research_produces_mult = 0.2
+#	pop_environment_tolerance = -0.4
+#	planet_jobs_minerals_produces_mult = -0.2
+#	planet_jobs_food_produces_mult = -0.4
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_adaptive_foundry_5 = {
+	icon_frame = 1
+	planet_researchers_engineering_research_produces_mult = 0.25
+#	pop_environment_tolerance = -0.5
+#	planet_jobs_minerals_produces_mult = -0.25
+#	planet_jobs_food_produces_mult = -0.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_adaptive_foundry_6 = {
+	icon_frame = 1
+	planet_researchers_engineering_research_produces_mult = 0.3
+#	pop_environment_tolerance = -0.6
+#	planet_jobs_minerals_produces_mult = -0.3
+#	planet_jobs_food_produces_mult = -0.6
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_adaptive_foundry_7 = {
+	icon_frame = 1
+	planet_researchers_engineering_research_produces_mult = 0.35
+#	pop_environment_tolerance = -0.7
+#	planet_jobs_minerals_produces_mult = -0.3.5
+#	planet_jobs_food_produces_mult = -0.7
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_adaptive_foundry_8 = {
+	icon_frame = 1
+	planet_researchers_engineering_research_produces_mult = 0.4
+#	pop_environment_tolerance = -0.8
+#	planet_jobs_minerals_produces_mult = -0.4
+#	planet_jobs_food_produces_mult = -0.8
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_adaptive_foundry_9 = {
+	icon_frame = 1
+	planet_researchers_engineering_research_produces_mult = 0.45
+#	pop_environment_tolerance = -0.9
+#	planet_jobs_minerals_produces_mult = -0.45
+#	planet_jobs_food_produces_mult = -0.9
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_adaptive_foundry_10 = {
+	icon_frame = 1
+	planet_researchers_engineering_research_produces_mult = 0.5
+#	pop_environment_tolerance = -1
+#	planet_jobs_minerals_produces_mult = -0.5
+#	planet_jobs_food_produces_mult = -1
+	icon = "gfx/interface/icons/planet_modifiers/pm_adaptive_foundry.dds"
+}
+
+modifier_plentiful_traditions_ionized_excavation = {
+	icon_frame = 1
+	planet_jobs_minerals_produces_mult = 0.10
+	planet_buildings_upkeep_mult = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/pm_ionized_excavation.dds"
+}
+
+modifier_plentiful_traditions_overcharge = {
+	icon_frame = 1
+	planet_jobs_energy_produces_mult = 0.10
+	planet_buildings_upkeep_mult = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/pm_overcharge.dds"
+}
+
+modifier_plentiful_traditions_partial_terraforming = {
+	icon_frame = 1
+	planet_jobs_food_produces_mult = 0.10
+	planet_buildings_upkeep_mult = 0.20
+	icon = "gfx/interface/icons/planet_modifiers/pm_partial_terraforming.dds"
+}
+
+modifier_plentiful_traditions_sacred_act = {
+	icon_frame = 1
+	planet_jobs_unity_produces_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_sacred_act.dds"
+}
+
+modifier_plentiful_traditions_remnant_act = {
+	icon_frame = 1
+	planet_jobs_unity_produces_mult = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_remnant_act.dds"
+}
+
+modifier_plentiful_traditions_plentiful_deeds = {
+	pop_happiness = 0.05
+	icon = "gfx/interface/icons/planet_modifiers/pm_plentiful_deeds.dds"
+}
+
+modifier_plentiful_traditions_false_flag = {
+	planet_stability_add = -15
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+}
+
+modifier_plentiful_traditions_sabotage = {
+	all_technology_research_speed = -0.15
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_sabotage_random.dds"
+}
+
+#modifier_plentiful_traditions_inflicted_genes = {
+#	planet_jobs_food_produces_mult = -0.15
+#	founder_species_growth_mult = -0.15
+#	icon_frame = 3
+#	icon = "gfx/interface/icons/planet_modifiers/pm_inflicted_genes.dds"
+#}
+
+modifier_plentiful_traditions_open_habitat = {
+	pop_environment_tolerance = -0.95
+	icon_frame = 3
+	icon = "gfx/interface/icons/planet_modifiers/pm_inflicted_genes.dds"
+}
+
+modifier_plentiful_perks_feeding = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_feeding.dds"
+	icon_frame = 1
+	planet_pop_assembly_mult = 1
+}
+
+modifier_mutagenesis_transformation = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_mutagenesis_transformation.dds"
+	icon_frame = 1
+	planet_resettlement_unemployed_mult =  -2
+	planet_stability_add = -5
+}
+
+#Agenda Finishing Effects
+
+agenda_tr_plentiful_affinity_finish = {
+		planet_resettlement_unemployed_mult =  0.30
+		founder_species_growth_mult = 0.15
+}
+agenda_tr_plentiful_affinity_hive_finish = {
+		founder_species_growth_mult = 0.30
+}
+agenda_tr_plentiful_affinity_machine_finish = {
+		planet_pop_assembly_add = 0.5
+}
+
+agenda_tr_plentiful_anguish_finish = {
+		ship_weapon_range_mult = 0.15
+}
+
+agenda_tr_plentiful_aspiration_finish = {
+		planet_jobs_trade_produces_mult = 0.15
+}
+
+agenda_tr_plentiful_assault_finish = {
+		ship_orbital_bombardment_army_damage_mult = 0.5
+		army_morale = 0.5
+}
+
+agenda_tr_plentiful_biogenesis_finish = {
+		country_food_produces_mult = 0.25
+}
+
+agenda_tr_plentiful_biogenesis_lithoid_finish = {
+		country_minerals_produces_mult = 0.25
+}
+
+agenda_tr_plentiful_biogenesis_machine_finish = {
+		country_energy_produces_mult = 0.25
+}
+
+agenda_tr_plentiful_dedication_finish = {
+		monthly_loyalty_from_subjects = 1
+}
+
+agenda_tr_plentiful_defence_finish = {
+		army_defense_morale_mult = 1
+}
+
+agenda_tr_plentiful_endure_finish = {
+		country_war_exhaustion_mult = -0.66
+}
+
+agenda_tr_plentiful_experimentalism_finish = {
+		ship_ftl_jumpdrive_range_mult = 0.75
+		ship_jumpdrive_cooldown_mult = -0.4
+}
+
+agenda_tr_plentiful_faith_finish = {
+		country_base_influence_produces_add = 0.75
+}
+
+agenda_tr_plentiful_genetic_cyborg_finish = {
+		bonus_pop_growth_mult = 0.33
+}
+
+agenda_tr_plentiful_industry_finish = {
+		station_gatherers_minerals_produces_mult = 0.45
+}
+
+agenda_tr_plentiful_kleptocracy_finish = {
+		starbase_shipyard_build_speed_mult = 0.3
+}
+
+agenda_tr_plentiful_malice_finish = {
+		planet_jobs_slave_produces_mult = 0.15
+		slave_market_cost_mult = -0.5
+}
+
+agenda_tr_plentiful_mutagenesis_finish = {
+		planet_jobs_food_produces_mult = 0.15
+}
+
+agenda_tr_plentiful_mysticism_finish = {
+		stations_energy_produces_mult = 0.15
+		stations_minerals_produces_mult = 0.15
+		stations_food_produces_mult = 0.15
+}
+
+agenda_tr_plentiful_order_finish = {
+		megastructure_build_speed_mult = 0.25
+		country_megastructure_build_cap_add = 1
+}
+
+agenda_tr_plentiful_robotics_finish = {
+		robotic_pop_bonus_workforce_mult = 0.45
+}
+
+agenda_tr_plentiful_robotics_hive_finish = {
+		bonus_pop_growth_mult = 0.15
+		planet_jobs_simple_drone_produces_mult = 0.2
+}
+
+agenda_tr_plentiful_transformation_finish = {
+		terraform_speed_mult = 0.5
+}
+# === merged from simpletraditions_modifiers.txt ===
+# Research Buffs:
+simple_tradition_biology_buff = {
+	category_biology_research_speed_mult = 0.2
+	country_society_tech_research_speed = 0.1
+}
+simple_tradition_computing_buff = {
+	category_computing_research_speed_mult = 0.2
+	country_physics_tech_research_speed = 0.1
+}
+simple_tradition_field_manipulation_buff = {
+	category_field_manipulation_research_speed_mult = 0.2
+	country_physics_tech_research_speed = 0.1
+}
+simple_tradition_industry_buff = {
+	category_industry_research_speed_mult = 0.2
+	country_engineering_tech_research_speed = 0.1
+}
+simple_tradition_materials_buff = {
+	category_materials_research_speed_mult = 0.2
+	country_engineering_tech_research_speed = 0.1
+}
+simple_tradition_military_theory_buff = {
+	category_military_theory_research_speed_mult = 0.2
+	country_society_tech_research_speed = 0.1
+}
+simple_tradition_new_worlds_buff = {
+	category_new_worlds_research_speed_mult = 0.2
+	country_society_tech_research_speed = 0.1
+}
+simple_tradition_particles_buff = {
+	category_particles_research_speed_mult = 0.2
+	country_physics_tech_research_speed = 0.1
+}
+simple_tradition_statecraft_buff = {
+	category_statecraft_research_speed_mult = 0.2
+	country_society_tech_research_speed = 0.1
+}
+simple_tradition_voidcraft_buff = {
+	category_voidcraft_research_speed_mult = 0.2
+	country_engineering_tech_research_speed = 0.1
+}
+simple_tradition_propulsion_buff = {
+	category_propulsion_research_speed_mult = 0.2
+	country_engineering_tech_research_speed = 0.1
+}
+simple_tradition_psionic_buff = {
+	category_psionics_research_speed_mult = 0.2
+	country_society_tech_research_speed = 0.1
+}
+
+# Weapon buffs:
+simple_tradition_kinetic_buff = {
+	weapon_type_kinetic_weapon_damage_mult = 0.10
+}
+simple_tradition_energy_buff = {
+	weapon_type_energy_weapon_damage_mult = 0.10
+}
+simple_tradition_missile_buff = {
+	custom_tooltip = "simple_tradition_missile_buff_effects"
+	weapon_type_explosive_weapon_damage_mult = 0.05
+	weapon_type_explosive_speed_mult = 0.5
+}
+
+# Defense buffs:
+simple_tradition_shield_buff = {
+	ship_shield_mult = 0.05
+	ship_shield_hardening_add = 0.15
+}
+simple_tradition_armor_buff = {
+	ship_armor_mult = 0.05
+	ship_armor_hardening_add = 0.15
+}
+simple_tradition_hull_buff = {
+	ship_hull_mult = 0.1
+}
+
+# carrier and point defense buffs:
+simple_tradition_strike_craft_buff = {
+	weapon_type_strike_craft_weapon_damage_mult = 0.15
+	weapon_type_strike_craft_weapon_fire_rate_mult = 0.15
+	weapon_type_strike_craft_speed_mult = 0.5
+}
+simple_tradition_point_defense_buff = {
+	weapon_type_point_defense_weapon_damage_mult = 0.5
+	weapon_type_point_defense_weapon_fire_rate_mult = 0.5
+}
+
+# range and speed buffs:
+simple_tradition_range_buff = {
+	ship_weapon_range_mult = 0.1
+}
+simple_tradition_speed_buff = {
+	ship_speed_mult = 0.3
+}
+
+
+# cost and maintenance buffs:
+simple_tradition_build_cost_buff = {
+	starbase_shipyard_build_cost_mult = -0.10
+}
+simple_tradition_maintenance_buff = {
+	ships_upkeep_mult = -0.15
+}
+
+# INDUSTRY FINISHER
+# Industry mining jobs
+simple_planet_mining = {
+	icon = gfx/interface/icons/planet_modifiers/pm_resources.dds
+	custom_tooltip = simple_planet_mining_effect_desc
+	planet_jobs_minerals_produces_mult = 0.1
+	planet_miners_energy_upkeep_add = 0.5
+	planet_miners_minerals_produces_add = 1
+}
+simple_planet_mining_gestalt = {
+	icon = gfx/interface/icons/planet_modifiers/pm_resources.dds
+	custom_tooltip = simple_planet_mining_gestalt_effect_desc
+	planet_jobs_minerals_produces_mult = 0.1
+	planet_miners_energy_upkeep_add = 0.5
+	planet_miners_minerals_produces_add = 1
+}
+# industry energy jobs
+simple_planet_energy = {
+	icon = gfx/interface/icons/planet_modifiers/pm_resources.dds
+	custom_tooltip = simple_planet_energy_effect_desc
+	planet_jobs_energy_produces_mult = 0.1
+	planet_technician_minerals_upkeep_add = 0.5
+	planet_technician_energy_produces_add = 1
+}
+simple_planet_energy_gestalt = {
+	icon = gfx/interface/icons/planet_modifiers/pm_resources.dds
+	custom_tooltip = simple_planet_energy_gestalt_effect_desc
+	planet_jobs_energy_produces_mult = 0.1
+	planet_technician_minerals_upkeep_add = 0.5
+	planet_technician_energy_produces_add = 1
+}
+# industry farmer jobs
+simple_planet_farmer = {
+	icon = gfx/interface/icons/planet_modifiers/pm_resources.dds
+	custom_tooltip = simple_planet_farmer_effect_desc
+	planet_jobs_food_produces_mult = 0.2
+	planet_farmers_energy_upkeep_add = 0.5
+	planet_farmers_minerals_upkeep_add = 0.5
+	planet_farmers_food_produces_add = 1
+}
+simple_planet_farmer_gestalt = {
+	icon = gfx/interface/icons/planet_modifiers/pm_resources.dds
+	custom_tooltip = simple_planet_farmer_gestalt_effect_desc
+	planet_jobs_food_produces_mult = 0.2
+	planet_farmers_energy_upkeep_add = 0.5
+	planet_farmers_minerals_upkeep_add = 0.5
+	planet_farmers_food_produces_add = 1
+}
+# industry production jobs
+simple_planet_production = {
+	icon = gfx/interface/icons/planet_modifiers/pm_resources.dds
+	custom_tooltip = simple_planet_production_effect_desc
+	planet_jobs_alloys_produces_mult = 0.1
+	planet_metallurgists_upkeep_mult = 0.1
+	planet_jobs_consumer_goods_produces_mult = 0.1
+	planet_artisans_upkeep_mult = 0.1
+}
+simple_planet_production_gestalt = {
+	icon = gfx/interface/icons/planet_modifiers/pm_resources.dds
+	custom_tooltip = simple_planet_production_gestalt_effect_desc
+	planet_jobs_alloys_produces_mult = 0.1
+	planet_metallurgists_upkeep_mult = 0.1
+	planet_jobs_consumer_goods_produces_mult = 0.1
+	planet_artisans_upkeep_mult = 0.1
+}
+# industry refinery jobs
+simple_planet_refinery = {
+	icon = gfx/interface/icons/planet_modifiers/pm_resources.dds
+	custom_tooltip = simple_planet_refinery_effect_desc
+	planet_jobs_rare_crystals_produces_mult = 0.2
+	planet_jobs_rare_crystals_upkeep_mult = -0.1
+	planet_jobs_volatile_motes_produces_mult = 0.2
+	planet_jobs_volatile_motes_upkeep_mult = -0.1
+	planet_jobs_exotic_gases_produces_mult = 0.2
+	planet_jobs_exotic_gases_upkeep_mult = -0.1
+}
+simple_planet_refinery_gestalt = {
+	icon = gfx/interface/icons/planet_modifiers/pm_resources.dds
+	custom_tooltip = simple_planet_refinery_gestalt_effect_desc
+	planet_jobs_rare_crystals_produces_mult = 0.2
+	planet_jobs_rare_crystals_upkeep_mult = -0.1
+	planet_jobs_volatile_motes_produces_mult = 0.2
+	planet_jobs_volatile_motes_upkeep_mult = -0.1
+	planet_jobs_exotic_gases_produces_mult = 0.2
+	planet_jobs_exotic_gases_upkeep_mult = -0.1
+}

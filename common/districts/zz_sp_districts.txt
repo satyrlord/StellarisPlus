@@ -1,0 +1,672 @@
+# === merged from 00_special_districts_replace.txt ===
+@lathe_alloy_cost = 1000
+@lathe_logic_cost = 500
+@lathe_upkeep = 50
+@biomass_cost = 50
+
+@hab_cost = 500
+@hab_maintenance = 2
+@low_hab_maintenance = 0.2
+
+
+
+
+
+
+
+district_mindlink = {
+	overlay_icon = GFX_district_feral_insight
+	base_buildtime = 720
+
+	exempt_from_ai_planet_specialization = yes
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		exists = owner
+		is_capital = yes
+		owner = {
+			has_menace_perk = menp_behemoth_mind_meld
+		}
+	}
+
+	allow = {
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+		}
+	}
+
+	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+
+	conversion_ratio = 1
+	convert_to = {
+		district_arcology_housing
+		district_rw_city
+		district_rw_hive
+		district_rw_nexus
+		district_city
+		district_nexus
+		district_hive
+		district_hab_housing
+		district_crashed_slaver_ship
+		district_craglands
+	}
+
+	resources = {
+		category = planet_districts_cities
+		cost = {
+			food = 1500
+		}
+		cost = {
+			trigger = {
+				owner = { is_wilderness_empire = yes }
+			}
+			biomass = @biomass_cost
+		}
+		upkeep = {
+			food = 2
+		}
+		produces = {
+			trigger = {
+				owner = { is_variable_set =  pops_transferred }
+				owner = { is_wilderness_empire = no }
+			}
+			unity = 1.5
+			physics_research = 0.5
+			society_research = 0.5
+			engineering_research = 0.5
+			mult = owner.value:transferred_pops_district_percent
+		}
+		produces = {
+			trigger = {
+				owner = { is_variable_set =  pops_transferred }
+				owner = { is_wilderness_empire = yes }
+			}
+			unity = 300
+			physics_research = 100
+			society_research = 100
+			engineering_research = 100
+			mult = owner.value:transferred_pops_district_percent
+		}
+	}
+
+	inline_script = {
+		script = buildings/on_all_wilderness_buildings_districts
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3000
+	}
+
+	triggered_planet_modifier = { #Regular modifiers
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_transference_volunteer_add = 1500
+		}
+	}
+
+	triggered_planet_modifier = { # Gestalt modifiers
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {
+			planet_housing_add = 1000
+			job_transference_drone_add = 1500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = -500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 500
+		}
+	}
+
+	triggered_desc = { #same as transference drone so everyone gets it
+		trigger = {
+			exists = owner
+		}
+		text = job_transference_volunteer_effect_desc
+	}
+}
+
+# === merged from 01_arcology_districts_replace.txt ===
+district_arcology_housing = {
+	base_buildtime = 600
+
+	exempt_from_ai_planet_specialization = yes
+	overlay_icon = GFX_district_government
+
+	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+
+	show_on_uncolonized = {
+		exists = from
+		from = { is_wilderness_empire = no }
+		uses_district_set = city_world
+	}
+
+	potential = {
+		uses_district_set = city_world
+		NAND = {
+			is_capital = yes
+			owner = {
+				has_menace_perk = menp_behemoth_mind_meld
+			}
+		}
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+		district_mindlink
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		modifier = {
+			job_production_overseer_add = 100
+		}
+	}
+}
+
+district_arcology_leisure = {
+	base_buildtime = 600
+
+
+	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_arcology_organic_housing
+		district_city
+		district_craglands
+		district_nexus
+		district_hive
+		district_arcology_housing
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+			exotic_gases = 50
+		}
+		upkeep = {
+			energy = 5
+			exotic_gases = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_tankbound_empire = yes
+			}
+		}
+		modifier = {
+			job_production_overseer_add = 100
+		}
+	}
+
+	inline_script = {
+		script = jobs/entertainers_add
+		AMOUNT = 600
+	}
+}
+
+
+
+
+
+
+
+# === merged from 05_wilderness_districts_replace.txt ===
+@base_cost = 30
+@city_cost = 50
+# duplicate removed: @biomass_cost = 50
+
+@wilderness_district_build_long = 480
+@wilderness_district_build_short = 240
+
+# City (blue)
+district_craglands = {
+	base_buildtime = @wilderness_district_build_long
+
+	overlay_icon = GFX_district_government
+
+	show_on_uncolonized = {
+		uses_district_set = standard
+		exists = from
+		from = { is_wilderness_empire = yes }
+	}
+
+	potential = {
+		uses_district_set = standard
+		exists = owner
+		owner = { is_wilderness_empire = yes }
+		NAND = {
+			is_capital = yes
+			owner = {
+				has_menace_perk = menp_behemoth_mind_meld
+			}
+		}
+	}
+
+	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+
+	conversion_ratio = 1
+	convert_to = {
+		district_arcology_housing
+		district_rw_city
+		district_nexus
+		district_hive
+		district_city
+		district_mindlink
+	}
+
+	resources = {
+		category = planet_districts_cities
+		cost = {
+			minerals = 500
+		}
+		cost = {
+			biomass = @biomass_cost
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 100
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_domination_imperious_architecture
+			}
+		}
+		planet_defense_armies_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_tradition = tr_prosperity_public_works
+			}
+		}
+		planet_housing_add = 50
+	}
+
+	inline_script = {
+		script = buildings/on_all_wilderness_buildings_districts
+	}
+
+	ai_resource_production = {
+		unity = 5
+		trigger = {
+			OR = {
+				has_building = building_commensal_clearing_1
+				has_building = building_commensal_clearing_2
+				has_building = building_commensal_clearing_3
+				has_building = building_commensal_clearing_4
+			}
+		}
+	}
+
+	exempt_from_ai_planet_specialization = yes
+	ai_estimate_without_unemployment = yes
+	additional_ai_weight = 10
+}
+
+# Industry (orange)
+#
+
+# Energy (yellow)
+
+
+
+
+# Mining (red)
+
+
+
+
+# Farming (green)
+
+
+
+
+# === merged from MZ_swap_districts.txt ===
+district_MZ_arcology_genomic_research = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_ring_world_genomic_research = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_arcology_enforcer = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_ring_world_enforcer = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_arcology_telepath = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_ring_world_telepath = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_arcology_patrol = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_ring_world_patrol = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_arcology_physics_society = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_ring_world_physics_society = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_arcology_society_engineering = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_ring_world_society_engineering = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_arcology_engineering_physics = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}
+district_MZ_ring_world_engineering_physics = {
+	icon = district_city
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+}

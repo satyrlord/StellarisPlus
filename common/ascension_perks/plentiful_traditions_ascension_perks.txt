@@ -75,10 +75,109 @@ ap_plentiful_traditions_lebensraum_enlargement = {
 }
 
 ap_plentiful_traditions_vast_slave_procreation = {
-	modifier = {
+	on_enabled = {
+		custom_tooltip = "tooltip_plentiful_traditions_vast_slave_procreation"
 	}
 	potential = {
-		always = no
+		NOT = {
+			has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation
+		}
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_plentiful_traditions_bunker_mentality = {
+	potential = {
+		NOT = { has_ascension_perk = ap_plentiful_traditions_bunker_mentality }
+	}
+	modifier = {
+		country_base_defense_armies_add = 4
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_plentiful_traditions_trade_empire = {
+	potential = {
+		NOT = { has_ascension_perk = ap_plentiful_traditions_trade_empire }
+	}
+	modifier = {
+		planet_jobs_trade_produces_mult = 0.10
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_plentiful_traditions_food_is_life = {
+	potential = {
+		NOT = { has_ascension_perk = ap_plentiful_traditions_food_is_life }
+	}
+	modifier = {
+		planet_farmers_food_produces_mult = 0.10
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_plentiful_traditions_industrial_mining_excavation = {
+	potential = {
+		NOT = { has_ascension_perk = ap_plentiful_traditions_industrial_mining_excavation }
+	}
+	modifier = {
+		planet_miners_minerals_produces_mult = 0.10
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_plentiful_traditions_transformation = {
+	potential = {
+		NOT = { has_ascension_perk = ap_plentiful_traditions_transformation }
+	}
+	modifier = {
+		planet_max_districts_add = 2
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_plentiful_traditions_justice = {
+	potential = {
+		NOT = { has_ascension_perk = ap_plentiful_traditions_justice }
+	}
+	modifier = {
+		planet_crime_mult = -0.10
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_plentiful_traditions_mutagenesis_universalis = {
+	potential = {
+		NOT = { has_ascension_perk = ap_plentiful_traditions_mutagenesis_universalis }
+	}
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 1
+	}
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_plentiful_traditions_stormtroopers = {
+	potential = {
+		NOT = { has_ascension_perk = ap_plentiful_traditions_stormtroopers }
+	}
+	modifier = {
+		country_army_damage_mult = 0.10
 	}
 	ai_weight = {
 		factor = 0

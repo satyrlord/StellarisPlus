@@ -22,9 +22,6 @@ event = {
 				if = {
 					limit = {
 						has_modifier = assist_research
-						NOT = {
-							has_modifier = modifier_plentiful_traditions_sequence
-						}
 					}
 					add_modifier = {
 						modifier = "modifier_plentiful_traditions_sequence"

@@ -1,0 +1,136 @@
+# === StellarisPlus: Slave specialization traits ===
+# Applied via decision_assign_slave_type to categorize enslaved pops
+# by their assigned production role under tr_plentiful_malice_5
+
+# Livestock / Organic Battery slaves
+trait_plentiful_traditions_slave_01 = {
+	cost = 0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	opposites = {
+		trait_plentiful_traditions_slave_02
+		trait_plentiful_traditions_slave_03
+		trait_plentiful_traditions_slave_04
+		trait_plentiful_traditions_slave_05
+		trait_plentiful_traditions_slave_06
+		trait_plentiful_traditions_slave_07
+	}
+	modifier = {
+		habitability_floor_add = 0.1
+	}
+}
+
+# Energy worker slaves (technician)
+trait_plentiful_traditions_slave_02 = {
+	cost = 0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	opposites = {
+		trait_plentiful_traditions_slave_01
+		trait_plentiful_traditions_slave_03
+		trait_plentiful_traditions_slave_04
+		trait_plentiful_traditions_slave_05
+		trait_plentiful_traditions_slave_06
+		trait_plentiful_traditions_slave_07
+	}
+	modifier = {
+		planet_technicians_energy_produces_mult = 0.05
+	}
+}
+
+# Mineral / Industrial slaves (miner/fabricator)
+trait_plentiful_traditions_slave_03 = {
+	cost = 0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	opposites = {
+		trait_plentiful_traditions_slave_01
+		trait_plentiful_traditions_slave_02
+		trait_plentiful_traditions_slave_04
+		trait_plentiful_traditions_slave_05
+		trait_plentiful_traditions_slave_06
+		trait_plentiful_traditions_slave_07
+	}
+	modifier = {
+		planet_miners_minerals_produces_mult = 0.05
+	}
+}
+
+# Food / Agricultural slaves (farmer)
+trait_plentiful_traditions_slave_04 = {
+	cost = 0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	opposites = {
+		trait_plentiful_traditions_slave_01
+		trait_plentiful_traditions_slave_02
+		trait_plentiful_traditions_slave_03
+		trait_plentiful_traditions_slave_05
+		trait_plentiful_traditions_slave_06
+		trait_plentiful_traditions_slave_07
+	}
+	modifier = {
+		planet_farmers_food_produces_mult = 0.05
+	}
+}
+
+# Research slaves (guinea_pigs)
+trait_plentiful_traditions_slave_05 = {
+	cost = 0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	opposites = {
+		trait_plentiful_traditions_slave_01
+		trait_plentiful_traditions_slave_02
+		trait_plentiful_traditions_slave_03
+		trait_plentiful_traditions_slave_04
+		trait_plentiful_traditions_slave_06
+		trait_plentiful_traditions_slave_07
+	}
+	modifier = {
+		planet_researchers_physics_research_produces_mult = 0.05
+	}
+}
+
+# Service / Miscellaneous slaves (enforcer, entertainer, soldier, etc.)
+trait_plentiful_traditions_slave_06 = {
+	cost = 0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	opposites = {
+		trait_plentiful_traditions_slave_01
+		trait_plentiful_traditions_slave_02
+		trait_plentiful_traditions_slave_03
+		trait_plentiful_traditions_slave_04
+		trait_plentiful_traditions_slave_05
+		trait_plentiful_traditions_slave_07
+	}
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.05
+	}
+}
+
+# Special resource slaves (chemist, gas_refiner, crystal_miner, etc.)
+trait_plentiful_traditions_slave_07 = {
+	cost = 0
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL }
+	opposites = {
+		trait_plentiful_traditions_slave_01
+		trait_plentiful_traditions_slave_02
+		trait_plentiful_traditions_slave_03
+		trait_plentiful_traditions_slave_04
+		trait_plentiful_traditions_slave_05
+		trait_plentiful_traditions_slave_06
+	}
+	modifier = {
+		planet_jobs_sr_produces_mult = 0.05
+	}
+}

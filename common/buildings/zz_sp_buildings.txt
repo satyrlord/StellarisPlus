@@ -1,0 +1,3366 @@
+# === merged from plentiful_traditions_buildings_assembly.txt ===
+building_plentiful_traditions_clone_vats = {
+	base_buildtime = 900
+
+	category = pop_assembly
+
+
+	planet_limit = {
+		base = 1
+		modifier = {
+			exists = owner
+			owner = {
+				has_tradition = tr_cloning_finish
+			}
+			has_upgraded_capital = yes
+			add = 1
+		}
+		modifier = {
+			exists = owner
+			owner = {
+				has_tradition = tr_cloning_finish
+			}
+			has_major_upgraded_capital = yes
+			add = 1
+		}
+		modifier = {
+			exists = owner
+			owner = {
+				has_tradition = tr_cloning_finish
+			}
+			has_fully_upgraded_capital = yes
+			add = 1
+		}
+	}
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }
+		OR = {
+			owner = { is_ai = no }
+			NOT = { exists = assembling_species }
+			assembling_species = { is_organic_species = yes }
+		}
+		OR = {
+			owner = { is_ai = no }
+			NAND = {
+				free_district_slots = 0
+				free_building_slots <= 1
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+		owner = {
+			has_active_tradition = tr_plentiful_mutagenesis_adopt_machine
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = { 
+			owner = { has_active_tradition = tr_plentiful_mutagenesis_adopt_machine }
+		}
+		OR = {
+			AND = {
+				owner = { is_ai = yes }
+				free_district_slots = 0
+				free_building_slots = 0
+				free_housing <= 0
+				free_jobs <= 0
+			}
+		}
+	}
+
+	planet_modifier = {
+		founder_species_growth_mult = 0.50
+	}
+
+	resources = {
+		category = planet_buildings_clone_vats
+		cost = {
+			alloys = 500
+			food = 200
+		}
+		upkeep = {
+			energy = 2
+			food = 2
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			OR = {
+				free_district_slots = 0
+				num_buildings = { type = any value >= 14 }
+				is_planet_class = pc_habitat
+			}
+		}
+		modifier = {
+			weight = 250
+			planet = {
+				owner = {
+					any_owned_pop_group =  {
+						is_organic_species = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+
+# === merged from plentiful_traditions_buildings_production.txt ===
+################################
+#Energy
+################################
+
+building_plentiful_traditions_trading_terminal = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = trade
+
+	building_sets = {
+		urban
+		trade
+	}
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			OR = {
+				has_active_tradition = tr_plentiful_aspiration_gestalt_finish
+				has_active_tradition = tr_plentiful_aspiration_finish
+			}
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+		planet_jobs_energy_produces_mult = 0.05
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+			rare_crystals = 50
+		}
+		produces = {
+			energy = 4
+			unity = 1
+		}
+	}
+
+	upgrades = {
+		building_plentiful_traditions_advanced_trading_terminal
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_jobs_trade_produces_mult = 0.05
+			job_politician_add = 100
+			job_clerk_add = 200
+			job_technician_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_synapse_drone_add = 100
+			job_technician_drone_add = 500
+			planet_jobs_energy_produces_mult = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_evaluator_add = 500
+			planet_jobs_energy_produces_mult = 0.05
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			OR = {
+				has_active_tradition = tr_plentiful_aspiration_gestalt_finish
+				has_active_tradition = tr_plentiful_aspiration_finish
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_plentiful_traditions_advanced_trading_terminal = {
+	base_buildtime = 360
+#	planet_limit = 1
+	can_build = no
+
+	category = trade
+
+	building_sets = {
+		urban
+		trade
+	}
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_ascension_perk = ap_plentiful_traditions_trade_empire
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	planet_modifier = {
+		planet_jobs_energy_produces_mult = 0.10
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+			rare_crystals = 75
+		}
+		produces = {
+			energy = 6
+			unity = 2
+		}
+		upkeep = {
+			rare_crystals = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_jobs_trade_produces_mult = 0.10
+			job_politician_add = 200
+			job_clerk_add = 400
+			job_technician_add = 600
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_synapse_drone_add = 200
+			job_technician_drone_add = 1000
+			planet_jobs_energy_produces_mult = 0.10
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_evaluator_add = 1000
+			planet_jobs_energy_produces_mult = 0.10
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_ascension_perk = ap_plentiful_traditions_trade_empire
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_plentiful_traditions_trading_depot = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = resource
+
+	building_sets = {
+		generator
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_aspiration_4
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 325
+			rare_crystals = 50
+		}
+		produces = {
+			energy = 2
+			unity = 3
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_energy_add = 1000
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_clerk_add = 200
+			job_technician_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 500
+			job_synapse_drone_add = 100
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 500
+			job_coordinator_add = 100
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_aspiration_4
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+
+################################
+#Food
+################################
+
+building_plentiful_traditions_pillar_of_affliction = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = resource
+
+	building_sets = {
+		farming
+	}
+
+	potential = {
+		exists = owner
+		NOT = { is_planet_class = pc_machine }
+		NOT = { has_modifier = resort_colony }	
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_mutagenesis_4
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+			exotic_gases = 50
+		}
+		upkeep = {
+			energy = 2
+		}
+		produces = {
+			food = 4
+			unity = 1
+		}
+	}
+
+	upgrades = {
+		building_plentiful_traditions_advanced_pillar_of_affliction
+	}
+
+	country_modifier = {
+		country_resource_max_food_add = 1000
+	}
+	
+	planet_modifier  = {
+		planet_jobs_food_produces_mult = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+				OR = {
+					is_anglers_empire = no
+					AND = {
+						is_anglers_empire = yes
+						NOT = { PREV = { planet = { is_wet = yes } } }
+					}
+				}
+			}
+		}
+		modifier = {
+			job_farmer_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+				is_anglers_empire = yes
+				PREV = { planet = { is_wet = yes } }
+			}
+		}
+		modifier = {
+			job_angler_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_acolyte_farm_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 500
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_mutagenesis_4
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_plentiful_traditions_advanced_pillar_of_affliction = {
+	base_buildtime = 360
+#	planet_limit = 1
+	can_build = no
+
+	category = resource
+
+	building_sets = {
+		farming
+	}
+	
+	potential = {
+		exists = owner
+		NOT = { is_planet_class = pc_machine }
+		NOT = { has_modifier = resort_colony }	
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_ascension_perk = ap_plentiful_traditions_food_is_life
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+			exotic_gases = 75
+		}
+		upkeep = {
+			energy = 3
+			exotic_gases = 1
+		}
+		produces = {
+			food = 6
+			unity = 2
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_food_add = 2000
+	}
+	
+	planet_modifier  = {
+		planet_jobs_food_produces_mult = 0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+				OR = {
+					is_anglers_empire = no
+					AND = {
+						is_anglers_empire = yes
+						NOT = { PREV = { planet = { is_wet = yes } } }
+					}
+				}
+			}
+		}
+		modifier = {
+			job_farmer_add = 1000
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_fallen_empire_spiritualist = no
+				is_anglers_empire = yes
+				PREV = { planet = { is_wet = yes } }
+			}
+		}
+		modifier = {
+			job_angler_add = 1000
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_acolyte_farm_add = 1000
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 1000
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_ascension_perk = ap_plentiful_traditions_food_is_life
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+################################
+#Minerals
+################################
+
+building_plentiful_traditions_purification_facility = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = resource
+
+	building_sets = {
+		mining
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_industry_4
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+			volatile_motes = 50
+		}
+		upkeep = {
+			energy = 2
+		}
+		produces = {
+			minerals = 4
+			unity = 1
+		}
+	}
+
+	upgrades = {
+		building_plentiful_traditions_advanced_purification_facility
+	}
+
+	country_modifier = {
+		country_resource_max_minerals_add = 1000
+	}
+
+	planet_modifier  = {
+		planet_jobs_minerals_produces_mult = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_miner_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 500
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_industry_4
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_plentiful_traditions_advanced_purification_facility = {
+	base_buildtime = 360
+#	planet_limit = 1
+	can_build = no
+
+	category = resource
+
+	building_sets = {
+		mining
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { is_planet_class = pc_habitat }
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_ascension_perk = ap_plentiful_traditions_industrial_mining_excavation
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+			volatile_motes = 75
+		}
+		upkeep = {
+			energy = 3
+			volatile_motes = 1
+		}
+		produces = {
+			minerals = 6
+			unity = 2
+		}
+	}
+
+	country_modifier = {
+		country_resource_max_minerals_add = 2000
+	}
+
+	planet_modifier  = {
+		planet_jobs_minerals_produces_mult = 0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_miner_add = 1000
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 1000
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_ascension_perk = ap_plentiful_traditions_industrial_mining_excavation
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+################################
+#Platform
+################################
+
+building_plentiful_traditions_obelisk0 = {
+	base_buildtime = 60
+	planet_limit = 1
+
+	category = resource
+
+	building_sets = {
+		urban
+	}
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			NOT = {
+				has_authority = auth_machine_intelligence
+			}
+			OR = {
+				has_tradition = tr_plentiful_mysticism_1
+				has_tradition = tr_plentiful_mysticism_2
+				has_tradition = tr_plentiful_mysticism_3
+			}
+		}
+		planet = {
+			NOT = {
+				has_building = building_plentiful_traditions_obelisk1
+				has_building = building_plentiful_traditions_obelisk2
+				has_building = building_plentiful_traditions_obelisk3
+			}
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 75
+			exotic_gases = 5
+			volatile_motes = 5
+			rare_crystals = 5
+		}
+		produces = {
+			food = 0.01
+			energy = 0.01
+			minerals = 0.01
+		}
+	}
+	
+	upgrades = {
+		building_plentiful_traditions_obelisk1
+		building_plentiful_traditions_obelisk2
+		building_plentiful_traditions_obelisk3
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			NOT = {
+				has_authority = auth_machine_intelligence
+			}
+			OR = {
+				has_tradition = tr_plentiful_mysticism_1
+				has_tradition = tr_plentiful_mysticism_2
+				has_tradition = tr_plentiful_mysticism_3
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+		
+	}
+}
+
+building_plentiful_traditions_obelisk1 = {
+	base_buildtime = 240
+	can_build = no
+#	planet_limit = 1
+
+	category = resource
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_mysticism_1
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 250
+			exotic_gases = 25
+		}
+		produces = {
+			food = 3
+			energy = 1
+			unity = 2
+		}
+	}
+	
+	planet_modifier  = {
+		planet_jobs_food_produces_mult = 0.05
+		planet_housing_add = 500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_farmer_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_agri_drone_add = 500
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			NOT = {
+				has_authority = auth_machine_intelligence
+			}
+			has_tradition = tr_plentiful_mysticism_1
+		}
+	}
+	
+	ai_weight = {
+		weight = 500
+	}
+}
+
+building_plentiful_traditions_obelisk2 = {
+	base_buildtime = 240
+	can_build = no
+#	planet_limit = 1
+
+	category = resource
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_mysticism_2
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 250
+			rare_crystals = 25
+		}
+		produces = {
+			energy = 3
+			minerals = 1
+			unity = 2
+		}
+	}
+	
+	planet_modifier  = {
+		planet_jobs_energy_produces_mult = 0.05
+		planet_housing_add = 500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_technician_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 500
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			NOT = {
+				has_authority = auth_machine_intelligence
+			}
+			has_tradition = tr_plentiful_mysticism_2
+		}
+	}
+	
+	ai_weight = {
+		weight = 500
+	}
+}
+
+building_plentiful_traditions_obelisk3 = {
+	base_buildtime = 240
+	can_build = no
+#	planet_limit = 1
+
+	category = resource
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_mysticism_3
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 250
+			volatile_motes = 25
+		}
+		produces = {
+			minerals = 3
+			food = 1
+			unity = 2
+		}
+	}
+	
+	planet_modifier  = {
+		planet_jobs_minerals_produces_mult = 0.05
+		planet_housing_add = 500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_miner_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 500
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			NOT = {
+				has_authority = auth_machine_intelligence
+			}
+			has_tradition = tr_plentiful_mysticism_3
+		}
+	}
+	
+	ai_weight = {
+		weight = 500
+	}
+}
+
+
+# === merged from plentiful_traditions_buildings_science.txt ===
+building_plentiful_traditions_university_of_wisdom = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	category = research
+
+	building_sets = {
+		research
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_experimentalism_4
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+		exists = owner
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+			owner = { is_regular_empire = no }
+		}
+	}
+
+	allow = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+		produces = {
+			physics_research = 7
+			society_research = 1
+			engineering_research = 1
+		}
+	}
+	
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOT = {
+				has_country_flag = fallen_empire_1
+			}
+			has_global_flag = plentiful_perks_active
+		}
+	}
+	modifier = {
+		job_physicist_add = 300
+		job_biologist_add = 300
+		job_engineer_add = 300
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+		has_global_flag = plentiful_perks_active
+	}
+	modifier = {
+		job_calculator_physicist_add = 300
+		job_calculator_biologist_add = 300
+		job_calculator_engineer_add = 300
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+		has_global_flag = plentiful_perks_active
+	}
+	modifier = {
+		job_calculator_physicist_add = 300
+		job_calculator_biologist_add = 300
+		job_calculator_engineer_add = 300
+	}
+}
+
+### MATERIALIST FE
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = fallen_empire_1
+		}
+		has_global_flag = plentiful_perks_active
+	}
+	modifier = {
+		job_fe_archivist_add = 300
+		job_fe_archivist_add = 300
+		job_fe_archivist_add = 300
+	}
+}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_plentiful_malice_5 }
+			has_global_flag = plentiful_perks_active
+		}
+		modifier = {
+			job_guinea_pigs_add = 200
+		}
+	}
+
+	country_modifier = {
+		country_scientist_cap_add = 1
+	}
+
+	prerequisites = {
+		"tech_basic_science_lab_3"
+	}
+
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_experimentalism_4
+		}
+	}
+
+}
+
+
+building_plentiful_traditions_robotics_facility = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = research
+
+	building_sets = {
+		#research
+		mining
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		OR = {
+			owner = {
+				has_active_tradition = tr_plentiful_robotics_1
+			}
+			owner = {
+				has_active_tradition = tr_plentiful_faith_finish_machine
+			}
+			owner = {
+				has_active_tradition = tr_plentiful_robotics_1
+			}
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+			volatile_motes = 50
+		}
+		upkeep = {
+			energy = 4
+			volatile_motes = 1
+		}
+		produces = {
+			engineering_research = 6
+			unity = 1
+		}
+	}
+	
+	prerequisites = {
+		"tech_basic_science_lab_3"
+		"tech_mine_volatile_motes"
+	}
+	
+	planet_modifier  = {
+		planet_researchers_engineering_research_produces_mult = 0.05
+	}
+	
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOT = {
+				has_country_flag = fallen_empire_1
+			}
+		}
+	}
+	modifier = {
+		#job_physicist_add = 500
+		#job_biologist_add = 500
+		job_engineer_add = 500
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+	#job_calculator_physicist_add = 500
+	#job_calculator_biologist_add = 500
+	job_calculator_engineer_add = 500
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	#job_calculator_physicist_add = 500
+	#job_calculator_biologist_add = 500
+	job_calculator_engineer_add = 500
+}
+
+### MATERIALIST FE
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = fallen_empire_1
+		}
+	}
+	#job_fe_archivist_add = 500
+	#job_fe_archivist_add = 500
+	job_fe_archivist_add = 500
+}
+
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_plentiful_malice_5 }
+			has_global_flag = plentiful_perks_active
+		}
+		modifier = {
+			job_guinea_pigs_add = 100
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		OR = {			
+			owner = {
+				has_active_tradition = tr_plentiful_faith_finish_machine
+			}
+			owner = {
+				has_active_tradition = tr_plentiful_robotics_1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_plentiful_traditions_experimental_weapons_facility = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = research
+
+	building_sets = {
+		#research
+		generator
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_experimentalism_1
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+			rare_crystals = 50
+		}
+		upkeep = {
+			energy = 4
+			rare_crystals = 1
+		}
+		produces = {
+			physics_research = 3
+			unity = 4
+		}
+	}
+	
+	prerequisites = {
+		"tech_basic_science_lab_3"
+		"tech_mine_rare_crystals"
+	}
+	
+	planet_modifier  = {
+		planet_researchers_physics_research_produces_mult = 0.05
+	}
+	
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOT = {
+				has_country_flag = fallen_empire_1
+			}
+		}
+	}
+	modifier = {
+		job_physicist_add = 500
+		#job_biologist_add = 500
+		#job_engineer_add = 500
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+	job_calculator_physicist_add = 500
+	#job_calculator_biologist_add = 500
+	#job_calculator_engineer_add = 500
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	job_calculator_physicist_add = 500
+	#job_calculator_biologist_add = 500
+	#job_calculator_engineer_add = 500
+}
+
+### MATERIALIST FE
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = fallen_empire_1
+		}
+	}
+	job_fe_archivist_add = 500
+	#job_fe_archivist_add = 500
+	#job_fe_archivist_add = 500
+}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_plentiful_malice_5 }
+			has_global_flag = plentiful_perks_active
+		}
+		modifier = {
+			job_guinea_pigs_add = 100
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_experimentalism_1
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_plentiful_traditions_biogenesis_lab = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = research
+
+	building_sets = {
+		#research
+		farming
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_biogenesis_4
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+			exotic_gases = 50
+		}
+		upkeep = {
+			energy = 4
+			exotic_gases = 1
+		}
+		produces = {
+			society_research = 6
+			unity = 1
+		}
+	}
+	
+	prerequisites = {
+		"tech_basic_science_lab_3"
+		"tech_mine_exotic_gases"
+	}
+	
+	planet_modifier  = {
+		planet_researchers_society_research_produces_mult = 0.05
+	}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOT = {
+				has_country_flag = fallen_empire_1
+			}
+		}
+	}
+	modifier = {
+		#job_physicist_add = 500
+		job_biologist_add = 500
+		#job_engineer_add = 500
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+	modifier = {
+		#job_calculator_physicist_add = 500
+		job_calculator_biologist_add = 500
+		#job_calculator_engineer_add = 500
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	modifier = {
+		#job_calculator_physicist_add = 500
+		job_calculator_biologist_add = 500
+		#job_calculator_engineer_add = 500
+	}
+}
+
+### MATERIALIST FE
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = fallen_empire_1
+		}
+	}
+	modifier = {
+		#job_fe_archivist_add = 500
+		job_fe_archivist_add = 500
+		#job_fe_archivist_add = 500
+	}
+}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_plentiful_malice_5 }
+			has_global_flag = plentiful_perks_active
+		}
+		modifier = {
+			job_guinea_pigs_add = 100
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_biogenesis_4
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+
+
+# === merged from plentiful_traditions_buildings_slavery.txt ===
+## original
+building_slave_processing = {
+	base_buildtime = @b1_time
+	planet_limit = 1
+
+	category = government
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		owner = {
+			is_regular_empire = yes
+			OR = {
+				has_policy_flag = slavery_allowed
+				has_exploited_disconnected_drones = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		if = {
+			limit = {
+				exists = orbital_defence
+			}
+			orbital_defence = {
+				exists = starbase
+				starbase = {
+					NOR = {
+						has_starbase_building = ring_slave_processing_facility
+						is_starbase_building_building = ring_slave_processing_facility
+					}
+				}
+			}
+		}
+	}
+
+	destroy_trigger = { # destroys if true
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					is_regular_empire = yes
+					has_policy_flag = slavery_allowed
+					has_exploited_disconnected_drones = yes
+				}
+			}
+			has_modifier = resort_colony
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation }
+			has_building = building_clone_vats
+		}
+		modifier = {
+			auto_mod_monthly_add = 100 #planet_pop_assembly_organic_add = 1.0
+		}
+	}
+
+
+	planet_modifier = {
+		planet_jobs_slave_produces_mult = 0.05
+		pop_cat_slave_political_power = -0.25
+		planet_resettlement_unemployed_mult = -0.50
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	upgrades = {
+		building_plentiful_traditions_advanced_slave_processing
+	}
+
+	prerequisites = {
+		"tech_neural_implants"
+	}
+
+	triggered_desc = {
+		text = building_slave_processing_slave_army_effect_desc
+	}
+
+	triggered_desc = {
+		text = building_slave_processing_migrate_effect_desc
+	}
+}
+
+
+
+## Slave Processing Facility is required to build Slave Armies
+## They also improve the output of Enslaved Pops on the planet
+building_plentiful_traditions_advanced_slave_processing = {
+	base_buildtime = @b1_time
+	planet_limit = 1
+
+	category = government
+
+	building_sets = {
+		government
+		urban
+	}
+
+	potential = {
+		owner = {
+			is_regular_empire = yes
+			OR = {
+				has_policy_flag = slavery_allowed
+				has_exploited_disconnected_drones = yes
+			}
+		}
+		NOT = { has_modifier = resort_colony }
+		owner = {
+			has_tradition = tr_plentiful_malice_5
+		}
+	}
+
+	destroy_trigger = { # destroys if true
+		exists = owner
+		OR = {
+			owner = {
+				NOR = {
+					is_regular_empire = yes
+					has_policy_flag = slavery_allowed
+					has_exploited_disconnected_drones = yes
+				}
+			}
+			has_modifier = resort_colony
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_ascension_perk = ap_plentiful_traditions_vast_slave_procreation }
+			has_building = building_clone_vats
+		}
+		modifier = {
+			auto_mod_monthly_add = 150 #planet_pop_assembly_organic_add = 1.5
+		}
+	}
+
+	
+	planet_modifier = {
+		job_slave_enforcer_add = 500
+		planet_jobs_slave_produces_mult = 0.10
+		pop_cat_slave_political_power = -0.50
+		planet_resettlement_unemployed_mult = -0.75
+	}	
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	prerequisites = {
+		"tech_neural_implants"
+	}
+
+	triggered_desc = {
+		text = building_slave_processing_slave_army_effect_desc
+	}
+
+	triggered_desc = {
+		text = building_slave_processing_migrate_effect_desc
+	}
+}
+# === merged from plentiful_traditions_buildings_unity.txt ===
+building_plentiful_traditions_tower_of_affinity = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = unity
+
+	building_sets = {
+		government
+		unity
+	}
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_affinity_5
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+		}
+		upkeep = {
+			energy = 1
+			alloys = 5
+		}
+		produces = {
+			society_research = 4
+			unity = 2
+		}
+	}
+
+	planet_modifier  = {
+		pop_resettlement_cost_mult = -0.35
+		country_resettlement_cost_mult = -0.1
+	}
+	
+	inline_script = {
+		script = jobs/entertainers_add
+		AMOUNT = 1500
+	}
+	
+	prerequisites = {
+		"tech_cultural_heritage"
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_culture_worker_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		text = job_synapse_drone_effect_desc
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_coordinator_effect_desc
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_affinity_5
+		}
+	}
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_plentiful_traditions_citadel_of_motion = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = unity
+
+	building_sets = {
+		government
+		unity
+	}
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_active_tradition = tr_plentiful_faith_finish_machine
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+		owner = {
+			NOT = { 
+				any_owned_planet = {
+					has_building = building_plentiful_traditions_citadel_of_motion
+				}
+			}
+			NOT = { 
+				any_owned_planet = {
+					has_building_construction = building_plentiful_traditions_citadel_of_motion
+				}
+			}
+		}
+	}
+	
+	convert_to = {
+		building_plentiful_traditions_house_of_prayer
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 325
+			exotic_gases = 50
+		}
+		upkeep = {
+			energy = 3
+			exotic_gases = 1
+		}
+		produces = {
+			unity = 7
+		}
+	}
+	
+	country_modifier = {
+		country_base_influence_produces_add = 1
+		country_resource_max_influence_add = 150
+		planet_housing_add = 10
+	}
+	
+
+	inline_script = {
+		script = jobs/entertainers_add
+		AMOUNT = 1500
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_active_tradition = tr_plentiful_faith_finish_machine
+		}
+	}
+	
+	ai_weight = {
+		weight = 12
+	}
+}
+
+building_plentiful_traditions_house_of_prayer = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = unity
+
+	building_sets = {
+		government
+		unity
+	}
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_active_tradition = tr_plentiful_faith_finish
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+		owner = {
+			NOT = { 
+				any_owned_planet = {
+					has_building = building_plentiful_traditions_house_of_prayer
+				}
+			}
+			NOT = { 
+				any_owned_planet = {
+					has_building_construction = building_plentiful_traditions_house_of_prayer
+				}
+			}
+		}
+	}
+	
+	convert_to = {
+		building_plentiful_traditions_citadel_of_motion
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 325
+			exotic_gases = 50
+		}
+		upkeep = {
+			energy = 3
+			exotic_gases = 1
+		}
+		produces = {
+			unity = 6
+		}
+	}
+
+	planet_modifier  = {
+		#country_base_influence_produces_add = 1
+		pop_happiness = 0.10
+		pop_ethic_spiritualist_attraction_mult = 0.20
+		planet_housing_add = 1000
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no				
+				is_spiritualist = no
+			}
+		}
+		modifier = {
+			job_culture_worker_add = 400
+			job_bureaucrat_add = 100
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no				
+				is_spiritualist = yes
+			}
+		}
+		modifier = {
+			job_bureaucrat_add = 500
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_synapse_drone_add = 500
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_evaluator_add = 500
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_active_tradition = tr_plentiful_faith_finish
+		}
+	}
+
+	ai_weight = {
+		weight = 12
+	}
+}
+
+building_plentiful_traditions_sanctum_of_keys = {
+	base_buildtime = 300
+	planet_limit = 1
+
+	category = unity
+
+	building_sets = {
+		government
+		unity
+	}
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_active_tradition = tr_plentiful_mysticism_5
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+			influence = 50
+		}
+		upkeep = {
+			energy = 2
+		}
+		produces = {
+			unity = 6
+		}
+	}
+
+	planet_modifier  = {
+		pop_happiness = 0.05
+		pop_environment_tolerance = 0.05
+		pop_amenities_usage_mult = -0.05
+		pop_housing_usage_mult = -0.05
+	}
+	
+
+	inline_script = {
+		script = jobs/entertainers_add
+		AMOUNT = 1500
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_active_tradition = tr_plentiful_mysticism_5
+		}
+	}
+	
+	ai_weight = {
+		weight = 12
+	}
+}
+
+building_plentiful_traditions_sanctum_of_the_collective = {
+	base_buildtime = 300
+	planet_limit = 1
+
+	category = unity
+
+	building_sets = {
+		government
+		unity
+	}
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_active_tradition =  tr_plentiful_mysticism_5_machine
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+			influence = 50
+		}
+		upkeep = {
+			energy = 2
+		}
+		produces = {
+			unity = 8
+		}
+	}
+
+	planet_modifier  = {
+		planet_stability_add = 10
+	}
+	
+	inline_script = {
+		script = jobs/entertainers_add
+		AMOUNT = 1500
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_active_tradition =  tr_plentiful_mysticism_5_machine
+		}
+	}
+		
+	ai_weight = {
+		weight = 12
+	}
+}
+
+
+# === merged from plentiful_traditions_buildings_war.txt ===
+building_fortress = {
+	base_buildtime = @b1_time
+	can_build = no
+	planetary_ftl_inhibitor = yes
+	position_priority = 100
+	can_be_ruined = no
+	category = army
+
+	building_sets = {
+		government
+		fortress
+	}
+
+	potential = {
+		owner = { is_wilderness_empire = no } # see 'building_planetary_carapace_2'
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings_strongholds
+		cost = {
+			minerals = @b2_minerals
+			volatile_motes = @b2_rare_cost
+		}
+		upkeep = {
+			energy = 1
+			volatile_motes = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_global_defense_grid"
+	}
+	show_tech_unlock_if = {
+		is_wilderness_empire = no
+	}
+	
+	upgrades = {
+		"building_plentiful_traditions_zitadom"
+	}
+	
+	inline_script = {
+		script = jobs/soldiers_add
+		AMOUNT = @building_static_jobs_high
+	}
+}
+
+building_plentiful_traditions_zitadom = {
+	base_buildtime = @b1_time
+	can_build = no
+	planetary_ftl_inhibitor = yes
+	position_priority = 100
+	can_be_ruined = no
+	category = army
+
+	building_sets = {
+		government
+		fortress
+	}
+
+	potential = {
+		owner = { is_wilderness_empire = no } # see 'building_planetary_carapace_2'
+		owner = {
+			has_tradition = tr_plentiful_defence_5
+		}
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings_strongholds
+		cost = {
+			minerals = 600
+			volatile_motes = 75
+		}			
+		upkeep = {
+			energy = 2
+			volatile_motes = 2
+			alloys = 5
+		}
+	}
+	
+	prerequisites = {
+		"tech_global_defense_grid"
+	}
+	show_tech_unlock_if = {
+		is_wilderness_empire = no
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 600
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+			owner = {
+				has_ascension_perk = ap_plentiful_traditions_bunker_mentality
+			}
+		}
+		modifier = {
+			job_soldier_add = 600
+			planet_housing_add = 600
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			owner = {
+				has_ascension_perk = ap_plentiful_traditions_bunker_mentality
+			}
+		}
+		modifier = {
+			job_warrior_drone_add = 600
+			planet_housing_add = 600
+		}
+	}
+
+	inline_script = {
+		script = jobs/soldiers_add
+		AMOUNT = @building_static_jobs_very_high
+	}
+}
+
+building_plentiful_traditions_syndicate_quarters = {
+	base_buildtime = 300
+	base_cap_amount = 3
+
+	category = army
+	
+	potential = {
+		exists = owner
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_kleptocracy_5
+		}
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 225
+			exotic_gases = 50
+		}
+		upkeep = {
+			energy = 1
+			exotic_gases = 1
+		}
+		produces = {
+			unity = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_add = 100
+			planet_housing_add = 100
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_warrior_drone_add = 100
+			planet_housing_add = 100
+		}
+	}
+	
+	country_modifier  = {
+		country_naval_cap_add = 10
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_kleptocracy_5
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+# === merged from RPA_buildings.txt ===
+@PRA_basic_size_reduc = -0.05
+@RPA_ap_size_upkeep = 100
+
+
+#	Non-capital
+RPA_building_GOV_empire_sprawl_1_N = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = yes
+	exempt_from_ai_planet_specialization = yes
+	ai_estimate_without_unemployment = yes
+
+	category = government
+	building_sets = {
+		government
+	}
+	prerequisites = {
+		"tech_planetary_government"
+	}
+	potential = {
+		is_capital = no
+	}
+	allow = {
+		always = yes
+	}
+	destroy_trigger = { is_capital = yes }
+	convert_to = {
+		RPA_building_GOV_empire_sprawl_1_C
+	}
+	upgrades = {
+		RPA_building_GOV_empire_sprawl_2_N
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+		#	Ringworld
+		cost = {
+			trigger = { has_ringworld_output_boost = yes }
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			trigger = { has_ringworld_output_boost = yes }
+			energy = @b1_upkeep
+		}
+	}
+
+	planet_modifier = {
+		empire_size_districts_mult = @PRA_basic_size_reduc
+		species_empire_size_mult = @PRA_basic_size_reduc
+		job_PRA_job_administer_DEFAULT_add = 300
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_gestalt = yes } }
+		job_PRA_job_administer_DEFAULT_add = -300
+		job_PRA_job_administer_GESTALT_add = 300
+	}
+	#	Sprawl
+	triggered_planet_modifier = {
+		empire_size_districts_mult = -0.1
+		species_empire_size_mult = -0.1
+		mult = value:PRA_sv_plnt_JOB_default
+	}
+	
+	triggered_desc = {
+		text = RPA_building_GOV_empire_sprawl_N_tip
+	}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = no } }
+	#	text = job_PRA_job_administer_DEFAULT_effect_desc
+	#}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = yes } }
+	#	text = job_PRA_job_administer_GESTALT_effect_desc
+	#}
+}
+RPA_building_GOV_empire_sprawl_2_N = {
+	base_buildtime = @b1_time
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = yes
+	exempt_from_ai_planet_specialization = yes
+	ai_estimate_without_unemployment = yes
+
+	category = government
+	building_sets = {
+		government
+	}
+	prerequisites = {
+		"tech_planetary_government"
+	}
+	potential = {
+		is_capital = no
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+	destroy_trigger = { is_capital = yes }
+	convert_to = {
+		RPA_building_GOV_empire_sprawl_2_C
+	}
+	upgrades = {
+		RPA_building_GOV_empire_sprawl_3_N
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+		#	Ringworld
+		cost = {
+			trigger = { has_ringworld_output_boost = yes }
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			trigger = { has_ringworld_output_boost = yes }
+			energy = @b2_upkeep
+		}
+	}
+
+	planet_modifier = {
+		empire_size_districts_mult = @PRA_basic_size_reduc
+		species_empire_size_mult = @PRA_basic_size_reduc
+		job_PRA_job_administer_DEFAULT_add = 400
+		planet_jobs_produces_mult = 0.03
+		pop_bonus_workforce_mult = 0.03
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_gestalt = yes } }
+		job_PRA_job_administer_DEFAULT_add = -400
+		job_PRA_job_administer_GESTALT_add = 400
+	}
+	#	Sprawl
+	triggered_planet_modifier = {
+		empire_size_districts_mult = -0.1
+		species_empire_size_mult = -0.1
+		mult = value:PRA_sv_plnt_JOB_default
+	}
+	
+	triggered_desc = {
+		text = RPA_building_GOV_empire_sprawl_N_tip
+	}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = no } }
+	#	text = job_PRA_job_administer_DEFAULT_effect_desc
+	#}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = yes } }
+	#	text = job_PRA_job_administer_GESTALT_effect_desc
+	#}
+}
+RPA_building_GOV_empire_sprawl_3_N = {
+	base_buildtime = @b1_time
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = yes
+	exempt_from_ai_planet_specialization = yes
+	ai_estimate_without_unemployment = yes
+
+	category = government
+	building_sets = {
+		government
+	}
+	prerequisites = {
+		"tech_planetary_government"
+	}
+	potential = {
+		is_capital = no
+	}
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	destroy_trigger = { is_capital = yes }
+	convert_to = {
+		RPA_building_GOV_empire_sprawl_3_C
+	}
+	upgrades = {
+		RPA_building_GOV_empire_sprawl_4_N
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = @b4_upkeep
+		}
+		#	Ringworld
+		cost = {
+			trigger = { has_ringworld_output_boost = yes }
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			trigger = { has_ringworld_output_boost = yes }
+			energy = @b3_upkeep
+		}
+	}
+
+	planet_modifier = {
+		empire_size_districts_mult = @PRA_basic_size_reduc
+		species_empire_size_mult = @PRA_basic_size_reduc
+		job_PRA_job_administer_DEFAULT_add = 500
+		planet_jobs_produces_mult = 0.065
+		pop_bonus_workforce_mult = 0.065
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_gestalt = yes } }
+		job_PRA_job_administer_DEFAULT_add = -500
+		job_PRA_job_administer_GESTALT_add = 500
+	}
+	#	Sprawl
+	triggered_planet_modifier = {
+		empire_size_districts_mult = -0.1
+		species_empire_size_mult = -0.1
+		mult = value:PRA_sv_plnt_JOB_default
+	}
+	
+	triggered_desc = {
+		text = RPA_building_GOV_empire_sprawl_N_tip
+	}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = no } }
+	#	text = job_PRA_job_administer_DEFAULT_effect_desc
+	#}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = yes } }
+	#	text = job_PRA_job_administer_GESTALT_effect_desc
+	#}
+}
+RPA_building_GOV_empire_sprawl_4_N = {
+	base_buildtime = @b1_time
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = yes
+	exempt_from_ai_planet_specialization = yes
+	ai_estimate_without_unemployment = yes
+
+	category = government
+	building_sets = {
+		government
+	}
+	prerequisites = {
+		"tech_planetary_government"
+	}
+	potential = {
+		is_capital = no
+	}
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	destroy_trigger = { is_capital = yes }
+	convert_to = {
+		RPA_building_GOV_empire_sprawl_4_C
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b5_minerals
+		}
+		upkeep = {
+			energy = @b5_upkeep
+		}
+		#	Ringworld
+		cost = {
+			trigger = { has_ringworld_output_boost = yes }
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			trigger = { has_ringworld_output_boost = yes }
+			energy = @b4_upkeep
+		}
+	}
+
+	planet_modifier = {
+		empire_size_districts_mult = @PRA_basic_size_reduc
+		species_empire_size_mult = @PRA_basic_size_reduc
+		job_PRA_job_administer_DEFAULT_add = 600
+		planet_jobs_produces_mult = 0.1
+		pop_bonus_workforce_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_gestalt = yes } }
+		job_PRA_job_administer_DEFAULT_add = -600
+		job_PRA_job_administer_GESTALT_add = 600
+	}
+	#	Sprawl
+	triggered_planet_modifier = {
+		empire_size_districts_mult = -0.1
+		species_empire_size_mult = -0.1
+		mult = value:PRA_sv_plnt_JOB_default
+	}
+	
+	triggered_desc = {
+		text = RPA_building_GOV_empire_sprawl_N_tip
+	}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = no } }
+	#	text = job_PRA_job_administer_DEFAULT_effect_desc
+	#}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = yes } }
+	#	text = job_PRA_job_administer_GESTALT_effect_desc
+	#}
+}
+
+
+#	Capital
+RPA_building_GOV_empire_sprawl_1_C = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = yes
+	exempt_from_ai_planet_specialization = yes
+	ai_estimate_without_unemployment = yes
+
+	category = government
+	building_sets = {
+		government
+	}
+	prerequisites = {
+		"tech_planetary_government"
+	}
+	potential = {
+		is_capital = yes
+	}
+	allow = {
+		always = yes
+	}
+	destroy_trigger = { is_capital = no }
+	convert_to = {
+		RPA_building_GOV_empire_sprawl_1_N
+	}
+	upgrades = {
+		RPA_building_GOV_empire_sprawl_2_C
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+		#	Ringworld
+		cost = {
+			trigger = { has_ringworld_output_boost = yes }
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			trigger = { has_ringworld_output_boost = yes }
+			energy = @b2_upkeep
+		}
+		#	Ascension upkeep
+		upkeep = {
+			trigger = { exists = owner		owner = { is_ai = no } }
+			unity = @RPA_ap_size_upkeep
+			multiplier = owner.value:PRA_sv_cntr_SPRAWL_ap_mult
+		}
+	}
+
+	planet_modifier = {
+		empire_size_districts_mult = @PRA_basic_size_reduc
+		species_empire_size_mult = @PRA_basic_size_reduc
+		job_PRA_job_administer_DEFAULT_add = 300
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_gestalt = yes } }
+		job_PRA_job_administer_DEFAULT_add = -300
+		job_PRA_job_administer_GESTALT_add = 300
+	}
+	triggered_country_modifier = {
+		empire_size_penalty_mult = 1
+		mult = owner.value:PRA_sv_cntr_SPRAWL_ap_mult
+	}
+	#	Sprawl
+	triggered_planet_modifier = {
+		empire_size_districts_mult = -0.1
+		species_empire_size_mult = -0.1
+		mult = value:PRA_sv_plnt_JOB_default
+	}
+	
+	triggered_desc = {
+		text = RPA_building_GOV_empire_sprawl_C_tip
+	}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = no } }
+	#	text = job_PRA_job_administer_DEFAULT_effect_desc
+	#}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = yes } }
+	#	text = job_PRA_job_administer_GESTALT_effect_desc
+	#}
+}
+RPA_building_GOV_empire_sprawl_2_C = {
+	base_buildtime = @b1_time
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = yes
+	exempt_from_ai_planet_specialization = yes
+	ai_estimate_without_unemployment = yes
+
+	category = government
+	building_sets = {
+		government
+	}
+	prerequisites = {
+		"tech_planetary_government"
+	}
+	potential = {
+		is_capital = yes
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+	destroy_trigger = { is_capital = no }
+	convert_to = {
+		RPA_building_GOV_empire_sprawl_2_N
+	}
+	upgrades = {
+		RPA_building_GOV_empire_sprawl_3_C
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			energy = @b3_upkeep
+		}
+		#	Ringworld
+		cost = {
+			trigger = { has_ringworld_output_boost = yes }
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			trigger = { has_ringworld_output_boost = yes }
+			energy = @b2_upkeep
+		}
+		#	Ascension upkeep
+		upkeep = {
+			trigger = { exists = owner		owner = { is_ai = no } }
+			unity = @RPA_ap_size_upkeep
+			multiplier = owner.value:PRA_sv_cntr_SPRAWL_ap_mult
+		}
+	}
+
+	planet_modifier = {
+		empire_size_districts_mult = @PRA_basic_size_reduc
+		species_empire_size_mult = @PRA_basic_size_reduc
+		job_PRA_job_administer_DEFAULT_add = 400
+		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_gestalt = yes } }
+		job_PRA_job_administer_DEFAULT_add = -400
+		job_PRA_job_administer_GESTALT_add = 400
+	}
+	triggered_country_modifier = {
+		empire_size_penalty_mult = 1
+		mult = owner.value:PRA_sv_cntr_SPRAWL_ap_mult
+	}
+	#	Sprawl
+	triggered_planet_modifier = {
+		empire_size_districts_mult = -0.1
+		species_empire_size_mult = -0.1
+		mult = value:PRA_sv_plnt_JOB_default
+	}
+	
+	triggered_desc = {
+		text = RPA_building_GOV_empire_sprawl_C_tip
+	}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = no } }
+	#	text = job_PRA_job_administer_DEFAULT_effect_desc
+	#}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = yes } }
+	#	text = job_PRA_job_administer_GESTALT_effect_desc
+	#}
+}
+RPA_building_GOV_empire_sprawl_3_C = {
+	base_buildtime = @b1_time
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = yes
+	exempt_from_ai_planet_specialization = yes
+	ai_estimate_without_unemployment = yes
+
+	category = government
+	building_sets = {
+		government
+	}
+	prerequisites = {
+		"tech_planetary_government"
+	}
+	potential = {
+		is_capital = yes
+	}
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	destroy_trigger = { is_capital = no }
+	convert_to = {
+		RPA_building_GOV_empire_sprawl_3_N
+	}
+	upgrades = {
+		RPA_building_GOV_empire_sprawl_4_C
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			energy = @b4_upkeep
+		}
+		#	Ringworld
+		cost = {
+			trigger = { has_ringworld_output_boost = yes }
+			minerals = @b3_minerals
+		}
+		upkeep = {
+			trigger = { has_ringworld_output_boost = yes }
+			energy = @b3_upkeep
+		}
+		#	Ascension upkeep
+		upkeep = {
+			trigger = { exists = owner		owner = { is_ai = no } }
+			unity = @RPA_ap_size_upkeep
+			multiplier = owner.value:PRA_sv_cntr_SPRAWL_ap_mult
+		}
+	}
+
+	planet_modifier = {
+		empire_size_districts_mult = @PRA_basic_size_reduc
+		species_empire_size_mult = @PRA_basic_size_reduc
+		job_PRA_job_administer_DEFAULT_add = 500
+		planet_jobs_produces_mult = 0.1
+		pop_bonus_workforce_mult = 0.1
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_gestalt = yes } }
+		job_PRA_job_administer_DEFAULT_add = -500
+		job_PRA_job_administer_GESTALT_add = 500
+	}
+	triggered_country_modifier = {
+		empire_size_penalty_mult = 1
+		mult = owner.value:PRA_sv_cntr_SPRAWL_ap_mult
+	}
+	#	Sprawl
+	triggered_planet_modifier = {
+		empire_size_districts_mult = -0.1
+		species_empire_size_mult = -0.1
+		mult = value:PRA_sv_plnt_JOB_default
+	}
+	
+	triggered_desc = {
+		text = RPA_building_GOV_empire_sprawl_C_tip
+	}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = no } }
+	#	text = job_PRA_job_administer_DEFAULT_effect_desc
+	#}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = yes } }
+	#	text = job_PRA_job_administer_GESTALT_effect_desc
+	#}
+}
+RPA_building_GOV_empire_sprawl_4_C = {
+	base_buildtime = @b1_time
+	can_build = no
+	can_demolish = yes
+	can_be_ruined = no
+	can_be_disabled = yes
+	exempt_from_ai_planet_specialization = yes
+	ai_estimate_without_unemployment = yes
+
+	category = government
+	building_sets = {
+		government
+	}
+	prerequisites = {
+		"tech_planetary_government"
+	}
+	potential = {
+		is_capital = yes
+	}
+	allow = {
+		has_fully_upgraded_capital = yes
+	}
+	destroy_trigger = { is_capital = no }
+	convert_to = {
+		RPA_building_GOV_empire_sprawl_4_N
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b5_minerals
+		}
+		upkeep = {
+			energy = @b5_upkeep
+		}
+		#	Ringworld
+		cost = {
+			trigger = { has_ringworld_output_boost = yes }
+			minerals = @b4_minerals
+		}
+		upkeep = {
+			trigger = { has_ringworld_output_boost = yes }
+			energy = @b4_upkeep
+		}
+		#	Ascension upkeep
+		upkeep = {
+			trigger = { exists = owner		owner = { is_ai = no } }
+			unity = @RPA_ap_size_upkeep
+			multiplier = owner.value:PRA_sv_cntr_SPRAWL_ap_mult
+		}
+	}
+
+	planet_modifier = {
+		empire_size_districts_mult = @PRA_basic_size_reduc
+		species_empire_size_mult = @PRA_basic_size_reduc
+		job_PRA_job_administer_DEFAULT_add = 600
+		planet_jobs_produces_mult = 0.15
+		pop_bonus_workforce_mult = 0.15
+	}
+	triggered_planet_modifier = {
+		potential = { exists = owner	owner = { is_gestalt = yes } }
+		job_PRA_job_administer_DEFAULT_add = -600
+		job_PRA_job_administer_GESTALT_add = 600
+	}
+	triggered_country_modifier = {
+		empire_size_penalty_mult = 1
+		mult = owner.value:PRA_sv_cntr_SPRAWL_ap_mult
+	}
+	#	Sprawl
+	triggered_planet_modifier = {
+		empire_size_districts_mult = -0.1
+		species_empire_size_mult = -0.1
+		mult = value:PRA_sv_plnt_JOB_default
+	}
+	
+	triggered_desc = {
+		text = RPA_building_GOV_empire_sprawl_C_tip
+	}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = no } }
+	#	text = job_PRA_job_administer_DEFAULT_effect_desc
+	#}
+	#triggered_desc = {
+	#	trigger = { exists = owner		owner = { is_gestalt = yes } }
+	#	text = job_PRA_job_administer_GESTALT_effect_desc
+	#}
+}
+
+
+# === merged from simple_traditions_buildings.txt ===
+simple_traditions_galactic_university = { 
+	base_buildtime = 600
+	category = government
+	building_sets = { government research unity }
+	base_cap_amount = 1
+	icon = simple_traditions_university
+
+	planet_modifier = {
+		job_bureaucrat_add = 1
+		job_head_researcher_add = 1
+		job_culture_worker_add = 2
+	}
+	on_built = {
+		owner = {
+			country_event = {
+				id = simple_tradition.8
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 5
+			consumer_goods = 2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			NOT = {
+				owner = { has_tradition = tr_leadership_adopt }
+			}
+			is_capital = no
+			owner = {
+				OR = {
+					is_megacorp = yes
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+	}
+	convert_to = {
+		simple_traditions_galactic_university_megacorp
+		simple_traditions_galactic_university_hive
+		simple_traditions_galactic_university_machine
+	}
+
+	potential = {
+		exists = owner
+		is_capital = yes
+		owner = {
+			has_tradition = tr_leadership_adopt
+			is_megacorp = no
+			is_hive_empire = no
+			is_machine_empire = no
+		}
+	}
+}
+
+simple_traditions_galactic_university_megacorp = { 
+	base_buildtime = 600
+	category = government
+	building_sets = { government research unity }
+	base_cap_amount = 1
+	icon = simple_traditions_university
+
+	planet_modifier = {
+		job_executive_add = 1
+		job_head_researcher_add = 1
+		job_manager_add = 2
+	}
+	on_built = {
+		owner = {
+			country_event = {
+				id = simple_tradition.8
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 5
+			consumer_goods = 2
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			NOT = {
+				owner = { has_tradition = tr_leadership_adopt }
+			}
+			is_capital = no
+			owner = {
+				OR = {
+					is_megacorp = no
+					is_hive_empire = yes
+					is_machine_empire = yes
+				}
+			}
+		}
+	}
+	convert_to = {
+		simple_traditions_galactic_university
+		simple_traditions_galactic_university_hive
+		simple_traditions_galactic_university_machine
+	}
+
+	potential = {
+		exists = owner
+		is_capital = yes
+		owner = {
+			has_tradition = tr_leadership_adopt
+			is_megacorp = yes
+			is_hive_empire = no
+			is_machine_empire = no
+		}
+	}
+}
+
+simple_traditions_galactic_university_hive = { 
+	base_buildtime = 600
+	category = government
+	building_sets = { government research unity }
+	base_cap_amount = 1
+	icon = simple_traditions_university
+
+	planet_modifier = {
+		job_synapse_drone_add = 2
+		job_brain_drone_physicist_add = 1
+		job_brain_drone_biologist_add = 1
+		job_maintenance_drone_add = 2
+	}
+	on_built = {
+		owner = {
+			country_event = {
+				id = simple_tradition.8
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 5
+			food = 5
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			NOT = {
+				owner = { has_tradition = tr_leadership_adopt }
+			}
+			is_capital = no
+			owner = {
+				OR = {
+					is_megacorp = yes
+					is_hive_empire = no
+					is_machine_empire = yes
+				}
+			}
+		}
+	}
+	convert_to = {
+		simple_traditions_galactic_university
+		simple_traditions_galactic_university_machine
+		simple_traditions_galactic_university_megacorp
+	}
+
+	potential = {
+		exists = owner
+		is_capital = yes
+		owner = {
+			has_tradition = tr_leadership_adopt
+			is_megacorp = no
+			is_hive_empire = yes
+			is_machine_empire = no
+		}
+	}
+}
+
+simple_traditions_galactic_university_machine = { 
+	base_buildtime = 600
+	category = government
+	building_sets = { government research unity }
+	base_cap_amount = 1
+	icon = simple_traditions_university_machine
+
+	planet_modifier = {
+		job_coordinator_add = 1
+		job_calculator_physicist_add = 1
+		job_calculator_biologist_add = 1
+		job_evaluator_add = 2
+	}
+	on_built = {
+		owner = {
+			country_event = {
+				id = simple_tradition.8
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			NOT = {
+				owner = {
+					OR = {
+						has_tradition = tr_leadership_adopt
+					}
+				}
+			}
+			is_capital = no
+			owner = {
+				OR = {
+					is_megacorp = yes
+					is_hive_empire = yes
+					is_machine_empire = no
+				}
+			}
+		}
+	}
+	convert_to = {
+		simple_traditions_galactic_university
+		simple_traditions_galactic_university_hive
+		simple_traditions_galactic_university_megacorp
+	}
+
+	potential = {
+		exists = owner
+		is_capital = yes
+		owner = {
+			has_tradition = tr_leadership_adopt
+			is_megacorp = no
+			is_hive_empire = no
+			is_machine_empire = yes
+		}
+	}
+}

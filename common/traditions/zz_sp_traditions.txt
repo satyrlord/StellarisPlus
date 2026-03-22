@@ -1,0 +1,3556 @@
+# === merged from 00_government.txt ===
+tr_government_adopt = {
+	modifier = {
+		planet_stability_add = 5
+	}
+}
+
+tr_government_finish = {
+	modifier = {
+		ascension_perks_add = 1
+		country_government_civic_points_add = 1
+	}
+}
+
+tr_government_new_worlds = {
+	modifier = {
+		pop_government_ethic_attraction = 0.25
+	}
+
+	tradition_swap = {
+		name = tr_government_new_worlds_machine
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	tradition_swap = {
+		name = tr_government_new_worlds_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		custom_tooltip = tr_government_new_worlds_hive_desc
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_government_service_arrangement = {
+	# 15% amenities
+	modifier = {
+		planet_amenities_mult = 0.15
+	}
+
+	tradition_swap = {
+		name = tr_government_service_arrangement_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			planet_amenities_mult = 0.15
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	tradition_swap = {
+		name = tr_government_service_arrangement_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			planet_amenities_mult = 0.15
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_government_administration = {
+	# empire size penalty reduction
+	possible = {
+		has_tradition = tr_government_new_worlds
+	}
+
+	modifier = {
+		empire_size_penalty_mult = -0.1
+	}
+
+	tradition_swap = {
+		name = tr_government_administration_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			empire_size_penalty_mult = -0.1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	tradition_swap = {
+		name = tr_government_administration_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			empire_size_penalty_mult = -0.1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_government_stellar_government = {
+	possible = {
+		has_tradition = tr_government_service_arrangement
+	}
+
+	modifier = {
+		country_edict_fund_add = 10
+		country_edict_fund_mult = 0.1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_government_unison = {
+	# unity increased by 10%
+	possible = {
+		has_tradition = tr_government_administration
+	}
+	modifier = {
+		country_unity_produces_mult = 0.1
+	}
+
+	tradition_swap = {
+		name = tr_government_unison_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			country_unity_produces_mult = 0.1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	tradition_swap = {
+		name = tr_government_unison_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			country_unity_produces_mult = 0.1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+# === merged from 00_industry.txt ===
+tr_industry_adopt = {
+	modifier = {
+		station_gatherers_cost_mult = -0.50
+		shipclass_mining_station_build_speed_mult = 1.00
+	}
+}
+
+tr_industry_finish = {
+	custom_tooltip = tr_industry_finish_desc
+	modifier = {
+		ascension_perks_add = 1
+		# unlocks planetary decisions
+	}
+}
+
+tr_industry_layered_shifts = {
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.05
+	}
+
+	tradition_swap = {
+		name = tr_industry_layered_shifts_machine
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.05
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	tradition_swap = {
+		name = tr_industry_layered_shifts_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			planet_jobs_simple_drone_produces_mult = 0.05
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_industry_optimized_algorithms = {
+	modifier = {
+		station_gatherers_produces_mult = 0.20
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_industry_compact_extraction_centers = {
+	possible = {
+		has_tradition = tr_industry_layered_shifts
+	}
+
+	modifier = {
+		planet_housing_add = 10
+	}
+
+	tradition_swap = {
+		name = tr_industry_compact_extraction_centers_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			planet_housing_add = 10
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	tradition_swap = {
+		name = tr_industry_compact_extraction_centers_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			planet_housing_add = 10
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_industry_rare_resource_extraction = {
+	possible = {
+		has_tradition = tr_industry_layered_shifts
+	}
+
+	modifier = {
+		planet_jobs_rare_crystals_produces_mult = 0.2
+		planet_jobs_exotic_gases_produces_mult = 0.2
+		planet_jobs_volatile_motes_produces_mult = 0.2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_industry_forge = {
+	possible = {
+		has_tradition = tr_industry_optimized_algorithms
+	}
+
+	modifier = {
+		planet_metallurgists_alloys_produces_add = 0.2
+		planet_artisans_consumer_goods_produces_add = 0.2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# === merged from 00_leadership.txt ===
+tr_leadership_adopt = {
+	custom_tooltip = tr_leadership_adopt_desc
+	modifier = {
+		# unlocks Galactic University
+	}
+
+	tradition_swap = {
+		custom_tooltip = tr_leadership_adopt_machine_desc
+		name = tr_leadership_adopt_machine
+		inherit_effects = no
+		inherit_name = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		custom_tooltip = tr_leadership_adopt_hive_desc
+		name = tr_leadership_adopt_hive
+		inherit_effects = no
+		inherit_name = yes
+		trigger = {
+			is_hive_empire = yes
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		custom_tooltip = tr_leadership_adopt_megacorp_desc
+		name = tr_leadership_adopt_megacorp
+		inherit_effects = no
+		inherit_name = yes
+		trigger = {
+			is_megacorp = yes
+		}
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+tr_leadership_finish = {
+	custom_tooltip = tr_leadership_finish_desc
+	modifier = {
+		ascension_perks_add = 1
+		# unlocks permanent leader traits
+	}
+	on_enabled = {
+		set_country_flag = simple_traditions_leadership_finisher_rewarded
+		country_event = {
+			id = simple_tradition.8
+		}
+	}
+
+	tradition_swap = {
+		custom_tooltip = tr_leadership_finish_machine_desc
+		name = tr_leadership_finish_machine
+		inherit_effects = no
+		inherit_name = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			ascension_perks_add = 1
+			# unlocks permanent leader traits
+		}
+		on_enabled = {
+			set_country_flag = simple_traditions_leadership_finisher_rewarded
+			country_event = {
+				id = simple_tradition.8
+			}
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		custom_tooltip = tr_leadership_finish_hive_desc
+		name = tr_leadership_finish_hive
+		inherit_effects = no
+		inherit_name = yes
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			ascension_perks_add = 1
+			# unlocks permanent leader traits
+		}
+		on_enabled = {
+			set_country_flag = simple_traditions_leadership_finisher_rewarded
+			country_event = {
+				id = simple_tradition.8
+			}
+		}
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+tr_leadership_internships = {
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	tradition_swap = {
+		name = tr_leadership_internships_machine
+		inherit_effects = yes
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_leadership_knowledge_download = {
+	custom_tooltip = tr_leadership_knowledge_download_desc
+	modifier = {
+		# Unlocks Edict
+	}
+
+	tradition_swap = {
+		name = tr_leadership_knowledge_download_machine
+		inherit_effects = yes
+		inherit_icon = no
+		inherit_name = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_leadership_life_extension = {
+	possible = {
+		has_tradition = tr_leadership_internships
+	}
+
+	modifier = {
+		leader_lifespan_add = 20
+	}
+
+	tradition_swap = {
+		name = tr_leadership_life_extension_machine
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			leaders_upkeep_mult = -0.20
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_leadership_extended_schooling = {
+	possible = {
+		has_tradition = tr_leadership_internships
+	}
+
+	tradition_swap = {
+		name = tr_leadership_extended_schooling_machine
+		inherit_effects = yes
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	modifier = {
+		leader_skill_levels = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_leadership_rulers_cabinet = {
+	possible = {
+		has_tradition = tr_leadership_knowledge_download
+	}
+
+	tradition_swap = {
+		name = tr_leadership_rulers_cabinet_machine
+		inherit_effects = yes
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	modifier = {
+		country_traditions_influence_produces_add = 0.5
+		envoys_add = 1
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# === merged from 00_navy.txt ===
+tr_navy_adopt = {
+	modifier = {
+		ship_weapon_damage = 0.05
+	}
+}
+
+tr_navy_finish = {
+	modifier = {
+		ascension_perks_add = 1
+		ship_accuracy_mult = 0.05
+		ship_evasion_mult = 0.05
+	}
+}
+
+tr_navy_defensive_capabilities = {
+	custom_tooltip = tr_navy_defensive_capabilities_desc
+	possible = {
+		has_tradition = tr_navy_range_speed
+		has_tradition = tr_navy_design
+	}
+	modifier = {
+	}
+	on_enabled = {
+		country_event = {
+			id = simple_tradition.2
+		}
+	}
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_navy_offensive_capabilities = {
+	custom_tooltip = tr_navy_offensive_capabilities_desc
+	possible = {
+		has_tradition = tr_navy_range_speed
+		has_tradition = tr_navy_design
+	}
+	modifier = {
+	}
+	on_enabled = {
+		country_event = {
+			id = simple_tradition.3
+		}
+	}
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_navy_strike_point = {
+	custom_tooltip = tr_navy_strike_point_desc
+	possible = {
+		has_tradition = tr_navy_range_speed
+		has_tradition = tr_navy_design
+	}
+	modifier = {
+	}
+	on_enabled = {
+		country_event = {
+			id = simple_tradition.4
+		}
+	}
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_navy_range_speed = {
+	custom_tooltip = tr_navy_range_speed_desc
+	modifier = {
+	}
+	on_enabled = {
+		country_event = {
+			id = simple_tradition.5
+		}
+	}
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_navy_design = {
+	custom_tooltip = tr_navy_design_desc
+	modifier = {
+	}
+	on_enabled = {
+		country_event = {
+			id = simple_tradition.6
+		}
+	}
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# === merged from 00_research.txt ===
+tr_research_adopt = {
+	custom_tooltip = tr_research_adopt_desc
+	modifier = {
+		station_researchers_cost_mult = -0.50
+		shipclass_research_station_build_speed_mult = 1.00
+		station_researchers_energy_upkeep_mult = -0.5
+	}
+}
+
+tr_research_finish = {
+	custom_tooltip = tr_research_finish_desc
+	modifier = {
+		ascension_perks_add = 1
+	}
+}
+
+tr_research_signature_research_field = {
+	custom_tooltip = tr_research_signature_research_field_desc
+	modifier = {
+		# Bonus chosen from event
+	}
+	on_enabled = {
+		country_event = {
+			id = simple_tradition.1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_research_science_director = {
+	modifier = {
+		job_head_researcher_add = 1
+	}
+
+	tradition_swap = {
+		name = tr_research_science_director_machine
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			job_calculator_physicist_add = 1
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+
+	tradition_swap = {
+		name = tr_research_science_director_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+
+		modifier = {
+			job_brain_drone_physicist_add = 1
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_research_research_grants = {
+	modifier = {
+		planet_researchers_engineering_research_produces_mult = 0.1
+		planet_researchers_society_research_produces_mult = 0.1
+		planet_researchers_physics_research_produces_mult = 0.1
+	}
+
+	tradition_swap = {
+		name = tr_research_research_grants_machine
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+
+		modifier = {
+			planet_researchers_engineering_research_produces_mult = 0.1
+			planet_researchers_society_research_produces_mult = 0.1
+			planet_researchers_physics_research_produces_mult = 0.1
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+
+	tradition_swap = {
+		name = tr_research_research_grants_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+
+		modifier = {
+			planet_researchers_engineering_research_produces_mult = 0.1
+			planet_researchers_society_research_produces_mult = 0.1
+			planet_researchers_physics_research_produces_mult = 0.1
+		}
+
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_research_exotic_experiments = {
+	possible = {
+		has_tradition = tr_research_science_director
+	}
+
+	modifier = {
+		station_researchers_produces_mult = 0.2
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_research_advanced_studies = {
+	possible = {
+		has_tradition = tr_research_research_grants
+		has_tradition = tr_research_signature_research_field
+	}
+
+	modifier = {
+		planet_researchers_unity_produces_add = 0.5
+		planet_researchers_upkeep_mult = -0.2
+	}
+
+	tradition_swap = {
+		name = tr_research_advanced_studies_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			planet_researchers_unity_produces_add = 0.5
+			planet_researchers_upkeep_mult = -0.2
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	tradition_swap = {
+		name = tr_research_advanced_studies_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			planet_researchers_unity_produces_add = 0.5
+			planet_researchers_upkeep_mult = -0.2
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+# === merged from plentiful_traditions_affinity.txt ===
+#@cost = 56
+
+tr_plentiful_affinity_adopt = {
+#	cost = { unity = @cost }
+	modifier = {
+#		tradition_cost_num_systems_mult = -0.15
+#		tradition_cost_num_colonies_mult = -0.15
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = -2
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_authoritarian
+				has_ethic = ethic_fanatic_authoritarian
+			}
+		}
+		modifier = {
+			factor = -5
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+		}
+	}
+}
+
+tr_plentiful_affinity_finish = {
+	custom_tooltip_with_modifiers = tr_plentiful_affinity_finish_desc
+	modifier = {
+#Migration species production event
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_affinity_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		country_resource_max_influence_add = 250
+		tradition_cost_empire_size_mult = -0.10
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_affinity_2 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_affinity_2_desc
+	modifier = {
+# Peace happiness event
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_affinity_3 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_affinity_2
+	}
+	modifier = {
+		planet_resettlement_unemployed_mult =  0.1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_affinity_4 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_affinity_3
+	}
+	modifier = {
+		all_technology_research_speed = 0.05
+		citizen_pop_different_species_class_happiness = 0.025
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_affinity_5 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_affinity_5_desc
+	possible = {
+		has_tradition = tr_plentiful_affinity_1
+		has_tradition = tr_plentiful_affinity_2
+	}
+	modifier = {
+# Tower of Affinity
+		job_healthcare_organic_pop_assembly_mult = 0.05
+	}
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_cyborg_empire = yes
+				has_ascension_perk = ap_engineered_evolution
+			}
+		}		
+		job_healthcare_pop_assembly_organic_add = 1
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_anguish.txt ===
+#@cost = 56
+
+tr_plentiful_anguish_adopt = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_anguish_adopt_desc
+	modifier = {
+		
+	}
+	
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = -5
+			OR = {
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				
+			}
+		}
+	}
+}
+
+tr_plentiful_anguish_finish = {
+	custom_tooltip_with_modifiers = tr_plentiful_anguish_finish_desc
+	modifier = {
+		damage_vs_country_type_swarm_mult = 0.15
+		damage_vs_country_type_extradimensional_mult = 0.15
+		damage_vs_country_type_extradimensional_2_mult = 0.15
+		damage_vs_country_type_extradimensional_3_mult = 0.15
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_anguish_1 = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+		ship_weapon_range_mult = 0.10
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_anguish_2 = {
+#	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_plentiful_anguish_1
+	}
+	
+	modifier = {
+		ship_weapon_damage = 0.08
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_anguish_3 = {
+#	cost = { unity = @cost }
+	
+	possible = {
+#		has_tradition = tr_plentiful_anguish_2
+	}
+	
+	modifier = {
+		shipclass_military_station_build_cost_mult = 0.15
+		shipclass_military_station_build_speed_mult = 0.15
+		shipclass_military_station_hull_mult = 0.15
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_anguish_4 = {
+#	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_plentiful_anguish_3
+	}
+	
+	modifier = {
+		category_military_theory_research_speed_mult = 0.2
+		shipclass_starbase_hull_mult = 0.5
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_anguish_5 = {
+#	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_plentiful_anguish_3
+	}
+	
+	modifier = {
+		damage_vs_country_type_fallen_empire_mult = 0.15
+		damage_vs_country_type_awakened_fallen_empire_mult = 0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# === merged from plentiful_traditions_ascension.txt ===
+#@cost = 56
+
+tr_plentiful_ascension_adopt = {
+#	cost = { unity = @cost }
+	possible = {
+		num_ascension_perks > 10
+	}
+	modifier = {
+		planetary_ascension_effect_mult = 0.10
+	}
+	
+	ai_weight = {
+		factor = 0.01
+		modifier = {
+			factor = 1000
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 2000
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 2000
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3000
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+tr_plentiful_ascension_finish = {
+#	on_enabled = {
+#		give_technology = { message = no tech = tech_plentiful_traditions_ascension_finish }
+#	}
+	modifier = {
+		planetary_ascension_cost_mult = -0.075
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_ascension_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		tradition_cost_empire_size_mult = -0.075
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_ascension_2 = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+		country_official_cap_add = 2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_ascension_3 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_ascension_1
+	}
+	
+	modifier = {
+		edicts_upkeep_mult = -0.2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_ascension_4 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_ascension_2
+	}
+	modifier = {
+		commander_initial_skill = 2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_ascension_5 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_ascension_3
+		has_tradition = tr_plentiful_ascension_4
+	}
+	modifier = {
+		country_edict_fund_mult = 0.1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_aspiration.txt ===
+#@cost = 56
+
+tr_plentiful_aspiration_adopt = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_aspiration_adopt_desc
+	modifier = {
+
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_aspiration_gestalt_adopt
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_gestalt = yes
+		}
+		
+		modifier = {
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_corporate_dominion
+		}
+	}
+}
+
+tr_plentiful_aspiration_finish = {
+	custom_tooltip_with_modifiers = tr_plentiful_aspiration_finish_desc
+	modifier = {
+# Building Trading Terminal + Deeds pedict
+		planet_jobs_trade_produces_mult = 0.05
+		ascension_perks_add = 1
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_aspiration_gestalt_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_gestalt = yes
+		}
+		
+		modifier = {
+			# Building Trading Terminal
+			planet_jobs_complex_drone_produces_mult = 0.10
+			ascension_perks_add = 1
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+tr_plentiful_aspiration_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		country_border_friction_mult = -0.25
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_aspiration_2 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_aspiration_1
+	}
+	modifier = {
+		country_trust_growth = 0.20
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_aspiration_3 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_aspiration_3_desc
+	possible = {
+		has_tradition = tr_plentiful_aspiration_2
+	}
+	modifier = {
+# Bürokraten...
+	country_trade_fee = -0.05
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_aspiration_4 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_aspiration_4_desc
+	modifier = {
+#		Building Trading Depot, Unity + Energy Reserve + Energy Generation
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_aspiration_5 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_aspiration_5_desc
+	possible = {
+		has_tradition = tr_plentiful_aspiration_4
+	}
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_assault.txt ===
+#@cost = 56
+
+tr_plentiful_assault_adopt = {
+#	cost = { unity = @cost }
+	modifier = {
+		ship_hull_damage_mult = 0.1
+		country_naval_cap_add = 10
+		country_naval_cap_mult = 0.1
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+tr_plentiful_assault_finish = {
+	modifier = {
+		ship_shield_damage_mult = 0.1
+		ships_upkeep_mult = -0.1
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_assault_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		ship_speed_mult = 0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_assault_2 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_assault_1
+		has_tradition = tr_plentiful_assault_3
+	}
+	modifier = {
+		army_attack_morale_mult = 0.2
+		army_attack_damage_mult = 0.2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_assault_3 = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+		country_leader_pool_size = 1
+		command_limit_add = 20
+		envoys_add = 1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_assault_4 = {
+#	cost = { unity = @cost }
+	modifier = {
+		leader_skill_levels = 1
+		ruler_skill_levels = 1
+		country_leader_cap_add = 1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_assault_5 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_assault_3
+		has_tradition = tr_plentiful_assault_4
+	}
+	modifier = {
+		ship_weapon_range_mult = 0.2
+		ships_upkeep_mult = -0.1
+		ship_speed_mult = 0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_biogenesis.txt ===
+#@cost = 56
+
+tr_plentiful_biogenesis_adopt = {
+#	cost = { unity = @cost }
+	modifier = {
+		category_biology_research_speed_mult = 0.2
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 1
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 2
+			has_authority = auth_hive_mind
+		}
+		modifier = {
+			factor = -5
+			has_authority = auth_machine_intelligence
+		}
+	}
+}
+
+tr_plentiful_biogenesis_finish = {
+	on_enabled = {
+#		add_research_option = tech_gene_tailoring
+	}
+	
+	modifier = {
+		modify_species_cost_mult = -0.10
+		BIOLOGICAL_species_trait_points_add = 3
+		ascension_perks_add = 1
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_biogenesis_machine_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+		
+		modifier = {
+			modify_species_cost_mult = -0.1
+			BIOLOGICAL_species_trait_points_add = 1
+			ROBOT_species_trait_points_add = 3
+			MACHINE_species_trait_points_add = 3
+			ascension_perks_add = 1
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_biogenesis_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		planet_pops_organics_food_upkeep_mult = -0.15
+		planet_livestock_food_produces_add = 3
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_biogenesis_machine_1
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+		
+		modifier = {
+			planet_pop_assemblers_alloys_upkeep_mult = -0.15
+
+			#planet_organic_battery_energy_produces_add = 1
+			#planet_job_organic_battery_energy_produces_add = 2
+			#job_organic_battery_energy_produces_add = 3
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_biogenesis_lithoids_1
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_lithoid_empire = yes
+		}
+		
+		modifier = {
+			
+			planet_pops_organics_minerals_upkeep_mult = -0.15
+			planet_livestock_minerals_produces_add = 3
+
+			#planet_organic_battery_energy_produces_add = 1
+			#planet_job_organic_battery_energy_produces_add = 2
+			#job_organic_battery_energy_produces_add = 3
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_biogenesis_2 = {
+#	cost = { unity = @cost }
+	modifier = {
+		planet_clear_blocker_time_mult = -0.2
+		deposit_blockers_cost_mult = -0.2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_biogenesis_3 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_biogenesis_3_desc
+	
+	modifier = {
+# formerly Infliction, now partial_terraforming
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_biogenesis_4 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_biogenesis_1
+		has_tradition = tr_plentiful_biogenesis_2
+	}
+	modifier = {
+# Biogenesis Lab
+	}
+	on_enabled = {
+		add_research_option = tech_basic_science_lab_3
+		add_research_option = tech_mine_exotic_gases
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_biogenesis_5 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_biogenesis_3
+		has_tradition = tr_plentiful_biogenesis_2
+	}
+	modifier = {
+		planet_researchers_society_research_produces_mult = 0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_dedication.txt ===
+tr_plentiful_dedication_adopt = {
+	modifier = {
+		country_subject_trust_cap_add = 5
+		country_subject_power_penalty_mult = -0.05
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+tr_plentiful_dedication_finish = {
+	modifier = {
+		ascension_perks_add = 1
+		country_vassal_naval_capacity_contribution_mult = 0.15
+	}
+}
+
+tr_plentiful_dedication_1 = {
+	modifier = {
+		country_subject_acceptance_add = 5
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_dedication_2 = {
+	modifier = {
+		subject_integration_influence_cost_mult = -0.05
+		country_subject_integration_speed_add = 5
+		country_integration_cooldown_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_dedication_3 = {
+	
+	modifier = {
+		subject_tech_cost_mult = -0.10
+		country_subject_technology_sharing_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_dedication_4 = {
+	custom_tooltip_with_modifiers = tr_plentiful_dedication_4_desc
+	possible = {
+		has_tradition = tr_plentiful_dedication_1
+		has_tradition = tr_plentiful_dedication_2
+	}
+	modifier = {
+		#planet_max_subject_holding_buildings_add = 1 #This one is it.
+		#planet_max_overlord_holding_buildings_add = 1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_dedication_5 = {
+	possible = {
+		has_tradition = tr_plentiful_dedication_3
+		has_tradition = tr_plentiful_dedication_2
+	}
+	modifier = {
+		subject_tribute_mult = 0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_defence.txt ===
+#@cost = 56
+
+tr_plentiful_defence_adopt = {
+#	cost = { unity = @cost }
+	modifier = {
+		starbase_defense_platform_capacity_add = 3
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+}
+
+tr_plentiful_defence_finish = {
+	modifier = {
+		starbase_defense_platform_capacity_add = 3
+		army_starting_experience_add = 100
+		planet_structures_cost_mult = -0.1
+		planet_building_build_speed_mult = 0.10
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_defence_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		starbase_defense_platform_capacity_add = 3
+		shipsize_corvette_hull_add = 100
+		shipsize_destroyer_hull_add = 200
+		shipsize_cruiser_hull_add = 500
+		shipsize_battleship_hull_add = 800
+		shipsize_military_station_small_hull_add = 500
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_defence_2 = {
+#	cost = { unity = @cost }
+	modifier = {
+		starbase_defense_platform_capacity_add = 3
+		army_defense_morale_mult = 0.2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_defence_3 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_defence_1
+	}
+	
+	modifier = {
+		starbase_defense_platform_capacity_add = 3
+		category_materials_research_speed_mult = 0.20
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_defence_4 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_defence_2
+	}
+	modifier = {
+		starbase_defense_platform_capacity_add = 3
+		army_defense_health_mult = 0.2
+		army_defense_damage_mult = 0.2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_defence_5 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_defence_5_desc
+	possible = {
+		has_tradition = tr_plentiful_defence_3
+		has_tradition = tr_plentiful_defence_4
+	}
+	modifier = {
+		starbase_defense_platform_capacity_add = 3
+		#megastructure_build_speed_mult = 0.25
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_endure.txt ===
+#@cost = 56
+
+tr_plentiful_endure_adopt = {
+#	cost = { unity = @cost }
+	possible = {
+	#	always = no
+	}
+	modifier = {
+		pop_environment_tolerance = 0.05
+	}
+	
+	ai_weight = {
+		factor = 0.01
+		modifier = {
+			factor = 1
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+tr_plentiful_endure_finish = {
+#	on_enabled = {
+#		give_technology = { message = no tech = tech_plentiful_traditions_endure_finish }
+#	}
+	modifier = {
+		pc_nuked_habitability = 0.10
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_endure_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		country_unity_produces_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_endure_2 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_endure_1
+	}
+	modifier = {
+		country_war_exhaustion_mult = -0.25
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_endure_3 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_endure_4
+	}
+	on_enabled = {
+		add_research_option = tech_dark_matter_power_core
+		give_technology = { message = no tech = tech_plentiful_traditions_orbital_fertilizer_array }
+	}
+	
+	modifier = {
+		#fallen-empire-tech
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_endure_4 = {
+#	cost = { unity = @cost }
+	modifier = {
+		planet_jobs_slave_produces_mult = 0.2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_endure_5 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_endure_3
+	}
+	modifier = {
+		megastructure_build_speed_mult = 0.25
+		country_megastructure_build_cap_add = 1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_experimentalism.txt ===
+#@cost = 56
+
+tr_plentiful_experimentalism_adopt = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_experimentalism_adopt_desc
+	
+	modifier = {
+		
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		modifier = {
+			factor = -5
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+}
+
+tr_plentiful_experimentalism_finish = {
+	custom_tooltip_with_modifiers = tr_plentiful_experimentalism_finish_desc
+	modifier = {
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_experimentalism_1 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_experimentalism_1_desc
+	
+	modifier = {
+
+	}
+	on_enabled = {
+		add_research_option = tech_basic_science_lab_3
+		add_research_option = tech_mine_rare_crystals
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_experimentalism_2 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_experimentalism_2_desc
+	
+	modifier = {
+# Level up exp + cap
+		leader_skill_levels = 1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_experimentalism_3 = {
+#	cost = { unity = @cost }
+	custom_tooltip = tr_plentiful_experimentalism_3_desc
+#	custom_tooltip_with_modifiers = tr_plentiful_experimentalism_3_desc
+	
+	possible = {
+		has_tradition = tr_plentiful_experimentalism_1
+	}
+	modifier = {
+		planet_researchers_upkeep_mult = -0.05
+		station_gatherers_physics_research_produces_mult = 0.1
+		station_gatherers_society_research_produces_mult = 0.1
+		station_gatherers_engineering_research_produces_mult = 0.1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_experimentalism_4 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_experimentalism_4_desc
+	
+	possible = {
+		has_tradition = tr_plentiful_experimentalism_2
+	}
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_experimentalism_5 = {
+#	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_plentiful_experimentalism_3
+		has_tradition = tr_plentiful_experimentalism_4
+	}
+	
+	modifier = {
+		num_tech_alternatives_add = 1
+		shipclass_research_station_build_cost_mult = -0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_faith.txt ===
+@cost = 56
+
+tr_plentiful_faith_adopt = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_faith_adopt_desc
+	modifier = {
+#		pop_government_ethic_attraction = 0.15
+	}
+	
+	tradition_swap = {
+		name = tr_plentiful_faith_adopt_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
+# Event
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_spiritualist
+		}			
+	}
+}
+
+tr_plentiful_faith_finish = {
+	modifier = {
+# temple
+		country_base_influence_produces_add = 1
+		ascension_perks_add = 1
+	}
+	
+	tradition_swap = {
+		name = tr_plentiful_faith_finish_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_hive_mind
+			}
+		}
+		
+		modifier = {
+			country_base_influence_produces_add = 1
+			ascension_perks_add = 1
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+tr_plentiful_faith_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		planet_sensor_range_add = 2
+		ship_sensor_range_add = 2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_faith_2 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_faith_3
+	}
+	modifier = {
+		country_edict_fund_add = 50
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_faith_3 = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+		edicts_cost_mult = -0.15
+		edicts_upkeep_mult = -0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_faith_4 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_faith_4_desc
+	possible = {
+		has_tradition = tr_plentiful_faith_1
+		has_tradition = tr_plentiful_faith_5
+	}
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_faith_5 = {
+#	cost = { unity = @cost }
+	modifier = {
+		defensive_war_influence_gain_add = 0.5
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+
+# === merged from plentiful_traditions_genetic_cyborg.txt ===
+#@cost = 56
+
+tr_plentiful_genetic_cyborg_adopt = {
+#	cost = { unity = @cost }
+	possible = {
+	#	always = no
+	}
+	modifier = {
+		bonus_pop_growth_mult = 0.1
+	}
+	
+	ai_weight = {
+		factor = 0.01
+#		modifier = {
+#			factor = 1
+#			has_ethic = ethic_authoritarian
+#		}
+	}
+}
+
+tr_plentiful_genetic_cyborg_finish = {
+#	on_enabled = {
+#		give_technology = { message = no tech = tech_plentiful_traditions_genetic_cyborg_finish }
+#	}
+	modifier = {
+		planet_stability_add = 5
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_genetic_cyborg_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		bonus_pop_growth = 1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_genetic_cyborg_2 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_genetic_cyborg_1
+	}
+	modifier = {
+		country_leader_pool_size = 1
+		ship_archaeological_site_clues_add = 2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_genetic_cyborg_3 = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 2
+		LITHOID_species_trait_points_add = 2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_genetic_cyborg_4 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_genetic_cyborg_3
+	}
+	modifier = {
+		founder_species_growth_mult = 0.05
+		pop_environment_tolerance = 0.1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_genetic_cyborg_5 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_genetic_cyborg_4
+	}
+	modifier = {
+		BIOLOGICAL_species_trait_picks_add = 1
+		LITHOID_species_trait_picks_add = 1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_industry.txt ===
+#@cost = 56
+
+tr_plentiful_industry_adopt = {
+#	cost = { unity = @cost }
+	modifier = {
+		category_industry_research_speed_mult = 0.15
+		station_gatherers_minerals_produces_mult = 0.1
+	}
+	on_enabled = {
+		give_technology = { message = no tech = tech_plentiful_traditions_orbital_fracking_cannon }
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 1
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+}
+
+tr_plentiful_industry_finish = {
+	custom_tooltip_with_modifiers = tr_plentiful_industry_finish_desc
+	modifier = {
+#P Edict
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_industry_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		station_gatherers_cost_mult = -0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_industry_2 = {
+#	cost = { unity = @cost }
+	modifier = {
+		empire_size_colonies_mult = -0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_industry_3 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_industry_2
+	}
+	modifier = {
+		country_resettlement_cost_mult = -0.3
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_industry_4 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_industry_4_desc
+	possible = {
+		has_tradition = tr_plentiful_industry_2
+	}
+	modifier = {
+		station_gatherers_minerals_produces_mult = 0.1
+# B. Min
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_industry_5 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_industry_5_desc
+	possible = {
+		has_tradition = tr_plentiful_industry_1
+	}
+	modifier = {
+#E Edict
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# === merged from plentiful_traditions_kleptocracy.txt ===
+#@cost = 56
+
+tr_plentiful_kleptocracy_adopt = {
+#	cost = { unity = @cost }
+	modifier = {
+		ship_fire_rate_mult = 0.08
+	}
+	
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_egalitarian
+		}
+	}
+}
+
+tr_plentiful_kleptocracy_finish = {
+	modifier = {
+		country_trade_attractiveness = 0.25
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_kleptocracy_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		country_claim_influence_cost_mult = -0.1
+		country_naval_cap_add = 20
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_kleptocracy_2 = {
+#	cost = { unity = @cost }
+	on_enabled = {
+		give_technology = { message = no tech = tech_plentiful_traditions_orbital_trading_beacon }
+	}
+	modifier = {
+		country_naval_cap_mult = 0.15
+# Trading Beacon
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_kleptocracy_3 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_kleptocracy_3_desc
+	possible = {
+
+	}
+	modifier = {
+# Overcharge
+	}
+
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_kleptocracy_4 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_kleptocracy_4_desc
+	possible = {
+		has_tradition = tr_plentiful_kleptocracy_1
+		has_tradition = tr_plentiful_kleptocracy_2
+	}
+	modifier = {
+		diplomacy_upkeep_mult = -0.15
+		country_trust_growth = 0.15
+# Opinion
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_kleptocracy_5 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_kleptocracy_5_desc
+	possible = {
+		has_tradition = tr_plentiful_kleptocracy_3
+	}
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.15
+# Syndicate Quarters
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# === merged from plentiful_traditions_malice.txt ===
+#@cost = 56
+
+tr_plentiful_malice_adopt = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_malice_adopt_desc
+	modifier = {
+		country_insult_efficiency = 0.5
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 5
+			has_authority = auth_hive_mind
+		}
+		modifier = {
+			factor = -5
+			has_authority = auth_machine_intelligence
+		}
+	}
+}
+
+tr_plentiful_malice_finish = {
+	custom_tooltip_with_modifiers = tr_plentiful_malice_finish_desc
+	modifier = {
+		ascension_perks_add = 1
+	}
+	on_enabled = {
+		give_technology = { message = no tech = tech_plentiful_traditions_orbital_r_s }
+	}
+}
+
+tr_plentiful_malice_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		pop_cat_slave_happiness = 0.2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_malice_2 = {
+#	cost = { unity = @cost }
+	modifier = {
+		spy_network_levels_add = 20
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_malice_3 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_malice_1
+	}
+	modifier = {
+		planet_jobs_slave_produces_mult = 0.1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_malice_4 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_malice_2
+	}
+	modifier = {
+		max_rivalries = 4
+		planet_jobs_slave_minerals_produces_mult = 0.15
+		#slave_food_output = 0.05
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_malice_5 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_malice_3
+		has_tradition = tr_plentiful_malice_4
+	}
+	custom_tooltip_with_modifiers = tr_plentiful_malice_5_desc
+	modifier = {
+		
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_mutagenesis.txt ===
+#@cost = 56
+
+tr_plentiful_mutagenesis_adopt = {
+#	cost = { unity = @cost }
+	modifier = {
+		founder_species_growth_mult = 0.2
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_mutagenesis_adopt_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+		
+		modifier = {
+		# Plentiful Cloning Vats
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = -2
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_xenophile
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			factor = 3
+			has_authority = auth_hive_mind
+		}
+		modifier = {
+			factor = -5
+			has_authority = auth_machine_intelligence
+		}
+	}
+}
+
+tr_plentiful_mutagenesis_finish = {
+	modifier = {
+	tradition_cost_empire_size_mult = -0.15
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_mutagenesis_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		pop_environment_tolerance = 0.10
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_mutagenesis_2 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_mutagenesis_1
+	}
+	modifier = {
+		planet_orbital_bombardment_damage = -0.25
+		empire_size_colonies_mult = -0.10
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_mutagenesis_3 = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+		ship_hull_regen_add_perc = 0.025
+		ship_armor_regen_add_perc = 0.025
+		ship_shield_regen_add_perc = 0.025
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_mutagenesis_4 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_mutagenesis_3
+	}
+	custom_tooltip_with_modifiers = tr_plentiful_mutagenesis_4_desc
+	modifier = {
+# Pillar of Affliction
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_mutagenesis_5 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_mutagenesis_4
+	}
+	modifier = {
+		planet_jobs_food_produces_mult =  0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# === merged from plentiful_traditions_mysticism.txt ===
+#@cost = 56
+
+tr_plentiful_mysticism_adopt = {
+#	cost = { unity = @cost }
+	on_enabled = {
+		give_technology = { message = no tech = tech_plentiful_traditions_orbital_c_r_s }
+	}
+	modifier = {
+		species_leader_exp_gain = 0.2
+	}
+	
+	tradition_swap = {
+		name = tr_plentiful_mysticism_adopt_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+		on_enabled = {
+			give_technology = { message = no tech = tech_plentiful_traditions_orbital_c_r_s }
+		}
+		
+		modifier = {
+			species_leader_exp_gain = 0.2
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 1
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_spiritualist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_spiritualist
+		}
+	}
+}
+
+tr_plentiful_mysticism_finish = {
+	modifier = {
+		ascension_perks_add = 1
+	}
+# Unity pedict
+	tradition_swap = {
+		name = tr_plentiful_mysticism_finish_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+		
+		modifier = {
+			ascension_perks_add = 1
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+tr_plentiful_mysticism_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		leader_lifespan_add = 20
+	}
+#Obelisk1
+		custom_tooltip_with_modifiers = tr_plentiful_mysticism_1_desc
+	ai_weight = {
+		factor = 1000
+	}
+	
+	tradition_swap = {
+		name = tr_plentiful_mysticism_1_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+
+		modifier = {
+			category_field_manipulation_research_speed_mult = 0.2
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+tr_plentiful_mysticism_2 = {
+#	cost = { unity = @cost }
+	modifier = {
+		planet_structures_cost_mult = -0.1
+	}
+#Obelisk2
+		custom_tooltip_with_modifiers = tr_plentiful_mysticism_2_desc
+	ai_weight = {
+		factor = 1000
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_mysticism_2_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+
+		modifier = {
+			planet_structures_cost_mult = -0.1
+			shipclass_research_station_build_cost_mult = -0.33
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+tr_plentiful_mysticism_3 = {
+#	cost = { unity = @cost }
+	modifier = {
+		pc_nuked_habitability = 0.05
+	}
+#Obelisk3
+		custom_tooltip_with_modifiers = tr_plentiful_mysticism_3_desc
+	ai_weight = {
+		factor = 1000
+	}
+	
+	tradition_swap = {
+		name = tr_plentiful_mysticism_3_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+
+		modifier = {
+			leaders_upkeep_mult = -0.25
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+tr_plentiful_mysticism_4 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_mysticism_1
+		has_tradition = tr_plentiful_mysticism_2
+		has_tradition = tr_plentiful_mysticism_3
+	}
+	modifier = {
+		country_unity_produces_mult = 0.05
+		damage_vs_country_type_drone_mult = 0.15
+	}
+	
+	tradition_swap = {
+		name = tr_plentiful_mysticism_4_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+
+		modifier = {
+			country_unity_produces_mult = 0.05
+			damage_vs_country_type_drone_mult = 0.15
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+
+tr_plentiful_mysticism_5 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_mysticism_4
+	}
+	modifier = {
+	damage_vs_country_type_ai_empire_mult = 0.15
+#Sanctum of Keys/Collective
+	}
+	custom_tooltip_with_modifiers = tr_plentiful_mysticism_5_desc
+	
+	tradition_swap = {
+		name = tr_plentiful_mysticism_5_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+		
+		modifier = {
+			damage_vs_country_type_ai_empire_mult = 0.15
+		}
+		custom_tooltip_with_modifiers = tr_plentiful_mysticism_5_machine_desc
+		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+# === merged from plentiful_traditions_order.txt ===
+#@cost = 56
+
+tr_plentiful_order_adopt = {
+#	cost = { unity = @cost }
+	modifier = {
+		ship_speed_mult = 0.10
+		ship_emergency_ftl_mult = -0.25
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+tr_plentiful_order_finish = {
+	modifier = {
+		country_government_civic_points_add = 1
+		megastructures_cost_mult = -0.15
+		country_occupation_armies_add = 5
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_order_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+#		ship_shield_regen_mult = 0.1
+		ship_shield_mult = 0.15
+		starbase_shipyard_build_cost_mult = -0.05
+		country_starbase_capacity_add = 1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_order_2 = {
+#	cost = { unity = @cost }
+	modifier = {
+		ship_armor_mult = 0.1
+		ship_hull_mult = 0.1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_order_3 = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+		category_voidcraft_research_speed_mult = 0.25
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_order_4 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_order_1
+		has_tradition = tr_plentiful_order_2
+	}
+	modifier = {
+		starbase_module_build_speed_mult = 0.15
+		category_statecraft_research_speed_mult = 0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_order_5 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_order_3
+		has_tradition = tr_plentiful_order_2
+	}
+	on_enabled = {
+		give_technology = { message = no tech = tech_plentiful_traditions_orbital_c_h }
+	}
+	modifier = {
+		megastructure_build_speed_mult = 0.25
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_robotics.txt ===
+#@cost = 56
+
+tr_plentiful_robotics_adopt = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+		category_computing_research_speed_mult = 0.2
+	}
+	
+	tradition_swap = {
+		name = tr_plentiful_robotics_hive_adopt
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_hive_mind
+		}
+		
+		modifier = {
+			category_computing_research_speed_mult = 0.2
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 5
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 2
+			has_origin = origin_mechanists
+		}
+		modifier = {
+			factor = 5
+			has_authority = auth_machine_intelligence
+		}
+		modifier = {
+			factor = 0
+			has_civic = civic_machine_servitor
+		}
+	}
+}
+
+tr_plentiful_robotics_finish = {
+	on_enabled = {
+#		add_research_option = tech_machine_templates
+		give_technology = { message = no tech = tech_plentiful_traditions_robotics_construct_amplifiers }
+	}
+	
+	modifier = {
+		planet_jobs_robotic_produces_mult = 0.1
+		ROBOT_species_trait_points_add = 1
+		MACHINE_species_trait_points_add = 1
+		ascension_perks_add = 1
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_robotics_hive_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_hive_mind
+		}
+		
+		modifier = {
+			BIOLOGICAL_species_trait_points_add = 1
+			ascension_perks_add = 1
+		}
+		on_enabled = {
+			add_research_option = tech_basic_science_lab_3
+			add_research_option = tech_mine_volatile_motes
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+}
+
+tr_plentiful_robotics_1 = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+# Robotics Facility
+	}
+	on_enabled = {
+		add_research_option = tech_basic_science_lab_3
+		add_research_option = tech_mine_volatile_motes
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_robotics_hive_1
+		inherit_effects = yes
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_hive_mind
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_robotics_2 = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+		planet_pops_robotics_upkeep_mult = -0.10
+#		tradition_cost_num_sapient_robots_mult = -0.25
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_robotics_hive_2
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_hive_mind
+		}
+		
+		modifier = {
+			pop_housing_usage_mult = -0.25
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_robotics_3 = {
+#	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_plentiful_robotics_2
+	}
+	
+	modifier = {
+		planet_pop_assembly_mult = 0.15
+	}
+
+	tradition_swap = {
+		name = tr_plentiful_robotics_hive_3
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_authority = auth_hive_mind
+		}
+		
+		modifier = {
+			planet_resettlement_unemployed_mult =  0.15
+		}
+		
+		weight = {
+			factor = 1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_robotics_4 = {
+#	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_plentiful_robotics_3
+	}
+	
+	modifier = {
+		planet_researchers_engineering_research_produces_mult = 0.15
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_robotics_5 = {
+#	cost = { unity = @cost }
+	
+	possible = {
+		has_tradition = tr_plentiful_robotics_1
+		has_tradition = tr_plentiful_robotics_2
+	}
+	on_enabled = {
+		give_technology = { message = no tech = tech_plentiful_traditions_orbital_a_s_p_i }
+	}
+	
+	modifier = {
+# Adaptive Foundry
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+# === merged from plentiful_traditions_transformation.txt ===
+#@cost = 56
+
+tr_plentiful_transformation_adopt = {
+#	cost = { unity = @cost }
+	modifier = {
+		modify_species_cost_mult = -0.05
+	}
+	on_enabled = {
+		add_research_option = tech_climate_restoration
+		add_research_option = tech_terrestrial_sculpting
+		add_tech_progress = {
+			tech = tech_terrestrial_sculpting
+			progress = 0.25
+		}
+	}
+	
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 1
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+tr_plentiful_transformation_finish = {
+	modifier = {
+		terraforming_cost_mult = -0.10
+		terraform_speed_mult = 0.10
+		ascension_perks_add = 1
+	}
+	on_enabled = {
+		add_tech_progress = {
+			tech = tech_terrestrial_sculpting
+			progress = 0.25
+		}
+	}
+}
+
+tr_plentiful_transformation_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		country_resource_max_energy_add = 50000
+	}
+	on_enabled = {
+		add_tech_progress = {
+			tech = tech_terrestrial_sculpting
+			progress = 0.1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_transformation_2 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_transformation_2_desc
+	possible = {
+		has_tradition = tr_plentiful_transformation_1
+	}
+	modifier = {
+# edict for exchanging stuff
+	}
+	on_enabled = {
+		add_tech_progress = {
+			tech = tech_terrestrial_sculpting
+			progress = 0.1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_transformation_3 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_transformation_3_desc
+	
+	modifier = {
+# satisfaction with terraforming
+	}
+	on_enabled = {
+		add_tech_progress = {
+			tech = tech_terrestrial_sculpting
+			progress = 0.1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_transformation_4 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_transformation_3_desc
+	possible = {
+		has_tradition = tr_plentiful_transformation_3
+	}
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 1
+		ROBOT_species_trait_points_add = 1
+		MACHINE_species_trait_points_add = 1
+# biology change
+	}
+	on_enabled = {
+		add_tech_progress = {
+			tech = tech_terrestrial_sculpting
+			progress = 0.1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_transformation_5 = {
+#	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_transformation_5_desc
+	possible = {
+		has_tradition = tr_plentiful_transformation_1
+	}
+	modifier = {
+# restore destroyed world ==> project or terraforming?
+	}
+	on_enabled = {
+		add_tech_progress = {
+			tech = tech_terrestrial_sculpting
+			progress = 0.1
+		}
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}

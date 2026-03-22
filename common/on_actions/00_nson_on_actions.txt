@@ -1,3 +1,0 @@
-on_yearly_pulse = {
-	events = { nson.1 }
-}

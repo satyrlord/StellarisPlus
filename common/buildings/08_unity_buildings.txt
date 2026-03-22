@@ -614,9 +614,7 @@ building_bureaucratic_3 = {
 		potential = {
 			exists = owner.federation
 			owner.federation = { has_federation_perk = all_the_priests_2 }
-			owner.federation = {
-				has_tradition = tr_plentiful_aspiration_3
-			}
+			owner = {				has_tradition = tr_plentiful_aspiration_3			}
 		}
 		job_high_priest_add = @building_static_jobs
 	}
@@ -799,7 +797,7 @@ building_holotemple = {
 			}
 		}
 		modifier = {
-			job_priest_add = @building_static_jobs
+			job_bureaucrat_add = @building_static_jobs
 		}
 	}
 
@@ -928,7 +926,7 @@ building_sacred_nexus = {
 			}
 		}
 		modifier = {
-			job_priest_add = @building_static_jobs
+			job_bureaucrat_add = @building_static_jobs
 		}
 	}
 
@@ -968,9 +966,7 @@ building_sacred_nexus = {
 		potential = {
 			exists = owner.federation
 			owner.federation = { has_federation_perk = all_the_priests_2 }
-			owner.federation = {
-				has_tradition = tr_plentiful_aspiration_3
-			}
+			owner = {				has_tradition = tr_plentiful_aspiration_3			}
 		}
 		job_high_priest_add = @building_static_jobs
 	}	
@@ -1578,7 +1574,7 @@ building_sacrificial_temple_1 = {
 			}
 		}
 		modifier = {
-			job_death_priest_add = @building_static_jobs
+			job_bureaucrat_add = @building_static_jobs
 			job_mortal_initiate_add = @building_static_jobs
 		}
 	}
@@ -1673,7 +1669,7 @@ building_sacrificial_temple_2 = {
 			}
 		}
 		modifier = {
-			job_death_priest_add = @building_static_jobs
+			job_bureaucrat_add = @building_static_jobs
 			job_mortal_initiate_add = @building_static_jobs
 		}
 	}
@@ -1790,7 +1786,7 @@ building_sacrificial_temple_3 = {
 			}
 		}
 		modifier = {
-			job_death_priest_add = @building_static_jobs
+			job_bureaucrat_add = @building_static_jobs
 			job_mortal_initiate_add = @building_static_jobs
 		}
 	}
@@ -1831,9 +1827,7 @@ building_sacrificial_temple_3 = {
 		potential = {
 			exists = owner.federation
 			owner.federation = { has_federation_perk = all_the_priests_2 }
-			owner.federation = {
-				has_tradition = tr_plentiful_aspiration_3
-			}
+			owner = {				has_tradition = tr_plentiful_aspiration_3			}
 		}
 		job_high_priest_add = @building_static_jobs
 	}

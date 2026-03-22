@@ -1,0 +1,111 @@
+# === merged from PRA_sv.txt ===
+#	Planetary ascension effect
+PRA_sv_plnt_ASCEND_show_sprawl = {
+	base = 3	#0.03
+	mult = trigger:has_planetary_ascension_tier
+}
+PRA_sv_plnt_ASCEND_show_designation = {
+	base = 20	#0.2
+	mult = trigger:has_planetary_ascension_tier
+}
+
+
+#	Ascension perk count mult
+PRA_sv_cntr_ASCEND = {
+	base = 1
+	modifier = {
+		add = PRA_var_cntr_ASCEND
+		is_variable_set = PRA_var_cntr_ASCEND
+	}
+}
+
+PRA_sv_plnt_SPRAWL_pop_mult_5 = {
+	set = trigger:num_ascension_perks
+	subtract = 5
+	mult = 0.7
+	add = 5
+}
+PRA_sv_plnt_SPRAWL_pop_mult_10 = {
+	set = trigger:num_ascension_perks
+	subtract = 10
+	mult = 0.35
+	add = 8
+}
+PRA_sv_cntr_SPRAWL_ap_mult = {
+	set = trigger:num_ascension_perks
+	modifier = {#5*0.05=0.25
+		num_ascension_perks > 5
+		num_ascension_perks <= 10
+		set = value:PRA_sv_plnt_SPRAWL_pop_mult_5
+	}
+	modifier = {#8.5*0.05=0.425
+		num_ascension_perks > 10
+		set = value:PRA_sv_plnt_SPRAWL_pop_mult_10
+	}
+	mult = -0.05
+	max = 0
+}
+
+#	Planet population mult
+PRA_sv_plnt_SPRAWL_pop_mult_40 = {
+	set = trigger:pop_amount
+	subtract = 5000
+	mult = 0.5
+	add = 5000
+}
+PRA_sv_plnt_SPRAWL_pop_mult_120 = {
+	set = trigger:pop_amount
+	subtract = 15000
+	mult = 0.25
+	add = 10000	#4000+8000*0.5
+}
+PRA_sv_plnt_SPRAWL_pop_mult = {#200pg=10unity
+	set = trigger:pop_amount
+	#	40-120
+	modifier = {
+		pop_amount > 5000
+		pop_amount <= 15000
+		set = value:PRA_sv_plnt_SPRAWL_pop_mult_40
+	}
+	#	>120
+	modifier = {
+		pop_amount > 15000
+		set = value:PRA_sv_plnt_SPRAWL_pop_mult_120
+	}
+	mult = 0.001	# /100*0.1
+}
+
+#	Local governance
+PRA_sv_plnt_JOB_default = {
+	set = modifier:PRA_smod_plnt_JOB_default
+	mult = 0.75
+	min = 0
+	max = 5
+}
+
+#	Fanatic bonus
+PRA_sv_pop_FANATIC_mult = {
+	set = 1
+	modifier = {
+		exists = owner
+		owner = { is_fanatic = yes }
+		add = 1
+	}
+}
+#	Default bonus
+PRA_sv_pop_DEFAULT_mult = {
+	set = 3
+	subtract = planet.modifier:PRA_smod_plnt_JOB_default
+}
+
+# === merged from zz_sp_toxic_attendant_growth.txt ===
+toxic_attendant_growth = {
+	base = 1
+	complex_trigger_modifier = {
+		trigger = num_districts
+		parameters = {
+			type = district_city
+		}
+		mode = add
+	}
+}

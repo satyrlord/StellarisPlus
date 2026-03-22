@@ -1,0 +1,2761 @@
+# === merged from permanent_decisions_resource_decisions.txt ===
+decision_planet_food_boost_permanent = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	potential = {
+		owner = { is_regular_empire = yes }
+		owner = { is_ai = no }
+		NOR = {
+			has_modifier = planet_growth_discouraged
+			has_modifier = planet_population_control
+			has_modifier = planet_food_boost
+		}
+	}	
+	
+	effect = {
+		add_modifier = { modifier = "planet_food_boost" }
+		hidden_effect = {
+			add_deposit = d_food_boost
+		}
+	}
+}
+
+decision_planet_food_boost_permanent_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	potential = {
+		owner = { is_regular_empire = yes }
+		owner = { is_ai = no }
+		OR = {
+			has_modifier = planet_food_boost
+			has_deposit = d_food_boost
+		}
+	}	
+	
+	effect = {
+		remove_modifier = planet_food_boost
+		hidden_effect = {
+			remove_deposit = d_food_boost
+		}
+	}
+}
+
+decision_planet_luxuries_boost_permanent = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		owner = { is_ai = no }
+		NOT = { has_modifier = planet_luxuries_boost }
+	}	
+	
+	effect = {
+		add_modifier = { modifier = "planet_luxuries_boost" }
+		hidden_effect = {
+			planet_event = { id = permanent_decisions.0 }
+		}
+	}
+}
+
+decision_planet_luxuries_boost_permanent_remove = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_luxuries
+
+	potential = {
+		owner = { is_regular_empire = yes }
+		owner = { is_ai = no }
+		OR = {
+			has_modifier = planet_luxuries_boost
+			has_deposit = d_luxuries_boost_0
+			has_deposit = d_luxuries_boost_1
+			has_deposit = d_luxuries_boost_2
+			has_deposit = d_luxuries_boost_3
+			has_deposit = d_luxuries_boost_4
+			has_deposit = d_luxuries_boost_5
+			has_deposit = d_luxuries_boost_6
+			has_deposit = d_luxuries_boost_7
+			has_deposit = d_luxuries_boost_8
+			has_deposit = d_luxuries_boost_9
+		}
+	}	
+	
+	effect = {
+		remove_modifier = planet_luxuries_boost
+		hidden_effect = {
+			remove_deposit = d_luxuries_boost_0
+			remove_deposit = d_luxuries_boost_1
+			remove_deposit = d_luxuries_boost_2
+			remove_deposit = d_luxuries_boost_3
+			remove_deposit = d_luxuries_boost_4
+			remove_deposit = d_luxuries_boost_5
+			remove_deposit = d_luxuries_boost_6
+			remove_deposit = d_luxuries_boost_7
+			remove_deposit = d_luxuries_boost_8
+			remove_deposit = d_luxuries_boost_9
+		}
+	}
+}
+# === merged from plentiful_traditions_biogenesis_decisions.txt ===
+plentiful_traditions_partial_terraforming = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {	
+		can_have_habitable_deposits = yes
+		owner = {
+			has_tradition = tr_plentiful_biogenesis_3
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_partial_terraforming
+		}
+	}
+	
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_partial_terraforming_pedict.1
+		}
+	}	
+
+	allow = {
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_partial_terraforming
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				has_authority = auth_machine_intelligence
+				NOR = {
+					has_civic = civic_machine_assimilator
+					has_civic = civic_machine_servitor				
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				is_ai = yes
+				has_monthly_income = {
+					resource = food
+					value > 100
+				}
+			}
+		}
+	}	
+}
+# === merged from plentiful_traditions_cybernetics_decisions.txt ===
+plentiful_traditions_adaptive_foundry_1 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ## Muss noch neu
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_robotics_5
+		}
+		NOR = {
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_1
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_2
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_3
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_4
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_5
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_6
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_7
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_8
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_9
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_10
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_cooldown
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_adaptive_foundry_pedict.1
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+#		modifier = {
+#			factor = 0
+#			from = {
+#				any_owned_pop_group =  {
+#					NOR = {
+#						has_trait = trait_machine_unit
+#						has_trait = trait_mechanical
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+plentiful_traditions_adaptive_foundry_2 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ## Muss noch neu
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {	
+		owner = {
+			has_tradition = tr_plentiful_robotics_5
+		}
+		has_modifier = modifier_plentiful_traditions_adaptive_foundry_1
+		NOT = {
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_cooldown
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_adaptive_foundry_pedict.2
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+#		modifier = {
+#			factor = 0
+#			from = {
+#				any_owned_pop_group =  {
+#					NOR = {
+#						has_trait = trait_machine_unit
+#						has_trait = trait_mechanical
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+plentiful_traditions_adaptive_foundry_3 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ## Muss noch neu
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_robotics_5
+		}
+		has_modifier = modifier_plentiful_traditions_adaptive_foundry_2
+		NOT = {
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_cooldown
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_adaptive_foundry_pedict.3
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+#		modifier = {
+#			factor = 0
+#			from = {
+#				any_owned_pop_group =  {
+#					NOR = {
+#						has_trait = trait_machine_unit
+#						has_trait = trait_mechanical
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+plentiful_traditions_adaptive_foundry_4 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ## Muss noch neu
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {	
+		owner = {
+			has_tradition = tr_plentiful_robotics_5
+		}
+		has_modifier = modifier_plentiful_traditions_adaptive_foundry_3
+		NOT = {
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_cooldown
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_adaptive_foundry_pedict.4
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+#		modifier = {
+#			factor = 0
+#			from = {
+#				any_owned_pop_group =  {
+#					NOR = {
+#						has_trait = trait_machine_unit
+#						has_trait = trait_mechanical
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+plentiful_traditions_adaptive_foundry_5 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ## Muss noch neu
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_robotics_5
+		}
+		has_modifier = modifier_plentiful_traditions_adaptive_foundry_4
+		NOT = {
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_cooldown
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_adaptive_foundry_pedict.5
+		}
+	} 
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+#		modifier = {
+#			factor = 0
+#			from = {
+#				any_owned_pop_group =  {
+#					NOR = {
+#						has_trait = trait_machine_unit
+#						has_trait = trait_mechanical
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+plentiful_traditions_adaptive_foundry_6 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ## Muss noch neu
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_robotics_5
+		}
+		has_modifier = modifier_plentiful_traditions_adaptive_foundry_5
+		NOT = {
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_cooldown
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_adaptive_foundry_pedict.6
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+#		modifier = {
+#			factor = 0
+#			from = {
+#				any_owned_pop_group =  {
+#					NOR = {
+#						has_trait = trait_machine_unit
+#						has_trait = trait_mechanical
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+plentiful_traditions_adaptive_foundry_7 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ## Muss noch neu
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_robotics_5
+		}
+		has_modifier = modifier_plentiful_traditions_adaptive_foundry_6
+		NOT = {
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_cooldown
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_adaptive_foundry_pedict.7
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+#		modifier = {
+#			factor = 0
+#			from = {
+#				any_owned_pop_group =  {
+#					NOR = {
+#						has_trait = trait_machine_unit
+#						has_trait = trait_mechanical
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+plentiful_traditions_adaptive_foundry_8 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ## Muss noch neu
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_robotics_5
+		}
+		has_modifier = modifier_plentiful_traditions_adaptive_foundry_7
+		NOT = {
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_cooldown
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_adaptive_foundry_pedict.8
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+#		modifier = {
+#			factor = 0
+#			from = {
+#				any_owned_pop_group =  {
+#					NOR = {
+#						has_trait = trait_machine_unit
+#						has_trait = trait_mechanical
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+plentiful_traditions_adaptive_foundry_9 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ## Muss noch neu
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_robotics_5
+		}
+		has_modifier = modifier_plentiful_traditions_adaptive_foundry_8
+		NOT = {
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_cooldown
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_adaptive_foundry_pedict.9
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+#		modifier = {
+#			factor = 0
+#			from = {
+#				any_owned_pop_group =  {
+#					NOR = {
+#						has_trait = trait_machine_unit
+#						has_trait = trait_mechanical
+#					}
+#				}
+#			}
+#		}
+	}
+}
+
+plentiful_traditions_adaptive_foundry_10 = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ## Muss noch neu
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_robotics_5
+		}
+		has_modifier = modifier_plentiful_traditions_adaptive_foundry_9
+		NOT = {
+			has_modifier = modifier_plentiful_traditions_adaptive_foundry_cooldown
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_adaptive_foundry_pedict.10
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+#		modifier = {
+#			factor = 0
+#			from = {
+#				any_owned_pop_group =  {
+#					NOR = {
+#						has_trait = trait_machine_unit
+#						has_trait = trait_mechanical
+#					}
+#				}
+#			}
+#		}
+	}
+}
+# === merged from plentiful_traditions_habitat_decision.txt ===
+#plentiful_traditions_lebensraum_enlargement = {
+#	owned_planets_only = yes
+#	enactment_time = 360
+#	resources = {
+#		category = decisions
+#		cost = {
+#			influence = 5
+#			energy = 10
+#			minerals = 500
+#		}
+#	}
+#	
+#	potential = {
+#		OR = {
+#			num_pops > 20
+#			any_owned_pop_group =  {
+#				is_robot_pop = yes
+#			}
+#		}
+#		habitable_structure = yes
+#		NOT = { 
+#			is_planet_class = pc_habitat_robot
+#			is_planet_class = pc_ringworld_habitable
+#		}
+#		owner = {
+#			has_ascension_perk = ap_plentiful_traditions_lebensraum_enlargement
+#		}
+#		planet_size < 25
+#		NOT = { has_modifier = modifier_plentiful_traditions_lebensraum_enlargement_cooldown }
+#	}
+#	
+#	allow = {
+#		custom_tooltip = {
+#			fail_text = plentiful_traditions_lebensraum_enlargement_not_max_size
+#			planet_size < 25
+#		}	
+#		custom_tooltip = {
+#			fail_text = plentiful_traditions_lebensraum_enlargement_full_or_robot
+#			OR = {
+#				AND = { 
+#					planet_size < 7
+#					num_pops > 25
+#				}
+#				AND = { 
+#					planet_size < 8
+#					num_pops > 30
+#				}
+#				AND = { 
+#					planet_size < 9
+#					num_pops > 35
+#				}
+#				AND = { 
+#					planet_size < 10
+#					num_pops > 40
+#				}
+#				AND = { 
+#					planet_size < 11
+#					num_pops > 45
+#				}
+#				AND = { 
+#					planet_size < 12
+#					num_pops > 50
+#				}
+#				AND = { 
+#					planet_size < 13
+#					num_pops > 55
+#				}
+#				AND = { 
+#					planet_size < 14
+#					num_pops > 60
+#				}
+#				AND = { 
+#					planet_size < 15
+#					num_pops > 65
+#				}
+#				AND = { 
+#					planet_size < 16
+#					num_pops > 70
+#				}
+#				AND = { 
+#					planet_size < 17
+#					num_pops > 75
+#				}
+#				AND = { 
+#					planet_size < 18
+#					num_pops > 80
+#				}
+#				AND = { 
+#					planet_size < 19
+#					num_pops > 85
+#				}
+#				AND = { 
+#					planet_size < 20
+#					num_pops > 90
+#				}
+#				AND = { 
+#					planet_size < 21
+#					num_pops > 95
+#				}
+#				AND = { 
+#					planet_size < 22
+#					num_pops > 100
+#				}
+#				AND = { 
+#					planet_size < 23
+#					num_pops > 105
+#				}
+#				AND = { 
+#					planet_size < 24
+#					num_pops > 110
+#				}
+#				AND = { 
+#					planet_size < 25
+#					num_pops > 115
+#				}
+#				any_owned_pop_group =  {
+#					is_robot_pop = yes
+#				}
+#			}
+#		}
+#	}
+#	
+#	effect = {
+#		add_modifier = {
+#			modifier = "modifier_plentiful_traditions_lebensraum_enlargement_cooldown"
+#			days = 360
+#		}
+#		hidden_effect = { change_planet_size = 1 }	
+#		custom_tooltip = plentiful_traditions_lebensraum_enlargement_plus_one
+#	}
+#	
+#	ai_weight = {
+#		weight = 10
+#		modifier = {
+#			factor = 0
+#			num_pops < 25
+#		}
+#	}
+#}
+# === merged from plentiful_traditions_harvest_decision.txt ===
+plentiful_traditions_harvest_erupt = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources ### new image?
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_industry_finish
+		}
+		owner = {
+			is_ai = no
+		}
+	}
+	
+	allow = {
+		OR = {
+			has_major_upgraded_capital = yes
+			count_owned_pop_amount = { count >= 10 }
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { planet_size < 17 }
+			planet_event = {
+				id = plentiful_traditions_harvest_pedict.3
+			}
+			break = yes
+		}
+		if = {
+			limit = { planet_size < 23 }
+			planet_event = {
+				id = plentiful_traditions_harvest_pedict.2
+			}
+			break = yes
+		}
+		if = {
+			limit = { planet_size < 99 }
+			planet_event = {
+				id = plentiful_traditions_harvest_pedict.1
+			}
+			break = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+# === merged from plentiful_traditions_kleptocracy_decisions.txt ===
+plentiful_traditions_overcharge = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_kleptocracy_3
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_overcharge
+		}
+	}
+	
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_overcharge_pedict.1
+		}
+	}
+	
+	allow = {
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_overcharge
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+# === merged from plentiful_traditions_malice_decisions.txt ===
+plentiful_traditions_malice_activate = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_crime
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 1
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_malice_5
+			is_ai = no
+		}
+		any_owned_pop_group = {
+			is_enslaved = yes
+			is_robot_pop = no
+			NOT = { has_slavery_type = { type = slavery_livestock } }
+			NOT = { has_slavery_type = { type = slavery_matrix } }
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_pop_group = {
+				limit = {
+					is_enslaved = yes
+					is_robot_pop = no
+					OR = {
+						has_job_type = livestock
+						has_job_type = organic_battery
+					}
+					NOT = {
+						has_trait = trait_plentiful_traditions_slave_01
+					}
+				}
+				modify_species = {
+					species = this
+					add_trait = trait_plentiful_traditions_slave_01
+					remove_trait = trait_plentiful_traditions_slave_02
+					remove_trait = trait_plentiful_traditions_slave_03
+					remove_trait = trait_plentiful_traditions_slave_04
+					remove_trait = trait_plentiful_traditions_slave_05
+					remove_trait = trait_plentiful_traditions_slave_06
+					remove_trait = trait_plentiful_traditions_slave_07
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					is_enslaved = yes
+					is_robot_pop = no
+					OR = {
+						has_job_type = technician_drone
+						has_job_type = technician
+						has_job_type = primitive_technician
+						has_job_type = fe_acolyte_generator
+					}
+					NOT = {
+						has_trait = trait_plentiful_traditions_slave_02
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_01
+					add_trait = trait_plentiful_traditions_slave_02
+					remove_trait = trait_plentiful_traditions_slave_03
+					remove_trait = trait_plentiful_traditions_slave_04
+					remove_trait = trait_plentiful_traditions_slave_05
+					remove_trait = trait_plentiful_traditions_slave_06
+					remove_trait = trait_plentiful_traditions_slave_07
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					is_enslaved = yes
+					is_robot_pop = no
+					OR = {
+						has_job_type = foundry
+						has_job_type = fabricator
+						has_job_type = alloy_drone
+						has_job_type = mining_drone
+						has_job_type = miner
+						has_job_type = primitive_miner
+						has_job_type = fe_acolyte_mine
+					}
+					NOT = {
+						has_trait = trait_plentiful_traditions_slave_03
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_01
+					remove_trait = trait_plentiful_traditions_slave_02
+					add_trait = trait_plentiful_traditions_slave_03
+					remove_trait = trait_plentiful_traditions_slave_04
+					remove_trait = trait_plentiful_traditions_slave_05
+					remove_trait = trait_plentiful_traditions_slave_06
+					remove_trait = trait_plentiful_traditions_slave_07
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					is_enslaved = yes
+					is_robot_pop = no
+					OR = {
+						has_job_type = agri_drone
+						has_job_type = farmer
+						has_job_type = hunter_gatherer
+						has_job_type = peasant
+						has_job_type = primitive_farmer
+						has_job_type = fe_acolyte_farm
+					}
+					NOT = {
+						has_trait = trait_plentiful_traditions_slave_04
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_01
+					remove_trait = trait_plentiful_traditions_slave_02
+					remove_trait = trait_plentiful_traditions_slave_03
+					add_trait = trait_plentiful_traditions_slave_04
+					remove_trait = trait_plentiful_traditions_slave_05
+					remove_trait = trait_plentiful_traditions_slave_06
+					remove_trait = trait_plentiful_traditions_slave_07
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					is_enslaved = yes
+					is_robot_pop = no
+					has_job_type = guinea_pigs
+					NOT = {
+						has_trait = trait_plentiful_traditions_slave_05
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_01
+					remove_trait = trait_plentiful_traditions_slave_02
+					remove_trait = trait_plentiful_traditions_slave_03
+					remove_trait = trait_plentiful_traditions_slave_04
+					add_trait = trait_plentiful_traditions_slave_05
+					remove_trait = trait_plentiful_traditions_slave_06
+					remove_trait = trait_plentiful_traditions_slave_07
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					is_enslaved = yes
+					is_robot_pop = no
+					OR = {
+						has_job_type = bio_trophy
+						has_job_type = enforcer
+						has_job_type = telepath
+						has_job_type = entertainer
+						has_job_type = culture_worker
+						has_job_type = manager
+						has_job_type = priest
+						has_job_type = patrol_drone
+						has_job_type = soldier
+						has_job_type = preacher
+						has_job_type = fe_xeno_ward
+						has_job_type = fe_hedonist
+						has_job_type = artisan
+						has_job_type = artisan_drone
+						has_job_type = primitive_laborer
+						has_job_type = fe_acolyte_artisan
+					}
+					NOT = {
+						has_trait = trait_plentiful_traditions_slave_06
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_01
+					remove_trait = trait_plentiful_traditions_slave_02
+					remove_trait = trait_plentiful_traditions_slave_03
+					remove_trait = trait_plentiful_traditions_slave_04
+					remove_trait = trait_plentiful_traditions_slave_05
+					add_trait = trait_plentiful_traditions_slave_06
+					remove_trait = trait_plentiful_traditions_slave_07
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					is_enslaved = yes
+					is_robot_pop = no
+					OR = {
+						has_job_type = chemist
+						has_job_type = chemist_drone
+						has_job_type = mote_harvester
+						has_job_type = translucer
+						has_job_type = translucer_drone
+						has_job_type = crystal_miner
+						has_job_type = gas_refiner
+						has_job_type = gas_refiner_drone
+						has_job_type = gas_extractor
+						has_job_type = dimensional_portal_researcher
+					}
+					NOT = {
+						has_trait = trait_plentiful_traditions_slave_07
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_01
+					remove_trait = trait_plentiful_traditions_slave_02
+					remove_trait = trait_plentiful_traditions_slave_03
+					remove_trait = trait_plentiful_traditions_slave_04
+					remove_trait = trait_plentiful_traditions_slave_05
+					remove_trait = trait_plentiful_traditions_slave_06
+					add_trait = trait_plentiful_traditions_slave_07
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}
+}
+
+plentiful_traditions_malice_deactivate = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_slave_colony
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 1
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_malice_5
+			is_ai = no
+		}
+		any_owned_pop_group = {
+			OR = {
+				has_trait = trait_plentiful_traditions_slave_01
+				has_trait = trait_plentiful_traditions_slave_02
+				has_trait = trait_plentiful_traditions_slave_03
+				has_trait = trait_plentiful_traditions_slave_04
+				has_trait = trait_plentiful_traditions_slave_05
+				has_trait = trait_plentiful_traditions_slave_06
+				has_trait = trait_plentiful_traditions_slave_07
+			}
+		}
+	}
+
+	effect = {
+		hidden_effect = {
+			every_owned_pop_group = {
+				limit = {
+					OR = {
+						has_trait = trait_plentiful_traditions_slave_01
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_01
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					OR = {
+						has_trait = trait_plentiful_traditions_slave_02
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_02
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					OR = {
+						has_trait = trait_plentiful_traditions_slave_03
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_03
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					OR = {
+						has_trait = trait_plentiful_traditions_slave_04
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_04
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					OR = {
+						has_trait = trait_plentiful_traditions_slave_05
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_05
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					OR = {
+						has_trait = trait_plentiful_traditions_slave_06
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_06
+				}
+			}
+			every_owned_pop_group = {
+				limit = {
+					OR = {
+						has_trait = trait_plentiful_traditions_slave_07
+					}
+				}
+				modify_species = {
+					species = this
+					remove_trait = trait_plentiful_traditions_slave_07
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}
+}
+# === merged from plentiful_traditions_mutagenesis_decisions.txt ===
+plentiful_traditions_mutagenesis_transformation = {
+	owned_planets_only = yes
+	sound = event_laboratory_sound
+	icon = decision_microscopic_life
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+		}
+	}
+	
+	potential = {
+		owner = { has_ascension_perk = ap_plentiful_traditions_mutagenesis_universalis }
+		NOT = { 
+			owner = { is_at_war = yes }
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = modifier_mutagenesis_transformation }
+		any_owned_pop_group = {
+			AND = {
+				NOT = { is_same_species = owner_species }
+				NOT = { is_same_species = owner }
+				NOT = { is_same_species = prev }
+				NOT = { is_same_species = prevprev }
+				NOT = { has_trait = "trait_mechanical" }
+				NOT = {
+					has_citizenship_type = {
+						type = citizenship_full
+					}
+				}
+			}
+		}
+	}
+	
+	effect = {
+		add_modifier = { modifier = "modifier_mutagenesis_transformation" days = 7200 }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+end_plentiful_traditions_mutagenesis_transformation = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_microscopic_life
+
+	resources = {
+		category = decisions
+	}
+	
+	potential = {
+		has_modifier = modifier_mutagenesis_transformation
+	}
+	
+	effect = {
+		remove_modifier = modifier_mutagenesis_transformation
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+# === merged from plentiful_traditions_planetary_decisions.txt ===
+plentiful_traditions_ionized_excavation = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {	
+		can_have_habitable_deposits = yes
+		owner = {
+			has_tradition = tr_plentiful_industry_finish
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_ionized_excavation
+		}
+	}
+	
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_ionized_excavation_pedict.1
+		}
+	}	
+
+	allow = {
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_ionized_excavation
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+
+plentiful_traditions_remnant_act = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+		}
+	}
+	
+	potential = {
+		can_have_habitable_deposits = yes
+		owner = {
+			# has_tradition = tr_plentiful_mysticism_finish_machine
+			has_active_tradition = tr_plentiful_mysticism_finish_machine
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_remnant_act
+		}
+		OR = {
+			has_building = building_plentiful_traditions_sanctum_of_keys
+			has_building = building_plentiful_traditions_sanctum_of_the_collective
+			has_building = building_plentiful_traditions_obelisk1
+			has_building = building_plentiful_traditions_obelisk2
+			has_building = building_plentiful_traditions_obelisk3
+			has_building = building_plentiful_traditions_pillar_of_affliction
+			has_building = building_plentiful_traditions_house_of_prayer
+			has_building = building_plentiful_traditions_citadel_of_motion
+			has_building = building_temple
+			has_building = building_holotemple
+			has_building = building_citadel_of_faith
+			has_building = building_sacred_nexus
+			has_building = building_uplink_node
+			has_building = building_network_junction
+			has_building = building_system_conflux
+			has_building = building_alpha_hub
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_remnant_act_pedict.1
+		}
+	}
+
+	allow = {
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_remnant_act
+		}
+	}
+		
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+
+plentiful_traditions_sacred_act = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+		}
+	}
+
+	potential = {
+		owner = {
+			# has_tradition = tr_plentiful_mysticism_finish
+			has_active_tradition = tr_plentiful_mysticism_finish
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_sacred_act
+		}
+		OR = {
+			has_building = building_plentiful_traditions_sanctum_of_keys
+			has_building = building_plentiful_traditions_sanctum_of_the_collective
+			has_building = building_plentiful_traditions_obelisk1
+			has_building = building_plentiful_traditions_obelisk2
+			has_building = building_plentiful_traditions_obelisk3
+			has_building = building_plentiful_traditions_pillar_of_affliction
+			has_building = building_plentiful_traditions_house_of_prayer
+			has_building = building_plentiful_traditions_citadel_of_motion
+			has_building = building_temple
+			has_building = building_holotemple
+			has_building = building_citadel_of_faith
+			has_building = building_sacred_nexus
+			has_building = building_uplink_node
+			has_building = building_network_junction
+			has_building = building_system_conflux
+			has_building = building_alpha_hub
+		}
+	}
+	
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_sacred_act_pedict.1
+		}
+	}
+
+	allow = {
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_sacred_act
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+
+plentiful_traditions_plentiful_deeds = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	resources = {
+		category = decisions
+		cost = {
+			influence = 75
+		}
+	}
+	
+	potential = {
+		OR = {
+			has_building = "building_plentiful_traditions_trading_terminal"
+			has_building = "building_plentiful_traditions_advanced_trading_terminal"
+		}
+		owner = {
+			OR = {
+				has_active_tradition = tr_plentiful_aspiration_gestalt_finish
+				has_active_tradition = tr_plentiful_aspiration_finish
+			}
+		}
+	}
+
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_plentiful_deeds_pedict.1
+		}
+#		every_country = {
+#			limit = {
+#					is_primitive = no
+#					has_communications = root.owner
+#					NOR = {
+#						is_same_value = root.owner
+#						is_same_species = root.owner
+#					}
+#				}
+#				distance = {
+#					source = ROOT
+#					max_distance <= 350
+#				}
+#			}
+#			hidden_effect = {
+#				every_owned_planet = {
+#					add_opinion_modifier = {
+#						who = root.owner
+#						modifier = opinion_plentiful_deeds
+#					}
+#				}
+#			}
+#		}
+	}
+
+	allow = { } #kann ja ruhig mehrfach genutzt werden...
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			NOT = {
+				owner = {
+					any_country = {
+						is_primitive = no
+						NOT = {
+							is_same_value = prev
+							is_same_species = root.owner
+							opinion = {
+								who = root.owner
+								value = 0
+							}
+						}
+						any_owned_planet = {
+							distance = {
+								source = root
+								max_distance <= 350
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+# Industrial Mining Excavation
+decision_excavation = {
+	owned_planets_only = yes
+	icon = decision_mining_station
+
+	enactment_time = 1000
+	resources = {
+		category = decisions
+		cost = {
+			influence = 150
+			minerals = 5000
+		}
+	}
+	
+	potential = {
+		habitable_structure = no
+		can_have_habitable_deposits = yes
+		owner = {
+			has_ascension_perk = ap_plentiful_traditions_industrial_mining_excavation
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_deposit = d_plentiful_traditions_planet_minerals5
+				}
+				has_deposit = d_plentiful_traditions_planet_minerals4
+			}
+			add_deposit = d_plentiful_traditions_planet_minerals5
+			remove_deposit = d_plentiful_traditions_planet_minerals4
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_deposit = d_plentiful_traditions_planet_minerals4
+				}
+				has_deposit = d_plentiful_traditions_planet_minerals3
+			}
+			add_deposit = d_plentiful_traditions_planet_minerals4
+			remove_deposit = d_plentiful_traditions_planet_minerals3
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_deposit = d_plentiful_traditions_planet_minerals3
+				}
+				has_deposit = d_plentiful_traditions_planet_minerals2
+			}
+			add_deposit = d_plentiful_traditions_planet_minerals3
+			remove_deposit = d_plentiful_traditions_planet_minerals2
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_deposit = d_plentiful_traditions_planet_minerals2
+				}
+				has_deposit = d_plentiful_traditions_planet_minerals1
+			}
+			add_deposit = d_plentiful_traditions_planet_minerals2
+			remove_deposit = d_plentiful_traditions_planet_minerals1
+			break = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_deposit = d_plentiful_traditions_planet_minerals1
+				}
+			}
+			add_deposit = d_plentiful_traditions_planet_minerals1
+			break = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_district_slots > 0
+		}
+	}
+}
+
+# Transformation Mastery
+decision_transformation_mastery = {
+	owned_planets_only = yes
+	icon = decision_drilling_for_gas
+
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			influence = 333
+			energy = 5000
+			exotic_gases = 500
+		}
+	}
+	
+	potential = {
+		habitable_structure = no
+		owner = {
+			has_ascension_perk = ap_plentiful_traditions_transformation
+		}
+		NOT = { has_modifier = modifier_transformation_mastery }
+	}
+	
+	effect = {
+		add_modifier = {
+			modifier = modifier_transformation_mastery
+			days = -1
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_district_slots > 0
+		}
+	}
+}
+
+# Bunker System
+decision_bunker_system = {
+	owned_planets_only = yes
+	icon = decision_unity_symbol
+
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+			minerals = 2000
+			energy = 1000
+			volatile_motes = 25
+		}
+	}
+	
+	potential = {
+		habitable_structure = no
+		can_have_habitable_deposits = yes
+		NOT = {
+			has_deposit = d_plentiful_traditions_planet_bunker
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+			is_planet_class = pc_city
+		}
+		owner = {
+			has_ascension_perk = ap_plentiful_traditions_bunker_mentality
+		}
+	}
+	
+	effect = {
+		add_deposit = d_plentiful_traditions_planet_bunker
+	}
+
+	allow = {
+		NOT =  {
+			has_deposit = d_plentiful_traditions_planet_bunker_broken
+		}
+		OR = {
+			is_ideal_planet_class = { who = root.owner status = yes }
+			AND = {
+				is_planet_class = pc_city
+				NOT = { 
+					owner = { is_hive_empire = yes }
+					owner = { is_machine_empire = yes }
+				}
+			}
+			AND = {
+				is_planet_class = pc_hive
+				owner = { is_hive_empire = yes }
+			}
+			AND = {
+				is_planet_class = pc_machine
+				owner = { is_machine_empire = yes }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_district_slots > 0
+		}
+	}
+}
+
+# Bunker System
+decision_bunker_system_addition = {
+	owned_planets_only = yes
+	icon = decision_unity_symbol
+
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+			minerals = 2000
+			energy = 1000
+			volatile_motes = 25
+		}
+	}
+	
+	potential = {
+		OR = {
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+			is_planet_class = pc_city
+		}
+		NOT = {
+			has_deposit = d_plentiful_traditions_planet_bunker
+		}
+		owner = {
+			has_ascension_perk = ap_plentiful_traditions_bunker_mentality
+		}
+	}
+	
+	effect = {
+		add_deposit = d_plentiful_traditions_planet_bunker
+	}
+
+	allow = {
+		NOT =  {
+			has_deposit = d_plentiful_traditions_planet_bunker_broken
+		}
+		OR = {
+			AND = {
+				is_planet_class = pc_city
+				NOT = { 
+					owner = { is_hive_empire = yes }
+					owner = { is_machine_empire = yes }
+				}
+			}
+			AND = {
+				is_planet_class = pc_hive
+				owner = { is_hive_empire = yes }
+			}
+			AND = {
+				is_planet_class = pc_machine
+				owner = { is_machine_empire = yes }
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_district_slots > 0
+		}
+	}
+}
+# === merged from plentiful_traditions_transformation_decisions.txt ===
+plentiful_traditions_energy_to_minerals = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_energy_to_minerals
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {	
+		can_have_habitable_deposits = yes
+		habitable_structure = no
+		owner = {
+			has_tradition = tr_plentiful_transformation_2
+			NOT = { has_country_flag = transformation_off_flag }
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+	}
+	
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_transformation_pedict.1
+		}
+	}	
+
+	allow = {
+		owner = { is_ai = no }
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+		num_districts = { type = district_generator value > 0 }
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+
+plentiful_traditions_energy_to_food = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_energy_to_food
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {	
+		can_have_habitable_deposits = yes
+		habitable_structure = no
+		owner = {
+			has_tradition = tr_plentiful_transformation_2
+			NOT = { has_country_flag = transformation_off_flag }
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+	}
+	
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_transformation_pedict.2
+		}
+	}	
+
+	allow = {
+		owner = { is_ai = no }
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+		num_districts = { type = district_generator value > 0 }
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+
+plentiful_traditions_minerals_to_energy = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_minerals_to_energy
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {	
+		can_have_habitable_deposits = yes
+		habitable_structure = no
+		owner = {
+			has_tradition = tr_plentiful_transformation_2
+			NOT = { has_country_flag = transformation_off_flag }
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+	}
+	
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_transformation_pedict.3
+		}
+	}	
+
+	allow = {
+		owner = { is_ai = no }
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+		num_districts = { type = district_mining value > 0 }
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+
+plentiful_traditions_minerals_to_food = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_minerals_to_food
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {	
+		can_have_habitable_deposits = yes
+		habitable_structure = no
+		owner = {
+			has_tradition = tr_plentiful_transformation_2
+			NOT = { has_country_flag = transformation_off_flag }
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+	}
+	
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_transformation_pedict.4
+		}
+	}	
+
+	allow = {
+		owner = { is_ai = no }
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+		num_districts = { type = district_mining value > 0 }
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+
+plentiful_traditions_food_to_minerals = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_food_to_minerals
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {	
+		can_have_habitable_deposits = yes
+		habitable_structure = no
+		owner = {
+			has_tradition = tr_plentiful_transformation_2
+			NOT = { has_country_flag = transformation_off_flag }
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+	}
+	
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_transformation_pedict.5
+		}
+	}	
+
+	allow = {
+		owner = { is_ai = no }
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+		num_districts = { type = district_farming value > 0 }
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+
+plentiful_traditions_food_to_energy = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_food_to_energy
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {	
+		can_have_habitable_deposits = yes
+		habitable_structure = no
+		owner = {
+			has_tradition = tr_plentiful_transformation_2
+			NOT = { has_country_flag = transformation_off_flag }
+		}
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+	}
+	
+	effect = {
+		planet_event = {
+			id = plentiful_traditions_transformation_pedict.6
+		}
+	}	
+
+	allow = {
+		owner = { is_ai = no }
+		NOT =  {
+			has_modifier = modifier_plentiful_traditions_transformation
+		}
+		num_districts = { type = district_farming value > 0 }
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+
+plentiful_traditions_colony_destroyed = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_landing_ship
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+		}
+	}
+	
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_transformation_finish
+			NOT = { is_ai = yes }
+		}
+		NOT = { is_capital = yes }
+	}
+	
+	effect = {
+		custom_tooltip = decision_colony_destroyed_effects
+		planet_event = {
+			id = plentiful_traditions_transformation_pedict.50
+		}
+	}	
+
+	allow = {
+		owner = {
+			NOT = { is_at_war = yes }
+		}
+		is_colony = yes
+		count_owned_pop_amount = { count > 1 }
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			count_owned_pop_amount = { count < 50 }
+		}
+	}	
+}
+# === merged from simpletraditions_decisions.txt ===
+# industry regular empire decisions
+decision_simple_planet_mining = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = minerals_designation
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					is_hive_empire = no
+					is_machine_empire = no
+				}
+			}
+			custom_tooltip = decision_simple_planet_mining_effect_desc
+			hidden_effect = {
+				add_modifier = { modifier = "simple_planet_mining" }
+			}
+		} else = {
+			custom_tooltip = decision_simple_planet_mining_gestalt_effect_desc
+			hidden_effect = {
+				add_modifier = { modifier = "simple_planet_mining_gestalt" }
+			}
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_industry_finish
+		}
+		NOT = { has_modifier = simple_planet_mining }
+		NOT = { has_modifier = simple_planet_energy }
+		NOT = { has_modifier = simple_planet_farmer }
+		NOT = { has_modifier = simple_planet_production }
+		NOT = { has_modifier = simple_planet_refinery }
+		NOT = { has_modifier = simple_planet_mining_gestalt }
+		NOT = { has_modifier = simple_planet_energy_gestalt }
+		NOT = { has_modifier = simple_planet_farmer_gestalt }
+		NOT = { has_modifier = simple_planet_production_gestalt }
+		NOT = { has_modifier = simple_planet_refinery_gestalt }
+	}
+
+	allow = {
+		NOT = { has_modifier = simple_planet_mining }
+		NOT = { has_modifier = simple_planet_energy }
+		NOT = { has_modifier = simple_planet_farmer }
+		NOT = { has_modifier = simple_planet_production }
+		NOT = { has_modifier = simple_planet_refinery }
+		NOT = { has_modifier = simple_planet_mining_gestalt }
+		NOT = { has_modifier = simple_planet_energy_gestalt }
+		NOT = { has_modifier = simple_planet_farmer_gestalt }
+		NOT = { has_modifier = simple_planet_production_gestalt }
+		NOT = { has_modifier = simple_planet_refinery_gestalt }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 2
+			OR = {
+				has_designation = col_mining
+				has_designation = col_habitat_mining
+			}
+		}
+		modifier = {
+			factor = 2
+			num_minerals > 20
+		}
+		modifier = {
+			factor = 2
+			num_minerals > 40
+		}
+		modifier = {
+			factor = 2
+			num_minerals > 80
+		}
+		modifier = {
+			factor = 2
+			num_minerals > 200
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					OR = {
+						has_district = district_mining
+						has_district = district_mining_uncapped
+						has_district = district_hab_mining
+					}
+				}
+			}
+		}
+	}
+}
+
+decision_simple_planet_energy = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = energy_designation
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					is_hive_empire = no
+					is_machine_empire = no
+				}
+			}
+			custom_tooltip = decision_simple_planet_energy_effect_desc
+			hidden_effect = {
+				add_modifier = { modifier = "simple_planet_energy" }
+			}
+		} else = {
+			custom_tooltip = decision_simple_planet_energy_gestalt_effect_desc
+			hidden_effect = {
+				add_modifier = { modifier = "simple_planet_energy_gestalt" }
+			}
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_industry_finish
+		}
+		NOT = { has_modifier = simple_planet_mining }
+		NOT = { has_modifier = simple_planet_energy }
+		NOT = { has_modifier = simple_planet_farmer }
+		NOT = { has_modifier = simple_planet_production }
+		NOT = { has_modifier = simple_planet_refinery }
+		NOT = { has_modifier = simple_planet_mining_gestalt }
+		NOT = { has_modifier = simple_planet_energy_gestalt }
+		NOT = { has_modifier = simple_planet_farmer_gestalt }
+		NOT = { has_modifier = simple_planet_production_gestalt }
+		NOT = { has_modifier = simple_planet_refinery_gestalt }
+	}
+
+	allow = {
+		NOT = { has_modifier = simple_planet_mining }
+		NOT = { has_modifier = simple_planet_energy }
+		NOT = { has_modifier = simple_planet_farmer }
+		NOT = { has_modifier = simple_planet_production }
+		NOT = { has_modifier = simple_planet_refinery }
+		NOT = { has_modifier = simple_planet_mining_gestalt }
+		NOT = { has_modifier = simple_planet_energy_gestalt }
+		NOT = { has_modifier = simple_planet_farmer_gestalt }
+		NOT = { has_modifier = simple_planet_production_gestalt }
+		NOT = { has_modifier = simple_planet_refinery_gestalt }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 2
+			OR = {
+				has_designation = col_generator
+				has_designation = col_habitat_energy
+			}
+		}
+		modifier = {
+			factor = 2
+			num_energy > 20
+		}
+		modifier = {
+			factor = 2
+			num_energy > 40
+		}
+		modifier = {
+			factor = 2
+			num_energy > 80
+		}
+		modifier = {
+			factor = 2
+			num_energy > 200
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					OR = {
+						has_district = district_generator
+						has_district = district_generator_uncapped
+						has_district = district_hab_energy
+					}
+				}
+			}
+		}
+	}
+}
+
+decision_simple_planet_farmer = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = food_designation
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					is_hive_empire = no
+					is_machine_empire = no
+				}
+			}
+			custom_tooltip = decision_simple_planet_farmer_effect_desc
+			hidden_effect = {
+				add_modifier = { modifier = "simple_planet_farmer" }
+			}
+		} else = {
+			custom_tooltip = decision_simple_planet_farmer_gestalt_effect_desc
+			hidden_effect = {
+				add_modifier = { modifier = "simple_planet_farmer_gestalt" }
+			}
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_industry_finish
+		}
+		NOT = { has_modifier = simple_planet_mining }
+		NOT = { has_modifier = simple_planet_energy }
+		NOT = { has_modifier = simple_planet_farmer }
+		NOT = { has_modifier = simple_planet_production }
+		NOT = { has_modifier = simple_planet_refinery }
+		NOT = { has_modifier = simple_planet_mining_gestalt }
+		NOT = { has_modifier = simple_planet_energy_gestalt }
+		NOT = { has_modifier = simple_planet_farmer_gestalt }
+		NOT = { has_modifier = simple_planet_production_gestalt }
+		NOT = { has_modifier = simple_planet_refinery_gestalt }
+	}
+
+	allow = {
+		NOT = { has_modifier = simple_planet_mining }
+		NOT = { has_modifier = simple_planet_energy }
+		NOT = { has_modifier = simple_planet_farmer }
+		NOT = { has_modifier = simple_planet_production }
+		NOT = { has_modifier = simple_planet_refinery }
+		NOT = { has_modifier = simple_planet_mining_gestalt }
+		NOT = { has_modifier = simple_planet_energy_gestalt }
+		NOT = { has_modifier = simple_planet_farmer_gestalt }
+		NOT = { has_modifier = simple_planet_production_gestalt }
+		NOT = { has_modifier = simple_planet_refinery_gestalt }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 2
+			OR = {
+				has_designation = col_farming
+			}
+		}
+		modifier = {
+			factor = 2
+			has_resource = {
+				type = food
+				amount < 20
+			}
+		}
+		modifier = {
+			factor = 2
+			has_resource = {
+				type = food
+				amount < 40
+			}
+		}
+		modifier = {
+			factor = 2
+			has_resource = {
+				type = food
+				amount < 80
+			}
+		}
+		modifier = {
+			factor = 2
+			has_resource = {
+				type = food
+				amount < 200
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					OR = {
+						has_district = district_farming
+						has_district = district_farming_uncapped
+					}
+				}
+			}
+		}
+	}
+}
+
+decision_simple_planet_production = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = consumer_goods_designation
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					is_hive_empire = no
+					is_machine_empire = no
+				}
+			}
+			custom_tooltip = decision_simple_planet_production_effect_desc
+			hidden_effect = {
+				add_modifier = { modifier = "simple_planet_production" }
+			}
+		} else = {
+			custom_tooltip = decision_simple_planet_production_gestalt_effect_desc
+			hidden_effect = {
+				add_modifier = { modifier = "simple_planet_production_gestalt" }
+			}
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_industry_finish
+		}
+		NOT = { has_modifier = simple_planet_mining }
+		NOT = { has_modifier = simple_planet_energy }
+		NOT = { has_modifier = simple_planet_farmer }
+		NOT = { has_modifier = simple_planet_production }
+		NOT = { has_modifier = simple_planet_refinery }
+		NOT = { has_modifier = simple_planet_mining_gestalt }
+		NOT = { has_modifier = simple_planet_energy_gestalt }
+		NOT = { has_modifier = simple_planet_farmer_gestalt }
+		NOT = { has_modifier = simple_planet_production_gestalt }
+		NOT = { has_modifier = simple_planet_refinery_gestalt }
+	}
+
+	allow = {
+		NOT = { has_modifier = simple_planet_mining }
+		NOT = { has_modifier = simple_planet_energy }
+		NOT = { has_modifier = simple_planet_farmer }
+		NOT = { has_modifier = simple_planet_production }
+		NOT = { has_modifier = simple_planet_refinery }
+		NOT = { has_modifier = simple_planet_mining_gestalt }
+		NOT = { has_modifier = simple_planet_energy_gestalt }
+		NOT = { has_modifier = simple_planet_farmer_gestalt }
+		NOT = { has_modifier = simple_planet_production_gestalt }
+		NOT = { has_modifier = simple_planet_refinery_gestalt }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 10
+			has_designation = col_ecu_factory
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_designation = col_ecu_factory
+				has_designation = col_habitat_factory
+				has_designation = col_industrial
+			}
+		}
+		modifier = {
+			factor = 2
+			has_resource = {
+				type = alloys
+				amount < 10
+			}
+		}
+		modifier = {
+			factor = 2
+			has_resource = {
+				type = alloys
+				amount < 20
+			}
+		}
+		modifier = {
+			factor = 2
+			has_resource = {
+				type = alloys
+				amount < 40
+			}
+		}
+		modifier = {
+			factor = 4
+			has_resource = {
+				type = alloys
+				amount < 100
+			}
+		}
+	}
+}
+
+decision_simple_planet_refinery = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = refinery_designation
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					is_hive_empire = no
+					is_machine_empire = no
+				}
+			}
+			custom_tooltip = decision_simple_planet_refinery_effect_desc
+			hidden_effect = {
+				add_modifier = { modifier = "simple_planet_refinery" }
+			}
+		} else = {
+			custom_tooltip = decision_simple_planet_refinery_gestalt_effect_desc
+			hidden_effect = {
+				add_modifier = { modifier = "simple_planet_refinery_gestalt" }
+			}
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_industry_finish
+		}
+		NOT = { has_modifier = simple_planet_mining }
+		NOT = { has_modifier = simple_planet_energy }
+		NOT = { has_modifier = simple_planet_farmer }
+		NOT = { has_modifier = simple_planet_production }
+		NOT = { has_modifier = simple_planet_refinery }
+		NOT = { has_modifier = simple_planet_mining_gestalt }
+		NOT = { has_modifier = simple_planet_energy_gestalt }
+		NOT = { has_modifier = simple_planet_farmer_gestalt }
+		NOT = { has_modifier = simple_planet_production_gestalt }
+		NOT = { has_modifier = simple_planet_refinery_gestalt }
+	}
+
+	allow = {
+		NOT = { has_modifier = simple_planet_mining }
+		NOT = { has_modifier = simple_planet_energy }
+		NOT = { has_modifier = simple_planet_farmer }
+		NOT = { has_modifier = simple_planet_production }
+		NOT = { has_modifier = simple_planet_refinery }
+		NOT = { has_modifier = simple_planet_mining_gestalt }
+		NOT = { has_modifier = simple_planet_energy_gestalt }
+		NOT = { has_modifier = simple_planet_farmer_gestalt }
+		NOT = { has_modifier = simple_planet_production_gestalt }
+		NOT = { has_modifier = simple_planet_refinery_gestalt }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 2
+			OR = {
+				has_resource = {
+					type = rare_crystals
+					amount < 10
+				}
+				has_resource = {
+					type = volatile_motes
+					amount < 10
+				}
+				has_resource = {
+					type = exotic_gases
+					amount < 10
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_resource = {
+					type = rare_crystals
+					amount < 20
+				}
+				has_resource = {
+					type = volatile_motes
+					amount < 20
+				}
+				has_resource = {
+					type = exotic_gases
+					amount < 20
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_resource = {
+					type = rare_crystals
+					amount < 40
+				}
+				has_resource = {
+					type = volatile_motes
+					amount < 40
+				}
+				has_resource = {
+					type = exotic_gases
+					amount < 40
+				}
+			}
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				has_resource = {
+					type = rare_crystals
+					amount < 100
+				}
+				has_resource = {
+					type = volatile_motes
+					amount < 100
+				}
+				has_resource = {
+					type = exotic_gases
+					amount < 100
+				}
+			}
+		}
+	}
+}
+
+# remove specialization
+decision_simple_remove_specialization = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = undo_designation
+
+	resources = {
+		category = decisions
+		cost = {
+			unity = 250
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_simple_remove_specialization_effect_desc
+		hidden_effect = {
+			remove_modifier = simple_planet_mining
+			remove_modifier = simple_planet_energy
+			remove_modifier = simple_planet_farmer
+			remove_modifier = simple_planet_production
+			remove_modifier = simple_planet_refinery
+			remove_modifier = simple_planet_mining_gestalt
+			remove_modifier = simple_planet_energy_gestalt
+			remove_modifier = simple_planet_farmer_gestalt
+			remove_modifier = simple_planet_production_gestalt
+			remove_modifier = simple_planet_refinery_gestalt
+		}
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_industry_finish
+		}
+		OR = {
+			has_modifier = simple_planet_mining
+			has_modifier = simple_planet_energy
+			has_modifier = simple_planet_farmer
+			has_modifier = simple_planet_production
+			has_modifier = simple_planet_refinery
+			has_modifier = simple_planet_mining_gestalt
+			has_modifier = simple_planet_energy_gestalt
+			has_modifier = simple_planet_farmer_gestalt
+			has_modifier = simple_planet_production_gestalt
+			has_modifier = simple_planet_refinery_gestalt
+		}
+	}
+
+	allow = {
+		OR = {
+			has_modifier = simple_planet_mining
+			has_modifier = simple_planet_energy
+			has_modifier = simple_planet_farmer
+			has_modifier = simple_planet_production
+			has_modifier = simple_planet_refinery
+			has_modifier = simple_planet_mining_gestalt
+			has_modifier = simple_planet_energy_gestalt
+			has_modifier = simple_planet_farmer_gestalt
+			has_modifier = simple_planet_production_gestalt
+			has_modifier = simple_planet_refinery_gestalt
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

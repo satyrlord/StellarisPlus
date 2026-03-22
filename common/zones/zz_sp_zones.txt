@@ -1,0 +1,2526 @@
+# === merged from 00_zones_replace_Stellaris.txt ===
+# Planet District Zones
+#
+# Documentation: ./99_HOW_TO_ZONE.txt
+
+zone_default = {
+	icon = GFX_diplomatic_weight_large
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+	}
+
+	unlock = { # planet scope
+		NOT = {
+			has_designation = col_resort
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	max_buildings = @BPV_CITY_SLOT
+
+	zone_sets = {
+		default
+	}
+
+	include = {
+		all
+	}
+
+	excluded_building_sets = {
+		generator
+		mining
+		farming
+		knights
+		betharian
+		fallen_empire_generator
+		fallen_empire_farming
+		fallen_empire_mining
+		urban_automation
+		urban_automation_arcology
+		generator_automation
+		mining_automation
+		farming_automation
+	}
+
+	ai_priority = 0
+}
+
+zone_urban = {
+	icon = GFX_district_specialization_urban
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	triggered_district_planet_modifier = {
+		planet_housing_add = @zone_urban_housing_positive
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = {
+		urban
+		habitat_urban
+	}
+
+	include = {
+		all
+	}
+
+	excluded_building_sets = {
+		generator
+		mining
+		farming
+		knights
+		betharian
+		generator_automation
+		mining_automation
+		farming_automation
+		urban_automation_arcology
+		urban_automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 2
+	ai_weight_coefficient = 0.5
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Resort World Zones
+
+
+
+
+#Resort World Attraction Zones
+#Has Zoo Tech
+
+
+
+
+#Not Xenophile
+
+
+#Spiritualist Only
+
+
+#Restoration Enclave
+
+
+#Proving Grounds
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Hive World Zones
+
+
+#Machine World Zones
+
+
+zone_subterranean_urban = {
+	icon = GFX_district_specialization_urban
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		exists = owner
+		owner = {
+			is_subterranean_empire = yes
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_subterranean_empire = yes
+			}
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = {
+		minerals
+	}
+
+	included_building_sets = {
+		mining
+		urban
+		fallen_empire_mining
+		mining_automation
+	}
+
+	inline_script = {
+		script = jobs/zone_miner_add
+		AMOUNT = @bonus_scaling_district_2_jobs
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @bonus_scaling_district_2_jobs
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	ai_priority = 1
+}
+
+zone_agrarian_urban = {
+	icon = GFX_district_specialization_agrarian
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll
+		}
+		if = {
+			limit = {
+				owner = {
+					is_anglers_empire = yes
+				}
+			}
+			is_wet = no
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+			}
+			if = {
+				limit = {
+					owner = {
+						is_anglers_empire = yes
+					}
+				}
+				is_wet = no
+			}
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = {
+		food
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		urban
+		farming_automation
+	}
+
+	inline_script = {
+		script = jobs/zone_farmers_add
+		AMOUNT = @bonus_scaling_district_2_jobs
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @bonus_scaling_district_2_jobs
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	ai_priority = 1
+}
+
+zone_agrarian_anglers = {
+	icon = GFX_district_specialization_urban
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		exists = owner
+		owner = {
+			has_valid_civic = civic_agrarian_idyll
+			is_anglers_empire = yes
+		}
+		is_wet = yes
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_agrarian_idyll
+				is_anglers_empire = yes
+			}
+			is_wet = yes
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = {
+		food
+	}
+
+	included_building_sets = {
+		farming
+		hydroponics
+		urban
+		farming_automation
+	}
+
+	inline_script = {
+		script = jobs/zone_farmers_add
+		AMOUNT = @bonus_scaling_district_3_jobs
+	}
+
+	inline_script = {
+		script = jobs/zone_factory_add
+		AMOUNT = @bonus_scaling_district_3_jobs
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @bonus_scaling_district_3_jobs
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_anglers_triggered_desc
+	}
+
+	ai_priority = 1
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# === merged from 01_habitat_zones_replace_Stellaris.txt ===
+
+zone_habitat_knights = {
+	icon = GFX_district_specialization_knight_commander
+	base_buildtime = @zone_buildtime
+
+	swap_type = district_orders_demesne
+	swap_type_weight = 5
+
+	potential = { # planet scope
+		exists = owner
+		owner = {
+			has_origin = origin_toxic_knights
+			NOT = {
+				has_country_flag = quest_abandoned
+			}
+		}
+		OR = {
+			has_planet_flag = toxic_knights_habitat
+			has_building = building_order_castle
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				has_origin = origin_toxic_knights
+				NOT = {
+					has_country_flag = quest_abandoned
+				}
+			}
+			OR = {
+				has_planet_flag = toxic_knights_habitat
+				has_building = building_order_castle
+			}
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	convert_to = {
+		zone_fortress
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = {
+		habitat_urban
+	}
+
+	included_building_sets = {
+		knights
+		fortress
+		origin
+	}
+
+    triggered_district_planet_modifier = {
+		potential = {
+			always = yes
+		}
+        job_knight_add = @scaling_district_2_jobs
+		mult = owner.value:hab_void_dweller_jobs
+    }
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+}
+
+
+
+
+
+
+
+# === merged from 03_wilderness_zones_replace_Stellaris.txt ===
+# Planet District Zones
+#
+# Documentation: ./99_HOW_TO_ZONE.txt
+
+zone_urban_wilderness = {
+	icon = GFX_district_specialization_wilderness_urban
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		exists = owner
+		owner = {
+			is_wilderness_empire = yes
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_wilderness_empire = yes
+			}
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = {
+		urban
+	}
+
+	include = {
+		all
+	}
+
+	excluded_building_sets = {
+		generator
+		mining
+		farming
+		knights
+		betharian
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# === merged from more_zones_origins.txt ===
+# Payback: beefed up medical zone with actual medical building capabilities. need to finsh MSI to gain access
+# because it needs to be so busted in order to be comparable to the one you start with, you can only build one per colony in city district
+zone_MZ_payback = {
+    icon = GFX_MZ_medical_worker
+    base_buildtime = @zone_buildtime
+	planet_limit = 1
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            has_country_flag = payback_revenge_complete
+            is_ai = no						# AI isn't great at handling these
+        }
+        NOR = {
+            has_zone = {
+                zone = zone_MZ_payback
+            }
+            has_zone = {
+                zone = zone_payback_enlightenment
+            }
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            has_country_flag = payback_revenge_complete
+        }
+        NOR = {
+            has_zone = {
+                zone = zone_MZ_payback
+            }
+            has_zone = {
+                zone = zone_payback_enlightenment
+            }
+        }
+    }
+
+    resources = {
+        category = planet_zones
+        cost = {
+            minerals = @zone_cost
+        }
+    }
+
+    included_building_sets = {
+        government
+        origin
+    }
+
+    include = {
+        building_genomic_facility
+        building_toxic_bath
+        building_medical_1
+        building_medical_2
+        building_medical_3
+        building_fe_clinic_1
+        building_fe_clinic_2
+        building_clone_vats
+    }
+
+    planet_modifier = {
+        zone_building_slots_add = @BPV_ZONE_SLOT
+    }
+
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        text = job_healthcare_effect_desc
+    }
+
+    # regular planet
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_habitat_equivalent = no
+            planet_is_ecu_equivalent = no
+            planet_is_ring_world_equivalent = no
+        }
+        job_healthcare_add = 40
+    }
+    # Habitats
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_habitat_equivalent = yes
+        }
+        job_healthcare_add = 20
+        mult = owner.value:hab_void_dweller_jobs
+    }
+    # Ecus
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_ecu_equivalent = yes
+        }
+        job_healthcare_add = 60
+    }
+    # Ringworlds
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_ring_world_equivalent = yes
+        }
+        job_healthcare_add = 100
+    }
+
+    ## toned down medical building capabilities
+    # shared
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_purity_heightened_attributes_tradition = yes
+					has_cloning_artificial_population_tradition = yes
+					has_mutation_somatic_subversiveness_tradition = yes
+				}
+			}
+            planet_is_ring_world_equivalent = no
+		}
+		organic_pop_bonus_workforce_mult = 0.01
+	}
+    # regular planet + habitat
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+            planet_is_ecu_equivalent = no
+            planet_is_ring_world_equivalent = no
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 100
+		}
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+            planet_is_ecu_equivalent = no
+            planet_is_ring_world_equivalent = no
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 100
+		}
+	}
+    # ecu
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+            planet_is_ecu_equivalent = yes
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+            planet_is_ecu_equivalent = yes
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 200
+		}
+	}
+    # ring
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_gene_tailoring
+			}
+            planet_is_ring_world_equivalent = yes
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 300
+		}
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				game_start_auto_mod_empire = yes
+			}
+            planet_is_ring_world_equivalent = yes
+			any_owned_pop_group = {
+				has_auto_modding_trait = yes
+			}
+		}
+		modifier = {
+			auto_mod_monthly_add = 300
+		}
+	}
+	triggered_district_planet_modifier = {   # extra for rings cuz they get less districts
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_purity_heightened_attributes_tradition = yes
+					has_cloning_artificial_population_tradition = yes
+					has_mutation_somatic_subversiveness_tradition = yes
+				}
+			}
+            planet_is_ring_world_equivalent = yes
+		}
+		organic_pop_bonus_workforce_mult = 0.02
+	}
+
+    zone_sets = {
+        urban
+		habitat_urban
+    }
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	convert_to = {
+		zone_MZ_medical
+	}
+}
+
+# Starlit Citadel: essentially Citadel Uplink building turned into a zone, with job upkeep reduction to ease up on alloys
+# essentially a soldier zone with job swapped for skywatchers. still 1 per planet limit cuz 200 range PD might be too much fun
+zone_MZ_starlit_citadel = {
+    icon = GFX_MZ_skywatcher
+    base_buildtime = @zone_buildtime
+	planet_limit = 1
+    potential = { # planet scope
+        days_passed > 720   # ensures you can't build it at start of the game when you don't have any event chains
+        exists = owner
+        owner = {
+            has_origin = origin_starlit_citadel
+            NOR = { # use this instead of country_flag = unlocks_warden_of_the_citadel since gestalts don't get that
+                has_event_chain = abandoned_hatchery_chain_1
+                has_event_chain = abandoned_hatchery_chain_2
+                has_event_chain = abandoned_hatchery_chain_3
+                has_event_chain = abandoned_hatchery_chain_4
+            }
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        days_passed > 720   # ensures you can't build it at start of the game when you don't have any event chains
+        exists = owner
+        owner = {
+            has_origin = origin_starlit_citadel
+            NOR = { # use this instead of country_flag = unlocks_warden_of_the_citadel since gestalts don't get that
+                has_event_chain = abandoned_hatchery_chain_1
+                has_event_chain = abandoned_hatchery_chain_2
+                has_event_chain = abandoned_hatchery_chain_3
+                has_event_chain = abandoned_hatchery_chain_4
+            }
+        }
+		exists = solar_system
+		solar_system = {
+			custom_tooltip = {
+				text = "requires_deep_space_citadel"
+				count_ship_in_system = {
+					limit = {
+						is_space_citadel_ship_size = yes
+					}
+					count > 0
+				}
+			}
+		}
+    }
+
+    resources = {
+        category = planet_zones
+        cost = {
+            minerals = @zone_cost
+        }
+    }
+
+    included_building_sets = {
+        fortress
+        automation
+        origin
+    }
+
+    inline_script = {
+        script = more_zones/zone_skywatchers_add
+        AMOUNT = @scaling_district_1_job
+    }
+
+    # soldier upkeep reduction
+	triggered_district_planet_modifier = {
+		potential = {
+            planet_is_ecu_equivalent = no
+            planet_is_ring_world_equivalent = no
+		}
+		planet_soldiers_upkeep_mult = -0.01
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+            planet_is_ecu_equivalent = yes
+		}
+		planet_soldiers_upkeep_mult = -0.02
+	}
+	triggered_district_planet_modifier = {
+		potential = {
+            planet_is_ring_world_equivalent = yes
+		}
+		planet_soldiers_upkeep_mult = -0.03
+	}
+
+    planet_modifier = {
+        zone_building_slots_add = @BPV_ZONE_SLOT
+    }
+
+	zone_sets = {
+		urban
+		habitat_urban
+	}
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	convert_to = {
+		zone_fortress
+	}
+}
+
+# Prosperous Unification: quite literally just flat better archive. gives 125 jobs instead of 100
+# still going to limit to city district, as the whole point of this is the versatility, rather than specialization
+zone_MZ_default = {
+	icon = GFX_job_bureaucrat
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+            has_origin = origin_default
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+            has_origin = origin_default
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	zone_sets = {
+		urban
+		habitat_urban
+	}
+
+	included_building_sets = {
+		research
+		unity
+		automation
+		origin
+	}
+
+	inline_script = {
+		script = jobs/zone_researchers_add
+		AMOUNT = @[scaling_district_2_jobs / 2]
+	}
+
+	inline_script = {
+		script = jobs/zone_unity_jobs_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = @BPV_ZONE_SLOT
+	}
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_research_unity_triggered_desc
+	}
+
+	convert_to = {
+		zone_research_unity
+		zone_habitat_research_unity
+	}
+
+	ai_priority = 9
+}
+
+# Primal Calling: Wrangler jobs in a zone
+# you can build it in habitats and ecus, but it incurs extra food upkeep
+zone_MZ_primal_calling = {
+    icon = GFX_MZ_wrangler
+    base_buildtime = @zone_buildtime
+    potential = { # planet scope
+        exists = owner
+        owner = {
+            has_origin = origin_primal_calling
+			has_encountered_every_fauna = yes
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        exists = owner
+        owner = {
+            has_origin = origin_primal_calling
+			has_encountered_every_fauna = yes
+        }
+    }
+
+    resources = {
+        category = planet_zones
+        cost = {
+            minerals = @zone_cost
+        }
+	}
+
+	resources = {
+		category = planet_districts_cities
+		upkeep = {	# extra food upkeep on ecus
+			food = 10
+			mult = value:count_districts|TYPE|city|
+			trigger = {
+            	uses_district_set = city_world
+			}
+		}
+		upkeep = {	# extra food upkeep on habitats
+			food = 5
+			mult = value:count_districts|TYPE|city|
+			trigger = {
+				planet_is_habitat_equivalent = yes
+			}
+		}
+    }
+
+    included_building_sets = {
+        food
+		urban
+        origin
+    }
+
+    inline_script = {
+        script = more_zones/zone_wranglers_add
+        AMOUNT = @scaling_district_1_job
+    }
+
+    planet_modifier = {
+        zone_building_slots_add = @BPV_ZONE_SLOT
+    }
+
+	zone_sets = {
+		urban
+		habitat_urban
+	}
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+}
+# === merged from more_zones_shared.txt ===
+# medical: only available when genomic researcher is unlocked. built as an equivalent to hive spawning zones
+## city
+zone_MZ_medical = {
+    inline_script = {
+        script = more_zones/shared_medical_zone_effects
+    }
+
+    # regular planet
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_habitat_equivalent = no
+            planet_is_ecu_equivalent = no
+            planet_is_ring_world_equivalent = no
+        }
+        job_healthcare_add = 15
+    }
+
+    # Habitats
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_habitat_equivalent = yes
+        }
+        job_healthcare_add = 10 # don't think it's good idea to let people habitat spam pop print
+        mult = owner.value:hab_void_dweller_jobs
+    }
+
+    # Ecus
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_ecu_equivalent = yes
+        }
+        job_healthcare_add = 50
+    }
+
+    # Ringworlds
+    triggered_district_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+            planet_is_ring_world_equivalent = yes
+        }
+        job_healthcare_add = 100
+    }
+
+    zone_sets = {
+        urban
+		habitat_urban
+        habitat_research
+    }
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+}
+## ecu secondary
+zone_MZ_medical_arcology = {
+    inline_script = {
+        script = more_zones/shared_medical_zone_effects
+    }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
+    district_planet_modifier = {
+        job_healthcare_add = 100
+    }
+
+	swap_type = district_MZ_arcology_genomic_research
+	swap_type_weight = 5
+
+	zone_sets = {
+		arcology
+	}
+
+	inline_script = {
+		script = zones/shared_arcology_zone_modifiers
+	}
+}
+## ring secondary
+zone_MZ_medical_ring_world = {
+    inline_script = {
+        script = more_zones/shared_medical_zone_effects
+    }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
+    district_planet_modifier = {
+        job_healthcare_add = 200
+    }
+
+	swap_type = district_MZ_ring_world_genomic_research
+	swap_type_weight = 5
+
+	zone_sets = {
+		ring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+}
+
+# enforcer: for non-psionic individualists
+## city
+zone_MZ_enforcer = {
+    icon = GFX_job_enforcer
+    inline_script = {
+        script = more_zones/shared_enforcer_zone_effects
+    }
+
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = no
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = no
+            NOT = {
+                has_tradition = tr_psionics_psi_corps
+            }
+            is_wilderness_empire = no
+        }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+    }
+
+    inline_script = {
+        script = more_zones/zone_enforcers_add
+		AMOUNT = @scaling_district_2_jobs
+    }
+
+    zone_sets = {
+        urban
+		habitat_urban
+    }
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	convert_to = {
+		zone_MZ_telepath
+		zone_MZ_patrol
+	}
+}
+## ecu secondary
+zone_MZ_enforcer_arcology = {
+    icon = GFX_job_enforcer
+    inline_script = {
+        script = more_zones/shared_enforcer_zone_effects
+    }
+
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = no
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = no
+            NOT = {
+                has_tradition = tr_psionics_psi_corps
+            }
+            is_wilderness_empire = no
+        }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+    }
+
+    inline_script = {
+        script = more_zones/zone_enforcers_add
+		AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_arcology_enforcer
+	swap_type_weight = 5
+
+	zone_sets = {
+		arcology
+	}
+
+	inline_script = {
+		script = zones/shared_arcology_zone_modifiers
+	}
+
+	convert_to = {
+		zone_MZ_telepath_arcology
+		zone_MZ_patrol_arcology
+	}
+}
+## ring secondary
+zone_MZ_enforcer_ring_world = {
+    icon = GFX_job_enforcer
+    inline_script = {
+        script = more_zones/shared_enforcer_zone_effects
+    }
+
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = no
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = no
+            NOT = {
+                has_tradition = tr_psionics_psi_corps
+            }
+            is_wilderness_empire = no
+        }
+    }
+
+    inline_script = {
+        script = more_zones/zone_enforcers_add
+		AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_ring_world_enforcer
+	swap_type_weight = 5
+
+	zone_sets = {
+		ring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+
+	convert_to = {
+		zone_MZ_telepath_ring_world
+		zone_MZ_patrol_ring_world
+	}
+}
+
+# telepath: for psionics
+## city
+zone_MZ_telepath = {
+    icon = GFX_MZ_telepath
+    inline_script = {
+        script = more_zones/shared_enforcer_zone_effects
+    }
+
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+        }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+    }
+
+    inline_script = {
+        script = more_zones/zone_enforcers_add
+		AMOUNT = @scaling_district_2_jobs
+    }
+
+    zone_sets = {
+        urban
+		habitat_urban
+    }
+
+    included_building_sets = {
+        unity
+    }
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	convert_to = {
+		zone_MZ_enforcer
+		zone_MZ_patrol
+	}
+}
+## ecu secondary
+zone_MZ_telepath_arcology = {
+    icon = GFX_MZ_telepath
+    inline_script = {
+        script = more_zones/shared_enforcer_zone_effects
+    }
+
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+        }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+    }
+
+    inline_script = {
+        script = more_zones/zone_enforcers_add
+		AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_arcology_telepath
+	swap_type_weight = 5
+
+	zone_sets = {
+		arcology
+	}
+
+    included_building_sets = {
+        unity
+    }
+
+	inline_script = {
+		script = zones/shared_arcology_zone_modifiers
+	}
+
+	convert_to = {
+		zone_MZ_enforcer_arcology
+		zone_MZ_patrol_arcology
+	}
+}
+## ring secondary
+zone_MZ_telepath_ring_world = {
+    icon = GFX_MZ_telepath
+    inline_script = {
+        script = more_zones/shared_enforcer_zone_effects
+    }
+
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+            OR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+        }
+    }
+
+    inline_script = {
+        script = more_zones/zone_enforcers_add
+		AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_ring_world_telepath
+	swap_type_weight = 5
+
+	zone_sets = {
+		ring_world
+	}
+
+    included_building_sets = {
+        unity
+    }
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+
+	convert_to = {
+		zone_MZ_enforcer_ring_world
+		zone_MZ_patrol_ring_world
+	}
+}
+
+# patrol drone: for gestalt
+## city
+zone_MZ_patrol = {
+    icon = GFX_MZ_patrol_drone
+    inline_script = {
+        script = more_zones/shared_enforcer_zone_effects
+    }
+
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = yes
+            is_wilderness_empire = no
+        }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+    }
+
+    inline_script = {
+        script = more_zones/zone_enforcers_add
+		AMOUNT = @scaling_district_2_jobs
+    }
+
+    zone_sets = {
+        urban
+		habitat_urban
+    }
+
+	inline_script = {
+		script = zones/shared_city_non_urban_zone_modifiers
+	}
+
+	convert_to = {
+        zone_MZ_enforcer
+		zone_MZ_telepath
+	}
+}
+## ecu secondary
+zone_MZ_patrol_arcology = {
+    icon = GFX_MZ_patrol_drone
+    inline_script = {
+        script = more_zones/shared_enforcer_zone_effects
+    }
+
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = yes
+            is_wilderness_empire = no
+        }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+    }
+
+    inline_script = {
+        script = more_zones/zone_enforcers_add
+		AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_arcology_patrol
+	swap_type_weight = 5
+
+	zone_sets = {
+		arcology
+	}
+
+	inline_script = {
+		script = zones/shared_arcology_zone_modifiers
+	}
+
+	convert_to = {
+        zone_MZ_enforcer_arcology
+		zone_MZ_telepath_arcology
+	}
+}
+## ring secondary
+zone_MZ_patrol_ring_world = {
+    icon = GFX_MZ_patrol_drone
+    inline_script = {
+        script = more_zones/shared_enforcer_zone_effects
+    }
+
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = yes
+            NOR = {
+                has_tradition = tr_psionics_psi_corps
+                has_tradition = tr_psionics_shroud_psi_corps
+            }
+            is_wilderness_empire = no
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        owner = {
+			is_gestalt = yes
+            is_wilderness_empire = no
+        }
+    }
+
+    inline_script = {
+        script = more_zones/zone_enforcers_add
+		AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_ring_world_patrol
+	swap_type_weight = 5
+
+	zone_sets = {
+		ring_world
+	}
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+
+	convert_to = {
+        zone_MZ_enforcer_ring_world
+		zone_MZ_telepath_ring_world
+	}
+}
+
+# hybrid physics/society research
+## city
+zone_MZ_physics_society = {
+    icon = GFX_MZ_research_physics_society_large
+    inline_script = {
+        script = more_zones/shared_research_zone_effects
+    }
+
+    inline_script = {
+        script = jobs/zone_physicists_add
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+    inline_script = {
+        script = jobs/zone_biologists_add
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+    inline_script = {
+        script = more_zones/zone_physicists_add_habitat
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+    inline_script = {
+        script = more_zones/zone_biologists_add_habitat
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+
+    zone_sets = {
+        urban
+        habitat_research
+    }
+
+    included_building_sets = {
+        physics
+        society
+    }
+
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	ai_priority = 0
+}
+## ecu secondary
+zone_MZ_physics_society_arcology = {
+    icon = GFX_MZ_research_physics_society_large
+    inline_script = {
+        script = more_zones/shared_research_zone_effects
+    }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
+    inline_script = {
+        script = jobs/zone_physicists_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+    inline_script = {
+        script = jobs/zone_biologists_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_arcology_physics_society
+	swap_type_weight = 5
+
+	zone_sets = {
+		arcology
+	}
+
+    included_building_sets = {
+        physics
+        society
+    }
+
+	inline_script = {
+		script = zones/shared_arcology_zone_modifiers
+	}
+
+	ai_priority = 0
+}
+## ring secondary
+zone_MZ_physics_society_ring_world = {
+    icon = GFX_MZ_research_physics_society_large
+    inline_script = {
+        script = more_zones/shared_research_zone_effects
+    }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
+    inline_script = {
+        script = jobs/zone_physicists_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+    inline_script = {
+        script = jobs/zone_biologists_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_ring_world_physics_society
+	swap_type_weight = 5
+
+	zone_sets = {
+		ring_world
+	}
+
+    included_building_sets = {
+        physics
+        society
+    }
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+
+	ai_priority = 0
+}
+
+# hybrid society/engineering research
+## city
+zone_MZ_society_engineering = {
+    icon = GFX_MZ_research_society_engineering_large
+    inline_script = {
+        script = more_zones/shared_research_zone_effects
+    }
+
+    inline_script = {
+        script = jobs/zone_biologists_add
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+    inline_script = {
+        script = jobs/zone_engineers_add
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+    inline_script = {
+        script = more_zones/zone_biologists_add_habitat
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+    inline_script = {
+        script = more_zones/zone_engineers_add_habitat
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+
+    zone_sets = {
+        urban
+        habitat_research
+    }
+
+    included_building_sets = {
+        society
+        engineering
+    }
+
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	ai_priority = 0
+}
+## ecu secondary
+zone_MZ_society_engineering_arcology = {
+    icon = GFX_MZ_research_society_engineering_large
+    inline_script = {
+        script = more_zones/shared_research_zone_effects
+    }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
+    inline_script = {
+        script = jobs/zone_biologists_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+    inline_script = {
+        script = jobs/zone_engineers_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_arcology_society_engineering
+	swap_type_weight = 5
+
+	zone_sets = {
+		arcology
+	}
+
+    included_building_sets = {
+        society
+        engineering
+    }
+
+	inline_script = {
+		script = zones/shared_arcology_zone_modifiers
+	}
+
+	ai_priority = 0
+}
+## ring secondary
+zone_MZ_society_engineering_ring_world = {
+    icon = GFX_MZ_research_society_engineering_large
+    inline_script = {
+        script = more_zones/shared_research_zone_effects
+    }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
+    inline_script = {
+        script = jobs/zone_biologists_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+    inline_script = {
+        script = jobs/zone_engineers_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_ring_world_society_engineering
+	swap_type_weight = 5
+
+	zone_sets = {
+		ring_world
+	}
+
+    included_building_sets = {
+        society
+        engineering
+    }
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+
+	ai_priority = 0
+}
+
+# hybrid engineering/physics research
+## city
+zone_MZ_engineering_physics = {
+    icon = GFX_MZ_research_engineering_physics_large
+    inline_script = {
+        script = more_zones/shared_research_zone_effects
+    }
+
+    inline_script = {
+        script = jobs/zone_engineers_add
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+    inline_script = {
+        script = jobs/zone_physicists_add
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+    inline_script = {
+        script = more_zones/zone_engineers_add_habitat
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+    inline_script = {
+        script = more_zones/zone_physicists_add_habitat
+        LARGE_AMOUNT = @scaling_district_2_jobs
+    }
+
+    zone_sets = {
+        urban
+        habitat_research
+    }
+
+    included_building_sets = {
+        engineering
+        physics
+    }
+
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	ai_priority = 0
+}
+## ecu secondary
+zone_MZ_engineering_physics_arcology = {
+    icon = GFX_MZ_research_engineering_physics_large
+    inline_script = {
+        script = more_zones/shared_research_zone_effects
+    }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
+    inline_script = {
+        script = jobs/zone_engineers_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+    inline_script = {
+        script = jobs/zone_physicists_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_arcology_engineering_physics
+	swap_type_weight = 5
+
+	zone_sets = {
+		arcology
+	}
+
+    included_building_sets = {
+        engineering
+        physics
+    }
+
+	inline_script = {
+		script = zones/shared_arcology_zone_modifiers
+	}
+
+	ai_priority = 0
+}
+## ring secondary
+zone_MZ_engineering_physics_ring_world = {
+    icon = GFX_MZ_research_engineering_physics_large
+    inline_script = {
+        script = more_zones/shared_research_zone_effects
+    }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
+    inline_script = {
+        script = jobs/zone_engineers_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+    inline_script = {
+        script = jobs/zone_physicists_add
+        LARGE_AMOUNT = @doubled_scaling_district_2_jobs
+    }
+
+	swap_type = district_MZ_ring_world_engineering_physics
+	swap_type_weight = 5
+
+	zone_sets = {
+		ring_world
+	}
+
+    included_building_sets = {
+        engineering
+        physics
+    }
+
+	inline_script = {
+		script = zones/shared_ring_world_zone_modifiers
+	}
+
+	ai_priority = 0
+}
+
+# politician: for those who uses politicians or its swaps
+## city only. it doesn't make sense the ruling class would work away from the core of the city
+zone_MZ_elite = {
+    icon = GFX_MZ_strata_elite
+    base_buildtime = @zone_buildtime
+
+    resources = {
+        category = planet_zones
+        cost = {
+            minerals = @zone_cost
+        }
+    }
+
+    potential = { # planet scope
+        hidden_trigger = { exists = owner }
+        OR = {
+            NOT = { has_planet_flag = toxic_knights_habitat }
+            owner = { NOT = { has_origin = origin_toxic_knights } }
+        }
+        owner = {
+			is_worker_coop_empire = no
+			is_gestalt = no
+            is_ai = no						# AI isn't great at handling these
+        }
+    }
+
+    unlock = { # planet scope
+        hidden_trigger = { exists = owner }
+        OR = {
+            NOT = { has_planet_flag = toxic_knights_habitat }
+            owner = { NOT = { has_origin = origin_toxic_knights } }
+        }
+        owner = {
+			is_worker_coop_empire = no
+			is_gestalt = no
+        }
+    }
+
+    inline_script = {
+        script = more_zones/zone_politicians_add
+		AMOUNT = @scaling_district_2_jobs
+    }
+
+    included_building_sets = {
+        government
+        origin
+    }
+
+    planet_modifier = {
+        zone_building_slots_add = @BPV_ZONE_SLOT
+    }
+
+    zone_sets = {
+        urban
+		habitat_urban
+    }
+
+	convert_to = {
+		zone_MZ_telepath
+		zone_MZ_patrol
+	}
+}
+# === merged from more_zones_urban_support.txt ===
+# hybrid energy + mineral
+zone_MZ_urban_energy_minerals = {
+	icon = GFX_MZ_resource_energy_mineral_large
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = {
+		urban
+	}
+
+	included_building_sets = {
+		generator
+		mining
+		urban
+		fallen_empire_generator
+		fallen_empire_mining
+		automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = @BPV_ZONE_SLOT
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_technician_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_technician_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+		planet_miners_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_miners_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 0
+}
+
+# hybrid mineral + food
+zone_MZ_urban_minerals_food = {
+	icon = GFX_MZ_resource_minerals_food_large
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	zone_sets = {
+		urban
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	included_building_sets = {
+		mining
+		farming
+		urban
+		fallen_empire_mining
+		hydroponics
+		automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = @BPV_ZONE_SLOT
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_miners_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_miners_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+		planet_farmers_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_farmers_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 0
+}
+
+# hybrid food + energy
+zone_MZ_urban_food_energy = {
+	icon = GFX_MZ_resource_food_energy_large
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOT = {
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = {
+		urban
+	}
+
+	included_building_sets = {
+		farming
+		generator
+		urban
+		hydroponics
+		fallen_empire_generator
+		automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = @BPV_ZONE_SLOT
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_farmers_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_farmers_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+		planet_technician_produces_mult = @[ zone_urban_rural_worker_produces_mult / 2 ]
+		planet_technician_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 2 ]
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 0
+}
+
+# hybrid everything
+zone_MZ_urban_basic = {
+	icon = GFX_MZ_resource_basic_large
+	base_buildtime = @zone_buildtime
+	potential = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+			is_ai = no						# AI isn't great at handling these
+		}
+		NOR = {
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_city
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_wilderness_empire = no
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @zone_cost
+		}
+	}
+
+	inline_script = {
+		script = jobs/zone_trader_add
+		AMOUNT = @scaling_district_2_jobs
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = {
+		urban
+	}
+
+	included_building_sets = {
+		generator
+		mining
+		farming
+		urban
+		fallen_empire_generator
+		fallen_empire_mining
+		hydroponics
+		automation
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = @BPV_ZONE_SLOT
+	}
+
+	triggered_district_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_technician_produces_mult = @[ zone_urban_rural_worker_produces_mult / 3 ]
+		planet_technician_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 3 ]
+		planet_miners_produces_mult = @[ zone_urban_rural_worker_produces_mult / 3 ]
+		planet_miners_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 3 ]
+		planet_farmers_produces_mult = @[ zone_urban_rural_worker_produces_mult / 3 ]
+		planet_farmers_trade_upkeep_add = @[ zone_urban_rural_worker_trade_upkeep_add / 3 ]
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_urban_triggered_desc
+	}
+
+	ai_priority = 0
+}
+
+# === merged from more_zones_vanilla_overrides.txt ===
+# modify to provide double jobs for habitat research district, since the base district jobs are removed by them
+zone_research_physics = {
+	inline_script = {
+		script = zones/shared_research_physics_zone
+		AMOUNT = @scaling_district_1_job
+	}
+
+    inline_script = {
+        script = more_zones/zone_physicists_add_habitat
+        LARGE_AMOUNT = @scaling_district_1_job
+    }
+
+	triggered_desc = {
+		trigger = {
+			planet_is_habitat_equivalent = yes
+		}
+		text = MZ_remove_unspecialized_researcher_jobs
+	}
+
+	zone_sets = {
+		urban
+		habitat_research
+	}
+
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	ai_priority = 15
+}
+
+
+zone_research_society = {
+	inline_script = {
+		script = zones/shared_research_society_zone
+		AMOUNT = @scaling_district_1_job
+	}
+
+    inline_script = {
+        script = more_zones/zone_biologists_add_habitat
+        LARGE_AMOUNT = @scaling_district_1_job
+    }
+
+	triggered_desc = {
+		trigger = {
+			planet_is_habitat_equivalent = yes
+		}
+		text = MZ_remove_unspecialized_researcher_jobs
+	}
+
+	zone_sets = {
+		urban
+		habitat_research
+	}
+
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	ai_priority = 15
+}
+
+zone_research_engineering = {
+	inline_script = {
+		script = zones/shared_research_engineering_zone
+		AMOUNT = @scaling_district_1_job
+	}
+
+    inline_script = {
+        script = more_zones/zone_engineers_add_habitat
+        LARGE_AMOUNT = @scaling_district_1_job
+    }
+
+	triggered_desc = {
+		trigger = {
+			planet_is_habitat_equivalent = yes
+		}
+		text = MZ_remove_unspecialized_researcher_jobs
+	}
+
+	zone_sets = {
+		urban
+		habitat_research
+	}
+
+	inline_script = {
+		script = zones/shared_research_zone_modifiers
+	}
+
+	ai_priority = 15
+}

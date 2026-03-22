@@ -1,12 +1,73 @@
 # StellarisPlus -- Load / Override Reference
 
-This document describes load-order and override conventions used in
-this workspace.
+## Purpose & Scope
 
-Companion planning report: [doc/mod_merge_order_report.md](mod_merge_order_report.md)
+Describes load-order and override conventions used by the Stellaris
+engine and how StellarisPlus exploits them. Use this document when
+deciding which filename prefix to use, resolving override conflicts,
+or verifying per-folder load behaviour.
 
-Source: Paradox Wiki "Modding" page, section "Overwriting specific
-elements" > "Common folder" (verified against Stellaris v4.x).
+- Companion planning report:
+  [doc/mod_merge_order_report.md](mod_merge_order_report.md)
+- Source: Paradox Wiki "Modding" page, section "Overwriting specific
+  elements" > "Common folder" (verified against Stellaris v4.x).
+
+---
+
+## Naming Conventions
+
+### Filename Prefix Conventions
+
+| Prefix | Sort position | Purpose / effect |
+| --- | --- | --- |
+| `07_`, `08_`, `99_` | After `0-9` | Ordered files that must precede lettered files |
+| *(no prefix)* | After digits | Standard load order |
+| `z_` | Near end | Late-loading override (e.g. `z_aar_defines.txt`) |
+| `zz_` | After `z_` | Late-loading override (e.g. `zz_bpv_defines.txt`, `zz_longer_ship_names.txt`) |
+| `zzzz_` | After `zzz_` | Very-late override for merged preset stacks (e.g. `zzzz_bpv_zone_slots_override.txt`, `zzzz_bpv_merged_overrides.txt`) |
+| `~~` | After `z` (`~` is ASCII 126) | Fallback default in FIOS folders; loads last, yields to all earlier definitions when a fallback provider is needed |
+
+- In LIOS folders, later-sorting prefixes (`zz_`, `zzzz_`) guarantee
+  the override wins.
+- In FIOS folders, later-sorting prefixes (`~~`) guarantee the
+  definition acts as a fallback that yields to any earlier definition.
+- Preserve existing prefixes when editing. Choose a prefix
+  intentionally when adding new override files.
+
+### Integrated Mod File Prefixes
+
+- `plentiful_traditions_*` -- Files from the Plentiful Traditions integration
+- `MZ_*` -- Files from the More Zones integration
+- `zz_bpv_*`, `zzzz_bpv_*` -- BPV Reborn slot system files
+- `BPV_district_slots*` -- BPV inline script templates
+- `PRA_*` -- Reworked Planetary Ascension files
+- `zz_nson_*`, `00_nson_*` -- NoSkullOnlyNumber files
+- `permanent_decisions_*` -- Permanent Decisions files
+- `simpletraditions_*` -- Simple Traditions files
+
+## Code Style
+
+- Prefer the override strategy (FIOS/LIOS/DUPL/MERGE) that matches the
+  target folder. Never assume one strategy applies everywhere.
+- When overriding a single keyed object in a LIOS folder, only
+  redefine that object -- do not copy the entire vanilla file.
+- In DUPL folders, the whole file must be replaced with the same
+  filename; individual entries cannot be selectively overridden.
+
+## Error Handling
+
+- Duplicate-key errors in the log (e.g. "Object key already exists")
+  are expected in LIOS folders when intentionally overriding vanilla.
+  Suppress only when the override is deliberate.
+- If an override is not taking effect, verify the filename sort order
+  against the ASCIIbetical rules below.
+
+## Testing
+
+- After renaming or adding files, confirm the intended load order by
+  checking filename sort position against the ASCIIbetical table.
+- Cross-check the per-folder load behaviour table when moving
+  definitions between folders.
 
 ---
 
@@ -23,7 +84,7 @@ all letters, and `~` sorts after everything else.
 
 When two **separate mods** provide a file with the same name in the
 same folder, the mod load order configured in the Paradox Launcher (or
-Irony Mod Manager) determines which copy is used.  Within a single
+Irony Mod Manager) determines which copy is used. Within a single
 mod (like StellarisPlus), only filename order matters.
 
 ---
@@ -95,37 +156,3 @@ The engine uses four override strategies depending on the folder:
 | `events/` | **FIOS** | First definition of an event ID wins. The error log may make it look LIOS, but it is FIOS. |
 | `interface/` (`.gfx`, `.gui`) | **LIOS** | Last definition wins. Use `zz_` prefix for UI overrides. |
 | `localisation/` | **LIOS** | Last loaded key wins. Place override keys in `localisation/replace/` to guarantee they load after all other localisation files. |
-
----
-
-## Filename Prefix Conventions
-
-| Prefix | Sort position | Purpose / effect |
-| --- | --- | --- |
-| `07_`, `08_`, `99_` | After `0-9` | Ordered files that must precede lettered files |
-| *(no prefix)* | After digits | Standard load order |
-| `z_` | Near end | Late-loading override (e.g. `z_aar_defines.txt`) |
-| `zz_` | After `z_` | Late-loading override (e.g. `zz_bpv_defines.txt`, `zz_longer_ship_names.txt`) |
-| `zzzz_` | After `zzz_` | Very-late override for merged preset stacks (e.g. `zzzz_bpv_zone_slots_override.txt`, `zzzz_bpv_merged_overrides.txt`) |
-| `~~` | After `z` (`~` is ASCII 126) | Fallback default in FIOS folders; loads last, yields to all earlier definitions when a fallback provider is needed |
-
-In LIOS folders, later-sorting prefixes (`zz_`, `zzzz_`) guarantee
-the override wins.  In FIOS folders, later-sorting prefixes (`~~`)
-guarantee the definition acts as a fallback that yields to any earlier
-definition.
-
----
-
-## Naming Conventions For Integrated Mod Files
-
-- `plentiful_traditions_*` -- Files from the Plentiful Traditions integration
-- `MZ_*` -- Files from the More Zones integration
-- `zz_bpv_*`, `zzzz_bpv_*` -- BPV Reborn slot system files
-- `BPV_district_slots*` -- BPV inline script templates
-- `PRA_*` -- Reworked Planetary Ascension files
-- `zz_nson_*`, `00_nson_*` -- NoSkullOnlyNumber files
-- `permanent_decisions_*` -- Permanent Decisions files
-- `simpletraditions_*` -- Simple Traditions files
-
-Preserve existing prefixes when editing.  Choose a prefix
-intentionally when adding new override files.
