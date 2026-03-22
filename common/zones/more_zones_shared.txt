@@ -72,6 +72,13 @@ zone_MZ_medical_arcology = {
         script = more_zones/shared_medical_zone_effects
     }
 
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
     district_planet_modifier = {
         job_healthcare_add = 100
     }
@@ -92,6 +99,13 @@ zone_MZ_medical_ring_world = {
     inline_script = {
         script = more_zones/shared_medical_zone_effects
     }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
 
     district_planet_modifier = {
         job_healthcare_add = 200
@@ -139,6 +153,10 @@ zone_MZ_enforcer = {
             }
             is_wilderness_empire = no
         }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
     }
 
     inline_script = {
@@ -189,6 +207,10 @@ zone_MZ_enforcer_arcology = {
             }
             is_wilderness_empire = no
         }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
     }
 
     inline_script = {
@@ -294,6 +316,10 @@ zone_MZ_telepath = {
             }
             is_wilderness_empire = no
         }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
     }
 
     inline_script = {
@@ -347,6 +373,10 @@ zone_MZ_telepath_arcology = {
             }
             is_wilderness_empire = no
         }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
     }
 
     inline_script = {
@@ -457,6 +487,10 @@ zone_MZ_patrol = {
 			is_gestalt = yes
             is_wilderness_empire = no
         }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
     }
 
     inline_script = {
@@ -504,6 +538,10 @@ zone_MZ_patrol_arcology = {
 			is_gestalt = yes
             is_wilderness_empire = no
         }
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
     }
 
     inline_script = {
@@ -625,6 +663,13 @@ zone_MZ_physics_society_arcology = {
         script = more_zones/shared_research_zone_effects
     }
 
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
     inline_script = {
         script = jobs/zone_physicists_add
         LARGE_AMOUNT = @doubled_scaling_district_2_jobs
@@ -658,6 +703,13 @@ zone_MZ_physics_society_ring_world = {
     inline_script = {
         script = more_zones/shared_research_zone_effects
     }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
 
     inline_script = {
         script = jobs/zone_physicists_add
@@ -735,6 +787,13 @@ zone_MZ_society_engineering_arcology = {
         script = more_zones/shared_research_zone_effects
     }
 
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
     inline_script = {
         script = jobs/zone_biologists_add
         LARGE_AMOUNT = @doubled_scaling_district_2_jobs
@@ -768,6 +827,13 @@ zone_MZ_society_engineering_ring_world = {
     inline_script = {
         script = more_zones/shared_research_zone_effects
     }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
 
     inline_script = {
         script = jobs/zone_biologists_add
@@ -845,6 +911,13 @@ zone_MZ_engineering_physics_arcology = {
         script = more_zones/shared_research_zone_effects
     }
 
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+
     inline_script = {
         script = jobs/zone_engineers_add
         LARGE_AMOUNT = @doubled_scaling_district_2_jobs
@@ -878,6 +951,13 @@ zone_MZ_engineering_physics_ring_world = {
     inline_script = {
         script = more_zones/shared_research_zone_effects
     }
+
+	unlock = {
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
 
     inline_script = {
         script = jobs/zone_engineers_add

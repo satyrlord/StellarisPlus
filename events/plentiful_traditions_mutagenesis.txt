@@ -1,0 +1,182 @@
+namespace = plentiful_traditions_mutagenesis
+
+planet_event = {
+	id = plentiful_traditions_mutagenesis.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			has_tradition = tr_plentiful_mutagenesis_finish
+		}
+		FROMFROM = {
+			is_robot_pop = no
+			NOT = {
+				is_same_species = owner_species
+			}
+		}
+		is_controlled_by = FROM
+	}
+	
+	immediate = {
+		FROM = {
+			add_monthly_resource_mult = {
+				resource = food
+				value = 1
+				min = 3
+				max = 3
+			}
+		}
+	}
+}
+
+# Mutagenesis Pops on Half-Yearly Pulse
+event = {
+	id = plentiful_traditions_mutagenesis.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				any_owned_planet = {
+					has_modifier = modifier_mutagenesis_transformation
+				}
+			}
+			every_owned_planet = {
+				limit = {
+					has_modifier = modifier_mutagenesis_transformation
+					owner = { has_ascension_perk = ap_plentiful_traditions_mutagenesis_universalis }
+				}
+				planet_event = { id = plentiful_traditions_mutagenesis.3 }
+			}
+			every_owned_planet = {
+				limit = {
+					has_modifier = modifier_mutagenesis_transformation
+					owner = { 
+						NOT = {
+							has_ascension_perk = ap_plentiful_traditions_mutagenesis_universalis
+						}
+					}
+				}
+				remove_modifier = modifier_mutagenesis_transformation
+			}
+		}
+	}
+}
+
+# Mutagenesis Pops
+planet_event = {
+	id = plentiful_traditions_mutagenesis.3 #action.65
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_pop_group = {
+			NOT = {
+				has_citizenship_type = {
+					type = citizenship_full
+					country = root.owner
+				}
+			}
+			NOT = { is_same_species = owner_species }
+		}
+	}
+
+	immediate = {
+		random_list = {
+			1 = { # 1 pops
+				while = {
+					count = 1
+					limit = {
+						any_owned_pop_group = {
+							NOT = {
+								has_citizenship_type = {
+									type = citizenship_full
+									country = root.owner
+								}
+							}
+							NOT = { is_same_species = owner_species }
+							NOT = { has_trait = "trait_mechanical" }
+						}
+					}
+					random_owned_pop_group = {
+						limit = {
+							NOT = {
+								has_citizenship_type = {
+									type = citizenship_full
+									country = root.owner
+								}
+							}
+							NOT = { is_same_species = owner_species }
+							NOT = { has_trait = "trait_mechanical" }
+						}
+						change_species = owner_species
+					}
+				}
+			}
+
+			1 = { # 2 pops
+				while = {
+					count = 2
+					limit = {
+						any_owned_pop_group = {
+							NOT = {
+								has_citizenship_type = {
+									type = citizenship_full
+									country = root.owner
+								}
+							}
+							NOT = { is_same_species = owner_species }
+							NOT = { has_trait = "trait_mechanical" }
+						}
+					}
+					random_owned_pop_group = {
+						limit = {
+							NOT = {
+								has_citizenship_type = {
+									type = citizenship_full
+									country = root.owner
+								}
+							}
+							NOT = { is_same_species = owner_species }
+							NOT = { has_trait = "trait_mechanical" }
+						}
+						change_species = owner_species
+					}
+				}
+			}
+
+			1 = { # 3 pops
+				while = {
+					count = 3
+					limit = {
+						any_owned_pop_group = {
+							NOT = {
+								has_citizenship_type = {
+									type = citizenship_full
+									country = root.owner
+								}
+							}
+							NOT = { is_same_species = owner_species }
+							NOT = { has_trait = "trait_mechanical" }
+						}
+					}
+					random_owned_pop_group = {
+						limit = {
+							NOT = {
+								has_citizenship_type = {
+									type = citizenship_full
+									country = root.owner
+								}
+							}
+							NOT = { is_same_species = owner_species }
+							NOT = { has_trait = "trait_mechanical" }
+						}
+						change_species = owner_species
+					}
+				}
+			}
+		}
+	}
+}

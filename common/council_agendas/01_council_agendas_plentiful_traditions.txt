@@ -1,0 +1,542 @@
+@base_tradition_agenda_cost = 7000
+@ascension_agenda_cost = 3500
+@ascension_agenda_cooldown = 1080	# 3 Years
+@short_agenda_cost = 3500
+
+#Affinity
+agenda_tr_plentiful_affinity = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_affinity_adopt
+	}
+	potential = {
+		is_machine_empire = no
+		is_hive_empire = no
+	}
+	modifier = {
+		planet_resettlement_unemployed_mult =  0.15
+		founder_species_growth_mult = 0.05
+	}
+	finish_modifier = agenda_tr_plentiful_affinity_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Affinity - Hive
+agenda_tr_plentiful_affinity_hive = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_affinity_adopt
+	}
+	potential = {
+		is_hive_empire = yes
+	}
+	modifier = {
+		founder_species_growth_mult = 0.1
+	}
+	finish_modifier = agenda_tr_plentiful_affinity_hive_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Affinity - Machine
+agenda_tr_plentiful_affinity_machine = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_affinity_adopt
+	}
+	potential = {
+		is_machine_empire = yes
+	}
+	modifier = {
+		planet_resettlement_unemployed_mult =  0.15
+		founder_species_growth_mult = 0.05
+	}
+	finish_modifier = agenda_tr_plentiful_affinity_machine_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Anguish
+agenda_tr_plentiful_anguish = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_anguish_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		ship_weapon_range_mult = 0.05
+	}
+	finish_modifier = agenda_tr_plentiful_anguish_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Aspiration
+agenda_tr_plentiful_aspiration = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_aspiration_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		planet_civilians_trade_produces_add = 0.5
+		planet_jobs_trade_produces_mult = 0.05
+	}
+	finish_modifier = agenda_tr_plentiful_aspiration_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Assault
+agenda_tr_plentiful_assault = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_assault_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		ship_orbital_bombardment_army_damage_mult = 0.25
+		army_morale = 0.25
+	}
+	finish_modifier = agenda_tr_plentiful_assault_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Biogenesis
+agenda_tr_plentiful_biogenesis = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_biogenesis_adopt
+	}
+	potential = {
+		is_lithoid_empire = no
+		is_robot_empire = no
+	}
+	modifier = {
+		country_food_produces_mult = 0.1
+	}
+	finish_modifier = agenda_tr_plentiful_biogenesis_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Biogenesis - Lithoid
+agenda_tr_plentiful_biogenesis_lithoid = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_biogenesis_adopt
+	}
+	potential = {
+		is_lithoid_empire = yes
+		is_robot_empire = no
+	}
+	modifier = {
+		country_minerals_produces_mult = 0.1
+	}
+	finish_modifier = agenda_tr_plentiful_biogenesis_lithoid_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Biogenesis - Machine
+agenda_tr_plentiful_biogenesis_machine = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_biogenesis_adopt
+	}
+	potential = {
+		is_lithoid_empire = no
+		is_robot_empire = yes
+	}
+	modifier = {
+		country_energy_produces_mult = 0.1
+	}
+	finish_modifier = agenda_tr_plentiful_biogenesis_machine_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Dedication
+agenda_tr_plentiful_dedication = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_dedication_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		monthly_loyalty_from_subjects = 0.5
+	}
+	finish_modifier = agenda_tr_plentiful_dedication_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Defence
+agenda_tr_plentiful_defence = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_defence_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		army_defense_morale_mult = 0.25
+	}
+	finish_modifier = agenda_tr_plentiful_defence_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Endure
+agenda_tr_plentiful_endure = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_endure_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		country_war_exhaustion_mult = -0.33
+	}
+	finish_modifier = agenda_tr_plentiful_endure_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Experimentalism
+agenda_tr_plentiful_experimentalism = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_experimentalism_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		ship_ftl_jumpdrive_range_mult = 0.25
+		ship_jumpdrive_cooldown_mult = -0.2
+	}
+	finish_modifier = agenda_tr_plentiful_experimentalism_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Faith
+agenda_tr_plentiful_faith = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_faith_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		country_base_influence_produces_add = 0.25
+	}
+	finish_modifier = agenda_tr_plentiful_faith_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Genetic Cyborg
+agenda_tr_plentiful_genetic_cyborg = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_genetic_cyborg_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		bonus_pop_growth_mult = 0.25
+	}
+	finish_modifier = agenda_tr_plentiful_genetic_cyborg_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Industry
+agenda_tr_plentiful_industry = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_industry_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		station_gatherers_minerals_produces_mult = 0.15
+	}
+	finish_modifier = agenda_tr_plentiful_industry_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Kleptocracy
+agenda_tr_plentiful_kleptocracy = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_kleptocracy_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.1
+	}
+	finish_modifier = agenda_tr_plentiful_kleptocracy_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Malice
+agenda_tr_plentiful_malice = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_malice_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		planet_jobs_slave_produces_mult = 0.05
+	}
+	finish_modifier = agenda_tr_plentiful_malice_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Mutagenesis
+agenda_tr_plentiful_mutagenesis = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_mutagenesis_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		planet_jobs_food_produces_mult = 0.05
+	}
+	finish_modifier = agenda_tr_plentiful_mutagenesis_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Mysticism
+agenda_tr_plentiful_mysticism = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_mysticism_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		stations_energy_produces_mult = 0.05
+		stations_minerals_produces_mult = 0.05
+		stations_food_produces_mult = 0.05
+	}
+	finish_modifier = agenda_tr_plentiful_mysticism_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Order
+agenda_tr_plentiful_order = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_order_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		megastructure_build_speed_mult = 0.15
+	}
+	finish_modifier = agenda_tr_plentiful_order_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+agenda_tr_plentiful_order_megastructure = {
+	agenda_cost = @ascension_agenda_cost
+	agenda_cooldown = @ascension_agenda_cooldown
+	allow = {
+		has_ascension_perk = ap_plentiful_traditions_justice
+	}
+	potential = {
+		OR = {
+			has_utopia = yes
+			has_megacorp = yes
+			has_overlord_dlc = yes
+			has_federations_dlc = yes
+			has_machine_age_dlc = yes
+		}
+		NAND = {
+			has_technology = tech_fission_power
+			has_technology = tech_fusion_power
+			has_technology = tech_cold_fusion_power
+			has_technology = tech_antimatter_power
+			has_technology = tech_zero_point_power
+			has_technology = tech_cruisers
+			has_technology = tech_battleships
+			has_technology = tech_starbase_5
+			has_technology = tech_mega_engineering
+		}
+	}
+	effect = {
+		inverted_switch = {
+			trigger = has_technology
+			tech_fission_power = {
+				add_tech_progress = {
+					tech = tech_fission_power
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_fusion_power = {
+				add_tech_progress = {
+					tech = tech_fusion_power
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_cold_fusion_power = {
+				add_tech_progress = {
+					tech = tech_cold_fusion_power
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_antimatter_power = {
+				add_tech_progress = {
+					tech = tech_antimatter_power
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_zero_point_power = {
+				add_tech_progress = {
+					tech = tech_zero_point_power
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_cruisers = {
+				add_tech_progress = {
+					tech = tech_cruisers
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_battleships = {
+				add_tech_progress = {
+					tech = tech_battleships
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_starbase_5 = {
+				add_tech_progress = {
+					tech = tech_starbase_5
+					progress = @agenda_award_tech_progress
+				}
+			}
+			tech_mega_engineering = {
+				add_tech_progress = {
+					tech = tech_mega_engineering
+					progress = @agenda_award_tech_progress
+				}
+			}
+			default = {
+				add_monthly_resource_mult = {
+					resource = engineering_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}
+
+#Robotics
+agenda_tr_plentiful_robotics = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_robotics_adopt
+	}
+	potential = {
+		NOT = { has_authority = auth_hive_mind }
+	}
+	modifier = {
+		robotic_pop_bonus_workforce_mult = 0.15
+	}
+	finish_modifier = agenda_tr_plentiful_robotics_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Robotics
+agenda_tr_plentiful_robotics_hive = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_robotics_hive_adopt
+	}
+	potential = {
+		has_authority = auth_hive_mind
+	}
+	modifier = {
+		bonus_pop_growth_mult = 0.15
+	}
+	finish_modifier = agenda_tr_plentiful_robotics_hive_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}
+
+#Transformation
+agenda_tr_plentiful_transformation = {
+	agenda_cost = @base_tradition_agenda_cost
+	allow = {
+		has_tradition = tr_plentiful_transformation_adopt
+	}
+	potential = {
+		always = yes
+	}
+	modifier = {
+		terraform_speed_mult = 0.05
+	}
+	finish_modifier = agenda_tr_plentiful_transformation_finish
+#	effect = {
+#		give_next_terraforming_tech_option_effect = yes
+#	}
+}

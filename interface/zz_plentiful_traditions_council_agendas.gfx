@@ -1,0 +1,102 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_affinity"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_affinity.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_affinity_hive"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_affinity_hive.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_affinity_machine"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_affinity_machine.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_anguish"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_anguish.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_aspiration"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_aspiration.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_assault"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_assault.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_biogenesis"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_biogenesis.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_biogenesis_lithoid"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_biogenesis_lithoid.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_biogenesis_machine"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_biogenesis_machine.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_dedication"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_dedication.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_defence"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_defence.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_endure"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_endure.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_experimentalism"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_experimentalism.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_faith"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_faith.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_genetic_cyborg"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_genetic_cyborg.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_industry"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_kleptocracy"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_kleptocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_malice"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_malice.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_mutagenesis"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_mutagenesis.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_mysticism"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_mysticism.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_order"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_order.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_order_megastructure"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_order_megastructure.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_robotics"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_robotics.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_robotics_hive"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_robotics_hive.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_tr_plentiful_transformation"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_tr_plentiful_transformation.dds"
+	}
+}

@@ -41,6 +41,10 @@
 
 @secondary_district_slot_h = 3 # number of slots in secondary district row
 @secondary_district_slot_v = 2 # number of slots in secondary district column
+@district_card_title_x = 8
+@district_card_title_y = 0
+@district_card_triggered_name_y = 15
+@district_card_build_button_x = -102
 
 ### END Used By BPVR
 
@@ -4587,7 +4591,7 @@ guiTypes = {
 			name = "name"
 			font = "font_text_14"
 			text = "District Name"
-			position = { x = 10 y = 1 }
+			position = { x = @district_card_title_x y = @district_card_title_y }
 			maxWidth = 190
 			maxHeight = 18
 			fixedSize = yes
@@ -4600,7 +4604,7 @@ guiTypes = {
 			name = "triggered_name"
 			font = "font_text_14"
 			text = "Triggered Name"
-			position = { x = 10 y = 19 }
+			position = { x = @district_card_title_x y = @district_card_triggered_name_y }
 			maxWidth = 190
 			maxHeight = 18
 			fixedSize = yes
@@ -4612,7 +4616,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "build_district"
-			position = { x = -93 y = -6 }
+			position = { x = @district_card_build_button_x y = -6 }
 			orientation = upper_right
 			spriteType = "GFX_button_animated_75_24"
 			buttonFont = "font_text_14"
@@ -4797,7 +4801,7 @@ guiTypes = {
 			name = "name"
 			font = "font_text_14"
 			text = "District Name"
-			position = { x = 10 y = 1 }
+			position = { x = @district_card_title_x y = @district_card_title_y }
 			maxWidth = 230
 			maxHeight = 18
 			fixedSize = yes
@@ -4810,7 +4814,7 @@ guiTypes = {
 			name = "triggered_name"
 			font = "font_text_14"
 			text = "Triggered Name"
-			position = { x = 10 y = 19 }
+			position = { x = @district_card_title_x y = @district_card_triggered_name_y }
 			maxWidth = 230
 			maxHeight = 18
 			fixedSize = yes
@@ -4822,7 +4826,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "build_district"
-			position = { x = -93 y = -6 }
+			position = { x = @district_card_build_button_x y = -6 }
 			orientation = upper_right
 			spriteType = "GFX_button_animated_75_24"
 			buttonFont = "font_text_14"
@@ -5021,7 +5025,7 @@ guiTypes = {
 			name = "name"
 			font = "font_text_14"
 			text = "District Name"
-			position = { x = 10 y = 1 }
+			position = { x = @district_card_title_x y = @district_card_title_y }
 			maxWidth = 230
 			maxHeight = 18
 			fixedSize = yes
@@ -5034,7 +5038,7 @@ guiTypes = {
 			name = "triggered_name"
 			font = "font_text_14"
 			text = "Triggered Name"
-			position = { x = 10 y = 19 }
+			position = { x = @district_card_title_x y = @district_card_triggered_name_y }
 			maxWidth = 230
 			maxHeight = 18
 			fixedSize = yes
@@ -5046,7 +5050,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "build_district"
-			position = { x = -93 y = -6 }
+			position = { x = @district_card_build_button_x y = -6 }
 			orientation = upper_right
 			spriteType = "GFX_button_animated_75_24"
 			buttonFont = "font_text_14"

@@ -1,0 +1,532 @@
+building_plentiful_traditions_university_of_wisdom = {
+	base_buildtime = @b2_time
+	planet_limit = 1
+	category = research
+
+	building_sets = {
+		research
+	}
+
+	potential = {
+		owner = {
+			has_tradition = tr_plentiful_experimentalism_4
+		}
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+		exists = owner
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+			owner = { is_regular_empire = no }
+		}
+	}
+
+	allow = {
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
+		}
+		produces = {
+			physics_research = 7
+			society_research = 1
+			engineering_research = 1
+		}
+	}
+	
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOT = {
+				has_country_flag = fallen_empire_1
+			}
+			has_global_flag = plentiful_perks_active
+		}
+	}
+	modifier = {
+		job_physicist_add = 300
+		job_biologist_add = 300
+		job_engineer_add = 300
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+		has_global_flag = plentiful_perks_active
+	}
+	modifier = {
+		job_calculator_physicist_add = 300
+		job_calculator_biologist_add = 300
+		job_calculator_engineer_add = 300
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+		has_global_flag = plentiful_perks_active
+	}
+	modifier = {
+		job_calculator_physicist_add = 300
+		job_calculator_biologist_add = 300
+		job_calculator_engineer_add = 300
+	}
+}
+
+### MATERIALIST FE
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = fallen_empire_1
+		}
+		has_global_flag = plentiful_perks_active
+	}
+	modifier = {
+		job_fe_archivist_add = 300
+		job_fe_archivist_add = 300
+		job_fe_archivist_add = 300
+	}
+}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_plentiful_malice_5 }
+			has_global_flag = plentiful_perks_active
+		}
+		modifier = {
+			job_guinea_pigs_add = 200
+		}
+	}
+
+	country_modifier = {
+		country_scientist_cap_add = 1
+	}
+
+	prerequisites = {
+		"tech_basic_science_lab_3"
+	}
+
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_experimentalism_4
+		}
+	}
+
+}
+
+
+building_plentiful_traditions_robotics_facility = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = research
+
+	building_sets = {
+		#research
+		mining
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		OR = {
+			owner = {
+				has_active_tradition = tr_plentiful_robotics_hive_1
+			}
+			owner = {
+				has_active_tradition = tr_plentiful_faith_finish_machine
+			}
+			owner = {
+				has_active_tradition = tr_plentiful_robotics_1
+			}
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+			volatile_motes = 50
+		}
+		upkeep = {
+			energy = 4
+			volatile_motes = 1
+		}
+		produces = {
+			engineering_research = 6
+			unity = 1
+		}
+	}
+	
+	prerequisites = {
+		"tech_basic_science_lab_3"
+		"tech_mine_volatile_motes"
+	}
+	
+	planet_modifier  = {
+		planet_researchers_engineering_research_produces_mult = 0.05
+	}
+	
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOT = {
+				has_country_flag = fallen_empire_1
+			}
+		}
+	}
+	modifier = {
+		#job_physicist_add = 500
+		#job_biologist_add = 500
+		job_engineer_add = 500
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+	#job_calculator_physicist_add = 500
+	#job_calculator_biologist_add = 500
+	job_calculator_engineer_add = 500
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	#job_calculator_physicist_add = 500
+	#job_calculator_biologist_add = 500
+	job_calculator_engineer_add = 500
+}
+
+### MATERIALIST FE
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = fallen_empire_1
+		}
+	}
+	#job_fe_archivist_add = 500
+	#job_fe_archivist_add = 500
+	job_fe_archivist_add = 500
+}
+
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_plentiful_malice_5 }
+			has_global_flag = plentiful_perks_active
+		}
+		modifier = {
+			job_guinea_pigs_add = 100
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		OR = {			
+			owner = {
+				has_active_tradition = tr_plentiful_faith_finish_machine
+			}
+			owner = {
+				has_active_tradition = tr_plentiful_robotics_1
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_plentiful_traditions_experimental_weapons_facility = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = research
+
+	building_sets = {
+		#research
+		generator
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_experimentalism_1
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+			rare_crystals = 50
+		}
+		upkeep = {
+			energy = 4
+			rare_crystals = 1
+		}
+		produces = {
+			physics_research = 3
+			unity = 4
+		}
+	}
+	
+	prerequisites = {
+		"tech_basic_science_lab_3"
+		"tech_mine_rare_crystals"
+	}
+	
+	planet_modifier  = {
+		planet_researchers_physics_research_produces_mult = 0.05
+	}
+	
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOT = {
+				has_country_flag = fallen_empire_1
+			}
+		}
+	}
+	modifier = {
+		job_physicist_add = 500
+		#job_biologist_add = 500
+		#job_engineer_add = 500
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+	job_calculator_physicist_add = 500
+	#job_calculator_biologist_add = 500
+	#job_calculator_engineer_add = 500
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	job_calculator_physicist_add = 500
+	#job_calculator_biologist_add = 500
+	#job_calculator_engineer_add = 500
+}
+
+### MATERIALIST FE
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = fallen_empire_1
+		}
+	}
+	job_fe_archivist_add = 500
+	#job_fe_archivist_add = 500
+	#job_fe_archivist_add = 500
+}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_plentiful_malice_5 }
+			has_global_flag = plentiful_perks_active
+		}
+		modifier = {
+			job_guinea_pigs_add = 100
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_experimentalism_1
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+building_plentiful_traditions_biogenesis_lab = {
+	base_buildtime = 360
+	planet_limit = 1
+
+	category = research
+
+	building_sets = {
+		#research
+		farming
+	}
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_tradition = tr_plentiful_biogenesis_4
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 275
+			exotic_gases = 50
+		}
+		upkeep = {
+			energy = 4
+			exotic_gases = 1
+		}
+		produces = {
+			society_research = 6
+			unity = 1
+		}
+	}
+	
+	prerequisites = {
+		"tech_basic_science_lab_3"
+		"tech_mine_exotic_gases"
+	}
+	
+	planet_modifier  = {
+		planet_researchers_society_research_produces_mult = 0.05
+	}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOT = {
+				has_country_flag = fallen_empire_1
+			}
+		}
+	}
+	modifier = {
+		#job_physicist_add = 500
+		job_biologist_add = 500
+		#job_engineer_add = 500
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+	modifier = {
+		#job_calculator_physicist_add = 500
+		job_calculator_biologist_add = 500
+		#job_calculator_engineer_add = 500
+	}
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+	modifier = {
+		#job_calculator_physicist_add = 500
+		job_calculator_biologist_add = 500
+		#job_calculator_engineer_add = 500
+	}
+}
+
+### MATERIALIST FE
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_country_flag = fallen_empire_1
+		}
+	}
+	modifier = {
+		#job_fe_archivist_add = 500
+		job_fe_archivist_add = 500
+		#job_fe_archivist_add = 500
+	}
+}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_plentiful_malice_5 }
+			has_global_flag = plentiful_perks_active
+		}
+		modifier = {
+			job_guinea_pigs_add = 100
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		owner = {
+			has_tradition = tr_plentiful_biogenesis_4
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+

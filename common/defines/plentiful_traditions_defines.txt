@@ -1,0 +1,19 @@
+	NGameplay = {
+		ASCENSION_PERKS_SLOTS = 48
+
+		EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.002	# Per empire size above base #0.006
+
+		## tradition cost = ( base_cost + ( cost_tradition * num_traditions )^traditions_exponential ) * ( 1 + cost_planet*num_planets + cost_system*num_systems )
+		TRADITION_COST_TRADITION				= 6			# change this value if you want to increase all costs #8
+		TRADITION_COST_TRADITION_EXP			= 1.600 	# change this value if you want to increase costs at the end #1.800
+		TRADITION_COST_MULT_TRADITION_GROUP		= 0.001		# each adopted group adds +X% to total cost	#0.025 war es hier vorher
+
+		TRADITION_CATEGORIES_MAX			= 24		# Keep in sync with @max_tradition_trees in common/scripted_variables/07_scripted_variables_machine_age.txt
+	}
+	NEconomy = {
+		TRADITION_COST_RESOURCES			= { "unity" } # Resource for tradition cost
+		TRADITION_COST_AMOUNTS				= { 265 }	# Tradition base cost #300
+	}
+	NAI = {
+		NUM_TRADITIONS_FOR_EDICTS = 150			# AI delay for Unity edicts, tuned for StellarisPlus's expanded tradition count
+	}

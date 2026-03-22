@@ -1,0 +1,13 @@
+#	Planetary ascension effect
+
+
+#	Scale
+defined_text = {
+	name = PRA_sloc_plnt_ASCEND_show_sprawl
+	value = value:PRA_sv_plnt_ASCEND_show_sprawl
+}
+#	Designation
+defined_text = {
+	name = PRA_sloc_plnt_ASCEND_show_designation
+	value = value:PRA_sv_plnt_ASCEND_show_designation
+}

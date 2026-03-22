@@ -1,0 +1,108 @@
+#@cost = 56
+
+tr_plentiful_ascension_adopt = {
+#	cost = { unity = @cost }
+	possible = {
+		num_ascension_perks > 10
+	}
+	modifier = {
+		planetary_ascension_effect_mult = 0.10
+	}
+	
+	ai_weight = {
+		factor = 0.01
+		modifier = {
+			factor = 1000
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			factor = 2000
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			factor = 2000
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 3000
+			has_ethic = ethic_fanatic_militarist
+		}
+	}
+}
+
+tr_plentiful_ascension_finish = {
+#	on_enabled = {
+#		give_technology = { message = no tech = tech_plentiful_traditions_ascension_finish }
+#	}
+	modifier = {
+		planetary_ascension_cost_mult = -0.075
+		ascension_perks_add = 1
+	}
+}
+
+tr_plentiful_ascension_1 = {
+#	cost = { unity = @cost }
+	modifier = {
+		tradition_cost_empire_size_mult = -0.075
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_ascension_2 = {
+#	cost = { unity = @cost }
+	
+	modifier = {
+		country_official_cap_add = 2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_ascension_3 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_ascension_1
+	}
+	
+	modifier = {
+		edicts_upkeep_mult = -0.2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_ascension_4 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_ascension_2
+	}
+	modifier = {
+		commander_initial_skill = 2
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}
+
+tr_plentiful_ascension_5 = {
+#	cost = { unity = @cost }
+	possible = {
+		has_tradition = tr_plentiful_ascension_3
+		has_tradition = tr_plentiful_ascension_4
+	}
+	modifier = {
+		country_edict_fund_mult = 0.1
+	}
+	
+	ai_weight = {
+		factor = 1000
+	}
+}

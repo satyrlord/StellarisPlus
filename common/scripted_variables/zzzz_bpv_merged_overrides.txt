@@ -1,5 +1,5 @@
 # Merged presets (load after zz_bpv_defines.txt)
-# Merge order (last wins):
+# Integration order (during absorb, last preset's values were applied):
 # 1) BPV Reborn - Zone Single Row Mode
 # 2) BPVR - More Building Slots
 # 3) BPVR - City 4 Zones

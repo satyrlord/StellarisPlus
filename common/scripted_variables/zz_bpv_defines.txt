@@ -1,3 +1,7 @@
 @BPV_CITY_SLOT = 24
 @BPV_ZONE_SLOT = 6
 @BPV_CITY_ZONES = 4
+
+# BPV is integrated in StellarisPlus, so More Zones urban support zones
+# should always use BPV slot counts instead of vanilla zero-slot behavior.
+@BPV_compatibility_load = 1

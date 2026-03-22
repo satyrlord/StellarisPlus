@@ -1,0 +1,6 @@
+#     Local governance value
+PRA_smod_plnt_JOB_default = {
+	icon = mod_empire_size_pops_mult
+	category = planet
+	good = yes
+}

@@ -1,0 +1,13 @@
+spriteTypes = {
+	#	Edict
+	spriteType = { # default
+		name = "GFX_AAR_edict_SPRAWL_reduc"
+		textureFile = "gfx/interface/icons/modifiers/PRA_mod_cntr_SPRAWL_reduc.dds"
+	}
+	
+	#	Additional modifier icon
+	spriteType = {
+		name = "GFX_mod_armies_cost_mult"
+		textureFile = "gfx/interface/icons/modifiers/mod_planet_army_build_cost_mult.dds"
+	}
+}

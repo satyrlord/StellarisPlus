@@ -1,0 +1,155 @@
+namespace = plentiful_traditions_experimentalism
+
+# plentiful_traditions_experimentalism.1 remains disabled in source.
+
+event = {
+	id = plentiful_traditions_experimentalism.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			has_tradition = tr_plentiful_experimentalism_3
+		}
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_tradition = tr_plentiful_experimentalism_3
+			}
+			every_owned_planet = {
+				if = {
+					limit = {
+						has_modifier = assist_research
+						NOT = {
+							has_modifier = modifier_plentiful_traditions_sequence
+						}
+					}
+					add_modifier = {
+						modifier = "modifier_plentiful_traditions_sequence"
+						days = -1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_modifier = assist_research }
+						has_modifier = modifier_plentiful_traditions_sequence
+					}
+					remove_modifier = "modifier_plentiful_traditions_sequence"
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = plentiful_traditions_experimentalism.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			has_tradition = tr_plentiful_experimentalism_adopt
+		}
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				has_tradition = tr_plentiful_experimentalism_adopt
+			}
+			if = {
+				limit = {
+					is_at_war = no
+					NOT = {
+						has_modifier = modifier_plentiful_traditions_undertaking_positive
+					}
+				}
+				add_modifier = {
+					modifier = "modifier_plentiful_traditions_undertaking_positive"
+				}
+			}
+			if = {
+				limit = {
+					is_at_war = yes
+					has_modifier = modifier_plentiful_traditions_undertaking_positive
+				}
+				remove_modifier = "modifier_plentiful_traditions_undertaking_positive"
+			}
+			if = {
+				limit = {
+					is_at_war = yes
+					NOT = {
+						has_modifier = modifier_plentiful_traditions_undertaking_negative
+					}
+				}
+				add_modifier = {
+					modifier = "modifier_plentiful_traditions_undertaking_negative"
+				}
+			}
+			if = {
+				limit = {
+					is_at_war = no
+					has_modifier = modifier_plentiful_traditions_undertaking_negative
+				}
+				remove_modifier = "modifier_plentiful_traditions_undertaking_negative"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = plentiful_traditions_experimentalism.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_tradition = tr_plentiful_experimentalism_finish	
+	}
+	
+	immediate = {
+		from = {
+			if = {
+				limit = {
+					leader_class = scientist
+				}
+				prev = {
+					add_monthly_resource_mult = {
+						resource = energy
+						value = 1
+						min = 20
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	# Fixed by uberwaffe
+	id = plentiful_traditions_experimentalism.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_tradition = tr_plentiful_experimentalism_2
+			}
+			from = {
+				if = {
+					limit = {
+						leader_class = scientist
+					}
+					prev = {
+						add_modifier = {
+							modifier = "modifier_plentiful_traditions_trial"
+							days = 3600
+						}
+					}
+				}
+			}
+		}
+	}
+}

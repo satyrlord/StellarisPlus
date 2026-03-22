@@ -1,4 +1,8 @@
 ﻿l_english:
+ MOD_PLANET_DEFENSE_ARMIES_ADD:0 "Defense Armies"
+ MOD_DEFENSE_ARMIES_ADD:0 "Defense Armies"
+ job_patrol_drone_effect_desc:1 "[patrol_drone.GetIcon] [patrol_drone.GetNamePlural] produce £unity£ §Y$unity$§! and reduce §Y$PLANET_CRIME_NO_HAPPINESS_TITLE$§!.\nThey also create £defense_army£ §YDefense Armies§!."
+ job_immunosymbiont_effect_desc:0 "[immunosymbiont.GetIcon] $job_immunosymbiont_plural$ produce £unity£ §Y$unity$§! and reduce §Y$PLANET_CRIME_NO_HAPPINESS_TITLE$§!.\nThey also create £defense_army£ §YDefense Armies§!."
  # medical
  zone_MZ_medical: "Genomic Specialization"
  zone_MZ_medical_desc: "Sprawling facility of vats, computers, synthesizers, and various equipment needed for genome research."

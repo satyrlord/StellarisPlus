@@ -1,0 +1,111 @@
+slot_nexus = {
+	included_zone_sets = {
+		nexus
+	}
+
+	unlock = {
+		uses_district_set = machine_world
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+}
+
+slot_hive = {
+	included_zone_sets = {
+		hive
+	}
+
+	unlock = {
+		uses_district_set = hive_world
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+}
+
+slot_rw_urban_01 = {
+	included_zone_sets = {
+		ring_world
+	}
+
+	unlock = {
+		uses_district_set = ring_world
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+}
+
+slot_rw_urban_02 = {
+	included_zone_sets = {
+		ring_world
+	}
+
+	unlock = {
+		uses_district_set = ring_world
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+}
+
+slot_rw_urban_03 = {
+	included_zone_sets = {
+		ring_world
+	}
+
+	unlock = {
+		uses_district_set = ring_world
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+}
+
+slot_arcology_urban_01 = {
+	included_zone_sets = {
+		arcology
+	}
+
+	unlock = {
+		uses_district_set = city_world
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+}
+
+slot_arcology_urban_02 = {
+	included_zone_sets = {
+		arcology
+	}
+
+	unlock = {
+		uses_district_set = city_world
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+}
+
+slot_arcology_urban_03 = {
+	included_zone_sets = {
+		arcology
+	}
+
+	unlock = {
+		uses_district_set = city_world
+		custom_tooltip = {
+			fail_text = zone_city_02_prereq
+			has_upgraded_capital = yes
+		}
+	}
+}

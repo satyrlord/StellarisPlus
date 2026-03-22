@@ -1,7 +1,7 @@
 # StellarisPlus — Mod / UI Reference
 
-This document consolidates the existing markdown guides under `doc/`
-into a single reference.
+This document covers BPV slot customization for end-users and
+compatibility guidance for mod developers.
 
 ---
 
@@ -10,35 +10,31 @@ into a single reference.
 If the preset slot numbers provided on the Workshop do not meet your
 needs, you can customize them as follows:
 
-Open the file `scripted_variables\z_bpv_defines.txt` and edit the
+Open the file `common/scripted_variables/zz_bpv_defines.txt` and edit the
 values to the right of the equals signs. Specifically:
 
 `@BPV_CITY_SLOT` — The number of building slots in the main city zone
-(the central area of the city district). Default: `6`
+(the central area of the city district). Default: `24`
 
 `@BPV_ZONE_SLOT` — The number of building slots in other zones,
 including the specialized zones to the right of the city district, as
 well as other districts (such as generator, mining, and agriculture).
-Default: `3`
+Default: `6`
 
 `@BPV_CITY_ZONES` — The number of auxiliary zones in the main city
-district. Default: `2`
+district. Default: `4`
 
-**Important**: If you have installed other mods that also change any of
-these three parameters, their values usually take priority over this
-mod, which may cause your settings here to be ignored. For example, if
-you install the **City 4 Zones** mod, the number of zones will always
-be set to 4, regardless of what you configure here. However, since that
-mod does not change the other two parameters, your custom values for
-them will still apply (unless you also have other mods that override
-them).
+**Important**: The defaults above (24/6/4) reflect the StellarisPlus integrated
+preset. If you install additional mods that define these same variables with a
+later load-order prefix, their values will take priority and may override your
+edits here.
 
 For auxiliary zone numbers and auxiliary zone slot counts, additional
 edits are required:
 
 To change the building slots for auxiliary zones, in addition to editing
 @BPV_ZONE_SLOT, open the file
-`defines\z_bpv_zone_slots_override.txt` and change the value to the
+`common/defines/zzzz_bpv_zone_slots_override.txt` and change the value to the
 right of `DEFAULT_MAX_PLANET_BUILDINGS_PER_ZONE`. This defines the
 default slot count for zones that do not have an explicitly forced slot
 number. Some zones in the game (such as industrial zones) do not have
@@ -46,7 +42,7 @@ predefined slot numbers, so the game will use this value at runtime.
 
 To change the number of auxiliary zones in the main city district, in
 addition to editing `@BPV_CITY_ZONES`, you also need to open
-`inline_scripts\districts\BPV_district_slots.txt` and modify the code
+`common/inline_scripts/districts/BPV_district_slots.txt` and modify the code
 inside the curly braces. Add lines according to the rule, one per
 auxiliary zone, until you reach the desired number. For example, if you
 want the main city to have four auxiliary zones, the modified content
@@ -99,7 +95,7 @@ any other logic.
 
 **Note:** Users might not have installed any BPV-related mods. If you
 reference `@BPV_ZONE_SLOT` directly, errors may occur. To avoid this,
-please copy `scripted_variables\z_bpv_defines.txt` from this mod into
+please copy `common/scripted_variables/zz_bpv_defines.txt` from this mod into
 your own one, or merge its contents into your own definition files,
 placed at a **lower priority**. Under such circumstance, if the user
 doesn’t have BPV installed, the parameter will default to `3`, matching
@@ -112,7 +108,7 @@ following after your original `zone_slots` definition:
 
 ```ParadoxScript
 inline_script = {
-    script = districts\BPV_district_slot
+    script = districts/BPV_district_slots
     GOVERNMENT = <main city zone type>
     SLOT1 = <first auxiliary zone type>
     ...
@@ -138,7 +134,7 @@ For city districts with only **2 auxiliary zones**, you can use this shorter scr
 
 ```ParadoxScript
 inline_script = {
-    script = districts\BPV_district_slot2
+    script = districts/BPV_district_slots2
     GOVERNMENT = <main city zone type>
     SLOT1 = <first auxiliary zone type>
     SLOT2 = <second auxiliary zone type, auto-repeat>

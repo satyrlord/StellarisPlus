@@ -1,10 +1,7 @@
-# StellarisPlus — Credits
+# StellarisPlus -- Credits
 
-This workspace contains archived Workshop mods under backup/<workshop_id>/.
-Those folders are reference-only during development, but their original authors should still be credited.
-
-Note: Steam Workshop author names are not present in the included descriptor.mod snapshots.
-If you want author attribution by name, provide the Workshop page URLs (or allow web lookup) and I’ll fill them in.
+The following Workshop mods have been integrated into StellarisPlus.
+Their original authors are credited below.
 
 Integrated Workshop mods:
 
@@ -43,7 +40,8 @@ Integrated Workshop mods:
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3257903117>
   Author: Aeryn <https://steamcommunity.com/id/Zoryn4163/myworkshopfiles/?appid=281990>
 
-- Permanent Decisions - Encourage Planetary Growth / Distribute Luxury Goods (Workshop ID: 1783381443)
+- Permanent Decisions - Encourage Planetary Growth / Distribute Luxury
+  Goods (Workshop ID: 1783381443)
   Source: backup/1783381443/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=1783381443>
   Author: Wulli <https://steamcommunity.com/id/thewulli/myworkshopfiles/?appid=281990>
@@ -69,10 +67,21 @@ Integrated Workshop mods:
   Author: Drassi <https://steamcommunity.com/profiles/76561198016849029/myworkshopfiles/?appid=281990>
 
 - Plentiful Traditions 4.2.x (Workshop ID: 1311725711)
-  Source: root compatibility surface in interface/topbar_traditions_view.gui
+  Source: backup/1311725711/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=1311725711>
+  Author: Abominus [GER] <https://steamcommunity.com/id/SI-Abominus/myworkshopfiles/?appid=281990>
 
 - More Zones (district specializations) (Workshop ID: 3513435391)
   Source: backup/3513435391/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3513435391>
   Author: Nobody <https://steamcommunity.com/id/absolute_nobody/myworkshopfiles/?appid=281990>
+
+- Reworked Planetary Ascension (Workshop ID: 3538765396)
+  Source: backup/3538765396/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3538765396>
+  Author: Kasako
+
+- Cybrxkhan's Assortment of Namelists for Stellaris (Workshop ID: 682691478)
+  Source: backup/682691478/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=682691478>
+  Author: cybrxkhan <https://steamcommunity.com/profiles/76561198030765209/myworkshopfiles/?appid=281990>
