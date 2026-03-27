@@ -1,4 +1,4 @@
-﻿### Fantasy Saxon
+### Fantasy Saxon
 ### Names from Saxon name generator at donjon, and the LotR human name generator at http://fantasynamegenerators.com/
 
 cybrxkhan_fantasy_saxon = {

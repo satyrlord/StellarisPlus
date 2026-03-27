@@ -1,4 +1,4 @@
-﻿### Dungeons and Dragons kobold
+### Dungeons and Dragons kobold
 ### Names all from random name generation at http://fantasynamegenerators.com/
 
 cybrxkhan_dd_kobold = {	

@@ -1,4 +1,4 @@
-﻿# === merged from plentiful_slave_jobs.txt ===
+# Merged from plentiful_slave_jobs.txt
 ###################
 # Specialist Jobs
 ###################
@@ -179,7 +179,7 @@ guinea_pigs = {
 	}
 }
 
-# === merged from plentiful_special_jobs.txt ===
+# Merged from plentiful_special_jobs.txt
 ###################
 # Worker Jobs
 ###################
@@ -296,7 +296,7 @@ organic_battery = {
 		weight = @special_job_weight
 	}
 }
-# === merged from PRA_jobs.txt ===
+# Merged from PRA_jobs.txt
 PRA_job_administer_DEFAULT = {
 	category = ruler
 

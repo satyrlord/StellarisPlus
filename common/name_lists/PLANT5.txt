@@ -1,4 +1,4 @@
-﻿### Plantoid 5
+### Plantoid 5
 ### Took some elements from vanilla Plantoid 1 list but most names were from random generators at fantasynamegenerators.com (Energy Type for ship classes, Nymph for ship and planet names)
 ### 
 
@@ -136,12 +136,12 @@ PLANT5 = {
 		}
 		
 		clone_army = { 
-			sequential_name = "Stalk of Many %R%"
+			sequential_name = PLANT5_xxCLONEARMY_SEQ
 		}
 		
 		
 		perfected_clone_army = { 
-			sequential_name = "Stalk of Many %R%"
+			sequential_name = PLANT5_xxCLONEARMY_SEQ
 		}
 		
 		undead_army = {
@@ -149,11 +149,11 @@ PLANT5 = {
 		}
 		
 		robotic_army = {
-			sequential_name = "Iron Stalk %R%"
+			sequential_name = PLANT5_xxROBOTICARMY_SEQ
 		}
 
 		robotic_defense_army = {
-			sequential_name = "Iron Branch %R%"
+			sequential_name = PLANT5_xxROBOTICDEFENSEARMY_SEQ
 		}
 		
 		psionic_army = { 

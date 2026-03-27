@@ -1,4 +1,4 @@
-﻿### Fantasy Inca
+### Fantasy Inca
 ### Names from random name generation at donjon. Credits also to sylcai for some of the names, mainly ship names and planet names
 
 cybrxkhan_fantasy_inca = {

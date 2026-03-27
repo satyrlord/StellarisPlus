@@ -1,4 +1,4 @@
-﻿### Based off of Avian namelist 1 from vanilla, custom names handmade using awkwords
+### Based off of Avian namelist 1 from vanilla, custom names handmade using awkwords
 
 #a*3/e*2/aa/ee/i
 #t/k/s/x/d/g/h/l/r

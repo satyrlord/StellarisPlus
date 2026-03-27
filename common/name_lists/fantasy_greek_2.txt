@@ -1,4 +1,4 @@
-﻿### Fantasy ancient greek_2
+### Fantasy ancient greek_2
 ### Names from random name generation at fantasynamegenerators.com - specifically Lamia, Siren, and Ancient Greek Town name generators
 
 cybrxkhan_fantasy_ancient_greek_2 = {

@@ -1,4 +1,4 @@
-﻿### Diacritics 3 - fantasy namelists with diacritics
+### Diacritics 3 - fantasy namelists with diacritics
 ### This is a conlang phonology I quickly whipped up for this namelist set
 
 #############################################################################

@@ -1,4 +1,4 @@
-﻿### Fantasy Tagalog 2
+### Fantasy Tagalog 2
 ### Filipino names thrown into a markov name generator
 
 cybrxkhan_handmade_tagalog = {	

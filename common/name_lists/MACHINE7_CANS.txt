@@ -1,4 +1,4 @@
-﻿### Robotic
+### Robotic
 ### [hardware themed, not software or internet themed] [not anymore lol]
 MACHINE7 = {
 	category = "Machine"

@@ -1,4 +1,4 @@
-﻿### Fantasy Gnome
+### Fantasy Gnome
 ### Names all from random name generation at http://fantasynamegenerators.com/
 
 cybrxkhan_fantasy_gnome = {

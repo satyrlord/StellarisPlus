@@ -1,4 +1,4 @@
-﻿### Portuguese Names
+### Portuguese Names
 ### Markov generator, used names provided by Afonso Ribeiro (16/07/3016) (aka CT-6827 on the PI forums) for the orignial Real Portuguese namelist
 
 cybrxkhan_fantasy_portuguese = {

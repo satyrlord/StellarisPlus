@@ -1,4 +1,4 @@
-﻿### Fantasy Knight
+### Fantasy Knight
 ### Most names taken from fantasynamegenerators.com 
 
 cybrxkhan_fantasy_knight = {

@@ -1,4 +1,4 @@
-﻿### Fantasy arabic
+### Fantasy arabic
 ### Names random name generators at donjon and http://fantasynamegenerators.com/middle-eastern-town-names.php#.V5G7MLgrKUk 
 
 cybrxkhan_fantasy_arabic = {

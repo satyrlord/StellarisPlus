@@ -1,4 +1,4 @@
-﻿### Numenor
+### Numenor
 ### Names taken from https://realelvish.net/names/adunaic/ and https://en.wikipedia.org/wiki/Númenor but some were made with a markov generator as the initial namelists were small - i have separated the names made from markov generators vs the ones i took from the sources above. Although I'm not too knowledgeable about the deeper details of LotR's setting, I do know that some Quenya names are in here, but figured it's ok since the names were associated with Numenor nevertheless
 
 cybrxkhan_lotr_numenor = {

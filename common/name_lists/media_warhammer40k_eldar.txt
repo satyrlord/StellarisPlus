@@ -1,4 +1,4 @@
-﻿### Eldar Namelist
+### Eldar Namelist
 ### Made by Scudilo
 
 cybrxkhan_warhammer40k_eldar = {
@@ -8,7 +8,7 @@ cybrxkhan_warhammer40k_eldar = {
 	ship_names = {
 
 		generic = {
-			"Legacy of Eldanesh" "Auspicious Illumination of Eternity" "Khaine's Vengeance" "Enduring Memory" "Laughing God's Muse"
+			"Legacy of Eldanesh" "Auspicious Illumination" "Khaine's Vengeance" "Enduring Memory" "Laughing God's Muse"
 			"Tear of the Ancients" "Tempered Soul" "Eternal Guardian" Soulspear Perpetual "Reaper of Ill Fate" Articifer "Fool's Bane"
 			"Heavenly Warrior" "Fortune's Prodigy" "Unfeathered Blade" Lorekeeper "Fabled Hero" Lightglaive "Vaul's Hammer"
 			"Inescapable Destiny" Stormlance "War Maiden" "Everlasting Duty" "Arcane Myth" Obscurity "Everliving Guardian" Voidknife

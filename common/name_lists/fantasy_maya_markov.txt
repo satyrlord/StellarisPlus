@@ -1,4 +1,4 @@
-﻿### Fantasy Maya
+### Fantasy Maya
 ### EUIV Maya names thrown into a markov generator
 
 cybrxkhan_fantasy_maya = {

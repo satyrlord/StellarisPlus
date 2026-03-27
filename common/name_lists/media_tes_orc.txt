@@ -1,4 +1,4 @@
-﻿### Dunmer
+### Dunmer
 ### Names all from uesp.net
 
 cybrxkhan_orc_tes = {

@@ -1,4 +1,4 @@
-﻿### Star Wars Twilek
+### Star Wars Twilek
 ### Names all from random generators at https://donjon.bin.sh/ and fantasynamegenerator.com as well as various online sources
 
 cybrxkhan_starwars_twilek = {

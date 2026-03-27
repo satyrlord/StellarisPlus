@@ -1,4 +1,4 @@
-﻿### Fantasy persian
+### Fantasy persian
 ### Names from random name generation at donjon and http://www.mwyler.com/fng/
 
 cybrxkhan_fantasy_persian = {

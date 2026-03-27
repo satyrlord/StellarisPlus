@@ -1,4 +1,4 @@
-﻿### handmade bactrian
+### handmade bactrian
 ### Names randomly generated based on syllables from real Bactrian names (thanks to Teutonic_Thrash who took the original Bactrian names from Nicholas Sims-Williams' books)
 
 cybrxkhan_handmade_bactrian = {

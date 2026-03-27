@@ -1,4 +1,4 @@
-﻿### Fantasy Zhangzhung
+### Fantasy Zhangzhung
 ### Crusader Kings 3's Zhangzhung names put into a markov generator
 
 cybrxkhan_fantasy_zhangzhung = {	

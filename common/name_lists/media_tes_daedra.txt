@@ -1,4 +1,4 @@
-﻿### daedra
+### daedra
 ### Names from http://fantasynamegenerators.com/ - randomly generated, but based on the patterns found in names of Daedra
 
 cybrxkhan_daedra = {

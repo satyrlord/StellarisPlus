@@ -1,4 +1,4 @@
-﻿### Finnish
+### Finnish
 ### Creddits to qweytr who compiled the names here
 
 cybrxkhan_real_finnish = {

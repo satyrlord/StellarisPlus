@@ -1,4 +1,4 @@
-﻿### Maormer
+### Maormer
 ### First names from uesp.net but the rest were thrown alongside some real Greek names into a Markov generator to generate more names
 
 cybrxkhan_maormer_tes = {

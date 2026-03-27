@@ -1,4 +1,4 @@
-﻿### Fantasy Moroccan
+### Fantasy Moroccan
 ### Threw Moroccan names into a blender / markov generator
 
 cybrxkhan_handmade_moroccan = {	

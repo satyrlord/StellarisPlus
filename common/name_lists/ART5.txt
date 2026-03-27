@@ -1,4 +1,4 @@
-﻿### Arthropoid 5
+### Arthropoid 5
 ### Based on vanilla Arthropoid 2
 
 ART5 = {	

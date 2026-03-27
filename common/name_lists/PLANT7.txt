@@ -1,4 +1,4 @@
-﻿### Plantoid 7
+### Plantoid 7
 ### Took some elements from vanilla Plantoid 3 list but most names were from random generators at fantasynamegenerators.com (Ent names for ships, and fruit/vegetable names for planets and characters)
 ### 
 
@@ -103,19 +103,19 @@ PLANT7 = {
 		}
 
 		clone_army = { 
-			sequential_name = "Genet %R%"
+			sequential_name = PLANT7_xxCLONEARMY_SEQ
 		}
 
 		perfected_clone_army = { 
-			sequential_name = "Genet %R%"
+			sequential_name = PLANT7_xxCLONEARMY_SEQ
 		}
 		
 		robotic_army = {
-			sequential_name = "Daisy Chain %R%"
+			sequential_name = PLANT7_xxROBOTICARMY_SEQ
 		}
 
 		robotic_defense_army = {
-			sequential_name = "Daffodil Chain %R%"
+			sequential_name = PLANT7_xxROBOTICDEFENSEARMY_SEQ
 		}
 		
 		psionic_army = { 

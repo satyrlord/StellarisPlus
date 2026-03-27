@@ -1,4 +1,4 @@
-﻿### Fantasy hawaiian
+### Fantasy hawaiian
 ### Names all from random name generation at http://www.rinkworks.com/namegen/
 
 cybrxkhan_fantasy_hawaiian = {

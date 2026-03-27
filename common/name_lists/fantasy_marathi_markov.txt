@@ -1,4 +1,4 @@
-﻿### Fantasy Marathi
+### Fantasy Marathi
 ### Markov
 
 cybrxkhan_markov_marathi = {

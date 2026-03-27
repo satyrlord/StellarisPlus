@@ -1,4 +1,4 @@
-﻿### Fantasy bantu (Congolese)
+### Fantasy bantu (Congolese)
 ### Names all from random name generation at donjon
 
 cybrxkhan_fantasy_bantu = {	

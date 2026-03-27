@@ -1,4 +1,4 @@
-﻿### Reptilian 9
+### Reptilian 9
 ### Names are from fantasynamegenerators.com specifically the Naga, Basilisk, and Hydra namelists
 REP9 = {
 	category = "Reptilian"

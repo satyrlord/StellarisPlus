@@ -1,4 +1,4 @@
-﻿### Dungeons and Dragons Gnome
+### Dungeons and Dragons Gnome
 ### Names all from random name generation at http://fantasynamegenerators.com/
 
 cybrxkhan_dd_gnome = {

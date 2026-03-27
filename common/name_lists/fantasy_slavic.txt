@@ -1,4 +1,4 @@
-﻿### Fantasy slavic
+### Fantasy slavic
 ### Names all from random name generation at donjon
 
 cybrxkhan_fantasy_slavic = {

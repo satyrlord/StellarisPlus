@@ -1,4 +1,4 @@
-﻿### Molluscoid 7
+### Molluscoid 7
 ### Credits to Scudilo for the Chuumi namelist that formed the basis of this
 ### Fleet sequential names and army names from vanila Molluscoid 1 namelist
 

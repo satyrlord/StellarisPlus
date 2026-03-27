@@ -1,4 +1,4 @@
-﻿### Handmade Swahili
+### Handmade Swahili
 ### Swahili names and cities tossed into a markov generator
 
 cybrxkhan_handmade_swahili = {	

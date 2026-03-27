@@ -1,4 +1,4 @@
-﻿### Real Beothuk
+### Real Beothuk
 ### Most names taken from wikipedia and https://www.s-gabriel.org/names/
 
 cybrxkhan_real_venetian = {

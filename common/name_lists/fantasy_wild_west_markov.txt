@@ -1,4 +1,4 @@
-﻿### Fantasy Wild West
+### Fantasy Wild West
 ### Mixture of markov generator (mostly for names) and various generators from fantasynamegenerators.com
 
 cybrxkhan_handmade_wild_west = {	

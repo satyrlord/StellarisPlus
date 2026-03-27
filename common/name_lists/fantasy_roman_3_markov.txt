@@ -1,4 +1,4 @@
-﻿### Fantasy Roman
+### Fantasy Roman
 ### Names all from markov name generator
 
 cybrxkhan_handmade_roman_3 = {

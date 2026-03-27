@@ -1,4 +1,4 @@
-﻿### Machine 5
+### Machine 5
 ### Based on vanilla Machine 2
 ### names from fantasynamegenerators.com - used Robot, Mecha, Headquarters, Country Name generators
 MACHINE5 = {

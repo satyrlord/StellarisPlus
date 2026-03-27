@@ -1,4 +1,4 @@
-﻿### Fantasy Elamite
+### Fantasy Elamite
 ### Markov generated based off Elamite word list found here: https://en.wiktionary.org/wiki/Appendix:Elamite_word_list
 
 cybrxkhan_handmade_elamite = {

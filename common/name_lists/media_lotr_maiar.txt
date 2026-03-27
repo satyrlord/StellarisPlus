@@ -1,4 +1,4 @@
-﻿### maiar
+### maiar
 ### Names all from uesp.net
 
 cybrxkhan_lotr_maiar = {

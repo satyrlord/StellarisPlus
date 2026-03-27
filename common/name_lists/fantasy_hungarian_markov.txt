@@ -1,4 +1,4 @@
-﻿### Fantasy Hungarian
+### Fantasy Hungarian
 ### Tossed IRL Hungarian names into a markov generator
 
 cybrxkhan_fantasy_hungarian = {

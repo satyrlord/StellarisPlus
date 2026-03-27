@@ -1,4 +1,4 @@
-﻿### Saurischian 1
+### Saurischian 1
 saurischiannames = {
 	category = "Reptilian"
 	### SHIPS
@@ -52,7 +52,7 @@ saurischiannames = {
 		random_names = {
 			"Pouncing Star Predors" "Zakapki Star Predors" "The Ravenous Star Predors" "The Rattling Star Predors" "The Awaiting Star Predors" "The Leaping Star Predors" "The Relentless Star Predors" "Cartoich's Star Predors" "Gror'cash Star Predors" "The Swift Star Predors" "The Devouring Star Predors" "Xo'artish Star Predors" "Chiklash Star Predors" "The Harrowed Star Predors" "The Malevolent Star Predors" "The Crushing Star Predors"
 		}
-		sequential_name = "$ORD$ Star Predors"
+		sequential_name = SRSCN_xxFLEETNAMES_ORD
 	}
 	
 	### ARMIES
@@ -78,19 +78,19 @@ saurischiannames = {
 		}
 
 		defense_army = {
-			sequential_name = "$ORD$ Planetary Pack"
+			sequential_name = SRSCN_xxDEFENSEARMY_ORD
 		}
 
 		assault_army = {
-			sequential_name = "$ORD$ World Squashers"
+			sequential_name = SRSCN_xxASSAULTARMY_ORD
 		}
 
 		slave_army = {
-			sequential_name = "Whipping Grubs %R%"
+			sequential_name = SRSCN_xxSLAVEARMY_SEQ
 		}
 
 		clone_army = {
-			sequential_name = "$ORD$ Blinking Smokers"
+			sequential_name = SRSCN_xxCLONEARMY_ORD
 		}
 
 		perfected_clone_army = {
@@ -103,23 +103,23 @@ saurischiannames = {
 		}
 
 		robotic_army = {
-			sequential_name = "$ORD$ Battle Stingers"
+			sequential_name = SRSCN_xxROBOTICARMY_ORD
 		}
 
 		robotic_defense_army = {
-			sequential_name = "$ORD$ Defense Stingers"
+			sequential_name = SRSCN_xxROBOTICDEFENSEARMY_ORD
 		}
 
 		psionic_army = {
-			sequential_name = "$ORD$ Cosmic Devourers"
+			sequential_name = SRSCN_xxPSIONICARMY_ORD
 		}
 
 		xenomorph_army = {
-			sequential_name = "$ORD$ Euparkors"
+			sequential_name = SRSCN_xxXENOMORPHARMY_ORD
 		}
 
 		gene_warrior_army = {
-			sequential_name = "$ORD$ Super Raptors"
+			sequential_name = SRSCN_xxGENEWARRIORARMY_ORD
 		}
 
 		occupation_army = {

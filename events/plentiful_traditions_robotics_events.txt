@@ -1,4 +1,4 @@
-﻿namespace = plentiful_traditions_robotics
+namespace = plentiful_traditions_robotics
 
 event = {
 	id = plentiful_traditions_robotics.1

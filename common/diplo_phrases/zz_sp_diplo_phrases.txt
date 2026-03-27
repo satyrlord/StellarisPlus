@@ -1,4 +1,4 @@
-﻿# === merged from m_insults_00_diplo_phrases.txt ===
+# Merged from m_insults_00_diplo_phrases.txt
 action_insult = {
 	propose = {
 		07_INSULT_PROPOSE = {

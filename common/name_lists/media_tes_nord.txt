@@ -1,4 +1,4 @@
-﻿### nord
+### nord
 ### Names all from uesp.net
 
 cybrxkhan_nord = {

@@ -1,4 +1,4 @@
-﻿### handmade byzantine
+### handmade byzantine
 ### Names randomly generated myself by using elements from historical Byzantine names
 
 cybrxkhan_handmade_byzantine = {

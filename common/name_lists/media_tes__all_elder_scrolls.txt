@@ -1,4 +1,4 @@
-﻿### tamriel - a compilation of all relevant TES names
+### tamriel - a compilation of all relevant TES names
 ### Names all from uesp.net and the random name generator at http://fantasynamegenerators.com/
 
 cybrxkhan_tes_all = {

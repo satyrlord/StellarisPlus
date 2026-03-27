@@ -1,4 +1,4 @@
-﻿### Fantasy Hakka
+### Fantasy Hakka
 ### Names randomly generated myself using possible Hakka syllables, based off a modified version of the official romanization system used for the Meixian dialect of Hakka
 
 cybrxkhan_handmade_hakka = {

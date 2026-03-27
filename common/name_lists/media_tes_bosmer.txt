@@ -1,4 +1,4 @@
-﻿### bosmer
+### bosmer
 ### Names all from uesp.net
 
 cybrxkhan_bosmer_tes = {

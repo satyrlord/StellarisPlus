@@ -1,4 +1,4 @@
-﻿### Arthropoid 7
+### Arthropoid 7
 # Based on vanilla Arthropoid 1
 ART7 = {	
 	category = "Arthropoid"

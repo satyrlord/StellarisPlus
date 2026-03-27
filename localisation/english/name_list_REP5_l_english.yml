@@ -6,6 +6,7 @@
  REP5_xxMACHINEASSAULT3_ORD:0 "$ORD$ Planetary Invaders"
  REP5_xxDEFENSEARMY_ORD:0 "$ORD$ Planetary Patrol"
  REP5_xxASSAULTARMY_ORD:0 "$ORD$ Planetary Invaders"
+ REP5_xxSLAVEARMY_SEQ:0 "Chain Gang %R%"
  REP5_xxCLONEARMY_ORD:0 "$ORD$ Mirror Guard"
  REP5_xxUNDEADARMY_ORD:0 "$ORD$ Undead Invaders"
  REP5_xxROBOTICARMY_ORD:0 "$ORD$ Battle Constructs"
