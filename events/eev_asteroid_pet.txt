@@ -1,0 +1,22 @@
+namespace = eev_asteroid_pet
+
+ship_event = {
+    id = eev_asteroid_pet.1
+    title = eev_asteroid_pet.1.name
+    desc = eev_asteroid_pet.1.desc
+    picture = GFX_evt_asteroid_field
+    show_sound = event_default
+    is_triggered_only = yes
+
+    option = {
+        name = CURIOUS
+        owner = {
+            add_monthly_resource_mult = {
+                resource = society_research
+                value = @tier2researchreward
+                min = @tier2researchmin
+                max = @tier2researchmax
+            }
+        }
+    }
+}

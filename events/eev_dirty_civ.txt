@@ -1,0 +1,26 @@
+namespace = eev_dirty_civ
+
+ship_event = {
+	id = eev_dirty_civ.1
+	title = eev_dirty_civ.1.name
+	desc = eev_dirty_civ.1.desc
+	picture = GFX_evt_debris
+	show_sound = event_ship_bridge
+	location = root
+
+	is_triggered_only = yes
+
+
+	option = {
+		name = INTERESTING
+		
+		owner = {
+			add_monthly_resource_mult = {
+				resource = alloys
+				value = @tier1materialreward
+				min = @tier1materialmin
+				max = @tier1materialmax
+			}
+		}
+	}
+}

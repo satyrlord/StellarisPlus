@@ -1,0 +1,498 @@
+# The Alshigans
+
+namespace = scfe_alshigans
+
+# Asteroid
+ship_event = {
+	id = scfe_alshigans.1
+	title = scfe_alshigans.1.name
+	desc = scfe_alshigans.1.desc
+	picture = GFX_evt_scfe_asteroid
+	show_sound = event_default
+	location = root
+	is_triggered_only = yes
+	event_chain = scfe_alshigans_chain
+
+	option = {
+		name = CURIOUS
+		owner = {
+			add_event_chain_counter = {
+				event_chain = scfe_alshigans_chain
+				counter = scfe_alshigans_artifacts
+				amount = 1
+			}
+			if = {
+				limit = { has_ancrel = yes }
+				small_artifact_reward = yes
+			}
+			country_event = { id = scfe_alshigans.7 days = 1 }
+		}
+	}
+}
+
+# Savannah
+ship_event = {
+	id = scfe_alshigans.2
+	title = scfe_alshigans.2.name
+	desc = scfe_alshigans.2.desc
+	picture = GFX_evt_scfe_savannah_planet
+	show_sound = event_default
+	location = from
+	is_triggered_only = yes
+	specimen = scfe_alshigan_amulet
+	event_chain = scfe_alshigans_chain
+
+	option = {
+		name = INTERESTING
+		owner = {
+			hidden_effect = { remove_point_of_interest = scfe_alshigans_savannah }
+			add_event_chain_counter = {
+				event_chain = scfe_alshigans_chain
+				counter = scfe_alshigans_artifacts
+				amount = 1
+			}
+			small_artifact_reward = yes
+			country_event = { id = scfe_alshigans.8 days = 1 }
+		}
+	}
+}
+
+# Alpine
+ship_event = {
+	id = scfe_alshigans.3
+	title = scfe_alshigans.3.name
+	desc = scfe_alshigans.3.desc
+	picture = GFX_evt_scfe_alshigans_alpine
+	show_sound = event_default
+	location = from
+	is_triggered_only = yes
+	specimen = scfe_alshigan_pen
+	event_chain = scfe_alshigans_chain
+
+	option = {
+		name = INTERESTING
+		owner = {
+			hidden_effect = { remove_point_of_interest = scfe_alshigans_alpine }
+			add_event_chain_counter = {
+				event_chain = scfe_alshigans_chain
+				counter = scfe_alshigans_artifacts
+				amount = 1
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+			medium_artifact_reward = yes
+			country_event = { id = scfe_alshigans.9 days = 1 }
+		}
+	}
+}
+
+# Jungle
+ship_event = {
+	id = scfe_alshigans.4
+	title = scfe_alshigans.4.name
+	desc = scfe_alshigans.4.desc
+	picture = GFX_evt_tropical
+	show_sound = event_default
+	location = from
+	is_triggered_only = yes
+	specimen = scfe_alshigan_flower
+	event_chain = scfe_alshigans_chain
+
+	option = {
+		name = PECULIAR
+		owner = {
+			hidden_effect = { remove_point_of_interest = scfe_alshigans_jungle }
+			add_event_chain_counter = {
+				event_chain = scfe_alshigans_chain
+				counter = scfe_alshigans_artifacts
+				amount = 1
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+			small_artifact_reward = yes
+			country_event = { id = scfe_alshigans.10 days = 1 }
+		}
+	}
+}
+
+# Moon
+ship_event = {
+	id = scfe_alshigans.5
+	title = scfe_alshigans.5.name
+	desc = scfe_alshigans.5.desc
+	picture = GFX_evt_barren_dig_site
+	show_sound = event_default
+	location = root
+	is_triggered_only = yes
+	event_chain = scfe_alshigans_chain
+
+	option = {
+		name = CONTINUE
+		owner = {
+			add_event_chain_counter = {
+				event_chain = scfe_alshigans_chain
+				counter = scfe_alshigans_artifacts
+				amount = 1
+			}
+		}
+		ship_event = { id = scfe_alshigans.6 days = 15 }
+	}
+}
+
+# Computer
+ship_event = {
+	id = scfe_alshigans.6
+	title = scfe_alshigans.6.name
+	desc = scfe_alshigans.6.desc
+	picture = GFX_evt_analyzing_artifacts
+	show_sound = event_default
+	location = from
+	is_triggered_only = yes
+	event_chain = scfe_alshigans_chain
+
+	option = {
+		name = DISTURBING
+		owner = {
+			end_event_chain = scfe_alshigans_chain
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier2unityreward
+				min = @tier2unitymin
+				max = @tier2unitymax
+			}
+			large_artifact_reward = yes
+			add_relic = r_scfe_alshigan_engine
+		}
+		event_target:scfe_alshigans_moon = {
+			add_deposit = d_physics_10
+			add_deposit = d_engineering_10
+		}
+		hidden_effect = {
+			clear_global_event_target = scfe_alshigans_asteroid
+			clear_global_event_target = scfe_alshigans_jungle
+			clear_global_event_target = scfe_alshigans_alpine
+			clear_global_event_target = scfe_alshigans_savannah
+			clear_global_event_target = scfe_alshigans_moon
+			clear_global_event_target = scfe_alshigans_owner
+			owner = {
+				remove_point_of_interest = scfe_alshigans_moon
+				set_country_flag = alshigans_precursors_done
+				if = {
+					limit = {
+						is_xenophobe = no
+						is_gestalt = no
+					}
+					country_event = { id = scfe_alshigans.11 days = 30 random = 10 }
+				}
+			}
+		}
+	}
+}
+
+# Asteroid lore
+country_event = {
+	id = scfe_alshigans.7
+	title = scfe_alshigans.asteroid.name
+	desc = scfe_alshigans.asteroid.desc
+	picture = GFX_evt_scfe_asteroid
+	show_sound = event_default
+	is_triggered_only = yes
+	event_chain = scfe_alshigans_chain
+
+    immediate = {
+        if = {
+            limit = {
+                any_system_within_border = { has_star_flag = precursor_alshigans }
+            }
+            random_system_within_border = {
+                limit = { has_star_flag = precursor_alshigans }
+                save_event_target_as = alshigan_spawn_system
+            }
+        }
+        else = {
+            random_system_within_border = {
+                save_event_target_as = alshigan_spawn_system
+            }
+        }
+        event_target:alshigan_spawn_system = {
+            set_spawn_system_batch = begin
+            spawn_system = {
+                min_distance = 10
+                max_distance = 30
+                max_jumps = 0
+                initializer = scfe_alshigans_init_01
+            }
+            if = {
+                limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+                add_hyperlane = {
+                    from = this
+                    to = last_created_system
+                }
+            }
+            else = {
+                add_extra_hyperlane_to_spawned_system_effect = yes
+            }
+            set_spawn_system_batch = end
+        }
+    }
+
+	option = {
+		name = INTERESTING
+        event_target:scfe_alshigans_savannah = {
+            create_point_of_interest = { event_chain = scfe_alshigans_chain id = scfe_alshigans_savannah name = scfe_alshigans_velaen location = this }
+            enable_special_project = {
+                name = SCFE_ALSHIGANS_SAVANNAH_PROJECT
+                location = this
+                owner = event_target:scfe_alshigans_owner
+            }
+        }
+	}
+}
+
+# Savannah lore
+country_event = {
+	id = scfe_alshigans.8
+	title = scfe_alshigans_savannah.name
+	desc = scfe_alshigans_savannah.desc
+	picture = GFX_evt_ship_travel
+	show_sound = event_default
+	is_triggered_only = yes
+	event_chain = scfe_alshigans_chain
+
+    immediate = {
+        if = {
+            limit = {
+                any_system_within_border = { has_star_flag = precursor_alshigans }
+            }
+            random_system_within_border = {
+                limit = { has_star_flag = precursor_alshigans }
+                save_event_target_as = alshigan_spawn_system
+            }
+        }
+        else = {
+            random_system_within_border = {
+                save_event_target_as = alshigan_spawn_system
+            }
+        }
+        event_target:alshigan_spawn_system = {
+            set_spawn_system_batch = begin
+            spawn_system = {
+                min_distance = 10
+                max_distance = 30
+                max_jumps = 0
+                initializer = scfe_alshigans_init_02
+            }
+            if = {
+                limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+                add_hyperlane = {
+                    from = this
+                    to = last_created_system
+                }
+            }
+            else = {
+                add_extra_hyperlane_to_spawned_system_effect = yes
+            }
+            set_spawn_system_batch = end
+        }
+    }
+
+	option = {
+		name = INTERESTING
+        event_target:scfe_alshigans_alpine = {
+            create_point_of_interest = { event_chain = scfe_alshigans_chain id = scfe_alshigans_alpine name = scfe_alshigans_uuladir location = this }
+            enable_special_project = {
+                name = SCFE_ALSHIGANS_ALPINE_PROJECT
+                location = this
+                owner = event_target:scfe_alshigans_owner
+            }
+        }
+	}
+}
+
+# Alpine lore
+country_event = {
+	id = scfe_alshigans.9
+	title = scfe_alshigans.alpine.name
+	desc = scfe_alshigans.alpine.desc
+	picture = GFX_evt_scfe_alshigans_alpine
+	show_sound = event_default
+	is_triggered_only = yes
+	event_chain = scfe_alshigans_chain
+
+    immediate = {
+        if = {
+            limit = {
+                any_system_within_border = { has_star_flag = precursor_alshigans }
+            }
+            random_system_within_border = {
+                limit = { has_star_flag = precursor_alshigans }
+                save_event_target_as = alshigan_spawn_system
+            }
+        }
+        else = {
+            random_system_within_border = {
+                save_event_target_as = alshigan_spawn_system
+            }
+        }
+        event_target:alshigan_spawn_system = {
+            set_spawn_system_batch = begin
+            spawn_system = {
+                min_distance = 10
+                max_distance = 30
+                max_jumps = 0
+                initializer = scfe_alshigans_init_03
+            }
+            if = {
+                limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+                add_hyperlane = {
+                    from = this
+                    to = last_created_system
+                }
+            }
+            else = {
+                add_extra_hyperlane_to_spawned_system_effect = yes
+            }
+            set_spawn_system_batch = end
+        }
+    }
+
+	option = {
+		name = INTERESTING
+        event_target:scfe_alshigans_jungle = {
+            create_point_of_interest = { event_chain = scfe_alshigans_chain id = scfe_alshigans_jungle name = scfe_alshigans_demearen location = this }
+            enable_special_project = {
+                name = SCFE_ALSHIGANS_JUNGLE_PROJECT
+                location = this
+                owner = event_target:scfe_alshigans_owner
+            }
+        }
+	}
+}
+
+# Jungle lore
+country_event = {
+	id = scfe_alshigans.10
+	title = scfe_alshigans_jungle.name
+	desc = scfe_alshigans_jungle.desc
+	picture = GFX_evt_tropical
+	show_sound = event_default
+	is_triggered_only = yes
+	event_chain = scfe_alshigans_chain
+
+    immediate = {
+        if = {
+            limit = {
+                any_system_within_border = { has_star_flag = precursor_alshigans }
+            }
+            random_system_within_border = {
+                limit = { has_star_flag = precursor_alshigans }
+                save_event_target_as = alshigan_spawn_system
+            }
+        }
+        else = {
+            random_system_within_border = {
+                save_event_target_as = alshigan_spawn_system
+            }
+        }
+        event_target:alshigan_spawn_system = {
+            set_spawn_system_batch = begin
+            spawn_system = {
+                min_distance = 10
+                max_distance = 30
+                max_jumps = 0
+                initializer = scfe_alshigans_init_04
+            }
+            if = {
+                limit = { last_created_system = { NOT = { has_hyperlane_to = prev } } }
+                add_hyperlane = {
+                    from = this
+                    to = last_created_system
+                }
+            }
+            else = {
+                add_extra_hyperlane_to_spawned_system_effect = yes
+            }
+            set_spawn_system_batch = end
+        }
+    }
+
+	option = {
+		name = INTERESTING
+        event_target:scfe_alshigans_moon = {
+            create_point_of_interest = { event_chain = scfe_alshigans_chain id = scfe_alshigans_moon name = scfe_alshigans_yutela location = this }
+            enable_special_project = {
+                name = SCFE_ALSHIGANS_MOON_PROJECT
+                location = this
+                owner = root
+            }
+        }
+	}
+}
+
+# New sports
+country_event = {
+	id = scfe_alshigans.11
+	title = scfe_alshigans.11.name
+	desc = scfe_alshigans.11.desc
+	picture = GFX_evt_ship_travel
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+		random_owned_planet = {
+			limit = { is_colony = yes colony_age > 5 }
+			weights = {
+				base = 1
+				modifier = {
+					factor = 0.1
+					is_capital = yes
+				}
+				modifier = {
+					factor = 100
+					is_capital = no
+				}
+			}
+			save_event_target_as = scfe_ships_race
+		}
+	}
+
+	option = {
+		name = AMAZING
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier1unityreward
+			min = @tier1unitymin
+			max = @tier1unitymax
+		}
+		event_target:scfe_ships_race = {
+			add_modifier = { modifier = scfe_ships_race days = -1 }
+		}
+	}
+}
+
+country_event = {
+	id = scfe_alshigans.12
+	title = scfe_alshigans.12.name
+	desc = scfe_alshigans.12.desc
+	picture = GFX_evt_star_chart
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_modifier = { modifier = scfe_alshigan_architecture days = -1 }
+	}
+}

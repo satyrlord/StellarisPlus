@@ -8,6 +8,8 @@ tags={
 	"Leaders"
 	"AI"
 	"Diplomacy"
+	"Events"
+	"Gameplay"
 }
 name="StellarisPlus"
 supported_version="v4.3.*"

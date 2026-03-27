@@ -1,0 +1,536 @@
+# Core of the mod, will deal with launching the events instead of relying on MTTH
+
+namespace = eev_engine
+
+# New Queen
+country_event = {
+	id = eev_engine.1
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_new_queen_fired
+		random_list = {
+			50 = { country_event = { id = eev_new_queen.1 days = 400 random = 200 } }
+			50 = { }
+		}
+	}
+}
+
+# Terrorist Attack
+country_event = {
+	id = eev_engine.3
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_terrorist_attack_check
+		random_list = {
+			50 = { country_event = { id = eev_popup.2 days = 500 random = 400 } }
+			50 = { }
+		}
+	}
+}
+
+# Assassination Attempt
+country_event = {
+	id = eev_engine.4
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_assassination_attempt_check
+		random_list = {
+			15 = { country_event = { id = eev_popup.3 days = 500 random = 400 } }
+			85 = { }
+		}
+	}
+}
+
+# Whistleblower
+country_event = {
+	id = eev_engine.5
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_whistleblower_check
+		random_list = {
+			50 = { country_event = { id = eev_popup.4 days = 500 random = 400 } }
+			50 = { }
+		}
+	}
+}
+
+# Celebrity
+country_event = {
+	id = eev_engine.7
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_celebrity_check
+		random_list = {
+			80 = { country_event = { id = eev_popup.5 days = 100 random = 100 } }
+			20 = { }
+		}
+	}
+}
+
+# Disease
+country_event = {
+	id = eev_engine.8
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_disease_check
+		random_list = {
+			80 = { country_event = { id = eev_popup.6 days = 100 random = 100 } }
+			20 = { }
+		}
+	}
+}
+
+# Nomads
+country_event = {
+	id = eev_engine.9
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_nomads_check
+		random_list = {
+			70 = { country_event = { id = eev_popup.7 days = 100 random = 100 } }
+			30 = { }
+		}
+	}
+}
+
+# Rich Man
+country_event = {
+	id = eev_engine.10
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_rich_man_check
+		random_list = {
+			70 = { country_event = { id = eev_popup.9 days = 100 random = 100 } }
+			30 = { }
+		}
+	}
+}
+
+# Quality Crops
+country_event = {
+	id = eev_engine.12
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_quality_crops_check
+		random_list = {
+			70 = { country_event = { id = eev_popup.11 days = 200 random = 100 } }
+			30 = { }
+		}
+	}
+}
+
+# Large Fish
+country_event = {
+	id = eev_engine.13
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_large_fish_check
+		random_list = {
+			70 = { country_event = { id = eev_popup.12 days = 200 random = 100 } }
+			30 = { country_event = { id = eev_popup.8 days = 200 random = 100 } }
+		}
+	}
+}
+
+# Many Minerals
+country_event = {
+	id = eev_engine.14
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_many_minerals_check
+		random_list = {
+			70 = { country_event = { id = eev_popup.13 days = 200 random = 100 } }
+			30 = { }
+		}
+	}
+}
+
+# Extra Profit
+country_event = {
+	id = eev_engine.15
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_extra_profit_check
+		random_list = {
+			70 = { country_event = { id = eev_popup.14 days = 200 random = 100 } }
+			30 = { }
+		}
+	}
+}
+
+# I Am Known
+country_event = {
+	id = eev_engine.16
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = iam_known_check
+		random_list = {
+			70 = { country_event = { id = eev_popup.15 days = 200 random = 100 } }
+			30 = { }
+		}
+	}
+}
+
+# Traders Aid
+country_event = {
+	id = eev_engine.17
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_traders_aid_check
+		random_list = {
+			70 = { country_event = { id = eev_popup.17 days = 200 random = 100 } }
+			30 = { }
+		}
+	}
+}
+
+# Scientists Aid
+country_event = {
+	id = eev_engine.18
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_scientists_aid_check
+		random_list = {
+			70 = { country_event = { id = eev_popup.18 days = 200 random = 100 } }
+			30 = { }
+		}
+	}
+}
+
+# New Sentience
+country_event = {
+	id = eev_engine.19
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_global_flag = eev_new_sentience_check
+		random_list = {
+			70 = { country_event = { id = eev_popup.31 days = 200 random = 100 } }
+			30 = { }
+		}
+	}
+}
+
+# Illegal Aliens
+country_event = {
+	id = eev_engine.24
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_global_flag = eev_illegal_aliens_check
+		random_list = {
+			40 = { country_event = { id = eev_illegal_aliens.1 days = 300 random = 200 } }
+			60 = { }
+		}
+	}
+}
+
+# Faint Asteroid
+country_event = {
+	id = eev_engine.25
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_faint_asteroid_check
+		random_list = {
+			40 = { country_event = { id = eev_faint_asteroid.1 } }
+			60 = { }
+		}
+	}
+}
+
+# Rock Pets
+country_event = {
+	id = eev_engine.26
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_rock_pets_check
+		random_list = {
+			40 = { country_event = { id = eev_rock_pets.1 days = 50 random = 100 } }
+			60 = {  }
+		}
+	}
+}
+
+# Last Signal
+country_event = {
+	id = eev_engine.27
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_country_flag = eev_last_signal_check
+		random_list = {
+			40 = {
+				country_event = { id = eev_last_signal.1 days = 150 random = 200 }
+			}
+			60 = { }
+		}
+	}
+}
+
+# Primitives stuff start here
+# Infected Aliens
+planet_event = {
+	id = eev_engine.20
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	pre_triggers = { has_owner = yes }
+
+	trigger = {
+		is_artificial = no
+		NOT = { is_planet_class = pc_nuked }
+		years_passed = 15
+		owner = {
+			is_country_type = primitive
+			current_awareness_level < high
+		}
+		has_observation_outpost = yes
+		observation_outpost = { has_mission = passive_observation }
+		observation_outpost_owner = {
+			is_ai = no
+			is_homicidal = no
+		}
+	}
+
+	immediate = {
+		random_list = {
+			40 = { observation_outpost_owner = { country_event = { id = eev_popup.22 days = 200 random = 100 } } }
+			60 = { }
+		}
+	}
+}
+
+# Misplaced
+planet_event = {
+	id = eev_engine.21
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	pre_triggers = { has_owner = yes }
+
+	trigger = {
+		is_artificial = no
+		NOT = { is_planet_class = pc_nuked }
+		years_passed = 30
+		owner = {
+			is_country_type = primitive
+			is_pre_renaissance = yes
+			is_regular_pre_ftl = yes
+			current_awareness_level < medium
+		}
+		has_observation_outpost = yes
+		observation_outpost = { has_mission = passive_observation }
+		observation_outpost_owner = {
+			is_ai = no
+			is_homicidal = no
+		}
+	}
+
+	immediate = {
+		random_list = {
+			40 = {
+				save_event_target_as = eev_misplaced
+				owner = { save_event_target_as = eev_misplaced_owner }
+				observation_outpost_owner = { save_event_target_as = eev_station_owner }
+				planet_event = { id = eev_misplaced.1 days = 100 random = 100 }
+			}
+			60 = { }
+		}
+	}
+}
+
+# New Primitives
+planet_event = {
+	id = eev_engine.22
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	pre_triggers = { has_owner = yes }
+
+	trigger = {
+		NOT = { has_global_flag = eev_new_primitives_check }
+		is_artificial = no
+		years_passed = 25
+		owner = {
+			is_country_type = primitive
+			current_awareness_level < high
+		}
+		has_observation_outpost = yes
+		observation_outpost = { has_mission = passive_observation }
+		observation_outpost_owner = {
+			is_ai = no
+			is_homicidal = no
+		}
+	}
+	immediate = {
+		set_global_flag = eev_new_primitives_check
+		random_list = {
+			70 = { observation_outpost_owner = { country_event = { id = eev_popup.30 days = 100 random = 100 } } }
+			30 = { }
+		}
+	}
+}
+
+# Losing nerves
+planet_event = {
+	id = eev_engine.23
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	pre_triggers = { has_owner = yes }
+	
+	trigger = {
+		is_artificial = no
+		years_passed = 35
+		owner = {
+			is_country_type = primitive
+			is_gestalt = no
+			eev_is_modern_age = yes
+			is_regular_pre_ftl = yes
+			current_awareness_level < high
+		}
+		has_observation_outpost = yes
+		observation_outpost_owner = {
+			is_ai = no
+			is_gestalt = no
+			is_homicidal = no
+		}
+	}
+	immediate = {
+		random_list = {
+			40 = {
+				save_event_target_as = eev_lostnerves
+				owner = { save_event_target_as = eev_lostnerves_owner }
+				observation_outpost_owner = {
+					save_event_target_as = eev_lostnerves_station_owner
+					country_event = { id = eev_losing_nerves.1 days = 100 random = 100 }
+				}
+			}
+			60 = { }
+		}
+	}
+}
+
+####################################################################################
+# Main country event engine
+####################################################################################
+country_event = {
+	id = eev_engine.100
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_ai = no
+		years_passed >= 10
+	}
+
+	immediate = {
+		random_list = {
+			1 = { modifier = { factor = 0 eev_check_valid_colony = no } country_event = { id = eev_engine.101 } }
+			1 = { country_event = { id = eev_engine.101 } }
+			2 = { }
+		}
+	}
+}
+# Colony events
+country_event = {
+	id = eev_engine.101
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			1 = { modifier = { factor = 0 eev_quality_crops_trigger = no } country_event = { id = eev_engine.12 } }
+			1 = { modifier = { factor = 0 eev_large_fish_trigger = no } country_event = { id = eev_engine.13 } }
+			1 = { modifier = { factor = 0 eev_many_minerals_trigger = no } country_event = { id = eev_engine.14 } }
+			1 = { modifier = { factor = 0 eev_extra_profit_trigger = no } country_event = { id = eev_engine.15 } }
+			1 = { modifier = { factor = 0 eev_new_sentience_trigger = no } country_event = { id = eev_engine.19 } }
+			1 = { modifier = { factor = 0 eev_illegal_aliens_trigger = no } country_event = { id = eev_engine.24 } }
+			1 = { modifier = { factor = 0 eev_faint_asteroid_trigger = no } country_event = { id = eev_engine.25 } }
+			1 = { modifier = { factor = 0 eev_rock_pets_trigger = no } country_event = { id = eev_engine.26 } }
+			1 = { modifier = { factor = 0 eev_last_signal_trigger = no } country_event = { id = eev_engine.27 } }
+		}
+	}
+}
+# Country events
+country_event = {
+	id = eev_engine.102
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			1 = { modifier = { factor = 0 eev_new_queen_trigger = no } country_event = { id = eev_engine.1 } }
+			1 = { modifier = { factor = 0 eev_terrorist_attack_trigger = no } country_event = { id = eev_engine.3 } }
+			1 = { modifier = { factor = 0 eev_assassination_attempt_trigger = no } country_event = { id = eev_engine.4 } }
+			1 = { modifier = { factor = 0 eev_whistleblower_trigger = no } country_event = { id = eev_engine.5 } }
+			1 = { modifier = { factor = 0 eev_celebrity_trigger = no } country_event = { id = eev_engine.7 } }
+			1 = { modifier = { factor = 0 eev_disease_trigger = no } country_event = { id = eev_engine.8 } }
+			1 = { modifier = { factor = 0 eev_nomads_trigger = no } country_event = { id = eev_engine.9 } }
+			1 = { modifier = { factor = 0 eev_rich_man_trigger = no } country_event = { id = eev_engine.10 } }
+			1 = { modifier = { factor = 0 eev_iam_known_trigger = no } country_event = { id = eev_engine.16 } }
+			1 = { modifier = { factor = 0 eev_traders_aid_trigger = no } country_event = { id = eev_engine.17 } }
+			1 = { modifier = { factor = 0 eev_scientists_aid_trigger = no } country_event = { id = eev_engine.18 } }
+		}
+	}
+}
+####################################################################################

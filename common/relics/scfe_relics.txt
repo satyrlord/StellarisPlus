@@ -1,0 +1,824 @@
+@activation_cost = 3000
+@triumph_duration = 3600
+@triumph_duration_short = 1800
+
+r_scfe_music_of_the_universe = {
+	activation_duration = @triumph_duration_short
+	portrait = "GFX_relic_scfe_music_of_the_universe"
+	sound = relic_activation_khans_throne
+	can_be_stolen = no
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = { unity = 2000 }
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_jobs_society_research_produces_mult = 0.10
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = {
+			modifier = "scfe_music_of_the_universe_modifier"
+			days = @triumph_duration_short
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration_short
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_music_of_the_universe
+		}
+	}
+}
+r_scfe_protagonist_of_the_show = {
+	activation_duration = 3600
+	portrait = "GFX_relic_scfe_protagonist_of_the_show"
+	sound = "relic_activation_head_of_zarqlan"
+
+	resources = {
+		category = relics
+		cost = {
+			unity = 2500
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		country_base_unity_produces_add = 20
+	}
+
+	score = 1500
+
+	active_effect = {
+		add_modifier = { modifier = scfe_protagonist_of_the_show_relic_activated days = 3600 }
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = { modifier = "relic_activation_cooldown" days = 3600 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_protagonist_of_the_show
+		}
+	}
+}
+r_scfe_sless_gene_template = {
+	activation_duration = 0
+	portrait = "GFX_relic_scfe_sless_gene_template"
+	sound = "relic_activation_javorian_pox_sample"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			food = 2000
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			is_at_war = no
+		}
+		modifier = {
+			factor = 0
+			resource_stockpile_compare = {
+				resource = food
+				value < 4000
+			}
+		}
+		modifier = {
+			factor = 0
+			resource_income_compare = {
+				resource = food
+				value < 50
+			}
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		pop_environment_tolerance = 0.25
+	}
+
+	score = 2000
+
+	active_effect = {
+		custom_tooltip = relic_scfe_sless_gene_template_effect
+		hidden_effect = {
+			capital_scope = {
+				while = {
+					create_army = {
+						owner = root.owner
+						species = owner.species #but what if machine is owner species? #ah whatever, machine with morale would be awesome!
+						type = gene_warrior_army
+					}
+					count = 20 #1 year = 4 army
+				}
+			}
+		}
+		custom_tooltip = relic_triumph_cooldown_short
+		custom_tooltip = scfe_special_relic_cooldown_info
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 1800 #1 year = 4 army
+			}
+		}
+	}
+
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_sless_gene_template
+		}
+	}
+}
+r_scfe_diary_of_innovo = {
+	activation_duration = 3600
+	portrait = "GFX_relic_scfe_diary_of_innovo"
+	sound = "relic_activation_yuht_cryo_core"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = 3000
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		pop_government_ethic_attraction = 0.2
+		planet_stability_add = 5
+	}
+
+	score = 2500
+
+	active_effect = {
+		add_modifier = {
+			modifier = "mod_r_scfe_diary_of_innovo"
+			days = 3600
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_diary_of_innovo
+		}
+	}
+}
+r_scfe_astanine_last_projector = {
+	activation_duration = 3600
+	portrait = "GFX_relic_scfe_astanine_last_projector"
+	sound = "relic_activation_the_surveyor"
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = 2500
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		intel_encryption_add = 2
+	}
+
+	score = 2000
+
+	active_effect = {
+		custom_tooltip = relic_scfe_astanine_last_projector_effect
+		hidden_effect = {
+			add_modifier = { modifier = mod_r_scfe_astanine_last_projector days = 3600 }
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_astanine_last_projector
+		}
+	}
+}
+r_ziaskehorn_fire = {
+	activation_duration = 3600
+	portrait = "GFX_ziaskehorn_fire"
+	sound = "relic_activation_ziaskehorn"
+	can_be_stolen = no
+
+	resources = {
+		category = relics
+		cost = {
+			influence = 100
+			minerals = 11111
+		}
+	}
+	ai_weight = {
+		weight = 75
+	}
+	score = 1000
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_ethic_militarist_attraction_mult = 0.20
+	}
+	active_effect = {
+		add_modifier = {
+			modifier = "ziaskehorn_relic_active"
+			days = 3600
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			country_event = { id = scfe_ziaskehorn.30 }
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = 3600
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = relic_ziaskehorn_fire_activated }
+				}
+				set_timed_country_flag = { flag = relic_ziaskehorn_fire_activated days = 3600 }
+			}
+		}
+	}
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_astanine_last_projector
+		}
+	}
+}
+r_scfe_alshigan_engine = {
+	activation_duration = 3600
+	portrait = "GFX_relic_scfe_alshigan_engine"
+	sound = "relic_activation_vultaum_real_perforator"
+
+	resources = {
+		category = relics
+		cost = {
+			unity = 2500
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		weapon_type_energy_weapon_damage_mult = 0.10
+		ship_shield_damage_mult = 0.10
+		ship_evasion_mult = 0.05
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = { modifier = scfe_alshigan_engine_activated days = 3600 }
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = { modifier = "relic_activation_cooldown" days = 3600 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_alshigan_engine
+		}
+	}
+}
+r_scfe_znkar_distortion_generator = {
+	activation_duration = 3600
+	portrait = "GFX_relic_scfe_znkar_engine"
+	sound = "relic_activation_vultaum_real_perforator"
+
+	resources = {
+		category = relics
+		cost = {
+			unity = 2500
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		ship_shield_mult = 0.20
+		ship_shield_hardening_add = 0.1
+		ship_speed_mult = 0.1
+		ship_evasion_mult = 0.2
+	}
+
+	score = 1000
+
+	active_effect = {
+		if = {
+			limit = { has_first_contact_dlc = no }
+			add_modifier = { modifier = scfe_znkar_relic_1 days = 3600 }
+		}
+		else = {
+			add_modifier = { modifier = scfe_znkar_relic_2 days = 3600 }
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = { modifier = "relic_activation_cooldown" days = 3600 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_znkar_distortion_generator
+		}
+	}
+}
+r_scfe_first_empire_databank = {
+	activation_duration = 3600
+	portrait = "GFX_relic_scfe_first_empire_databank"
+	sound = "relic_activation_vultaum_real_perforator"
+	can_be_stolen = no
+
+	resources = {
+		category = relics
+		cost = {
+			unity = 2500
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		planet_sensor_range_add = 1
+		country_hostile_claim_influence_cost_mult = 0.2
+		country_physics_tech_research_speed = 0.1
+		country_society_tech_research_speed = 0.1
+		country_engineering_tech_research_speed = 0.1
+	}
+
+	triggered_country_modifier = {
+		potential = { has_nemesis = yes }
+		intel_decryption_mult = 0.1
+		spy_network_decay_mult = -0.2
+		spy_network_daily_value_mult = 0.2
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = { modifier = scfe_first_empire_databank_activated days = 3600 }
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = { modifier = "relic_activation_cooldown" days = 3600 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_first_empire_databank
+		}
+	}
+}
+r_scfe_orders_trinket = {
+	activation_duration = 3600
+	portrait = "GFX_relic_scfe_orders_device"
+	sound = "relic_activation_yuht_cryo_core"
+
+	resources = {
+		category = relics
+		cost = {
+			unity = 2500
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		leader_lifespan_add = 15
+		founder_species_growth_mult = 0.1
+		army_defense_health_mult = 0.1
+		army_attack_health_mult = 0.1
+	}
+
+	score = 1000
+
+	active_effect = {
+		add_modifier = { modifier = scfe_orders_trinket_activated days = 3600 }
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = { modifier = "relic_activation_cooldown" days = 3600 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_orders_trinket
+		}
+	}
+}
+# r_scfe_gene_bank = {
+#     activation_duration = 3600
+#     portrait = "GFX_relic_scfe_gene_bank"
+#     sound = "relic_activation_yuht_cryo_core"
+#
+#     resources = {
+#         category = relics
+#         cost = {
+#             unity = 2500
+#         }
+#     }
+#
+#     ai_weight = {
+#         weight = 100
+#     }
+#
+#     triggered_country_modifier = {
+#         potential = { always = yes }
+#         leader_lifespan_add = 10
+#         BIOLOGICAL_species_trait_picks_add = 1
+#         BIOLOGICAL_species_trait_points_add = 3
+#         LITHOID_species_trait_picks_add = 1
+#         LITHOID_species_trait_points_add = 3
+#     }
+#
+#     score = 1000
+#
+#     active_effect = {
+#         add_modifier = { modifier = scfe_gene_bank_activated days = 3600 }
+#         custom_tooltip = relic_triumph_cooldown
+#         hidden_effect = {
+#             add_modifier = { modifier = "relic_activation_cooldown" days = 3600 }
+#         }
+#     }
+#
+#     # Possible check for activation
+#     possible = {
+#         inline_script = {
+#             script = relics/activation_checks
+#             RELIC = r_scfe_orders_trinket
+#         }
+#     }
+# }
+
+# Nyblax
+r_scfe_arcane_rune = {
+	activation_duration = 3600
+	portrait = "GFX_relic_arcane_rune"
+	sound = "relic_activation_arcane_rune"
+	can_be_stolen = no
+
+	resources = {
+		category = relics
+		cost = {
+			influence = 100
+			unity = 1000
+		}
+		cost = {
+			trigger = { country_uses_food = yes }
+			food = 1000
+		}
+		cost = {
+			trigger = { country_uses_food = no }
+			minerals = 1000
+		}
+	}
+
+	ai_weight = {
+		weight = 200
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		all_technology_research_speed = 0.1
+		planet_pop_assembly_mult = 0.1
+	}
+
+	score = 500
+
+	active_effect = {
+		custom_tooltip = scfe_arcane_rune_activated
+		custom_tooltip = relic_triumph_cooldown
+
+		hidden_effect = {
+			set_timed_country_flag = { flag = r_arcane_rune_active days = 3600 }
+			hidden_effect = { add_modifier = { modifier = "relic_activation_cooldown" days = 3600 } }
+			country_event = { id = scfe_arcane_rune.1 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_arcane_rune
+		}
+	}
+}
+r_scfe_damage_rune = {
+	activation_duration = 3600
+	portrait = "GFX_relic_damage_rune"
+	sound = "relic_activation_damage_rune"
+	can_be_stolen = no
+
+	resources = {
+		category = relics
+		cost = {
+			influence = 100
+			unity = 1000
+			energy = 1000
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 30
+			is_at_war = yes
+		}
+	}
+	triggered_country_modifier = {
+		potential = { always = yes }
+		ship_orbital_bombardment_mult = 0.15
+		ship_damage_against_starbases_mult = 0.1
+		weapon_type_kinetic_weapon_damage_mult = 0.1
+		weapon_type_explosive_weapon_damage_mult = 0.1
+	}
+
+	score = 500
+
+	active_effect = {
+		add_modifier = { modifier = scfe_power_rune_boost days = 3600 }
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = { add_modifier = { modifier = "relic_activation_cooldown" days = 3600 } }
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_damage_rune
+		}
+	}
+}
+r_scfe_haste_rune = {
+	activation_duration = 3600
+	portrait = "GFX_relic_haste_rune"
+	sound = "relic_activation_haste_rune"
+	can_be_stolen = no
+
+	resources = {
+		category = relics
+		cost = {
+			influence = 50
+			unity = 1500
+		}
+	}
+
+	ai_weight = {
+		weight = 200
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		ship_speed_mult = 0.25
+		ship_interstellar_speed_mult = 0.2
+	}
+
+	score = 500
+
+	active_effect = {
+		custom_tooltip = haste_rune_activated
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			set_timed_country_flag = { flag = r_haste_rune_active days = 3600 }
+			add_modifier = { modifier = "relic_activation_cooldown" days = 3600 }
+			set_timed_country_flag = { flag = relic_haste_rune_activated_for_decision days = 3600 }
+			set_timed_country_flag = { flag = relic_haste_rune_activated days = 3600 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_haste_rune
+		}
+	}
+}
+r_scfe_regeneration_rune = {
+	activation_duration = 3600
+	portrait = "GFX_relic_regeneration_rune"
+	sound = "relic_activation_regeneration_rune"
+	can_be_stolen = no
+
+	resources = {
+		category = relics
+		cost = {
+			influence = 75
+			unity = 1000
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 30
+			is_at_war = yes
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		ship_hull_regen_add_static = 5
+		ship_armor_regen_add_static = 5
+		army_damage_taken_mult = -0.05
+		leader_lifespan_add = 20
+	}
+
+	score = 500
+
+	active_effect = {
+		set_timed_country_flag = { flag = r_regeneration_rune_active days = 3600 }
+		add_modifier = { modifier = scfe_regeneration_rune days = 3600 }
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = { modifier = "relic_activation_cooldown" days = 3600 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_regeneration_rune
+		}
+	}
+}
+r_scfe_illusion_rune = {
+	activation_duration = 3600
+	portrait = "GFX_relic_illusion_rune"
+	sound = "relic_activation_illusion_rune"
+	can_be_stolen = no
+
+	resources = {
+		category = relics
+		cost = {
+			influence = 50
+			unity = 1000
+		}
+	}
+
+	ai_weight = {
+		factor = 200
+	}
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		terraform_speed_mult = 0.30
+		megastructure_build_speed_mult = 0.10
+	}
+
+	score = 500
+
+	active_effect = {
+		custom_tooltip = scfe_illusion_rune_activated
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			set_timed_country_flag = { flag = r_illusion_rune_active days = 3600 }
+			add_modifier = { modifier = "relic_activation_cooldown" days = 3600 }
+			set_timed_country_flag = { flag = relic_illusion_rune_activated days = 3600 }
+			set_timed_country_flag = { flag = relic_illusion_rune_activated_for_decision days = 3600 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_illusion_rune
+		}
+	}
+}
+r_scfe_invisibility_rune = {
+	activation_duration = 3600
+	portrait = "GFX_relic_invisibility_rune"
+	sound = "relic_activation_invisibility_rune"
+	can_be_stolen = no
+
+	resources = {
+		category = relics
+		cost = {
+			influence = 100
+			unity = 1500
+		}
+	}
+
+	ai_weight = {
+		weight = 200
+	}
+
+	score = 500
+
+	triggered_country_modifier = {
+		potential = { always = yes }
+		ship_evasion_mult = 0.1
+		ship_disengage_chance_mult = 0.2
+		army_disengage_chance_mult = 0.1
+		planet_orbital_bombardment_damage = -0.1
+  	}
+
+	active_effect = {
+		set_timed_country_flag = { flag = r_invisibility_rune_active days = 3600 }
+		if = {
+			limit = { has_first_contact_dlc = yes }
+			add_modifier = { modifier = scfe_invisibility_rune_fc days = 3600 }
+		}
+		else = {
+			add_modifier = { modifier = scfe_invisibility_rune days = 3600 }
+		}
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = { modifier = "relic_activation_cooldown"  days = 3600 }
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		inline_script = {
+			script = relics/activation_checks
+			RELIC = r_scfe_invisibility_rune
+		}
+	}
+}

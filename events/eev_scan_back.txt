@@ -1,0 +1,53 @@
+namespace = eev_scan_back
+
+country_event = {
+	id = eev_scan_back.1
+	title = eev_scan_back.1.name
+	desc = {
+		trigger = { is_hive_empire = no }
+		text = eev_scan_back.1.desc_1
+	}
+	desc = {
+		trigger = { is_hive_empire = yes }
+		text = eev_scan_back.1.desc_2
+	}
+	picture = GFX_evt_communication_event
+	show_sound = event_ship_bridge
+	location = FROM
+	is_triggered_only = yes
+
+	option = {
+		name = INTERESTING
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = @tier1researchreward
+			min = @tier1researchmin
+			max = @tier1researchmax
+		}
+		hidden_effect = {
+			country_event = {
+				id = eev_scan_back.2 days = 200 random = 50
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eev_scan_back.2
+	title = eev_scan_back.2.name
+	desc = eev_scan_back.2.desc
+	picture = GFX_evt_communication_event
+	show_sound = event_ship_bridge
+	location = FROM
+	is_triggered_only = yes
+
+	option = {
+		name = FASCINATING
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = @tier1researchreward
+			min = @tier1researchmin
+			max = @tier1researchmax
+		}
+	}
+}

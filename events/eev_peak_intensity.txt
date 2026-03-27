@@ -1,0 +1,20 @@
+namespace = eev_peak_intensity
+
+ship_event = {
+	id = eev_peak_intensity.1
+	title = eev_peak_intensity.1.name
+	desc = eev_peak_intensity.1.desc
+	picture = GFX_evt_eev_alpine_planet
+	show_sound = event_default
+	is_triggered_only = yes
+	location = FROM
+	
+	option = {
+		name = eev_peak_intensity.1.a
+		from = { add_deposit = d_energy_4 }
+	}
+	option = {
+		name = eev_peak_intensity.1.b
+		from = { add_deposit = d_minerals_4 }
+	}
+}

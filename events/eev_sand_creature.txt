@@ -1,0 +1,36 @@
+###########################################################################
+##### Written by ZakkerDoodle(Burgermeister) for the Extra Events Mod #####
+###########################################################################
+
+# Sand Creature
+namespace = sand_creature
+
+ship_event = {				
+	id = sand_creature.1
+	title = sand_creature.1.name
+	desc = sand_creature.1.desc
+	picture = GFX_evt_eev_dunes
+	show_sound = event_dangerous_animals
+	location = root
+
+	is_triggered_only = yes
+
+	immediate = {
+		owner = { country_event = { id = story.1 days = 30 } }
+	}
+
+	option = {
+		name = UNFORTUNATE
+		leader = {
+			add_experience = 150
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}

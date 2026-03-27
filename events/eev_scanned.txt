@@ -1,0 +1,62 @@
+# Scanned Anomaly
+namespace = eev_scanned
+
+ship_event = {
+	id = eev_scanned.1
+	title = eev_scanned.1.name
+	desc = eev_scanned.1.desc
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_ship_bridge
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name = eev_scanned.1a
+		custom_tooltip = eev_scanned.1.t
+		trigger = {
+			owner = { is_xenophobe = no }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+			remove_country_flag = eev_sphere_encountered
+			hidden_effect = {
+				country_event = {
+					id = eev_scan_back.1 days = 50 random = 50
+				}
+			}
+		}
+	}
+	option = {
+		name = eev_scanned.1b
+		custom_tooltip = eev_scanned.1.t
+
+		trigger = {
+			owner = {
+				OR = { 
+					is_xenophobe = yes
+					is_militarist = yes
+				}
+			}
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+			remove_country_flag = eev_sphere_encountered
+			hidden_effect = {
+				country_event = {
+					id = eev_scan_back.1 days = 50 random = 50
+				}
+			}
+		}
+	}
+}

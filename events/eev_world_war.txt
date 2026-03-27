@@ -1,0 +1,101 @@
+###########################################################################
+##### Written by ZakkerDoodle(Burgermeister) for the Extra Events Mod #####
+###########################################################################
+
+# World War Anomaly
+namespace = world_war
+
+ship_event = {
+	id = world_war.1
+	title = world_war.1.name
+	desc = world_war.1.desc
+	picture = GFX_evt_ground_combat
+	show_sound = event_ship_bridge
+	location = FROM
+	is_triggered_only = yes
+
+	immediate = {
+		owner = { country_event = { id = story.5 days = 30 } }
+	}
+
+	option = {
+		name = world_war.1.a
+		owner = { country_event = { id = world_war.2 days = 10 } }
+	}
+	option = {
+		name = world_war.1.b
+		owner = { country_event = { id = world_war.3 days = 10 } }
+	}
+	option = {
+		name = world_war.1.c
+		owner = { country_event = { id = world_war.4 days = 10 } }
+	}
+}
+
+country_event = {
+	id = world_war.2
+	title = world_war.2.name
+	desc = world_war.2.desc
+	picture = GFX_evt_ground_combat
+	show_sound = event_ship_bridge
+	location = FROM
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = @tier2researchreward
+			min = @tier2researchmin
+			max = @tier2researchmax
+		}
+		if = {
+			limit = { has_ancrel = yes }
+			add_resource = { minor_artifacts = 10 }
+		}
+	}
+}
+
+country_event = {
+	id = world_war.3
+	title = last_words.1.a
+	desc = world_war.3.desc
+	picture = GFX_evt_ground_combat
+	show_sound = event_ship_bridge
+	location = FROM
+	is_triggered_only = yes
+
+	option = {
+		name = world_war.3.a
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier2unityreward
+			min = @tier2unitymin
+			max = @tier2unitymax
+		}
+	}
+}
+
+country_event = {
+	id = world_war.4
+	title = world_war.4.name
+	desc = world_war.4.desc
+	picture = GFX_evt_ground_combat
+	show_sound = event_ship_bridge
+	location = FROM
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_monthly_resource_mult = {
+			resource = alloys
+			value = @tier2materialreward
+			min = @tier2materialmin
+			max = @tier2materialmax
+	}
+		if = {
+			limit = { has_ancrel = yes }
+			add_resource = { minor_artifacts = 30 }
+		}
+	}
+}

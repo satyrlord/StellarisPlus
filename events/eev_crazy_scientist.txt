@@ -1,0 +1,64 @@
+###########################################################################
+##### Written by ZakkerDoodle(Burgermeister) for the Extra Events Mod #####
+###########################################################################
+
+# Crazy Scientist Anomaly
+namespace = crazy_scientist
+
+ship_event = {
+	id = crazy_scientist.1
+	title = crazy_scientist.1.name
+	desc = crazy_scientist.1.desc
+	picture = GFX_evt_aggressive_flora
+	show_sound = event_ship_bridge
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = crazy_scientist.1.a
+		custom_tooltip = crazy_scientist.1.a.tt
+		leader = {
+			add_experience = 175
+		}
+		
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+	option = {
+		name = crazy_scientist.1.b
+		hidden_effect = {
+			ship_event = { id = crazy_scientist.2 days = 5 }
+		}
+	}
+	option = {
+		name = crazy_scientist.1.c
+		owner = {
+			add_resource = { exotic_gases = 50 }
+		}
+	}
+}
+
+ship_event = {
+	id = crazy_scientist.2
+	title = crazy_scientist.2.name
+	desc = crazy_scientist.2.desc
+	picture = GFX_evt_interior_battle
+	show_sound = event_ship_bridge
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = crazy_scientist.2.a
+		owner = {
+			add_resource = { rare_crystals = 50 }
+		}
+	}
+}

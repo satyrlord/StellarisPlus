@@ -1,0 +1,128 @@
+special_project = {
+	key = "SCFE_ALSHIGANS_ASTEROID_PROJECT"
+	event_chain = scfe_alshigans_chain
+	cost = 0
+	days_to_research = 200
+	tech_department = society_technology
+	picture = GFX_evt_scfe_asteroid
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	location = yes
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill > 4
+	}
+	fail_trigger = { }
+
+	on_success = {
+		ship_event = { id = scfe_alshigans.1 }
+	}
+}
+special_project = {
+	key = "SCFE_ALSHIGANS_SAVANNAH_PROJECT"
+	event_chain = scfe_alshigans_chain
+	cost = 0
+	days_to_research = 200
+	tech_department = society_technology
+	picture = GFX_evt_savannah
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	location = yes
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill > 4
+	}
+	fail_trigger = { }
+
+	on_success = {
+		ship_event = { id = scfe_alshigans.2 }
+	}
+}
+special_project = {
+	key = "SCFE_ALSHIGANS_ALPINE_PROJECT"
+	event_chain = scfe_alshigans_chain
+	cost = 0
+	days_to_research = 200
+	tech_department = society_technology
+	picture = GFX_evt_scfe_alshigans_alpine
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	location = yes
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill > 4
+	}
+	fail_trigger = { }
+
+	on_success = {
+		ship_event = { id = scfe_alshigans.3 }
+	}
+}
+special_project = {
+	key = "SCFE_ALSHIGANS_JUNGLE_PROJECT"
+	event_chain = scfe_alshigans_chain
+	cost = 0
+	days_to_research = 200
+	tech_department = society_technology
+	picture = GFX_evt_scfe_alshigans_jungle
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	location = yes
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill > 4
+	}
+	fail_trigger = { }
+
+	on_success = {
+		ship_event = { id = scfe_alshigans.4 }
+	}
+}
+special_project = {
+	key = "SCFE_ALSHIGANS_MOON_PROJECT"
+	event_chain = scfe_alshigans_chain
+	cost = 0
+	days_to_research = 200
+	tech_department = society_technology
+	picture = GFX_evt_scfe_alshigans_barren
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	location = yes
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill > 4
+	}
+	fail_trigger = { }
+
+	on_success = {
+		ship_event = { id = scfe_alshigans.5 }
+	}
+}
+special_project = {
+	key = "SCFE_PRECURSOR_ALSHIGANS_SECRETS"
+	cost = @tier1cost3
+	days_to_research = 0
+	tech_department = society_technology
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	location = yes
+	event_scope = country_event
+
+	requirements = {
+	}
+	fail_trigger = { }
+
+	on_success = {
+		country_event = { id = scfe_alshigans.12 }
+	}
+}

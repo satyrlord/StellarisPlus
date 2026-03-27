@@ -1,0 +1,51 @@
+﻿l_simp_chinese:
+# Translators, the mutiny event has been removed from eev_l_english.yml, rewritten and moved to eev_new_l_english.yml
+ # You can neutralize this temp file with an empty file, it will be removed with the next update once you have updated your translation mod.
+
+# 3.12 stuff start here
+ # Mutiny Rewrite v2
+ EEV_MUTINY_RESCUE: "Boarding Operation"
+ EEV_MUTINY_RESCUE_DESC: "Our Commander has decided that a single, well-equipped transport ship will conduct the boarding operation. This force is tasked with subduing the mutineers swiftly and securing control of the vessel."
+ # Default version
+ eev_mutiny.1.name: "Mutiny!"
+ eev_mutiny.1.desc: "Our exploratory team aboard the §B[Root.GetFleetName]§! has uncovered a substantial deposit of a previously unidentified, green-glowing mineral inside the cargo. Reports suggest that exposure to this mineral imbues the crew with an overwhelming sensation of boundless might and authority. Regrettably, this newfound power has seduced a faction of our scientists into greed. They have declared mutiny, seeking to hoard the mineral for their own gain, and are now confronting their commanding science officer and his staunchest allies. How shall we address this crisis?"
+ eev_mutiny.1.a: "Attempt to negotiate with them."
+ eev_mutiny.1.b: "Let them sort it out by themselves."
+ eev_mutiny.1.c: "Make an example out of those fools and blow the ship up!"
+ eev_mutiny.1.d: "Send troops to secure the ship."
+ eev_mutiny.3.name: "Mutineers' Escape"
+ eev_mutiny.3.base: "Disturbing news has reached us. After we allowed the scientists on the §B[Root.GetFleetName]§! to resolve their dispute internally, the situation escalated tragically."
+ eev_mutiny.3.base1: "Our lead scientist and those who remained loyal have been murdered in cold blood. The mutineers, now in control of the ship and its precious cargo of"
+ eev_mutiny.3.base2: "executed an emergency jump, vanishing from our sensors."
+ eev_mutiny.3.base3: "$eev_mutiny.3.base1$ the mysterious green-glowing mineral, $eev_mutiny.3.base2$"
+ eev_mutiny.3.desc: "$eev_mutiny.3.base$ $eev_mutiny.3.base3$"
+ eev_mutiny.2.tooltip: "The science ship will be blown up."
+ eev_mutiny.4.base: "After hearing us out, the crew of the §B[Root.GetFleetName]§! rejected our offer."
+ eev_mutiny.4.desc: "$eev_mutiny.4.base$ $eev_mutiny.3.base3$"
+ eev_mutiny.5.name: "Situation Neutralized"
+ eev_mutiny.5.base: "Following a decisive operation, our security forces successfully boarded the §B[Root.GetFleetName]§! and subdued the mutineers. In a final act of defiance, the rebels destroyed the"
+ eev_mutiny.5.base1: "Fortunately, §G[Root.Leader.GetName]§! and [Root.Leader.GetHisHer] loyal crew members survived the ordeal and are now safe."
+ eev_mutiny.5.desc: "$eev_mutiny.5.base$ mysterious green-glowing mineral before they could be apprehended, ensuring that its secrets and power would elude us forever. $eev_mutiny.5.base1$"
+ eev_mutiny.5.a: "That turned out well."
+ eev_mutiny.6.name: "Mutineer's Response"
+ eev_mutiny.6.base: "After intense negotiations, a settlement has been reached with the mutineers aboard the §B[Root.GetFleetName]§!. In exchange for a 10-year sentence in a medium-security facility and a collective fine of 500 Energy Credits, the mutineers have agreed to release all hostages and surrender themselves - except for their leader, who they insist must be allowed to escape with the"
+ eev_mutiny.6.base1: "Faced with the dire alternative of potentially losing §G[Root.Leader.GetName]§! and his loyal crew members, we reluctantly accepted these terms."
+ eev_mutiny.6.desc: "$eev_mutiny.6.base$ minerals. $eev_mutiny.6.base1$"
+ # Food version
+ eev_mutiny.1.desc.food: "Amidst a severe food crisis affecting our empire, the §B[Root.GetFleetName]§! has stumbled upon a significant cache of nutrient-rich food rations inside the cargo. However, news of this discovery has not brought unity but division. Several crew members, driven by desperation and concern for their starving families, have initiated a mutiny. They intend to divert the shipment directly to their homeworlds, bypassing official distribution channels."
+ eev_mutiny.3.desc.food.base: "$eev_mutiny.3.base1$ food, $eev_mutiny.3.base2$"
+ eev_mutiny.3.desc.food: "$eev_mutiny.3.base$ $eev_mutiny.3.desc.food.base$"
+ eev_mutiny.4.desc.food: "$eev_mutiny.4.base$ $eev_mutiny.3.desc.food.base$"
+ eev_mutiny.5.desc.food: "$eev_mutiny.5.base$ food before they could be apprehended. $eev_mutiny.5.base1$"
+ eev_mutiny.6.desc.food: "$eev_mutiny.6.base$ food. $eev_mutiny.6.base1$"
+
+# This line has been changed
+ alientrespas: "Blikkri"
+
+ # 3.13 starts here
+ eev_last_signal.1.name: "Strange Signals Detected"
+ eev_last_signal.1.desc: "One of our colonies has begun receiving peculiar radio signals. After extensive analysis, it has been determined that these signals originated thousands of years ago from a distant alien civilization. What we are hearing now are the faint remnants of their communications. This could be all that remains of them..."
+ eev_icy_cruise.1.name: "Icy Cruise"
+ eev_icy_cruise.1.desc: "To our astonishment, a massive cruise ship has been discovered encased within this ice asteroid. Once, it likely ferried passengers across the galaxy, showcasing breathtaking sights to those aboard. How it became entombed in this asteroid remains an unsolved mystery."
+ eev_icy_cruise.1.a: "Study its conception."
+ eev_icy_cruise.1.b: "We need its alloys."

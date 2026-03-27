@@ -1,0 +1,31 @@
+special_project = {
+    key = "EEV_MUTINY_RESCUE"
+    cost = 0
+    days_to_research = 50
+    timelimit = 1080
+    picture = GFX_evt_face_off_in_space
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_transport = 1
+    }
+
+    on_success = {
+        event_target:eev_mutiny_ship = {
+            ship_event = { id = eev_mutiny.5 }
+        }
+    }
+
+    on_cancel = {
+        event_target:eev_mutiny_ship = {
+            ship_event = { id = eev_mutiny.3 days = 50 }
+        }
+    }
+
+    on_fail = {
+        event_target:eev_mutiny_ship = {
+            ship_event = { id = eev_mutiny.3 days = 50 }
+        }
+    }
+}

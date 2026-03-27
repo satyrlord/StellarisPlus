@@ -1,0 +1,29 @@
+namespace = eev_volcanic_demise
+
+ship_event = {
+	id = eev_volcanic_demise.1
+	title = eev_volcanic_demise.1.name
+	desc = eev_volcanic_demise.1.desc
+	picture = GFX_evt_molten
+	show_sound = event_default
+	location = FROM
+
+	is_triggered_only = yes
+	option = {
+		name = emperor.102.b
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}

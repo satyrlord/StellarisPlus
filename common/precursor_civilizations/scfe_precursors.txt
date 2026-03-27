@@ -1,0 +1,5 @@
+precursor_alshigans = { size = 100 picture = "GFX_precursor_alshigans" }
+precursor_astanine = { size = 100 picture = "GFX_precursor_astanine" }
+precursor_coprea = { size = 100 picture = "GFX_precursor_coprean" }
+precursor_sless = { size = 100 picture = "GFX_precursor_sless_alliance" }
+precursor_vinarii = { size = 100 picture = "GFX_precursor_vinarii" }

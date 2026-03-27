@@ -1,0 +1,25 @@
+namespace = eev_lone_ship
+
+ship_event = {
+	id = eev_lone_ship.1
+	title = eev_lone_ship.1.name
+	desc = eev_lone_ship.1.desc
+	picture = GFX_evt_gaia
+	show_sound = event_ship_bridge
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name = INTERESTING
+		
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1researchreward
+				min = @tier1researchmin
+				max = @tier1researchmax
+			}
+		}
+	}
+}

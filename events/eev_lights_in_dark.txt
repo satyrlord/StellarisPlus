@@ -1,0 +1,18 @@
+namespace = eev_lights_in_dark
+
+ship_event = {
+	id = eev_lights_in_dark.1
+	title = eev_lights_in_dark.1.name
+	desc = eev_lights_in_dark.1.desc
+	picture = GFX_evt_ice_asteroids
+	show_sound = event_default
+	location = FROM
+
+	is_triggered_only = yes
+	option = {
+		name = FASCINATING
+		from = {
+			add_deposit = d_society_3
+		}
+	}
+}

@@ -1,0 +1,278 @@
+# War-Torn Planet
+
+namespace = scfe_war_torn
+
+ship_event = {
+	id = scfe_war_torn.1
+	title = scfe_war_torn.1.name
+	desc = scfe_war_torn.1.desc
+	picture = GFX_evt_alien_ruins
+	show_sound = event_ship_bridge
+	location = FROM
+	is_triggered_only = yes
+
+	option = {
+		name = INTRIGUING
+		from = {
+			create_archaeological_site = scfe_war_torn_dig
+		}
+		hidden_effect = {
+			owner = { save_global_event_target_as = scfe_war_torn_owner }
+		}
+	}
+}
+
+country_event = {
+	id = scfe_war_torn.2
+	title = scfe_war_torn.2.name
+	desc = scfe_war_torn.2.desc
+	picture = GFX_evt_alien_ruins
+	show_sound = event_ship_bridge
+	is_triggered_only = yes
+
+	option = {
+		name = INTERESTING
+	}
+}
+
+country_event = {
+	id = scfe_war_torn.3
+	title = scfe_war_torn.3.name
+	desc = scfe_war_torn.3.desc
+	picture = GFX_evt_alien_ruins
+	show_sound = event_ship_bridge
+	is_triggered_only = yes
+
+	option = {
+		name = CURIOUS
+		add_modifier = { modifier = scfe_clone_prowess days = -1 }
+		hidden_effect = {
+			set_country_flag = war_torn_done
+			clear_global_event_target = scfe_war_torn_owner
+		}
+	}
+}
+
+#################################### DIG SITE ####################################
+
+namespace = scfe_war_torn_dig
+
+fleet_event = {
+	id = scfe_war_torn_dig.1
+	title = scfe_war_torn_dig.1.name
+	desc = scfe_war_torn_dig.1.desc
+	picture = GFX_evt_ground_combat
+	show_sound = event_ground_battle
+	location = FROM
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = INTRIGUING
+		small_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = scfe_war_torn_dig.2
+	title = scfe_war_torn_dig.2.name
+	desc = scfe_war_torn_dig.2.desc
+	picture = GFX_evt_ground_combat
+	show_sound = event_ground_battle
+	location = FROM
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = scfe_war_torn_dig.2.a
+		exclusive_trigger = { owner = { has_origin = origin_clone_army } }
+		small_artifact_reward = yes
+	}
+	option = {
+		exclusive_trigger = { owner = { NOT = { has_origin = origin_clone_army } } }
+		name = scfe_war_torn_dig.2.b
+		small_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = scfe_war_torn_dig.3
+	title = scfe_war_torn_dig.3.name
+	desc = {
+		trigger = { owner = { has_origin = origin_clone_army } }
+		text = scfe_war_torn_dig.3.desc_1
+	}
+	desc = {
+		trigger = {
+			owner = {
+				NOT = { has_origin = origin_clone_army }
+				has_technology = tech_gene_banks
+			}
+		}
+		text = scfe_war_torn_dig.3.desc_2
+	}
+	desc = {
+		trigger = {
+			owner = {
+				NOT = { has_origin = origin_clone_army }
+				NOT = { has_technology = tech_gene_banks }
+			}
+		}
+		text = scfe_war_torn_dig.3.desc_3
+	}
+	picture = GFX_evt_ground_combat
+	show_sound = event_ground_battle
+	location = FROM
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = INTRIGUING
+		small_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = scfe_war_torn_dig.4
+	title = scfe_war_torn_dig.4.name
+	desc = scfe_war_torn_dig.4.desc
+	picture = GFX_evt_ground_combat
+	show_sound = event_ground_battle
+	location = FROM
+	is_triggered_only = yes
+	archaeology = yes
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	option = {
+		name = INTRIGUING
+		small_artifact_reward = yes
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+			country_event = { id = scfe_war_torn.2 }
+		}
+	}
+	after = {
+		from = { set_site_progress_locked = no }
+		if = {
+			limit = { owner = { has_policy_flag = scfe_archaeology_cleanup_active } }
+			destroy_archaeological_site = from
+		}
+		hidden_effect = {
+			closest_system = {
+				min_steps = 1
+				max_steps = 15
+				limit = {
+					scfe_is_valid_system = yes
+					OR = {
+						has_owner = no
+						AND = {
+							exists = space_owner
+							space_owner = { is_same_empire = event_target:scfe_war_torn_owner }
+						}
+					}
+					any_system_planet = {
+						uninhabitable_regular_planet = yes
+						has_anomaly = no
+						has_owner = no
+						NOT = { has_planet_flag = has_megastructure }
+					}
+				}
+				random_system_planet = {
+					limit = {
+						uninhabitable_regular_planet = yes
+						has_anomaly = no
+						has_owner = no
+						NOT = { has_planet_flag = has_megastructure }
+					}
+					enable_special_project = {
+						name = SCFE_WAR_TORN_PROJECT_1
+						location = this
+						owner = root
+					}
+				}
+			}
+		}
+		owner = {
+			country_event = { id = war_torn_lore.1 days = 5 }
+		}
+	}
+}
+
+namespace = war_torn_lore
+
+country_event = {
+	id = war_torn_lore.1
+	title = scfe_war_torn_lore.1.name
+	desc = {
+		trigger = {
+			has_origin = origin_clone_army
+		}
+		text = scfe_war_torn_lore.1.desc_c
+	}
+	desc = {
+		trigger = {
+			NOT = { has_origin = origin_clone_army }
+		}
+		text = scfe_war_torn_lore.1.desc
+	}
+	picture = GFX_evt_ground_combat
+	show_sound = event_ground_battle
+	location = FROM
+	is_triggered_only = yes
+
+	option = {
+		name = INTERESTING
+	}
+}

@@ -1,0 +1,19 @@
+namespace = eev_icy_cruise
+
+ship_event = {
+    id = eev_icy_cruise.1
+    title = eev_icy_cruise.1.name
+    desc = eev_icy_cruise.1.desc
+    picture = GFX_evt_ice_asteroids
+    show_sound = event_default
+    is_triggered_only = yes
+
+    option = {
+        name = eev_icy_cruise.1.a
+        from = { add_deposit = d_engineering_3 }
+    }
+    option = {
+        name = eev_icy_cruise.1.b
+        from = { add_deposit = d_alloys_2 }
+    }
+}

@@ -1,0 +1,466 @@
+namespace = scfe_celestial_init
+
+country_event = {
+    id = scfe_celestial_init.1
+    title = scfe_celestial_init.1.name
+    desc = scfe_celestial_init.1.desc
+    is_triggered_only = yes
+    fire_only_once = yes
+    picture = GFX_evt_communication_event
+    show_sound = event_default
+    location = event_target:scfe_celestial_disturbance_system
+
+    option = {
+        name = CURIOUS
+        begin_event_chain = { event_chain = scfe_celestial_system_chain target = this }
+        create_point_of_interest = { event_chain = scfe_celestial_system_chain id = scfe_celestial_new_system name = scfe_celestial_init.point location = event_target:scfe_celestial_disturbance_system }
+    }
+}
+
+namespace = scfe_celestial_disturbance
+
+ship_event = {
+    id = scfe_celestial_disturbance.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                solar_system = { has_star_flag = scfe_celestial_disturbance_system }
+                NOT = { has_global_flag = scfe_celestial_disturbance_started }
+                owner = { is_ai = no }
+            }
+            owner = {
+                save_global_event_target_as = scfe_neutron_owner
+                set_global_flag = scfe_celestial_disturbance_started
+            }
+            every_playable_country = {
+                if = {
+                    limit = { has_event_chain = "scfe_celestial_system_chain" }
+                    end_event_chain = "scfe_celestial_system_chain"
+                }
+            }
+            ship_event = { id = scfe_celestial_disturbance.2 }
+        }
+    }
+}
+ship_event = {
+    id = scfe_celestial_disturbance.2
+    title = scfe_celestial_disturbance.2.name
+    desc = scfe_celestial_disturbance.2.desc
+    picture = GFX_evt_binary_stars
+    show_sound = event_default
+    is_triggered_only = yes
+    location = event_target:scfe_celestial_disturbance_system
+
+    option = {
+        name = INTERESTING
+        owner = { begin_event_chain = { event_chain = scfe_celestial_disturbance_chain target = this } }
+    }
+}
+# Gathering Clues
+ship_event = {
+    id = scfe_celestial_disturbance.3
+    title = scfe_celestial_disturbance.3.name
+    desc = scfe_celestial_disturbance.3.desc
+    picture = GFX_evt_frozen
+    show_sound = event_default
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        from = { has_planet_flag = scfe_celestial_disturbance_homeworld }
+        owner = { has_event_chain = scfe_celestial_disturbance_chain }
+    }
+
+    option = {
+        name = CONTINUE
+        owner = {
+            add_event_chain_counter = { event_chain = scfe_celestial_disturbance_chain counter = scfe_celestial_disturbance_clues amount = 1 }
+            hidden_effect = { country_event = { id = scfe_celestial_disturbance.10 } }
+            owner = { country_event = { id = scfe_celestial_disturbance.11 } }
+        }
+    }
+    after = { owner = { country_event = { id = story.5 days = 30 } } }
+}
+ship_event = {
+    id = scfe_celestial_disturbance.4
+    title = scfe_celestial_disturbance.4.name
+    desc = scfe_celestial_disturbance.4.desc
+    picture = GFX_evt_cold_barren
+    show_sound = event_default
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        from = { has_planet_flag = scfe_celestial_disturbance_moon }
+        owner = { has_event_chain = scfe_celestial_disturbance_chain }
+    }
+
+    option = {
+        name = INTERESTING
+        from = {
+            add_deposit = d_engineering_3
+            add_deposit = d_physics_3
+        }
+        owner = {
+            add_event_chain_counter = { event_chain = scfe_celestial_disturbance_chain counter = scfe_celestial_disturbance_clues amount = 1 }
+            hidden_effect = { country_event = { id = scfe_celestial_disturbance.10 } }
+        }
+    }
+}
+ship_event = {
+    id = scfe_celestial_disturbance.5
+    title = scfe_celestial_disturbance.5.name
+    desc = scfe_celestial_disturbance.5.desc
+    picture = GFX_evt_gas_giant
+    show_sound = event_default
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        from = { has_planet_flag = scfe_celestial_disturbance_gas }
+        owner = { has_event_chain = scfe_celestial_disturbance_chain }
+    }
+
+    option = {
+        name = INTERESTING
+        from = { add_deposit = d_exotic_gases_2 }
+        owner = {
+            add_resource = { rare_crystals = 20 }
+            add_event_chain_counter = { event_chain = scfe_celestial_disturbance_chain counter = scfe_celestial_disturbance_clues amount = 1 }
+            hidden_effect = { country_event = { id = scfe_celestial_disturbance.10 } }
+        }
+    }
+}
+ship_event = {
+    id = scfe_celestial_disturbance.6
+    title = scfe_celestial_disturbance.6.name
+    desc = scfe_celestial_disturbance.6.desc
+    inline_script = {
+        script = events/biogenesis_event_art
+        OWNER = owner
+        REGULAR_PICTURE = GFX_evt_ship_in_orbit
+        BIOSHIP_PICTURE = GFX_evt_bio_ships_orbiting
+    }
+    show_sound = event_default
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        from = { has_planet_flag = scfe_celestial_disturbance_barren }
+        owner = { has_event_chain = scfe_celestial_disturbance_chain }
+    }
+
+    option = {
+        name = INTERESTING
+        from = { add_deposit = d_alloys_1 }
+        owner = {
+            add_event_chain_counter = { event_chain = scfe_celestial_disturbance_chain counter = scfe_celestial_disturbance_clues amount = 1 }
+            hidden_effect = { country_event = { id = scfe_celestial_disturbance.10 } }
+        }
+    }
+}
+ship_event = {
+    id = scfe_celestial_disturbance.7
+    title = scfe_celestial_disturbance.7.name
+    desc = scfe_celestial_disturbance.7.desc
+    picture = GFX_evt_molten
+    show_sound = event_default
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        from = { has_planet_flag = scfe_celestial_disturbance_molten }
+        owner = { has_event_chain = scfe_celestial_disturbance_chain }
+    }
+
+    option = {
+        name = INTERESTING
+        from = { add_deposit = d_minerals_3 }
+        owner = {
+            add_event_chain_counter = { event_chain = scfe_celestial_disturbance_chain counter = scfe_celestial_disturbance_clues amount = 1 }
+            hidden_effect = { country_event = { id = scfe_celestial_disturbance.10 } }
+        }
+    }
+}
+ship_event = {
+    id = scfe_celestial_disturbance.8
+    title = scfe_celestial_disturbance.8.name
+    desc = scfe_celestial_disturbance.8.desc
+    picture = GFX_evt_star_yellow
+    show_sound = event_default
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        from = { has_planet_flag = scfe_celestial_disturbance_sun }
+        owner = { has_event_chain = scfe_celestial_disturbance_chain }
+    }
+
+    option = {
+        name = INTERESTING
+        from = { add_deposit = d_energy_4 }
+        owner = {
+            add_event_chain_counter = { event_chain = scfe_celestial_disturbance_chain counter = scfe_celestial_disturbance_clues amount = 1 }
+            hidden_effect = { country_event = { id = scfe_celestial_disturbance.10 } }
+        }
+    }
+}
+ship_event = {
+    id = scfe_celestial_disturbance.9
+    title = scfe_celestial_disturbance.9.name
+    desc = scfe_celestial_disturbance.9.desc
+    picture = GFX_evt_star_neutron
+    show_sound = event_default
+    is_triggered_only = yes
+    fire_only_once = yes
+    trigger = {
+        from = { has_planet_flag = scfe_celestial_disturbance_neutron }
+        owner = { has_event_chain = scfe_celestial_disturbance_chain }
+    }
+
+    option = {
+        name = INTERESTING
+        from = { add_deposit = d_engineering_5 }
+        owner = {
+            add_event_chain_counter = { event_chain = scfe_celestial_disturbance_chain counter = scfe_celestial_disturbance_clues amount = 1 }
+            hidden_effect = { country_event = { id = scfe_celestial_disturbance.10 } }
+        }
+    }
+}
+country_event = {
+    id = scfe_celestial_disturbance.10
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        if = {
+            limit = {
+                has_completed_event_chain_counter = { event_chain = scfe_celestial_disturbance_chain counter = scfe_celestial_disturbance_clues }
+            }
+            country_event = {
+                id = scfe_celestial_disturbance.12
+            }
+        }
+    }
+}
+country_event = {
+    id = scfe_celestial_disturbance.11
+    title = scfe_celestial_disturbance.11.name
+    picture = GFX_evt_astral_scar
+    show_sound = pc_astral_scar
+    is_triggered_only = yes
+
+    desc = {
+        trigger = {
+            NOR = {
+                country_has_situation = { SITUATION = situation_a_rift_in_space }
+                has_country_flag = has_completed_a_rift_in_space_situation
+            }
+        }
+        text = scfe_celestial_disturbance.11.desc_1
+    }
+    desc = {
+        trigger = {
+            has_astral_planes_dlc = yes
+            OR = {
+                country_has_situation = { SITUATION = situation_a_rift_in_space }
+                has_country_flag = has_completed_a_rift_in_space_situation
+            }
+        }
+        text = scfe_celestial_disturbance.11.desc_2
+    }
+
+    option = {
+        name = astral_planes.100.a
+        add_monthly_resource_mult = {
+            resource = physics_research
+            value = @tier2researchreward
+            min = @tier2researchmin
+            max = @tier2researchmax
+        }
+        if = {
+            limit = { has_technology = tech_astral_harvesting }
+            astral_thread_small_reward = yes
+        }
+    }
+}
+country_event = {
+    id = scfe_celestial_disturbance.12
+    title = scfe_celestial_disturbance.12.name
+    desc = scfe_celestial_disturbance.12.desc
+    picture = GFX_evt_frozen
+    show_sound = event_default
+    is_triggered_only = yes
+
+    option = {
+        name = INTERESTING
+        event_target:scfe_celestial_disturbance_homeworld = {
+            create_archaeological_site = scfe_celestial_disturbance_dig
+        }
+    }
+}
+country_event = {
+    id = scfe_celestial_disturbance.13
+    title = scfe_celestial_disturbance.13.name
+    desc = scfe_celestial_disturbance.13.desc1
+    picture = GFX_evt_astral_scar
+    show_sound = pc_astral_scar
+    is_triggered_only = yes
+    option = {
+        name = scfe_celestial_disturbance.13.a
+        add_monthly_resource_mult = {
+            resource = physics_research
+            value = @tier2researchreward
+            min = @tier2researchmin
+            max = @tier2researchmax
+        }
+        add_monthly_resource_mult = {
+            resource = society_research
+            value = @tier2researchreward
+            min = @tier2researchmin
+            max = @tier2researchmax
+        }
+    }
+    after = {
+        end_event_chain = scfe_celestial_disturbance_chain
+        hidden_effect = {
+            set_country_flag = scfe_celestial_disturbance_finished
+            clear_global_event_target = scfe_celestial_disturbance_homeworld
+            clear_global_event_target = scfe_celestial_disturbance_astral_scar
+            clear_global_event_target = scfe_celestial_disturbance_system
+        }
+    }
+}
+
+# Dig Site
+namespace = scfe_celestial_disturbance_dig
+
+fleet_event = {
+    id = scfe_celestial_disturbance_dig.1
+    title = scfe_celestial_disturbance_dig.1.name
+    desc = scfe_celestial_disturbance_dig.1.desc
+    picture = GFX_evt_barren_dig_site
+    show_sound = event_default
+    is_triggered_only = yes
+    archaeology = yes
+    immediate = {
+        from = { set_site_progress_locked = yes }
+    }
+
+    after = {
+        from = { set_site_progress_locked = no }
+    }
+
+    option = {
+        name = scfe_celestial_disturbance_dig.1.a
+    }
+}
+fleet_event = {
+    id = scfe_celestial_disturbance_dig.2
+    title = scfe_celestial_disturbance_dig.2.name
+    desc = scfe_celestial_disturbance_dig.2.desc
+    picture = GFX_evt_barren_dig_site
+    show_sound = event_default
+    is_triggered_only = yes
+    archaeology = yes
+    immediate = {
+        from = { set_site_progress_locked = yes }
+    }
+
+    after = {
+        from = { set_site_progress_locked = no }
+    }
+
+    option = {
+        name = DIG
+        small_artifact_reward = yes
+    }
+}
+fleet_event = {
+    id = scfe_celestial_disturbance_dig.3
+    title = scfe_celestial_disturbance_dig.3.name
+    desc = scfe_celestial_disturbance_dig.3.desc
+    picture = GFX_evt_barren_dig_site
+    show_sound = event_default
+    is_triggered_only = yes
+    archaeology = yes
+    immediate = {
+        from = { set_site_progress_locked = yes }
+    }
+
+    after = {
+        from = { set_site_progress_locked = no }
+    }
+
+    option = {
+        name = DIG
+        small_artifact_reward = yes
+    }
+}
+fleet_event = {
+    id = scfe_celestial_disturbance_dig.4
+    title = scfe_celestial_disturbance_dig.4.name
+    desc = scfe_celestial_disturbance_dig.4.desc
+    picture = GFX_evt_barren_dig_site
+    show_sound = event_default
+    is_triggered_only = yes
+    archaeology = yes
+    immediate = {
+        from = { set_site_progress_locked = yes }
+    }
+
+    after = {
+        from = { set_site_progress_locked = no }
+    }
+
+    option = {
+        name = DIG
+        small_artifact_reward = yes
+    }
+}
+fleet_event = {
+    id = scfe_celestial_disturbance_dig.5
+    title = scfe_celestial_disturbance_dig.5.name
+    desc = scfe_celestial_disturbance_dig.5.desc
+    picture = GFX_evt_barren_dig_site
+    show_sound = event_default
+    is_triggered_only = yes
+    archaeology = yes
+    immediate = {
+        from = { set_site_progress_locked = yes }
+    }
+
+    after = {
+        from = { set_site_progress_locked = no }
+    }
+
+    option = {
+        name = DIG
+        medium_artifact_reward = yes
+    }
+}
+fleet_event = {
+    id = scfe_celestial_disturbance_dig.6
+    title = scfe_celestial_disturbance_dig.6.name
+    desc = scfe_celestial_disturbance_dig.6.desc
+    picture = GFX_evt_barren_dig_site
+    show_sound = event_default
+    is_triggered_only = yes
+    archaeology = yes
+    immediate = {
+        from = { set_site_progress_locked = yes }
+    }
+
+    after = {
+        from = { set_site_progress_locked = no }
+        if = {
+            limit = { owner = { has_policy_flag = scfe_archaeology_cleanup_active } }
+            destroy_archaeological_site = from
+        }
+    }
+
+    option = {
+        name = FASCINATING
+        large_artifact_reward = yes
+        owner = {
+            country_event = { id = scfe_celestial_disturbance.13 }
+        }
+    }
+}

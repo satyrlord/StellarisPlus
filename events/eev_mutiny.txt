@@ -1,0 +1,226 @@
+# Mutiny
+
+namespace = eev_mutiny_init
+ship_event = {
+	id = eev_mutiny_init.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					country_uses_food = yes
+					has_deficit = food
+				}
+			}
+			set_ship_flag = eev_food_mutiny
+		}
+#		else_if = {
+#			limit = {
+#				owner = {
+#					num_rivals > 1
+#				}
+#			}
+#			random_country = {
+#				limit = { is_country_type = default is_rival = root.owner }
+#				save_global_event_target_as = eev_rival_mutiny_country
+#			}
+#			set_ship_flag = eev_rival_mutiny
+#		}
+		# Also check for war state
+		else = {
+			set_ship_flag = eev_standard_mutiny
+		}
+	}
+}
+
+namespace = eev_mutiny
+
+ship_event = {
+	id = eev_mutiny.1
+	title = eev_mutiny.1.name
+	picture = GFX_evt_satellite_in_orbit
+	show_sound = event_ship_bridge
+	location = root
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	desc = {
+		text = eev_mutiny.1.desc.food
+		trigger = { has_ship_flag = eev_food_mutiny }
+	}
+#	desc = {
+#		text = eev_mutiny.1.desc.rival
+#		trigger = { has_ship_flag = eev_rival_mutiny }
+#	}
+	desc = {
+		text = eev_mutiny.1.desc
+		trigger = { has_ship_flag = eev_standard_mutiny }
+	}
+
+	immediate = {
+		fleet = { set_event_locked = yes }
+	}
+
+	option = {
+		name = eev_mutiny.1.a
+		trigger = { owner = { is_authoritarian = no } }
+		ship_event = { id = eev_mutiny.2 days = 10 }
+	}
+	option = {
+		name = eev_mutiny.1.b
+		trigger = { owner = { is_militarist = no } }
+		ship_event = { id = eev_mutiny.3 days = 30 }
+	}
+	option = {
+		name = eev_mutiny.1.c
+		trigger = { owner = { is_pacifist = no } }
+		custom_tooltip = "eev_mutiny.2.tooltip"
+		fleet = { set_event_locked = no }
+        kill_leader = { class = scientist show_notification = yes }
+		fleet = { destroy_fleet = this }
+	}
+	option = {
+		name = eev_mutiny.1.d
+		hidden_effect = { save_global_event_target_as = eev_mutiny_ship }
+		enable_special_project = {
+			name = EEV_MUTINY_RESCUE
+			location = root
+			owner = root.owner
+		}
+	}
+}
+
+ship_event = {
+	id = eev_mutiny.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			50 = { ship_event = { id = eev_mutiny.4 } }
+			50 = { ship_event = { id = eev_mutiny.6 } }
+		}
+	}
+}
+
+ship_event = {
+	id = eev_mutiny.3
+	title = eev_mutiny.3.name
+	picture = GFX_evt_face_off_in_space
+	show_sound = event_ship_bridge
+	location = root
+	is_triggered_only = yes
+
+	desc = {
+		text = eev_mutiny.3.desc.food
+		trigger = { has_ship_flag = eev_food_mutiny }
+	}
+	#desc = {
+	#	text = eev_mutiny.3.desc.rival
+	#	trigger = { has_ship_flag = eev_rival_mutiny }
+	#}
+	desc = {
+		text = eev_mutiny.3.desc
+		trigger = { has_ship_flag = eev_standard_mutiny }
+	}
+
+	immediate = {
+        kill_leader = { class = scientist show_notification = yes }
+	}
+
+	option = {
+		name = CURSES
+	}
+	after = {
+		if = {
+			limit = { exists = event_target:eev_mutiny_ship }
+			clear_global_event_target = eev_mutiny_ship
+		}
+	}
+}
+
+ship_event = {
+	id = eev_mutiny.4
+	title = eev_mutiny.3.name
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_faceoff_in_space
+	is_triggered_only = yes
+
+	desc = {
+		text = eev_mutiny.4.desc.food
+		trigger = {
+			has_ship_flag = eev_food_mutiny
+		}
+	}
+	desc = {
+		text = eev_mutiny.4.desc
+		trigger = {
+			has_ship_flag = eev_standard_mutiny
+		}
+	}
+
+	option = {
+		name = CURSES
+        kill_leader = { class = scientist show_notification = yes }
+		hidden_effect = {
+			fleet = {
+				set_event_locked = no
+				destroy_fleet = this
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = eev_mutiny.5
+	title = eev_mutiny.5.name
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_faceoff_in_space
+	is_triggered_only = yes
+
+	desc = {
+		text = eev_mutiny.5.desc.food
+		trigger = { has_ship_flag = eev_food_mutiny }
+	}
+	desc = {
+		text = eev_mutiny.5.desc
+		trigger = { has_ship_flag = eev_standard_mutiny }
+	}
+
+	option = {
+		name = eev_mutiny.5.a
+	}
+	after = {
+		clear_global_event_target = eev_mutiny_ship
+	}
+}
+
+ship_event = {
+	id = eev_mutiny.6
+	title = eev_mutiny.5.name
+	picture = GFX_evt_ship_in_orbit
+	show_sound = event_faceoff_in_space
+	is_triggered_only = yes
+
+	desc = {
+		text = eev_mutiny.6.desc.food
+		trigger = { has_ship_flag = eev_food_mutiny }
+	}
+	desc = {
+		text = eev_mutiny.6.desc
+		trigger = { has_ship_flag = eev_standard_mutiny }
+	}
+
+	option = {
+		name = eev_mutiny.5.a
+		owner = {
+			add_resource = { energy = 500 }
+		}
+		hidden_effect = {
+			fleet = { set_event_locked = no }
+		}
+	}
+}

@@ -1,0 +1,270 @@
+decision_scfe_astanine_last_projector = {
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+        cost = {
+            unity = 150
+        }
+    }
+
+    potential = {
+        owner = { has_modifier = mod_r_scfe_astanine_last_projector }
+        NOR = {
+            has_modifier = mod_decision_scfe_astanine_last_projector
+            has_modifier = mod_decision_scfe_astanine_last_projector_gestalt
+        }
+    }
+
+    allow = {
+        owner = {
+            NOT = {
+                any_owned_planet = {
+                    OR = {
+                        has_modifier = mod_decision_scfe_astanine_last_projector
+                        has_modifier = mod_decision_scfe_astanine_last_projector_gestalt
+                    }
+                }
+            }
+        }
+    }
+
+    effect = {
+        if = {
+            limit = { owner = { has_ethic = ethic_gestalt_consciousness } }
+            add_modifier = { modifier = mod_decision_scfe_astanine_last_projector_gestalt days = 3600 }
+            else = {
+                add_modifier = { modifier = mod_decision_scfe_astanine_last_projector days = 3600 }
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+decision_scfe_astanine_last_projector_remove = {
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+    }
+
+    potential = {
+        OR = {
+            has_modifier = mod_decision_scfe_astanine_last_projector
+            has_modifier = mod_decision_scfe_astanine_last_projector_gestalt
+        }
+    }
+
+    effect = {
+        if = {
+            limit = { has_modifier = mod_decision_scfe_astanine_last_projector }
+            remove_modifier = mod_decision_scfe_astanine_last_projector
+        }
+        if = {
+            limit = { has_modifier = mod_decision_scfe_astanine_last_projector_gestalt }
+            remove_modifier = mod_decision_scfe_astanine_last_projector_gestalt
+        }
+    }
+
+    ai_weight = {
+        weight = 0
+    }
+}
+# Roots
+decision_scfe_restore_magnetic_field = {
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+        cost = { energy = 250 }
+    }
+
+    potential = {
+        has_modifier = scfe_rooted_magnetic_field
+        NOT = { has_planet_flag = scfe_roots }
+    }
+
+    allow = {
+        exists = owner
+        owner = { has_technology = tech_shields_3 }
+    }
+
+    effect = {
+        remove_modifier = scfe_rooted_magnetic_field
+        hidden_effect = {
+            owner = { country_event = { id = scfe_roots.21 } }
+        }
+    }
+}
+decision_scfe_connect_with_nature = {
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+        cost = { influence = 200 }
+    }
+
+    potential = {
+        exists = owner
+        owner = {
+            has_country_flag = scfe_rooted_unification
+            is_hive_empire = yes
+            country_uses_food = yes
+        }
+        is_artificial = no
+        NOR = {
+            has_modifier = lush_planet
+            has_planet_flag = scfe_rooted_minerals
+            has_planet_flag = scfe_roots_peace
+        }
+    }
+
+    allow = {
+    }
+
+    effect = {
+        add_modifier = { modifier = lush_planet days = -1 }
+        set_planet_flag = scfe_rooted_lush
+    }
+}
+decision_scfe_draw_from_nature = {
+    owned_planets_only = yes
+
+    resources = {
+        category = decisions
+        cost = { influence = 200 }
+    }
+
+    potential = {
+        exists = owner
+        owner = {
+            has_country_flag = scfe_rooted_unification
+            is_hive_empire = yes
+        }
+        is_artificial = no
+        NOR = {
+            has_modifier = mineral_rich
+            has_modifier = ultra_rich
+            has_planet_flag = scfe_rooted_lush
+            has_planet_flag = scfe_roots_peace
+        }
+    }
+
+    allow = {
+    }
+
+    effect = {
+        add_modifier = { modifier = mineral_rich days = -1 }
+        set_planet_flag = scfe_rooted_minerals
+    }
+}
+# Nyblax
+scfe_decision_planet_haste_rune = {
+    owned_planets_only = yes
+    sound = event_administrative_work
+    icon = scfe_decision_if_planet_haste_rune
+
+    resources = {
+        category = decisions
+    }
+
+    potential = {
+        exists = owner
+        owner = { has_country_flag = relic_haste_rune_activated_for_decision }
+    }
+
+    allow = {
+        NOT = { has_modifier = scfe_planet_haste_rune_boost }
+    }
+
+    effect = {
+        add_modifier = { modifier = "scfe_planet_haste_rune_boost" days = 3600 }
+        hidden_effect = {
+            owner = { remove_country_flag = relic_haste_rune_activated_for_decision }
+        }
+    }
+
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 30
+            is_capital = yes
+        }
+    }
+}
+scfe_decision_planet_illusion_rune = {
+    owned_planets_only = yes
+    sound = event_administrative_work
+    icon = scfe_decision_terraform_arcology
+
+    resources = {
+        category = decisions
+        cost = {
+            # influence = 50
+            # energy = 2000
+        }
+    }
+
+    potential = {
+        exists = owner
+        owner = { has_country_flag = relic_illusion_rune_activated_for_decision }
+        habitable_planet_not_urban = yes
+    }
+
+    allow = {
+        NOT = { has_modifier = scfe_planet_illusion_rune_boost }
+    }
+
+    effect = {
+        add_modifier = { modifier = "scfe_planet_illusion_rune_boost"  }
+        custom_tooltip = scfe_decision_two_prospect_effects_short
+        hidden_effect = {
+        owner = {
+            remove_country_flag = relic_illusion_rune_activated_for_decision }
+            add_random_non_blocker_deposit = yes
+            create_message = {
+                type = MESSAGE_TYPE_PLANET_PROSPECTED
+                localization = MESSAGE_PLANET_PROSPECTED
+                days = 30
+                target = this
+                variable = {
+                    type = name
+                    localization = PLANET
+                    scope = this
+                }
+                variable = {
+                    type = name
+                    localization = DEPOSIT
+                    scope = last_added_deposit
+                }
+            }
+            add_random_non_blocker_deposit = yes
+            create_message = {
+                type = MESSAGE_TYPE_PLANET_PROSPECTED
+                localization = MESSAGE_PLANET_PROSPECTED
+                days = 30
+                target = this
+                variable = {
+                    type = name
+                    localization = PLANET
+                    scope = this
+                }
+                variable = {
+                    type = name
+                    localization = DEPOSIT
+                    scope = last_added_deposit
+                }
+            }
+        }
+    }
+
+    ai_weight = {
+        weight = 10
+        modifier = {
+            factor = 30
+            is_capital = yes
+        }
+    }
+}

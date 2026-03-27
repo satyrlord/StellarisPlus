@@ -1,0 +1,66 @@
+###########################################################################
+##### Written by ZakkerDoodle(Burgermeister) for the Extra Events Mod #####
+###########################################################################
+
+# Diamond Core Anomaly
+namespace = diamond_core
+
+ship_event = {
+	id = diamond_core.1	
+	title = diamond_core.1.name	
+	desc = diamond_core.1.desc	
+	picture = GFX_evt_mining_operations	
+	show_sound = event_ship_bridge
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = diamond_core.1.a
+		leader = {
+			add_experience = 200
+		}
+		
+		owner = {
+			add_monthly_resource_mult = {
+				resource = minerals
+				value = @tier2materialreward
+				min = @tier2materialmin
+				max = @tier2materialmax
+			}
+		}
+
+		from = { 
+			set_deposit = d_minerals_5
+		}
+	}
+}
+
+ship_event = {
+	id = diamond_core.2
+	title = diamond_core.1.name
+	desc = diamond_core.2.desc
+	picture = GFX_evt_mining_operations
+	show_sound = event_ship_bridge
+	location = root
+
+	is_triggered_only = yes
+
+	option = {
+		name = diamond_core.2.a
+		leader = {
+			add_experience = 200
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+		from = {
+			set_deposit = d_engineering_3
+		}
+	}
+}

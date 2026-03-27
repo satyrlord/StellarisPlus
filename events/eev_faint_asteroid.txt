@@ -1,0 +1,116 @@
+namespace = eev_faint_asteroid
+
+country_event = {
+	id = eev_faint_asteroid.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_planet_within_border = {
+			limit = { eev_is_valid_habitat = yes }
+			planet_event = { id = eev_faint_asteroid.2 days = 50 random = 100 }
+		}
+		set_global_flag = eev_had_faint
+	}
+}
+
+planet_event = {
+	id = eev_faint_asteroid.2
+	title = eev_faint_asteroid.2.name
+	desc = eev_faint_asteroid.2.desc
+	picture = GFX_evt_asteroid_approaching_planet
+	show_sound = event_red_alert
+	is_triggered_only = yes
+	location = from
+
+	option = {
+		name = eev_faint_asteroid.2.a
+		trigger = {
+			owner = {
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 2000
+				}
+			}
+		}
+		owner = {
+			add_resource = { energy = -2000 }
+		}
+		add_planet_devastation = 20
+		while = {
+			count = 2
+			weighted_random_owned_pop_group = { kill_single_pop = yes }
+		}
+	}
+	option = {
+		name = TOOPOOR
+		add_planet_devastation = 40
+		while = {
+			count = 5
+			weighted_random_owned_pop_group = { kill_single_pop = yes }
+		}
+	}
+
+	after = {
+		owner = {
+			country_event = {
+				id = eev_faint_asteroid.3 days = 30
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eev_faint_asteroid.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = { has_technology = tech_mine_dark_matter }
+			}
+			country_event = { id = eev_faint_asteroid.4 }
+		}
+		else = {
+			country_event = { id = eev_faint_asteroid.5 }
+		}
+	}
+}
+
+country_event = {
+	id = eev_faint_asteroid.4
+	title = eev_faint_asteroid.4.name
+	desc = eev_faint_asteroid.4.desc
+	picture = GFX_evt_analyzing_artifacts
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = AMAZING
+		add_resource = {
+			sr_dark_matter = 15
+		}
+		add_research_option = tech_mine_dark_matter
+		add_tech_progress = {
+			tech = tech_mine_dark_matter
+			progress = 0.1
+		}
+	}
+}
+
+country_event = {
+	id = eev_faint_asteroid.5
+	title = eev_faint_asteroid.4.name
+	desc = eev_faint_asteroid.5.desc
+	picture = GFX_evt_analyzing_artifacts
+	show_sound = event_default
+	is_triggered_only = yes
+
+	option = {
+		name = AMAZING
+		add_resource = {
+			sr_dark_matter = 30
+		}
+	}
+}

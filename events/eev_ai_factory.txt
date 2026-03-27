@@ -1,0 +1,113 @@
+###########################################################################
+##### Written by ZakkerDoodle(Burgermeister) for the Extra Events Mod #####
+###########################################################################
+
+# Ai Factory Anomaly
+namespace = ai_factory
+
+ship_event = {
+	id = ai_factory.1
+	title = ai_factory.1.name
+	desc = ai_factory.1.desc
+	picture = GFX_evt_robot_assembly_plant
+	show_sound = event_ship_bridge
+	location = root
+
+	is_triggered_only = yes
+
+	immediate = {
+		owner = { country_event = { id = story.5 days = 30 } }
+	}
+
+	option = {
+		name = ai_factory.1.a
+		trigger = {
+			owner = {
+				OR = {
+					has_policy_flag = robots_allowed
+					is_hive_empire = yes
+				}
+				is_robot_empire = no
+				is_machine_empire = no
+			}
+		}
+		leader = {
+			add_experience = 150
+		}
+
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+
+			}
+		}
+	}
+
+	option = {
+		name = ai_factory.1.b
+		exclusive_trigger = {
+			owner = {
+				OR = {
+					is_wilderness_empire = yes
+					has_policy_flag = robots_outlawed
+				}
+			}
+		}
+		leader = {
+			add_experience = 150
+		}
+		from = {
+			set_deposit = d_alloys_3
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}
+
+	option = {
+		name = ai_factory.1.c
+		trigger = {
+			owner = {
+				OR = {
+					is_machine_empire = yes
+					is_robot_empire = yes
+					is_materialist = yes
+				}
+			}
+		}
+		leader = {
+			add_experience = 150
+		}
+		from = {
+			set_deposit = d_engineering_3
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier1unityreward
+				min = @tier1unitymin
+				max = @tier1unitymax
+			}
+		}
+	}
+}

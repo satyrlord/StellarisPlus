@@ -1,0 +1,174 @@
+eev_new_queen_trigger = {
+    NOT = { has_country_flag = eev_new_queen_fired }
+    is_hive_empire = yes
+    has_country_flag = eev_vanilla_hive
+    years_passed >= 30
+}
+eev_terrorist_attack_trigger = {
+    NOT = { has_country_flag = eev_terrorist_attack_check }
+    is_gestalt = no
+    years_passed >= 20
+}
+eev_assassination_attempt_trigger = {
+    NOT = { has_country_flag = eev_assassination_attempt_check }
+    eev_is_std_bio_empire = yes
+    mid_game_years_passed >= 30
+    ruler = {
+        is_event_leader = no
+        is_immortal = no
+    }
+}
+eev_whistleblower_trigger = {
+    NOT = { has_country_flag = eev_whistleblower_check }
+    is_gestalt = no
+    years_passed >= 25
+}
+eev_celebrity_trigger = {
+    NOT = { has_country_flag = eev_celebrity_check }
+    is_gestalt = no
+    years_passed >= 15
+}
+eev_disease_trigger = {
+    NOR = {
+        has_country_flag = eev_disease_check
+        has_country_flag = eev_frixian_plague_cured
+    }
+    eev_is_std_bio_empire = yes
+    years_passed >= 35
+}
+eev_nomads_trigger = {
+    NOT = { has_country_flag = eev_nomads_check }
+    is_gestalt = no
+    has_country_flag = first_contact_event
+    years_passed >= 20
+}
+eev_rich_man_trigger = {
+    NOT = { has_country_flag = eev_rich_man_check }
+    is_gestalt = no
+    years_passed >= 15
+}
+eev_quality_crops_trigger = {
+    NOT = { has_country_flag = eev_quality_crops_check }
+    country_uses_food = yes
+    years_passed >= 20
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        eev_is_continental = yes
+        colony_age >= 50
+        districts_good_food = yes
+    }
+    resource_stockpile_compare = {
+        resource = food
+        value < 200
+    }
+}
+eev_large_fish_trigger = {
+    NOT = { has_country_flag = eev_large_fish_check }
+    country_uses_food = yes
+    years_passed >= 20
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        eev_is_aquatic = yes
+        colony_age >= 50
+        districts_good_food = yes
+    }
+    resource_stockpile_compare = {
+        resource = food
+        value < 200
+    }
+}
+eev_many_minerals_trigger = {
+    NOT = { has_country_flag = eev_many_minerals_check }
+    years_passed >= 20
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        colony_age >= 50
+        districts_good_minerals = yes
+    }
+    resource_stockpile_compare = {
+        resource = minerals
+        value < 200
+    }
+}
+eev_extra_profit_trigger = {
+    NOT = { has_country_flag = eev_extra_profit_check }
+    years_passed >= 20
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        colony_age >= 50
+        districts_good_energy = yes
+    }
+    resource_stockpile_compare = {
+        resource = energy
+        value < 200
+    }
+}
+eev_iam_known_trigger = {
+    NOT = { has_country_flag = iam_known_check }
+    years_passed >= 40
+    num_owned_planets > 15
+    resource_stockpile_compare = {
+        resource = unity
+        value > 5000
+    }
+    resource_stockpile_compare = {
+        resource = influence
+        value > 200
+    }
+}
+eev_traders_aid_trigger = {
+    NOT = { has_country_flag = eev_traders_aid_check }
+    is_gestalt = no
+    years_passed >= 60
+}
+eev_scientists_aid_trigger = {
+    NOT = { has_country_flag = eev_scientists_aid_check }
+    is_gestalt = no
+    years_passed >= 70
+}
+eev_new_sentience_trigger = {
+    NOT = { has_global_flag = eev_new_sentience_check }
+    is_gestalt = no
+    years_passed >= 60
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        is_artificial = no
+        colony_age >= 50
+    }
+}
+eev_illegal_aliens_trigger = {
+    NOT = { has_global_flag = eev_illegal_aliens_check }
+    years_passed >= 35
+    eev_is_std_bio_empire = yes
+    has_comms_with_alien_empire = yes
+}
+eev_faint_asteroid_trigger = {
+    NOT = { has_country_flag = eev_faint_asteroid_check }
+    years_passed >= 50
+    is_gestalt = no
+    any_planet_within_border = {
+        is_colony = yes
+        eev_is_valid_habitat = yes
+        colony_age >= 20
+    }
+}
+eev_rock_pets_trigger = {
+    NOT = { has_country_flag = eev_rock_pets_check }
+    years_passed >= 30
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        colony_age >= 60
+        NOR = {
+            has_planet_flag = colony_event
+            has_deposit = d_alien_pets_deposit
+        }
+    }
+}
+eev_last_signal_trigger = {
+    NOT = { has_country_flag = eev_last_signal_check }
+    years_passed >= 40
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        colony_age >= 20
+    }
+}
