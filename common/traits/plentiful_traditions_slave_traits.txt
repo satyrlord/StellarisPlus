@@ -36,7 +36,7 @@ trait_plentiful_traditions_slave_02 = {
 		trait_plentiful_traditions_slave_07
 	}
 	modifier = {
-		planet_technicians_energy_produces_mult = 0.05
+		planet_technician_energy_produces_mult = 0.05
 	}
 }
 
@@ -131,6 +131,8 @@ trait_plentiful_traditions_slave_07 = {
 		trait_plentiful_traditions_slave_06
 	}
 	modifier = {
-		planet_jobs_sr_produces_mult = 0.05
+		planet_chemists_produces_mult = 0.05
+		planet_refiners_produces_mult = 0.05
+		planet_translucers_produces_mult = 0.05
 	}
 }

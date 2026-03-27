@@ -1093,17 +1093,6 @@ building_clone_vats = {
 		potential = {
 			exists = owner
 			owner = {
-				has_ascension_perk = ap_total_assimilation
-			}
-		}
-		modifier = {
-			bonus_pop_growth = 2
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
 				has_cloning_tradition = no
 			}
 		}

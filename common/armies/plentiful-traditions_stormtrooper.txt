@@ -113,9 +113,9 @@ cylon_army = {
 	}
 
 	potential = {
+		is_homeworld = yes
 		owner = { 
 			has_authority = auth_machine_intelligence
-			is_homeworld = yes
 			has_technology = tech_assault_armies
 			has_ascension_perk = ap_plentiful_traditions_stormtroopers
 		}

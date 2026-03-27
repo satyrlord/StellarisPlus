@@ -85,3 +85,33 @@ Integrated Workshop mods:
   Source: backup/682691478/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=682691478>
   Author: cybrxkhan <https://steamcommunity.com/profiles/76561198030765209/myworkshopfiles/?appid=281990>
+
+- Hyper Relay - Thinner Hyperlanes (Workshop ID: 2951278683)
+  Source: backup/2951278683/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=2951278683>
+  Author: (see Workshop page)
+
+- More AI Personalities (Workshop ID: 701432146)
+  Source: backup/701432146/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=701432146>
+  Author: cybrxkhan <https://steamcommunity.com/profiles/76561198030765209/myworkshopfiles/?appid=281990>
+
+- Animated Portraits Redone - Astroraptor Portraits (Workshop ID: 3665532588)
+  Source: backup/3665532588/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3665532588>
+  Author: (see Workshop page)
+
+- Remastered Human Portraits (Workshop ID: 1591647610)
+  Source: backup/1591647610/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=1591647610>
+  Author: (see Workshop page)
+
+- Simple Leader Level Icons (Workshop ID: 3256755424)
+  Source: backup/3256755424/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3256755424>
+  Author: (see Workshop page)
+
+- Technology Tier Numbers (Workshop ID: 3245570160)
+  Source: backup/3245570160/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3245570160>
+  Author: (see Workshop page)

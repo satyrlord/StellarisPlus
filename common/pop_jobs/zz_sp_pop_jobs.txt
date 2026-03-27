@@ -1,4 +1,4 @@
-# === merged from plentiful_slave_jobs.txt ===
+﻿# === merged from plentiful_slave_jobs.txt ===
 ###################
 # Specialist Jobs
 ###################
@@ -72,10 +72,6 @@ slave_enforcer = {
 			factor = 0.1
 			can_take_servant_job = yes
 		}
-		modifier = {
-			factor = 1.5
-			has_job_type = enforcer
-		}		
 	}
 }
 
@@ -180,10 +176,6 @@ guinea_pigs = {
 			factor = 0.1
 			can_take_servant_job = yes
 		}
-		modifier = {
-			factor = 1.5
-			has_job_type = enforcer
-		}		
 	}
 }
 
@@ -254,10 +246,6 @@ gardener = {
 			factor = 0.1
 			can_take_servant_job = yes
 		}
-		modifier = {
-			factor = 1.5
-			has_job_type = enforcer
-		}		
 	}
 }
 

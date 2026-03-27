@@ -226,6 +226,5 @@ orbital_automatic_spare_part_industry = {
 	
 	system_modifier = {
 		planet_pop_assembly_mult = 0.05
-		pop_assembly_speed = 0.10
 	}
 }

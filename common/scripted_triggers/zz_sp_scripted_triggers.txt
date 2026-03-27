@@ -1,0 +1,24 @@
+# StellarisPlus compatibility triggers
+# Defines triggers expected by integrated mod job overrides
+
+# Checks if the planet's replicator acts as a bath attendant (machine)
+replicator_is_bath_attendant_machine = {
+	exists = owner
+	owner = {
+		OR = {
+			has_valid_civic = civic_machine_toxic_baths
+			has_valid_civic = civic_toxic_baths_individual_machine
+			has_valid_civic = civic_corporate_toxic_baths_individual_machine
+		}
+	}
+	has_active_building = building_toxic_bath_machine
+}
+
+# Checks if the planet's spawning drone acts as a bath attendant (hive)
+spawning_drone_is_bath_attendant_hive_trigger = {
+	exists = owner
+	owner = {
+		has_valid_civic = civic_hive_toxic_baths
+	}
+	has_active_building = building_toxic_bath_hive
+}

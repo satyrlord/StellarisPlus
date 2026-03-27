@@ -1,0 +1,616 @@
+portraits = {
+
+	saurischian_male_orange = {	entity = "portrait_saurischian_male_01_entity"	clothes_selector = "saurischian_male_clothes_01" attachment_selector = "saurischian_male_hair_orange" greeting_sound = "reptilian_01_greetings"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = { 
+			"gfx/models/portraits/saurischian/saurischian_male_body_orange.tga" 
+		}
+		portrait_evolution = {
+			variants = {
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_b.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_b_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_psionic_01.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_uni_body_psionized_01_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_become_psionic = yes
+					}
+				}
+			}
+		}
+	}
+	saurischian_male_red = {	entity = "portrait_saurischian_male_01_entity"	clothes_selector = "saurischian_male_clothes_01" attachment_selector = "saurischian_male_hair_red" greeting_sound = "reptilian_01_greetings"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = { 
+			"gfx/models/portraits/saurischian/saurischian_male_body_red.tga" 
+		}
+		portrait_evolution = {
+			variants = {
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_b.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_b_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_psionic_01.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_uni_body_psionized_01_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_become_psionic = yes
+					}
+				}
+			}
+		}
+	}
+	saurischian_male_green = {	entity = "portrait_saurischian_male_01_entity"	clothes_selector = "saurischian_male_clothes_01" attachment_selector = "saurischian_male_hair_green" greeting_sound = "reptilian_01_greetings"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = { 
+			"gfx/models/portraits/saurischian/saurischian_male_body_green.tga" 
+		}
+		portrait_evolution = {
+			variants = {
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_b.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_b_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_psionic_01.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_uni_body_psionized_01_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_become_psionic = yes
+					}
+				}
+			}
+		}
+	}
+	saurischian_male_black = {	entity = "portrait_saurischian_male_01_entity"	clothes_selector = "saurischian_male_clothes_01" attachment_selector = "saurischian_male_hair_black" greeting_sound = "reptilian_01_greetings"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = { 
+			"gfx/models/portraits/saurischian/saurischian_male_body_black.tga" 
+		}
+		portrait_evolution = {
+			variants = {
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_b.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_male_body_cybernized_01_b_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_male_body_psionic_01.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_uni_body_psionized_01_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_become_psionic = yes
+					}
+				}
+			}
+		}
+	}
+	saurischian_female_01 = {	entity = "portrait_saurischian_female_01_entity"	clothes_selector = "saurischian_female_clothes_01" attachment_selector = "no_texture" greeting_sound = "reptilian_01_greetings"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = {
+			"gfx/models/portraits/saurischian/saurischian_female_body_01.tga" 
+			"gfx/models/portraits/saurischian/saurischian_female_body_02.tga" 
+			"gfx/models/portraits/saurischian/saurischian_female_body_03.tga" 
+			"gfx/models/portraits/saurischian/saurischian_female_body_04.tga" 
+		}
+		portrait_evolution = {
+			variants = {
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_female_body_cybernized_01.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_female_body_cybernized_01_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_cybernetization_stage_1 = yes
+					}
+				}
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_female_body_cybernized_01_b.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_female_body_cybernized_01_b_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_cybernetization_stage_2 = yes
+					}
+				}
+				{
+					# variant 0
+					value = {
+						{
+							decal = "gfx/models/portraits/saurischian/saurischian_female_body_psionic_01.tga"
+							mask = "gfx/models/portraits/saurischian/saurischian_uni_body_psionized_01_mask.tga"
+						}
+					}
+
+					trigger = {
+						has_become_psionic = yes
+					}
+				}
+			}
+		}
+	}
+	##SYNTHETICS
+
+	saurischian_male_synth = {	entity = "portrait_mecha_saurischian_male_01_entity"	clothes_selector = "saurischian_male_clothes_01" attachment_selector = "saurischian_male_hair_black" greeting_sound = "robot_reptilian_greetings"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = { 
+			"gfx/models/portraits/saurischian/saurischian_male_body_cybernized_02.tga" 
+		}
+	}
+	saurischian_female_synth = {	entity = "portrait_mecha_saurischian_female_01_entity"	clothes_selector = "saurischian_female_clothes_01" attachment_selector = "no_texture" greeting_sound = "robot_reptilian_greetings"
+		custom_attachment_label = "HAIR_STYLE"
+		character_textures = {
+			"gfx/models/portraits/saurischian/saurischian_female_body_cybernized_02.tga" 
+		}
+	}
+}
+
+portrait_groups = {
+	saurischian = {
+		default = saurischian_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					saurischian_male_orange
+					saurischian_male_red
+					saurischian_male_green
+					saurischian_male_black
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					saurischian_female_01
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					saurischian_male_orange
+					saurischian_male_red
+					saurischian_male_green
+					saurischian_male_black
+					saurischian_female_01
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					saurischian_male_orange
+					saurischian_male_red
+					saurischian_male_green
+					saurischian_male_black
+					saurischian_female_01
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+					NOT = { leader_class = scientist }
+					NOT = { leader_class = general }
+					NOT = { leader_class = admiral }
+				}
+				portraits = {
+					saurischian_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					NOT = { leader_class = scientist }
+					NOT = { leader_class = general }
+					NOT = { leader_class = admiral }
+				}
+				portraits = {
+					saurischian_male_orange
+					saurischian_male_red
+					saurischian_male_green
+					saurischian_male_black
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					leader_class = scientist
+				}
+				portraits = {
+					saurischian_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					leader_class = scientist
+				}
+				portraits = {
+					saurischian_male_orange
+					saurischian_male_red
+					saurischian_male_green
+					saurischian_male_black
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					leader_class = general
+				}
+				portraits = {
+					saurischian_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					leader_class = general
+				}
+				portraits = {
+					saurischian_male_orange
+					saurischian_male_red
+					saurischian_male_green
+					saurischian_male_black
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					leader_class = admiral
+				}
+				portraits = {
+					saurischian_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					leader_class = admiral
+				}
+				portraits = {
+					saurischian_male_orange
+					saurischian_male_red
+					saurischian_male_green
+					saurischian_male_black
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					leader_class = governor
+				}
+				portraits = {
+					saurischian_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					leader_class = governor
+				}
+				portraits = {
+					saurischian_male_orange
+					saurischian_male_red
+					saurischian_male_green
+					saurischian_male_black
+				}
+			}
+		}
+
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					saurischian_female_01
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					saurischian_male_orange
+					saurischian_male_red
+					saurischian_male_green
+					saurischian_male_black
+				}
+			}
+		}
+	}
+	#SYNTH
+	saurischian_mecha = {
+		default = saurischian_female_synth
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					saurischian_male_synth
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					saurischian_female_synth
+				}
+			}
+
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					saurischian_male_synth
+					saurischian_female_synth
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					saurischian_male_synth
+					saurischian_female_synth
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+					NOT = { leader_class = scientist }
+					NOT = { leader_class = general }
+					NOT = { leader_class = admiral }
+				}
+				portraits = {
+					saurischian_female_synth
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					NOT = { leader_class = scientist }
+					NOT = { leader_class = general }
+					NOT = { leader_class = admiral }
+				}
+				portraits = {
+					saurischian_male_synth
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					leader_class = scientist
+				}
+				portraits = {
+					saurischian_female_synth
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					leader_class = scientist
+				}
+				portraits = {
+					saurischian_male_synth
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					leader_class = general
+				}
+				portraits = {
+					saurischian_female_synth
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					leader_class = general
+				}
+				portraits = {
+					saurischian_male_synth
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					leader_class = admiral
+				}
+				portraits = {
+					saurischian_female_synth
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					leader_class = admiral
+				}
+				portraits = {
+					saurischian_male_synth
+				}
+			}
+			add = {
+				trigger = {
+					gender = female
+					leader_class = governor
+				}
+				portraits = {
+					saurischian_female_synth
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+					leader_class = governor
+				}
+				portraits = {
+					saurischian_male_synth
+				}
+			}
+		}
+
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					saurischian_female_synth
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					saurischian_male_synth
+				}
+			}
+		}
+	}
+}

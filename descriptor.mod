@@ -3,6 +3,11 @@ tags={
 	"Fixes"
 	"Utilities"
 	"Buildings"
+	"Graphics"
+	"Species"
+	"Leaders"
+	"AI"
+	"Diplomacy"
 }
 name="StellarisPlus"
 supported_version="v4.3.*"

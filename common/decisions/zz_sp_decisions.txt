@@ -920,7 +920,7 @@ plentiful_traditions_malice_activate = {
 
 	effect = {
 		hidden_effect = {
-			every_owned_pop_group = {
+			every_owned_pop = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
@@ -943,7 +943,7 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop_group = {
+			every_owned_pop = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
@@ -968,7 +968,7 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop_group = {
+			every_owned_pop = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
@@ -996,7 +996,7 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop_group = {
+			every_owned_pop = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
@@ -1023,7 +1023,7 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop_group = {
+			every_owned_pop = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
@@ -1043,7 +1043,7 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop_group = {
+			every_owned_pop = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
@@ -1054,7 +1054,6 @@ plentiful_traditions_malice_activate = {
 						has_job_type = entertainer
 						has_job_type = culture_worker
 						has_job_type = manager
-						has_job_type = priest
 						has_job_type = patrol_drone
 						has_job_type = soldier
 						has_job_type = preacher
@@ -1080,7 +1079,7 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop_group = {
+			every_owned_pop = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
