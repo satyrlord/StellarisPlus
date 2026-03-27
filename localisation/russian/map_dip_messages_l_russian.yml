@@ -284,7 +284,7 @@
  PH_DOW_PROPOSE_01:0 "This is a declaration of war! OUR WARRIORS TIRE OF PEACE! DRINKING YOUR BLOOD WILL QUENCH THEIR BLOODLUST! THERE WILL BE DESTRUCTION! AND FIRE! DEATH IN BATTLE? THERE IS NO GREATER ENDING!"
  PH_DOW_PROPOSE_02:0 "This is a declaration of war! Understand this, [Root.GetSpeciesNamePluralInsult], a [From.GetSpeciesName] cannot be happy if he or she is not killing or preparing to kill an enemy. We thirst for the blood of innocents, we thirst for the blood of the guilty. We thirst for the blood of the strong, we thirst for the blood of the weak. We do not care. Someday, we shall drink from your blood like a thirsty [Root.GetSpeciesNamePluralInsult] drinks water."
  PH_DOW_PROPOSE_03:0 "This is a declaration of war! YOU WILL ALL BE DEAD EVENTUALLY!"
- PH_DOW_PROPOSE_04:0 "This is a declaration of war! WHERE WILL YOUR HOPE BE WHEN WE RAZE ALL YOUR PLANETS TO DUST?"
+ PH_DOW_PROPOSE_04:0 "This is a declaration of war! We see your dead corpses arrayed so beautifully across your planets..."
  # More greetings BLOOD FOR THE BLOOD GOD SKULLS FOR THE SKULL THRONE
  PH_GENERIC_GREETING_07:0 "THE GALAXY WILL BURN!"
  PH_GENERIC_GREETING_08:0 "PEACE DISGUSTS US."
@@ -1738,7 +1738,7 @@
  QC_MECH_NEUTRAL_GREETING_04:0 "$QC_NEUTRAL_GREETING_04$"
  QC_MECH_NEUTRAL_GREETING_05:0 "$QC_NEUTRAL_GREETING_05$"
  QC_MECH_THREATENED_GREETING_01:0 "You try to be happy. But you cannot be happy. You are just metal and electricity."
- QC_MECH_THREATENED_GREETING_02:0 "$QC_THREATENED_GREETING_02$"
+ QC_MECH_THREATENED_GREETING_02:0 "$QC_THREATENED_GREETING_03$"
  QC_MECH_FRIENDLY_GREETING_01:0 "We must make the [From.GetSpeciesName] happy. It is because the gods love you, even though you are robots. §RYou will be happy.§! You will learn to be happy."
  QC_MECH_FRIENDLY_GREETING_02:0 "$QC_FRIENDLY_GREETING_02$"
  QC_MECH_FRIENDLY_GREETING_03:0 "Can robots like the [From.GetSpeciesName] know the truth? Maybe you can be happy. It would be good if the [From.GetSpeciesName] can be happy."
