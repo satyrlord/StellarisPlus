@@ -237,16 +237,6 @@ tradition_plentiful_mysticism = {
 		"tr_plentiful_mysticism_4"
 		"tr_plentiful_mysticism_5"
 	}
-
-	tradition_swap = {
-		name = tradition_plentiful_mysticism_machine
-		trigger = {
-			has_authority = auth_machine_intelligence
-		}
-		weight = {
-			factor = 1
-		}
-	}
 }
 
 tradition_plentiful_robotics = {
@@ -259,15 +249,6 @@ tradition_plentiful_robotics = {
 		"tr_plentiful_robotics_3"
 		"tr_plentiful_robotics_5"
 		"tr_plentiful_robotics_4"
-	}
-	tradition_swap = {
-		name = tradition_plentiful_robotics_hive
-		trigger = {
-			has_authority = auth_hive_mind
-		}
-		weight = {
-			factor = 1
-		}
 	}
 }
 
@@ -294,19 +275,6 @@ tradition_plentiful_faith = {
 		"tr_plentiful_faith_3"
 		"tr_plentiful_faith_4"
 		"tr_plentiful_faith_2"
-	}
-
-	tradition_swap = {
-		name = tradition_plentiful_faith_machine
-		trigger = {
-			OR = {
-				has_authority = auth_machine_intelligence
-				has_authority = auth_hive_mind
-			}
-		}
-		weight = {
-			factor = 1
-		}
 	}
 }
 

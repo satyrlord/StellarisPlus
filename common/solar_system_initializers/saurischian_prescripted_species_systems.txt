@@ -1,6 +1,5 @@
 saurischian_system = {
 	class = "sc_k"
-	asteroids_distance = 270 	# 170 plus 40
 	
 	usage = custom_empire
 	
@@ -60,7 +59,6 @@ saurischian_system = {
 			class = pc_barren
 			orbit_angle = 0
 			size = 5
-			tile_blockers = none
 		}
 		moon = {
 			name = "Hoalkan"
@@ -68,7 +66,6 @@ saurischian_system = {
 			class = pc_barren
 			orbit_angle = 0
 			size = 2
-			tile_blockers = none
 		}
 	}
 	planet = {
@@ -79,14 +76,12 @@ saurischian_system = {
 		has_ring = no
 		size = 25
 		starting_planet = yes
-		tile_blockers = none
 		moon = {
 			name = "XP-1101"
 			orbit_distance = 14
 			class = pc_asteroid
 			orbit_angle = -40
 			size = 1
-			tile_blockers = none
 			init_effect = {
 				clear_deposits = yes
 			}
@@ -97,7 +92,6 @@ saurischian_system = {
 			class = pc_asteroid
 			orbit_angle = 240
 			size = 2
-			tile_blockers = none
 			init_effect = {
 				clear_deposits = yes
 				add_deposit = d_volatile_motes_1
@@ -109,7 +103,6 @@ saurischian_system = {
 			class = pc_asteroid
 			orbit_angle = 70
 			size = 1
-			tile_blockers = none
 			init_effect = {
 				clear_deposits = yes
 				add_deposit = d_volatile_motes_2
@@ -121,7 +114,6 @@ saurischian_system = {
 			class = pc_molten
 			orbit_angle = -60
 			size = 4
-			tile_blockers = none
 			init_effect = {
 				clear_deposits = yes
 				add_deposit = d_minerals_3
@@ -142,7 +134,6 @@ saurischian_system = {
 			class = pc_savannah
 			orbit_angle = 20
 			size = 16
-			tile_blockers = none
 		} #closes moon
 	}
 	planet = {
@@ -175,7 +166,6 @@ saurischian_system = {
 saurischian_neighbor_t1 = {
 	name = "Warping Lash"
 	class = sc_black_hole
-	asteroids_distance = 400
 
 	planet = {
 		count = 1
@@ -231,7 +221,6 @@ saurischian_neighbor_t101 = {
 saurischian_neighbor_t102 = {
 	name = "Nurphipla"
 	class = sc_black_hole
-	asteroids_distance = 600
 
 	planet = {
 		count = 1
@@ -312,7 +301,6 @@ saurischian_neighbor_t1_first_colony = {
 saurischian_neighbor_t2 = {
 	name = "Prozarria"
 	class = sc_f
-	asteroids_distance = 110
 
 	planet = {
 		name = "Prozarria"

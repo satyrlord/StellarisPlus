@@ -880,9 +880,9 @@ tr_research_advanced_studies = {
 
 tr_plentiful_affinity_adopt = {
 #	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_affinity_adopt_desc
 	modifier = {
-#		tradition_cost_num_systems_mult = -0.15
-#		tradition_cost_num_colonies_mult = -0.15
+		planet_immigration_pull_mult = 1
 	}
 	ai_weight = {
 		factor = 10
@@ -1204,7 +1204,7 @@ tr_plentiful_ascension_1 = {
 
 tr_plentiful_ascension_2 = {
 #	cost = { unity = @cost }
-	
+	custom_tooltip_with_modifiers = tr_plentiful_ascension_2_delayed
 	modifier = {
 		country_official_cap_add = 2
 	}
@@ -1234,6 +1234,7 @@ tr_plentiful_ascension_4 = {
 	possible = {
 		has_tradition = tr_plentiful_ascension_2
 	}
+	custom_tooltip_with_modifiers = tr_plentiful_ascension_4_delayed
 	modifier = {
 		commander_initial_skill = 2
 	}
@@ -1275,6 +1276,7 @@ tr_plentiful_aspiration_adopt = {
 		trigger = {
 			is_gestalt = yes
 		}
+		custom_tooltip_with_modifiers = tr_plentiful_aspiration_gestalt_adopt_desc
 		
 		modifier = {
 		}
@@ -2167,6 +2169,7 @@ tr_plentiful_faith_adopt = {
 				has_authority = auth_hive_mind
 			}
 		}
+		custom_tooltip_with_modifiers = tr_plentiful_faith_adopt_machine_desc
 # Event
 		weight = {
 			factor = 1
@@ -2723,6 +2726,7 @@ tr_plentiful_mutagenesis_adopt = {
 		trigger = {
 			has_authority = auth_machine_intelligence
 		}
+		custom_tooltip_with_modifiers = tr_plentiful_mutagenesis_adopt_machine_desc
 		
 		modifier = {
 		# Plentiful Cloning Vats

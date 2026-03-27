@@ -920,13 +920,13 @@ plentiful_traditions_malice_activate = {
 
 	effect = {
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
 					OR = {
-						has_job_type = livestock
-						has_job_type = organic_battery
+							has_job = livestock
+							has_job = organic_battery
 					}
 					NOT = {
 						has_trait = trait_plentiful_traditions_slave_01
@@ -943,15 +943,15 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
 					OR = {
-						has_job_type = technician_drone
-						has_job_type = technician
-						has_job_type = primitive_technician
-						has_job_type = fe_acolyte_generator
+							has_job = technician_drone
+							has_job = technician
+							has_job = primitive_technician
+							has_job = fe_acolyte_generator
 					}
 					NOT = {
 						has_trait = trait_plentiful_traditions_slave_02
@@ -968,18 +968,18 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
 					OR = {
-						has_job_type = foundry
-						has_job_type = fabricator
-						has_job_type = alloy_drone
-						has_job_type = mining_drone
-						has_job_type = miner
-						has_job_type = primitive_miner
-						has_job_type = fe_acolyte_mine
+							has_job = foundry
+							has_job = fabricator
+							has_job = alloy_drone
+							has_job = mining_drone
+							has_job = miner
+							has_job = primitive_miner
+							has_job = fe_acolyte_mine
 					}
 					NOT = {
 						has_trait = trait_plentiful_traditions_slave_03
@@ -996,17 +996,17 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
 					OR = {
-						has_job_type = agri_drone
-						has_job_type = farmer
-						has_job_type = hunter_gatherer
-						has_job_type = peasant
-						has_job_type = primitive_farmer
-						has_job_type = fe_acolyte_farm
+							has_job = agri_drone
+							has_job = farmer
+							has_job = hunter_gatherer
+							has_job = peasant
+							has_job = primitive_farmer
+							has_job = fe_acolyte_farm
 					}
 					NOT = {
 						has_trait = trait_plentiful_traditions_slave_04
@@ -1023,11 +1023,11 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
-					has_job_type = guinea_pigs
+						has_job = guinea_pigs
 					NOT = {
 						has_trait = trait_plentiful_traditions_slave_05
 					}
@@ -1043,26 +1043,26 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
 					OR = {
-						has_job_type = bio_trophy
-						has_job_type = enforcer
-						has_job_type = telepath
-						has_job_type = entertainer
-						has_job_type = culture_worker
-						has_job_type = manager
-						has_job_type = patrol_drone
-						has_job_type = soldier
-						has_job_type = preacher
-						has_job_type = fe_xeno_ward
-						has_job_type = fe_hedonist
-						has_job_type = artisan
-						has_job_type = artisan_drone
-						has_job_type = primitive_laborer
-						has_job_type = fe_acolyte_artisan
+							has_job = bio_trophy
+							has_job = enforcer
+							has_job = telepath
+							has_job = entertainer
+							has_job = culture_worker
+							has_job = manager
+							has_job = patrol_drone
+							has_job = soldier
+							has_job = preacher
+							has_job = fe_xeno_ward
+							has_job = fe_hedonist
+							has_job = artisan
+							has_job = artisan_drone
+							has_job = primitive_laborer
+							has_job = fe_acolyte_artisan
 					}
 					NOT = {
 						has_trait = trait_plentiful_traditions_slave_06
@@ -1079,21 +1079,21 @@ plentiful_traditions_malice_activate = {
 					remove_trait = trait_plentiful_traditions_slave_07
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					is_enslaved = yes
 					is_robot_pop = no
 					OR = {
-						has_job_type = chemist
-						has_job_type = chemist_drone
-						has_job_type = mote_harvester
-						has_job_type = translucer
-						has_job_type = translucer_drone
-						has_job_type = crystal_miner
-						has_job_type = gas_refiner
-						has_job_type = gas_refiner_drone
-						has_job_type = gas_extractor
-						has_job_type = dimensional_portal_researcher
+							has_job = chemist
+							has_job = chemist_drone
+							has_job = mote_harvester
+							has_job = translucer
+							has_job = translucer_drone
+							has_job = crystal_miner
+							has_job = gas_refiner
+							has_job = gas_refiner_drone
+							has_job = gas_extractor
+							has_job = dimensional_portal_researcher
 					}
 					NOT = {
 						has_trait = trait_plentiful_traditions_slave_07
