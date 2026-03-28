@@ -1,3 +1,1920 @@
+# === merged from ! asp_placeholder_triggers.txt ===
+# Irony this is a placeholder file please ignore it
+annihilator_system = { always = no }
+atw_is_alpine = { always = no }
+atw_is_arctic = { always = no }
+atw_is_barren = { always = no }
+atw_is_barren_cold = { always = no }
+atw_is_continental = { always = no }
+atw_is_desert = { always = no }
+atw_is_frozen = { always = no }
+atw_is_gaia = { always = no }
+atw_is_gas_giant = { always = no }
+atw_is_molten = { always = no }
+atw_is_nuked = { always = no }
+atw_is_ocean_basic = { always = no }
+atw_is_savannah = { always = no }
+atw_is_toxic = { always = no }
+atw_is_tropical = { always = no }
+atw_is_tundra = { always = no }
+cohesive_system = { always = no }
+everchanging_system = { always = no }
+giga_is_superpower_star = { always = no }
+has_MAP_active = { always = no }
+has_PreSelect_active = { always = no }
+has_ariphaos_assorted_precursors = { always = no }
+has_bug_branch = { always = no }
+has_diagraphers_trait_mod = { always = no }
+ag_is_black_hole_class = { is_star_class = sc_black_hole }
+is_aot_habitat = { always = no }
+is_anthropocentric = { always = no }
+is_competitive = { always = no }
+is_cooperative = { always = no }
+is_ds_skycatcher = { always = no }
+is_ecocentric = { always = no }
+is_elitist = { always = no }
+is_giga_habitat = { always = no }
+is_multihive_drone = { always = no }
+is_pc_mem_vazuran_habitat = { always = no }
+is_pd_alpine = { always = no }
+is_pd_aquatics = { always = no }
+is_pd_arctic = { always = no }
+is_pd_barren = { always = no }
+is_pd_barren_cold = { always = no }
+is_pd_continental = { always = no }
+is_pd_desert = { always = no }
+is_pd_gaia = { always = no }
+is_pd_habitat = { always = no }
+is_pd_molten = { always = no }
+is_pd_nuked = { always = no }
+is_pd_ocean = { always = no }
+is_pd_planet_for_aqua_trait = { always = no }
+is_pd_savannah = { always = no }
+is_pd_toxic = { always = no }
+is_pd_tropical = { always = no }
+is_pd_tundra = { always = no }
+is_planet_class_pc_a_super_star = { always = no }
+is_planet_class_pc_g_giant_star = { always = no }
+is_planet_class_pc_k_giant_star = { always = no }
+is_planet_class_pc_o_hyper_star = { always = no }
+is_planet_class_pc_o_star = { always = no }
+is_planet_class_pc_o_super_star = { always = no }
+is_pluralist = { always = no }
+is_td_multi_hiveminded = { always = no }
+is_zofe_country = { always = no }
+is_zofe_utopian_habitat = { always = no }
+katzen_jump_blocked_system = { always = no }
+pd_is_alpine = { always = no }
+pd_is_arctic = { always = no }
+pd_is_arid = { always = no }
+pd_is_continental = { always = no }
+pd_is_desert = { always = no }
+pd_is_ocean = { always = no }
+pd_is_planet_class_gaia = { always = no }
+pd_is_planet_class_nuked = { always = no }
+pd_is_savannah = { always = no }
+pd_is_tropical = { always = no }
+pd_is_tundra = { always = no }
+scfe_has_lartia_chain = { always = no }
+scfe_has_plexi_chain = { always = no }
+scfe_has_volgan_chain = { always = no }
+urmazin_system = { always = no }
+
+# === merged from asp_triggers.txt ===
+asp_mod_active = { always = yes }
+
+asp_dig_site_visible_trigger = {
+	asp_is_default_empire = yes
+	is_ai = no
+	exists = from
+	exists = from.planet
+	exists = from.solar_system
+	default_site_visible_trigger = yes
+}
+
+asp_is_general_planet = {
+	OR = {
+		habitable_planet = yes
+		asp_is_uninhabitable = yes
+	}
+}
+
+asp_is_aquatic = {
+	is_wet = yes
+	OR = {
+		is_planet_class = pc_ocean
+		# All These Worlds
+		atw_is_ocean_basic = yes
+		# Planetary Diversity
+		is_pd_ocean = yes
+		is_pd_aquatics = yes
+		pd_is_ocean = yes
+	}
+}
+
+asp_is_continental = {
+	is_wet = yes
+	OR = {
+		is_planet_class = pc_continental
+		# Planetary Diversity
+		is_pd_continental = yes
+		pd_is_continental = yes
+		# All These Worlds
+		atw_is_continental = yes
+	}
+}
+
+asp_is_desertic = {
+	is_dry = yes
+	OR = {
+		is_planet_class = pc_desert
+		# Planetary Diversity
+		is_pd_desert = yes
+		pd_is_desert = yes
+		# All These Worlds
+		atw_is_desert = yes
+	}
+}
+
+asp_is_frozen = {
+	OR = {
+		is_planet_class = pc_frozen
+		is_planet_class = pc_arctic
+		# All These Worlds
+		atw_is_frozen = yes
+		# Planetary Diversity
+		is_pd_arctic = yes
+	}
+}
+
+asp_is_tundra = {
+	OR = {
+		is_planet_class = pc_tundra
+		# Planetary Diversity
+		is_pd_tundra = yes
+		pd_is_tundra = yes
+		# All These Worlds
+		atw_is_tundra = yes
+	}
+}
+
+asp_is_gas_giant = {
+	OR = {
+		is_planet_class = pc_gas_giant
+		# All these worlds
+		atw_is_gas_giant = yes
+	}
+}
+
+asp_is_scientist_cautious = {
+	OR = {
+		has_trait = leader_trait_roamer
+		has_trait = leader_trait_chosen
+		has_trait = leader_trait_curator
+		has_trait_tier1or2 = { TRAIT = leader_trait_paranoid }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_slippery }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_observant }
+	}
+}
+
+asp_is_heavy_metal = {
+	OR = {
+		is_mechanical_empire = yes
+		is_robot_empire = yes
+	}
+}
+
+asp_is_uninhabitable = {
+	OR = {
+		uninhabitable_regular_planet = yes
+		asp_is_frozen = yes
+		asp_is_barren = yes
+		asp_is_molten = yes
+		asp_is_barren_cold = yes
+		# Planetary Diversity
+		is_pd_toxic = yes
+		# All These Worlds
+		atw_is_toxic = yes
+	}
+}
+
+asp_is_valid_system = {
+	solar_system = {
+		exists = star
+		NOR = {
+			has_star_flag = sealed_system
+			has_star_flag = empire_cluster
+			has_special_star_flag_trigger = yes
+			is_fe_cluster = yes
+			has_star_flag = drone_home_system
+			any_system_planet = {
+				OR = {
+					exists = archaeological_site
+					has_planet_flag = hatchling_egg
+					has_planet_flag = suppress_archaeological_sites
+				}
+			}
+		}
+	}
+}
+
+asp_is_valid_alshigan_system = {
+	solar_system = {
+		exists = star
+		NOR = {
+			has_star_flag = sealed_system
+			has_star_flag = empire_cluster
+			has_special_star_flag_trigger = yes
+			is_fe_cluster = yes
+			has_star_flag = drone_home_system
+			any_system_planet = {
+				OR = {
+					has_planet_flag = hatchling_egg
+					has_planet_flag = suppress_archaeological_sites
+				}
+			}
+		}
+	}
+}
+
+asp_is_modern_age = {
+	OR = {
+		has_pre_ftl_age = industrial_age
+		has_pre_ftl_age = machine_age
+	}
+}
+
+asp_is_barren = {
+	OR = {
+		is_planet_class = pc_barren
+		# Planetary Diversity
+		is_pd_barren = yes
+		# All These Worlds
+		atw_is_barren = yes
+	}
+}
+
+asp_is_barren_cold = {
+	OR = {
+		is_planet_class = pc_barren_cold
+		# Planetary Diversity
+		is_pd_barren_cold = yes
+		# All These Worlds
+		atw_is_barren_cold = yes
+	}
+}
+
+asp_is_arctic = {
+	OR = {
+		is_planet_class = pc_arctic
+		# Planetary Diversity
+		is_pd_barren = yes
+		pd_is_arctic = yes
+		# All These Worlds
+		atw_is_arctic = yes
+	}
+}
+
+asp_is_valid_moon = {
+	AND = {
+		asp_is_barren = yes
+		is_moon = yes
+		NOT = { has_planet_flag = has_megastructure }
+		solar_system = {
+			starting_system = no
+		}
+	}
+}
+
+asp_is_valid_colony = {
+	AND = {
+		is_colony = yes
+		is_capital = no
+		is_artificial = no
+	}
+}
+
+asp_is_gaia = {
+	OR = {
+		is_planet_class = pc_gaia
+		# All These Worlds
+		atw_is_gaia = yes
+		# Planetary Diversity
+		is_pd_gaia = yes
+		pd_is_planet_class_gaia = yes
+	}
+}
+
+asp_is_molten = {
+	OR = {
+		is_planet_class = pc_molten
+		# All These Worlds
+		atw_is_molten = yes
+		# Planetary Diversity
+		is_pd_molten = yes
+	}
+}
+
+asp_is_tropical = {
+	OR = {
+		is_planet_class = pc_tropical
+		# All These Worlds
+		atw_is_tropical = yes
+		# Planetary Diversity
+		is_pd_tropical = yes
+		pd_is_tropical = yes
+	}
+}
+
+asp_is_alpine = {
+	OR = {
+		is_planet_class = pc_alpine
+		# All These Worlds
+		atw_is_alpine = yes
+		# Planetary Diversity
+		is_pd_alpine = yes
+		pd_is_alpine = yes
+	}
+}
+
+asp_is_savannah = {
+	OR = {
+		is_planet_class = pc_savannah
+		# All These Worlds
+		atw_is_savannah = yes
+		# Planetary Diversity
+		is_pd_savannah = yes
+		pd_is_savannah = yes
+	}
+}
+
+asp_is_toxic = {
+	OR = {
+		is_planet_class = pc_toxic
+		# Planetary Diversity
+		is_pd_toxic = yes
+		# All These Worlds
+		atw_is_toxic = yes
+	}
+}
+
+asp_is_moon_of_gas_giant = {
+	is_scope_type = planet
+	exists = orbit
+	OR = {
+		orbit = { asp_is_gas_giant = yes }
+		has_planet_flag = gas_giant_moon
+	}
+}
+
+# === merged from aspmod_scripted_triggers_planet_killers.txt ===
+can_destroy_planet_with_PLANET_KILLER_GEOCENTRIC_DEVICE = {
+	custom_tooltip = {
+		fail_text = is_not_a_habitable_planet_or_megastructure
+		OR = {
+			is_a_habitable_planet_megastructure = yes
+			is_planet_class = pc_ai
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_not_hostile_or_primitive
+		OR = {
+			planet_is_hostile_or_crisis = yes
+			AND = {
+				exists = owner
+				owner = {
+					is_country_type = primitive
+				}
+			}
+		}
+	}
+	custom_tooltip = {
+		fail_text = is_shielded
+		NOR = {
+			is_planet_class = pc_shielded
+			is_planet_class = pc_ringworld_shielded
+			is_planet_class = pc_habitat_shielded
+		}
+	}
+}
+
+# === merged from aspmod_scripted_triggers.txt ===
+aspmod_dig_site_default_spawn_rules = {
+	solar_system = {
+		exists = star
+		NOR = {
+			has_star_flag = sealed_system
+			has_star_flag = empire_cluster
+			has_special_star_flag_trigger = yes
+			is_fe_cluster = yes
+			has_star_flag = drone_home_system
+			any_system_planet = {
+				OR = {
+					has_planet_flag = hatchling_egg
+					has_planet_flag = suppress_archaeological_sites
+				}
+			}
+		}
+	}
+	has_anomaly = no
+	NOT = { exists = archaeological_site }
+}
+aspmod_dig_site_visible_trigger = {
+	asp_is_default_empire = yes
+	is_ai = no
+	exists = from
+	exists = from.planet
+	exists = from.solar_system
+	default_site_visible_trigger = yes
+}
+
+asp_is_default_empire = {
+	OR = {
+		is_country_type = default
+		# ZOFE
+		is_zofe_country = yes
+	}
+}
+
+# === merged from eev_event_trigger.txt ===
+eev_new_queen_trigger = {
+    NOT = { has_country_flag = eev_new_queen_fired }
+    is_hive_empire = yes
+    has_country_flag = eev_vanilla_hive
+    years_passed >= 30
+}
+eev_terrorist_attack_trigger = {
+    NOT = { has_country_flag = eev_terrorist_attack_check }
+    is_gestalt = no
+    years_passed >= 20
+}
+eev_assassination_attempt_trigger = {
+    NOT = { has_country_flag = eev_assassination_attempt_check }
+    eev_is_std_bio_empire = yes
+    mid_game_years_passed >= 30
+    ruler = {
+        is_event_leader = no
+        is_immortal = no
+    }
+}
+eev_whistleblower_trigger = {
+    NOT = { has_country_flag = eev_whistleblower_check }
+    is_gestalt = no
+    years_passed >= 25
+}
+eev_celebrity_trigger = {
+    NOT = { has_country_flag = eev_celebrity_check }
+    is_gestalt = no
+    years_passed >= 15
+}
+eev_disease_trigger = {
+    NOR = {
+        has_country_flag = eev_disease_check
+        has_country_flag = eev_frixian_plague_cured
+    }
+    eev_is_std_bio_empire = yes
+    years_passed >= 35
+}
+eev_nomads_trigger = {
+    NOT = { has_country_flag = eev_nomads_check }
+    is_gestalt = no
+    has_country_flag = first_contact_event
+    years_passed >= 20
+}
+eev_rich_man_trigger = {
+    NOT = { has_country_flag = eev_rich_man_check }
+    is_gestalt = no
+    years_passed >= 15
+}
+eev_quality_crops_trigger = {
+    NOT = { has_country_flag = eev_quality_crops_check }
+    country_uses_food = yes
+    years_passed >= 20
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        eev_is_continental = yes
+        colony_age >= 50
+        districts_good_food = yes
+    }
+    resource_stockpile_compare = {
+        resource = food
+        value < 200
+    }
+}
+eev_large_fish_trigger = {
+    NOT = { has_country_flag = eev_large_fish_check }
+    country_uses_food = yes
+    years_passed >= 20
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        eev_is_aquatic = yes
+        colony_age >= 50
+        districts_good_food = yes
+    }
+    resource_stockpile_compare = {
+        resource = food
+        value < 200
+    }
+}
+eev_many_minerals_trigger = {
+    NOT = { has_country_flag = eev_many_minerals_check }
+    years_passed >= 20
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        colony_age >= 50
+        districts_good_minerals = yes
+    }
+    resource_stockpile_compare = {
+        resource = minerals
+        value < 200
+    }
+}
+eev_extra_profit_trigger = {
+    NOT = { has_country_flag = eev_extra_profit_check }
+    years_passed >= 20
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        colony_age >= 50
+        districts_good_energy = yes
+    }
+    resource_stockpile_compare = {
+        resource = energy
+        value < 200
+    }
+}
+eev_iam_known_trigger = {
+    NOT = { has_country_flag = iam_known_check }
+    years_passed >= 40
+    num_owned_planets > 15
+    resource_stockpile_compare = {
+        resource = unity
+        value > 5000
+    }
+    resource_stockpile_compare = {
+        resource = influence
+        value > 200
+    }
+}
+eev_traders_aid_trigger = {
+    NOT = { has_country_flag = eev_traders_aid_check }
+    is_gestalt = no
+    years_passed >= 60
+}
+eev_scientists_aid_trigger = {
+    NOT = { has_country_flag = eev_scientists_aid_check }
+    is_gestalt = no
+    years_passed >= 70
+}
+eev_new_sentience_trigger = {
+    NOT = { has_global_flag = eev_new_sentience_check }
+    is_gestalt = no
+    years_passed >= 60
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        is_artificial = no
+        colony_age >= 50
+    }
+}
+eev_illegal_aliens_trigger = {
+    NOT = { has_global_flag = eev_illegal_aliens_check }
+    years_passed >= 35
+    eev_is_std_bio_empire = yes
+    has_comms_with_alien_empire = yes
+}
+eev_faint_asteroid_trigger = {
+    NOT = { has_country_flag = eev_faint_asteroid_check }
+    years_passed >= 50
+    is_gestalt = no
+    any_planet_within_border = {
+        is_colony = yes
+        eev_is_valid_habitat = yes
+        colony_age >= 20
+    }
+}
+eev_rock_pets_trigger = {
+    NOT = { has_country_flag = eev_rock_pets_check }
+    years_passed >= 30
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        colony_age >= 60
+        NOR = {
+            has_planet_flag = colony_event
+            has_deposit = d_alien_pets_deposit
+        }
+    }
+}
+eev_last_signal_trigger = {
+    NOT = { has_country_flag = eev_last_signal_check }
+    years_passed >= 40
+    any_owned_planet = {
+        eev_is_valid_colony = yes
+        colony_age >= 20
+    }
+}
+
+# === merged from eev_triggers.txt ===
+eev_mod_active = { always = yes }
+
+eev_is_general_planet = {
+	OR = {
+		habitable_planet = yes
+		eev_is_uninhabitable = yes
+	}
+}
+
+eev_is_continental = {
+	is_wet = yes
+	OR = {
+		is_planet_class = pc_continental
+		# Planetary Diversity
+		pd_is_continental = yes
+		# All These Worlds
+		atw_is_continental = yes
+	}
+}
+
+eev_is_desertic = {
+	is_dry = yes
+	OR = {
+		is_planet_class = pc_desert
+		# Planetary Diversity
+		pd_is_desert = yes
+		# All These Worlds
+		atw_is_desert = yes
+	}
+}
+
+eev_is_aquatic = {
+	is_wet = yes
+	OR = {
+		is_planet_class = pc_ocean
+		# All These Worlds
+		atw_is_ocean_basic = yes
+		# Planetary Diversity
+		pd_is_ocean = yes
+		is_pd_planet_for_aqua_trait = yes
+	}
+}
+
+eev_is_frozen = {
+	OR = {
+		is_planet_class = pc_frozen
+		is_planet_class = pc_arctic
+		# All These Worlds
+		atw_is_frozen = yes
+		# Planetary Diversity
+		pd_is_arctic = yes
+	}
+}
+
+eev_is_tundra = {
+	OR = {
+		is_planet_class = pc_tundra
+		# Planetary Diversity
+		pd_is_tundra = yes
+		# All These Worlds
+		atw_is_tundra = yes
+	}
+}
+
+eev_is_gas_giant = {
+	OR = {
+		is_planet_class = pc_gas_giant
+		# All these worlds
+		atw_is_gas_giant = yes
+	}
+}
+
+eev_is_scientist_cautious = {
+	OR = {
+		has_trait = leader_trait_roamer
+		has_trait = leader_trait_chosen
+		has_trait = leader_trait_curator
+		has_trait_tier1or2 = { TRAIT = leader_trait_paranoid }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_slippery }
+		has_trait_tier1or2or3 = { TRAIT = leader_trait_observant }
+		has_leader_flag = leader_death_events_blocked
+	}
+}
+
+eev_is_heavy_metal = {
+	OR = {
+		is_mechanical_empire = yes
+		is_robot_empire = yes
+	}
+}
+
+eev_is_uninhabitable = {
+	OR = {
+		uninhabitable_regular_planet = yes
+		eev_is_frozen = yes
+		eev_is_barren = yes
+		eev_is_molten = yes
+		eev_is_barren_cold = yes
+		# All These Worlds
+		atw_is_toxic = yes
+	}
+}
+
+eev_is_valid_system = {
+	solar_system = {
+		exists = star
+		NOR = {
+			any_system_planet = {
+				OR = {
+					exists = archaeological_site
+					has_planet_flag = hatchling_egg
+					has_planet_flag = suppress_archaeological_sites
+				}
+			}
+			has_special_star_flag_trigger = yes
+			has_star_flag = empire_cluster
+			has_star_flag = precursor_system
+			is_fe_cluster = yes
+			has_star_flag = drone_home_system
+			has_star_flag = chosen_system
+			has_star_flag = outercluster
+			cohesive_system = yes
+			urmazin_system = yes
+			everchanging_system = yes
+		}
+	}
+}
+
+# Listing habitats
+eev_is_habitat = {
+	OR = {
+		is_planet_class = pc_habitat
+		uses_district_set = habitat
+		# Acquisition of Technology
+		is_aot_habitat = yes
+		# DarkSpace
+		is_ds_skycatcher = yes
+		# Gigastructural Engineering & More
+		is_giga_habitat = yes
+		# Habitation
+		has_planet_flag = hab_init
+		# Living Space
+		has_planet_flag = stpg_planetary_habitat
+		# ZOFE
+		is_zofe_utopian_habitat = yes
+	}
+}
+
+eev_is_modern_age = {
+	OR = {
+		has_pre_ftl_age = industrial_age
+		has_pre_ftl_age = machine_age
+	}
+}
+
+eev_is_barren = {
+	OR = {
+		is_planet_class = pc_barren
+		# All These Worlds
+		atw_is_barren = yes
+	}
+}
+
+eev_is_barren_cold = {
+	OR = {
+		is_planet_class = pc_barren_cold
+		# All These Worlds
+		atw_is_barren_cold = yes
+	}
+}
+
+eev_is_arctic = {
+	OR = {
+		is_planet_class = pc_arctic
+		# Planetary Diversity
+		pd_is_arctic = yes
+		# All These Worlds
+		atw_is_arctic = yes
+	}
+}
+
+eev_is_valid_moon = {
+	AND = {
+		eev_is_barren = yes
+		is_moon = yes
+		NOT = { has_planet_flag = has_megastructure }
+		solar_system = {
+			starting_system = no
+		}
+	}
+}
+
+eev_is_valid_habitat = {
+	AND = {
+		eev_is_habitat = yes
+		is_capital = no
+	}
+}
+
+eev_is_valid_colony = {
+	AND = {
+		is_colony = yes
+		is_capital = no
+		is_artificial = no
+		colony_age >= 12
+	}
+}
+eev_check_valid_colony = {
+	any_owned_planet = {
+		eev_is_valid_colony = yes
+	}
+}
+eev_is_std_bio_empire = {
+	is_country_type = default
+	is_hive_empire = no
+	eev_is_heavy_metal = no
+}
+eev_is_gaia = {
+	OR = {
+		is_planet_class = pc_gaia
+		# All These Worlds
+		atw_is_gaia = yes
+		# Planetary Diversity
+		pd_is_planet_class_gaia = yes
+	}
+}
+
+eev_is_molten = {
+	OR = {
+		is_planet_class = pc_molten
+		# All These Worlds
+		atw_is_molten = yes
+	}
+}
+
+eev_is_tropical = {
+	OR = {
+		is_planet_class = pc_tropical
+		# All These Worlds
+		atw_is_tropical = yes
+		# Planetary Diversity
+		pd_is_tropical = yes
+	}
+}
+
+eev_is_alpine = {
+	OR = {
+		is_planet_class = pc_alpine
+		# All These Worlds
+		atw_is_alpine = yes
+		# Planetary Diversity
+		pd_is_alpine = yes
+	}
+}
+
+eev_has_bugged_ethic = {
+	OR = {
+		is_anthropocentric = yes
+		is_ecocentric = yes
+		is_cooperative = yes
+		is_competitive = yes
+		is_elitist = yes
+		is_pluralist = yes
+	}
+}
+
+eev_is_hostile_country = {
+	any_playable_country = {
+		has_communications = root
+		OR = {
+			is_rival = root
+			is_dismissive_to = root
+			is_arrogant_to = root
+			is_unfriendly_to = root
+			is_disloyal_to = root
+			is_threatened_to = root
+			is_angry_to = root
+			is_hostile_to = root
+			is_belligerent_to = root
+			is_berserker_to = root
+		}
+	}
+}
+
+# === merged from plentiful_scripted_triggers.txt ===
+is_hive_world = {
+	OR = {
+		is_planet_class = pc_hive
+	}
+}
+
+can_take_servant_job = {
+	OR = {
+		is_domestic_robot = yes
+		is_domestic_servant = yes
+		is_slave_complex_possible = yes
+	}
+}
+
+is_slave_complex_possible = {
+	is_domestic_robot = no	
+	is_enslaved = yes
+	owner = { has_tradition = tr_plentiful_malice_5 }	
+	NOT = { has_slavery_type = { type = slavery_livestock } }
+	NOT = { has_slavery_type = { type = slavery_matrix } }	
+}
+
+is_pt_slaver = {
+	has_ascension_perk = ap_plentiful_traditions_slave_nation
+}
+
+specialist_job_check_trigger = {
+	custom_tooltip = SPECIALIST_JOB_TRIGGER
+	hidden_trigger = {
+		exists = owner
+		OR = {
+			is_enslaved = no
+			is_slave_complex_possible = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		is_being_purged = no
+		is_being_assimilated = no
+		NOT = { has_trait = trait_syncretic_proles }
+		NOT = { has_trait = trait_nerve_stapled }
+		OR = {
+			NOT = { has_trait = trait_mechanical }
+			owner = { has_technology = tech_droid_workers }
+		}
+		NOT = { has_citizenship_type = { type = citizenship_organic_trophy } }
+	}
+}
+
+# === merged from scfe_triggers.txt ===
+scfe_mod_active = {
+	optimize_memory
+	always = yes
+}
+
+scfe_dig_site_default_spawn_rules = {
+	optimize_memory
+	solar_system = {
+		exists = star
+		NOR = {
+			has_star_flag = sealed_system
+			has_star_flag = empire_cluster
+			has_star_flag = precursor_system
+			has_special_star_flag_trigger = yes
+			is_fe_cluster = yes
+			is_marauder_cluster = yes
+			has_star_flag = drone_home_system
+			has_star_flag = chosen_system
+			has_star_flag = outercluster
+			has_star_flag = extragalactic_cluster
+			has_star_flag = mem_sadrell_extant_cluster
+			inline_script = {
+				script = forgotten_empires/toggled_code
+				code = "
+					has_star_flag = giga_grox_system
+					has_star_flag = giga_system_six
+					has_star_flag = giga_no_lanes
+					giga_is_core_system = yes
+					cohesive_system = yes
+					compound_cluster = yes
+					annihilator_system = yes
+					urmazin_system = yes
+				"
+				toggle = @has_gigastructures
+			}
+			any_system_planet = {
+				OR = {
+					has_planet_flag = hatchling_egg
+					has_planet_flag = suppress_archaeological_sites
+				}
+			}
+		}
+	}
+	has_anomaly = no
+	NOT = { has_planet_flag = precursor_world }
+	NOT = { exists = archaeological_site }
+}
+
+scfe_dig_site_visible_trigger = {
+	optimize_memory
+	is_ai = no
+	exists = from
+	exists = from.planet
+	default_site_visible_trigger = yes
+}
+scfe_dig_site_visible_trigger_astanine = {
+	optimize_memory
+	scfe_dig_site_visible_trigger = yes
+	has_event_chain = scfe_astanine_chain
+}
+scfe_dig_site_visible_trigger_coprean = {
+	optimize_memory
+	scfe_dig_site_visible_trigger = yes
+	has_event_chain = scfe_coprean_chain
+}
+scfe_dig_site_visible_trigger_ghosts = {
+	optimize_memory
+	scfe_dig_site_visible_trigger = yes
+	has_event_chain = scfe_ghosts_chain
+}
+scfe_dig_site_visible_trigger_shaded = {
+	optimize_memory
+	scfe_dig_site_visible_trigger = yes
+	has_event_chain = scfe_shaded_chain
+}
+scfe_dig_site_visible_trigger_sless = {
+	optimize_memory
+	scfe_dig_site_visible_trigger = yes
+	has_event_chain = scfe_sless_chain
+}
+scfe_dig_site_visible_trigger_znkar = {
+	optimize_memory
+	scfe_dig_site_visible_trigger = yes
+	has_event_chain = scfe_znkar_chain
+}
+# scfe_dig_site_visible_trigger_shamblers = {
+#     optimize_memory
+#     scfe_dig_site_visible_trigger = yes
+#     has_event_chain = scfe_shamblers_chain
+# }
+# scfe_dig_site_visible_trigger_scrambler = {
+#     optimize_memory
+#     scfe_dig_site_visible_trigger = yes
+#     has_event_chain = scfe_scrambler_chain
+# }
+
+scfe_is_general_planet = {
+	optimize_memory
+	is_artificial = no
+	OR = {
+		habitable_planet = yes
+		scfe_is_uninhabitable = yes
+	}
+}
+scfe_is_alpine = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_alpine
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_alpine = yes
+			"
+			toggle = @has_atw_lite
+		}
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_alpine = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+	}
+}
+scfe_is_aquatic = {
+	optimize_memory
+	is_wet = yes
+	OR = {
+		is_planet_class = pc_ocean
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_ocean_basic = yes
+			"
+			toggle = @has_atw_lite
+		}
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_ocean = yes
+				is_pd_planet_for_aqua_trait = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+	}
+}
+scfe_is_arctic = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_arctic
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_arctic = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_arctic = yes
+			"
+			toggle = @has_atw_lite
+		}
+	}
+}
+scfe_is_arid = {
+    optimize_memory
+    OR = {
+        is_planet_class = pc_arid
+        # Planetary Diversity
+        inline_script = {
+            script = forgotten_empires/toggled_code
+            code = "
+				pd_is_arid = yes
+			"
+            toggle = @has_planetary_diversity
+        }
+        # All These Worlds
+        inline_script = {
+            script = forgotten_empires/toggled_code
+            code = "
+				atw_is_arid = yes
+			"
+            toggle = @has_atw_lite
+        }
+    }
+}
+scfe_is_barren = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_barren
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_barren = yes
+			"
+			toggle = @has_atw_lite
+		}
+	}
+}
+scfe_is_barren_cold = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_barren_cold
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_barren_cold = yes
+			"
+			toggle = @has_atw_lite
+		}
+	}
+}
+scfe_is_continental = {
+	optimize_memory
+	is_wet = yes
+	OR = {
+		is_planet_class = pc_continental
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_continental = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_continental = yes
+			"
+			toggle = @has_atw_lite
+		}
+	}
+}
+scfe_is_desertic = {
+	optimize_memory
+	is_dry = yes
+	OR = {
+		is_planet_class = pc_desert
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_desert = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_desert = yes
+			"
+			toggle = @has_atw_lite
+		}
+	}
+}
+scfe_is_frozen = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_frozen
+		is_planet_class = pc_arctic
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_frozen = yes
+			"
+			toggle = @has_atw_lite
+		}
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_arctic = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+	}
+}
+scfe_is_gas_giant = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_gas_giant
+		# All these worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_gas_giant = yes
+			"
+			toggle = @has_atw_lite
+		}
+	}
+}
+scfe_is_gaia = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_gaia
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_gaia = yes
+			"
+			toggle = @has_atw_lite
+		}
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_planet_class_gaia = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+	}
+}
+scfe_is_molten = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_molten
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_molten = yes
+			"
+			toggle = @has_atw_lite
+		}
+	}
+}
+scfe_is_nuked = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_nuked
+		# All these worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_nuked = yes
+			"
+			toggle = @has_atw_lite
+		}
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_planet_class_nuked = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+	}
+}
+scfe_is_toxic = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_toxic
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_toxic = yes
+			"
+			toggle = @has_atw_lite
+		}
+	}
+}
+scfe_is_tropical = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_tropical
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_tropical = yes
+			"
+			toggle = @has_atw_lite
+		}
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_tropical = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+	}
+}
+scfe_is_tundra = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_tundra
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_tundra = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_tundra = yes
+			"
+			toggle = @has_atw_lite
+		}
+	}
+}
+scfe_is_savannah = {
+	optimize_memory
+	OR = {
+		is_planet_class = pc_savannah
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_savannah = yes
+			"
+			toggle = @has_atw_lite
+		}
+		# Planetary Diversity
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				pd_is_savannah = yes
+			"
+			toggle = @has_planetary_diversity
+		}
+	}
+}
+scfe_is_uninhabitable = {
+	optimize_memory
+	OR = {
+		uninhabitable_regular_planet = yes
+		scfe_is_frozen = yes
+		scfe_is_barren = yes
+		scfe_is_molten = yes
+		scfe_is_barren_cold = yes
+		# All These Worlds
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				atw_is_toxic = yes
+			"
+			toggle = @has_atw_lite
+		}
+	}
+}
+
+scfe_is_valid_moon = {
+	optimize_memory
+	AND = {
+		scfe_is_barren = yes
+		is_moon = yes
+		NOT = { has_planet_flag = has_megastructure }
+		solar_system = {
+			starting_system = no
+		}
+	}
+}
+scfe_is_valid_colony = {
+	optimize_memory
+	AND = {
+		is_colony = yes
+		is_capital = no
+		is_artificial = no
+	}
+}
+scfe_is_valid_system = {
+	optimize_memory
+	solar_system = {
+		exists = star
+		NOR = {
+			has_star_flag = home_system
+			has_star_flag = sealed_system
+			has_star_flag = empire_cluster
+			has_special_star_flag_trigger = yes
+			is_fe_cluster = yes
+			has_star_flag = drone_home_system
+			has_star_flag = chosen_system
+			inline_script = {
+				script = forgotten_empires/toggled_code
+				code = "
+					giga_is_core_system = yes
+					cohesive_system = yes
+					compound_cluster = yes
+					annihilator_system = yes
+					urmazin_system = yes
+				"
+				toggle = @has_gigastructures
+			}
+			any_system_planet = {
+				has_planet_flag = hatchling_egg
+			}
+		}
+	}
+}
+
+scfe_is_heavy_metal = {
+	optimize_memory
+	OR = {
+		is_mechanical_empire = yes
+		is_robot_empire = yes
+		is_synthetic_empire = yes
+	}
+}
+scfe_is_default_empire = {
+	optimize_memory
+	OR = {
+		is_country_type = default
+		# Scripted Triggers Undercoat
+		has_country_flag = is_playable
+		# ZOFE
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				is_zofe_country = yes
+			"
+			toggle = @has_zofe_vanilla
+		}
+	}
+}
+
+scfe_is_moon_of_gas_giant = {
+	optimize_memory
+	is_scope_type = planet
+	exists = orbit
+	OR = {
+		orbit = { scfe_is_gas_giant = yes }
+		has_planet_flag = gas_giant_moon
+	}
+}
+
+has_woorskyr_deposit = {
+	optimize_memory
+	any_owned_planet = {
+		exists = owner
+		is_colony = yes
+		has_deposit = d_woorskyr_hub
+	}
+}
+has_koeleothan_deposit = {
+	optimize_memory
+	any_owned_planet = {
+		exists = owner
+		is_colony = yes
+		has_deposit = d_koeleothan
+	}
+}
+has_quantumpearl_deposit = {
+	optimize_memory
+	any_owned_planet = {
+		exists = owner
+		is_colony = yes
+		has_deposit = d_quantumpearl
+	}
+}
+has_xenograss_deposit = {
+	optimize_memory
+	any_owned_planet = {
+		exists = owner
+		is_colony = yes
+		has_deposit = d_xenograss
+	}
+}
+has_beetle_deposit = {
+	optimize_memory
+	any_owned_planet = {
+		exists = owner
+		is_colony = yes
+		has_deposit = d_beetle_swarm
+	}
+}
+has_xenograss_building = {
+	optimize_memory
+	any_owned_planet = {
+		exists = owner
+		is_colony = yes
+		has_building = building_xenograss_processor
+	}
+}
+has_quantumpearl_building = {
+	optimize_memory
+	any_owned_planet = {
+		exists = owner
+		is_colony = yes
+		OR = {
+			has_building = building_pearl_borehole_site
+			has_building = building_pearl_borehole_site_2
+			has_building = building_pearl_borehole_site_3
+		}
+	}
+}
+
+planet_has_woorskyr_deposit = {
+	optimize_memory
+	has_deposit = d_woorskyr_hub
+}
+planet_has_koeleothan_deposit = {
+	optimize_memory
+	has_deposit = d_koeleothan
+}
+planet_has_quantumpearl_deposit = {
+	optimize_memory
+	has_deposit = d_quantumpearl
+}
+planet_has_xenograss_deposit = {
+	optimize_memory
+	has_deposit = d_xenograss
+}
+planet_has_beetle_deposit = {
+	optimize_memory
+	has_deposit = d_beetle_swarm
+}
+planet_has_strange_worlds_deposit = {
+	optimize_memory
+	OR = {
+		planet_has_woorskyr_deposit = yes
+		planet_has_koeleothan_deposit = yes
+		planet_has_quantumpearl_deposit = yes
+		planet_has_xenograss_deposit = yes
+		planet_has_beetle_deposit = yes
+	}
+}
+
+scfe_is_valid_owner = {
+	optimize_memory
+	OR = {
+		has_owner = no
+		AND = {
+			exists = owner
+			owner = { is_same_empire = root.owner }
+		}
+		AND = {
+			exists = space_owner
+			space_owner = { is_same_value = root.owner }
+		}
+	}
+}
+
+# Precursor Story Pack
+scfe_sless_digsite_spawn_rules = {
+	optimize_memory
+	exists = star
+	NOR = {
+		is_same_value = root.solar_system
+		any_system_planet = {
+			OR = {
+				is_capital = yes #there should be no capital world in the system
+				has_planet_flag = scfe_sless_colony
+			}
+		}
+	}
+	any_system_planet = {
+		has_anomaly = no
+		OR = {
+			scfe_is_barren = yes
+			scfe_is_barren_cold = yes
+			scfe_is_nuked = yes
+		}
+		NOT = { exists = archaeological_site }
+		scfe_has_special_deposit = yes
+	}
+}
+scfe_coprean_digsite_spawn_rules = {
+	optimize_memory
+	exists = star
+	NOR = {
+		is_same_value = root.solar_system
+		any_system_planet = {
+			OR = {
+				is_capital = yes
+				has_planet_flag = scfe_coprean_colony
+			}
+		}
+	}
+	any_system_planet = {
+		has_anomaly = no
+		NOT = { exists = archaeological_site }
+		scfe_has_special_deposit = yes
+	}
+}
+scfe_astanine_digsite_spawn_rules = {
+	optimize_memory
+	exists = star
+	NOR = {
+		is_same_value = root.solar_system
+		any_system_planet = {
+			OR = {
+				is_capital = yes
+				has_planet_flag = scfe_astanine_colony
+			}
+		}
+	}
+	any_system_planet = {
+		is_star = no
+		has_anomaly = no
+		uninhabitable_regular_planet = yes
+		NOT = {
+			exists = archaeological_site
+			scfe_has_special_deposit = yes
+		}
+	}
+}
+
+scfe_is_tfpanet = {
+	optimize_memory
+	OR = {
+		has_modifier = terraforming_candidate
+		has_modifier = toxic_terraforming_candidate
+	}
+}
+
+is_valid_origin_for_znkar = {
+	optimize_memory
+	NOR = {
+		has_origin = origin_shoulders_of_giants
+		has_origin = origin_doomsday
+		has_origin = origin_broken_shackles
+		has_origin = origin_demonic_incursion
+		has_origin = origin_separatists
+		has_origin = origin_lost_colony
+		# Gigas exclusion
+		inline_script = {
+			script = forgotten_empires/toggled_code
+			code = "
+				has_origin = origin_incohesive
+			"
+			toggle = @has_gigastructures
+		}
+	}
+}
+
+# Planet scope
+has_any_strange_worlds_deposit = {
+	optimize_memory
+	OR = {
+		planet_has_woorskyr_deposit = yes
+		planet_has_beetle_deposit = yes
+		planet_has_koeleothan_deposit = yes
+		planet_has_quantumpearl_deposit = yes
+		planet_has_xenograss_deposit = yes
+	}
+}
+
+scfe_is_valid_shaded_fe = {
+	optimize_memory
+	is_ai = yes
+	OR = {
+		AND = {
+			is_fallen_empire_spiritualist = yes
+			event_target:scfe_shaded_owner = { NOT = { has_relic = r_severed_head } }
+		}
+		is_fallen_empire_materialist = yes
+		is_fallen_empire_xenophile = yes
+		is_fallen_empire_xenophobe = yes
+	}
+	is_at_war = no
+	fleet_power > 60000
+	NOT = { has_country_flag = fallen_empire_lost_war }
+}
+
+scfe_is_valid_star = {
+	optimize_memory
+	NOR = {
+		is_planet_class = pc_black_hole
+		is_planet_class = pc_neutron_star
+		is_planet_class = pc_pulsar
+	}
+}
+
+scfe_can_jump_in_shaded_system = {
+	optimize_memory
+	OR = {
+		has_event_chain = scfe_shaded_chain
+		has_country_flag = scfe_shaded_colony_coordinates
+	}
+}
+scfe_has_zroni_chain = {
+	optimize_memory
+	has_country_flag = zroni_intro
+	NOT = { has_country_flag = dust_off_achievement }
+}
+scfe_has_baol_chain = {
+	optimize_memory
+	has_country_flag = baol_intro
+	NOT = { has_country_flag = green_thumb_achievement }
+}
+scfe_can_find_precursor = {
+	optimize_memory
+	is_ai = no
+    NOR = {
+        has_event_chain = vultaum_chain
+        has_event_chain = yuht_chain
+        has_event_chain = first_league_chain
+        has_event_chain = irassian_chain
+        has_event_chain = cybrex_chain
+        has_event_chain = cs_inetian_chain
+        has_event_chain = cs_adAkkaria_chain
+        scfe_has_zroni_chain = yes
+        scfe_has_baol_chain = yes
+        has_event_chain = scfe_alshigans_chain
+        has_event_chain = scfe_astanine_chain
+        has_event_chain = scfe_znkar_chain
+        has_event_chain = scfe_coprean_chain
+        has_event_chain = scfe_sless_chain
+        has_event_chain = scfe_shaded_chain
+        has_event_chain = scfe_ghosts_chain
+        scfe_has_plexi_chain = yes
+        scfe_has_lartia_chain = yes
+        scfe_has_volgan_chain = yes
+    }
+}
+scfe_has_precursor_intro = {
+    is_ai = no
+    has_precursor_intro = yes
+    OR = {
+        has_country_flag = alshigans_intro
+        has_country_flag = astanine_intro
+        has_country_flag = coprea_intro
+        has_country_flag = sless_intro
+        has_country_flag = vinarii_intro
+        # Forgotten History
+        has_country_flag = plexi_intro
+        has_country_flag = lartia_intro
+        # More Precursors
+        has_country_flag = ixardian_intro
+        has_country_flag = werediran_intro
+        has_country_flag = ezentian_intro
+        # Unavoidable Changes
+        has_country_flag = volgan_intro
+    }
+}
+has_sless_gene_template = {
+	optimize_memory
+	has_relic = r_scfe_sless_gene_template
+}
+has_diary_of_innovo = {
+	optimize_memory
+	has_relic = r_scfe_diary_of_innovo
+}
+has_astanine_last_projector = {
+	optimize_memory
+	has_relic = r_scfe_astanine_last_projector
+}
+has_alshigan_engine = {
+	optimize_memory
+	has_relic = r_scfe_alshigan_engine
+}
+has_znkar_distortion_generator = {
+	optimize_memory
+	has_relic = r_scfe_znkar_distortion_generator
+}
+has_first_empire_databank = {
+	optimize_memory
+	has_relic = r_scfe_first_empire_databank
+}
+has_orders_trinket = {
+	optimize_memory
+	has_relic = r_scfe_orders_trinket
+}
+
+scfe_has_any_nyblax_relic = {
+	optimize_memory
+	OR = {
+		has_relic = r_scfe_arcane_rune
+		has_relic = r_scfe_damage_rune
+		has_relic = r_scfe_haste_rune
+		has_relic = r_scfe_illusion_rune
+		has_relic = r_scfe_invisibility_rune
+		has_relic = r_scfe_regeneration_rune
+	}
+}
+
+scfe_has_no_standard_ethic = {
+	optimize_memory
+	is_xenophobe = no
+	is_xenophile = no
+	is_authoritarian = no
+	is_egalitarian = no
+	is_militarist = no
+	is_pacifist = no
+	is_materialist = no
+	is_spiritualist = no
+}
+
+scfe_has_special_deposit = {
+	optimize_memory
+	OR = {
+		has_deposit = d_treasure_planet
+		has_deposit = d_black_needle_base
+		has_deposit = d_abandoned_black_needle_base
+		has_deposit = d_hive_dwelling
+		has_deposit = d_ruined_hive_dwelling
+		has_deposit = d_the_zone
+		has_deposit = d_arcane_device
+		has_deposit = d_ancient_facilities
+		has_deposit = d_fallen_orbital_shipyard
+		has_deposit = d_arcane_replicator
+		has_deposit = d_arcane_generator
+		has_deposit = d_spore_vents
+		has_deposit = d_cave_shroom_veins
+		has_deposit = d_tree_of_life_home
+		has_deposit = d_tree_of_life_colony
+		has_deposit = d_buried_lithoids
+		has_deposit = d_buried_lithoids_overlord
+		has_deposit = d_lithoid_crater
+		has_deposit = d_machine_minerals
+		has_deposit = d_impossiblecorrie
+		has_deposit = d_bluelotus
+		has_deposit = d_bluelotus2
+		has_deposit = d_ruin_bluelotus
+		has_deposit = d_crater_bluelotus
+		has_deposit = d_mutation_vats
+		has_deposit = d_exotic_mountain
+		has_deposit = d_guardian_dragon_hoard
+		has_any_strange_worlds_deposit = yes
+	}
+}
+scfe_is_empty_space = {
+	optimize_memory
+	is_planet_class = pc_scfe_empty_space
+}
+scfe_has_comms_with_alien_empire = {
+	optimize_memory
+	any_relation = {
+		has_communications = prev
+		OR = {
+			scfe_is_default_empire = yes
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+}
+scfe_precursor_can_spawn_this_week = {
+    optimize_memory
+    OR = {
+        # Concurrent discoveries allowed
+        AND = {
+            has_policy_flag = scfe_precursor_policy_concurrent
+            owner = { NOT = { has_country_flag = scfe_weekly_precursor } }
+        }
+        # No concurrent discoveries allowed, no event chain ongoing
+        AND = {
+            NOT = { has_policy_flag = scfe_precursor_policy_concurrent }
+            scfe_can_find_precursor = yes
+            owner = { NOT = { has_country_flag = scfe_weekly_precursor } }
+        }
+        # Vanilla behavior
+        AND = {
+            has_precursor_intro = no
+        }
+    }
+}
+
+# === merged from zz_sp_scripted_triggers.txt ===
 # StellarisPlus compatibility triggers
 # Defines triggers expected by integrated mod job overrides
 
@@ -21,4 +1938,42 @@ spawning_drone_is_bath_attendant_hive_trigger = {
 		has_valid_civic = civic_hive_toxic_baths
 	}
 	has_active_building = building_toxic_bath_hive
+}
+
+# === merged from zzz_overwrite_triggers.txt ===
+has_precursor_intro = {
+    OR = {
+        # Vanilla
+        has_country_flag = cybrex_intro
+        has_country_flag = first_league_intro
+        has_country_flag = irassian_intro
+        has_country_flag = vultaum_intro
+        has_country_flag = yuht_intro
+        # Ancient Relics
+        has_country_flag = zroni_intro
+        has_country_flag = baol_intro
+        # Cosmic Storms
+        has_country_flag = inetian_intro
+        has_country_flag = adakkaria_intro
+        # Still in the early stages of 'On the Shoulders of Giants'
+        AND = {
+            has_origin = origin_shoulders_of_giants
+            NOT = { has_country_flag = origin_shoulders_closure }
+        }
+        # Forgotten Empires
+        has_country_flag = alshigans_intro
+        has_country_flag = astanine_intro
+        has_country_flag = coprea_intro
+        has_country_flag = sless_intro
+        has_country_flag = vinarii_intro
+        # Forgotten History
+        has_country_flag = plexi_intro
+        has_country_flag = lartia_intro
+        # More Precursors
+        has_country_flag = ixardian_intro
+        has_country_flag = werediran_intro
+        has_country_flag = ezentian_intro
+        # Unavoidable Changes
+        has_country_flag = volgan_intro
+    }
 }

@@ -509,7 +509,7 @@ agenda_tr_plentiful_robotics = {
 agenda_tr_plentiful_robotics_hive = {
 	agenda_cost = @base_tradition_agenda_cost
 	allow = {
-		has_tradition = tr_plentiful_robotics_hive_adopt
+		has_tradition = tr_plentiful_robotics_adopt
 	}
 	potential = {
 		has_authority = auth_hive_mind

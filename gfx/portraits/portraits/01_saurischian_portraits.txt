@@ -202,7 +202,6 @@ portraits = {
 			"gfx/models/portraits/saurischian/saurischian_female_body_01.tga" 
 			"gfx/models/portraits/saurischian/saurischian_female_body_02.tga" 
 			"gfx/models/portraits/saurischian/saurischian_female_body_03.tga" 
-			"gfx/models/portraits/saurischian/saurischian_female_body_04.tga" 
 		}
 		portrait_evolution = {
 			variants = {

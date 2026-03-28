@@ -1,0 +1,12 @@
+# Preserves the original late-loading SCFE on_actions ordering in this MERGE folder.
+# === merged from z_scfe_on_actions.txt ===
+on_game_start = {
+	events = {
+		scfe_game_start.3
+	}
+}
+on_press_begin = {
+	events = {
+		scfe_menu.1
+	}
+}

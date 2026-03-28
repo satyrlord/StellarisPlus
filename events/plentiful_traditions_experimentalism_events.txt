@@ -1,44 +1,7 @@
 namespace = plentiful_traditions_experimentalism
 
+# Assist Research no longer exposes a script-visible modifier in 4.2.
 # plentiful_traditions_experimentalism.1 remains disabled in source.
-
-event = {
-	id = plentiful_traditions_experimentalism.2
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		any_country = {
-			has_tradition = tr_plentiful_experimentalism_3
-		}
-	}
-
-	immediate = {
-		every_country = {
-			limit = {
-				has_tradition = tr_plentiful_experimentalism_3
-			}
-			every_owned_planet = {
-				if = {
-					limit = {
-						has_modifier = assist_research
-					}
-					add_modifier = {
-						modifier = "modifier_plentiful_traditions_sequence"
-						days = -1
-					}
-				}
-				if = {
-					limit = {
-						NOT = { has_modifier = assist_research }
-						has_modifier = modifier_plentiful_traditions_sequence
-					}
-					remove_modifier = "modifier_plentiful_traditions_sequence"
-				}
-			}
-		}
-	}
-}
 
 event = {
 	id = plentiful_traditions_experimentalism.3

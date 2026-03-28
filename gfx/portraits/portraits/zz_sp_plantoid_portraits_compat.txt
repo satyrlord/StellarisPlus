@@ -1,0 +1,20 @@
+portraits = {
+	# zz_sp_ late override: drop the missing plantoid_02_cyanoid.dds variant from the active workshop portrait stack.
+	pla2 = { entity = "portrait_plantoid_02_entity" clothes_selector = "no_texture" attachment_selector = "no_texture" greeting_sound = "plantoid_greetings"
+			character_textures = {
+					"gfx/models/portraits/plantoid/plantoid_02_red.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_blue.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_purple.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_cyan.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_colourful01.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_colourful02.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_colourful03.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_colourful04.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_colourful05.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_colourful06.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_colourful07.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_colourful08.dds"
+					"gfx/models/portraits/plantoid/plantoid_02_colourful09.dds"
+		}
+	}
+}

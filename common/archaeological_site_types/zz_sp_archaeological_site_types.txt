@@ -1,0 +1,3201 @@
+# === merged from arc_sites_ASP_218.39.txt ===
+# Dawn Star is Comming #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8308
+site_ASP_dawn_star_is_coming = {
+	desc = "site_ASP_dawn_star_is_coming_intro"
+	picture = GFX_evt_ASP_lifeseeded_07
+	max_instances = 1
+	stages = 4
+	weight = {
+		base = 0
+		modifier = {
+			add = 30
+			aspmod_dig_site_default_spawn_rules = yes
+			asp_is_barren = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	on_create = {
+		root.planet = { save_global_event_target_as = ASP_dawn_star_is_coming_world }
+	}
+
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_B3
+		event = ASPmod.30
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_A1
+		event = ASPmod.31
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A4
+		event = ASPmod.32
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B2
+		event = ASPmod.33
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from arc_sites_ASP_samchigui.txt ===
+# A bedroom planet #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8283
+site_ASP_a_bedroom_planet = {
+	desc = "site_ASP_a_bedroom_planet_intro"
+	picture = GFX_evt_ASP_samchigui_fifth
+	stages = 2
+	weight = {
+		base = 0
+		modifier = {
+			add = 50
+			habitable_planet = yes
+			solar_system = {
+				any_system_planet = {
+					NOT = { exists = archaeological_site }
+				}
+			}
+		}
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_B1
+		event = ASPmod.10
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_B2
+		event = ASPmod.11
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from arc_sites_ASP_Spiralwind.txt ===
+# The Ship of Theseus #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8323
+site_ASP_the_ship_of_theseus = {
+	desc = "site_ASP_the_ship_of_theseus_intro"
+	picture = GFX_evt_relic_world_street
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+		modifier = {
+			add = 50
+			aspmod_dig_site_default_spawn_rules = yes
+			is_colonizable = yes
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A1
+		event = ASPmod.40
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A4
+		event = ASPmod.41
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A3
+		event = ASPmod.42
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_A2
+		event = ASPmod.43
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_B3
+		event = ASPmod.44
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from aspmod_site_58.142.txt ===
+#a place where history has preserved #https://gall.dcinside.com/mgallery/board/view?id=stellaris&no=10399
+ASP_site_kessler_syndrome = {
+	desc = "ASP_site_kessler_syndrome_desc"
+	picture = GFX_evt_ruined_system
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0 #check solar_system_initializers
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+
+	on_create = {
+		create_ambient_object = {
+			type = "large_debris_object" #covered in countless metal fragments, evidently of artificial structures
+			entity_offset_height = -14
+			location = root.planet
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = root.planet
+				distance = 0
+				angle = random
+			}
+		}
+		create_ambient_object = {
+			type = "small_debris_object" #covered in countless metal fragments, evidently of artificial structures
+			entity_offset_height = -16
+			location = root.planet
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = root.planet
+				distance = 0
+				angle = random
+			}
+		}
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+ 
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_D1
+		event = asp.7
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_D2
+		event = asp.8
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_D3
+		event = asp.9
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_D4
+		event = asp.10
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_D5
+		event = asp.11
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from aspmod_site_administration.txt ===
+#geocentrism #https://gall.dcinside.com/mgallery/board/view?id=stellaris&no=8943
+ASP_site_geocentrism = {
+	desc = "ASP_site_geocentrism_desc"
+	picture = GFX_evt_barren_dig_site
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0 #check anomaly
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+ 
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_E1
+		event = asp.16
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_E2
+		event = asp.17
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_E3
+		event = asp.18
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_E4
+		event = asp.19
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_E5
+		event = asp.20
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from aspmod_site_beyond_earth.txt ===
+#beyond earth - purity #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8326
+ASP_site_beyond_earth_purity = {
+	desc = "ASP_site_beyond_earth_purity_desc"
+	picture = GFX_evt_l-gateway
+	max_instances = 1
+	stages = 4
+	weight = {
+		base = 0 #check solar_system_initializers
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_C1
+		event = asp.70
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_C2
+		event = asp.71
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C3
+		event = asp.72
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C4
+		event = asp.73
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+ASP_site_beyond_earth_purity_2 = {
+	desc = "ASP_site_beyond_earth_purity_2_desc"
+	picture = GFX_evt_shielded_planet
+	max_instances = 1
+	stages = 2
+	weight = {
+		base = 0 #change this if you need
+	}
+	allow = {
+		hidden_trigger = {
+			exists = leader
+			leader = { leader_class = scientist }
+		}
+		custom_tooltip_fail = {
+			text = ASP_site_beyond_earth_purity_2_fail
+			owner = { NOT = { has_special_project = ASP_BEYOND_EARTH_PURITY_PROJECT } } #prevent further excavation before special project done
+		}
+		custom_tooltip_fail = {
+			text = ASP_site_beyond_earth_purity_2_fail_b
+			owner = { NOT = { has_special_project = ASP_BEYOND_EARTH_PURITY_PROJECT_2 } } #prevent further excavation before special project done
+		}
+		custom_tooltip_fail = {
+			text = ASP_site_beyond_earth_purity_2_fail_c
+			from.planet = { NOT = { has_planet_flag = ASP_site_beyond_earth_purity_2_dig_stopped } } #an alternative way to prevent further excavation since 'destroy_archaeological_site' command causes ctd in stellaris v2.5.1
+		}
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_create = {
+		save_global_event_target_as = ASP_site_beyond_earth_purity_2_target
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_D1
+		event = asp.74
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_D2
+		event = asp.77
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from aspmod_site_CO2.txt ===
+#rain world #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=26732
+ASP_site_rain_world = {
+	desc = "ASP_site_rain_world_desc"
+	picture = GFX_evt_ASP_site_rain_world
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0 #check anomaly
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+	on_create = {
+		root.planet = { save_global_event_target_as = ASP_site_rain_world_target }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = asp.29
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = asp.30
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A3
+		event = asp.31
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A4
+		event = asp.32
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A5
+		event = asp.33
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from aspmod_site_ddadda.txt ===
+#epilogue #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=10824 #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=10825
+ASP_site_ancient_probe = {
+	desc = "ASP_site_ancient_probe_desc"
+	picture = GFX_evt_satellite_in_orbit
+	max_instances = 1
+	stages = 2
+	weight = {
+		base = 0 #check anomaly
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_E1
+		event = asp.79
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_E2
+		event = asp.80
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+ASP_site_epilogue = {
+	desc = "ASP_site_epilogue_desc"
+	picture = GFX_evt_ASP_site_epilogue
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_F1
+		event = asp.81
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_F2
+		event = asp.82
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_F3
+		event = asp.83
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_F4
+		event = asp.84
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_F5
+		event = asp.85
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from aspmod_site_kkate6789.txt ===
+# #parasite machine #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=9881 #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=29375
+# ASP_site_parasite_machine = {
+# 	desc = "ASP_site_parasite_machine_desc"
+# 	picture = GFX_evt_alien_ruins
+# 	max_instances = 1
+# 	stages = 5
+# 	weight = {
+# 		base = 0 #check solar_system_initializers
+# 	}
+# 	allow = {
+# 		exists = leader
+# 		leader = { leader_class = scientist }
+# 		owner = { is_ai = no }
+# 	}
+#
+# 	visible = {
+# 		aspmod_dig_site_visible_trigger = yes
+# 	}
+#
+# 	on_visible = {
+# 		country_event = { id = story.5 days = 30 }
+# 	}
+#
+# 	stage = {
+# 		difficulty = 4
+# 		icon = GFX_archaeology_runes_E1
+# 		event = asp.89
+# 	}
+# 	stage = {
+# 		difficulty = 5
+# 		icon = GFX_archaeology_runes_E2
+# 		event = asp.90
+# 	}
+# 	stage = {
+# 		difficulty = 6
+# 		icon = GFX_archaeology_runes_E3
+# 		event = asp.92
+# 	}
+# 	stage = {
+# 		difficulty = 7
+# 		icon = GFX_archaeology_runes_E4
+# 		event = asp.93
+# 	}
+# 	stage = {
+# 		difficulty = 8
+# 		icon = GFX_archaeology_runes_E5
+# 		event = asp.94
+# 	}
+#
+# 	on_roll_failed = {
+# 		from = {
+# 			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+# 		}
+# 	}
+# }
+
+# === merged from aspmod_site_oldmangoodman.txt ===
+#axis of planet #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8272
+ASP_site_axis_of_planet = {
+	desc = "ASP_site_axis_of_planet_desc"
+	picture = GFX_evt_ASP_site_axis_of_planet
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+		modifier = {
+			add = 35
+			aspmod_dig_site_default_spawn_rules = yes
+			OR = {
+				asp_is_barren = yes
+				asp_is_barren_cold = yes
+			}
+		}
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_A1
+		event = asp.36
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A2
+		event = asp.37
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A3
+		event = asp.38
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A4
+		event = asp.39
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A5
+		event = asp.40
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+#red tombworld #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=7488
+ASP_site_red_tombworld = {
+	desc = "ASP_site_red_tombworld_desc"
+	picture = GFX_evt_ASP_site_red_tombworld
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+		modifier = {
+			add = 60
+			asp_is_aquatic = yes
+		}
+	}
+	allow = {
+		exists = leader
+		leader = {
+			leader_class = scientist
+			#신스 과학자나 인공지능 보조를 받는 과학자는 이 행성을 탐사하는 것이 불가능합니다.
+			NOR = {
+				has_trait = leader_trait_synthetic
+				has_trait = leader_trait_custom_AI_assistant
+				has_trait = leader_trait_sapient_AI_assistant
+			}
+		}
+	}
+
+	on_create = {
+		root.planet = {
+			# change_pc = pc_asp_ocean_red #이 해양 행성의 바다는 붉은 빛을 띠고 있습니다!
+			set_planet_entity = {
+				picture = pc_asp_ocean_red
+				entity = asp_red_ocean_planet_01_entity
+			}
+		}
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_B1
+		event = asp.65
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B2
+		event = asp.66
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_B3
+		event = asp.67
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_B4
+		event = asp.68
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_B5
+		event = asp.69
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from aspmod_site_sehui98.txt ===
+#a haunting spectre #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=9146
+ASP_site_haunting_spectre = {
+	desc = "ASP_site_haunting_spectre_desc"
+	picture = GFX_evt_dead_city
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0 #check anomaly
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_F1
+		event = asp.23
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_F2
+		event = asp.24
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_F3
+		event = asp.25
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_F4
+		event = asp.26
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_F5
+		event = asp.27
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from aspmod_site_shootingstar.txt ===
+#strangely_fertile_world #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8663
+ASP_site_strangely_fertile_world = {
+	desc = "ASP_site_strangely_fertile_world_desc"
+	picture = GFX_evt_baol_ruins
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0 #check solar_system_initializers
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		owner = { is_ai = no }
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_F1
+		event = asp.58
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_F2
+		event = asp.59
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_F3
+		event = asp.60
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_F4
+		event = asp.61
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_F5
+		event = asp.62
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+#awakened_moon #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8663
+ASP_site_awakened_moon = {
+	desc = "ASP_site_awakened_moon_desc"
+	picture = GFX_evt_ASP_site_awakened_moon
+	max_instances = 1
+	stages = 2
+	weight = {
+		base = 0 #check solar_system_initializers
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		aspmod_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A1
+		event = asp.63
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A2
+		event = asp.64
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_astanine_site.txt ===
+scfe_astanine_site_1 = {
+    desc = "scfe_astanine_site_1_desc"
+    picture = GFX_evt_ship_in_orbit
+    stages = 3
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        set_global_flag = scfe_precursor_astanine_start
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_astanine_colony
+        }
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_A1
+        event = scfe_astanine.1
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_A2
+        event = scfe_astanine.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_A3
+        event = scfe_astanine.3
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+scfe_astanine_site_2 = {
+    desc = "scfe_astanine_site_2_desc"
+    picture = GFX_evt_resource_cache
+    stages = 2
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_astanine = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_astanine_colony
+        }
+    }
+
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_B1
+        event = scfe_astanine.4
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_B2
+        event = scfe_astanine.5
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+scfe_astanine_site_3 = {
+    desc = "scfe_astanine_site_3_desc"
+    picture = GFX_evt_shattered_planet
+    stages = 4
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_astanine = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_astanine_colony
+        }
+    }
+
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_C1
+        event = scfe_astanine.6
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_C2
+        event = scfe_astanine.7
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C3
+        event = scfe_astanine.8
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C4
+        event = scfe_astanine.9
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+scfe_astanine_site_4 = {
+    desc = "scfe_astanine_site_4_desc"
+    picture = GFX_evt_ship_in_orbit_2
+    stages = 2
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_astanine = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_astanine_colony
+        }
+    }
+
+    stage = {
+        difficulty = 6
+        icon = GFX_archaeology_runes_C1
+        event = scfe_astanine.10
+    }
+    stage = {
+        difficulty = 6
+        icon = GFX_archaeology_runes_C2
+        event = scfe_astanine.11
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+scfe_astanine_site_5 = {
+    desc = "scfe_astanine_site_5_desc"
+    picture = GFX_evt_barren_dig_site
+    stages = 4
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_astanine = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_astanine_colony
+        }
+    }
+
+    stage = {
+        difficulty = 7
+        icon = GFX_archaeology_runes_D1
+        event = scfe_astanine.13
+    }
+    stage = {
+        difficulty = 7
+        icon = GFX_archaeology_runes_D2
+        event = scfe_astanine.14
+    }
+    stage = {
+        difficulty = 8
+        icon = GFX_archaeology_runes_D3
+        event = scfe_astanine.15
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_D4
+        event = scfe_astanine.16
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+# === merged from scfe_belltower_site.txt ===
+scfe_belltower_dig = {
+	desc = "scfe_belltower_dig_desc"
+	picture = GFX_evt_archaeological_dig
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = scfe_belltower_dig.1
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = scfe_belltower_dig.2
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A3
+		event = scfe_belltower_dig.3
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A4
+		event = scfe_belltower_dig.4
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A5
+		event = scfe_belltower_dig.5
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_biggest_show_site.txt ===
+#biggest show of the world #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8304
+scfe_site_biggest_show_of_world = {
+	desc = "scfe_site_biggest_show_of_world_desc"
+	picture = GFX_evt_scfe_site_biggest_show_of_world
+	max_instances = 1
+	stages = 6
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	on_create = {
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C1
+		event = scfe_biggest_show.1
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C2
+		event = scfe_biggest_show.2
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C3
+		event = scfe_biggest_show.3
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C4
+		event = scfe_biggest_show.4
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_C5
+		event = scfe_biggest_show.5
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_C6
+		event = scfe_biggest_show.6
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_celestial_disturbance_site.txt ===
+scfe_celestial_disturbance_dig = {
+    desc = "scfe_celestial_disturbance_dig_desc"
+    picture = GFX_evt_archaeological_dig
+    max_instances = 1
+    stages = 6
+    weight = {
+        base = 0
+    }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_B1
+        event = scfe_celestial_disturbance_dig.1
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_B2
+        event = scfe_celestial_disturbance_dig.2
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_B3
+        event = scfe_celestial_disturbance_dig.3
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_B4
+        event = scfe_celestial_disturbance_dig.4
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_B5
+        event = scfe_celestial_disturbance_dig.5
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_B6
+        event = scfe_celestial_disturbance_dig.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+# === merged from scfe_city_tower_site.txt ===
+scfe_tower_city_dig = {
+	desc = "scfe_tower_city_dig_desc"
+	picture = GFX_evt_archaeological_dig
+	max_instances = 1
+	stages = 4
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_D1
+		event = scfe_tower_city_dig.1
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_D2
+		event = scfe_tower_city_dig.2
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_D3
+		event = scfe_tower_city_dig.3
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_D4
+		event = scfe_tower_city_dig.4
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_coprean_site.txt ===
+scfe_coprean_constitution_site_1 = {
+    desc = "scfe_coprean_constitution_site_1_desc"
+    picture = GFX_evt_scfe_coprean_constitution_site_1
+    stages = 3
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_global_flag = scfe_precursor_coprean_start
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_coprean_colony
+        }
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_A1
+        event = scfe_coprean_constitution.1
+    }
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_A2
+        event = scfe_coprean_constitution.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_A3
+        event = scfe_coprean_constitution.3
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+scfe_coprean_constitution_site_2 = {
+    desc = "scfe_coprean_constitution_site_2_desc"
+    picture = GFX_evt_gas_giant
+    stages = 4
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_coprean = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_coprean_colony
+        }
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_B1
+        event = scfe_coprean_constitution.4
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_B2
+        event = scfe_coprean_constitution.5
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_B3
+        event = scfe_coprean_constitution.6
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_B3
+        event = scfe_coprean_constitution.7
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+scfe_coprean_constitution_site_3 = {
+    desc = "scfe_coprean_constitution_site_3_desc"
+    picture = GFX_evt_asteroid_field
+    stages = 2
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        hidden_trigger = {
+            exists = leader
+            leader = { leader_class = scientist }
+        }
+        custom_tooltip_fail = {
+            text = scfe_coprean_constitution_site_3_fail #prevent further excavation before special project done
+            from.planet = { NOT = { has_planet_flag = scfe_coprean_constitution_site_3_locked } } #allow and on_create use different scope but target same thing
+        }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_coprean = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_coprean_colony
+        }
+    }
+
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C1
+        event = scfe_coprean_constitution.8
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C2
+        event = scfe_coprean_constitution.9
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+scfe_coprean_constitution_site_4 = { #https://rumorsontheinternets.org/2010/10/14/magnasanti-the-largest-and-most-terrifying-simcity/
+    desc = "scfe_coprean_constitution_site_4_desc"
+    picture = GFX_evt_relic_world
+    stages = 5
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_coprean = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_coprean_colony
+        }
+    }
+
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_D1
+        event = scfe_coprean_constitution.10
+    }
+    stage = {
+        difficulty = 6
+        icon = GFX_archaeology_runes_D2
+        event = scfe_coprean_constitution.11
+    }
+    stage = {
+        difficulty = 7
+        icon = GFX_archaeology_runes_D3
+        event = scfe_coprean_constitution.12
+    }
+    stage = {
+        difficulty = 7
+        icon = GFX_archaeology_runes_D4
+        event = scfe_coprean_constitution.13
+    }
+    stage = {
+        difficulty = 8
+        icon = GFX_archaeology_runes_D6
+        event = scfe_coprean_constitution.14
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+# === merged from scfe_dead_whale_site.txt ===
+#tomb of dead whales #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8751
+scfe_site_tomb_of_dead_whale = {
+	desc = "scfe_site_tomb_of_dead_whale_desc"
+	picture = GFX_evt_scfe_site_tomb_of_dead_whale
+	max_instances = 1
+	stages = 6
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_D1
+		event = scfe_tomb_of_dead_whales.1
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_D2
+		event = scfe_tomb_of_dead_whales.2
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_D3
+		event = scfe_tomb_of_dead_whales.3
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_D4
+		event = scfe_tomb_of_dead_whales.4
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_D5
+		event = scfe_tomb_of_dead_whales.5
+	}
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_D6
+		event = scfe_tomb_of_dead_whales.6
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_failed_hive_site.txt ===
+scfe_failed_hive_dig = {
+	desc = "scfe_failed_hive_dig_desc"
+	picture = GFX_evt_archaeological_dig
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C1
+		event = scfe_failed_hive_dig.1
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C2
+		event = scfe_failed_hive_dig.2
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C3
+		event = scfe_failed_hive_dig.3
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C4
+		event = scfe_failed_hive_dig.4
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C5
+		event = scfe_failed_hive_dig.5
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_first_music_site.txt ===
+# The First Music #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8782
+scfe_site_the_first_music = {
+	desc = "scfe_site_the_first_music_desc"
+	picture = GFX_evt_scfe_lifeseeded_01
+	max_instances = 1
+	stages = 2
+	weight = 0 #check anomaly
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C1
+		event = scfe_first_music.2
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_C6
+		event = scfe_first_music.3
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_ghosts_site.txt ===
+scfe_ghost_planet_dig = {
+    desc = "scfe_ghost_planet_dig_desc"
+    picture = GFX_evt_archaeological_dig
+    max_instances = 1
+    stages = 6
+    weight = {
+        base = 0
+    }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_A1
+        event = scfe_ghost_planet_dig.1
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_A2
+        event = scfe_ghost_planet_dig.2
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_A3
+        event = scfe_ghost_planet_dig.3
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_A4
+        event = scfe_ghost_planet_dig.4
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_A5
+        event = scfe_ghost_planet_dig.5
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_A6
+        event = scfe_ghost_planet_dig.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_scfe_ghosts_random_events }
+        }
+    }
+}
+scfe_ghost_frozen_dig = {
+    desc = "scfe_ghost_planet.6.desc"
+    picture = GFX_evt_archaeological_dig
+    max_instances = 1
+    stages = 4
+    weight = {
+        base = 0
+    }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_A1
+        event = scfe_ghost_planet_dig.7
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_A2
+        event = scfe_ghost_planet_dig.8
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_A3
+        event = scfe_ghost_planet_dig.9
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_A4
+        event = scfe_ghost_planet_dig.10
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_scfe_ghosts_random_events }
+        }
+    }
+}
+
+# === merged from scfe_inasir_site.txt ===
+scfe_site_inasir = {
+    desc = "scfe_site_inasir_desc"
+    picture = GFX_evt_barren_dig_site
+    max_instances = 1
+    stages = 6
+    weight = {
+        base = 0
+    }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_E1
+        event = scfe_inasir_dig.1
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_E2
+        event = scfe_inasir_dig.2
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_E3
+        event = scfe_inasir_dig.3
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_E4
+        event = scfe_inasir_dig.4
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_E4
+        event = scfe_inasir_dig.5
+    }
+    stage = {
+        difficulty = 6
+        icon = GFX_archaeology_runes_E4
+        event = scfe_inasir_dig.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+# === merged from scfe_king_underground_city_site.txt ===
+#the king of underground city #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=10739
+scfe_site_king_of_underground_city = {
+	desc = "scfe_site_king_of_underground_city_desc"
+	picture = GFX_evt_scfe_site_king_of_underground_city
+	max_instances = 1
+	stages = 4
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_E1
+		event = scfe_king_of_underground_city.1
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_E2
+		event = scfe_king_of_underground_city.2
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_E3
+		event = scfe_king_of_underground_city.3
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_E4
+		event = scfe_king_of_underground_city.4
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_nyblax_site.txt ===
+# damage rune
+scfe_techis_site = {
+    desc = scfe_techis_relic_world_site_desc
+    picture = GFX_evt_techis_world
+    stages = 6
+    max_instances = 1
+    allow = {
+        is_ship_class = shipclass_science_ship
+        exists = leader
+        owner = { is_subject = no }
+    }
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_D1
+        event = scfe_techis.1
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_D2
+        event = scfe_techis.2
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_D3
+        event = scfe_techis.3
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_D4
+        event = scfe_techis.4
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_D5
+        event = scfe_techis.5
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_D6
+        event = scfe_techis.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+# haste rune
+scfe_narrow_maze_site = {
+    desc = scfe_narrow_maze_relic_world_site_desc
+    picture = GFX_evt_narrow_maze
+    stages = 5
+    max_instances = 1
+    allow = {
+        is_ship_class = shipclass_science_ship
+        exists = leader
+        owner = { is_subject = no }
+    }
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_A1
+        event = scfe_narrow_maze.1
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_A2
+        event = scfe_narrow_maze.2
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_A3
+        event = scfe_narrow_maze.3
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_A4
+        event = scfe_narrow_maze.4
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_A5
+        event = scfe_narrow_maze.5
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+# illusion rune
+scfe_jex_site = {
+    desc = scfe_jex_relic_world_site_desc
+    picture = GFX_evt_jex_world
+    stages = 5
+    max_instances = 1
+    allow = {
+        is_ship_class = shipclass_science_ship
+        exists = leader
+        owner = { is_subject = no }
+    }
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_B1
+        event = scfe_jex.1
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_B2
+        event = scfe_jex.2
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_B3
+        event = scfe_jex.3
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_B4
+        event = scfe_jex.4
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_B5
+        event = scfe_jex.5
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+# arcane rune
+scfe_ghastly_eyrie_site = {
+    desc = scfe_ghastly_eyrie_relic_world_site_desc
+    picture = GFX_evt_ghastly_eyrie_planet
+    stages = 6
+    max_instances = 1
+    allow = {
+        is_ship_class = shipclass_science_ship
+        exists = leader
+        owner = { is_subject = no }
+    }
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_C1
+        event = scfe_ghastly_eyrie.1
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_C2
+        event = scfe_ghastly_eyrie.2
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_C3
+        event = scfe_ghastly_eyrie.3
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_C4
+        event = scfe_ghastly_eyrie.4
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_C5
+        event = scfe_ghastly_eyrie.5
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C6
+        event = scfe_ghastly_eyrie.6
+    }
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+# regeneration rune
+scfe_quad_site = {
+    desc = scfe_quad_relic_world_site_desc
+    picture = GFX_evt_quad_space
+    stages = 2
+    max_instances = 1
+    allow = {
+        is_ship_class = shipclass_science_ship
+        exists = leader
+        owner = { is_subject = no }
+    }
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_E1
+        event = scfe_quad.1
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_E2
+        event = scfe_quad.2
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+# Invisibility rune
+scfe_riki_site = {
+    desc = scfe_riki_relic_world_site_desc
+    picture = GFX_evt_riki_city
+    stages = 5
+    max_instances = 1
+    allow = {
+        is_ship_class = shipclass_science_ship
+        exists = leader
+        owner = { is_subject = no }
+    }
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_F1
+        event = scfe_riki.1
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_F2
+        event = scfe_riki.2
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_F3
+        event = scfe_riki.3
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_F4
+        event = scfe_riki.4
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_F5
+        event = scfe_riki.5
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+# === merged from scfe_reverse_engine_site.txt ===
+scfe_reverse_engine_dig = {
+	desc = "scfe_reverse_engine_dig_desc"
+	picture = GFX_evt_archaeological_dig
+	max_instances = 1
+	stages = 4
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C1
+		event = scfe_reverse_engine_dig.1
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C2
+		event = scfe_reverse_engine_dig.2
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C3
+		event = scfe_reverse_engine_dig.3
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C4
+		event = scfe_reverse_engine_dig.4
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_shaded_empire_site.txt ===
+scfe_shaded_warform_dig = {
+    desc = "scfe_shaded_warform_dig_desc"
+    picture = GFX_evt_archaeological_dig
+    max_instances = 1
+    stages = 5
+    weight = {
+        base = 0
+    }
+
+    potential = {
+        owner = { has_event_chain = scfe_shaded_chain }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_shaded = yes
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_C1
+        event = scfe_shaded_warform_dig.1
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_C2
+        event = scfe_shaded_warform_dig.2
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_C3
+        event = scfe_shaded_warform_dig.3
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C4
+        event = scfe_shaded_warform_dig.4
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C5
+        event = scfe_shaded_warform_dig.5
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+# === merged from scfe_sless_alliance_site.txt ===
+scfe_sless_alliance_site_1 = {
+    desc = "scfe_sless_alliance_site_1_desc"
+    picture = GFX_evt_alien_city
+    stages = 2
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_sless = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    stage = {
+        difficulty = 1
+        icon = GFX_archaeology_runes_A1
+        event = scfe_sless.2
+    }
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_A2
+        event = scfe_sless.3
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+scfe_sless_alliance_site_2 = {
+    desc = "scfe_sless_alliance_site_2_desc"
+    picture = GFX_evt_sabotaged_ship
+    stages = 4
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_sless = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_sless_colony
+        }
+    }
+
+    stage = {
+        difficulty = 2
+        icon = GFX_archaeology_runes_B1
+        event = scfe_sless.5
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_B2
+        event = scfe_sless.6
+    }
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_B2
+        event = scfe_sless.7
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_B2
+        event = scfe_sless.8
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+scfe_sless_alliance_site_3 = {
+    desc = "scfe_sless_alliance_site_3_desc"
+    picture = GFX_evt_society_research
+    stages = 3
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_sless = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_sless_colony
+        }
+    }
+
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C1
+        event = scfe_sless.10
+    }
+    stage = {
+        difficulty = 6
+        icon = GFX_archaeology_runes_C2
+        event = scfe_sless.11
+    }
+    stage = {
+        difficulty = 7
+        icon = GFX_archaeology_runes_C2
+        event = scfe_sless.12
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+scfe_sless_alliance_site_4 = {
+    desc = "scfe_sless_alliance_site_4_desc"
+    picture = GFX_evt_dead_city
+    stages = 1
+    weight = { base = 0 }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_sless = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    on_create = {
+        root.planet = {
+            set_planet_flag = precursor_world
+            set_planet_flag = scfe_sless_colony
+        }
+    }
+
+    stage = {
+        difficulty = 8
+        icon = GFX_archaeology_runes_D1
+        event = scfe_sless.14
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+# === merged from scfe_soul_of_art_site.txt ===
+#soul of the art #https://gall.dcinside.com/mgallery/board/view?id=stellaris&no=8338
+scfe_site_soul_of_the_art = {
+	desc = "scfe_site_soul_of_the_art_desc"
+	picture = GFX_evt_scfe_soul_of_the_art_intro
+	max_instances = 1
+	stages = 6
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_create = {
+	}
+ 
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_B1
+		event = scfe_soul_of_the_art.1
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_B2
+		event = scfe_soul_of_the_art.2
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_B3
+		event = scfe_soul_of_the_art.3
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B4
+		event = scfe_soul_of_the_art.4
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_B5
+		event = scfe_soul_of_the_art.5
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_B6
+		event = scfe_soul_of_the_art.6
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_subterranean_site.txt ===
+scfe_subterranean_dig = {
+    desc = "scfe_subterranean_dig_desc"
+    picture = GFX_evt_archaeological_dig
+    max_instances = 1
+    stages = 6
+    weight = {
+        base = 0
+    }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+        has_country_flag = scfe_subterranean_dig
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_C1
+        event = scfe_subterranean_dig.1
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_C2
+        event = scfe_subterranean_dig.2
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_C3
+        event = scfe_subterranean_dig.3
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C4
+        event = scfe_subterranean_dig.4
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C5
+        event = scfe_subterranean_dig.5
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C6
+        event = scfe_subterranean_dig.6
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+# === merged from scfe_unseen_site.txt ===
+scfe_site_unseen = {
+    desc = "scfe_site_unseen_desc"
+    picture = GFX_evt_barren_dig_site
+    max_instances = 1
+    stages = 5
+    weight = {
+        base = 0
+    }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_E1
+        event = scfe_unseen_dig.1
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_E2
+        event = scfe_unseen_dig.2
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_E3
+        event = scfe_unseen_dig.3
+    }
+    stage = {
+        difficulty = 6
+        icon = GFX_archaeology_runes_E4
+        event = scfe_unseen_dig.4
+    }
+    stage = {
+        difficulty = 6
+        icon = GFX_archaeology_runes_E4
+        event = scfe_unseen_dig.5
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+# === merged from scfe_vanishing_act_site.txt ===
+scfe_vanishing_act_dig = {
+    desc = "scfe_vanishing_act_dig_desc"
+    picture = GFX_evt_archaeological_dig
+    max_instances = 1
+    stages = 4
+    weight = {
+        base = 0
+    }
+
+    potential = {
+        owner = { is_ai = no }
+    }
+
+    allow = {
+        exists = leader
+        leader = { leader_class = scientist }
+    }
+
+    visible = {
+        scfe_dig_site_visible_trigger_ghosts = yes
+    }
+
+    on_visible = {
+        country_event = { id = story.5 days = 30 }
+    }
+
+    stage = {
+        difficulty = 3
+        icon = GFX_archaeology_runes_C1
+        event = scfe_vanishing_act_dig.1
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_C2
+        event = scfe_vanishing_act_dig.2
+    }
+    stage = {
+        difficulty = 4
+        icon = GFX_archaeology_runes_C3
+        event = scfe_vanishing_act_dig.3
+    }
+    stage = {
+        difficulty = 5
+        icon = GFX_archaeology_runes_C4
+        event = scfe_vanishing_act_dig.4
+    }
+
+    on_roll_failed = {
+        from = {
+            standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+        }
+    }
+}
+
+# === merged from scfe_war_torn_site.txt ===
+# War-Torn Planet
+scfe_war_torn_dig = {
+	desc = "scfe_war_torn_dig_desc"
+	picture = GFX_evt_archaeological_dig
+	max_instances = 1
+	stages = 4
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C1
+		event = scfe_war_torn_dig.1
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C2
+		event = scfe_war_torn_dig.2
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C3
+		event = scfe_war_torn_dig.3
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C4
+		event = scfe_war_torn_dig.4
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_world_sings_site.txt ===
+# When the world sings #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8190
+scfe_site_when_the_world_sings = {
+	desc = scfe_site_when_the_world_sings_desc
+	picture = GFX_evt_scfe_samchigui_intro
+	max_instances = 1
+	stages = 4
+	weight = 0 #check on action
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_A1
+		event = scfe_when_the_world_sings.2
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_A2
+		event = scfe_when_the_world_sings.3
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A3
+		event = scfe_when_the_world_sings.4
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_A4
+		event = scfe_when_the_world_sings.5
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+# === merged from scfe_ziaskehorn_site.txt ===
+ziaskehorn_digsite = {
+	desc = ziaskehorn_digsite_desc
+	picture = GFX_ziaskehorn_lava_planet
+	stages = 4
+	max_instances = 1
+	weight = 0
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger = yes
+	}
+
+	stage = {
+		difficulty = 2
+		event = scfe_ziaskehorn.11
+		icon = GFX_archaeology_runes_F2
+	}
+	stage = {
+		difficulty = 4
+		event = scfe_ziaskehorn.12
+		icon = GFX_archaeology_runes_D6
+	}
+	stage = {
+		difficulty = 5
+		event = scfe_ziaskehorn.13
+		icon = GFX_archaeology_runes_A3
+	}
+	stage = {
+		difficulty = 7
+		event = scfe_ziaskehorn.14
+		icon = GFX_archaeology_runes_E1
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = site_scfe_ziaskehorn_random_events }
+		}
+	}
+}
+
+# === merged from scfe_znkar_site.txt ===
+scfe_znkar_dig = {
+	desc = "scfe_znkar_dig_desc"
+	picture = GFX_evt_archaeological_dig
+	max_instances = 1
+	stages = 4
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger_znkar = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	on_create = {
+		planet = { set_planet_flag = precursor_world }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C1
+		event = scfe_znkar_dig.1
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C2
+		event = scfe_znkar_dig.2
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C3
+		event = scfe_znkar_dig.3
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C4
+		event = scfe_znkar_dig.4
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+scfe_znkar_colossus_dig = {
+	desc = "scfe_znkar_colossus_dig_desc"
+	picture = GFX_evt_archaeological_dig
+	max_instances = 1
+	stages = 5
+	weight = {
+		base = 0
+	}
+
+	potential = {
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		scfe_dig_site_visible_trigger_znkar = yes
+	}
+
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}
+
+	on_create = {
+		planet = { set_planet_flag = precursor_world }
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_C1
+		event = scfe_znkar_dig.5
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C2
+		event = scfe_znkar_dig.6
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C3
+		event = scfe_znkar_dig.7
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C4
+		event = scfe_znkar_dig.8
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C5
+		event = scfe_znkar_dig.9
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}

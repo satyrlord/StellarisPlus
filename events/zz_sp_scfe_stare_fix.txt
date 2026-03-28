@@ -1,0 +1,12 @@
+namespace = scfe_stare
+
+# Upstream Forgotten Empires ships the special project hook without any event definition.
+country_event = {
+	id = scfe_stare.20
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		end_event_chain = scfe_stare_chain
+	}
+}

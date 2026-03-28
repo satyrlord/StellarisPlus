@@ -884,6 +884,10 @@ building_plentiful_traditions_obelisk1 = {
 #	planet_limit = 1
 
 	category = resource
+
+	building_sets = {
+		urban
+	}
 	
 	potential = {
 		exists = owner
@@ -956,6 +960,10 @@ building_plentiful_traditions_obelisk2 = {
 #	planet_limit = 1
 
 	category = resource
+
+	building_sets = {
+		urban
+	}
 	
 	potential = {
 		exists = owner
@@ -1028,6 +1036,10 @@ building_plentiful_traditions_obelisk3 = {
 #	planet_limit = 1
 
 	category = resource
+
+	building_sets = {
+		urban
+	}
 	
 	potential = {
 		exists = owner
@@ -2354,6 +2366,11 @@ building_plentiful_traditions_syndicate_quarters = {
 	base_cap_amount = 3
 
 	category = army
+
+	building_sets = {
+		government
+		fortress
+	}
 	
 	potential = {
 		exists = owner

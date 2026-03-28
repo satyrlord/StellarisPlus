@@ -1,0 +1,739 @@
+# === merged from aspmod_tech.txt ===
+tech_aspmod_geocentric_device = {
+	cost = 0
+	area = physics
+	tier = 5
+	category = { particles }
+    weight = 0
+
+	ai_weight = {
+        weight = 0      
+	}
+}
+
+# === merged from plentiful_traditions_tech_placeholder.txt ===
+# Placeholder
+
+##################
+### TECH COSTS ###
+##################
+#If you change any of these, use replace in files so the values are the same across all files
+
+@tier1cost1 = 1200
+@tier1cost2 = 1400
+@tier1cost3 = 1600
+
+@tier2cost1 = 2000
+@tier2cost2 = 3000
+@tier2cost3 = 4000
+
+@tier3cost1 = 6000
+@tier3cost2 = 8000
+@tier3cost3 = 10000
+
+@tier4cost1 = 12000
+@tier4cost2 = 16000
+@tier4cost3 = 20000
+
+@tier5cost1 = 28000
+@tier5cost2 = 34000
+@tier5cost3 = 40000
+
+####################
+### TECH WEIGHTS ###
+####################
+
+@tier1weight1 = 100
+@tier1weight2 = 95
+@tier1weight3 = 90
+
+@tier2weight1 = 85
+@tier2weight2 = 75
+@tier2weight3 = 70
+
+@tier3weight1 = 65
+@tier3weight2 = 60
+@tier3weight3 = 50
+
+@tier4weight1 = 45
+@tier4weight2 = 40
+@tier4weight3 = 35
+
+@tier5weight1 = 30
+@tier5weight2 = 25
+@tier5weight3 = 20
+
+#######################################################################
+
+tech_plentiful_traditions_orbital_fracking_cannon = { #minerals
+	cost = 0
+	area = engineering	
+	start_tech = no
+	category = { industry }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tech_plentiful_traditions_orbital_trading_beacon = { #energy
+	cost = 0
+	area = physics
+	start_tech = no
+	category = { industry }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tech_plentiful_traditions_orbital_fertilizer_array = { #food
+	cost = 0
+	area = physics
+	start_tech = no
+	category = { industry }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tech_plentiful_traditions_orbital_r_s = { # refinery_station alloys
+	cost = 0
+	area = physics
+	start_tech = no
+	category = { industry }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tech_plentiful_traditions_orbital_c_h = { # craftwork_headquarters consumer_goods
+	cost = 0
+	area = physics
+	start_tech = no
+	category = { industry }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tech_plentiful_traditions_orbital_c_r_s = { # cosmic_rays_shield pop-growth
+	cost = 0
+	area = physics
+	start_tech = no
+	category = { industry }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tech_plentiful_traditions_orbital_a_s_p_i = { # automatic_spare_part_industry  pop-buildingcost/time
+	cost = 0
+	area = physics
+	start_tech = no
+	category = { industry }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tech_plentiful_traditions_robotics_construct_amplifiers = {
+	cost = 0
+	area = engineering
+	start_tech = no
+	category = { industry }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+tech_plentiful_traditions_metaverse_ecosystem = {
+	cost = 0
+	area = engineering
+	start_tech = no
+	category = { industry }
+	tier = 0
+	weight = 0
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+# === merged from scfe_technology.txt ===
+tech_koeleothan_utilization = {
+	cost = @tier2cost1
+	area = society
+	category = { psionics }
+	is_rare = yes
+	tier = 2
+	weight = @tier2weight1
+
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_country_flag = cf_koeleothan_found
+			has_koeleothan_deposit = yes
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_koeleothan_utilization
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_koeleothan_found }
+			NOT = {
+				has_koeleothan_deposit = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_koeleothan_found }
+			NOT = {
+				has_koeleothan_deposit = yes
+			}
+		}
+		modifier = {
+			factor = 3
+			has_country_flag = cf_koeleothan_found
+			has_koeleothan_deposit = yes
+		}
+	}
+}
+
+tech_quantumpearls_exploitation = {
+	cost = @tier2cost1
+	area = engineering
+	category = { field_manipulation }
+	is_rare = yes
+	tier = 2
+	weight = @tier2weight1
+
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_country_flag = cf_quantumpearls_found
+			has_quantumpearl_deposit = yes
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_quantumpearls_exploitation
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_quantumpearls_found }
+			NOT = {
+				has_quantumpearl_deposit = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_quantumpearls_found }
+			NOT = {
+				has_quantumpearl_deposit = yes
+			}
+		}
+		modifier = {
+			factor = 3
+			has_country_flag = cf_quantumpearls_found
+			has_quantumpearl_deposit = yes
+		}
+	}
+}
+
+tech_xenograss_harvesting = {
+	cost = @tier2cost1
+	area = society
+	category = { biology }
+	is_rare = yes
+	tier = 2
+	weight = @tier2weight1
+
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_country_flag = cf_xenograss_found
+			has_xenograss_deposit = yes
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_xenograss_harvesting
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_xenograss_found }
+			NOT = {
+				has_xenograss_deposit = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_xenograss_found }
+			NOT = {
+				has_xenograss_deposit = yes
+			}
+		}
+		modifier = {
+			factor = 3
+			has_country_flag = cf_xenograss_found
+			has_xenograss_deposit = yes
+		}
+	}
+}
+
+tech_woorskyr_habitation = {
+	cost = @tier2cost1
+	area = society
+	category = { new_worlds }
+	is_rare = yes
+	tier = 2
+	weight = @tier2weight1
+
+	prereqfor_desc = {
+		custom = {
+			title = TECH_UNLOCK_WOORSKYR_TECHS_TITLE
+			desc = TECH_UNLOCK_WOORSKYR_TECHS_DESC
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_woorskyr_habitation
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+	}
+}
+
+tech_woorskyr_bark_farm = {
+	cost = @tier2cost1
+	area = society
+	category = { new_worlds }
+	is_rare = yes
+	tier = 3
+	icon = tech_woorskyr_habitation
+	weight = @tier2weight1
+	prerequisites = { tech_woorskyr_habitation }
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			country_uses_food = no
+		}
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_woorskyr_bark_farm
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+	}
+}
+
+tech_woorskyr_biofuel_refinery = {
+	cost = @tier2cost1
+	area = society
+	category = { new_worlds }
+	is_rare = yes
+	tier = 3
+	icon = tech_woorskyr_habitation
+	weight = @tier2weight1
+	prerequisites = { tech_woorskyr_habitation }
+
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_woorskyr_biofuel_refinery
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+	}
+}
+
+tech_woorskyr_bioenergy_plant = {
+	cost = @tier2cost1
+	area = society
+	category = { new_worlds }
+	is_rare = yes
+	tier = 3
+	icon = tech_woorskyr_habitation
+	weight = @tier2weight1
+	prerequisites = { tech_woorskyr_habitation }
+
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_woorskyr_bioenergy_plant
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+	}
+}
+
+tech_woorskyr_growth_monitoring_center = {
+	cost = @tier2cost1
+	area = society
+	category = { new_worlds }
+	is_rare = yes
+	tier = 3
+	icon = tech_woorskyr_habitation
+	weight = @tier2weight1
+	prerequisites = { tech_woorskyr_habitation }
+
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_woorskyr_growth_monitoring_center
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+	}
+}
+
+tech_woorskyr_ship_foundry = {
+	cost = @tier2cost1
+	area = society
+	category = { new_worlds }
+	is_rare = yes
+	tier = 3
+	icon = tech_woorskyr_habitation
+	weight = @tier2weight1
+	prerequisites = { tech_woorskyr_bark_farm tech_xenograss_harvesting }
+
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_woorskyr_ship_foundry
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_woorskyr_found }
+			NOT = {
+				has_woorskyr_deposit = yes
+			}
+		}
+		modifier = {
+			factor = 3
+			has_country_flag = cf_woorskyr_found
+			has_woorskyr_deposit = yes
+		}
+	}
+}
+
+tech_beetle_exploitation = {
+	cost = @tier2cost1
+	area = physics
+	category = { field_manipulation }
+	is_rare = yes
+	tier = 2
+	weight = @tier2weight1
+
+	weight_modifier = {
+		modifier = {
+			factor = 3
+			has_country_flag = cf_beetle_found
+			has_beetle_deposit = yes
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_beetle_exploitation
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_beetle_found }
+			NOT = {
+				has_beetle_deposit = yes
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 3
+			has_country_flag = cf_beetle_found
+			has_beetle_deposit = yes
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_country_flag = cf_beetle_found }
+			NOT = {
+				has_beetle_deposit = yes
+			}
+		}
+	}
+}
+
+tech_beetle_exploitation_2 = {
+	cost = @tier2cost2
+	area = physics
+	category = { field_manipulation }
+	is_rare = yes
+	prerequisites = { "tech_beetle_exploitation" }
+	tier = 3
+	weight = @tier2weight1
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_beetle_exploitation_2
+		}
+		modifier = {
+			factor = 0
+			is_spiritualist = no
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			has_trait_in_council = { TRAIT = leader_trait_expertise_statecraft }
+		}
+		modifier = {
+			factor = 0
+			is_spiritualist = no
+		}
+	}
+}
+
+# Precursor Story Pack
+tech_scfe_astanine_hologram = {
+	cost = 0
+	area = physics
+	tier = 4
+	category = { particles }
+	is_rare = yes
+	weight = 0
+
+	ai_weight = {
+		weight = 0
+	}
+}

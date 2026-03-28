@@ -1,0 +1,111 @@
+# === merged from eev_chains.txt ===
+murder_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	picture = GFX_evt_metropolis
+	counter = {
+		eev_victims = {}
+	}
+}
+
+# === merged from scfe_event_chains.txt ===
+scfe_alshigans_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		scfe_alshigans_artifacts = {
+			max = 5
+		}
+	}
+}
+scfe_znkar_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		scfe_znkar_artifacts = {
+			max = 4
+		}
+	}
+}
+scfe_sless_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		scfe_sless_colonies = {
+			max = 3
+		}
+	}
+}
+scfe_coprean_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		scfe_coprean_colonies = {
+			max = 3
+		}
+	}
+}
+scfe_astanine_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		scfe_astanine_colonies = {
+			max = 4
+		}
+	}
+}
+scfe_shaded_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_archaeological_dig
+	counter = {
+		scfe_shaded_clues = { max = 6 }
+		scfe_shaded_detection = {}
+		scfe_shaded_leads = { max = 4 }
+	}
+}
+scfe_roots_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_alien_nature
+}
+scfe_celestial_system_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_communication_event
+}
+scfe_celestial_disturbance_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_star_neutron
+	counter = {
+		scfe_celestial_disturbance_clues = { max = 7 }
+	}
+}
+scfe_unseen_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_astral_rift.dds"
+	picture = GFX_evt_astral_rift
+}
+scfe_ghosts_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+	picture = GFX_evt_city_ruins
+}
+scfe_strange_worlds_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_star_chart
+
+}
+scfe_stare_chain = {
+    icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+    picture = GFX_evt_huge_monument
+}
+
+# scfe_shamblers_chain = {
+# 	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+# 	picture = GFX_evt_archaeological_dig
+# 	counter = {
+# 		scfe_shamblers_clues = { max = 3 }
+# 	}
+# }
+# scfe_scrambler_chain = {
+# 	icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
+# 	picture = GFX_evt_archaeological_dig
+# 	counter = {
+# 		scfe_shamblers_clues = { max = 3 }
+# 	}
+# }
