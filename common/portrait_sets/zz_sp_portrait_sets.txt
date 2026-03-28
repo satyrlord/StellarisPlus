@@ -77,6 +77,7 @@ HumanoidSL_set = {
 		"sl_deathless"		
 		"sl_demon"	
 		"sl_drow"
+		"sl_earthgiant"
 		"sl_egypt"	
 		"sl_highelf"		
 		"sl_holy"	
@@ -84,6 +85,7 @@ HumanoidSL_set = {
 		"sl_mermaid"				
 		"sl_militarium"	
 		"sl_norse"		
+		"sl_savagedespoiler"
 		"sl_shogun"			
 		"sl_UNE"		
 		"sl_wakanda"			
@@ -96,6 +98,7 @@ HumanoidSL_set = {
 		"sl_deathless"	
 		"sl_demon"
 		"sl_drow"
+		"sl_earthgiant"
 		"sl_egypt"			
 		"sl_highelf"			
 		"sl_holy"			
@@ -103,6 +106,7 @@ HumanoidSL_set = {
 		"sl_mermaid"		
 		"sl_militarium"	
 		"sl_norse"			
+		"sl_savagedespoiler"
 		"sl_shogun"		
 		"sl_UNE"		
 		"sl_wakanda"			
@@ -113,14 +117,21 @@ NecroidSL_set = {
 	portraits = {
 		"sl_banshee"
 		"sl_deathless"			
-		"sl_demon"
 		"sl_drow"			
 	}
 	non_randomized_portraits = {
 		"sl_banshee"
 		"sl_deathless"		
-		"sl_demon"	
 		"sl_drow"			
+	}
+}
+InfernalSL_set = {
+	species_class = INF
+	portraits = {
+		"sl_demon"
+	}
+	non_randomized_portraits = {
+		"sl_demon"
 	}
 }
 ToxoidSL_set = {
@@ -147,10 +158,12 @@ LithoidSL_set = {
 	portraits = {
 		"sl_crystaloid"	
 		"sl_diamondgiant"			
+		"sl_earthgiant"
 	}
 	non_randomized_portraits = {
 		"sl_crystaloid"		
 		"sl_diamondgiant"			
+		"sl_earthgiant"
 	}
 }
 MachineSL_set = {

@@ -79,3 +79,10 @@ toxoids = {
 		ToxoidSL_set
 	}
 }
+infernals = {
+	name = INF
+
+	sets = {
+		InfernalSL_set
+	}
+}
