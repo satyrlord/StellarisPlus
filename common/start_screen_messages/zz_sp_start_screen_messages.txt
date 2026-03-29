@@ -14,3 +14,13 @@ part = {
 		has_country_flag = is_astroraptors
 	}		
 }
+# === merged from 99_orphaned_matrix_start_screen.txt ===
+# Orphaned Matrix
+part = {
+	location = 0
+	localization = "START_SCREEN_ORPHANED_MATRIX"
+
+	trigger = {
+		has_origin = origin_orphan_matrix
+	}
+}

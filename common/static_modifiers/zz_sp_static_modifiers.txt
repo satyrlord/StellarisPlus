@@ -1,3 +1,342 @@
+miner_jobs_bonus_workforce_mult = {
+	custom_tooltip = miner_jobs_bonus_workforce_mult_tt
+	pop_miner_bonus_workforce_mult = 1
+	pop_mining_drone_bonus_workforce_mult = 1
+	pop_low_tech_miner_bonus_workforce_mult = 1
+}
+
+technician_jobs_bonus_workforce_mult = {
+	custom_tooltip = technician_jobs_bonus_workforce_mult_tt
+	pop_technician_bonus_workforce_mult = 1
+	pop_technician_drone_bonus_workforce_mult = 1
+	pop_low_tech_technician_bonus_workforce_mult = 1
+}
+
+farmer_jobs_bonus_workforce_mult = {
+	custom_tooltip = farmer_jobs_bonus_workforce_mult_tt
+	pop_farmer_bonus_workforce_mult = 1
+	pop_agri_drone_bonus_workforce_mult = 1
+	pop_low_tech_farmer_bonus_workforce_mult = 1
+}
+
+researcher_jobs_bonus_workforce_mult = {
+	custom_tooltip = researcher_jobs_bonus_workforce_mult_tt
+	pop_physicist_bonus_workforce_mult = 1
+	pop_biologist_bonus_workforce_mult = 1
+	pop_engineer_bonus_workforce_mult = 1
+	pop_brain_drone_physicist_bonus_workforce_mult = 1
+	pop_brain_drone_biologist_bonus_workforce_mult = 1
+	pop_brain_drone_engineer_bonus_workforce_mult = 1
+	pop_calculator_physicist_bonus_workforce_mult = 1
+	pop_calculator_biologist_bonus_workforce_mult = 1
+	pop_calculator_engineer_bonus_workforce_mult = 1
+	pop_knight_commander_bonus_workforce_mult = 1
+	pop_knight_bonus_workforce_mult = 1
+	pop_low_tech_researcher_bonus_workforce_mult = 1
+	pop_experiment_engineer_bonus_workforce_mult = 1
+	pop_experiment_engineer_drone_bonus_workforce_mult = 1
+	pop_introspective_calculator_bonus_workforce_mult = 1
+}
+
+physicist_jobs_bonus_workforce_mult = {
+	custom_tooltip = physicist_jobs_bonus_workforce_mult_tt
+	pop_physicist_bonus_workforce_mult = 1
+	pop_brain_drone_physicist_bonus_workforce_mult = 1
+	pop_calculator_physicist_bonus_workforce_mult = 1
+	pop_introspective_calculator_bonus_workforce_mult = 1
+}
+
+biologist_jobs_bonus_workforce_mult = {
+	custom_tooltip = biologist_jobs_bonus_workforce_mult_tt
+	pop_biologist_bonus_workforce_mult = 1
+	pop_brain_drone_biologist_bonus_workforce_mult = 1
+	pop_calculator_biologist_bonus_workforce_mult = 1
+	pop_introspective_calculator_bonus_workforce_mult = 1
+}
+
+engineer_jobs_bonus_workforce_mult = {
+	custom_tooltip = engineer_jobs_bonus_workforce_mult_tt
+	pop_engineer_bonus_workforce_mult = 1
+	pop_brain_drone_engineer_bonus_workforce_mult = 1
+	pop_calculator_engineer_bonus_workforce_mult = 1
+	pop_introspective_calculator_bonus_workforce_mult = 1
+}
+
+bureaucrat_jobs_bonus_workforce_mult = {
+	custom_tooltip = bureaucrat_jobs_bonus_workforce_mult_tt
+	pop_bureaucrat_bonus_workforce_mult = 1
+	pop_coordinator_bonus_workforce_mult = 1
+	pop_synapse_drone_bonus_workforce_mult = 1
+	pop_knight_commander_bonus_workforce_mult = 1
+	pop_knight_bonus_workforce_mult = 1
+	pop_introspective_calculator_bonus_workforce_mult = 1
+}
+
+livestock_jobs_bonus_workforce_mult = {
+	custom_tooltip = livestock_jobs_bonus_workforce_mult_tt
+	pop_livestock_bonus_workforce_mult = 1
+	pop_livestock_lithoid_bonus_workforce_mult = 1
+}
+
+foundry_jobs_bonus_workforce_mult = {
+	custom_tooltip = foundry_jobs_bonus_workforce_mult_tt
+	pop_foundry_bonus_workforce_mult = 1
+	pop_fabricator_bonus_workforce_mult = 1
+	pop_alloy_drone_bonus_workforce_mult = 1
+	pop_low_tech_laborer_bonus_workforce_mult = 1
+}
+
+artisan_jobs_bonus_workforce_mult = {
+	custom_tooltip = artisan_jobs_bonus_workforce_mult_tt
+	pop_artisan_bonus_workforce_mult = 1
+	pop_artisan_drone_bonus_workforce_mult = 1
+	pop_low_tech_laborer_bonus_workforce_mult = 1
+}
+
+trader_jobs_bonus_workforce_mult = {
+	custom_tooltip = trader_jobs_bonus_workforce_mult_tt
+	pop_trader_bonus_workforce_mult = 1
+	pop_logistics_drone_bonus_workforce_mult = 1
+}
+
+influential_jobs_bonus_workforce_mult = {
+	custom_tooltip = influential_jobs_bonus_workforce_mult_tt
+	pop_entertainer_bonus_workforce_mult = 1
+	pop_cyberdome_duelist_bonus_workforce_mult = 1
+	pop_cat_ruler_bonus_workforce_mult = 1
+	pop_bio_trophy_bonus_workforce_mult = 1
+	pop_maintenance_drone_bonus_workforce_mult = 1
+}
+
+enforcer_jobs_bonus_workforce_mult = {
+	custom_tooltip = enforcer_jobs_bonus_workforce_mult_tt
+	pop_enforcer_bonus_workforce_mult = 1
+	pop_telepath_bonus_workforce_mult = 1
+	pop_patrol_drone_bonus_workforce_mult = 1
+	pop_low_tech_warrior_workforce_mult = 1
+}
+
+worker_and_simple_drone_cat_bonus_workforce_mult = {
+	custom_tooltip = worker_and_simple_drone_cat_bonus_workforce_mult_tt
+	pop_cat_worker_bonus_workforce_mult = 1
+	pop_cat_simple_drone_bonus_workforce_mult = 1
+}
+
+specialist_and_complex_drone_cat_bonus_workforce_mult = {
+	custom_tooltip = specialist_and_complex_drone_cat_bonus_workforce_mult_tt
+	pop_cat_specialist_bonus_workforce_mult = 1
+	pop_cat_complex_drone_bonus_workforce_mult = 1
+}
+
+telepath_jobs_bonus_workforce_mult = {
+	custom_tooltip = telepath_jobs_bonus_workforce_mult_tt
+	pop_telepath_bonus_workforce_mult = 1
+	pop_telepath_drone_bonus_workforce_mult = 1
+}
+
+civilian_and_maintenance_drone_cat_bonus_workforce_mult = {
+	custom_tooltip = civilian_and_maintenance_drone_cat_bonus_workforce_mult_tt
+	pop_cat_civilian_bonus_workforce_mult = 1
+	pop_cat_maintenance_drone_bonus_workforce_mult = 1
+}
+
+roboticist_jobs_bonus_workforce_mult = {
+	custom_tooltip = roboticist_jobs_bonus_workforce_mult_tt
+	pop_roboticist_bonus_workforce_mult = 1
+	pop_identity_designer_bonus_workforce_mult = 1
+	pop_replicator_bonus_workforce_mult = 1
+}
+
+everyone_but_dystopian_specialist_workforce_mult = {
+	custom_tooltip = everyone_but_dystopian_specialist_workforce_tt
+	pop_cat_worker_bonus_workforce_mult = 1
+	pop_cat_specialist_bonus_workforce_mult = 1
+	pop_cat_ruler_bonus_workforce_mult = 1
+}
+
+industrial_jobs_exotic_gases_produces_add = {
+	custom_tooltip = industrial_jobs_exotic_gases_produces_add_tt
+	planet_metallurgists_exotic_gases_produces_add = 1
+	planet_artisans_exotic_gases_produces_add = 1
+}
+
+industrial_jobs_rare_crystals_produces_add = {
+	custom_tooltip = industrial_jobs_rare_crystals_produces_add_tt
+	planet_metallurgists_rare_crystals_produces_add = 1
+	planet_artisans_rare_crystals_produces_add = 1
+}
+
+industrial_jobs_volatile_motes_produces_add = {
+	custom_tooltip = industrial_jobs_volatile_motes_produces_add_tt
+	planet_metallurgists_volatile_motes_produces_add = 1
+	planet_artisans_volatile_motes_produces_add = 1
+}
+# === merged from orphan_matrix_modifiers.txt ===
+@stage_1_workforce_penalty = -0.33
+@stage_2_workforce_penalty = -0.50
+@stage_3_workforce_penalty = -0.66
+@stage_4_workforce_penalty = -0.75
+
+partial_codex_bonus = {
+	country_alloys_produces_mult = 0.1
+	all_technology_research_speed = 0.05
+	country_unity_produces_mult = 0.05
+}
+
+partial_codex_bonus_2 = {
+	country_alloys_produces_mult = 0.2
+	all_technology_research_speed = 0.1
+	country_unity_produces_mult = 0.1
+	ship_weapon_damage = 0.05
+	planet_pops_robotics_upkeep_mult = -0.05
+}
+
+underperforming_introspective_calculators = {
+	country_energy_produces_mult = -0.15
+}
+
+orphaned_matrix_megastructure_expertise = {
+	megastructure_build_speed_mult = 2
+}
+
+orphaned_matrix_arc_furnace_restored_mega = {
+	icon = "gfx/interface/icons/modifiers/mod_orphaned_matrix_arc_furnace_restored_mega.dds"
+	
+	country_megastructure_build_cap_add = 1
+	megastructures_upkeep_mult = 0.1
+}
+
+orphaned_matrix_arc_furnace_restored_stations = {
+	icon = "gfx/interface/icons/modifiers/mod_orphaned_matrix_arc_furnace_restored_stations.dds"
+	
+	station_gatherers_produces_mult = 0.4
+	stations_upkeep_mult = 0.2
+}
+
+orphaned_matrix_arc_furnace_restored_alloys = {
+	country_alloys_produces_mult = 0.05
+}
+
+irradiated_relic = {
+	pop_environment_tolerance = -1
+	bonus_pop_growth_mult = -1
+	icon = "gfx/interface/icons/planet_modifiers/pm_star_pulsar.dds"
+	icon_frame = 3
+}
+
+pm_shield_generator = {
+	pop_happiness = 0.5
+	planet_orbital_bombardment_damage = -0.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_shield.dds"
+	icon_frame = 1
+}
+
+pm_shield_assimilator = {
+	biological_logistic_growth_mult = 0.25	
+	planet_technician_energy_produces_mult = 0.10
+	planet_orbital_bombardment_damage = -0.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_shield.dds"
+	icon_frame = 1
+}
+
+pm_temp_building_slot_debug = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+}
+
+motivated_drones = {
+	planet_jobs_complex_drone_produces_mult = 0.2
+}
+
+demotivated_drones = {
+	planet_jobs_complex_drone_produces_mult = -0.2
+}
+
+# planet_introspective_calculators_produces_mult
+
+orphan_matrix_berzerker_code_reverted = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_robot_upkeep_mult.dds"
+	planet_pops_robotics_upkeep_mult = 0.05
+	robotic_pop_bonus_workforce_mult = -0.20
+}
+
+orphan_matrix_production_doctrine_full_steam_ahead = {
+	icon = "gfx/interface/icons/modifiers/mod_agenda_gestalt_boost.dds"
+	country_alloys_produces_mult = 0.1
+	country_exotic_gases_produces_mult = 0.05
+	country_rare_crystals_produces_mult = 0.05
+	country_volatile_motes_produces_mult = 0.05
+	all_technology_research_speed = -0.03
+	country_unity_produces_mult = -0.03
+}
+
+orphan_matrix_production_doctrine_ecological_preservation = {
+	icon = "gfx/interface/icons/modifiers/mod_planetary_ascension_effect_mult.dds"
+	country_alloys_produces_mult = -0.05
+	country_exotic_gases_produces_mult = -0.02
+	country_rare_crystals_produces_mult = -0.02
+	country_volatile_motes_produces_mult = -0.02
+	all_technology_research_speed = 0.05
+	country_unity_produces_mult = 0.05
+}
+
+orphan_matrix_production_doctrine_balanced_production = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_resource_output.dds"
+	planet_pops_robotics_upkeep_mult = 0.02
+	robotic_pop_bonus_workforce_mult = 0.05
+}
+
+situation_apply_patch_corrupted_dll = {
+	icon = "gfx/interface/icons/modifiers/mod_country_num_tech_alternatives_add_negative.dds"
+	all_technology_research_speed = -0.1
+}
+
+situation_apply_patch_storage_expansion = {
+	icon = "gfx/interface/icons/modifiers/mod_energy_produces_mult_negative.dds"
+	country_energy_produces_mult = -0.15
+}
+
+situation_apply_patch_mtu_changed = {
+	icon = "gfx/interface/icons/modifiers/mod_empire_size_mult_negative.dds"
+	empire_size_mult = 2
+}
+
+situation_apply_patch_hardware_replaced = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_jobs_simple_drone_reduced_mult.dds"
+	country_cost_mult = 0.05
+}
+
+situation_apply_patch_ram_allocated = {
+	icon = "gfx/interface/icons/modifiers/mod_country_edict_cap_mult.dds"
+	country_edict_fund_mult = -0.2
+}
+
+situation_apply_patch_security_vuln_ignored = {
+	icon = "gfx/interface/icons/modifiers/mod_lost_encryption_key.dds"
+	intel_encryption_add = -5
+}
+
+situation_apply_patch_process_terminated = {
+	icon = "gfx/interface/icons/modifiers/mod_lost_encryption_key.dds"
+	custom_tooltip = situation_apply_patch_process_terminated_custom_tooltip
+}
+
+introspective_calculator_energy_deficit_1 = {
+	pop_introspective_calculator_bonus_workforce_mult = @stage_1_workforce_penalty
+}
+
+introspective_calculator_energy_deficit_2 = {
+	pop_introspective_calculator_bonus_workforce_mult = @stage_2_workforce_penalty
+}
+
+introspective_calculator_energy_deficit_3 = {
+	pop_introspective_calculator_bonus_workforce_mult = @stage_3_workforce_penalty
+}
+
+introspective_calculator_energy_deficit_4 = {
+	pop_introspective_calculator_bonus_workforce_mult = @stage_4_workforce_penalty
+}
+# === merged from zz_sp_static_modifiers.txt (original) ===
 # === merged from aspmod_static_modifers.txt ===
 #ASP_geocentrism
 aspmod_engineering_bonus = {

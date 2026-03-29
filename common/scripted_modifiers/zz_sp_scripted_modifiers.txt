@@ -1,0 +1,13 @@
+#     Local governance value
+PRA_smod_plnt_JOB_default = {
+	icon = mod_empire_size_pops_mult
+	category = planet
+	good = yes
+}
+# === merged from codex_quest_progress_add.txt ===
+codex_quest_progress_add = {
+	icon = mod_job_introspective_calculator_add
+	good = yes
+	percentage = no
+	category = planet
+}

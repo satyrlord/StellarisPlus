@@ -1,4 +1,0 @@
-orphan_matrix_chain = {
-	icon = "gfx/interface/icons/situation_log/situation_log_physics.dds"
-	picture = GFX_evt_ship_travel
-}

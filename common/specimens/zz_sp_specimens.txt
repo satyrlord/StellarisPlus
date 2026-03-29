@@ -1,3 +1,104 @@
+orphaned_matrix_unstudied_alpha_codex = {
+	icon = "GFX_orphaned_matrix_unstudied_alpha_codex"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = exceptional
+	}
+
+	triggered_country_modifier = {
+		councilor_skill_add = 1
+	}
+}
+
+orphaned_matrix_ancient_history = {
+	icon = "GFX_orphaned_matrix_ancient_history"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	resources = {
+		category = specimens
+		produces = {
+			society_research = 10
+		}
+	}
+}
+
+orphaned_matrix_unused_schematics = {
+	icon = "GFX_orphaned_matrix_unused_schematics"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = rare
+	}
+
+	resources = {
+		category = specimens
+		produces = {
+			engineering_research = 10
+		}
+	}
+}
+
+orphaned_matrix_ancient_machinery = {
+	icon = "GFX_orphaned_matrix_ancient_machinery"
+	type = xeno_geology
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = exceptional
+	}
+
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		potential = { NOT = { has_tradition = tr_virtuality_finish } }
+		planet_pop_assembly_mult = 0.07
+	}
+	
+	triggered_country_modifier = {
+		mult = value:xeno_geology_specimens_modifiers_mult
+		potential = { has_tradition = tr_virtuality_finish }
+		planet_jobs_produces_mult = 0.07
+	}
+}
+
+orphaned_matrix_ancient_weaponry = {
+	icon = "GFX_orphaned_matrix_ancient_weaponry"
+	type = historical_item
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = exceptional
+	}
+
+	triggered_country_modifier = {
+		mult = value:historical_item_specimens_modifiers_mult
+		ship_weapon_damage = 0.07
+	}
+}
+
+orphaned_matrix_completed_codex = {
+	icon = "GFX_orphaned_matrix_completed_codex"
+	type = aesthetic_wonder
+
+	inline_script = {
+		script = "grand_archive/set_specimen_rarity"
+		RARITY = epic
+	}
+
+	triggered_country_modifier = {
+		mult = value:aesthetic_wonder_specimens_modifiers_mult
+		all_technology_research_speed = 0.05
+		country_unity_produces_mult = 0.05
+	}
+}
+# === merged from scfe_specimens.txt ===
 # Alshigans
 scfe_alshigan_amulet = {
     icon = "GFX_scfe_specimen_alshigan_amulet"

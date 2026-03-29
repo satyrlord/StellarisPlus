@@ -1,3 +1,133 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet
+# planet_modifier - applied to planet always
+# station = station class in orbit to gather
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 2
+@med_rare = 1
+@low_rare = 0.5
+
+d_introspective_lab = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_monument
+	
+	planet_modifier = {
+		job_introspective_calculator_add = 400
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_machine_memorialist }
+		}
+		job_coordinator_add = 400
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_ancient_cryo_chamber = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_ancient_cryo_chamber
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+		planet_jobs_society_research_produces_mult = 0.20
+		planet_jobs_unity_produces_mult = 0.20
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_machine_memorialist }
+		}
+		job_coordinator_add = 800
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_great_sanctuary = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_great_sanctuary
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_machine_servitor }
+		}
+		
+		habitability_ceil_add = 0.8
+		job_bio_trophy_add = 3000
+		job_artisan_drone_add = 300
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_civic = civic_machine_servitor } }
+		}
+		
+		habitability_ceil_add = 0.8
+		planet_housing_add = 3000
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_designers_memorial = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_designers_memorial
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+		planet_jobs_unity_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_machine_memorialist }
+		}
+		job_coordinator_add = 500
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_orphan_matrix }
+		}
+		job_introspective_calculator_add = 500
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+# === merged from 99_orphan_matrix_deposits.txt ===
 # === merged from 00_aspmod_planetary_deposits.txt ===
 d_ASP_a_bedroom_planet_deposit = {
 	is_for_colonizable = yes

@@ -540,3 +540,65 @@ agenda_tr_plentiful_transformation = {
 #		give_next_terraforming_tech_option_effect = yes
 #	}
 }
+# === merged from 99_orphan_matrix_council_agendas.txt ===
+@base_agenda_cost = 7000
+@ascension_agenda_cost = 3500		# Same as short_agenda_cost from traditions
+@ascension_agenda_cooldown = 1080	# 3 Years
+
+agenda_sensor_4_breakthrough = {
+	agenda_cost = @base_agenda_cost
+	agenda_cooldown = @ascension_agenda_cooldown
+	potential = {
+		has_origin = origin_orphan_matrix
+		has_country_flag = orphan_matrix_situation_finished
+		NOT = { has_technology = tech_sensors_4 }
+	}
+	effect = {
+		inverted_switch = {
+			trigger = has_technology
+			tech_sensors_4 = {
+				add_tech_progress = {
+					tech = tech_sensors_4
+					progress = @agenda_award_tech_progress
+				}
+			}
+			default = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}
+
+agenda_hyper_drive_3_breakthrough = {
+	agenda_cost = @base_agenda_cost
+	agenda_cooldown = @ascension_agenda_cooldown
+	potential = {
+		has_origin = origin_orphan_matrix
+		has_country_flag = orphan_matrix_situation_finished
+		NOT = { has_technology = tech_hyper_drive_3 }
+	}
+	effect = {
+		inverted_switch = {
+			trigger = has_technology
+			tech_hyper_drive_3 = {
+				add_tech_progress = {
+					tech = tech_hyper_drive_3
+					progress = @agenda_award_tech_progress
+				}
+			}
+			default = {
+				add_monthly_resource_mult = {
+					resource = physics_research
+					value = @tier3researchreward
+					min = @tier3researchmin
+					max = @tier3researchmax
+				}
+			}
+		}
+	}
+}

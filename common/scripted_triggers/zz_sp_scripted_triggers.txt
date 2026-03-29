@@ -1,3 +1,19 @@
+# has_precursor_intro is overridden by zz_sp_scripted_triggers.txt which already includes origin_orphan_matrix
+
+is_aggressive_crisis_player = {
+	OR = {
+		has_ascension_perk = ap_become_the_crisis
+		has_ascension_perk = ap_behemoths
+	}
+}
+
+is_galactic_leader = {
+	OR = {
+		is_galactic_custodian = yes
+		is_galactic_emperor = yes
+	}
+}
+# === merged from 99_orphaned_matrix_scripted_triggers.txt ===
 # === merged from ! asp_placeholder_triggers.txt ===
 # Irony this is a placeholder file please ignore it
 annihilator_system = { always = no }
@@ -1978,4 +1994,24 @@ has_precursor_intro = {
         # Orphaned Matrix Origin
         has_origin = origin_orphan_matrix
     }
+}
+# === merged from zz_sp_gpm_relic_compat.txt ===
+# zz_sp_ late override: narrow GPM relic probing to relic keys that StellarisPlus actually provides.
+gpm_has_other_mod_relic = {
+	OR = {
+		has_relic = r_aspmod_geocentric_device
+		has_relic = r_aspmod_communist_manifesto
+		has_relic = r_aspmod_vermifugum
+		has_relic = r_aspmod_deadspace_marker
+		has_relic = r_aspmod_synthetic_god_mummy
+		has_relic = r_aspmod_the_replicator
+		has_relic = r_aspmod_the_last_tribute
+		has_relic = r_aspmod_parasite_machine
+		has_relic = r_aspmod_parasite_machine_2
+		has_relic = r_scfe_music_of_the_universe
+		has_relic = r_scfe_protagonist_of_the_show
+		has_relic = r_scfe_sless_gene_template
+		has_relic = r_scfe_diary_of_innovo
+		has_relic = r_scfe_astanine_last_projector
+	}
 }

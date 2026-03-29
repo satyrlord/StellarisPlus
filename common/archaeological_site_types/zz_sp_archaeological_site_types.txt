@@ -1,3 +1,126 @@
+# Created by Zefnar
+
+# Orphaned Matrix Origin
+ancient_buried_vault_digsite = {
+	desc = ancient_buried_vault_digsite_intro
+	picture = GFX_evt_engineering_cache
+	stages = 2
+	weight = 0
+	max_instances = 999
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	potential = {
+		hidden_trigger = {
+			owner = {
+				has_country_flag = ancient_buried_vault_arcsite_owner@from.planet
+			}
+		}
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+		owner = {
+			has_country_flag = ancient_buried_vault_arcsite_owner@from.planet
+		}
+	}
+
+	stage = {
+		difficulty = 3
+		event = orphan_matrix_digsite.1
+		icon = GFX_archaeology_runes_C5
+	}
+	stage = {
+		difficulty = 6
+		event = orphan_matrix_digsite.2
+		icon = GFX_archaeology_runes_C4
+	}
+
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = orphan_matrix_random_events } }
+	}
+}
+
+# Orphaned Matrix Designer Home Planet
+om_ancient_ecu_digsite = {
+	desc = om_ancient_ecu_digsite_intro
+	picture = GFX_evt_relic_world
+	stages = 7
+	weight = 0
+	max_instances = 999
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+
+	potential = {
+		hidden_trigger = {
+			owner = {
+				is_machine_empire = yes
+				has_origin = origin_orphan_matrix
+			}
+		}
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+		owner = {
+			is_machine_empire = yes
+			has_origin = origin_orphan_matrix
+		}
+	}
+	
+	stage = {
+		difficulty = 3
+		event = orphan_matrix_digsite.70
+		icon = GFX_archaeology_runes_C1
+	}
+	
+	stage = {
+		difficulty = 4
+		event = orphan_matrix_digsite.71
+		icon = GFX_archaeology_runes_C2
+	}
+	
+	stage = {
+		difficulty = 5
+		event = orphan_matrix_digsite.72
+		icon = GFX_archaeology_runes_C3
+	}
+	
+	stage = {
+		difficulty = 6
+		event = orphan_matrix_digsite.73
+		icon = GFX_archaeology_runes_C4
+	}
+	
+	stage = {
+		difficulty = 7
+		event = orphan_matrix_digsite.74
+		icon = GFX_archaeology_runes_C5
+	}
+	
+	stage = {
+		difficulty = 8
+		event = orphan_matrix_digsite.75
+		icon = GFX_archaeology_runes_C6
+	}
+	
+	stage = {
+		difficulty = 9
+		event = orphan_matrix_digsite.76
+		icon = GFX_archaeology_runes_A1
+	}
+	
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = orphan_matrix_random_events } }
+	}
+}
+# === merged from 99_orphan_matrix_arc_sites.txt ===
 # === merged from arc_sites_ASP_218.39.txt ===
 # Dawn Star is Comming #https://gall.dcinside.com/mgallery/board/view/?id=stellaris&no=8308
 site_ASP_dawn_star_is_coming = {
