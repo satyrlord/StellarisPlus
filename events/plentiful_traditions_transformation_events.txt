@@ -861,8 +861,8 @@ planet_event = {
 		}
 		every_owned_pop_group = {
 			resettle_pop_group = {
-				pop_group = this
-				planet = owner.capital_scope
+				POP_GROUP = this
+				PLANET = owner.capital_scope
 			}
 		}
 		destroy_colony = yes

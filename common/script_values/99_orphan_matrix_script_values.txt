@@ -1,0 +1,94 @@
+introspective_calculators_job_number = {
+	base = 0
+	add = modifier:codex_quest_progress_add
+}
+
+introspective_calculator_unity_output_modifier = {
+	base = 1
+	modifier = {
+		add = 0.5
+		owner = { has_country_flag = introspective_calculator_unity_lv1 }
+	}
+	modifier = {
+		add = 0.5
+		owner = { has_country_flag = introspective_calculator_unity_lv2 }
+	}
+	modifier = {
+		add = 0.5
+		owner = { has_country_flag = introspective_calculator_unity_lv3 }
+	}
+	modifier = {
+		add = 0.5
+		owner = { has_country_flag = introspective_calculator_unity_artifacts_fused }
+	}
+	modifier = {
+		add = 0.25
+		owner = { has_country_flag = introspective_calculator_research_memorialists }
+	}
+}
+
+introspective_calculator_research_output_modifier = {
+	base = 1
+	modifier = {
+		add = 0.5
+		owner = { has_country_flag = introspective_calculator_research_lv1 }
+	}
+	modifier = {
+		add = 0.5
+		owner = { has_country_flag = introspective_calculator_research_lv2 }
+	}
+	modifier = {
+		add = 0.5
+		owner = { has_country_flag = introspective_calculator_research_lv3 }
+	}
+	modifier = {
+		add = 0.5
+		owner = { has_country_flag = introspective_calculator_research_artifacts_fused }
+	}
+	modifier = {
+		add = 0.25
+		owner = { has_country_flag = introspective_calculator_research_memorialists }
+	}
+}
+
+orphan_matrix_custodian_matrix_empire_size_output_modifier = {
+	base = -1
+	complex_trigger_modifier = {
+		trigger = count_owned_pop_amount
+		parameters = {
+			limit = {
+				is_pop_category = bio_trophy
+			}
+		}
+		mode = mult
+	}
+	complex_trigger_modifier = {
+		trigger = count_owned_pop_amount
+		mode = divide
+	}
+}
+
+orphaned_matrix_assimilator_matrix_energy_output_modifier = {
+	base = 0.001
+	modifier = {
+		mult = this.orphaned_matrix_assimilated_pops
+	}
+	max = 50
+}
+
+orphan_matrix_memorialists_number_modifier = {
+	base = 0
+	modifier = {
+		add = this.orphan_matrix_chroniclers
+		is_variable_set = this.orphan_matrix_chroniclers
+	}
+	divide = @memorialists_bonus_factor
+}
+
+orphaned_matrix_dead_empires_output_modifier = {
+	base = 1
+	modifier = {
+		mult = this.orphaned_matrix_dead_empires
+	}
+	max = 10
+}

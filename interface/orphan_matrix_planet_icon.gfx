@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_district_introspective_lab"
+		textureFile = "gfx/interface/icons/districts/district_specialization_icons/district_specialization_introspective_lab.dds"
+	}
+}

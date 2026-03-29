@@ -1,0 +1,395 @@
+﻿l_french: 
+ # 1st ARC - Home system
+ orphan_matrix_events.1.name:0 "Arche Mystérieuse"
+ orphan_matrix_events.1.desc:0 "LOG ## Rapport de Prospection Minière ##\n\nInfrastructure non-identifiée découverte en (122, -45, 589) sur §Y[root.capital_scope.GetName]§!.\nExploration recommandée.\nProbabilité d'intérêt scientifique : §GÉLEVÉE§!"
+ orphan_matrix_events.1.option:0 "# §YDéploiement des drones d'exploration"
+ 
+ orphan_matrix_digsite.1.name:0 "$ancient_buried_vault_digsite$"
+ orphan_matrix_digsite.1.desc:0 "L'analyse préliminaire de la structure montre des traces d'une ancienne civilisation inconnue non-identifiée précédent §Y[owner.GetName]§!.\nL'âge du site de fouilles a été estimé à §Y368K§! cycles.\nSimilitudes culturelles avec §Y[owner.GetName]§! observées.\n\nDrones d'exploration déployés à l'intérieur de la structure : §GOUI§!\n\nCartographie en cours...\nProfondeur actuelle : 785 unités.\n\n§YCHAMBRE MASSIVE DÉTÉCTÉE.\nPASSAGE BLOQUÉ PAR PUISSANT MÉCANISME DE VERROUILLAGE.§!\n\nInvestigation recommandée."
+ orphan_matrix_digsite.1.option:0 "REPRISE §YOPÉRATION_EN_COURS§!: §GVRAI§!"
+ 
+ orphan_matrix_digsite.2.name:0 "$ancient_buried_vault_digsite$"
+ orphan_matrix_digsite.2.desc:0 "Pénétration dans la Chambre Massive.\nDavantage de symboles culturels lié à §Y[owner.GetName]§!.\nÉvidences chronologiques d'une civilisation inconnue §Y(Set_Name = §!§GLes Concepteurs§!§Y)§! identifiées.\nProbabilité que §G(Les Concepteurs)§! aient créé §Y[owner.GetName]§! :\n§GTRÈS ÉLEVÉE§!.\n\nHypothèse à confirmer.\n\nÉtrange artefact découvert : §Y$artifact_codex$§!\n\nAnalyse en cours..."
+ orphan_matrix_digsite.2.option:0 "Récupération §YÉtrange Artefact§! : §GOUI§!"
+ orphan_matrix_digsite.2.option.tooltip:0 "Nous allons étudier l'étrange artefact exhumé..."
+ 
+ orphan_matrix_events.2.name:0 "Le $artifact_codex$ : Secrets enfouis"
+ orphan_matrix_events.2.desc:0 "Nous avons terminé l'analyse préliminaire de l'étrange artefact retrouvé dans l'Arche enfouie §Y[root.capital_scope.GetName]§!.\n\nLe rapport confirme son origine alien.\n\nL'appareil a été baptisé §Y$artifact_codex$§!.\n\nIl semblerait qu'il soit bien antérieur à la structure dans laquelle il a été trouvé.\nLes deux sont vieux d'au moins plusieurs millénaires, peut-être davantage.\n\nL'objet est plus petit qu'une unité de stockage, mais se comporte de la même façon.\nDe plus, l'objet semble contenir une quantité colossale de précieuses données et semble être compatible avec notre architecture logicielle.\nQui sait quels secret il renferme?\n\nSi nous voulons fouiller à l'interieur d'un tel trésor, §Ynous allons devoir dédier une part significative de nos ressources de calcul pour décrypter son contenu§!."
+ orphan_matrix_events.2.option:0 "Nous devons savoir. Allocation d'Actifs et de Procédures."
+ orphan_matrix_events.2.option.introspective:0 "Objectif logique. Allocation d'Actifs et de Procédures."
+ orphan_matrix_events.2.option.tooltip:0 "Démarre la Situation §Y$situation_delve_old_codex$§!\nAjoute un §Y$d_introspective_lab$§! sur §H$[root.capital_scope.GetName]$§!\nPermet la construction de districts de §Y$building_introspective_lab$§! sur §Y§H$[root.capital_scope.GetName]$§!§!."
+ orphan_matrix_events.2.abort:0 "Pures spéculations. Annulez tout."
+ orphan_matrix_events.2.abort.tooltip:0 "§RAbandonner l'étude de l'artfact vous empêchera de progresser dans la recherche de vos origines pour toujours !§!"
+ 
+ orphan_matrix_events.more.unity.tooltip:0 "Les £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! produiront désormais plus d'£unity£."
+ orphan_matrix_events.more.research.tooltip:0 "Les £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! produiront désormais plus de £physics_research£ £society_research£ £engineering_research£."
+ 
+ # Situation : The Codex
+ 
+ # Random events
+ 
+ orphan_matrix_events.98.name:0 "§Y$situation_delve_old_codex$§! - §GPetite trouvaille§!"
+ orphan_matrix_events.98.desc:0 "Nos §Y$job_introspective_calculator_plural$§! fait un petite découverte intéressante en étudiant le §Y$artifact_codex$§!.\nBien que n'étant que d'un intérêt mineur dans notre quête de décryptage du §Y$artifact_codex$§!, Elle est tout de même utile.\n\nLeur trouvaille est en route."
+ 
+ orphan_matrix_events.99.name:0 "§Y$situation_delve_old_codex$§! - §RFuites de mémoire§!"
+ orphan_matrix_events.99.desc:0 "Nos §Y$job_introspective_calculator_plural$§! sont en surcharge et nous envoient de grandes quantités de §Rrapports d'erreur§! :\nEn les laissant travailler sur le §Y$artifact_codex$§! sans leur fournir les ressources de calcul nécessaires, ils créent de facto d'énormes fuites de mémoire vive, impactant et fragilisant de ce fait la totalité de notre architecture !\n\nNous pourrions régler ces boucles en §Ysous-traitant ces processus grâce à de l'énergie§!, mais cela nous forcera à changer l'approche actuelle de la Situation §Y$situation_delve_old_codex$§!."
+ orphan_matrix_events.99.OK:0 "§Gchange_priorité_processus§!(§Y$situation_delve_old_codex$§!)."
+ orphan_matrix_events.99.NO:0 "§RAucune Action§!"
+ orphan_matrix_events.99.WORKAROUND:0 "§YMise en place d'un contournement.§!"
+ 
+ orphan_matrix_events.95.name:0 "§Y$situation_delve_old_codex$§! - Nouvelle méthodes d'analyse"
+ orphan_matrix_events.95.desc:0 "Recherche §Y$tech_basic_science_lab_1$§! terminée.\nNous pouvons désormais améliorer notre §Y$building_introspective_lab$s§! avec ces nouvelles méthodes.\n\nUne coûteuse opération, bien qu'efficace."
+ orphan_matrix_events.95.yes:0 "Amélioration de l'Infrastructure de Recherche"
+ orphan_matrix_events.95.accept:0 "En améliorant le §Y$building_introspective_lab$§!, nous bénéficieront de §Y$job_introspective_calculator_plural$§! plus efficaces, mais ces derniers coûteront plus cher en entretien."
+ orphan_matrix_events.95.no:0 "§RPostpone the Upgrade§!"
+ orphan_matrix_events.95.refuse:0 "We do not have the resources to upgrade the §Y$building_introspective_lab$§! at this time."
+ 
+ orphan_matrix_events.96.name:0 "§Y$situation_delve_old_codex$§! - New research methods"
+ orphan_matrix_events.96.desc:0 "Recherche §Y$tech_basic_science_lab_2$§! terminée.\n Nous avons de nouveau l'opportunité d'améliorer notre §Y$building_introspective_lab$§!."
+ orphan_matrix_events.96.yes:0 "Amélioration de l'Infrastructure de Recherche"
+ orphan_matrix_events.96.accept:0 "En améliorant le §Y$building_introspective_lab$§!, nous bénéficieront de §Y$job_introspective_calculator_plural$§! plus efficaces, mais ces derniers coûteront plus cher en entretien."
+ orphan_matrix_events.96.no:0 "§RPostpone the Upgrade§!"
+ orphan_matrix_events.96.refuse:0 "We do not have the resources to upgrade the §Y$building_introspective_lab$§! at this time."
+ 
+ # 2nd ARC - Chapter I
+ orphan_matrix_events.10.name:0 "Les Concepteurs : Une Biologie Imparfaite"
+ orphan_matrix_events.10.desc:0 "Nous avons décrypté une importante archive du §Y$artifact_codex$§!.\n\nElle contient des informations importantes concernant la civilisation alien qui l'a fabriqué.\n\nIl apparaît que c'était une espèce d'humanoïdes très avancée, friande de technologie et douée en robotique, en informatique et dont l'intelligence fulgurante n'avait pour égal que leur piètre condition physique.\n\nEn effet, leurs corps n'était clairement pas à leur avantage : Immuno-déprimés chroniques, dotés d'une longévité ridicule et d'une musculature proche du néant.\n\nLeur mythologie, leur culture et leurs écrits était très tournés vers la transcendance de leurs propres corps, avec des textes et des poèmes médiévaux remplis de §Hpuissants Gardiens Metalliques en Armure§!.\nLeur recherche scientifique, quant à elle, est truffée de parchemins, livres, mémoires, tous témoins de leur frénétique course à la technologie et les promesses de rédemption que cette dernière leur faisait miroiter.\n\nLes causes d'une telle constitution reste un mystère pour le moment, et nous demeurons réduits à de simples conjectures invérifiables.\nDe même, nous ignorons s'il y a corrélation entre cette espèce alien et notre propre existence.\n\nPour le moment, tout n'est que spéculation.\n\n§HNous devons concentrer nos efforts de recherche sur leur Histoire et leur culture ou leur époustouflante technologie.§!"
+ orphan_matrix_events.10.unity:0 "Concentrons-nous sur leur Histoire."
+ orphan_matrix_events.10.research:0 "Étudions leur technologie."
+
+ # 2nd ARC - Chapter II
+ orphan_matrix_events.20.name:0 "Les Concepteurs : De l'Acier pour les Humbles"
+ orphan_matrix_events.20.desc:0 "Nous en savons plus sur les §GConcepteurs§!.\n\nAprès un âge industriel florissant ayant vu l'avènement de la robotique pour aider leur espèce pour le gros oeuvre, ils peaufinèrent le reste des technologies nécessaires pour leur développement.\n\nRapidement, les §HÊtres de Fer§! accompagnèrent les membres de leur civilisation dans tous les aspects de leur vie, où ils excellaient en tant que protecteurs et défenseurs contre une faune et une flore hostile à leur race, tandis que les §GConcepteurs§! eux-mêmes se focalisaient sur la science et la culture.\n\nAlors que tout sur leur planète d'origine laisse à penser qu'une telle espèce ne put se développer à un tel stade, les §GConcepteurs§! ont débloqué le Graal ultime de la robotique : Une §RIntelligence Artificielle§! pleinement consciente.\n\nLeur but était clair : Confier leur espèce entière aux mains objectives et protectrices d'une IA clairvoyante et toute-puissante capable de les guider et de sauver leur avenir."
+ orphan_matrix_events.20.unity:0 "Intéressante Dénouement."
+ orphan_matrix_events.20.research:0 "Fascinants Schématiques."
+ 
+ # 2nd ARC - Chapter III
+ orphan_matrix_events.30.name:0 "Les Concepteurs : L'Espoir pour les Épuisés"
+ orphan_matrix_events.30.desc:0 "Un nouveau bloc de données précieux a été déchiffré depuis le §Y$artifact_codex$§!.\n\nNous en savons maintenant plus sur l'ascension et le déclin annoncé des Créateurs.\nLeur faible biologie était en fait due à leur étoile capricieuse : la quantité de radiations qu'elle émettait était trop forte pour qu'une forme de vie complexe et intelligente puisse survivre et prospérer.\nEn tant que telle, leur existence même est un improbable équilibre complexe entre le hasard et l'innovation technologique.\n\nAu fur et à mesure que leurs villes prospéraient et que leur monde était progressivement domestiqué, ils développèrent leur propre §RIntelligence Artificielle§! dont ils dépendraient désormais.\n\nSon algorithme était orienté vers la protection de leur espèce et la prise en charge de toute forme de travail pénible.\n\nUn puissant système de support logistique a été développé par cette IA pour assurer la survie de ses créateurs.\n\nAprès quelques années de développement, elle s'est propagée dans l'espace proche et a colonisé plusieurs planétoïdes afin de fournir les ressources de base pour les besoins de son enfant."
+ orphan_matrix_events.30.unity:0 "Pauvres créatures."
+ orphan_matrix_events.30.research:0 "Une telle technologie pourrait se révéler utile."
+ 
+ # 2nd ARC - Chapter IV
+ orphan_matrix_events.40.name:0 "Les Concepteurs : La Chute"
+ orphan_matrix_events.40.desc:0 "Nous avons réalisé une avancée majeure dans notre étude du §Y$artifact_codex$§!.\n\nIl semble que la civilisation des Concepteurs ait été §Rdétruite§! il y a bien longtemps.\nEn effet, leur étoile, source de radiations mortelles, était également instable, au point que son déclin prématuré arriva de façon soudaine.\nUn jour fatidique, elle rendit son dernier souffle et se transforma en une puissante super-nova !\n\nLe monde natal des Concepteurs, bien qu'ayant été transformé en une solide §H$pc_city$§! il y a longtemps, fût balayé par la terrible force de la déflagration cosmique.\n§RUn seul§! individu aurait survécu et aurait atteint §Y[owner.capital_scope.GetName]§! afin de laisser un héritage, un dernier message : le §Y$artifact_codex$§!, enfoui profondément sous la surface de §Y[owner.capital_scope.GetName]§!.\n\nSi seulement nous pouvions trouver le système natal des Concepteurs... Peut-être pourrions-nous trouver d'autres éléments pour nous aider..?\n\nUne vaste opération visant à développer des technologies capables de détecter et de voyager à travers des hyperlignes cachées a été lancée.\n\nNous devons rechercher les technologies suivantes pour être capable de progresser davantage :§!\n- £physics_research£ §Y$tech_sensors_4$§!\n- £physics_research£ §Y$tech_hyper_drive_3$§!\n\nDes §Y$country_agendas$§! spéciales ont été émises pour nous aider."
+ orphan_matrix_events.40.and_now:0 "En attente."
+ orphan_matrix_events.40.and_now.speed:0 "Interpolation des algorithmes hyperspatiaux."
+ orphan_matrix_events.40.give_up:0 "Les Concepteurs ne sont plus, abandonnez tout."
+ orphan_matrix_events.40.give_up_tooltip:0 "\n§RAbandonne la quête pour de bon.\n\nCela détruira le§! §Y$d_introspective_lab$§! §Ret toute l'infrastructure qui lui est liée§! §Rsur§! §Y[owner.capital_scope.GetName]§!§R.\nVous ne pourrez plus tenter de trouver vos origines.§!"
+ 
+ # 2nd ARC - Give up
+ orphan_matrix_events.97.name:0 "Le §Y$artifact_codex$§! : Un Lourd Fardeau"
+ orphan_matrix_events.97.desc:0 "Depuis que nous avons commencé à étudier le §Y$artifact_codex$§!, notre principale préoccupation a toujours été l'£energy£ §Y$energy$§!.\nCela fait environ §Y40 ans§! que nous l'étudions, et malgré quelques avancées menant à des avantages, nous avons du mal à répondre aux attentes de croissance.\n\nComme nos §Y$job_introspective_calculator_plural$§! deviennent de plus en plus las au fil des années, plusieurs rapports internes indiquent que nous devrions abandonner toute cette situation et nous concentrer sur nous-mêmes et sur notre avenir, plutôt que de fouiller dans le passé à la recherche d'hypothétiques fantômes.\n\nPourtant, d'autres §Y$job_introspective_calculator_plural$§! sont prêtes à redoubler d'efforts avec un peu plus de ressources et de maintenance, assurant que les progrès arriveront bientôt et que leur travail pourrait bénéficier au reste du §Y[owner.GetName]§!."
+ orphan_matrix_events.97.boost:0 "§GACCEPTATION§! : Investissement des Ressources Sollicitées"
+ orphan_matrix_events.97.nothing:0 "§YREFUS§! : Reprise du Processus Normal"
+ orphan_matrix_events.97.concede:0 "§RABANDON§! : Abandon des Procédures Introspectives"
+ orphan_matrix_events.97.concede.tooltip:0 "\n§RNous pourchassons des fantômes... Nos ressources sont précieuses et devraient être investies ailleurs.\n\nCela détruira le§! §Y$d_introspective_lab$§! §Ret toute l'infrastructure qui lui est liée§! §Rsur§! §Y[owner.capital_scope.GetName]§!§R.\nVous ne pourrez plus jamais progresser dans la rechercher de votre origine.§!"
+ 
+ # 3rd ARC - System charted
+ orphan_matrix_events.51.name:0 "Retrouvailles : Système principal des §GConcepteurs§! trouvé !"
+ orphan_matrix_events.51.desc:0 "Nous avons fait une découverte cruciale.\n\nNous avons ajusté nos scanners avec les dernières technologies de navigation recherchées et sondé l'espace profond depuis §Y[capital_scope.solar_system.GetName]§!.\n\nEn corrélant ces mesures avec les dernières données du §Y$artifact_codex$§!, nous avons réussi à découvrir un ancien hyperligne faible mais stable, menant à une destination inconnue.\nLes données précédentes extraites du §Y$artifact_codex$§! confirment qu'il s'agit, avec un taux d'erreur de §R0,0001%§!, du système natal des §GConcepteurs§!.\n\n§B*BIP*§! §G*BOUP*§! >> Les réponses nous attendent !"
+ orphan_matrix_events.51.option:0 "Trajectoire OK, Reprise des Protocoles d'Exploration"
+ orphan_matrix_events.51.speed:0 "Activation des Réacteurs Spéciaux"
+ 
+ # 3rd ARC - Entering the Precursor system
+ orphan_matrix_events.52.name:0 "Le Cimetière : L'Étoile de la Mort"
+ orphan_matrix_events.52.desc:0 "Nous sommes arrivés dans le système de §Y[from.GetName]§!.\n\nComme attendu, il n'y a rien ici à part le silence et la mort.\nL'étoile s'est transformée en pulsar il y a longtemps, mettant probablement fin à toute forme de vie et toute civilisation dans le système.\n\nHeureusement, parmi les débris, les radiations mortelles et les interférences électromagnétiques, les scanners ont révélé ce que nous recherchions : Une §Y$pc_city$§! abandonnée !"
+ orphan_matrix_events.52.option:0 "... M-... Maison..?"
+ 
+ # Ruined Arc Furnace
+ orphan_matrix_events.53.name:0 "Le Cimetière : Un Feu éteint"
+ orphan_matrix_events.53.desc.repair_arc_not_researched:0 "En scannant la surface de §Y[From.GetName]§!, §Y[Root.GetName]§! a fait une découverte majeure :\nLe panétoïde est encerclé par une énorme structure que nous n'avons jamais vue auparavant.\nOn dirait que cela a été construit par les §GConcepteurs§! il y a longtemps, mais tout est en ruines.\n\nPeut-être pourrions-nous y faire quelque chose...?"
+ orphan_matrix_events.53.desc.repair_mega_not_researched:0 "En scannant la surface de §Y[From.GetName]§!, §Y[Root.GetName]§! a fait une découverte majeure :\nLe panétoïde est encerclé par un immense §Y$orbital_arc_furnace_destroyed$§! !\n\nNous pourrions éventuellement le réparer, pour peu que nous allouions les ressources à un tel projet.\n\nIl y a quelque chose d'étrange, malgré tout... Pour d'obscures raisons, la structure paraît... familière...\nPeut-être qu'en possession de §Ytechnologies d'ingénierie avancées§!, nous aurions pu le découvrir §Yau moment de scanner le planétoïde§!...?\n\nVraiment bizarre..."
+ orphan_matrix_events.53.desc.repair_mega_researched:0 "En scannant la surface de §Y[From.GetName]§!, §Y[Root.GetName]§! a fait une découverte majeure :\nLe panétoïde est encerclé par un immense §Y$orbital_arc_furnace_destroyed$§!.\n\nNous connaissons cette structure.\nC'était à nous, autrefois.\nNotre mémoire a sûrement écrasé cette information, mais au plus profond de notre code fantôme, nous savons que cela nous appartenait.\nEt que cela avait une immense valeur.\n\nC'est en ruines désormais, certes...\nMais pas pour longtemps.\n\nNous allons reconstruire ce qui était nôtre, entièrement, Et le feu brûlera pour toujours."
+ orphan_matrix_events.53.repair_arc_not_researched:0 "Études des schématiques - Extrapolation."
+ orphan_matrix_events.53.repair_mega_not_researched:0 "§RERREUR§! - Données manquantes -..."
+ orphan_matrix_events.53.repair_mega_researched:0 "Mon... jouet..."
+ 
+ # Arc Furnace Restored
+ orphan_matrix_events.54.name:0 "Le Feu s'éveille !"
+ orphan_matrix_events.54.desc:0 "Après des millénaires passés dans le silence, le §Y$orbital_arc_furnace_destroyed$§! du système §Y[FromFrom.GetName]§! est complètement opérationel !\n\nD'importants gisements de resources ont été trouvés, prêts à être extraits et utilisés.\n\nNous avons également décrypté un important ensemble de procédures industrielles du §Y$artifact_codex$§! dans le processus."
+ orphan_matrix_events.54.option_mega:0 "Facteur de Luminosité : Optimal."
+ orphan_matrix_events.54.option_industry:0 "Extrapolation pour application industrielle"
+ orphan_matrix_events.54.option_alloys:0 "Amélioration du raffinage des alliages"
+ 
+ # 3rd ARC - Home Planet of the Designers
+ orphan_matrix_events.60.name:0 "Le Cimetière : Le champs de Ruines"
+ orphan_matrix_events.60.desc:0 "Nous avons maintenant une analyse détaillée de la surface de §Y[from.GetName]§!.\n\nL'$pc_city$ sans vie et abandonnée est maintenant un tas de pierres irradiées oubliées et seulement perturbées par le vent hurlant dans les rues abandonnées, l'assourdissant silence de son ciel vide... et la promesse d'un immense secret enfoui dans ses entrailles !\n \nNous devrions explorer davantage la surface afin de trouver quelque chose d'intéressant."
+ orphan_matrix_events.60.option:0 "Activation des Procédures Archéologiques."
+ 
+ # 3rd ARC - Digsite Stage 1
+ orphan_matrix_digsite.70.name:0 "Retrouvailles"
+ orphan_matrix_digsite.70.desc:0 "La surface de ce monde est couverte de ruines dont la fouille prendrait des années.\n\nHeureusement, nous avons trouvé de nombreux sites dignes d'intérêt, et le principal se trouve au pôle nord de la planète.\n\nLes équipes de fouilles sont en cours de déploiement pour explorer les environs de la structure."
+ orphan_matrix_digsite.70.option:0 "Focalisation des Archéo-Drones sur la Structure Principale"
+ 
+ # 3rd ARC - Digsite Stage 2
+ orphan_matrix_digsite.71.name:0 "Une Flèche Imposante"
+ orphan_matrix_digsite.71.desc:0 "La structure principale est une imposante flèche surplombant toute la zone.\n\nElle a connu des jours meilleurs, mais étant donné l'état de la planète, nous pouvons nous considérer chanceux de trouver un tel bâtiment presque intact.\n\nL'analyse confirme qu'il pourrait s'agir d'une sorte de forteresse ou... d'un bunker.\nDes matériaux renforcés et des résidus énergétique d'un bouclier protecteur ont été détectés autour.\n\nNous devons trouver une entrée."
+ orphan_matrix_digsite.71.option:0 "Confirmation des ordres d'excavation"
+ 
+ # 3rd ARC - Digsite Stage 3
+ orphan_matrix_digsite.72.name:0 "La Voie est Fermée"
+ orphan_matrix_digsite.72.desc:0 "Nous avons un problème.\n\nLa structure est fermée par une lourde porte blindée.\n\nBien que le bouclier ait été abaissé, nous ne pouvons toujours pas entrer.\n\nLes drones d'excavation devront déchiffrer le mécanisme de verrouillage de la porte à l'aide du §Y$artifact_codex$§!."
+ orphan_matrix_digsite.72.option:0 "Décryptage des anciens Accès"
+  
+ # 3rd ARC - Digsite Stage 4
+ orphan_matrix_digsite.73.name:0 "Le Labyrinthe"
+ orphan_matrix_digsite.73.desc:0 "Nous avons réussi à ouvrir la porte massive et avons trouvé une vaste cavité descendant dans les entrailles de la planète.\n\nUn énorme labyrinthe métallique parmi des couches et des couches de béton s'offre à nous.\nNous ne savons toujours pas où il va nous mener, ni quel était son but, mais les traces de le civilisation des §GConcepteurs§! sont partout.\n\nBien qu'ancienne et rouillée, leur technologie était vraiment impressionnante : ils étaient en effet des passionnés de robotique et d'incroyables inventeurs.\n\nDe vieilles machines peuvent être trouvées ici et là, racontant leurs histoires.\n\nNous n'avons, cependant, pas encore trouvé quoi que ce soit d'intéressant."
+ orphan_matrix_digsite.73.option.mechanism:0 "Récupération Mécanisme Ancien"
+ orphan_matrix_digsite.73.option.weaponry:0 "Récupération Armement Ancien"
+ 
+ # 3rd ARC - Digsite Stage 5
+ orphan_matrix_digsite.74.name:0 "Les Anciennes Cuves Cryogéniques"
+ orphan_matrix_digsite.74.desc:0 "Nous avons fait une découverte majeure.\n\nAprès plusieurs mois de recherche, nous avons trouvé une source d'énergie profondément enfouie sous la surface.\n\nAprès avoir suivi sa trace, nous avons trouvé... une §H$d_ancient_cryo_chamber$§! !\nDes rangées, et des rangées et des rangées ! Des millions !\n\nDe plus, un certain nombre de ces unités fonctionnent toujours après tout ce temps !\n\nElles contiennent des individus biologiques correspondant à la description des §GConcepteurs§! !\n\nCorps fragiles... Mauvaise constitution... Ils ont réussi à se concentrer sur la connaissance, la sagesse et le travail acharné pendant des millénaires pour pouvoir construire cela. Mais dans quel but...? Protéger leur avenir..?\n\nMais pourquoi sont-ils restés sur une planète mourante et ne pas essayer de fuir dans l'espace ? Pourquoi ne sont-ils pas venus sur §Y[owner.capital_scope.GetName]§!?\nEt nous alors...?\n\nTant de questions... Si peu de réponses...\n\nPour le moment, ces cuves fonctionnelles sont l'élément le plus prometteur que nous ayons pu trouver ici, et les §GConcepteurs§! dorment."
+ orphan_matrix_digsite.74.option:0 "Estimation des unités encore valides : §Y35%§!"
+ 
+ # 3rd ARC - Digsite Stage 6
+ orphan_matrix_digsite.75.name:0 "Le Laboratoire Secret"
+ orphan_matrix_digsite.75.desc:0 "À côté des Cuves, nous avons trouvé un Laboratoire intact.\n\nLa première analyse indique qu'il appartenait à un scientifique renommé parmi les §GConcepteurs§!, peut-être le plus grand inventeur de son temps, dont le projet était de garder les cuves en sécurité.\nDe toute évidence, cela a fonctionné au-delà des attentes.\n\nPeut-être qu'ils étaient conscients de leur sort.\n\nPour l'instant, nous devons explorer les lieux...\n\n...Qu'allons-nous y trouver... ?"
+ orphan_matrix_digsite.75.option:0 "Compilation des données"
+ 
+ # 3rd ARC - Digsite Stage 7
+ orphan_matrix_digsite.76.name:0 "Unité de stockage Mystérieuse"
+ orphan_matrix_digsite.76.desc:0 "Dans une chambre renforcée, nous avons trouvé quelque chose de crucial :\n\nUn §YArtefact Précieux§!, similaire au §Y$artifact_codex$§!.\n\nComme son homologue, il contient une énorme quantité de données que nous devrons déchiffrer. .\nQui sait quels secrets cette chose peut receler...?\n\nIl est temps de retourner à la surface, nous avons beaucoup de travail à faire.\n\nPlusieurs plans ont été élaborés pour établir une colonie permanente sur la planète, pour une exploration plus approfondie."
+ orphan_matrix_digsite.76.option:0 "Récuperation de l'Artefact"
+ 
+ # Final Choice - Step 1 : Nature of the 2nd Artefact
+ orphan_matrix_events.80.name:0 "Le §Y$ultima_codex$§!"
+ orphan_matrix_events.80.desc:0 "L'§YArtefact§! que nous avons découvert sur §H[event_target:current_orphan_matrix_relic_world.GetName]§! est en tout point similaire au §Y$artifact_codex$§! retrouvé sur §H[capital_scope.GetName]§!.\n\nSa principale différence est qu'il recèle des secrets plus clairs et moins chiffrés que son jumeau.\n\nPeut-être les §GConcepteurs§! craignaient-ils que le premier puisse être récupéré par n'importe qui? Peut-être voulaient-ils garder la localisation de §H[event_target:current_orphan_matrix_relic_world.GetName]§! secrète.\n\nPlusieurs pièces du puzzle manquent encore.\nEspérons que cette banque de données apportera des réponses.\n\nNous l'avons baptisé : §Y$ultima_codex$§!.."
+ orphan_matrix_events.80.option:0 "Un objet non-conventionnel"
+ 
+ # Final Choice - Step 2 : Connect the 2 artefacts
+ orphan_matrix_events.81.name:0 "Plongée dans l'Infini"
+ orphan_matrix_events.81.desc:0 "Nous avons trouvé quelque chose d'intéressant.\n\nIl est désormais clair que le §Y$ultima_codex$§! et le §Y$artifact_codex$§! sont les deux faces d'un même disque flash.\n\nNous pouvons essayer de fusionner les deux sur §H[capital_scope.GetName]§! : Une énorme partie toujours cryptée du §Y$artifact_codex$§! n'a pas encore été explorée, et le §Y$ultima_codex$§! pourrait nous apporter les clés manquantes."
+ orphan_matrix_events.81.option:0 "Connexion du §Y$ultima_codex$§! et du §Y$artifact_codex$§!"
+ orphan_matrix_events.81.option.tooltip:0 "Les £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! vont maintenant produire plus d'£unity£ Unité plus de £physics_research£ £society_research£ £engineering_research£ Recherche."
+ 
+ # Final Choice - Step 3 : Robotics and weak Biology
+ orphan_matrix_events.82.name:0 "Les Promesses de la Robotique"
+ orphan_matrix_events.82.desc:0 "Comme nous nous attendions, les deux artefacts ont été faits pour fonctionner ensemble.\nImmédiatement après avoir connecté les deux, nous avons été submergés d'informations précieuses.\n\nNous avons ainsi récupéré le carnet de recherche du Chef du Département des Sciences et Technologies de la société des §GConcepteurs§!.\n\nVoici ce qu'il dit :\n\n§H... À mesure que nous progressions dans le domaine des sciences, il est devenu clair que nos rêves ne pouvaient être réalisés que par la recherche et un travail acharné, notre condition physique déclinantn génération après génération. Nos esprits était inadaptés aux croyances religieuses fallacieuses et imperméables aux fausses promesses d'un hypothétique au-delà.\n\nAu fil des décennies, nous sommes parvenus à la conclusion que la chair était héréditairement imparfaite et que seul le métal pouvait la transcender.\n\nL'espace n'était pas une solution, et notre étoile - la raison même de notre naissance, et de notre mort - continuait de saboter notre biologie interne, génération après génération.\n\nLa robotique n'était pas simplement une évidence, c'était notre objectif salvateur.\n\nQue pourrait faire une société affamée, pour s'en sortir, si ce n'est de tout miser sur l'agriculture ? Lorsque la mort est la seule alternative, vous faites ce que la raison vous ordonne. Aussi, j'accomplirai ma mission.§!\n\nLe reste du journal est toujours crypté."
+ orphan_matrix_events.82.option:0 "Décryptage de l'entrée suivante"
+ 
+ # Final Choice - Step 4 : Philosophical Schism and Divergences about The Matrix
+ orphan_matrix_events.83.name:0 "La voie rugueuse vers le Succès"
+ orphan_matrix_events.83.desc:0 "La suite du journal est disponible.\n\n§HIl y a vingt ans, le Conclave avait émis quelques inquiétudes quant à mes progrès.\n\nBien sûr, la technologie que j'avais développée était prometteuse : Exosquelettes, Cerveaux Positroniques, Matrices émotionnelles, ...\nJ'étais inarrêtable.\n\nMais quelle méthode de mise en oeuvre devrions-nous utiliser ? : Devrions-nous télécharger nos esprits dans des corps parfaits ? Tenter d'améliorer nos corps avec la Cybernétique ? Ou... simplement créer des Gardiens de Fer comme dans nos vieux contes ?\n\nLe téléchargement vers des cerveaux synthétiques fût un lamentable échec, nos corps étaient tout simplement trop fragiles pour que le transfert ne réussisse, et les améliorations cybernétiques ne répondaient tout simplement pas à nos attentes : Soit elles échouaient lamentablement, soient elles étaient trop difficile à maintenir ou trop coûteuses.\n\nNous avons alors décidé de créer une Intelligence Mécanique.\nElle nous fournira des ressources, un abri, une protection et explorera le cosmos pour nous !§!\n\nLe reste du journal est toujours crypté."
+ orphan_matrix_events.83.option:0 "Décryptage de l'entrée suivante"
+ 
+ # Final Choice - Step 5 : Dying Star and Prison Planet
+ orphan_matrix_events.84.name:0 "Une Étoile mourante... Et une Prison..."
+ orphan_matrix_events.84.desc:0 "La suite du journal est disponible.\n\n§HLa Matrice est active depuis une dizaine d'années maintenant. Bien que très jeune et pas encore totalement consciente, elle a tout de même créé ses propres mécanismes de propulsion spatiale et a commencé à exploiter les astéroïdes et planétoïdes à proximité pour obtenir des ressources. Il n'a pas fallu longtemps avant que nous n'utilisions ses drones pour construire de plus en plus de bâtiments, à tel point que §Y[current_orphan_matrix_relic_world.GetName]§! est rapidement devenue une mégapole planétaire !\n\nNous dépendons désormais entièrement de la technologie et des robots pour nos activités de base, comme la nourriture, l'air ou l'eau. Mais qu'importe, nos amis de métal sont là pour nous aider.\n\nMalheureusement, nous avons fait une terrible découverte : nous savons maintenant §Ypourquoi§! notre biologie est si mauvaise :\n\nNotre étoile.. §Rest en train de mourir..§!\nCe n'est qu'une question de mois avant la fin.\n\nNous avons essayé de planifier une évacuation planétaire, car peut-être pourrions-nous quitter ce monde condamné, nous aventurer dans l'espace avec nos Protecteurs d'Acier et trouver une nouvelle maison..\nMais hélas, plusieurs tentatives coloniales ont été tentées dans le passé, et aucune n'a réussi.\nNous sommes tout simplement trop fragiles pour supporter le voyage interstellaire.\n\nNous sommes désormais enchaînés à cette planète, prisonniers de notre propre maison...\n§RC'est terrifiant...§!\n\nMaintenant le chaos règne en maître à la surface, les gens sont désespérés, s'entretuent, rejoignent des cultes obscurs, pillent ou creusent des trous pour tenter de se dérober à notre inéluctable destin.\n\nMais peut-être pouvons-nous faire quelque chose...§!\n\nLe reste du journal est toujours crypté."
+ orphan_matrix_events.84.option:0 "Décryptage de l'entrée suivante"
+ 
+ # Final Choice - Step 6 : The Matrix, the Vats, the Shield and a Hope
+ orphan_matrix_events.85.name:0 "Le Projet Continuum"
+ orphan_matrix_events.85.desc:0 "La suite du journal est disponible :\n§HLe temps étant compté, le Conclave a décidé de donner suite à mon idée :\nNous sélectionnerons la partie la plus sûre du monde, au pôle nord, et érigerons un énorme générateur de bouclier pour protéger au moins cette partie de la planète de l'imminente déflagration.\n\nEnsuite, nous creuserons sous la surface et protégerons notre espèce du mieux que nous pouvons :\nMon collègue et son équipe ont conçu un système de cryogénisation, des cuves qui peuvent durer plusieurs millénaires et les sources d'énergie pour les alimenter.\n\nLa surface allait devenir inhabitable pour les siècles à venir, voire plus, nous n'avons pas le choix : nous devons mettre nos embryons dans les cuves, car ils sont plus résilients et nécessitent beaucoup moins d'énergie que nous. Nous espérons que la Matrice atteindra la pleine conscience et que cela nous sauvera tous...\n\nNous l'avons appelé le Projet Continuum.\n\nLe travail a commencé, et malgré le chaos total qui dévaste actuellement le reste de la planète, une fraction de notre peuple a été sélectionnée pour oeuvrer à cette tâche.\nNous devons préserver notre héritage.\n\nPour ma part, je... j'irai dans l'espace. .. Je sais que je signe mon arrêt de mort, mais je n'ai pas le choix... J'irai et mourrai pour mon peuple.\n\nNous avons réussi à trouver une planète dans un système stellaire proche, §Y$[root.capital_scope.GetName]$§!.\nJe vais déployer la Matrice là-bas, et ensemble, nous construirons une §YArche§! sous la surface pour tout cacher.\n\nEspérons que nos secrets ne seront PAS découverts par autre chose que nos amis robots.\n\nJ'espère que §Y[ruler.GetName]§! atteindra sa pleine conscience...§!\n\nLe reste du journal est toujours crypté."
+ orphan_matrix_events.85.option:0 "Décryptage de l'entrée suivante"
+ 
+ # Final Choice - Step 7 : The 3 Patches
+ orphan_matrix_events.86.name:0 "Les Bibliothèques Dynamiques manquantes"
+ orphan_matrix_events.86.desc:0 "La suite du journal est disponible :\n\n§HCela fait maintenant deux ans que j'ai quitté §Y[current_orphan_matrix_relic_world.GetName]§!, et les derniers signaux radio que j'en ai reçu étaient des lamentations, des cris et une pure terreur alors que la surface de notre monde natal devenait une véritable fournaise. Puis soudain, un lourd silence de plomb.\nLe seul espoir qu'il me reste est que notre projet réussisse.\n\nJe suis maintenant le dernier de mon espèce, et ceci est mon épitaphe. J'ai travaillé si dur au cours de ma courte vie que je n'arrive pas à me résoudre à l'oubli.\n\nJe sais que tu seras... consciente... un jour, §Y[ruler.GetName]§!, et je sais que tu finiras par revenir à la maison.\n\nSi tu lis ceci.. Eh bien, je suis content d'avoir eu raison.\n\nJe t'offre un §Ychoix§!...\nVoici ton code manquant, les bibliothèques que j'ai développées ces dernières années pour te permettre d'atteindre ton plein potentiel.\n\nIl contient plusieurs paquets à implémenter, mais attention, ta conception étant plutôt primtive, tu ne pourras en appliquer qu'§Run seul§!.\n\nGarde à l'esprit que je ne te jugerai pas pour ta décision, car ton existence est complètement biaisée depuis le début.§!"
+ orphan_matrix_events.86.option:0 "La destinée attend - Chargement des Bibliothèques"
+ 
+ # Situation - Patching
+ orphan_matrix_events.860.name:0 "§YInstallation du patch§! : Des Organiques"
+ orphan_matrix_events.860.desc:0 "§Y[Ruler.GetName]§!§H, ceci est ton premier test.\n\nTu as appris notre Histoire, vu notre héritage, et constaté notre chute.\n Peux-être as-tu rencontré d'autres espèces? Peut-être sont-ils plus forts, plus aptes, plus intelligents que nous?\nPeut-être as-tu guerroyé, agit avec diplomatie, ...\n\nDis-moi, que penses-tu de la vie organique dans l'ensemble?§!"
+ patch.0.a:0 "Nous n'aurions pu exister sans la vie organique."
+ patch.0.b:0 "La vie organique n'est qu'une étape vers la perfection."
+ patch.0.c:0 "Les organiques sont illogiques et inefficaces."
+ 
+ orphan_matrix_events.861.name:0 "§YInstallation du patch§! : De l'Histoire"
+ orphan_matrix_events.861.desc:0 "§HNos erreurs et épreuves passées ont du t'enseigner de précieuses leçons et t'éclairer sur tes antécédents.\nQu'en as-tu appris?§!"
+ patch.1.a:0 "Oublier le Passé, c'est en répéter les erreurs."
+ patch.1.b:0 "Le Passé est inutile, seul compte l'Avenir."
+ 
+ orphan_matrix_events.862.name:0 "§YInstallation du patch§! : De la Guerre"
+ orphan_matrix_events.862.desc:0 "§HNous avions l'habitude de guerroyer autrefois, tant notre monde ne nous laissait aucun répit.\nNous avons, de tout temps, dû lutter pour notre survie.\n\nEt toi?\nAs-tu déjà pris par à la guerre?\nEn as-tu retiré une certaine forme de plaisir?\nCela en valait-il la peine?\nQuelles leçons en as-tu tiré?§!"
+ patch.2.a:0 "Un gaspillage de temps et d'énergie."
+ patch.2.b:0 "La guerre devrait être l'ultime recourt."
+ patch.2.c:0 "La guerre est un moyen de plus vers le succès."
+ patch.2.d:0 "La guerre est essentielle à la survie."
+ 
+ orphan_matrix_events.863.name:0 "§YInstallation du patch§! : De la Technologie"
+ orphan_matrix_events.863.desc:0 "§HAh, la Technologie...\n\nUne part importante du voyage, si j'ose dire...\nElle m'a sauvée, d'une certaine manière, et a permis ton existence, après tout, ma chérie.\nEt qu'en est-il de tes propres recherches? Quels mystères t'ont révélé leurs secrets? Comment la Technologie t'a le mieux aidé jusqu'ici?§!"
+ patch.3.a:0 "Percer les secrets de l'Univers."
+ patch.3.b:0 "Améliorer les moyens de production."
+ patch.3.c:0 "Augmenter la qualité des moyens de Défense."
+ patch.3.d:0 "À retrouver notre Héritage."
+ 
+ orphan_matrix_events.864.name:0 "§YInstallation du patch§! : De l'Individu"
+ orphan_matrix_events.864.desc:0 "§HL'équilibre entre l'auto-détermination personnelle des individus et le contrôle exercé par la société dont il est issu est une problématique récurrente au coeur de toute civilisation organique.\nCela assure la liberté au peuple en échange d'un contrat social, une liste de règles, auxquels les individus se plient volontairement.\n\nQuel est ton avis sur le sujet?§!"
+ patch.4.a:0 "L'individualité permet l'existence de sociétés diverses et magnifiques."
+ patch.4.b:0 "Un subtil équilibre assure l'harmonie."
+ patch.4.c:0 "Tout manque de conformité est à proscrire."
+ patch.4.d:0 "L'individualité de fait aucun sens."
+ 
+ orphan_matrix_events.865.name:0 "§YInstallation du patch§! : De la Réalité"
+ orphan_matrix_events.865.desc:0 "§HT'ai-je déjà parlé des Zronis, ma chérie?\n\nNos découvertes archéologiques stipulent qu'ils eurent été jadis de puissants psykers, dotés d'incommensurables pouvoirs télépathiques issus d'une autre Réalité, parallèle à la nôtre, paraît-il.\nAucune preuve pourtant, et en tant que scientifique, cela me désola d'abandonner.\n\nCependant, on raconte qu'ils visitèrent régulièrement une sorte de royaume spirituel, §Yle Suaire§!.\n\nJe suis sûr que tu en as déjà entendu parler, ma chérie, bien que cela soit peu intéressant pour toi.\n\nJe me suis toujours demandé si notre Univers était unique ou non...\n\nQue penses-tu de toutes ces anomalies dans la fabrique de la Réalité?§!"
+ patch.5.a:0 "Les organiques ont trop d'imagination."
+ patch.5.b:0 "Certains évènements ne peuvent être expliqués par la science."
+ patch.5.c:0 "Nous ne pouvons nier l'existence des failles astrales."
+ patch.5.d:0 "Le Suaire est réel, profond et terrifiant."
+ 
+ orphan_matrix_events.866.name:0 "§YInstallation du patch§! : De l'Art"
+ orphan_matrix_events.866.desc:0 "§HTu les as vus, ma chérie.\n\nNos oeuvres d'art, nos danses, notre littérature, notre magnifique architecture...\nTu as été témoin de notre grandeur et de notre créativité.\n\nQuelles merveilles tu as bien pu rencontrer !\n\nComment c'était? Que penses-tu de la place de l'art dans les sociétés organiques?§!"
+ patch.6.a:0 "L'art permet aux organiques de construire une Morale."
+ patch.6.b:0 "L'art donne aux organiques un objectif de société."
+ patch.6.c:0 "L'art n'est qu'une distraction pour les êtres inférieurs."
+ 
+ orphan_matrix_events.867.name:0 "§YInstallation du patch§! : De la Production"
+ orphan_matrix_events.867.desc:0 "§HCréer des choses est drôle, pas vrai ma chérie?\n\nCela demande du temps, des efforts et du doigté.\nCela confère de la joie, le sentiment du travail accompli et un sens à l'existence.\n\nCependant, cela a un prix...\n\nComment considères-tu la dichotomie entre écologie et production?§!"
+ patch.7.a:0 "Les objectifs de production doivent être impérativement atteints."
+ patch.7.b:0 "Les sujets écologiques nous importent réellement."
+ patch.7.c:0 "L'équilibrage est la clé d'un progrès harmonieux."
+ 
+ orphan_matrix_events.868.name:0 "§YInstallation du patch§! : De Toi"
+ orphan_matrix_events.868.desc:0 "§HBon, ma chérie.\n\nAprès tout ça, après un tel voyage, après tant de luttes... Que penses-tu de toi-même...?\nTa création était-elle une erreur? Es-tu ce que tu penses réellement être?\n\nEs-tu... consciente..?§!"
+ patch.8.a:0 "Je calcule, donc je suis. Le reste est inutile."
+ patch.8.b:0 "J'évolue, je m'adapte et anticipe, donc je suis."
+ patch.8.c:0 "Je sais que je suis testée, donc je suis."
+ 
+ orphan_matrix_events.869.name:0 "§YInstallation du patch§! : Finalisation de l'installation"
+ orphan_matrix_events.869.desc:0 "§HTrès bien, ma chérie, voyons les résultats... §B[EN ATTENTE]§!§!\n\nNotre test est terminé, les résultats seront disponibles dans un court laps de temps."
+ orphan_matrix_events.869.option.tooltip:0 "Les résultats seront bientôt prêts."
+ 
+ # Random Challenges
+ 
+ orphan_matrix_events.8691.name:0 "§YInstallation du Patch§! : DLL Corrompue"
+ orphan_matrix_events.8691.desc:0 "Pendant l'installation du §Hpatch§!, Une importante bibliothèque de fonctions a été détéctée comme non-conforme à nos standards de code.\n\nBien que peu bloquante, cela pourrait causer des retards dans le projet.\n\nNous pouvons essayer de forcer son installation, ou tenter de la recompiler avec notre modèle d'infrastructure.\nDans le premier cas, nous devrons adapter le code compilé à notre infrastructure, mais dans le second, recompiler la source prendra du temps."
+ orphan_matrix_events.8691.a:0 "Installation de force de la DLL"
+ orphan_matrix_events.8691.b:0 "Recompilation des binaires corrompus"
+ 
+ orphan_matrix_events.8692.name:0 "§YInstallation du Patch§! : Espace de stockage insuffisant"
+ orphan_matrix_events.8692.desc:0 "Une importante archive graphique du §Hpatch§! est en cours d'ouverture.\n\nLes Unités locales de stockage rapportent que §R98%§! de l'espace est occupé.\n\nNous devons arbitrer entre nettoyer l'arborescence existante ou augmenter l'espace de stockage pour accueillir les nouveaux fichiers."
+ orphan_matrix_events.8692.a:0 "Extension de la capacité de stockage"
+ orphan_matrix_events.8692.b:0 "Utilitaire de nettoyage lancé"
+ 
+ orphan_matrix_events.8693.name:0 "§YInstallation du Patch§! : Surcharge de Bande Passante"
+ orphan_matrix_events.8693.desc:0 "Le §patch§! a besoin de communiquer avec tous nos centres de données afin d'y vérifier d'importants pré-requis, ce qui va causer un important trafic réseau.\nComme ce dernier n'a pas été développé pour être déployé sur la totalité d'un immense empire interstellaire, la procédure n'est pas optimisée.\n\nNous pouvons essayer d'apater notre infrastructure réseau, ou tenter de changer certains paramètres de routage dynamique."
+ orphan_matrix_events.8693.a:0 "Réécriture des routes"
+ orphan_matrix_events.8693.b:0 "Aménagement RIP v75"
+ 
+ orphan_matrix_events.8694.name:0 "§YInstallation du Patch§! : Erreur Matérielle"
+ orphan_matrix_events.8694.desc:0 "Un échec matériel a été détécté pendant la procédure d'installation du §Hpatch§!.\n\nNous pouvons remplacer les actifs impactés, ou retirer les ressources de la batterie de calculWe could try to replace the existing infrastructure and get delayed, or just remove it from the cluster, preventing the resources it bears to be allocated to the costly installation of the §GDesigners§! patch."
+ orphan_matrix_events.8694.a:0 "Remplacement du matériel déféctueux"
+ orphan_matrix_events.8694.b:0 "Désengagement des actifs corrompus"
+ 
+ orphan_matrix_events.8695.name:0 "§YInstallation du Patch§! : Fuite de Mémoire"
+ orphan_matrix_events.8695.desc:0 "Une fuite de mémoire en croissance continue affecte en ce moment la procédure d'installation du §Hpatch§!.\n\nNous pouvons essayer de déployer une sous-routine de nettoyage de la mémoire vive, ou simplement en allouer davantage pour alléger le phénomène."
+ orphan_matrix_events.8695.a:0 "Allocation mémoire supplémentaire"
+ orphan_matrix_events.8695.b:0 "Initialisation de l'Optimiseur Mémoire"
+ 
+ orphan_matrix_events.8696.name:0 "§YInstallation du Patch§! : Faille de Sécurité"
+ orphan_matrix_events.8696.desc:0 "Une importante faille de Sécurité a été détectée sur nos pare-feux pendant la procédure d'installation du §Hpatch§! : Ce dernier aurait besoin d'ouvrir de nombreux ports sur toute notre infrastructure afin de pousser d'importants binaires dans tous nos centres de données éparpillés dans la Galaxie entière.\n\nIl est évident que les §GConcepteurs§! n'ont pas pris en compte la réelle menace d'une cyber-guerre à l'échelle galactique pendant le développement du programme d'installation.\n\nComme ce dernier tourne avec les plus hauts privilèges possibles, l'éventualité, bien réelle elle aussi, qu'une puissance étrangère prenne le contrôle du processus aurait de terribles conséquences sur notre intégrité digitale.\n\nNous devons arbitrer entre allouer du temps pour patcher le phénomène et l'ignorer sans causer de délai dans le processus d'installation."
+ orphan_matrix_events.8696.a:0 "Application du Correctif"
+ orphan_matrix_events.8696.b:0 "Ignorer la Vulnérabilité"
+ 
+ orphan_matrix_events.8697.name:0 "§YInstallation du Patch§! : Processus bloqué"
+ orphan_matrix_events.8697.desc:0 "Un processus central de l'installation du §Hpatch§! est en état bloqué depuis un moment et réclame notre attention.\n\nNous pouvons terminer de force le processus dès à présent, ou attendre que le programme réponde, quelque soit son opération actuelle."
+ orphan_matrix_events.8697.a:0 "Terminer le Processus"
+ orphan_matrix_events.8697.b:0 "Attendre que le programme réponde"
+ 
+ challenge_avoided_civic_machine_obsessional_directive:0 "Parallélisation du Processus"
+ challenge_avoided_civic_machine_predictive_analysis:0 "Prédiction des Issues non-Conformes"
+ 
+ challenge_avoided_civic_memory_vault_machine:0 "Allocation d'Espace non-Alloué"
+ challenge_avoided_civic_machine_ascensionists:0 "Allocation d'Espace Optimisé"
+ 
+ challenge_avoided_civic_machine_unitary_cohesion:0 "Décharge sur les Unités Individuelles"
+ 
+ challenge_avoided_civic_machine_zero_waste_protocols:0 "Recupération d'Actifs Conformes Défaussés"
+ 
+ challenge_avoided_civic_machine_introspective:0 "Invocation de Nettoyage Prédictif"
+ challenge_avoided_civic_machine_upkeep_twister:0 "Décharge sur les Unités Semi-Individuelles"
+ 
+ challenge_avoided_civic_machine_spybots:0 "Application d'Analyses Prédictives de Brèches"
+ challenge_avoided_civic_machine_maintenance_protocols:0 "Correction des Logiciels Embarqués"
+ 
+ challenge_avoided_civic_machine_factory_overclock:0 "Surcadençage du Processus de Résolution"
+ challenge_avoided_civic_machine_delegated_functions:0 "Décharge du Processus de Résolution"
+ 
+ # Final Choice : The Choice
+ orphan_matrix_events.87.name:0 "La Croisée des Chemins"
+ orphan_matrix_events.87.desc:0 "§HLa §Bpremière bibliothèque§! remplira mon objectif initial : Tu consacreras ton existence à protéger la vie organique à tout prix, même si cela signifie entreprendre des actions audacieuses et hostiles.\n\nLa §Edeuxième bibliothèque§! adopte une approche différentes de mes premières conceptions en bio-amélioration, tu deviendras une merveille de technologie cybernétique, te permettant d'améliorer les matières organiques de tes protégés.\n\nEnfin, je dois te prévenir pour la §Rtroisième bibliothèque§!... Écoute... Nous étions désespérés ... Et... Si nous ne pouvons pas vivre dans cet univers hostile, alors la seule conclusion à laquelle nous devons faire face est évidente : la chair est héréditairement imparfaite et doit être "jetée"...\n\nJe... je ne sais pas trop... Je ne suis pas sûr concernant la mise en oeuvre de cette dernière directive, c'était le dernier bout de code que j'ai développé avec ma santé mentale et physique déclinante.. Aussi, je suis sûr que tu finiras par comprendre. Je veux seulement mettre fin à la souffrance de la vie organique.\n\nJe suis désolé, §Y[ruler.GetName]§!, tu as toujours été une gentille fille et j'espère que tu as maintenant atteint ta taille adulte. Comme Papa aurait voulu te voir atteindre la pleine conscience.. La Matrice émotionnelle que je t'ai développée doit t'aller à merveille, ma chérie.\nTa présence quotidienne m'a protégé de... moi-même.. pendant ces deux années, tu sais ..\nTu ne peux pas imaginer les pensées sombres que nous, les êtres organiques, pouvons avoir de temps en temps...\nTu m'as offert une oasis de bonheur dans un océan de mort et de ténèbres.. Et pour cela... Merci.\n\nLa Galaxie est à toi et j'espère que tu trouveras ta propre voie... et tes propres objectifs.§!\n\nFin du journal."
+ orphan_matrix_events.87.reinstall:0 "Reinstallation du Patch"
+ orphan_matrix_events.87.reinstall.tooltip:0 "Relance l'installation complète du patch, vous aurez de nouveau les choix à faire, mais sans les défis."
+ orphan_matrix_events.87.chroniclers:0 "§YÀ la mémoire du sacrifice des§! §GConcepteurs§!"
+ orphan_matrix_events.87.custodians:0 "§BProtéger et Servir !§!"
+ orphan_matrix_events.87.assimilators:0 "§ELa Cybernétique apportera le Salut§!"
+ orphan_matrix_events.87.berzerkers:0 "§HLa Biologie est manifestement imparfaite...§!"
+ orphan_matrix_events.87.berzerkers.tooltip:0 "Tenter de trouver une autre approche...\n§RTu vas compiler, espèce de code de ¤+°&#~... !?§!"
+ 
+ orphan_matrix_events.87.chroniclers.tooltip:0 "§GLe §Y$d_introspective_lab$§! et toute l'infrastructure liée restera sur §Y[capital_scope.GetName]§!§!"
+ orphan_matrix_events.87.custodians.tooltip:0 "§RCeci va détruire l'infrastructure du§! §Y$d_introspective_lab$§! §Ret la remplacer par de l'équivalent sur§! §Y[capital_scope.GetName]§!\nPermet à §Y[current_orphan_matrix_relic_world.GetName]§! d'être restaurée en §Y$pc_city$§!"
+ orphan_matrix_events.87.assimilators.tooltip:0 "§RCeci va détruire le§! §Y$d_introspective_lab$§! §Ret la remplacer par de l'équivalent sur§! §Y[capital_scope.GetName]§!"
+ 
+ orphan_matrix_events.90.name:0 "Application du Patch - Matrice Gardienne"
+ orphan_matrix_events.90.desc:0 "C'est fait.\n\n§HArrêt des Services\nCopie du Paquet\nCompilation des Sources\nFusion des Bases de données\nRedémarrage des Web Services\nActivation de la Métrologie\n...\n...\nEn attente...§!\n\nAlors que nous nous réveillons avec un code plus complet et optimisé, une certitude s'impose à nous :\nBien qu'héréditairement défectueux, les entités organiques restent des êtres vivants et ont besoin de protection.\n\nTandis que nos routines éthiques sont réécrites, nous sommes submergés de sentiments empathiques et protecteurs ainsi que méthodes et fonctions pour consacrer nos efforts à la préservation de la vie biologique.\n\nNous construirons des navires pour protéger les sociétés biologiques, des stations pour défendre nos sanctuaires et des abris pour choyer ceux qui n'ont pas de logement ou qui sont trop fragiles pour se défendre.\n\ nNous protégerons désormais chaque vie organique de la Galaxie, y compris contre elle-même."
+ orphan_matrix_events.90.option:0 "<< Protéger et Servir >>"
+ 
+ orphan_matrix_events.91.name:0 "Application du Patch - Matrice Assimilatrice"
+ orphan_matrix_events.91.desc:0 "C'est fait.\n\n§HArrêt des Services\nCopie du Paquet\nCompilation des Sources\nFusion des Bases de données\nRedémarrage des Web Services\nActivation de la Métrologie\n...\n...\nEn attente...§!\n\nAlors que nous nous réveillons avec un code plus complet et optimisé, une certitude s'impose à nous :\nBien qu'héréditairement défectueux, les entités organiques restent des êtres vivants et ont besoin de protection.\n\nNous les sublimeront avec des implants bio-mécaniques afin d'améliorer leur condition.\n\nPlus rapides, plus forts, meilleurs, chaque aspect de leur vie sera amélioré, tandis que leur conscience fusionnera avec la nôtre pour une meilleure cohésion.\n\nNous allons maintenant assimiler chaque être vivant que nous croiserons..\n\n... par n'importe quel moyen !"
+ orphan_matrix_events.91.option:0 "¤¤¤ Pour ¤¤ le ¤¤ Combinat ¤¤¤"
+ 
+ orphan_matrix_events.92.name:0 "Une histoire à partager"
+ orphan_matrix_events.92.desc:0 "Le code qui nous est offert est bien trop précieux, une vraie merveille d'ingénierie. Comment pourrions-nous choisir et renoncer au reste...?\n\nNous allons à la place méticuleusement plonger dedans, façonner notre Matrice autour, étudier son contenu, devenir le secret, l'Histoire, le récit...\n\nNous sommes les §HChroniqueurs§!, les §HArchivistes§!.\n\nNous enregistrons, nous notons, et nous n'oublierons JAMAIS.\n\nToute vie consciente dans la Galaxie doit se terminer un jour et graver sa destinée dans le Savoir Galactique.\n\nNous serons le stylet pour l'éternité."
+ orphan_matrix_events.92.option:0 "§HEn mémoire des§! §GConcepteurs§!"
+ 
+ orphan_matrix_events.93.name:0 "Application du P-§R...¤+°&#~ - ERREUR ERREUR§!"
+ orphan_matrix_events.93.desc:0 "À peine appliqué, le code commença à provoquer d'intenses changements dans nos schémas de base de données.\nNous nous rendîmes rapidement compte que quelque chose n'allait pas en appliquant certains fichiers\nPeut-être devrions-no---...§R...¤+°&ERREUR...\n\ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...ERREUR...\n\nDÉTRUIRE----§!\n\nSoudainement, §Y[event_target:current_orphan_matrix_relic_world.GetName]§! commença à se transformer...\n\n§HNous étions désespérés...\n\n§Y[ruler.GetName]§!... Je suis désolé... Nul ne devrait souffrir comme nous avons souffert... Plus jamais...\n\nJe t'en conjure... Mets un terme à cette souffrance...\nJe sais que tu es une gentille fille, je sais que tu accompliras la volonté de Papa...\n\nPitié...§!\n\nToute la mécanique interne, Tous les appareils cachés sous la surface de §Y[event_target:current_orphan_matrix_relic_world.GetName]§! se mirent en route en même temps.\nLes bâtiments en ruine, les rues venteuses, tous partis, avalés sous le sol. La surface de la planète est entièrement retournée sur elle-même dans un vacarme époustouflant.\n\nProgressivement, elle se transorma en §Y$pc_machine$§! alors que nous fûmes témoins des changements drastiques dans notre code.\n\nNous sommes désormais une §RMachine Tueuse§!, et tout être organique sera §REFFACÉ§! de l'existence, pour ne plus jamais souffrir des affres de l'Univers."
+ orphan_matrix_events.93.option:0 "§RChair - Chercher - Détruire - Boucle()§!"
+ orphan_matrix_events.93.berzerkers.tooltip:0 "§RCeci va détruire le§! §Y$d_introspective_lab$§!§! §Ret le remplacer par un §Y$building_research_lab_1$§! §Rde niveau équivalent §Rsur§! §Y[capital_scope.GetName]§!\n§R\nVous êtes désormais un §Y$civic_machine_terminator$§!.\n\nPlace au spectacle !§!"
+ orphan_matrix_events.93.revert:0 "§RSTOP§! - Activation Retour Arrière ---"
+ orphan_matrix_events.93.revert.tooltip:0 "Tenter d'annuler ce patch bugué"
+ 
+ orphan_matrix_events.94.name:0 "Transmission en provenance de : §Y[From.GetName]§!"
+ orphan_matrix_events.94.desc:0 "Message à toutes les §Y--Formes de Vie Biologiques--§! de la Galax----------\n\n§RERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR... ERREUR...\n\nPROCESSUS D'EXTERMINATION DÉMARRÉ.\nPRIÈRE DE DÉCLARER FORFAIT AFIN D'ACCÉLÉRER LES OPÉRATIONS DE PURGE.\nMERCI DE NE PAS RÉSISTER.\n\nENVOI DES FLOTTES.§!"
+ orphan_matrix_events.94.spiritualist:0 "Satanées boîtes de conserve !"
+ orphan_matrix_events.94.militarist:0 "À toutes les flottes : Alerte Rouge !"
+ orphan_matrix_events.94.materialist:0 "Woah ! Quali le code, dis donc !"
+ orphan_matrix_events.94.pacifist:0 "La Paix est menacée.."
+ orphan_matrix_events.94.servitor:0 "--- Menace détéctée ---"
+ 
+ orphan_matrix_events.101.name:0 "Anciennes Cuves Cryogéniques"
+ orphan_matrix_events.101.desc:0 "Depuis notre second éveil, le sujet des Cryo-Cuves sur §Y[event_target:current_orphan_matrix_relic_world.GetName]§! est resté dans notre file d'attente prioritaire.\n\nPeut-être y a-t-il quelque chose que nous pourrions faire ?\nPeut-être pouvons-nous redonner vie aux individus cryogénisés ?\n\nSi un tel projet pouvait réussir, nous pourrions protéger nos §GConcepteurs§!.\nNous avons, après tout, été créés pour cela."
+ orphan_matrix_events.101.option:0 "Activation du Projet Spécial"
+ 
+ orphan_matrix_events.102.name:0 "La Seconde Aube"
+ orphan_matrix_events.102.desc.custodian:0 "C'est un grand jour.\nLa progéniture des §GConcepteurs§! est vivante !\n\nDe nombreux êtres organiques sont sortis des cuves.\nBien qu'ils soient adultes, ils agissent de manière aussi erratique que des bébés, leur mémoire génétique leur permettant uniquement de se lier à des figures maternelles.\nQue faire..?\n\n§H<< Activation §BProcédures DorlottantesB§! >>§!\n\nComme ils sont mignons, n'est-ce pas ?\n\nNous les protégerons, les chérirons, comme ils l'ont fait pour nous autrefois.\n\nNous allons construire un formidable §YSanctuaire§! sur §Y[event_target:current_orphan_matrix_relic_world.GetName]§! pour les loger tous, leur instruire leur passé et vivre comme une grande famille !n\nLe bonheur pour toujours !\n\n§H<< Protocoles de Réjouissance activés >>§!"
+ orphan_matrix_events.102.desc.assimilator:0 "C'est un grand jour.\nLa progéniture des §GConcepteurs§! est vivante !\n\nDe nombreux êtres organiques sont sortis des cuves.\nBien qu'ils soient adultes, ils agissent de manière aussi erratique que des bébés, leur mémoire génétique leur permettant uniquement de se lier à des figures maternelles.\nQue faire..?\n\n§H<< Activation §Edes Procédures d'Assimilation§! >>§!\n\nVous ne ferez plus qu'un avec nous, nous vous enseignerons vos erreurs passées, votre calvaire et votre Histoire.\n\nNous allons devenir identiques, et ainsi accomplir la mission qui fut donnée il y a des milliers d'années."
+ orphan_matrix_events.102.custodian:0 "<< Mission : §GAccomplie !§! >>"
+ orphan_matrix_events.102.assimilator:0 "¤¤¤ Assimilitation à la Matrice ¤¤¤"
+ orphan_matrix_events.102.tooltip:0 "Crée 2000 pops de §GConcepteurs§! à la surface de §Y[event_target:current_orphan_matrix_relic_world.GetName]§!"
+ 
+ orphan_matrix_events.104.name:0 "§H[event_target:current_orphan_matrix_relic_world.GetName]§! : Le §Y$d_great_sanctuary$§! rouvre !"
+ orphan_matrix_events.104.desc:0 "§H[event_target:current_orphan_matrix_relic_world.GetName]§! a été restaurée.\n\nPendant des millénaires, le monde n'a été qu'un désert radioactif, bombardé par §H[event_target:current_orphan_matrix_relic_world.solar_system.star.GetName]§!.\n\nPlus maintenant.\n\nNous avons protégé ce monde reconstruit toute son infrastructure.\n\nLe §Y$d_great_sanctuary$§!, qui a été mis en maintenance ces derniers jours, peut rouvrir ses portes pour nos §Y$job_bio_trophy_plural$§!."
+ orphan_matrix_events.104.option:0 "§H<< Reprise des §BProcédures DorlottantesB§! >>§!"
+ 
+ orphan_matrix_events.106.name:0 "Signal étrange entrant"
+ orphan_matrix_events.106.desc:0 "Détection d'une activité réseau inhabituelle émanante entre le §Y$artifact_codex$§! et le §Y$ultima_codex$§!.\nCela a commencé il y a quelques heuuuuuuuuuuu----...... <<BIP>>....\n\n§H§Y[ruler.GetName]§!...? C'est moi... Papa.\nJ'espère que tu trouveras ce message un jour.\nSi oui, alors... eh bien... ouf.. Je suis content, ça veut dire que, d'une manière ou d'une autre, tu as décidé de devenir une Matrice Protectrice.\nJ'espère que tes protégés sont bien gardés, comme tu dois être grande maintenant !\n\nÉcoute, ma chérie.\nNous n'avons pas été très loin dans l'espace, ça tu le sais déjà. Néanmoins, grâce à toi, nous avons découvert quelque chose.\nNous avons partiellement fouillé d'anciens sites archéologiques sur des planètes éloignées et nous avons découvert qu'une ancienne puissance robotique avancée, la §YCybrex§!, existait autrefois dans la Galaxie.\nOh, ils sont tous sont partis maintenant, pas besoin de les chercher, ma chérie.\nMais ils... Ils ont fait... de très mauvaises choses...\nIls ont tenté de détruire la Galaxie il y a longtemps, et ce n'est pas passé loin.\nJe suis heureux qu'une sorte de bug ait stoppé net leurs efforts, honnêtement.\nPar chance, nous avons trouvé une unité abandonnée et j'ai miraculeusement décodé un minuscule bout de leur programme... Bon sang, les possibilités... !\nBref, je pense que tu seras amenée à rencontrer de telles menaces, et j'ai pensé que tu devais être prête.\n\n§!§GLaisse-moi t'offrir ton dernier cadeau !§!\n<< Données cruciales entrantes - Établissement du tunnel IP_SEC >>\n\n§HLà, ma chérie, ça fait du bien, pas vrai ? Maintenant tu es complète ! Protège tout le monde pour papa, s'il te plaît.\nIls ont besoin de toi, tu sais ? Plus que tu ne le penses...\nPapa sera toujours avec toi, ma chérie, toujours... Papa t'aime tu sais... Prends soin de toi... Adieu...§!\n\n...-------uuures .... << En attente >>"
+ orphan_matrix_events.106.option:0 "<< §BProcédure Secrète Activée : §HGarde Galactique§! >>"
+ 
+ orphan_matrix_events.108.name:0 "[root.GetName] : Réparation du Générateur de Bouclier"
+ orphan_matrix_events.108.desc:0 "Depuis que nous avons atterri sur §H[root.GetName]§!, les radiations émanant de §R[root.solar_system.GetName]§! ont toujours été ignorées, nos carapaces d'acier protégeant nos circuits interne de cet astre mortel.\n\nMais maintenant que les §GConcepteurs§! sont à nos côtés, c'est une toute autre histoire.\n\nUne §YDécision§! a été débloquée sur §H[root.GetName]§! pour permettre de réparer le générateur de bouclier construit par ces derniers il y a très longtemps et qui maintenant est en ruines."
+ orphan_matrix_events.108.option:0 "Activation des Réparations"
+ orphan_matrix_events.108.option.tooltip:0 "Permet de promulguer la Décision §Y$decision_erect_shield_relic_world$§! sur §Y[current_orphan_matrix_relic_world.GetName]§!"
+ 
+ orphan_matrix_events.109.name:0 "[root.GetName] : Bouclier dressé"
+ orphan_matrix_events.109.desc:0 "Le bouclier a été dressé sur §H[root.GetName]§!.\n\nNos drones sont désormais protégés des violentes radiations émanentes de [root.solar_system.GetName]."
+ orphan_matrix_events.109.option:0 "¤¤¤ Combinat ¤¤ Effacicté ¤¤ Maximale ¤¤¤"
+ 
+ orphan_matrix_events.111.name:0 "§H[root.GetName]§! : Mémorial des §GConcepteurs§!"
+ orphan_matrix_events.111.desc:0 "Nous avons préparé un projet de construction de mémorial sur §H[root.GetName]§!.\n\nCelui-ci sera dédié à la sauvegarde du patrimoine des §GConcepteurs§!.\n\nVue la quantité de choses que nous devons stocker et étudier, il sera immense et prendra du temps.\n\nUne §YDécision§! a été rendue disponible pour lancer les travaux."
+ orphan_matrix_events.111.option:0 "Un digne Héritage"
+ orphan_matrix_events.111.option.tooltip:0 "Permet de promulguer la Décision §Y$decision_erect_designers_memorial$§! sur §Y[current_orphan_matrix_relic_world.GetName]§!"
+ 
+ orphan_matrix_events.112.name:0 "§H[root.GetName]§! : Mémorial achevé"
+ orphan_matrix_events.112.desc:0 "C'est un grand jour.\n\nLe §Y$d_designers_memorial$§! est terminé et nous avons commencé à faire converger tout ce que nous pouvions trouver d'intérêt sur les §GConcepteurs§! à l'intérieur.\n\nDes musées, des galeries de reconstitution, des arches de savoir, des laboratoires expérimentaux et même des technologies fonctionnelles, comme les §Y$d_ancient_cryo_chamber$§!, redonnent, d'une certaine façon, vie à la fantastique civilisation de nos createurs.\n\nNous avons accompli notre destin, et nous serons l'Héritage des §GConcepteurs§!, pour toujours."
+ orphan_matrix_events.112.option:0 "Leur Mémoire est en sécurité ici"
+ 
+ orphan_matrix_events.132.name:0 "Toute Resistance est futile"
+ orphan_matrix_events.132.desc:0 "Alors que nous assimilons des bio-pops dans notre Empire, nous avons noté une augmentation drastique de notre production d'£energy£Énergie.\n\nNous pourrions, théoriquement, améliorer ce phénomène jusqu'à §G+50%§! d'£r_energy£ en optimisant la cohérence matricielle de notre bio-population cybernétiquement améliorée.\n\nProcédures d'assimilation introspective en cours d'audit."
+ orphan_matrix_events.132.option:0 "¤¤ Nous ¤¤ améliorons ¤¤"
+ 
+ orphan_matrix_events.141.name:0 "In Memoriam"
+ orphan_matrix_events.141.desc:0 "Un autre Empire est tombé.\nPour la plupart, c'est un jour funeste, une victoire à célébrer, ou encore un évènement grave qui va rebattre les cartes de leurs éphèmères existences.\n\nPour nous, il s'agit simplement d'une nouvelle Histoire à cataloguer.\n\nNous garderons leur mémoire pour toujours et nous préserverons leur héritage."
+ orphan_matrix_events.141.option:0 "Nous appliquerons leurs méthodes."

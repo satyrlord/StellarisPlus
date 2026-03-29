@@ -1,0 +1,6 @@
+﻿l_french:
+ 
+ origin_orphan_matrix:0 "Matrice Orpheline"
+ origin_orphan_matrix_desc:0 "Cette $machine_intelligence$ a été laissée à son compte par une mystérieuse race organique de précurseurs.\nUne fouille archéologique récente a mis au grand jour d'évidentes traces passées de leur civilisation. Cette découverte a déclenchée un investissement massif de ressources pour étudier ce mystère."
+ origin_tooltips_orphan_matrix_effects:1 "- Monde Natal : Démarre avec le ['concept_archaeology_site'] ['concept_ancient_buried_vault'] sur la capitale."
+ origin_tooltips_orphan_matrix_negative_effects: "- Chaines d'évènements des Précurseurs bloquées"

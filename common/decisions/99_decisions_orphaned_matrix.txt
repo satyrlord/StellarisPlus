@@ -1,0 +1,79 @@
+# Restore shield
+decision_erect_shield_relic_world = {
+	enactment_time = 720
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = {
+			energy = 5000
+			influence = 100
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_orphan_matrix
+			has_country_flag = orphan_matrix_assimilator
+		}
+		has_modifier = irradiated_relic
+		has_planet_flag = orphan_matrix_assimilator_project_accepted
+	}
+
+	allow = {}
+
+	effect = {
+		hidden_effect = { planet_event = { id = orphan_matrix_events.109 } }
+		custom_tooltip = decision_erect_shield_relic_world_effects
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+		}
+		modifier = {
+			mult = 999
+			owner = { has_origin = origin_orphan_matrix }
+		}
+	}
+}
+
+# Erect Designers Memorial
+decision_erect_designers_memorial = {
+	enactment_time = 720
+	owned_planets_only = yes
+	resources = {
+		category = decisions
+		cost = {
+			minerals = 5000
+			influence = 100
+		}
+	}
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_orphan_matrix
+			has_country_flag = orphan_matrix_chroniclers
+		}
+		has_planet_flag = can_build_memorial
+		NOT = { has_deposit = d_designers_memorial }
+	}
+
+	allow = {}
+
+	effect = {
+		hidden_effect = { planet_event = { id = orphan_matrix_events.112 } }
+		custom_tooltip = decision_erect_designers_memorial_effects
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+		}
+		modifier = {
+			mult = 999
+			owner = { has_origin = origin_orphan_matrix }
+		}
+	}
+}

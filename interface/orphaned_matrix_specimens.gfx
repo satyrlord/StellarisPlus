@@ -1,0 +1,27 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_orphaned_matrix_ancient_history"
+		textureFile = "gfx/interface/icons/specimens/orphaned_matrix_ancient_history.dds"
+	}
+	spriteType = {
+		name = "GFX_orphaned_matrix_unused_schematics"
+		textureFile = "gfx/interface/icons/specimens/orphaned_matrix_unused_schematics.dds"
+	}
+	spriteType = {
+		name = "GFX_orphaned_matrix_ancient_machinery"
+		textureFile = "gfx/interface/icons/specimens/orphaned_matrix_ancient_machinery.dds"
+	}
+	spriteType = {
+		name = "GFX_orphaned_matrix_ancient_weaponry"
+		textureFile = "gfx/interface/icons/specimens/orphaned_matrix_ancient_weaponry.dds"
+	}
+	spriteType = {
+		name = "GFX_orphaned_matrix_completed_codex"
+		textureFile = "gfx/interface/icons/specimens/orphaned_matrix_completed_codex.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_orphaned_matrix_unstudied_alpha_codex"
+		textureFile = "gfx/interface/icons/specimens/orphaned_matrix_unstudied_alpha_codex.dds"
+	}
+}

@@ -1,0 +1,164 @@
+@stage_1_workforce_penalty = -0.33
+@stage_2_workforce_penalty = -0.50
+@stage_3_workforce_penalty = -0.66
+@stage_4_workforce_penalty = -0.75
+
+partial_codex_bonus = {
+	country_alloys_produces_mult = 0.1
+	all_technology_research_speed = 0.05
+	country_unity_produces_mult = 0.05
+}
+
+partial_codex_bonus_2 = {
+	country_alloys_produces_mult = 0.2
+	all_technology_research_speed = 0.1
+	country_unity_produces_mult = 0.1
+	ship_weapon_damage = 0.05
+	planet_pops_robotics_upkeep_mult = -0.05
+}
+
+underperforming_introspective_calculators = {
+	country_energy_produces_mult = -0.15
+}
+
+orphaned_matrix_megastructure_expertise = {
+	megastructure_build_speed_mult = 2
+}
+
+orphaned_matrix_arc_furnace_restored_mega = {
+	icon = "gfx/interface/icons/modifiers/mod_orphaned_matrix_arc_furnace_restored_mega.dds"
+	
+	country_megastructure_build_cap_add = 1
+	megastructures_upkeep_mult = 0.1
+}
+
+orphaned_matrix_arc_furnace_restored_stations = {
+	icon = "gfx/interface/icons/modifiers/mod_orphaned_matrix_arc_furnace_restored_stations.dds"
+	
+	station_gatherers_produces_mult = 0.4
+	stations_upkeep_mult = 0.2
+}
+
+orphaned_matrix_arc_furnace_restored_alloys = {
+	country_alloys_produces_mult = 0.05
+}
+
+irradiated_relic = {
+	pop_environment_tolerance = -1
+	bonus_pop_growth_mult = -1
+	icon = "gfx/interface/icons/planet_modifiers/pm_star_pulsar.dds"
+	icon_frame = 3
+}
+
+pm_shield_generator = {
+	pop_happiness = 0.5
+	planet_orbital_bombardment_damage = -0.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_shield.dds"
+	icon_frame = 1
+}
+
+pm_shield_assimilator = {
+	biological_logistic_growth_mult = 0.25	
+	planet_technician_energy_produces_mult = 0.10
+	planet_orbital_bombardment_damage = -0.5
+	icon = "gfx/interface/icons/planet_modifiers/pm_shield.dds"
+	icon_frame = 1
+}
+
+pm_temp_building_slot_debug = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
+	icon_frame = 1
+}
+
+motivated_drones = {
+	planet_jobs_complex_drone_produces_mult = 0.2
+}
+
+demotivated_drones = {
+	planet_jobs_complex_drone_produces_mult = -0.2
+}
+
+# planet_introspective_calculators_produces_mult
+
+orphan_matrix_berzerker_code_reverted = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_robot_upkeep_mult.dds"
+	planet_pops_robotics_upkeep_mult = 0.05
+	robotic_pop_bonus_workforce_mult = -0.20
+}
+
+orphan_matrix_production_doctrine_full_steam_ahead = {
+	icon = "gfx/interface/icons/modifiers/mod_agenda_gestalt_boost.dds"
+	country_alloys_produces_mult = 0.1
+	country_exotic_gases_produces_mult = 0.05
+	country_rare_crystals_produces_mult = 0.05
+	country_volatile_motes_produces_mult = 0.05
+	all_technology_research_speed = -0.03
+	country_unity_produces_mult = -0.03
+}
+
+orphan_matrix_production_doctrine_ecological_preservation = {
+	icon = "gfx/interface/icons/modifiers/mod_planetary_ascension_effect_mult.dds"
+	country_alloys_produces_mult = -0.05
+	country_exotic_gases_produces_mult = -0.02
+	country_rare_crystals_produces_mult = -0.02
+	country_volatile_motes_produces_mult = -0.02
+	all_technology_research_speed = 0.05
+	country_unity_produces_mult = 0.05
+}
+
+orphan_matrix_production_doctrine_balanced_production = {
+	icon = "gfx/interface/icons/modifiers/mod_pop_resource_output.dds"
+	planet_pops_robotics_upkeep_mult = 0.02
+	robotic_pop_bonus_workforce_mult = 0.05
+}
+
+situation_apply_patch_corrupted_dll = {
+	icon = "gfx/interface/icons/modifiers/mod_country_num_tech_alternatives_add_negative.dds"
+	all_technology_research_speed = -0.1
+}
+
+situation_apply_patch_storage_expansion = {
+	icon = "gfx/interface/icons/modifiers/mod_energy_produces_mult_negative.dds"
+	country_energy_produces_mult = -0.15
+}
+
+situation_apply_patch_mtu_changed = {
+	icon = "gfx/interface/icons/modifiers/mod_empire_size_mult_negative.dds"
+	empire_size_mult = 2
+}
+
+situation_apply_patch_hardware_replaced = {
+	icon = "gfx/interface/icons/modifiers/mod_planet_jobs_simple_drone_reduced_mult.dds"
+	country_cost_mult = 0.05
+}
+
+situation_apply_patch_ram_allocated = {
+	icon = "gfx/interface/icons/modifiers/mod_country_edict_cap_mult.dds"
+	country_edict_fund_mult = -0.2
+}
+
+situation_apply_patch_security_vuln_ignored = {
+	icon = "gfx/interface/icons/modifiers/mod_lost_encryption_key.dds"
+	intel_encryption_add = -5
+}
+
+situation_apply_patch_process_terminated = {
+	icon = "gfx/interface/icons/modifiers/mod_lost_encryption_key.dds"
+	custom_tooltip = situation_apply_patch_process_terminated_custom_tooltip
+}
+
+introspective_calculator_energy_deficit_1 = {
+	pop_introspective_calculator_bonus_workforce_mult = @stage_1_workforce_penalty
+}
+
+introspective_calculator_energy_deficit_2 = {
+	pop_introspective_calculator_bonus_workforce_mult = @stage_2_workforce_penalty
+}
+
+introspective_calculator_energy_deficit_3 = {
+	pop_introspective_calculator_bonus_workforce_mult = @stage_3_workforce_penalty
+}
+
+introspective_calculator_energy_deficit_4 = {
+	pop_introspective_calculator_bonus_workforce_mult = @stage_4_workforce_penalty
+}

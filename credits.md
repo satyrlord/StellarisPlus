@@ -130,3 +130,8 @@ Integrated Workshop mods:
   Source: backup/3062038863/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3062038863>
   Author: Inny <https://steamcommunity.com/id/Inny78/myworkshopfiles/?appid=281990>
+
+- Orphaned Matrix Origin (Workshop ID: 3160178733)
+  Source: backup/3160178733/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3160178733>
+  Author: Zefnar <https://steamcommunity.com/profiles/76561198047900754/myworkshopfiles/?appid=281990>

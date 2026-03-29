@@ -6,15 +6,7 @@ portraits = {
 					"gfx/models/portraits/plantoid/plantoid_02_blue.dds"
 					"gfx/models/portraits/plantoid/plantoid_02_purple.dds"
 					"gfx/models/portraits/plantoid/plantoid_02_cyan.dds"
-					"gfx/models/portraits/plantoid/plantoid_02_colourful01.dds"
-					"gfx/models/portraits/plantoid/plantoid_02_colourful02.dds"
-					"gfx/models/portraits/plantoid/plantoid_02_colourful03.dds"
-					"gfx/models/portraits/plantoid/plantoid_02_colourful04.dds"
-					"gfx/models/portraits/plantoid/plantoid_02_colourful05.dds"
-					"gfx/models/portraits/plantoid/plantoid_02_colourful06.dds"
-					"gfx/models/portraits/plantoid/plantoid_02_colourful07.dds"
-					"gfx/models/portraits/plantoid/plantoid_02_colourful08.dds"
-					"gfx/models/portraits/plantoid/plantoid_02_colourful09.dds"
+
 		}
 	}
 }

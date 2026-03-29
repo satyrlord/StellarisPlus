@@ -1,0 +1,13 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+			owner = { has_origin = origin_orphan_matrix }
+			OR = {
+				has_deposit = d_introspective_lab
+				has_planet_flag = d_introspective_lab
+			}
+	}
+	modifier = {
+		job_introspective_calculator_add = $AMOUNT$
+	}
+}

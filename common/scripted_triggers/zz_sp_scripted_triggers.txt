@@ -1975,5 +1975,7 @@ has_precursor_intro = {
         has_country_flag = ezentian_intro
         # Unavoidable Changes
         has_country_flag = volgan_intro
+        # Orphaned Matrix Origin
+        has_origin = origin_orphan_matrix
     }
 }

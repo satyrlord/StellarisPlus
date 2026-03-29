@@ -1,0 +1,274 @@
+# Written by Zefnar
+
+namespace = orphan_matrix_digsite
+
+# First Digsite
+
+# Stage 1
+fleet_event = {
+	id = orphan_matrix_digsite.1
+	title = orphan_matrix_digsite.1.name
+	desc = orphan_matrix_digsite.1.desc
+	picture = GFX_evt_astral_rift_corridors
+	show_sound = event_administrative_work
+	location = from
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+		
+		small_artifact_reward = yes
+	}
+
+	option = {
+		name = orphan_matrix_digsite.1.option
+		
+		medium_artifact_reward = yes
+	}
+}
+
+# Stage 2
+fleet_event = {
+	id = orphan_matrix_digsite.2
+	title = orphan_matrix_digsite.2.name
+	desc = orphan_matrix_digsite.2.desc
+	picture = GFX_evt_astral_rift_desert_ruins_first_chamber
+	show_sound = event_ai_started
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = orphan_matrix_digsite.2.option
+		custom_tooltip = orphan_matrix_digsite.2.option.tooltip
+		hidden_effect = {
+			owner = {
+				country_event = { id = orphan_matrix_events.2 days = 100 random = 50 }
+			}
+		}
+	}
+}
+
+# Last Digsite
+
+# Stage 1 : Scan surface
+fleet_event = {
+	id = orphan_matrix_digsite.70
+	title = orphan_matrix_digsite.70.name
+	desc = orphan_matrix_digsite.70.desc
+	picture = GFX_evt_overgrown_city
+	show_sound = event_wind_ruins
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+		
+		small_artifact_reward = yes
+	}
+
+	option = {
+		name = orphan_matrix_digsite.70.option
+	}
+}
+
+# Stage 2 : Find the spire
+fleet_event = {
+	id = orphan_matrix_digsite.71
+	title = orphan_matrix_digsite.71.name
+	desc = orphan_matrix_digsite.71.desc
+	picture = GFX_evt_relic_world_building
+	show_sound = event_wind_ruins
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+		
+		small_artifact_reward = yes
+	}
+
+	option = {
+		name = orphan_matrix_digsite.71.option
+	}
+}
+
+# Stage 3 : Door and exploring spire
+fleet_event = {
+	id = orphan_matrix_digsite.72
+	title = orphan_matrix_digsite.72.name
+	desc = orphan_matrix_digsite.72.desc
+	picture = GFX_evt_hidden_door
+	show_sound = event_big_door_opening
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+		
+		small_artifact_reward = yes
+	}
+
+	option = {
+		name = orphan_matrix_digsite.72.option
+	}
+}
+
+# Stage 4 : Cavity and Labyrinth
+fleet_event = {
+	id = orphan_matrix_digsite.73
+	title = orphan_matrix_digsite.73.name
+	desc = orphan_matrix_digsite.73.desc
+	picture = GFX_evt_underground_city
+	show_sound = event_whispering
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+		
+		small_artifact_reward = yes
+	}
+
+	option = {
+		name = orphan_matrix_digsite.73.option.mechanism
+		
+		owner = { give_specimen = { key = orphaned_matrix_ancient_machinery } }
+	}
+
+	option = {
+		name = orphan_matrix_digsite.73.option.weaponry
+		
+		owner = { give_specimen = { key = orphaned_matrix_ancient_weaponry } }
+	}
+}
+
+# Stage 5 : Vats found !
+fleet_event = {
+	id = orphan_matrix_digsite.74
+	title = orphan_matrix_digsite.74.name
+	desc = orphan_matrix_digsite.74.desc
+	picture = GFX_evt_clones
+	show_sound = event_laboratory_sound
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+		
+		small_artifact_reward = yes
+	}
+
+	option = {
+		name = orphan_matrix_digsite.74.option
+		
+		owner = {
+			random_planet_within_border = {
+				limit = { has_planet_flag = orphan_matrix_relic_world@prev }
+				add_deposit = d_ancient_cryo_chamber
+			}
+		}
+	}
+}
+
+# Stage 6 : Secret Lab found !
+fleet_event = {
+	id = orphan_matrix_digsite.75
+	title = orphan_matrix_digsite.75.name
+	desc = orphan_matrix_digsite.75.desc
+	picture = GFX_evt_excavation_team
+	show_sound = event_laboratory_sound
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+		
+		small_artifact_reward = yes
+	}
+
+	option = {
+		name = orphan_matrix_digsite.75.option
+	}
+}
+
+# Stage 7 : Ultima Codex found !
+fleet_event = {
+	id = orphan_matrix_digsite.76
+	title = orphan_matrix_digsite.76.name
+	desc = orphan_matrix_digsite.76.desc
+	picture = GFX_evt_astral_rift_psionic_stranger_2
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = {
+			set_site_progress_locked = yes
+			save_event_target_as = orphan_matrix_relic_world@root.owner
+		}
+		event_target:orphan_matrix_relic_world@root.owner = {
+			save_event_target_as = current_orphan_matrix_relic_world
+		}
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+		
+		large_artifact_reward = yes
+	}
+
+	option = {
+		name = orphan_matrix_digsite.76.option
+		
+		hidden_effect = {
+			owner = { country_event = { id = orphan_matrix_events.80 days = 180 } }
+		}
+	}
+}

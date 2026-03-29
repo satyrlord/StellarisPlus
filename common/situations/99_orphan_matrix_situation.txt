@@ -1,0 +1,316 @@
+situation_delve_old_codex = {
+	picture = GFX_evt_astral_rift_psionic_stranger_2
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_unknown
+	on_progress_complete = {
+		custom_tooltip = situation_delve_old_codex_outcome
+		hidden_effect = {
+			situation_event = { id = orphan_matrix_events.40 }
+		}
+		set_situation_locked = yes
+	}
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 125
+			custom_tooltip = stage_delve_old_codex_effects
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 250
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.10 }
+			}
+			custom_tooltip = stage_delve_old_codex_effects
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 375
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.20 }
+			}
+			custom_tooltip = stage_delve_old_codex_effects
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_blue
+			end = 500
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.30 }
+			}
+			custom_tooltip = stage_delve_old_codex_effects
+		}
+	}
+	approach = {
+		name = situation_delve_old_codex_stop
+		icon = GFX_situation_approach_suspicious
+		icon_background = GFX_situation_approach_bg_red
+		
+		potential = {
+			NOT = { owner = { has_country_flag = orphan_matrix_situation_finished } }
+		}
+		
+		on_select = {
+			custom_tooltip = approach_delve_old_codex_stop_tt
+		}
+	}
+	approach = {
+		name = situation_delve_old_codex_regular
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		
+		potential = {
+			NOT = { owner = { has_country_flag = orphan_matrix_situation_finished } }
+		}
+		
+		on_select = {
+			custom_tooltip = approach_delve_old_codex_regular_tt
+		}
+		
+		modifier = {
+			country_energy_produces_mult = -0.1
+			all_technology_research_speed = 0.05
+		}
+	}
+	approach = {
+		name = situation_delve_old_codex_overclocked
+		icon = GFX_situation_approach_energy_credits
+		icon_background = GFX_situation_approach_bg_green
+		
+		potential = {
+			NOT = { owner = { has_country_flag = orphan_matrix_situation_finished } }
+		}
+		
+		resources = {
+   			category = situations
+   			cost = { influence = 100 }
+		}
+
+		on_select = {
+			custom_tooltip = approach_delve_old_codex_overclocked_tt
+		}
+		
+		modifier = {
+			country_energy_produces_mult = -0.25
+			country_unity_produces_mult = 0.1
+			all_technology_research_speed = 0.1
+		}
+	}
+	
+	approach = {
+		name = situation_delve_old_codex_stand_by
+		icon = GFX_situation_approach_unity
+		icon_background = GFX_situation_approach_bg_green
+		
+		potential = {
+			owner = { has_country_flag = orphan_matrix_situation_finished }
+		}
+
+		on_select = {
+			custom_tooltip = approach_delve_old_codex_stand_by_tt
+		}
+		
+		modifier = {
+			country_energy_produces_mult = -0.1
+			country_unity_produces_mult = 0.1
+			all_technology_research_speed = 0.1
+		}
+	}
+	
+	on_monthly = {
+		events = {
+			orphan_matrix_events.95
+			orphan_matrix_events.96
+			orphan_matrix_events.97
+	    }
+		random_events = {
+			600 = 0
+			10 = orphan_matrix_events.98
+			10 = orphan_matrix_events.99
+		}
+	}
+	monthly_progress = {
+		base = 0.3
+		modifier = {
+			mult = 1.2
+			desc = situation_delve_old_codex_introspective
+			owner = { has_valid_civic = civic_machine_introspective }
+		}
+		modifier = {
+			mult = 1.2
+			desc = situation_delve_old_codex_overclocked
+			current_situation_approach = situation_delve_old_codex_overclocked
+		}
+		modifier = {
+			mult = 0.8
+			desc = situation_delve_old_codex_regular
+			current_situation_approach = situation_delve_old_codex_regular
+		}
+		modifier = {
+			mult = 0
+			desc = situation_delve_old_codex_stop
+			current_situation_approach = situation_delve_old_codex_stop
+		}
+		modifier = {
+			add = owner.value:introspective_calculators_job_number
+			desc = situation_introspective_calculators_jobs_tt
+		}
+		modifier = {
+			mult = 0
+			desc = situation_alpha_codex_paused
+			owner = { has_country_flag = alpha_codex_paused }
+		}
+	}
+}
+
+situation_apply_patch = {
+	picture = GFX_evt_machine_sapience
+	complete_icon_frame = GFX_situation_outcome_frame_blue
+	complete_icon = GFX_situation_outcome_unknown
+	
+	on_progress_complete = {
+		custom_tooltip = situation_apply_patch_outcome
+		hidden_effect = {
+			situation_event = { id = orphan_matrix_events.869 }
+		}
+		set_situation_locked = yes
+	}
+	
+	stages = {
+		stage_1 = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_blue
+			end = 25
+			custom_tooltip = stage_apply_patch
+		}
+		stage_2 = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_blue
+			end = 50
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.861 }
+			}
+			custom_tooltip = stage_apply_patch
+		}
+		stage_3 = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_blue
+			end = 75
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.862 }
+			}
+			custom_tooltip = stage_apply_patch
+		}
+		stage_4 = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_blue
+			end = 100
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.863 }
+			}
+			custom_tooltip = stage_apply_patch
+		}
+		stage_5 = {
+			icon = GFX_situation_stage_5
+			icon_background = GFX_situation_stage_frame_blue
+			end = 125
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.864 }
+			}
+			custom_tooltip = stage_apply_patch
+		}
+		stage_6 = {
+			icon = GFX_situation_stage_6
+			icon_background = GFX_situation_stage_frame_blue
+			end = 150
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.865 }
+			}
+			custom_tooltip = stage_apply_patch
+		}
+		stage_7 = {
+			icon = GFX_situation_stage_7
+			icon_background = GFX_situation_stage_frame_blue
+			end = 175
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.866 }
+			}
+			custom_tooltip = stage_apply_patch
+		}
+		stage_8 = {
+			icon = GFX_situation_stage_8
+			icon_background = GFX_situation_stage_frame_blue
+			end = 200
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.867 }
+			}
+			custom_tooltip = stage_apply_patch
+		}
+		stage_9 = {
+			icon = GFX_situation_stage_9
+			icon_background = GFX_situation_stage_frame_blue
+			end = 225
+			on_first_enter = {
+				situation_event = { id = orphan_matrix_events.868 }
+			}
+			custom_tooltip = stage_apply_patch
+		}
+	}
+		
+	approach = {
+		name = situation_apply_patch_unknown
+		icon = GFX_situation_approach_unity
+		icon_background = GFX_situation_approach_bg_green
+		
+		potential = {
+			always = yes
+		}
+
+		on_select = {
+			custom_tooltip = approach_apply_patch_unknown_tt
+		}
+	}
+	
+	on_monthly = {
+		events = {
+			orphan_matrix_events.95
+			orphan_matrix_events.96
+	    }
+		random_events = {
+			100 = 0
+			10 = orphan_matrix_events.8691
+			10 = orphan_matrix_events.8692
+			10 = orphan_matrix_events.8693
+			10 = orphan_matrix_events.8694
+			10 = orphan_matrix_events.8695
+			10 = orphan_matrix_events.8696
+			10 = orphan_matrix_events.8697
+		}
+	}
+	
+	monthly_progress = {
+		base = 0.3
+		modifier = {
+			mult = 1.2
+			desc = situation_apply_patch_introspective
+			owner = { has_valid_civic = civic_machine_introspective }
+		}
+		modifier = {
+			add = owner.value:introspective_calculators_job_number
+			desc = situation_introspective_calculators_jobs_tt
+		}
+		modifier = {
+			mult = 0
+			desc = situation_apply_patch_paused
+			owner = { has_country_flag = situation_apply_patch_locked }
+		}
+		modifier = {
+			mult = 0
+			desc = situation_apply_patch_paused
+			owner = { has_modifier = situation_apply_patch_process_terminated }
+		}
+	}
+}

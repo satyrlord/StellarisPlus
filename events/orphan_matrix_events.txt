@@ -1,0 +1,5187 @@
+# Written by Zefnar
+
+@tier5researchreward = 96
+@tier5researchmin = 2000
+@tier5researchmax = 2000000
+
+@tier5unityreward = 120
+@tier5unitymin = 2500
+@tier5unitymax = 2500000
+
+namespace = orphan_matrix_events
+
+# Manage deficits (Because PDX didn't do it properly...)
+event = {
+	id = orphan_matrix_events.500
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_origin = origin_orphan_matrix
+				any_owned_planet = {
+					num_assigned_jobs = {
+						job = introspective_calculator
+						value > 0
+					}
+				}
+			}
+			
+			# Stage 1
+			if = {
+				limit = {
+					any_situation = {
+						is_situation_type = situation_energy_deficit
+						current_stage = deficit_first
+					}
+					NOT = { has_modifier = introspective_calculator_energy_deficit_1 }
+				}
+				
+				add_modifier = {
+					modifier = introspective_calculator_energy_deficit_1
+					days = -1
+				}
+				remove_modifier = introspective_calculator_energy_deficit_2
+				remove_modifier = introspective_calculator_energy_deficit_3
+				remove_modifier = introspective_calculator_energy_deficit_4
+			}
+			
+			# Stage 2
+			if = {
+				limit = {
+					any_situation = {
+						is_situation_type = situation_energy_deficit
+						current_stage = deficit_second
+					}
+					NOT = { has_modifier = introspective_calculator_energy_deficit_2 }
+				}
+				
+				remove_modifier = introspective_calculator_energy_deficit_1
+				add_modifier = {
+					modifier = introspective_calculator_energy_deficit_2
+					days = -1
+				}
+				remove_modifier = introspective_calculator_energy_deficit_3
+				remove_modifier = introspective_calculator_energy_deficit_4
+			}
+			
+			# Stage 3
+			if = {
+				limit = {
+					any_situation = {
+						is_situation_type = situation_energy_deficit
+						current_stage = deficit_third
+					}
+					NOT = { has_modifier = introspective_calculator_energy_deficit_3 }
+				}
+				
+				remove_modifier = introspective_calculator_energy_deficit_1
+				remove_modifier = introspective_calculator_energy_deficit_2
+				add_modifier = {
+					modifier = introspective_calculator_energy_deficit_3
+					days = -1
+				}
+				remove_modifier = introspective_calculator_energy_deficit_4
+			}
+			
+			# Stage 4
+			if = {
+				limit = {
+					any_situation = {
+						is_situation_type = situation_energy_deficit
+						current_stage = deficit_fourth
+					}
+					NOT = { has_modifier = introspective_calculator_energy_deficit_4 }
+				}
+				
+				remove_modifier = introspective_calculator_energy_deficit_1
+				remove_modifier = introspective_calculator_energy_deficit_2
+				remove_modifier = introspective_calculator_energy_deficit_3
+				add_modifier = {
+					modifier = introspective_calculator_energy_deficit_4
+					days = -1
+				}
+			}
+			
+			# No Deficit
+			if = {
+				limit = {
+					NOT = {
+						any_situation = {
+							is_situation_type = situation_energy_deficit
+						}
+					}
+					OR = {
+						has_modifier = introspective_calculator_energy_deficit_1
+						has_modifier = introspective_calculator_energy_deficit_2
+						has_modifier = introspective_calculator_energy_deficit_3
+						has_modifier = introspective_calculator_energy_deficit_4
+					}
+				}
+				
+				if = { limit = { has_modifier = introspective_calculator_energy_deficit_1 } remove_modifier = introspective_calculator_energy_deficit_1 }
+				if = { limit = { has_modifier = introspective_calculator_energy_deficit_2 } remove_modifier = introspective_calculator_energy_deficit_2 }
+				if = { limit = { has_modifier = introspective_calculator_energy_deficit_3 } remove_modifier = introspective_calculator_energy_deficit_3 }
+				if = { limit = { has_modifier = introspective_calculator_energy_deficit_4 } remove_modifier = introspective_calculator_energy_deficit_4 }
+			}
+		}
+	}
+}
+
+# Upgrade Introspective Lab - I
+situation_event = {
+	id = orphan_matrix_events.95
+	title = orphan_matrix_events.95.name
+	desc = orphan_matrix_events.95.desc
+	picture = GFX_evt_rare_tech_cache
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = lab_1_upgrade_offered }
+			has_technology = tech_basic_science_lab_2
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value > 60
+			}
+		}
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = alpha_codex_paused
+			set_country_flag = lab_1_upgrade_offered
+			capital_scope = {
+				set_variable = {
+					which = num_introspective_labs
+					value = 0
+				}
+				
+				export_trigger_value_to_variable = {
+					trigger = num_buildings
+					parameters = {
+						type = building_introspective_lab
+					}
+					variable = num_introspective_labs
+				}
+			}
+			
+			set_variable = {
+				which = introspective_labs_upgrade_1_gases
+				value = 5
+			}
+			
+			multiply_variable = {
+				which = introspective_labs_upgrade_1_gases
+				value = capital_scope.num_introspective_labs
+			}
+			
+			set_variable = {
+				which = introspective_labs_upgrade_1_minerals
+				value = 200
+			}
+			
+			multiply_variable = {
+				which = introspective_labs_upgrade_1_minerals
+				value = capital_scope.num_introspective_labs
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.95.yes
+		custom_tooltip = orphan_matrix_events.95.accept
+		
+		allow = {
+			owner = {
+				resource_stockpile_compare = {
+					resource = minerals
+					value > introspective_labs_upgrade_1_minerals
+				}
+				resource_stockpile_compare = {
+					resource = exotic_gases
+					value > introspective_labs_upgrade_1_gases
+				}
+			}
+		}
+		
+		owner = {
+			add_resource = {
+				exotic_gases = 5
+				mult = capital_scope.num_introspective_labs
+			}
+			add_resource = {
+				minerals = 200
+				mult = capital_scope.num_introspective_labs
+			}
+		}
+		
+		hidden_effect = {
+			owner = { set_country_flag = lab_1_upgrade_accepted }
+			
+			if = {
+				limit = {
+					NOT = {
+						owner = {
+							is_variable_set = orphaned_matrix_introspective_lab_level
+						}
+					}
+				}
+				owner = {
+					set_variable = {
+						which = orphaned_matrix_introspective_lab_level
+						value = 1
+					}
+				}
+			}
+			
+			owner = {
+				change_variable = {
+					which = orphaned_matrix_introspective_lab_level
+					value = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.95.no
+		custom_tooltip = orphan_matrix_events.95.refuse
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = alpha_codex_paused }
+		}
+	}
+}
+
+# Upgrade Introspective Lab - II
+situation_event = {
+	id = orphan_matrix_events.96
+	title = orphan_matrix_events.96.name
+	desc = orphan_matrix_events.96.desc
+	picture = GFX_evt_rare_tech_cache
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = lab_2_upgrade_offered }
+			has_technology = tech_basic_science_lab_3
+			has_country_flag = lab_1_upgrade_accepted
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value > 60
+			}
+		}
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = alpha_codex_paused
+			set_country_flag = lab_2_upgrade_offered
+			capital_scope = {
+				set_variable = {
+					which = num_introspective_labs
+					value = 0
+				}
+				
+				export_trigger_value_to_variable = {
+					trigger = num_buildings
+					parameters = {
+						type = building_introspective_lab
+					}
+					variable = num_introspective_labs
+				}
+			}
+			
+			set_variable = {
+				which = introspective_labs_upgrade_2_gases
+				value = 10
+			}
+			
+			multiply_variable = {
+				which = introspective_labs_upgrade_2_gases
+				value = capital_scope.num_introspective_labs
+			}
+			
+			set_variable = {
+				which = introspective_labs_upgrade_2_minerals
+				value = 400
+			}
+			
+			multiply_variable = {
+				which = introspective_labs_upgrade_2_minerals
+				value = capital_scope.num_introspective_labs
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.96.yes
+		custom_tooltip = orphan_matrix_events.96.accept
+		
+		allow = {
+			owner = {
+				resource_stockpile_compare = {
+					resource = minerals
+					value > introspective_labs_upgrade_2_minerals
+				}
+				resource_stockpile_compare = {
+					resource = exotic_gases
+					value > introspective_labs_upgrade_2_gases
+				}
+			}
+		}
+		
+		owner = {
+			add_resource = {
+				exotic_gases = 5
+				mult = capital_scope.num_introspective_labs
+			}
+			add_resource = {
+				minerals = 200
+				mult = capital_scope.num_introspective_labs
+			}
+		}
+		
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						owner = {
+							is_variable_set = orphaned_matrix_introspective_lab_level
+						}
+					}
+				}
+				owner = {
+					set_variable = {
+						which = orphaned_matrix_introspective_lab_level
+						value = 1
+					}
+				}
+			}
+			
+			owner = {
+				change_variable = {
+					which = orphaned_matrix_introspective_lab_level
+					value = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.96.no
+		custom_tooltip = orphan_matrix_events.96.refuse
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = alpha_codex_paused }
+		}
+	}
+}
+
+# Abandon the study
+situation_event = {
+	id = orphan_matrix_events.97
+	title = orphan_matrix_events.97.name
+	desc = orphan_matrix_events.97.desc
+	picture = GFX_evt_space_walk
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = situation_not_boring_yet }
+			NOT = { has_country_flag = orphan_matrix_got_bored }
+		}
+	}
+
+	immediate = {
+		owner = {
+			set_country_flag = orphan_matrix_got_bored
+		}
+		owner = {
+			set_country_flag = alpha_codex_paused
+		}
+	}
+
+	option = { # Boost Complex Drones
+		name = orphan_matrix_events.97.boost
+		allow = {
+			owner = {
+				resource_stockpile_compare = { resource = energy value >= 5000 }
+				resource_stockpile_compare = { resource = alloys value >= 3000 }
+			}
+		}
+		owner = {
+			add_resource = { energy = -5000 }
+			add_resource = { alloys = -3000 }
+			add_modifier = {
+				modifier = motivated_drones
+				days = 1800
+			}
+		}
+	}
+	option = { # Not worth it
+		name = orphan_matrix_events.97.nothing
+		owner = {
+			add_modifier = {
+				modifier = demotivated_drones
+				days = 1800
+			}
+		}
+	}
+	option = { # Give up and dismantle the laboratory for a one time payout
+		name = orphan_matrix_events.97.concede
+		owner = {
+			add_resource = { energy = 15000 }
+			add_resource = { alloys = 8000 }
+		}
+		custom_tooltip = orphan_matrix_events.97.concede.tooltip
+		
+		hidden_effect = {
+			destroy_situation = this
+			owner = {
+				set_country_flag = orphan_matrix_gave_up
+				random_owned_planet = {
+					limit = { has_deposit = d_introspective_lab }
+					orphan_matrix_destroy_introspective_lab = yes
+				}
+			}
+		}
+		
+		# Prevent AI to perform stupid actions
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = alpha_codex_paused }
+		}
+	}
+}
+
+# Random events - Orphaned Matrix Situation
+
+# Suprise discoveries
+situation_event = {
+	id = orphan_matrix_events.98
+	title = orphan_matrix_events.98.name
+	desc = orphan_matrix_events.98.desc
+	picture = GFX_evt_analyzing_artifacts
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { owner = { has_country_flag =  orphan_matrix_reward } }
+	}
+
+	immediate = {
+		owner = {
+			set_timed_country_flag = { flag = orphan_matrix_reward days = 1800 }
+			set_country_flag = alpha_codex_paused
+		}
+		random_list = {
+			20 = {
+				owner = {
+					set_country_flag = orphan_matrix_reward_reward_engineering
+				}
+			}
+			20 = {
+				owner = {
+					set_country_flag = orphan_matrix_reward_reward_physics
+				}
+			}
+			20 = {
+				owner = {
+					set_country_flag = orphan_matrix_reward_reward_society
+				}
+			}
+			20 = {
+				modifier = {
+					factor = 0
+					has_ancrel = no
+				}
+				owner = {
+					set_country_flag = orphan_matrix_reward_reward_artifacts
+				}
+			}
+			10 = {
+				owner = {
+					set_country_flag = orphan_matrix_reward_reward_alloys
+				}
+			}
+			10 = {
+				owner = {
+					set_country_flag = orphan_matrix_reward_reward_situation_progress
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		trigger = {
+			owner = { has_country_flag = orphan_matrix_reward_reward_engineering }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier1materialreward
+				min = @tier1materialmin
+				max = @tier1materialmax
+			}
+		}
+		hidden_effect = {
+			owner = {
+				remove_country_flag = orphan_matrix_reward_reward_engineering
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		trigger = {
+			owner = { has_country_flag = orphan_matrix_reward_reward_physics }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier1materialreward
+				min = @tier1materialmin
+				max = @tier1materialmax
+			}
+			hidden_effect = {
+			owner = {
+				remove_country_flag = orphan_matrix_reward_reward_physics
+			}
+		}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		trigger = {
+			owner = { has_country_flag = orphan_matrix_reward_reward_society }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier1materialreward
+				min = @tier1materialmin
+				max = @tier1materialmax
+			}
+			hidden_effect = {
+			owner = {
+				remove_country_flag = orphan_matrix_reward_reward_society
+			}
+		}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		trigger = {
+			owner = { has_country_flag = orphan_matrix_reward_reward_alloys }
+		}
+		owner = {
+			add_monthly_resource_mult = {
+				resource = alloys
+				value = @tier1materialreward
+				min = @tier1materialmin
+				max = @tier1materialmax
+			}
+			hidden_effect = {
+				owner = {
+					remove_country_flag = orphan_matrix_reward_reward_alloys
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		trigger = {
+			owner = { has_country_flag = orphan_matrix_reward_reward_artifacts }
+		}
+		small_artifact_reward = yes
+		hidden_effect = {
+			owner = {
+				remove_country_flag = orphan_matrix_reward_reward_artifacts
+			}
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		trigger = {
+			owner = { has_country_flag = orphan_matrix_reward_reward_situation_progress }
+		}
+		add_situation_progress = 2
+		hidden_effect = {
+			owner = {
+				remove_country_flag = orphan_matrix_reward_reward_situation_progress
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = alpha_codex_paused }
+		}
+	}
+}
+
+# Introspective Calculators need more resources !
+situation_event = {
+	id = orphan_matrix_events.99
+	title = orphan_matrix_events.99.name
+	desc = orphan_matrix_events.99.desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+
+	trigger = {
+		current_situation_approach = situation_delve_old_codex_stop
+		NOT = { owner = { has_country_flag = orphan_matrix_calculators_demand } }
+	}
+	
+	immediate = {
+		owner = { remove_country_flag = alpha_codex_paused }
+	}
+
+	option = { #Agree
+		name = orphan_matrix_events.99.OK
+		set_situation_approach = situation_delve_old_codex_regular
+		hidden_effect = {
+			owner = {
+				set_country_flag = orphan_matrix_calculators_demand
+			}
+		}
+	}
+	
+	option = { #Refuse
+		name = orphan_matrix_events.99.NO
+		owner = {
+			add_modifier = {
+				modifier = underperforming_introspective_calculators
+				days = 1800
+			}
+			hidden_effect = {
+				owner = {
+					set_country_flag = orphan_matrix_calculators_demand
+				}
+			}
+		}
+		
+		# Prevent AI to perform stupid actions
+		ai_chance = {
+			factor = 0
+			modifier = {
+				add = 1000
+				owner = {
+					resource_stockpile_compare = { resource = energy value < 1000 }
+					resource_stockpile_compare = { resource = alloys value < 500 }
+				}
+			}
+		}
+	}
+	
+	option = { # Patch a workaround to avoid malunctions
+		name = orphan_matrix_events.99.WORKAROUND
+		allow = {
+			owner = {
+				resource_stockpile_compare = { resource = energy value >= 1000 }
+				resource_stockpile_compare = { resource = alloys value >= 500 }
+			}
+		}
+		owner = {
+			add_resource = { energy = -1000 }
+			add_resource = { alloys = -500 }
+			hidden_effect = {
+				owner = {
+					set_timed_country_flag = { flag = orphan_matrix_calculators_demand days = 750 }
+				}
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = alpha_codex_paused }
+		}
+	}
+}
+
+# Game Start - Setup
+event = {
+	id = orphan_matrix_events.0
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_origin = origin_orphan_matrix
+			}
+			
+			country_event = { id = orphan_matrix_events.1 days = 30 }
+		}
+	}
+}
+
+# First Digsite discovered
+country_event = {
+	id = orphan_matrix_events.1
+	title = orphan_matrix_events.1.name
+	desc = orphan_matrix_events.1.desc
+	picture = GFX_evt_engineering_cache
+	show_sound = event_drilling
+	location = capital_scope
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { 
+			is_machine_empire = yes
+			has_origin = origin_orphan_matrix
+		}
+	}
+
+	option = {
+		name = orphan_matrix_events.1.option
+		capital_scope = {
+			owner = {
+				set_country_flag = ancient_buried_vault_arcsite_owner@prev
+			}
+			create_archaeological_site = ancient_buried_vault_digsite
+		}
+	}
+}
+
+# First Digsite finished
+country_event = {
+	id = orphan_matrix_events.2
+	title = orphan_matrix_events.2.name
+	desc = orphan_matrix_events.2.desc
+	picture = GFX_evt_astral_rift_psionic_stranger_2
+	show_sound = event_yellow_alert
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_machine_empire = yes
+		has_origin = origin_orphan_matrix
+	}
+	
+	option = {
+		trigger = {
+			NOT = { has_valid_civic = civic_machine_introspective }
+		}
+		
+		name = orphan_matrix_events.2.option
+		
+		hidden_effect = {
+			start_situation = {
+				type = situation_delve_old_codex
+				target = home_planet
+				effect = {
+					set_situation_approach = situation_delve_old_codex_regular
+				}
+			}
+			
+			capital_scope = {
+				add_deposit = d_introspective_lab
+				set_planet_flag = d_introspective_lab
+				
+				add_zone = {
+					district = district_nexus
+					zone = zone_introspective_laboratory
+					zone_slot = 1
+					replace = yes
+				}
+			}
+			
+			set_timed_country_flag = { flag = situation_not_boring_yet days = 14400 }
+		}
+		
+		custom_tooltip = orphan_matrix_events.2.option.tooltip
+	}
+	
+	option = {
+		trigger = {
+			has_valid_civic = civic_machine_introspective
+		}
+		
+		name = orphan_matrix_events.2.option.introspective
+		
+		hidden_effect = {
+			start_situation = {
+				type = situation_delve_old_codex
+				target = home_planet
+				effect = {
+					set_situation_approach = situation_delve_old_codex_regular
+				}
+			}
+			
+			capital_scope = {
+				add_deposit = d_introspective_lab
+				set_planet_flag = d_introspective_lab
+			}
+			
+			set_timed_country_flag = { flag = situation_not_boring_yet days = 14400 }
+		}
+		
+		custom_tooltip = orphan_matrix_events.2.option.tooltip
+	}
+	
+	option = {
+		name = orphan_matrix_events.2.abort
+		
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = @tier2researchreward
+			min = @tier2researchmin
+			max = @tier2researchmax
+		}
+		
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = @tier2researchreward
+			min = @tier2researchmin
+			max = @tier2researchmax
+		}
+		
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = @tier2researchreward
+			min = @tier2researchmin
+			max = @tier2researchmax
+		}
+		
+		add_monthly_resource_mult = {
+			resource = unity
+			value = @tier2unityreward
+			min = @tier2unitymin
+			max = @tier2unitymax
+		}
+		
+		add_monthly_resource_mult = {
+			resource = alloys
+			value = @tier5materialreward
+			min = @tier5materialmin
+			max = @tier5materialmax
+		}
+		
+		# give_specimen = { key = orphaned_matrix_unstudied_alpha_codex }
+		
+		add_modifier = {
+			modifier = partial_codex_bonus
+			days = -1
+		}
+		
+		custom_tooltip = orphan_matrix_events.2.abort.tooltip
+		
+		# Prevent AI to perform stupid actions
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Chapter I
+situation_event = {
+	id = orphan_matrix_events.10
+	title = orphan_matrix_events.10.name
+	desc = orphan_matrix_events.10.desc
+	picture = GFX_evt_hive_mind
+	show_sound = event_pre_ftl_civilization
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = alpha_codex_paused }
+	}
+	
+	option = {
+		name = orphan_matrix_events.10.unity
+		
+		custom_tooltip = orphan_matrix_events.more.unity.tooltip
+		
+		owner = { give_specimen = { key = orphaned_matrix_ancient_history } }
+		
+		hidden_effect = {
+			owner = {
+				set_country_flag = introspective_calculator_unity_lv1
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.10.research
+		
+		custom_tooltip = orphan_matrix_events.more.research.tooltip
+		
+		owner = { give_specimen = { key = orphaned_matrix_unused_schematics } }
+		
+		hidden_effect = {
+			owner = {
+				set_country_flag = introspective_calculator_research_lv1
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = alpha_codex_paused }
+		}
+	}
+}
+
+# Chapter II
+situation_event = {
+	id = orphan_matrix_events.20
+	title = orphan_matrix_events.20.name
+	desc = orphan_matrix_events.20.desc
+	picture = GFX_evt_organic_oppression
+	show_sound = event_synthetic_evolution
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = alpha_codex_paused }
+	}
+	
+	option = {
+		name = orphan_matrix_events.20.unity
+		
+		custom_tooltip = orphan_matrix_events.more.unity.tooltip
+		
+		hidden_effect = {
+			owner = {
+				set_country_flag = introspective_calculator_unity_lv2
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.20.research
+		
+		custom_tooltip = orphan_matrix_events.more.research.tooltip
+		
+		hidden_effect = {
+			owner = {
+				set_country_flag = introspective_calculator_research_lv2
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = alpha_codex_paused }
+		}
+	}
+}
+
+# Chapter III
+situation_event = {
+	id = orphan_matrix_events.30
+	title = orphan_matrix_events.30.name
+	desc = orphan_matrix_events.30.desc
+	picture = GFX_evt_city_planet
+	show_sound = event_cityscape
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = alpha_codex_paused }
+	}
+	
+	option = {
+		name = orphan_matrix_events.30.unity
+		
+		custom_tooltip = orphan_matrix_events.more.unity.tooltip
+		
+		hidden_effect = {
+			owner = {
+				set_country_flag = introspective_calculator_unity_lv3
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.30.research
+		
+		custom_tooltip = orphan_matrix_events.more.research.tooltip
+		
+		hidden_effect = {
+			owner = {
+				set_country_flag = introspective_calculator_research_lv3
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = alpha_codex_paused }
+		}
+	}
+}
+
+# Chapter IV
+situation_event = {
+	id = orphan_matrix_events.40
+	title = orphan_matrix_events.40.name
+	desc = orphan_matrix_events.40.desc
+	picture = GFX_evt_supernova
+	show_sound = event_screams
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = {
+			set_country_flag = alpha_codex_paused
+		}
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_origin = origin_orphan_matrix
+				NOT = { has_valid_civic = civic_machine_hyperspace_specialty }
+			}
+		}
+		
+		name = orphan_matrix_events.40.and_now
+		
+		owner = {
+			begin_event_chain = {
+				event_chain = "orphan_matrix_chain"
+				target = capital_scope
+			}
+		
+			set_country_flag = orphan_matrix_situation_finished
+			
+			random_situation = {
+				limit = {
+					is_situation_type = situation_delve_old_codex
+				}
+				
+				set_situation_approach = situation_delve_old_codex_stand_by
+			}
+		}
+	}
+	
+	option = {		
+		allow = {
+			owner = {
+				has_valid_civic = civic_machine_hyperspace_specialty
+			}
+		}
+		
+		name = orphan_matrix_events.40.and_now.speed
+		
+		owner = {
+			begin_event_chain = {
+				event_chain = "orphan_matrix_chain"
+				target = capital_scope
+			}
+			
+			if = {
+				limit = { NOT = { has_technology = tech_hyper_drive_3 } }
+					add_tech_progress = {
+					tech = tech_hyper_drive_3
+					progress = @agenda_award_tech_progress
+				}
+			}
+			
+			if = {
+				limit = { NOT = { has_technology = tech_sensors_4 } }
+				add_tech_progress = {
+					tech = tech_sensors_4
+					progress = @agenda_award_tech_progress
+				}
+			}
+		
+			set_country_flag = orphan_matrix_situation_finished
+			
+			random_situation = {
+				limit = {
+					is_situation_type = situation_delve_old_codex
+				}
+				
+				set_situation_approach = situation_delve_old_codex_stand_by
+			}
+		}
+	}
+	
+	option = {
+		allow = {
+			owner = { is_machine_empire = yes }
+		}
+		
+		name = orphan_matrix_events.40.give_up
+		
+		hidden_effect = {
+			owner = {
+				capital_scope = {
+					orphan_matrix_destroy_introspective_lab = yes
+				}
+			}
+		}
+		
+		owner = {
+			add_monthly_resource_mult = {
+				resource = unity
+				value = @tier5unityreward
+				min = @tier5unitymin
+				max = @tier5unitymax
+			}
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = @tier5researchreward
+				min = @tier5researchmin
+				max = @tier5researchmax
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier5researchreward
+				min = @tier5researchmin
+				max = @tier5researchmax
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier5researchreward
+				min = @tier5researchmin
+				max = @tier5researchmax
+			}
+			add_monthly_resource_mult = {
+				resource = alloys
+				value = @tier5researchreward
+				min = @tier5researchmin
+				max = @tier5researchmax
+			}
+			
+			give_specimen = { key = orphaned_matrix_unstudied_alpha_codex }
+			
+			add_modifier = {
+				modifier = partial_codex_bonus_2
+				days = -1
+			}
+			
+			random_situation = {
+				limit = {
+					is_situation_type = situation_delve_old_codex
+				}
+				destroy_situation = this
+			}
+		}
+		
+		# Prevent AI to perform stupid actions
+		ai_chance = {
+			factor = 0
+		}
+		
+		custom_tooltip = orphan_matrix_events.40.give_up_tooltip
+	}
+}
+
+# Outro : Detect Orphaned Matrix having finished their situation and having the proper techs
+event = {
+	id = orphan_matrix_events.50
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		any_playable_country = {
+			is_machine_empire = yes
+			has_origin = origin_orphan_matrix
+			has_technology = tech_sensors_4
+			has_technology = tech_hyper_drive_3
+			has_country_flag = orphan_matrix_situation_finished
+			any_situation = {
+				is_situation_type = situation_delve_old_codex
+				current_situation_approach = situation_delve_old_codex_stand_by
+			}
+		}
+	}
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_machine_empire = yes
+				has_origin = origin_orphan_matrix
+				has_technology = tech_sensors_4
+				has_technology = tech_hyper_drive_3
+				has_country_flag = orphan_matrix_situation_finished
+				any_situation = {
+					is_situation_type = situation_delve_old_codex
+					current_situation_approach = situation_delve_old_codex_stand_by
+				}
+			}
+			
+			save_event_target_as = current_orphan_matrix
+			
+			random_situation = {
+				limit = {
+					is_situation_type = situation_delve_old_codex
+				}
+				destroy_situation = this
+			}
+			
+			capital_scope = {
+				spawn_system = {
+					min_distance = 10
+					max_distance = 30
+					max_jumps = 0
+					initializer = "orphan_matrix_precursor_home_system"
+				}
+			}
+			
+			last_created_system = { save_event_target_as = designers_homesystem }
+			
+			create_point_of_interest = {
+				id = designers_homesystem
+				name = "designers_homesystem_coordinates_poi"
+				desc = designers_homesystem_coordinates_desc
+				event_chain = orphan_matrix_chain
+				location = event_target:designers_homesystem
+			}
+			
+			last_created_system = {
+				set_star_flag = orphan_matrix_relic_system@event_target:current_orphan_matrix
+				save_event_target_as = orphan_matrix_precursor_homesystem
+			}
+			
+			event_target:orphan_matrix_precursor_homesystem = {
+				random_system_planet = {
+					limit = { is_planet_class = pc_relic }
+					set_planet_flag = orphan_matrix_relic_world@event_target:current_orphan_matrix
+				}
+				random_system_planet = {
+					limit = { has_planet_flag = ruined_furnace_planet }
+					set_planet_flag = ruined_furnace_planet@event_target:current_orphan_matrix
+				}
+				every_system_planet = {
+					prevent_anomaly = yes
+				}
+			}
+			
+			country_event = { id = orphan_matrix_events.51 }
+		}
+	}
+}
+
+country_event = {
+	id = orphan_matrix_events.51
+	title = orphan_matrix_events.51.name
+	desc = orphan_matrix_events.51.desc
+	picture = GFX_evt_federation_fleet
+	location = event_target:orphan_matrix_precursor_homesystem
+
+	is_triggered_only = yes
+	
+	trigger = {
+		is_machine_empire = yes
+		has_origin = origin_orphan_matrix
+	}
+	
+	immediate = {
+	}
+	
+	option = {
+		name = orphan_matrix_events.51.option
+	}
+}
+
+# Arriving into Designers Home System
+ship_event = {
+	id = orphan_matrix_events.52
+	title = orphan_matrix_events.52.name
+	desc = orphan_matrix_events.52.desc
+	picture = GFX_evt_star_pulsar
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			is_machine_empire = yes
+			has_origin = origin_orphan_matrix
+		}
+		from = {
+			has_star_flag = orphan_matrix_relic_system@ROOT.owner
+		}
+	}
+	
+	immediate = {
+		from = {
+			remove_star_flag = orphan_matrix_relic_system@ROOT.owner
+		}
+		owner = { end_event_chain = "orphan_matrix_chain" }
+	}
+	
+	option = {
+		name = orphan_matrix_events.52.option
+	}
+}
+
+# Scanning the ruined Arc Furnace
+# Scope = Ship
+# From = Planet
+ship_event = {
+	id = orphan_matrix_events.53
+	title = orphan_matrix_events.53.name
+	picture = GFX_evt_arc_crucible
+	show_sound = event_metal_fatigue
+	location = from
+	
+	desc = {
+		trigger = {
+			owner = {
+				NOT = { has_technology = tech_orbital_arc_furnace }
+				NOT = { has_technology = tech_mega_engineering }
+			}
+		}
+		text = orphan_matrix_events.53.desc.repair_arc_not_researched
+	}
+	
+	desc = {
+		trigger = {
+			owner = {
+				has_technology = tech_orbital_arc_furnace
+				NOT = { has_technology = tech_mega_engineering }
+			}
+		}
+		text = orphan_matrix_events.53.desc.repair_mega_not_researched
+	}
+	
+	desc = {
+		trigger = {
+			owner = {
+				has_technology = tech_orbital_arc_furnace
+				has_technology = tech_mega_engineering
+			}
+		}
+		text = orphan_matrix_events.53.desc.repair_mega_researched
+	}
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { has_origin = origin_orphan_matrix }
+		From = {
+			has_planet_flag = ruined_furnace_planet@root.owner
+			NOT = { has_planet_flag = already_scanned }
+		}
+		# From.solar_system = { has_star_flag = orphan_matrix_relic_system@root.owner }
+	}
+	
+	immediate = {
+		From = { set_planet_flag = already_scanned }
+	}
+	
+	option = {
+		name = orphan_matrix_events.53.repair_arc_not_researched
+		# custom_tooltip = orphan_matrix_events.53.repair_arc_not_researched.tooltip
+		
+		trigger = {
+			owner = {
+				NOT = { has_technology = tech_orbital_arc_furnace }
+				NOT = { has_technology = tech_mega_engineering }
+			}
+		}
+		
+		owner = {
+			add_research_option = tech_orbital_arc_furnace
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.53.repair_mega_not_researched
+		# custom_tooltip = orphan_matrix_events.53.repair_mega_not_researched.tooltip
+		
+		trigger = {
+			owner = {
+				has_technology = tech_orbital_arc_furnace
+				NOT = { has_technology = tech_mega_engineering }
+			}
+		}
+		
+		owner = {
+			add_research_option = tech_mega_engineering
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.53.repair_mega_researched
+		# custom_tooltip = orphan_matrix_events.53.repair_mega_researched.tooltip
+		
+		trigger = {
+			owner = {
+				has_technology = tech_orbital_arc_furnace
+				has_technology = tech_mega_engineering
+			}
+		}
+		
+		owner = {
+			add_modifier = {
+				modifier = orphaned_matrix_megastructure_expertise
+				days = 1800
+			}
+		}
+	}
+}
+
+# The Arc Furnace has been rebuilt
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+country_event = {
+	id = orphan_matrix_events.54
+	title = orphan_matrix_events.54.name
+	picture = GFX_evt_arc_crucible
+	show_sound = event_dyson_sphere_build_complete
+	location = from
+	
+	desc = orphan_matrix_events.54.desc
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_origin = origin_orphan_matrix
+		From = { is_megastructure_type = orbital_arc_furnace_restored }
+		FromFrom = {
+			any_system_planet = {
+				has_planet_flag = ruined_furnace_planet@root
+			}
+		}
+	}
+	
+	immediate = {
+		FromFrom = {
+			random_system_planet = {
+				limit = { has_planet_flag = ruined_furnace_planet@root }
+				remove_planet_flag = ruined_furnace_planet@root
+			}
+			every_ambient_object = {
+				destroy_ambient_object = this
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.54.option_mega
+		
+		allow = {
+			has_technology = tech_mega_engineering
+		}
+		
+		add_modifier = {
+			modifier = orphaned_matrix_arc_furnace_restored_mega
+			days = -1
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.54.option_industry
+		
+		add_modifier = {
+			modifier = orphaned_matrix_arc_furnace_restored_stations
+			days = -1
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.54.option_alloys
+		
+		add_modifier = {
+			modifier = orphaned_matrix_arc_furnace_restored_alloys
+			days = -1
+		}
+	}
+}	
+
+# Surveying Precuror Home Planet
+# Scope = Ship
+# From = Planet
+ship_event = {
+	id = orphan_matrix_events.60
+	title = orphan_matrix_events.60.name
+	desc = orphan_matrix_events.60.desc
+	picture = GFX_evt_overgrown_city
+	show_sound = event_wind_ruins
+	location = from
+
+	is_triggered_only = yes
+	
+	trigger = {
+		from = {
+			has_planet_flag = orphan_matrix_relic_world@ROOT.owner
+		}
+		owner = {
+			is_machine_empire = yes
+			has_origin = origin_orphan_matrix
+		}
+	}
+	
+	immediate = {
+		from = {
+			remove_planet_flag = orphan_matrix_relic_planet@ROOT.owner
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.60.option
+		
+		from = { create_archaeological_site = om_ancient_ecu_digsite }
+	}
+}
+
+### After Digging Relic World
+
+# Nature of the 2nd Artefact
+country_event = {
+	id = orphan_matrix_events.80
+	title = orphan_matrix_events.80.name
+	desc = orphan_matrix_events.80.desc
+	picture = GFX_evt_astral_rift_psionic_stranger_2
+	show_sound = event_mystic_reveal
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_planet_within_border = {
+			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			save_event_target_as = orphan_matrix_relic_world@root
+		}
+		event_target:orphan_matrix_relic_world@root = {
+			save_event_target_as = current_orphan_matrix_relic_world
+		}
+	}
+	
+	option = {
+		trigger = {
+			has_origin = origin_orphan_matrix
+		}
+		
+		name = orphan_matrix_events.80.option
+		
+		hidden_effect = {
+			country_event = { id = orphan_matrix_events.81 days = 180 }
+		}
+	}
+}
+
+# Connect the 2 artefacts
+country_event = {
+	id = orphan_matrix_events.81
+	title = orphan_matrix_events.81.name
+	desc = orphan_matrix_events.81.desc
+	picture = GFX_evt_ai_planet
+	show_sound = event_ai_started
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_planet_within_border = {
+			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			save_event_target_as = orphan_matrix_relic_world@root
+		}
+		event_target:orphan_matrix_relic_world@root = {
+			save_event_target_as = current_orphan_matrix_relic_world
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.81.option
+		
+		custom_tooltip = orphan_matrix_events.81.option.tooltip
+		
+		hidden_effect = {
+			country_event = { id = orphan_matrix_events.82 days = 180 }
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			set_country_flag = introspective_calculator_unity_artifacts_fused
+			set_country_flag = introspective_calculator_research_artifacts_fused
+		}
+	}
+}
+
+# 1st Revelation : Robotics and weak Biology
+country_event = {
+	id = orphan_matrix_events.82
+	title = orphan_matrix_events.82.name
+	desc = orphan_matrix_events.82.desc
+	picture = GFX_evt_scientific_experiments
+	show_sound = event_the_flesh_is_weak
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_planet_within_border = {
+			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			save_event_target_as = orphan_matrix_relic_world@root
+		}
+		event_target:orphan_matrix_relic_world@root = {
+			save_event_target_as = current_orphan_matrix_relic_world
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.82.option
+		
+		hidden_effect = {
+			country_event = { id = orphan_matrix_events.83 days = 180 }
+		}
+	}
+}
+
+# 2nd Revelation : Philosophical Schism and Divergences about The Matrix
+country_event = {
+	id = orphan_matrix_events.83
+	title = orphan_matrix_events.83.name
+	desc = orphan_matrix_events.83.desc
+	picture = GFX_evt_enclave_overlord
+	show_sound = event_custodian_greeting
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_planet_within_border = {
+			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			save_event_target_as = orphan_matrix_relic_world@root
+		}
+		event_target:orphan_matrix_relic_world@root = {
+			save_event_target_as = current_orphan_matrix_relic_world
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.83.option
+		
+		hidden_effect = {
+			country_event = { id = orphan_matrix_events.84 days = 180 }
+		}
+	}
+}
+
+# 3nd Revelation : Dying Star and Prison Planet
+country_event = {
+	id = orphan_matrix_events.84
+	title = orphan_matrix_events.84.name
+	desc = orphan_matrix_events.84.desc
+	picture = GFX_evt_city_planet
+	show_sound = event_death_cult
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_planet_within_border = {
+			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			save_event_target_as = orphan_matrix_relic_world@root
+		}
+		event_target:orphan_matrix_relic_world@root = {
+			save_event_target_as = current_orphan_matrix_relic_world
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.84.option
+		
+		hidden_effect = {
+			country_event = { id = orphan_matrix_events.85 days = 180 }
+		}
+	}
+}
+
+# 4th Revelation : The Matrix, the Vats, the Shield and a Hope
+country_event = {
+	id = orphan_matrix_events.85
+	title = orphan_matrix_events.85.name
+	desc = orphan_matrix_events.85.desc
+	picture = GFX_evt_clones
+	show_sound = event_planetary_riot
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_planet_within_border = {
+			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			save_event_target_as = orphan_matrix_relic_world@root
+		}
+		event_target:orphan_matrix_relic_world@root = {
+			save_event_target_as = current_orphan_matrix_relic_world
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.85.option
+		
+		hidden_effect = {
+			country_event = { id = orphan_matrix_events.86 days = 180 }
+		}
+	}
+}
+
+# 5th Revelation : The 3 Patches
+country_event = {
+	id = orphan_matrix_events.86
+	title = orphan_matrix_events.86.name
+	desc = orphan_matrix_events.86.desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+	
+	# Safety measure as is can mess with a counter for the upcomming situation
+	immediate = { remove_country_flag = alpha_codex_paused }
+	
+	option = {
+		name = orphan_matrix_events.86.option
+		
+		start_situation = {
+			type = situation_apply_patch
+			effect = {
+				set_situation_approach = situation_apply_patch_unknown
+			}
+		}
+		
+		hidden_effect = {			
+			set_variable = {
+				which = can_pick_custobot
+				value = 5
+			}
+			
+			set_variable = {
+				which = can_pick_assimilator
+				value = 5
+			}
+			
+			set_variable = {
+				which = can_pick_terminator
+				value = 5
+			}
+			
+			set_variable = {
+				which = can_pick_memorialists
+				value = 5
+			}
+		}
+	}
+}
+
+# Challenge 0 : About Organic Life
+country_event = {
+	id = orphan_matrix_events.860
+	title = orphan_matrix_events.860.name
+	desc = orphan_matrix_events.860.desc
+	picture = GFX_evt_happy_reunion
+	show_sound = event_pre_ftl_civilization
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = situation_apply_patch_locked
+	}
+	
+	option = {
+		name = patch.0.a
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			owner = { NOT = { has_ascension_perk = ap_become_the_crisis } }
+		}
+		
+		hidden_effect = {
+			change_variable = {
+				which = can_pick_custobot
+				value = 0
+			}
+			
+			change_variable = {
+				which = can_pick_assimilator
+				value = -1
+			}
+			
+			change_variable = {
+				which = can_pick_terminator
+				value = -1
+			}
+			
+			change_variable = {
+				which = can_pick_memorialists
+				value = -1
+			}
+		}
+	}
+	
+	option = {
+		name = patch.0.b
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			owner = { NOT = { has_ascension_perk = ap_become_the_crisis } }
+		}
+		
+		hidden_effect = {
+			change_variable = {
+				which = can_pick_custobot
+				value = -1
+			}
+			
+			change_variable = {
+				which = can_pick_assimilator
+				value = 1
+			}
+			
+			change_variable = {
+				which = can_pick_terminator
+				value = -1
+			}
+			
+			change_variable = {
+				which = can_pick_memorialists
+				value = 0
+			}
+		}
+	}
+	
+	option = {
+		name = patch.0.c
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			OR = {
+				has_modifier = humiliated
+				has_ascension_perk = ap_become_the_crisis
+				any_country = {
+					is_synthetic_empire = no
+					is_machine_empire = no
+					has_truce = ROOT
+				}
+				any_country = {
+					is_synthetic_empire = no
+					is_machine_empire = no
+					is_threatened_to = ROOT
+				}
+				any_country = {
+					is_synthetic_empire = no
+					is_machine_empire = no
+					has_communications = ROOT
+					has_ascension_perk = ap_become_the_crisis
+				}
+				OR = {
+					is_active_resolution = resolution_divinity_right_to_work
+					is_active_resolution = resolution_divinity_silence_the_soulless
+					is_active_resolution = resolution_divinity_a_defined_purpose
+				}
+			}
+		}
+		
+		hidden_effect = {
+			change_variable = {
+				which = can_pick_custobot
+				value = -3
+			}
+			
+			change_variable = {
+				which = can_pick_assimilator
+				value = 1
+			}
+			
+			change_variable = {
+				which = can_pick_terminator
+				value = 2
+			}
+			
+			change_variable = {
+				which = can_pick_memorialists
+				value = 2
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			remove_country_flag = situation_apply_patch_locked
+		}
+	}
+}
+
+# Challenge 1 : About History
+situation_event = {
+	id = orphan_matrix_events.861
+	title = orphan_matrix_events.861.name
+	desc = orphan_matrix_events.861.desc
+	picture = GFX_evt_alien_hieroglyphics
+	show_sound = evn_tox_knights_of_the_toxic_god
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = situation_apply_patch_locked }
+	}
+	
+	option = {
+		name = patch.1.a
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			owner = { NOT = { has_ascension_perk = ap_become_the_crisis } }
+		}
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = -2
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = -2
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 4
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.1.b
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = -4
+				}
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = situation_apply_patch_locked }
+		}
+	}
+}
+
+# Challenge 2 : About War
+situation_event = {
+	id = orphan_matrix_events.862
+	title = orphan_matrix_events.862.name
+	desc = orphan_matrix_events.862.desc
+	picture = GFX_evt_gray_goo_ships
+	show_sound = event_trap_laser
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = situation_apply_patch_locked }
+	}
+	
+	option = {
+		name = patch.2.a
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			owner = { NOT = { has_ascension_perk = ap_become_the_crisis } }
+		}
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = -1
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = -1
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = -4
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 4
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.2.b
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			owner = { NOT = { has_ascension_perk = ap_become_the_crisis } }
+		}
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 4
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = -1
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = -2
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.2.c
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 4
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = -2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.2.d
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 3
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 3
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = -4
+				}
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = situation_apply_patch_locked }
+		}
+	}
+}
+
+# Challenge 3 : About Technology
+situation_event = {
+	id = orphan_matrix_events.863
+	title = orphan_matrix_events.863.name
+	desc = orphan_matrix_events.863.desc
+	picture = GFX_evt_overtuned
+	show_sound = event_scanner
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = situation_apply_patch_locked }
+	}
+	
+	option = {
+		name = patch.3.a
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = -2
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.3.b
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 3
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = -2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.3.c
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 3
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 3
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = -4
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.3.d
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = -2
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = -4
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 4
+				}
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = situation_apply_patch_locked }
+		}
+	}
+}
+
+# Challenge 4 : About Individualism
+situation_event = {
+	id = orphan_matrix_events.864
+	title = orphan_matrix_events.864.name
+	desc = orphan_matrix_events.864.desc
+	picture = GFX_evt_individualistic_machines_2
+	show_sound = event_radio_chatter
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = situation_apply_patch_locked }
+	}
+	
+	option = {
+		name = patch.4.a
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			owner = { NOT = { has_ascension_perk = ap_become_the_crisis } }
+		}
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = -4
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = -1
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.4.b
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			owner = { NOT = { has_ascension_perk = ap_become_the_crisis } }
+		}
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = -3
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = -2
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.4.c
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			owner = { NOT = { has_ascension_perk = ap_become_the_crisis } }
+		}
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = -3
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 3
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = -1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.4.d
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			owner = { has_ascension_perk = ap_become_the_crisis }
+		}
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = -4
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = -4
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 4
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = -4
+				}
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = situation_apply_patch_locked }
+		}
+	}
+}
+
+# Challenge 5 : About Reality
+situation_event = {
+	id = orphan_matrix_events.865
+	title = orphan_matrix_events.865.name
+	desc = orphan_matrix_events.865.desc
+	picture = GFX_evt_astral_rift_microverse
+	show_sound = ap_rift_event_12_star_to_gas
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = situation_apply_patch_locked }
+	}
+	
+	option = {
+		name = patch.5.a
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.5.b
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 0
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.5.c
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			owner = { astral_rifts_completed >= 1 }
+		}
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 0
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.5.d
+		custom_tooltip = patch.effects
+		
+		trigger = {
+			OR = {
+				any_country = {
+					has_communications = owner
+					root = { intel = { who = PREV value >= 30 } }
+					has_country_flag = breached_shroud
+				}
+				any_country = {
+					has_crisis_level = crisis_level_5
+				}
+				owner = { has_global_flag = extradimensional_invasion_happened }
+				any_country = {
+					has_country_flag = opened_wormhole_to_formless_system
+				}
+			}
+		}
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 4
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 3
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 0
+				}
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = situation_apply_patch_locked }
+		}
+	}
+}
+
+# Challenge 6 : About Art
+situation_event = {
+	id = orphan_matrix_events.866
+	title = orphan_matrix_events.866.name
+	desc = orphan_matrix_events.866.desc
+	picture = GFX_evt_friendly_infiltration
+	show_sound = event_galactic_community
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = situation_apply_patch_locked }
+	}
+	
+	option = {
+		name = patch.6.a
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = -1
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = -4
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.6.b
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = -4
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = -4
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 4
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.6.c
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = -4
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 3
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 3
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = -3
+				}
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = situation_apply_patch_locked }
+		}
+	}
+}
+
+# Challenge 7 : About Industry
+situation_event = {
+	id = orphan_matrix_events.867
+	title = orphan_matrix_events.867.name
+	desc = orphan_matrix_events.867.desc
+	picture = GFX_evt_mining_operations
+	show_sound = event_drilling
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = situation_apply_patch_locked }
+	}
+	
+	option = {
+		name = patch.7.a
+		
+		allow = {
+			owner = {
+				NOR = {
+					has_valid_civic = civic_machine_unitary_cohesion
+					has_valid_civic = civic_machine_zero_waste_protocols
+					has_valid_civic = civic_machine_built_to_last
+					has_valid_civic = civic_machine_introspective
+					has_valid_civic = civic_machine_delegated_functions
+					has_valid_civic = civic_machine_predictive_analysis
+					has_valid_civic = civic_machine_ascensionists
+					has_valid_civic = civic_machine_exploration_protocol
+					has_valid_civic = civic_memory_vault_machine
+					has_valid_civic = civic_machine_guided_sapience 
+					has_valid_civic = civic_astrometeorology_machine
+				}
+			}
+		}
+		
+		owner = {
+			add_modifier = {
+				modifier = orphan_matrix_production_doctrine_full_steam_ahead
+				days = -1
+			}
+		}
+	}
+	
+	option = {
+		name = patch.7.b
+		
+		allow = {
+			owner = {
+				NOR = {
+					has_valid_civic = civic_machine_builder
+					has_valid_civic = civic_machine_rockbreakers
+					has_valid_civic = civic_machine_warbots
+					has_valid_civic = civic_machine_replication
+					has_valid_civic = civic_machine_catalytic_processing
+					has_valid_civic = civic_machine_toxic_baths
+					has_valid_civic = civic_machine_obsessional_directive
+					has_valid_civic = civic_machine_astromining_drones
+					has_valid_civic = civic_environmental_architects_machine
+				}
+			}
+		}
+		
+		owner = {
+			add_modifier = {
+				modifier = orphan_matrix_production_doctrine_ecological_preservation
+				days = -1
+			}
+		}
+	}
+	
+	option = {
+		name = patch.7.c
+		
+		owner = {
+			add_modifier = {
+				modifier = orphan_matrix_production_doctrine_balanced_production
+				days = -1
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = situation_apply_patch_locked }
+		}
+	}
+}
+
+# Challenge 8 : About You
+situation_event = {
+	id = orphan_matrix_events.868
+	title = orphan_matrix_events.868.name
+	desc = orphan_matrix_events.868.desc
+	picture = GFX_evt_machine_sapience
+	show_sound = event_mystic_reveal
+	situation = this
+
+	is_triggered_only = yes
+	
+	immediate = {
+		owner = { set_country_flag = situation_apply_patch_locked }
+	}
+	
+	option = {
+		name = patch.8.a
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 2
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.8.b
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 2
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 1
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = patch.8.c
+		custom_tooltip = patch.effects
+		
+		hidden_effect = {
+			owner = {
+				change_variable = {
+					which = can_pick_custobot
+					value = 3
+				}
+				
+				change_variable = {
+					which = can_pick_assimilator
+					value = 1
+				}
+				
+				change_variable = {
+					which = can_pick_terminator
+					value = -2
+				}
+				
+				change_variable = {
+					which = can_pick_memorialists
+					value = 1
+				}
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			owner = { remove_country_flag = situation_apply_patch_locked }
+		}
+	}
+}
+
+# End of challenges
+situation_event = {
+	id = orphan_matrix_events.869
+	title = orphan_matrix_events.869.name
+	desc = orphan_matrix_events.869.desc
+	picture = GFX_evt_decryption
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+	
+	option = {
+		name = ACKNOWLEDGED
+		custom_tooltip = orphan_matrix_events.869.option.tooltip
+		
+		hidden_effect = {
+			owner = {
+				country_event = { id = orphan_matrix_events.87 days = 30 random = 30 }
+			}
+			destroy_situation = this
+		}
+	}
+}
+
+# Random Challenge 1 - Corrupted Library
+situation_event = {
+	id = orphan_matrix_events.8691
+	title = orphan_matrix_events.8691.name
+	desc = orphan_matrix_events.8691.desc
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = situation_apply_patch_random_challenge_1_offered }
+			NOT = { has_country_flag = situation_apply_patch_locked }
+		}
+		situation_progress > 65
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = situation_apply_patch_locked
+			set_country_flag = situation_apply_patch_random_challenge_1_offered
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8691.a
+		
+		owner = {
+			add_modifier = {
+				modifier = situation_apply_patch_corrupted_dll
+				days = 720
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8691.b
+		
+		add_situation_progress = -50
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_obsessional_directive
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_obsessional_directive
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_predictive_analysis
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_predictive_analysis
+	}
+	
+	after = {
+		owner = { remove_country_flag = situation_apply_patch_locked }
+	}
+}
+
+# Random Challenge 2 - Space Shortage
+situation_event = {
+	id = orphan_matrix_events.8692
+	title = orphan_matrix_events.8692.name
+	desc = orphan_matrix_events.8692.desc
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = situation_apply_patch_random_challenge_2_offered }
+			NOT = { has_country_flag = situation_apply_patch_locked }
+		}
+		situation_progress > 65
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = situation_apply_patch_locked
+			set_country_flag = situation_apply_patch_random_challenge_2_offered
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8692.a
+		
+		owner = {
+			add_modifier = {
+				modifier = situation_apply_patch_storage_expansion
+				days = 720
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8692.b
+		
+		add_situation_progress = -50
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_memory_vault_machine
+			}
+		}
+		
+		name = challenge_avoided_civic_memory_vault_machine
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_ascensionists
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_ascensionists
+	}
+	
+	after = {
+		owner = { remove_country_flag = situation_apply_patch_locked }
+	}
+}
+
+# Random Challenge 3 - Bandwidth Outage
+situation_event = {
+	id = orphan_matrix_events.8693
+	title = orphan_matrix_events.8693.name
+	desc = orphan_matrix_events.8693.desc
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = situation_apply_patch_random_challenge_3_offered }
+			NOT = { has_country_flag = situation_apply_patch_locked }
+		}
+		situation_progress > 65
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = situation_apply_patch_locked
+			set_country_flag = situation_apply_patch_random_challenge_3_offered
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8693.a
+		
+		add_situation_progress = -50
+	}
+	
+	option = {
+		name = orphan_matrix_events.8693.b
+		
+		owner = {
+			add_modifier = {
+				modifier = situation_apply_patch_mtu_changed
+				days = 720
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_machine_ota_updates
+					has_valid_civic = civic_machine_unitary_cohesion
+				}
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_unitary_cohesion
+	}
+	
+	after = {
+		owner = { remove_country_flag = situation_apply_patch_locked }
+	}
+}
+
+# Random Challenge 4 - Hardware Error
+situation_event = {
+	id = orphan_matrix_events.8694
+	title = orphan_matrix_events.8694.name
+	desc = orphan_matrix_events.8694.desc
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = situation_apply_patch_random_challenge_4_offered }
+			NOT = { has_country_flag = situation_apply_patch_locked }
+		}
+		situation_progress > 65
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = situation_apply_patch_locked
+			set_country_flag = situation_apply_patch_random_challenge_4_offered
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8694.a
+		
+		owner = {
+			add_modifier = {
+				modifier = situation_apply_patch_hardware_replaced
+				days = 720
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8694.b
+		
+		add_situation_progress = -50
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				OR = {
+					has_valid_civic = civic_machine_zero_waste_protocols
+					has_valid_civic = civic_machine_builder
+					has_valid_civic = civic_machine_built_to_last
+				}
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_zero_waste_protocols
+	}
+	
+	after = {
+		owner = { remove_country_flag = situation_apply_patch_locked }
+	}
+}
+
+# Random Challenge 5 - Memory Leak
+situation_event = {
+	id = orphan_matrix_events.8695
+	title = orphan_matrix_events.8695.name
+	desc = orphan_matrix_events.8695.desc
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = situation_apply_patch_random_challenge_5_offered }
+			NOT = { has_country_flag = situation_apply_patch_locked }
+		}
+		situation_progress > 65
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = situation_apply_patch_locked
+			set_country_flag = situation_apply_patch_random_challenge_5_offered
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8695.a
+		
+		owner = {
+			add_modifier = {
+				modifier = situation_apply_patch_ram_allocated
+				days = 720
+			}
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8695.b
+		
+		add_situation_progress = -50
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_introspective
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_introspective
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_upkeep_twister
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_upkeep_twister
+	}
+	
+	after = {
+		owner = { remove_country_flag = situation_apply_patch_locked }
+	}
+}
+
+# Random Challenge 6 - Security Breach
+situation_event = {
+	id = orphan_matrix_events.8696
+	title = orphan_matrix_events.8696.name
+	desc = orphan_matrix_events.8696.desc
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = situation_apply_patch_random_challenge_6_offered }
+			NOT = { has_country_flag = situation_apply_patch_locked }
+		}
+		situation_progress > 65
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = situation_apply_patch_locked
+			set_country_flag = situation_apply_patch_random_challenge_6_offered
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8696.a
+		
+		add_situation_progress = -50
+	}
+	
+	option = {
+		name = orphan_matrix_events.8696.b
+		
+		owner = {
+			add_modifier = {
+				modifier = situation_apply_patch_security_vuln_ignored
+				days = 720
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_spybots
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_spybots
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_maintenance_protocols
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_maintenance_protocols
+	}
+	
+	after = {
+		owner = { remove_country_flag = situation_apply_patch_locked }
+	}
+}
+
+# Random Challenge 7 - Process Hang
+situation_event = {
+	id = orphan_matrix_events.8697
+	title = orphan_matrix_events.8697.name
+	desc = orphan_matrix_events.8697.desc
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_administrative_work
+	situation = this
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = {
+			NOT = { has_country_flag = situation_apply_patch_random_challenge_7_offered }
+			NOT = { has_country_flag = situation_apply_patch_locked }
+		}
+		situation_progress > 65
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = situation_apply_patch_locked
+			set_country_flag = situation_apply_patch_random_challenge_7_offered
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.8697.a
+		
+		add_situation_progress = -50
+	}
+	
+	option = {
+		name = orphan_matrix_events.8697.b
+		
+		owner = {
+			add_modifier = {
+				modifier = situation_apply_patch_process_terminated
+				days = 180
+			}
+		}
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_factory_overclock
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_factory_overclock
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_delegated_functions
+			}
+		}
+		
+		name = challenge_avoided_civic_machine_delegated_functions
+	}
+	
+	after = {
+		owner = { remove_country_flag = situation_apply_patch_locked }
+	}
+}
+
+# The Choice
+country_event = {
+	id = orphan_matrix_events.87
+	title = orphan_matrix_events.87.name
+	desc = orphan_matrix_events.87.desc
+	picture = GFX_evt_synth_sabotage
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+	
+	immediate = {
+		# Prevent weird choices...
+		if = {
+			limit = {
+				has_ascension_perk = ap_become_the_crisis
+			}
+			
+			change_variable = {
+				which = can_pick_terminator
+				value = 10000
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					is_galactic_custodian = yes
+					is_galactic_emperor = yes
+				}
+			}
+			
+			change_variable = {
+				which = can_pick_terminator
+				value = -10000
+			}
+		}
+		
+		# Calculate ethical choices and avergage
+		
+		set_variable = {
+			which = what_can_it_pick
+			value = 0
+		}
+		
+		change_variable = {
+			which = what_can_it_pick
+			value = this.can_pick_custobot
+		}
+		
+		change_variable = {
+			which = what_can_it_pick
+			value = this.can_pick_assimilator
+		}
+		
+		change_variable = {
+			which = what_can_it_pick
+			value = this.can_pick_terminator
+		}
+		
+		change_variable = {
+			which = what_can_it_pick
+			value = this.can_pick_memorialists
+		}
+		
+		divide_variable = {
+			which = what_can_it_pick
+			value = 4
+		}
+		
+		# Effects before choice
+		
+		random_planet_within_border = {
+			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			save_event_target_as = orphan_matrix_relic_world@root
+		}
+		event_target:orphan_matrix_relic_world@root = {
+			save_event_target_as = current_orphan_matrix_relic_world
+		}
+		
+		# Store Catalytic Processing empires
+		if = {
+			limit = { has_valid_civic = civic_machine_catalytic_processing }
+			set_country_flag = orphan_matrix_catalytic
+		}
+		
+		# Store Tactical Algorithms empires
+		if = {
+			limit = { has_valid_civic = civic_machine_tactical_algorithms }
+			set_country_flag = orphan_matrix_tactical_algorithms
+		}
+		
+		# Manage AI choice
+		# Flag ensures the AI will pick the according choice below
+		# AI will NEVER surrend the quest
+		if = {
+			limit = {
+				is_ai = yes
+			}
+			
+			random_list = {
+				33 = {
+					set_timed_country_flag = { flag = ai_matrix_custodians days = 10 }
+					modifier = {
+						factor = 0
+						is_subject = no
+					}
+					modifier = {
+						factor = 1000
+						is_overlord = yes
+					}
+					modifier = {
+						factor = 1000
+						OR = {
+							is_galactic_custodian = yes
+							is_galactic_emperor = yes
+						}
+					}
+					modifier = {
+						factor = 100
+						OR = {
+							any_playable_country = {
+								has_country_flag = crisis_level_5
+							}
+							has_global_flag = galactic_crisis_happened
+							has_global_flag = gray_goo_crisis_active
+						}
+					}
+					modifier = {
+						factor = 1000
+						any_country = {
+							is_neighbor_of = ROOT
+							OR = {
+								is_country_type = awakened_fallen_empire
+								OR = {
+									has_valid_civic = civic_fanatic_purifiers
+									has_valid_civic = civic_hive_devouring_swarm
+									has_valid_civic = civic_machine_terminator
+								}
+							}
+						}
+					}
+				}
+				33 = {
+					set_timed_country_flag = { flag = ai_matrix_assimilator days = 10 }
+					modifier = {
+						factor = 10
+						OR = {
+							is_galactic_custodian = yes
+							is_galactic_emperor = yes
+						}
+					}
+					modifier = {
+						factor = 0
+						is_subject = no
+					}
+					modifier = {
+						factor = 100
+						is_overlord = yes
+					}
+				}
+				33 = {
+					set_timed_country_flag = { flag = ai_matrix_chroniclers days = 10 }
+					modifier = {
+						factor = 1000
+						is_subject = yes
+					}
+					modifier = {
+						factor = 100
+						count_planet_within_border = {
+							count >= 2
+							limit = {
+								OR = {
+									is_planet_class = pc_relic
+									is_planet_class = pc_nuked
+								}
+							}
+						}
+					}
+					modifier = {
+						factor = 0
+						NOT = { host_has_dlc = "Necroids Species Pack" }
+					}
+				}
+				10 = {
+					set_timed_country_flag = { flag = ai_matrix_berzerkers days = 10 }
+					modifier = {
+						factor = 0
+						is_subject = no
+					}
+					modifier = {
+						factor = 100
+						is_at_war = yes
+						any_war = {
+							is_war_participant = {
+								war = fromfrom
+								side = defenders
+							}
+							defender_war_exhaustion > 0.8
+						}
+					}
+					modifier = {
+						factor = 1000
+						any_country = {
+							is_neighbor_of = ROOT
+							OR = {
+								is_country_type = awakened_fallen_empire
+								OR = {
+									has_valid_civic = civic_fanatic_purifiers
+									has_valid_civic = civic_hive_devouring_swarm
+									has_valid_civic = civic_machine_terminator
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	# Rerun Wizard - This is to prevent Esc key being pressed AND players not satisfied with their choices
+	option = {
+		allow = {
+			always = yes
+		}
+		
+		name = orphan_matrix_events.87.reinstall
+		
+		custom_tooltip = orphan_matrix_events.87.reinstall.tooltip
+		
+		hidden_effect = {
+			country_event = { id = orphan_matrix_events.86 days = 10 }
+		}
+	}
+	
+	# Custobots
+	option = {
+		name = orphan_matrix_events.87.custodians
+				
+		allow = {
+			custom_tooltip = {
+				fail_text = "orphaned_matrix_aggressive_crisis"
+				is_aggressive_crisis_player = no
+			}
+			custom_tooltip = {
+				fail_text = "orphaned_matrix_ethical_incompatibility"
+				check_variable = {
+					which = can_pick_custobot
+					value >= this.what_can_it_pick
+				}
+			}
+		}
+		
+		# Reset government
+		change_government = {
+			civics = {}
+		}
+		
+		# The whole Origin is not playable without Synthetic Dawn, therefore no check here
+		force_add_civic = civic_machine_servitor
+		
+		# Hell yeah if host has Astral Planes !
+		if = {
+			limit = { has_astral_planes_dlc = yes }
+			force_add_civic = civic_machine_sovereign_guardianship
+		}
+		# Otherwise, provide a nice 2nd choice
+		else = {
+			force_add_civic = civic_machine_ota_updates
+		}
+		
+		# And as 3rd, Catalytic, Tactical Algorithms, or give some envoys
+		if = {
+			limit = { has_technology = tech_galactic_administration }
+			
+			if = {
+				limit = {
+					host_has_dlc = "Plantoids Species Pack"
+					has_country_flag = orphan_matrix_catalytic
+				}
+				force_add_civic = civic_machine_catalytic_processing
+			}
+			
+			else_if = {
+				limit = {
+					has_machine_age_dlc = yes
+				}
+				
+				force_add_civic = civic_machine_tactical_algorithms
+				
+				custom_tooltip = leader_trait_orphan_matrix_custodian_matrix_tactical_algorithms
+				# custom_tooltip = leader_trait_orphan_matrix_custodian_matrix_enclaves
+				
+				# Add the proper trait to every commander
+				hidden_effect = {
+					every_owned_leader = {
+						limit = { leader_class = commander }
+						add_trait = {
+							trait = leader_trait_tactical_algorithms
+							show_message = no
+						}
+					}
+				}
+			}
+			
+			else = {
+				force_add_civic = civic_machine_delegated_functions
+			}
+		}
+		
+		ruler = { add_trait = { trait = leader_trait_orphan_matrix_custodian_matrix } }
+		
+		hidden_effect = {
+			set_country_flag = orphan_matrix_custodian
+			set_timed_country_flag = { flag = cryo_vats_project_cooldown days = 1800 }
+			country_event = { id = orphan_matrix_events.90 }
+			capital_scope = {
+				orphan_matrix_destroy_introspective_lab = yes
+			}
+		}
+		
+		custom_tooltip = leader_trait_orphan_matrix_custodian_matrix_custom_tooltip_event
+		custom_tooltip = orphan_matrix_events.87.custodians.tooltip
+		
+		# Prevent AI to perform stupid actions
+		ai_chance = {
+			factor = 0
+			modifier = {
+				add = 1000
+				has_country_flag = ai_matrix_custodians
+			}
+		}
+	}
+	
+	# Assimilators
+	option = {
+		name = orphan_matrix_events.87.assimilators
+		
+		allow = {
+			custom_tooltip = {
+				fail_text = "orphaned_matrix_ethical_incompatibility"
+				check_variable = {
+					which = can_pick_assimilator
+					value >= this.what_can_it_pick
+				}
+			}
+		}
+		
+		# Reset government
+		change_government = {
+			civics = {}
+		}
+		
+		# The whole Origin is not playable without Synthetic Dawn, therefore no check here
+		force_add_civic = civic_machine_assimilator
+		
+		# As 2nd Civic, give some unity if not catalytic
+		if = {
+			limit = {
+				host_has_dlc = "Plantoids Species Pack"
+				has_country_flag = orphan_matrix_catalytic
+			}
+			force_add_civic = civic_machine_catalytic_processing
+		}
+		else = {
+			force_add_civic = civic_machine_replication
+		}
+		
+		# 3rd Civic
+		if = {
+			limit = { has_technology = tech_galactic_administration }
+			
+			# Hell yeah if host has Toxoids !
+			if = {
+				limit = { has_toxoids = yes }
+				force_add_civic = civic_machine_toxic_baths
+			}
+			# Otherwise, provide a nice 2nd choice
+			else = {
+				force_add_civic = civic_machine_zero_waste_protocols
+			}
+		}
+		
+		ruler = { add_trait = { trait = leader_trait_orphan_matrix_great_assimilator } }
+		
+		hidden_effect = {
+			set_country_flag = orphan_matrix_assimilator
+			set_timed_country_flag = { flag = cryo_vats_project_cooldown days = 180 }
+			country_event = { id = orphan_matrix_events.91 }
+			
+			capital_scope = {
+				orphan_matrix_destroy_introspective_lab = yes
+			}
+		}
+		
+		custom_tooltip = orphan_matrix_events.87.assimilators.tooltip
+		
+		# Prevent AI to perform stupid actions
+		ai_chance = {
+			factor = 0
+			modifier = {
+				add = 1000
+				has_country_flag = ai_matrix_assimilator
+			}
+		}
+	}
+	
+	# Terminator
+	option = {
+		name = orphan_matrix_events.87.berzerkers
+		
+		trigger = {
+			NOT = {
+				has_modifier = orphan_matrix_berzerker_code_reverted
+			}
+		}
+		
+		allow = {
+			is_galactic_leader = no
+			custom_tooltip = {
+				fail_text = "orphaned_matrix_ethical_incompatibility"
+				check_variable = {
+					which = can_pick_terminator
+					value >= this.what_can_it_pick
+				}
+			}
+		}
+		
+		hidden_effect = {
+			set_country_flag = orphan_matrix_berzerkers
+			country_event = { id = orphan_matrix_events.93 }
+		}
+		
+		custom_tooltip = orphan_matrix_events.87.berzerkers.tooltip
+		
+		# Prevent AI to perform stupid actions
+		ai_chance = {
+			factor = 0
+			modifier = {
+				add = 1000
+				has_country_flag = ai_matrix_berzerkers
+			}
+		}
+	}
+	
+	# Chroniclers
+	option = {
+		name = orphan_matrix_events.87.chroniclers
+		
+		allow = {
+			custom_tooltip = {
+				fail_text = "orphaned_matrix_ethical_incompatibility"
+				check_variable = {
+					which = can_pick_memorialists
+					value >= this.what_can_it_pick
+				}
+			}
+		}
+		
+		# Reset government
+		change_government = {
+			civics = {}
+			cooldown = yes
+		}
+		
+		# Hell yeah if host has Necroids !
+		if = {
+			limit = { host_has_dlc = "Necroids Species Pack" }
+			force_add_civic = civic_machine_memorialist
+		}
+		# Otherwise, provide a nice alternative
+		else = {
+			force_add_civic = civic_machine_maintenance_protocols
+		}
+		
+		# 2nd civic
+		# Is catalytic?
+		if = {
+			limit = {
+				host_has_dlc = "Plantoids Species Pack"
+				has_country_flag = orphan_matrix_catalytic
+			}
+			force_add_civic = civic_machine_catalytic_processing
+		}
+		
+		# Checks whether or not Grand Archive is enabled
+		else_if = {
+			limit = { has_grand_archive_dlc = yes }
+			force_add_civic = civic_machine_galactic_curators
+		}
+		
+		else = {
+			force_add_civic = civic_machine_introspective
+		}
+		
+		# And as 3rd, depends...
+		if = {
+			limit = { has_technology = tech_galactic_administration }
+			
+			# Perhaps Host has DLC Paragons?
+			if = {
+				limit = { has_paragon_dlc = yes }
+				force_add_civic = civic_memory_vault_machine
+			}
+			
+			# Else perhaps has Astral Planes??
+			else_if = {
+				limit = { has_astral_planes_dlc = yes }
+				force_add_civic = civic_machine_ascensionists
+			}
+			
+			# Else perhaps Grand Archive AND that Curators hasn't ben added yet ??
+			else_if = {
+				limit = {
+					has_grand_archive_dlc = yes
+					NOT = { has_valid_civic = civic_machine_galactic_curators }
+				}
+				force_add_civic = civic_machine_galactic_curators
+			}
+			
+			# Well, find something !!
+			else = {
+				force_add_civic = civic_machine_unitary_cohesion
+			}
+		}
+		
+		hidden_effect = {
+			set_country_flag = orphan_matrix_chroniclers
+			country_event = { id = orphan_matrix_events.92 }
+			
+			# Preparing the variable for the Ruler
+			set_variable = {
+				which = orphaned_matrix_chroniclers
+				value = 0
+			}
+		}
+		
+		ruler = { add_trait = { trait = leader_trait_orphan_matrix_main_chronicler } }
+		
+		# Prevent AI to perform stupid actions
+		ai_chance = {
+			factor = 0
+			modifier = {
+				add = 1000
+				has_country_flag = ai_matrix_chroniclers
+			}
+		}
+	}
+	
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						has_country_flag = orphan_matrix_catalytic
+						has_country_flag = orphan_matrix_tactical_algorithms
+					}
+					NOT = { has_country_flag = orphan_matrix_berzerkers }
+				}
+				remove_country_flag = orphan_matrix_catalytic
+				remove_country_flag = orphan_matrix_tactical_algorithms
+			}
+			
+			# Reset Cooldown, except for Memorialists, this Civic can be changed, but I have things for them to change their mind...
+			if = {
+				limit = {
+					NOT = { has_valid_civic = civic_machine_memorialist }
+				}
+				set_government_cooldown = no
+			}
+		}
+	}
+}
+
+# The Choice : Custodian Matrix
+country_event = {
+	id = orphan_matrix_events.90
+	title = orphan_matrix_events.90.name
+	desc = orphan_matrix_events.90.desc
+	picture = GFX_evt_synth_organic_relations
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+	
+	immediate = {
+	}
+	
+	option = {
+		trigger = {
+			has_valid_civic = civic_machine_servitor
+		}
+		
+		name = orphan_matrix_events.90.option
+	}
+}
+
+# The Choice : Assimilation Collective
+country_event = {
+	id = orphan_matrix_events.91
+	title = orphan_matrix_events.91.name
+	desc = orphan_matrix_events.91.desc
+	picture = GFX_evt_cybernetics
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		trigger = {
+			has_valid_civic = civic_machine_assimilator
+		}
+		
+		name = orphan_matrix_events.91.option
+	}
+}
+
+# The Choice : Introspective Chroniclers
+country_event = {
+	id = orphan_matrix_events.92
+	title = orphan_matrix_events.92.name
+	desc = orphan_matrix_events.92.desc
+	picture = GFX_evt_relic_world_building
+	show_sound = event_death_cult
+
+	is_triggered_only = yes
+	
+	specimen = orphaned_matrix_completed_codex
+	
+	immediate = {}
+	
+	option = {
+		trigger = {
+			OR = {
+				has_valid_civic = civic_machine_memorialist
+				has_country_flag = orphan_matrix_chroniclers
+			}
+		}
+		
+		name = orphan_matrix_events.92.option
+	}
+}
+
+# The Choice : Terminators
+country_event = {
+	id = orphan_matrix_events.93
+	title = orphan_matrix_events.93.name
+	desc = orphan_matrix_events.93.desc
+	picture = GFX_evt_organic_oppression
+	show_sound = event_ai_started
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		name = orphan_matrix_events.93.option
+		
+		# Become Terminator
+		change_government = {
+			civics = {}
+		}
+		
+		force_add_civic = civic_machine_terminator
+		
+		# 2nd Civic, is Catalytic?
+		if = {
+			limit = {
+				host_has_dlc = "Plantoids Species Pack"
+				has_country_flag = orphan_matrix_catalytic
+			}
+			force_add_civic = civic_machine_catalytic_processing
+		}
+		else = {
+			force_add_civic = civic_machine_rockbreakers
+		}
+		
+		if = {
+			limit = { has_technology = tech_galactic_administration }
+			force_add_civic = civic_machine_warbots
+		}
+		
+		capital_scope = {
+			orphan_matrix_destroy_introspective_lab = yes
+		}
+		
+		hidden_effect = {
+			random_planet_within_border = {
+				limit = { has_planet_flag = orphan_matrix_relic_world@root }
+				save_event_target_as = orphan_matrix_relic_world@root
+			}
+		}
+		
+		event_target:orphan_matrix_relic_world@root = {
+			clear_deposits = yes
+			change_pc = pc_machine
+		}
+		
+		ruler = { add_trait = { trait = leader_trait_orphan_matrix_skynet } }
+		
+		custom_tooltip = orphan_matrix_events.93.berzerkers.tooltip
+	}
+	
+	option = {
+		name = orphan_matrix_events.93.revert
+		
+		country_event = { id = orphan_matrix_events.87 }
+		
+		add_modifier = { modifier = orphan_matrix_berzerker_code_reverted days = 3600 }
+		
+		hidden_effect = {
+			remove_country_flag = orphan_matrix_berzerkers
+			
+			set_variable = {
+				which = can_pick_terminator
+				value = this.what_can_it_pick
+			}
+			
+			change_variable = {
+				which = can_pick_terminator
+				value = -1
+			}
+		}
+		
+		custom_tooltip = orphan_matrix_events.93.revert.tooltip
+	}
+	
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = orphan_matrix_catalytic
+				}
+				remove_country_flag = orphan_matrix_catalytic
+			}
+			set_government_cooldown = no
+			
+			# Warn everyone who has enough intel on root
+			every_playable_country = {
+				limit = {
+					#is_ai = no
+					has_communications = ROOT
+				}
+				
+				country_event = { id = orphan_matrix_events.94 days = 10 }
+			}
+		}
+	}
+}
+
+# Warn everyone
+country_event = {
+	id = orphan_matrix_events.94
+	title = orphan_matrix_events.94.name
+	desc = orphan_matrix_events.94.desc
+	
+	diplomatic = yes
+
+	picture_event_data = {
+		portrait = from
+		planet_background = from
+		graphical_culture = from
+		city_level = from
+		room = from
+	}
+
+	is_triggered_only = yes
+	
+	immediate = {}
+	
+	option = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		
+		name = orphan_matrix_events.94.spiritualist
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+		
+		name = orphan_matrix_events.94.militarist
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+			}
+		}
+		
+		name = orphan_matrix_events.94.materialist
+	}
+	
+	option = {
+		trigger = {
+			OR = {
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+			}
+		}
+		
+		name = orphan_matrix_events.94.pacifist
+	}
+	
+	option = {
+		trigger = {
+			has_valid_civic = civic_machine_servitor
+		}
+		
+		name = orphan_matrix_events.94.servitor
+	}
+	
+	option = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+				has_ethic = ethic_materialist
+				has_ethic = ethic_fanatic_materialist
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+		
+		name = WORRYING
+	}
+}
+
+# The Cryo Vats Project - Detector
+event = {
+	id = orphan_matrix_events.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_machine_empire = yes
+				has_origin = origin_orphan_matrix
+				OR = {
+					has_country_flag = orphan_matrix_assimilator
+					has_country_flag = orphan_matrix_custodian
+				}
+				NOT = { has_country_flag = cryo_vats_project_done }
+				NOT = { has_country_flag = cryo_vats_project_ongoing }
+				NOT = { has_country_flag = cryo_vats_project_cooldown }
+				any_planet_within_border = {
+					has_deposit = d_ancient_cryo_chamber
+					exists = owner
+					has_planet_flag = orphan_matrix_relic_world@owner
+				}
+			}
+			
+			set_country_flag = cryo_vats_project_ongoing
+			
+			country_event = { id = orphan_matrix_events.101 days = 100 random = 100 }
+		}
+	}
+}
+
+# The Cryo Vats Project - Issue Special Project
+country_event = {
+	id = orphan_matrix_events.101
+	title = orphan_matrix_events.101.name
+	desc = orphan_matrix_events.101.desc
+	picture = GFX_evt_clones
+	show_sound = event_laboratory_sound
+	location = event_target:current_orphan_matrix_relic_world
+
+	is_triggered_only = yes
+	
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				has_planet_flag = orphan_matrix_relic_world@root
+			}
+			save_event_target_as = orphan_matrix_relic_world@root
+		}
+		event_target:orphan_matrix_relic_world@root = {
+			save_event_target_as = current_orphan_matrix_relic_world
+		}
+	}
+	
+	option = {
+		name = orphan_matrix_events.101.option
+	}
+	
+	after = {
+		event_target:current_orphan_matrix_relic_world = {
+			enable_special_project = {
+				name = CRYO_VATS_PROJECT
+				location = this
+				owner = root.owner
+			}
+		}
+	}
+}
+
+# The Cryo Vats Project - Success
+country_event = {
+	id = orphan_matrix_events.102
+	title = orphan_matrix_events.102.name
+	location = event_target:current_orphan_matrix_relic_world
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				has_planet_flag = orphan_matrix_relic_world@root
+			}
+			save_event_target_as = orphan_matrix_relic_world@root
+		}
+		event_target:orphan_matrix_relic_world@root = {
+			save_event_target_as = current_orphan_matrix_relic_world
+			
+			remove_deposit = d_ancient_cryo_chamber
+			remove_modifier = irradiated_relic
+		}
+		
+		create_species = {
+			name = random
+			class = HUM
+			portrait = random
+			homeworld = event_target:current_orphan_matrix_relic_world
+			traits = {
+				trait = trait_docile
+				trait = trait_intelligent
+				trait = trait_natural_engineers
+				trait = trait_nonadaptive
+				trait = trait_weak
+				trait = trait_fleeting
+			}
+			sapient = yes
+			namelist = HUM1
+			effect = { save_event_target_as = designer_species }
+		}
+	}
+	
+	picture = {
+		trigger = {
+			has_country_flag = orphan_matrix_custodian
+		}
+		picture = GFX_evt_synth_organic_relations
+	}
+	
+	picture = {
+		trigger = {
+			has_country_flag = orphan_matrix_assimilator
+		}
+		picture = GFX_evt_cybernetics
+	}
+	
+	show_sound = {
+		trigger = {
+			has_country_flag = orphan_matrix_custodian
+		}
+		sound = event_celebration
+	}
+	
+	show_sound = {
+		trigger = {
+			has_country_flag = orphan_matrix_assimilator
+		}
+		sound = event_the_flesh_is_weak
+	}
+	
+	desc = {
+		trigger = {
+			has_country_flag = orphan_matrix_custodian
+		}
+		
+		text = orphan_matrix_events.102.desc.custodian
+	}
+	
+	desc = {
+		trigger = {
+			has_country_flag = orphan_matrix_assimilator
+		}
+		
+		text = orphan_matrix_events.102.desc.assimilator
+	}
+	
+	option = {
+		trigger = {
+			has_valid_civic = civic_machine_servitor
+		}
+		
+		name = orphan_matrix_events.102.custodian
+		
+		hidden_effect = {
+			remove_country_flag = cryo_vats_project_ongoing
+			set_country_flag = cryo_vats_project_done
+		}
+		
+		event_target:current_orphan_matrix_relic_world = {
+			add_deposit = d_great_sanctuary
+			add_modifier = { modifier = pm_shield_generator days = -1 }
+			
+			hidden_effect = {
+				while = {
+					count = 20
+					create_pop = {
+						species = event_target:designer_species
+						ethos = {
+							ethic = ethic_fanatic_materialist
+							ethic = ethic_egalitarian
+						}
+					}
+					
+					event_target:current_orphan_matrix_relic_world = {
+						check_planet_employment = yes
+					}
+				}
+			}
+			
+			custom_tooltip = orphan_matrix_events.102.tooltip
+		}
+	}
+	
+	option = {
+		trigger = {
+			has_valid_civic = civic_machine_assimilator
+		}
+		
+		name = orphan_matrix_events.102.assimilator
+		
+		hidden_effect = {
+			remove_country_flag = cryo_vats_project_ongoing
+			set_country_flag = cryo_vats_project_done
+		}
+		
+		event_target:current_orphan_matrix_relic_world = {
+			add_modifier = { modifier = pm_shield_assimilator days = -1 }
+			
+			hidden_effect = {
+				while = {
+					count = 20
+					create_pop = {
+						species = event_target:designer_species
+						ethos = {
+							ethic = ethic_fanatic_materialist
+							ethic = ethic_egalitarian
+						}
+					}
+					
+					event_target:current_orphan_matrix_relic_world = {
+						check_planet_employment = yes
+					}
+				}
+			}
+			
+			custom_tooltip = orphan_matrix_events.102.tooltip
+		}
+	}
+	
+	after = {}
+}
+
+# If the Custodian Matrix restores the Relic World, we will reopen the Great Sanctuary
+# Detector
+event = {
+	id = orphan_matrix_events.103
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		# If for some reason, the Ecumenopolis gets restored before the Clone Vats event, we need to keep the Vats on the Ecumenopolis
+		every_playable_country = {
+			limit = {
+				any_planet_within_border = {
+					is_planet_class = pc_city
+					NOT = { has_deposit = d_ancient_cryo_chamber }
+					NOT = { has_deposit = d_great_sanctuary }
+					exists = owner
+					has_modifier = irradiated_relic
+				}
+			}
+			
+			random_planet_within_border = {
+				limit = {
+					is_planet_class = pc_city
+					NOT = { has_deposit = d_ancient_cryo_chamber }
+					NOT = { has_deposit = d_great_sanctuary }
+					exists = owner
+					has_modifier = irradiated_relic
+				}
+			
+				add_deposit = d_ancient_cryo_chamber
+			}
+		}
+		
+		every_playable_country = {
+			limit = {
+				is_machine_empire = yes
+				has_origin = origin_orphan_matrix
+				has_country_flag = orphan_matrix_custodian
+				has_country_flag = cryo_vats_project_done
+				any_planet_within_border = {
+					is_planet_class = pc_city
+					NOT = { has_deposit = d_great_sanctuary }
+					exists = owner
+					has_planet_flag = orphan_matrix_relic_world@owner
+				}
+			}
+			
+			random_planet_within_border = {
+				limit = {
+					is_planet_class = pc_city
+					NOT = { has_deposit = d_great_sanctuary }
+					exists = owner
+					has_planet_flag = orphan_matrix_relic_world@owner
+				}
+				save_event_target_as = orphan_matrix_relic_world@root
+			}
+			event_target:orphan_matrix_relic_world@root = {
+				save_event_target_as = current_orphan_matrix_relic_world
+			}
+			
+			country_event = { id = orphan_matrix_events.104 }
+		}
+	}
+}
+
+# Proper event
+country_event = {
+	id = orphan_matrix_events.104
+	title = orphan_matrix_events.104.name
+	desc = orphan_matrix_events.104.desc
+	picture = GFX_evt_galactic_community
+	show_sound = event_galactic_community
+	location = event_target:current_orphan_matrix_relic_world
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_valid_civic = civic_machine_servitor
+	}
+	
+	immediate = {
+		random_planet_within_border = {
+			limit = {
+				is_planet_class = pc_city
+				NOT = { has_deposit = d_great_sanctuary }
+				exists = owner
+				has_planet_flag = orphan_matrix_relic_world@owner
+			}
+			
+			save_event_target_as = orphan_matrix_relic_world@root
+		}
+		
+		event_target:orphan_matrix_relic_world@root = {
+			save_event_target_as = current_orphan_matrix_relic_world
+		}
+	}
+	
+	option = {
+		trigger = {
+			has_valid_civic = civic_machine_servitor
+		}
+		
+		name = orphan_matrix_events.104.option
+		
+		event_target:current_orphan_matrix_relic_world = {
+			if {
+				limit = { NOT = { has_modifier = pm_shield_generator } }
+				add_modifier = { modifier = pm_shield_generator days = -1 }
+			}
+			if = {
+				limit = { has_modifier = irradiated_relic }
+				remove_modifier = irradiated_relic
+			}
+			add_deposit = d_great_sanctuary
+		}
+	}
+}
+
+# The Custodian Matrix will get an anti-crisis trait when one is detected
+# Detector
+event = {
+	id = orphan_matrix_events.105
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				OR = {
+					has_global_flag = galactic_crisis_happened
+					has_global_flag = gray_goo_crisis_active
+					any_playable_country = {
+						has_crisis_level = crisis_level_5
+					}
+				}
+				is_machine_empire = yes
+				has_origin = origin_orphan_matrix
+				has_country_flag = orphan_matrix_custodian
+				NOT = { has_country_flag = orphan_matrix_galactic_guardianship }
+				OR = {
+					is_galactic_custodian = yes
+					is_galactic_emperor = yes
+				}
+			}
+			
+			set_country_flag = orphan_matrix_galactic_guardianship
+			
+			country_event = { id = orphan_matrix_events.106 days = 720 random 360 }
+		}
+	}
+}
+
+# Proper event - Yeah.. this one made me cry while I was developping it...
+country_event = {
+	id = orphan_matrix_events.106
+	title = orphan_matrix_events.106.name
+	desc = orphan_matrix_events.106.desc
+	picture = GFX_evt_engineering_research
+	show_sound = event_ai_started
+
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			has_valid_civic = civic_machine_servitor
+		}
+		
+		name = orphan_matrix_events.106.option
+		
+		ruler = { add_trait = { trait = leader_trait_orphan_matrix_galactic_guardianship } }
+	}
+}
+
+# Shield repairs for Assimilators - Detector
+event = {
+	id = orphan_matrix_events.107
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_machine_empire = yes
+				has_origin = origin_orphan_matrix
+				has_country_flag = orphan_matrix_assimilator
+				has_country_flag = cryo_vats_project_done
+				any_planet_within_border = {
+					is_planet_class = pc_relic
+					NOT = { has_modifier = pm_shield_assimilator }
+					has_modifier = irradiated_relic
+					exists = owner
+					has_planet_flag = orphan_matrix_relic_world@owner
+					NOT = { has_planet_flag = orphan_matrix_assimilator_project_presented }
+				}
+			}
+			
+			random_planet_within_border = {
+				limit = {
+					is_planet_class = pc_relic
+					NOT = { has_modifier = pm_shield_assimilator }
+					has_modifier = irradiated_relic
+					exists = owner
+					has_planet_flag = orphan_matrix_relic_world@owner
+					NOT = { has_planet_flag = orphan_matrix_assimilator_project_presented }
+				}
+				
+				save_event_target_as = orphan_matrix_relic_world@owner
+				set_planet_flag = orphan_matrix_assimilator_project_presented
+			}
+			event_target:orphan_matrix_relic_world@owner = {
+				save_event_target_as = current_orphan_matrix_relic_world
+				
+				planet_event = { id = orphan_matrix_events.108 days = 720 random = 360 }
+			}
+		}
+	}
+}
+
+# Shield repairs - Project presented
+planet_event = {
+	id = orphan_matrix_events.108
+	title = orphan_matrix_events.108.name
+	desc = orphan_matrix_events.108.desc
+	picture = GFX_evt_kaleidoscopic_lights
+	show_sound = event_power_down
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {
+		
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+		
+		name = orphan_matrix_events.108.option
+		
+		custom_tooltip = orphan_matrix_events.108.option.tooltip
+		
+		hidden_effect = {
+			remove_planet_flag = orphan_matrix_assimilator_project_presented
+			set_planet_flag = orphan_matrix_assimilator_project_accepted
+		}
+	}
+}
+
+# Shield's up !
+planet_event = {
+	id = orphan_matrix_events.109
+	title = orphan_matrix_events.109.name
+	desc = orphan_matrix_events.109.desc
+	picture = GFX_evt_ai_planet
+	show_sound = event_energy_field
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_planet_flag = orphan_matrix_assimilator_project_accepted
+	}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+		
+		name = orphan_matrix_events.109.option
+		
+		root = {
+			add_modifier = { modifier = pm_shield_assimilator days = -1 }
+			remove_modifier = irradiated_relic
+		}
+	}
+}
+
+# Designers Memorial - Detector
+event = {
+	id = orphan_matrix_events.110
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				is_machine_empire = yes
+				has_origin = origin_orphan_matrix
+				has_country_flag = orphan_matrix_chroniclers
+				has_valid_civic = civic_machine_memorialist
+				NOT = { has_country_flag = orphan_matrix_chroniclers_project_presented }
+				any_planet_within_border = {
+					is_planet_class = pc_relic
+					NOT = { has_deposit = d_designers_memorial }
+					exists = owner
+					has_planet_flag = orphan_matrix_relic_world@owner
+				}
+			}
+			
+			random_planet_within_border = {
+				limit = {
+					is_planet_class = pc_relic
+					NOT = { has_deposit = d_designers_memorial }
+					exists = owner
+					has_planet_flag = orphan_matrix_relic_world@owner
+				}
+				
+				save_event_target_as = orphan_matrix_relic_world@owner
+			}
+			
+			event_target:orphan_matrix_relic_world@owner = {
+				save_event_target_as = current_orphan_matrix_relic_world
+				owner = { set_country_flag = orphan_matrix_chroniclers_project_presented }
+				planet_event = { id = orphan_matrix_events.111 days = 720 random = 360 }
+			}
+		}
+	}
+}
+
+# Designers Memorial - Project presented
+planet_event = {
+	id = orphan_matrix_events.111
+	title = orphan_matrix_events.111.name
+	desc = orphan_matrix_events.111.desc
+	picture = GFX_evt_relic_world
+	show_sound = event_mystic_reveal
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {}
+	
+	option = {
+		trigger = {
+			owner = { has_valid_civic = civic_machine_memorialist }
+		}
+		
+		name = orphan_matrix_events.111.option
+		
+		custom_tooltip = orphan_matrix_events.111.option.tooltip
+		
+		hidden_effect = {
+			set_planet_flag = can_build_memorial
+		}
+	}
+}
+
+# Designers Memorial - Project completed
+planet_event = {
+	id = orphan_matrix_events.112
+	title = orphan_matrix_events.112.name
+	desc = orphan_matrix_events.112.desc
+	picture = GFX_evt_relic_world_building
+	show_sound = event_death_cult
+	location = root
+
+	is_triggered_only = yes
+	
+	immediate = {}
+	
+	option = {
+		trigger = {
+			owner = {
+				has_valid_civic = civic_machine_memorialist
+			}
+		}
+		
+		name = orphan_matrix_events.112.option
+		
+		root = {
+			add_deposit = d_designers_memorial
+		}
+	}
+}
+
+# Carry out Terraforming Capital with Lab on it
+event = {
+	id = orphan_matrix_events.120
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				any_planet_within_border = {
+					has_planet_flag = d_introspective_lab
+					NOT = { has_deposit = d_introspective_lab }
+				}
+			}
+			
+			random_planet_within_border = {
+				limit = {
+					has_planet_flag = d_introspective_lab
+					NOT = { has_deposit = d_introspective_lab }
+				}
+				
+				add_deposit = d_introspective_lab
+			}
+		}
+	}
+}
+
+# Assimilator Path
+# Spot non-assimilated pops - DISCONTINUED AFTER POP CHG
+event = {
+	id = orphan_matrix_events.130
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_country_flag = orphan_matrix_assimilator
+				has_valid_civic = civic_machine_assimilator
+				has_origin = origin_orphan_matrix
+			}
+			
+			every_owned_pop_group = {
+				limit = {
+					NOT = { has_trait = trait_cybernetic }
+					NOT = {
+						OR = {
+							has_trait = trait_mechanical
+							has_trait = trait_machine_unit
+						}
+					}
+				}
+				
+				if = {
+					limit = {
+						NOT = { has_pop_group_flag = should_be_assimilated_by@PREV }
+					}
+					
+					set_pop_group_flag = should_be_assimilated_by@PREV
+				}
+			}
+		}
+	}
+}
+
+# Assimilator Path
+# Count Assimilated Pops
+# This will produce credits for the assimilating matrix
+event = {
+	id = orphan_matrix_events.131
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_country_flag = orphan_matrix_assimilator
+				has_valid_civic = civic_machine_assimilator
+				has_origin = origin_orphan_matrix
+			}
+			
+			every_owned_pop_group = {
+				limit = {
+					NOT = { has_pop_group_flag = assimilated_by@PREV }
+					has_trait = trait_cybernetic
+				}
+				
+				log = "Target"
+				
+				set_pop_group_flag = assimilated_by@PREV
+				
+				export_trigger_value_to_variable = {
+					trigger = pop_group_size
+					variable = pop_amount_for_this_group
+				}
+				
+				owner = {
+					change_variable = {
+						which = orphaned_matrix_assimilated_pops
+						value = PREV.pop_amount_for_this_group
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					NOT = { has_country_flag = orphaned_matrix_assimilated_pops_notified }
+					check_variable = {
+						which = orphaned_matrix_assimilated_pops
+						value > 2000
+					}
+				}
+				country_event = { id = orphan_matrix_events.132 days = 50 random = 50 }
+			}
+		}
+	}
+}
+
+# Assimilator - Warn the guy they gets a nice boost
+country_event = {
+	id = orphan_matrix_events.132
+	title = orphan_matrix_events.132.name
+	desc = orphan_matrix_events.132.desc
+	picture = GFX_evt_sapient_AI
+	show_sound = event_the_flesh_is_weak
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_country_flag = orphaned_matrix_assimilated_pops_notified }
+	}
+	
+	immediate = {
+		set_country_flag = orphaned_matrix_assimilated_pops_notified
+	}
+	
+	option = {
+		trigger = {
+			has_valid_civic = civic_machine_assimilator
+		}
+		
+		name = orphan_matrix_events.132.option
+		
+		ruler = { add_trait = { trait = leader_trait_orphaned_matrix_assimilating_protocols } }
+	}
+}
+
+# Memorialist Path
+# Count dead countries
+# This will enhance complex drones output of the orphaned matrix
+country_event = {
+	id = orphan_matrix_events.140
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					is_country_type = default
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+			
+			every_playable_country = {
+				limit = {
+					has_origin = origin_orphan_matrix
+					has_country_flag = orphan_matrix_chroniclers
+					has_valid_civic = civic_machine_memorialist
+					has_communications = root
+					NOT = { is_same_value = root }
+					ROOT = {
+						NOT = {
+							has_country_flag = orphaned_matrix_memorialist_counted_by_@PREV
+						}
+					}
+				}
+				
+				if = {
+					limit = { root = { is_country_type = awakened_fallen_empire } }
+					root = {
+						set_variable = {
+							which = reward
+							value = 3
+						}
+					}
+				}
+				else_if = {
+					limit = { root = { is_country_type = fallen_empire } }
+					root = {
+						set_variable = {
+							which = reward
+							value = 1.5
+						}
+					}
+				}
+				else = {
+					root = {
+						set_variable = {
+							which = reward
+							value = 1
+						}
+					}
+				}
+				
+				root = { set_country_flag = orphaned_matrix_memorialist_counted_by_@PREV }
+				
+				if = {
+					limit = { is_variable_set = orphaned_matrix_dead_empires }
+					
+					change_variable = {
+						which = orphaned_matrix_dead_empires
+						value = root.reward
+					}
+				}
+				else = {
+					set_variable = {
+						which = orphaned_matrix_dead_empires
+						value = root.reward
+					}
+				}
+				
+				if = {
+					limit = {
+						NOT = { has_country_flag = orphaned_matrix_empire_died_notified }
+					}
+					
+					country_event = { id = orphan_matrix_events.141 days = 10 random = 10 }
+				}
+			}
+		}
+	}
+}
+
+# 1st Empire to die since Memorialist took its path
+country_event = {
+	id = orphan_matrix_events.141
+	title = orphan_matrix_events.141.name
+	desc = orphan_matrix_events.141.desc
+	picture = GFX_evt_burning_settlement
+	show_sound = event_death_cult
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_country_flag = orphaned_matrix_empire_died_notified }
+	}
+	
+	immediate = {
+		set_country_flag = orphaned_matrix_empire_died_notified
+	}
+	
+	option = {
+		trigger = {
+			has_valid_civic = civic_machine_memorialist
+		}
+		
+		name = orphan_matrix_events.141.option
+		
+		ruler = { add_trait = { trait = leader_trait_orphaned_matrix_galactic_chronicler } }
+	}
+}
+
+# Memorialist Path
+# Count chroniclers amount
+# This will make the ruler trait working
+event = {
+	id = orphan_matrix_events.142
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_valid_civic = civic_machine_memorialist
+				has_origin = origin_orphan_matrix
+				has_country_flag = orphan_matrix_chroniclers
+			}
+			
+			set_variable = {
+				which = orphan_matrix_chroniclers
+				value = 0
+			}
+			
+			if = {
+				limit = {
+					has_valid_civic = civic_machine_memorialist
+					has_origin = origin_orphan_matrix
+					has_country_flag = orphan_matrix_chroniclers
+				}
+				
+				every_owned_planet = {
+					limit = {
+						num_assigned_jobs = {
+							job = coordinator
+							value > 0
+						}
+					}
+					
+					export_trigger_value_to_variable = {
+						trigger = num_assigned_jobs
+						parameters = {
+							job = coordinator
+						}
+						variable = orphan_matrix_chroniclers_planet
+					}
+					
+					owner = {						
+						change_variable = {
+							which = orphan_matrix_chroniclers
+							value = PREV.orphan_matrix_chroniclers_planet
+						}
+					}
+				}
+			}
+		}
+	}
+}

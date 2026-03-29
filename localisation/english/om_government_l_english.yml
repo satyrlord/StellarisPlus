@@ -1,0 +1,6 @@
+﻿l_english:
+ 
+ origin_orphan_matrix:0 "Orphaned Matrix"
+ origin_orphan_matrix_desc:0 "This $machine_intelligence$ has been left to its fate by a mysterious and advanced precursor organic race.\nA recent archeological dig has unearthed past evidences of such a civilization, which has triggered a significant part of its calculation resources to be dedicated to solve this mystery."
+ origin_tooltips_orphan_matrix_effects:1 "- Homeworld: Starts with the ['concept_ancient_buried_vault'] ['concept_archaeology_site'] on the capital."
+ origin_tooltips_orphan_matrix_negative_effects: "- Precursor Event Chains blocked"

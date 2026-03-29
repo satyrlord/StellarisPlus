@@ -1,0 +1,13 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_origin_orphan_matrix"
+		textureFile = "gfx/event_pictures/origins/origin_orphan_matrix.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_introspective_zone"
+		textureFile = "gfx/interface/icons/jobs/job_introspective_calculator.dds"
+	}
+}

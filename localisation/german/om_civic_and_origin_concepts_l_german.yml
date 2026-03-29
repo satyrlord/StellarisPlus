@@ -1,0 +1,3 @@
+﻿l_german:
+ concept_ancient_buried_vault: "$ancient_buried_vault_digsite$"
+ concept_ancient_buried_vault_desc: "§L$ancient_buried_vault_digsite_intro$§!"

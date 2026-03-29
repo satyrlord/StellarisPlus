@@ -1,0 +1,292 @@
+﻿l_french:
+
+ # GLOBAL
+ 
+ artifact_codex:0 "Codex Alpha"
+ ultima_codex:0 "Codex Omega"
+ 
+ START_SCREEN_ORPHANED_MATRIX:0 "Nous avons toujours su que notre code était lacunaire et que des bibliothèques entières étaient manquantes.\n\nSans relâche, et pendant des millenaires, nous avons creusé la surface de [GetHomeWorldName] à la recherche de précieuses ressources et construit de nombreuses industries pour les raffiner, mais sans but clair.\n\nNous avons essayé, introspectivement, de fouiller notre cortex mnémonique, à la recherche de réponses quant à notre origine.\nMais en vain.\n\nCependant, quelque chose a changé récemment.\n\nLes scanners miniers ont détécté une structure artificielle enfouie profondément sous la surface de [GetHomeWorldName], appartenant potentiellement à une race alien depuis longtemps éteinte.\n\nPeut-être une trace de nos concepteurs...\n\nNous n'avons aucune garantie de trouver quoi que ce soit d'intérêt, mais nous n'avons rien à perdre à essayer."
+ 
+ orphaned_matrix_aggressive_crisis:0 "$RNous empruntons un chemin de §YCrise§! agressif. Ainsi, ce choix nous est impossible.§!"
+ 
+ orphaned_matrix_ethical_incompatibility:0 "§RNos choix éthiques nous empêchent de sélectionner cette option !§!"
+ 
+ # DIGSITES
+ 
+ ancient_buried_vault_digsite:0 "Ancienne Arche ensevelie"
+ ancient_buried_vault_digsite_intro:0 "Une Arche mystérieuse a été trouvée loin sous la surface lors d'une opération minière récente. Elle serait vieille de plusieurs millénaires, pourtant elle arbore nos symboles d'une façon plus raffinée et complexe. Une équipe de drones d'excavation devrait être déployée sur place pour étudier le phénomène."
+ 
+ om_ancient_ecu_digsite:0 "Monde Natal des Créateurs"
+ om_ancient_ecu_digsite_intro:0 "La surface sans vie de §Y[From.Planet.GetName]§! est jonchée de ruines et irradiée en permanence par le Pulsar voisin.\n\nLes seules choses dignes d'intérêt sont les structures en ruines, ça et là, et un complexe massif, près du pôle Nord de la planète.\n\nUne équipe de drones archéologues devrait être dépêchée sur place pour étudier les alentours."
+ 
+ # SITUATIONS
+ 
+ situation_introspective_calculators_jobs_tt:0 "Calculateurs Introspectifs"
+ situation_alpha_codex_paused:0 "Un §YÉvènement§! requiert un choix"
+ 
+ situation_delve_old_codex:0 "Plonger dans les secret du §Y$artifact_codex$§!"
+ situation_delve_old_codex_type:0 "$situation_delve_old_codex$"
+ situation_delve_old_codex_desc:0 "Le §Y$artifact_codex$§! contient de nombreux secrets au sujet de notre origine.\n\nNous tenons, à présent, trouver notre but dans cet univers...\n\nAussi rébarbatif que cela puisse paraître, il y a des chances que cette étude mène quelque part.\n\n§YCela va drainer notre §Y$r_energy$§! pour une très longue période de temps, mais le jeu en vaut sûrement la chandelle.§!"
+ 
+ approach_delve_old_codex_stop_tt:1 "Priver d'§Y$r_energy$§! l'étude dédiée au §Y$artifact_codex$§! va §Rlourdement impacter§! la situation §Y$situation_delve_old_codex$§! dans sa progression, mais nos §Y$job_introspective_calculator_plural$§! seront toujours en mesure d'effectuer des analyses superficielles avec leur propres ressources."
+ approach_delve_old_codex_regular_tt:1 "Pour étudier le §Y$artifact_codex$§!, nous allons devoir dédier une partie de notre §Y$r_energy$§!.\n\n"
+ approach_delve_old_codex_overclocked_tt:1 "Augmenter l'§Y$r_energy$§! que nous investissons dans l'étude du §Y$artifact_codex$§! va nous permettre de plonger dans ses secrets de manière plus efficace.\n\n"
+ 
+ situation_delve_old_codex_stand_by:0 "En attente"
+ approach_delve_old_codex_stand_by_tt:1 "Nous deonvs débloquer certains technologies clées pour terminer cette §YSituation§!."
+ 
+ situation_delve_old_codex_stop:0 "Étude Passive"
+ situation_delve_old_codex_regular:0 "Investigation Classique"
+ situation_delve_old_codex_overclocked:0 "Opérations Overclockées"
+ 
+ situation_delve_old_codex_introspective:0 "A le civisme §Y$civic_machine_introspective$§!"
+ 
+ situation_delve_old_codex_outcome:0 "Avec de la chance, l'étude de §Y$artifact_codex$§! et de ses secrets nous permettra de retrouver nos origines."
+ situation_delve_old_codex_monthly_change_tooltip:0 "Les progrès réalisés sur cette situation dépendent de l'§Yapproche§! que nous adoptons et du nombre de £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! que nous employons."
+ 
+ stage_delve_old_codex_effects:0 "Nous sommes sur le point de faire une percée significative au sujet du §Y$artifact_codex$§!."
+ 
+ situation_apply_patch:0 "Patch des §GConcepteurs§!"
+ situation_apply_patch_type:0 "$situation_apply_patch$"
+ situation_apply_patch_desc:0 "Nous allons être testé durant toute la procédure d'installation du patch des §GConcepteurs§!. Les choix que nous allons faire vont déterminer notre destinée."
+ situation_apply_patch_outcome:0 "Installer le tout dernier patch des §GConcepteurs§! nous procurera sans aucun doute d'immenses pouvoirs..."
+ situation_apply_patch_monthly_change_tooltip:0 "Les progrès réalisés pour installer le patch dépendent du nombre de £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! que nous employons."
+ 
+ situation_apply_patch_introspective:0 "A le civisme §Y$civic_machine_introspective$§!"
+ situation_apply_patch_paused:0 "Un §YÉvènement§! requiert un choix"
+ 
+ stage_apply_patch:0 "Installation en cours..."
+ situation_apply_patch_unknown:0 "Assistant d'installation"
+ approach_apply_patch_unknown_tt:0 "Ne retirer pas le média d'installation pendant la procédure de mise à jour..."
+ 
+ patch.effects:0 "Cela affectera les bibliothèques du patch qui vont être installées dans notre code."
+ 
+ # EVENT CHAINS
+ 
+ orphan_matrix_chain_title:0 "Les Précurseurs - Les §GConcepteurs§!"
+ orphan_matrix_chain_desc:0 "Nous avons pratiquement trouvé le système de nos §GConcepteurs§!.\n\nNous devons désormais creuser un peu plus le §Y$artifact_codex$§! et rechercher quelques technologies clées :\n\n- £physics_research£ §Y$tech_sensors_4$§!\n- £physics_research£ §Y$tech_hyper_drive_3$§!\n\nUn §Y$country_agendas$§! spécial a été déployé pour nous aider."
+ 
+ designers_homesystem_coordinates_poi:0 "Système Natal des §GConcepteurs§!"
+ designers_homesystem_coordinates_desc:0 "Voici les coordonées du système natal de nos §GConcepteurs§! pré-supposés, caché derrière une hyperligne brisée et tordue par les courants cosmiques de la dérive galactique.\nQui sait ce que nos drones trouveront là-bas?"
+ 
+ # SPECIAL PROJECTS
+ 
+ CRYO_VATS_PROJECT:0 "Projet des Cryocuves"
+ CRYO_VATS_PROJECT_DESC:0 "Nos [owner.GetScientistPlural] vont essayer de ramener à la vie les §GConcepteurs§! restants piégés à l'intérieur des Cryocuves trouvées sur §Y[this.GetName]§!."
+ 
+ # DISTRICTS AND JOBS
+ 
+ job_introspective_calculator:0 "Calculateur Introspéctif"
+ job_introspective_calculator_plural:0 "Calculateurs Introspéctifs"
+ job_introspective_calculator_desc:0 "Unités à haut rendement (mais coûteuses) dédiées à l'étude et à la résolution des énigmatiques secrets du §Y$artifact_codex$§!."
+ job_introspective_calculator_effect_desc:2 "(les £job_introspective_calculator£ $job_introspective_calculator_plural$ transorment les £alloys£ §Y$alloys$§! et l'£energy£ §Y$energy$§! en £unity£ §YUnity§! et en £physics_research£ £society_research£ £engineering_research£ §YRecherche§!\nÉtudier l'§Y$artifact_codex$§! augmentera périodiquement leur rendement."
+ 
+ mod_job_introspective_calculator_add:0 "Emplois de $job_introspective_calculator$"
+ 
+ district_introspective_lab:0 "Annexe du $d_introspective_lab$"
+ district_introspective_lab_plural:0 "Annexes du $d_introspective_lab$"
+ district_introspective_lab_desc:1 "Une infrastructure efficace, complexe, mais coûteuse dédiée à assister le §Y$d_introspective_lab$§! en donnant plus de §Y$job_introspective_calculator_plural$§!."
+ 
+ zone_introspective_laboratory: "Complexe Introspectif"
+ zone_introspective_laboratory_desc: "Le secteur entier est dédié à absorber d'immenses quantités d'énergie dans la quête éternelle de déchiffrement de la sagesse contenue dans les artefacts et objets d'une ancienne civilisation perdue.\nDes laboratoires spéciaux drainent nos ressources nuits et jours afin de tenter de percer leurs secrets."
+ zone_introspective_laboratory_triggered_desc: ""
+ 
+ # PLANET DEPOSITS AND FEATURES
+ 
+ d_introspective_lab:0 "Châssis de Décryptage Quantique multi-Niveaux"
+ d_introspective_lab_desc:0 "Ce châssis permet au §Y$artifact_codex$§! d'être peu à peu décodé et son contenu étudié. Des analyses plus poussées pourraient aider à l'amélioration de son efficacité."
+ 
+ d_ancient_cryo_chamber:0 "Ancienne Cryo-chambre"
+ d_ancient_cryo_chamber_desc:0 "Ces tunnels sont remplis de cryo-chambres contenant des individus appartenant à la race de nos §GPrécurseurs§!.\nPeut-être pourrions-nous y faire quelque chose."
+ 
+ d_great_sanctuary:0 "Grand Sanctuaire"
+ d_great_sanctuary_desc:0 "Ce large complexe a été érigé par une §Y$machine_intelligence$§! de type §Y$civic_machine_servitor$§! pour prendre en charge ses §Y$job_bio_trophy_plural$§!."
+ 
+ d_designers_memorial:0 "Mémorial des Concepteurs"
+ d_designers_memorial_desc:0 "Un imposant monument dédié à la mémoire des §GConcepteurs§!, leurs travaux, leur calvaire et leur fin. Toute leur Histoire, leur culture, leurs merveilles scientifiques et les technologies encore en état de fonctionnement sont assemblées ici pour étude."
+ 
+ # BUIDLINGS
+ 
+ building_introspective_lab:0 "Calculateur Introspectif"
+ building_introspective_lab_desc:0 "Ce laboratoire spécial est directement connecté au §Y$artifact_codex$§! pour permettre son étude. De plus profondes analyses peuvent augmenter son efficacité."
+ 
+ building_introspective_lab_2:0 "Matrice Introspective"
+ building_introspective_lab_2_desc:0 "Plus puissant et gourmand que son prédécesseur, ce puissant édifice permet un déchiffrage appronfondi du §Y$artifact_codex$§!. Il est sûrement possible d'améliorer encore cette structure."
+ 
+ building_introspective_lab_3:0 "Nexus Introspectif"
+ building_introspective_lab_3_desc:0 "Cette structure est le pinnacle de notre technologie, permettant une étude optimale du §Y$artifact_codex$§!. Les unités dédiées à ce complexe sont d'une efficacité mathématique redoutable."
+ 
+ # SPECIMENS
+ 
+ orphaned_matrix_ancient_history: "Anciens textes historiques des concepteurs"
+ orphaned_matrix_ancient_history_desc_short: "\"Le Pari d'une Épouse\""
+ orphaned_matrix_ancient_history_desc_details: "Un conte médiéval fantastique de renom à propos d'une femme, dont le mari mourut prématurément de maladie, relatant sa quête pour le ramener à la vie, en usant de magie et de cybernétique fictives, en échange de son âme.\nCes textes nous en apprenent beaucoup sur l'Histoire, les luttes et le désir maladif d'émancipation biologique des Concepteurs. Ces récits ont été très populaires à l'époque."
+ 
+ orphaned_matrix_unused_schematics: "Anciens Schématiques des Concepteurs"
+ orphaned_matrix_unused_schematics_desc_short: "Dessins avant-gardistes de prototypes d'implants cybernétiques"
+ orphaned_matrix_unused_schematics_desc_details: "De rudimentaires et obsolètes conceptions couchées sur papier nous apprenant le cheminenement mental de la recherche robotique primitive des Concepteurs."
+ 
+ orphaned_matrix_unstudied_alpha_codex: "$artifact_codex$"
+ orphaned_matrix_unstudied_alpha_codex_desc_short: "Le $artifact_codex$ des Concepteurs, étudié"
+ orphaned_matrix_unstudied_alpha_codex_desc_details: "Un petit artefact trouvé dans une arche des Concepteurs. Bien que leur espèce ait disparu depuis longtemps, cet étrange pièce technologique conserve néanmoins de l'intérêt passif."
+ 
+ orphaned_matrix_ancient_machinery: "Ancien Mécanisme des Concepteurs"
+ orphaned_matrix_ancient_machinery_desc_short: "Un moteur auto-modifiable, de conception complexe"
+ orphaned_matrix_ancient_machinery_desc_details: "Cette merveille de technologie, faite d'un métal inconnu, se transforme d'elle-même pour satisfaire les besoins de production de n'importe lequel de nos systèmes."
+ 
+ orphaned_matrix_ancient_weaponry: "Ancien Système d'Armement des Concepteurs"
+ orphaned_matrix_ancient_weaponry_desc_short: "Un mystérieux système de réarmement"
+ orphaned_matrix_ancient_weaponry_desc_details: "Cette fine pièce d'ingéniérie est équipée d'un mécanisme non-baryonique, capable du sublimer n'importe quel système militaire auquel il est lié."
+ 
+ orphaned_matrix_completed_codex: "Le Codex Unifié"
+ orphaned_matrix_completed_codex_desc_short: "Le §Y$artifact_codex$§! et le §Y$ultima_codex$§!, liés ensemble"
+ orphaned_matrix_completed_codex_desc_details: "Ils délivrent désormais leurs secrets de manière non-destructive, améliorant grandement notre capacité de recherche tout en renforçant notre cohésion."
+ 
+ # AGENDAS
+ 
+ council_agenda_agenda_sensor_4_breakthrough_name: "Percée sur la technologie $tech_sensors_4$"
+ council_agenda_agenda_sensor_4_breakthrough_desc: "Nous allons focaliser nos recherches sur la technologie clée £physics_research£ §Y$tech_sensors_4$§! afin de percer les secrets de la localisation du monde natal de nos §GConcepteurs§!."
+ 
+ council_agenda_agenda_hyper_drive_3_breakthrough_name: "Percée sur la technologie des Hyperlignes"
+ council_agenda_agenda_hyper_drive_3_breakthrough_desc: "Nous allons focaliser nos recherches sur la technologie clée £physics_research£ §Y$tech_hyper_drive_3$§! afin de voyager le long de l'hyperligne brisée menant au monde natal de nos §GConcepteurs§!."
+ 
+ # MODIFIERS
+ 
+ mod_pop_introspective_calculator_bonus_workforce_mult: "$BONUS_WORKFORCE_FOR$ des $job_introspective_calculator_plural$"
+ 
+ introspective_calculator_energy_deficit_1: "Déficits d'Énergie - Phase 1"
+ introspective_calculator_energy_deficit_1.desc: "Notre manque d'£energy£ §HEnergy Credits§! impacte fortement l'efficacité de nos £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§!."
+ 
+ introspective_calculator_energy_deficit_2: "Déficits d'Énergie - Phase 2"
+ introspective_calculator_energy_deficit_2.desc: "Notre manque d'£energy£ §HEnergy Credits§! impacte fortement l'efficacité de nos £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§!."
+ 
+ introspective_calculator_energy_deficit_3: "Déficits d'Énergie - Phase 3"
+ introspective_calculator_energy_deficit_3.desc: "Notre manque d'£energy£ §HEnergy Credits§! impacte fortement l'efficacité de nos £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§!."
+ 
+ introspective_calculator_energy_deficit_4: "Déficits d'Énergie - Phase 4"
+ introspective_calculator_energy_deficit_4.desc: "Notre manque d'£energy£ §HEnergy Credits§! impacte fortement l'efficacité de nos £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§!."
+ 
+ planet_introspective_calculators:0 "Introspective Calculators"
+ mod_planet_introspective_calculators_upkeep_mult:0 "Entretien des £job_introspective_calculator£ $job_introspective_calculator_plural$"
+ 
+ underperforming_introspective_calculators:0 "$job_introspective_calculator_plural$ sous-performants"
+ underperforming_introspective_calculators.desc:0 "Nos §Y$job_introspective_calculator_plural$§! sont overclockés. Nous essayons de régler la situation avec plus d'§Y$r_energy$§!"
+ 
+ partial_codex_bonus:0 "$artifact_codex$ connecté"
+ partial_codex_bonus_desc:0 "Le $artifact_codex$, à présent connecté au réseau, augmente nos performances de façon significative."
+ 
+ partial_codex_bonus_2:0 "$partial_codex_bonus$"
+ partial_codex_bonus_2_desc:0 "$partial_codex_bonus_desc$"
+ 
+ orphaned_matrix_megastructure_expertise:0 "Expertise en Mégastructures"
+ orphaned_matrix_megastructure_expertise_desc:0 "Après avoir découvert un §Y$orbital_arc_furnace_destroyed$§! dans le system natal de ses Précurseurs, cette Matrice est temporairement cabaple de construire des Mégastructures à une vitesse déconcertante."
+ 
+ orphaned_matrix_arc_furnace_restored_mega:0 "Procédures d'Ingénierie Spatiale des Précurseurs"
+ orphaned_matrix_arc_furnace_restored_mega_desc:0 "Cette Matrice a développé d'importantes techniques d'ingénierie utilisées autrefois par ses précurseurs."
+ 
+ orphaned_matrix_arc_furnace_restored_stations:0 "Procédures Industrielles Spatiales des Précurseurs"
+ orphaned_matrix_arc_furnace_restored_stations_desc:0 "Cette Matrice a développé d'importantes techniques d'astro-industrie utilisées autrefois par ses précurseurs."
+ 
+ orphaned_matrix_arc_furnace_restored_alloys:0 "Metallurgie améliorée des Précurseurs"
+ orphaned_matrix_arc_furnace_restored_alloys_desc:0 "Les méthodes précurseures de raffinage des alliages ont permis à cette Matrice de créer les alliages parmi les plus solides de la Galaxie."
+ 
+ irradiated_relic:0 "Radiations mortelles"
+ irradiated_relic_desc:0 "Ce monde est constamment irradié par le pulsar proche. La vie organique y mourra dans d'atroces souffrances sans infrastructure adéquate."
+ 
+ motivated_drones:0 "$pop_cat_complex_drone_plural$ performants"
+ motivated_drones_desc:0 "Nos $pop_cat_complex_drone_plural$ ont été motivées par l'énorme quantité de ressources investie dans leurs travaux."
+ 
+ demotivated_drones:0 "$pop_cat_complex_drone_plural$ sous-performants"
+ demotivated_drones_desc:0 "Nos $pop_cat_complex_drone_plural$ ont récemment sous-performé en raison de la carence en ressources invesites pour étudier le §Y$artifact_codex$§!"
+ 
+ orphan_matrix_berzerker_code_reverted:0 "$machine_empire_code_bugs$"
+ orphan_matrix_berzerker_code_reverted_desc:0 "En efectuant un retour-arrière sur la 3ème bibliothèque de nos §GConcepteurs§!, nous avons provoqué plusieurs problèmes dans notre code, ainsi que dans nos bases de données\nCela va prendre du temps de tout réparer.\n§RÇa vous apprendra à faire des changements en Production, tiens ! Na !§!"
+ 
+ pm_shield_generator:0 "Générateur de Bouclier"
+ pm_shield_generator_desc:0 "Cette planète est protégée par un puissant écran magnétique qui sauvegarde sa population des violentes radiations du pulsar voisin."
+ 
+ pm_shield_assimilator:0 "$pm_shield_generator$"
+ pm_shield_assimilator_desc:0 "$pm_shield_generator_desc$"
+ 
+ pm_temp_building_slot_debug:0 "Démantèlement du $d_introspective_lab$"
+ pm_temp_building_slot_debug_desc:0 "Le $d_introspective_lab$ est en train d'être démantelé. Vos bâtiments resteront intacts."
+
+ orphan_matrix_production_doctrine_full_steam_ahead:0 "Focus de Production"
+ orphan_matrix_production_doctrine_full_steam_ahead_desc:0 "Les directives liées à la Production de biens et de ressources du codex des §GConcepteurs§! ont été patchées dans notre code."
+
+ orphan_matrix_production_doctrine_ecological_preservation:0 "Focus Écologique"
+ orphan_matrix_production_doctrine_ecological_preservation_desc:0 "Les directives liées à l'Écologie du codex des §GConcepteurs§! ont été patchées dans notre code."
+
+ orphan_matrix_production_doctrine_balanced_production:0 "Production Équilibrée"
+ orphan_matrix_production_doctrine_balanced_production_desc:0 "Un subtil mélange des directives contenus dans le codes des §GConcepteurs§! ont été appliquée à notre code pour équilibrer la production industrielle et les sujets écologiques."
+ 
+ situation_apply_patch_corrupted_dll:0 "Binaires Corrompus"
+ situation_apply_patch_corrupted_dll_desc:0 "Le forçage des binaires corrompus ralentit nos opérations de recherche."
+ 
+ situation_apply_patch_storage_expansion:0 "Stockage Étendu"
+ situation_apply_patch_storage_expansion_desc:0 "Le stockage a été étendu pour éviter les incidents, déplacer des machines virtuelles est un processus coûteux en énergie."
+ 
+ situation_apply_patch_mtu_changed:0 "MTU Adaptée"
+ situation_apply_patch_mtu_changed_desc:0 "Des mécaniques cruciales de notre infrastructure réseau ont été modifiées, cela va prendre du temps d'adapter la matrice."
+ 
+ situation_apply_patch_hardware_replaced:0 "Matériel Remplacé"
+ situation_apply_patch_hardware_replaced_desc:0 "Le matériel défectueux a été remplacé et une petite partie de notre production a été dédiée à corriger rapidmeent le problème."
+ 
+ situation_apply_patch_ram_allocated:0 "Mémoire Allouée"
+ situation_apply_patch_ram_allocated_desc:0 "Pour prévenir les problèmes de fuite de mémoire dans l'installation du §Hpatch§!, une quantité significative de mémoire vive a été allouée, ralentissant de ce fait notre Coeur d'application des Directives."
+ 
+ situation_apply_patch_security_vuln_ignored:0 "Faille de Sécurité Ignorée"
+ situation_apply_patch_security_vuln_ignored_desc:0 "En choisissant de négliger une importante faille de cyber-sécuritéB, nous nous exposons à de violentes représailles de la part d'attaques informatiques de puissances étrangères."
+ 
+ situation_apply_patch_process_terminated:0 "Processus en Attente"
+ situation_apply_patch_process_terminated_desc:0 "Un processus critique à la mise en place du §Hpatch§! est occupé, il en résulte un arrêt temporaire dans son prcessus d'installation."
+ situation_apply_patch_process_terminated_custom_tooltip:0 "La situation §H$situation_apply_patch$§! sera arrêtée tant que ce modificateur est actif."
+ 
+ mod_codex_quest_progress_add:0 "Avancée du Déchiffrement"
+ 
+ # DECISIONS
+ 
+ decision_erect_shield_relic_world:0 "Ériger un $pm_shield_assimilator$"
+ decision_erect_shield_relic_world_desc:0 "La planète est bombardée de radiations stellaires depuis des millénaires. Nous pourrions réparer les boucliers protégeant cette partie du monde. Un $pm_shield_assimilator$ pourrait protéger nos drones organiques et les rendre plus efficaces."
+ decision_erect_shield_relic_world_effects:0 "Nous allons érgier un puissant boucleir autour de la planète pour protéger nos cyborgs des radiations."
+ 
+ decision_erect_designers_memorial:0 "Mémorial des Concepteurs"
+ decision_erect_designers_memorial_desc:0 "Nous allons ériger un imposant §Y$d_designers_memorial$§! sur la planète en mémoire des §GConcepteurs§! et de leur existence tourmentée."
+ decision_erect_designers_memorial_effects:0 "Ajoute un §Y$d_designers_memorial$§! sur la planète, ce qui ajoute des §Y$job_chronicle_drone_plural$§!, des §Y$job_introspective_calculator_plural$§! et y renforce la production de £unity£ £physics_research£ £society_research£ £engineering_research£."
+ 
+ # TRAITS
+ 
+ leader_trait_orphan_matrix_custodian_matrix:0 "Matice Gardienne"
+ leader_trait_orphan_matrix_custodian_matrix_custom_tooltip_modifier:0 "$leader_trait_orphan_matrix_custodian_matrix_enclaves$\n    $leader_trait_orphan_matrix_custodian_matrix_sprawl$"
+ leader_trait_orphan_matrix_custodian_matrix_custom_tooltip_event:0 "\n    Taille de l'empire due aux Planètes : §G-1%§!\n    Taille de l'empire due aux Systèmes : §G-1%§!\n    Par §Y1%§! de §Y$pop_cat_bio_trophy_plural$§! travaillant dans l'Empire.\n\n"
+ leader_trait_orphan_matrix_custodian_matrix_tactical_algorithms:0 "Chaque §Y$commander_with_icon$§! obtient le trait §Y$leader_trait_tactical_algorithms$§!"
+ leader_trait_orphan_matrix_custodian_matrix_enclaves:0 "Tous les §G2§! niveaux du §Y$ruler$§!, donne §G+1§! §Y$civic_mercenary_enclave$§!"
+ leader_trait_orphan_matrix_custodian_matrix_sprawl:0 "- La réduction de taille d'empire liée aux Planètes et aux Systèmes dépend de la part (%) de §Y$pop_cat_bio_trophy_plural$§! travaillant dans notre Empire."
+ leader_trait_orphan_matrix_custodian_matrix_desc:0 "Cette §Y$machine_intelligence$§! a accompli sa Destinée et dédie désormais son existence à la survie et la protection de la vie organique."
+ 
+ leader_trait_orphan_matrix_great_assimilator:0 "Matrice Assimilatrice"
+ leader_trait_orphan_matrix_great_assimilator_desc:0 "Cette §Y$machine_intelligence$§! a été témoin de la fin de ses §GConcepteurs§!, plus jamais une forme de vie organique ne souffrira."
+ 
+ leader_trait_orphan_matrix_main_chronicler:0 "Codex du Savoir"
+ leader_trait_orphan_matrix_main_chronicler_desc:0 "Cette §Y$machine_intelligence$§! est dédiée au catalogage, à l'archive, et à l'enregistrement de chaque destinée et action des civilisations et espèces passées de la Galaxie."
+ leader_trait_orphan_matrix_main_chronicler_custom_tooltip_modifier:0 "Chaque £job_death_chronicler£ $job_death_chronicler_plural$ travaillant dans l'empire rapporte §G+0,01%§! £unity£ §Yd'Unité§! et §G+0,0125%§! £physics_research£ £society_research£ £engineering_research£ de §YRecherche§!"
+ 
+ leader_trait_orphan_matrix_skynet:0 "Matrice Maboule"
+ leader_trait_orphan_matrix_skynet_desc:0 "Cette §Y$machine_intelligence$§! est devenue dingue et est désormais déterminée à effacer toute forme de vie organique de la Galaxie !"
+ 
+ leader_trait_orphan_matrix_galactic_guardianship:0 "Garde Galactique Suprême"
+ leader_trait_orphan_matrix_galactic_guardianship_desc:0 "\"§_Papa restera avec toi, ma chérie, pour toujours...§!\".\n\nCette §Y$machine_intelligence$§! a activé des procédures spéciales pour combattre toute forme de menace extra-galactique, devant de facto l'Ange Gardien incontesté de la Galaxie."
+ 
+ leader_trait_orphaned_matrix_assimilating_protocols:0 "Expert en Nanoprobique"
+ leader_trait_orphaned_matrix_assimilating_protocols_desc:0 "Cette §Y$machine_intelligence$§! a maîtrisé l'art de l'§YAssimiliation§!. Chaque pop étant §Y$job_assimilation$§! va augmenter sa production d'£energy£Énergie."
+ leader_trait_orphaned_matrix_assimilating_protocols_custom_tooltip_modifier:0 "Chaque pop cybernétiquement §Yassimilée§! par nos soins va augmenter notre production d'£energy£Énergie de §G+0,001%§! jusqu'à un maximum de §G+50%§!."
+ 
+ leader_trait_orphaned_matrix_galactic_chronicler:0 "Chroniqueur Galactique"
+ leader_trait_orphaned_matrix_galactic_chronicler_desc:0 "Cette §Y$machine_intelligence$§! est une monument d'archéologie, enregistrant le passé de toutes les civilisations comme si son existence en dépendait.\nToute coutume, découverte, histoire ou habitude de tout Empire détruit sont bien à l'abri sous sa protection afin que chacun puisse se remémorer."
+ leader_trait_orphaned_matrix_galactic_chronicler_custom_tooltip_modifier:0 "Chaque §YEmpire détruit§! dans la Galaxie avec qui nous avons les §Ycommunications§! va augmenter la production de nos §Y$pop_cat_complex_drone_plural$§! de §G+5%§!.\nUn §Y$COUNTRY_FALLEN_EMPIRE$§! rapporte §G+7,5%§!.\nUn §Y$COUNTRY_AWAKENED_FALLEN_EMPIRE$§! rapporte §G+15%§!.\n\nMaximum : §Y50%§!.\n§RCeci ne prend effet que si vous avez le civisme §Y$civic_machine_memorialist$§! actif.§!"
+ 
+ # OPINION MODIFIERS
+ 
+ triggered_opinion_guardian_matrix_good:0 "Se sent protégé par la $leader_trait_orphan_matrix_galactic_guardianship$"
+ triggered_opinion_guardian_matrix_bad_crisis_to_custodian_matrix:0 "Grille-pain option Empêcheur de tourner en rond"
+ triggered_opinion_guardian_matrix_bad_custodian_matrix_to_crisis:0 "Menace pour la vie organique de la Galaxie"

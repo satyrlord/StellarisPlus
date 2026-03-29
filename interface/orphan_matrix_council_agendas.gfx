@@ -1,0 +1,10 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_hyper_drive_3_breakthrough"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_hyper_drive_3_breakthrough.dds"
+	}
+	spriteType = {
+		name = "GFX_council_agenda_icon_agenda_sensor_4_breakthrough"
+		textureFile = "gfx/interface/icons/agenda_icons/agenda_sensor_4_breakthrough.dds"
+	}
+}

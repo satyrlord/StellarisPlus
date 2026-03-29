@@ -1,0 +1,3 @@
+concept_ancient_buried_vault = {
+	icon = "gfx/interface/archaeology/icon_archaeology.dds"
+}

@@ -1,0 +1,20 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_mod_orphaned_matrix_arc_furnace_restored_mega"
+		textureFile = "gfx/interface/icons/modifiers/mod_orphaned_matrix_arc_furnace_restored_mega.dds"
+	}
+	spriteType = {
+		name = "GFX_mod_orphaned_matrix_arc_furnace_restored_stations"
+		textureFile = "gfx/interface/icons/modifiers/mod_orphaned_matrix_arc_furnace_restored_stations.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mod_partial_codex_bonus"
+		textureFile = "gfx/interface/icons/modifiers/mod_partial_codex_bonus.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mod_partial_codex_bonus_2"
+		textureFile = "gfx/interface/icons/modifiers/mod_partial_codex_bonus.dds"
+	}
+}
