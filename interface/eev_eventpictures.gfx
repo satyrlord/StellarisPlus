@@ -29,4 +29,9 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes	
 	}
+	spriteType = {
+		name = "GFX_origin_incohesive_icon"
+		texturefile = "gfx/interface/icons/origins/origin_incohesive.dds"
+		alwaystransparent = yes
+	}
 }
