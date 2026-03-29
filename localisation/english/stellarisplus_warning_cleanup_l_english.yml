@@ -7,6 +7,7 @@
   mod_planet_jobs_rare_crystals_upkeep_mult:0 "Rare Crystals Upkeep"
   mod_station_researchers_energy_upkeep_mult:0 "Station Researchers Energy Upkeep"
   mod_station_researchers_cost_mult:0 "Station Researchers Cost"
+  mod_job_healthcare_pop_assembly_organic_add:0 "Organic Pop Assembler Jobs"
 
   # Warning cleanup: missing leader-name localisation keys
   Central:0 "Central"

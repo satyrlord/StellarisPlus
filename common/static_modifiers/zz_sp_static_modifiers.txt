@@ -793,19 +793,19 @@ modifier_plentiful_traditions_sequence = {
 }
 
 modifier_plentiful_traditions_lebensraum_enlargement_cooldown = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_holy_planet"
+	icon = "gfx/interface/icons/planet_modifiers/pm_lebensraum_cooldown.dds"
 	icon_frame = 1
 }
 
 modifier_plentiful_traditions_habitat_construction = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_holy_planet"
+	icon = "gfx/interface/icons/planet_modifiers/pm_habitat_construction.dds"
 	icon_frame = 1
 	country_base_minerals_produces_add = -20
 	country_base_energy_produces_add = -2
 }
 
 modifier_plentiful_traditions_transformation = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_united"
+	icon = "gfx/interface/icons/planet_modifiers/pm_plentiful_transformation.dds"
 	icon_frame = 1
 }
 

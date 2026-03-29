@@ -593,7 +593,7 @@ tradition_plentiful_affinity:0 "Affinity"
 tradition_plentiful_affinity_desc:0 "The reward for being kind is inherent in the act of giving it."
 tr_plentiful_affinity_adopt:0 "Affinity Traditions"
 #tr_plentiful_affinity_adopt_desc:0 "$tradition_plentiful_affinity_desc$\n\n$tr_plentiful_affinity_adopt_effect$\n\n$tr_plentiful_affinity_finish_effect$"
-tr_plentiful_affinity_adopt_desc:0 "§Y$MOD_PLANET_IMMIGRATION_PULL_ADD$§! increased by §G+100%§!."
+tr_plentiful_affinity_adopt_desc:0 "Adopt the §H$tr_plentiful_affinity_adopt$§! tradition tree."
 
 tr_plentiful_affinity_finish:0 "Affinity Traditions Finished"
 tr_plentiful_affinity_finish_desc:2 "Adopting all $tr_plentiful_affinity_adopt$ increases the §Y$mod_planet_jobs_produces_mult$§! of £pops  Pops by §G+0.8%§! for each additional species beyond the first §Y2§! an owned planet has. This stacks by up to §Y10§! times, for a total of §G+8%§!./n Additionally §Y$MOD_PLANET_HOUSING_ADD$§! and §HArtisant (or Foundry- if hive) Jobs§! are increased by §G+1§! in $district_arcology_civilian_industry$ and $district_industrial$."
