@@ -1,4 +1,4 @@
-### Real Tocharian
+﻿### Real Tocharian
 ### Names from various online sources
 
 cybrxkhan_real_tocharian = {

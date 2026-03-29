@@ -1,4 +1,4 @@
-### Fantasy Sicilian
+﻿### Fantasy Sicilian
 ### Put Sicilian names from Crusader Kings 3 and Sicilian names/words pulled from elsewhere into a markov generator
 
 cybrxkhan_fantasy_sicilian = {	

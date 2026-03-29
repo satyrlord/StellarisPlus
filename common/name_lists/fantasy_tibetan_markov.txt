@@ -1,4 +1,4 @@
-### Fantasy Tibetan
+﻿### Fantasy Tibetan
 ### Markov
 
 cybrxkhan_fantasy_tibetan = {	

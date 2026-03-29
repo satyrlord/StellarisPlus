@@ -1,4 +1,4 @@
-### Fantasy Gallic
+﻿### Fantasy Gallic
 ### Names thrown into a markov generator
 
 cybrxkhan_fantasy_gallic = {

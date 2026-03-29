@@ -1,4 +1,4 @@
-### Fantasy Jurchen
+﻿### Fantasy Jurchen
 ### Put into Markov generator
 
 cybrxkhan_fantasy_jurchen = {

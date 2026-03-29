@@ -1,4 +1,4 @@
-### Handmade Coptic
+﻿### Handmade Coptic
 ### Post-Pharaonic Egyptian names put into a markov generator, credits to Mamluk from the PI forums for the original Coptic names I based this on
 
 cybrxkhan_handmade_coptic = {

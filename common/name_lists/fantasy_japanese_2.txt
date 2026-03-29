@@ -1,4 +1,4 @@
-### Fantasy Japanese
+﻿### Fantasy Japanese
 ### Names all from Japanese name (diverse) generator at rinkworks.com, and the Kaiju/Pacific Rim name generator at http://fantasynamegenerators.com/ for the ships
 
 cybrxkhan_fantasy_japanese_2 = {

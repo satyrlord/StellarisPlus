@@ -1,4 +1,4 @@
-### Fantasy goblin_2
+﻿### Fantasy goblin_2
 ### Names all from random name generation at http://fantasynamegenerators.com/
 
 cybrxkhan_fantasy_goblin_2 = {	

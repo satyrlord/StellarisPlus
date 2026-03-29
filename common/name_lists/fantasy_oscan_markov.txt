@@ -1,4 +1,4 @@
-### Fantasy Oscan
+﻿### Fantasy Oscan
 ### Threw Oscan words in a markov word generator
 
 cybrxkhan_fantasy_oscan = {	

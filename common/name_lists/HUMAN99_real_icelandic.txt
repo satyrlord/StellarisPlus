@@ -1,4 +1,4 @@
-### Real Icelandic
+﻿### Real Icelandic
 ### Names from various online sources, some thanks to Elder_Thing
 
 cybrxkhan_real_icelandic = {

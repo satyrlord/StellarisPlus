@@ -1,4 +1,4 @@
-### Fantasy 10
+﻿### Fantasy 10
 ### Combining three different "languages" into one, so kinda like how the human namelist has multiple different pools of names to choose from
 ### The three sets of names are taken from the Dracaenae, Sylph, and Zaratan name generators on http://www.fantasynamegenerators.com/
  

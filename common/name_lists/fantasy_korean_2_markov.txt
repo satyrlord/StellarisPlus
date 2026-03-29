@@ -1,4 +1,4 @@
-### Fantasy Korean
+﻿### Fantasy Korean
 ### Threw Korean names into a markov generator
 
 cybrxkhan_fantasy_korean_2 = {

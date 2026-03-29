@@ -1,4 +1,4 @@
-### Fantasy Xhosa
+﻿### Fantasy Xhosa
 ### Xhosa names put into a Markov name generator
 
 cybrxkhan_handmade_xhosa = {

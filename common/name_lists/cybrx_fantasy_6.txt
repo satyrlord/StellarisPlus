@@ -1,4 +1,4 @@
-### Fantasy fantasy 6
+﻿### Fantasy fantasy 6
 ### This is a conlang phonology I quickly whipped up for this namelist set
 
 #############################################################################

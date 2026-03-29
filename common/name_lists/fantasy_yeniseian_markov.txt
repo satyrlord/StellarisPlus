@@ -1,4 +1,4 @@
-### handmade yeniseian
+﻿### handmade yeniseian
 ### Names randomly generated based on syllables from real yeniseian names, words, and place names
 cybrxkhan_handmade_yeniseian = {
 	category = "Plantoid"

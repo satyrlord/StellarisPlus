@@ -1,4 +1,4 @@
-### Fantasy aztec
+﻿### Fantasy aztec
 ### Names all from random name generation at donjon and http://www.fantasynamegen.com/
 
 cybrxkhan_fantasy_aztec = {

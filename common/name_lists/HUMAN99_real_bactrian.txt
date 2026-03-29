@@ -1,4 +1,4 @@
-### Real bactrian
+﻿### Real bactrian
 ### Names courtesy of Teutonic_Thrash, who took them from Nicholas Sims-Williams' books.
 
 cybrxkhan_real_bactrian = {	

@@ -1,4 +1,4 @@
-### Reptilian 10
+﻿### Reptilian 10
 ### Lizardfolk and Naga name generator from http://fantasynamegenerators.com/
 ### Fleet sequential names and army names from vanila Reptilian 1 namelist
 REP10 = {

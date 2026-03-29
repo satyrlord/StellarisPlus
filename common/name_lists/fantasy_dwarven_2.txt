@@ -1,4 +1,4 @@
-### Fantasy Dwarven
+﻿### Fantasy Dwarven
 ### Names donated by Havond/Worin from various sources and cleaned up by myself
 
 cybrxkhan_fantasy_dwarven_2 = {

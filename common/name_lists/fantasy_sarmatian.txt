@@ -1,4 +1,4 @@
-### Fantasy Sarmatian
+﻿### Fantasy Sarmatian
 ### Names from the real Sarmatian namelist tossed into markov generators
 
 cybrxkhan_fantasy_sarmatian = {

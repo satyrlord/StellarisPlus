@@ -1,4 +1,4 @@
-### Molluscoid 5
+﻿### Molluscoid 5
 ### Lovecraftian name generator from http://fantasynamegenerators.com/
 ### Fleet sequential names and army names from vanila Molluscoid 3 namelist
 MOL6 = {

@@ -1,4 +1,4 @@
-### Reptilian 8
+﻿### Reptilian 8
 ### Names are from the lizardfolk name generator here: http://www.fantasynamegenerators.com/lizardfolk-names.php#.WhjarkqnGUk
 ### Fleet sequential names and army names from vanila Reptilian 4 namelist
 REP8 = {

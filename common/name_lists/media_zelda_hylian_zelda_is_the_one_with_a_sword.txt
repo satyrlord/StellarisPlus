@@ -1,4 +1,4 @@
-### Hylian
+﻿### Hylian
 ### Randomly generated names from Zelda Human and deity names: http://fantasynamegenerators.com/zelda-human-names.php#.V5KZW7grKUk and http://fantasynamegenerators.com/zelda-deity-names.php#.V5KaS7grKUk
 
 cybrxkhan_zelda_hylian = {	

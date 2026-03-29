@@ -1,4 +1,4 @@
-### Handmade hephthalite
+﻿### Handmade hephthalite
 ### Names from my Hephthalite culture in my RICE mod tossed into a Markov generator
 cybrxkhan_handmade_hephthalite = {
 	category = "Toxoid" # Because it's funny

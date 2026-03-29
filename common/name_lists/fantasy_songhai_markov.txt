@@ -1,4 +1,4 @@
-### Fantasy Songhai
+﻿### Fantasy Songhai
 ### Songhai names thrown into a random name generator
 
 cybrxkhan_markov_songhai = {

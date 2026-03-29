@@ -1,4 +1,4 @@
-### Fantasy welsh
+﻿### Fantasy welsh
 ### Names from donjon.com and the Silkie name generator at http://fantasynamegenerators.com/
 
 cybrxkhan_fantasy_celtic = {

@@ -1,4 +1,4 @@
-### Tongue in cheek
+﻿### Tongue in cheek
 asianamerican = {
 	category = "Humanoid"
 

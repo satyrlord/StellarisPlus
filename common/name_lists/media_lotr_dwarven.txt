@@ -1,4 +1,4 @@
-### Lord of Rings Dwarves
+﻿### Lord of Rings Dwarves
 ### Names all from various online sources as well as random name generation at fantasy name generator
 
 cybrxkhan_lotr_dwarven = {

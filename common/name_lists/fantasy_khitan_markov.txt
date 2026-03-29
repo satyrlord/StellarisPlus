@@ -1,4 +1,4 @@
-### Fantasy Khitan
+﻿### Fantasy Khitan
 ### Put into Markov generator
 
 cybrxkhan_handmade_khitan = {

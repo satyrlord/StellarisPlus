@@ -1,4 +1,4 @@
-### Fantasy georgian
+﻿### Fantasy georgian
 ### Threw georgian names into a markov generator
 
 cybrxkhan_handmade_georgian = {	

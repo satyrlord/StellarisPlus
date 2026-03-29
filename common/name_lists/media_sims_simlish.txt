@@ -1,4 +1,4 @@
-### Simlish
+﻿### Simlish
 ### Throwing known Simlish words into a markov generator
 
 cybrxkhan_handmade_simlish = {

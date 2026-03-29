@@ -1,4 +1,4 @@
-### Fantasy 11
+﻿### Fantasy 11
 ### Combining three different "languages" into one, so kinda like how the human namelist has multiple different pools of names to choose from
 ### The three sets of names are taken from the Spiderfolk, Rakshasa, and Yeti name generators on http://www.fantasynamegenerators.com/
 ### Note to self: look up chaoticshiny.com next time if needed

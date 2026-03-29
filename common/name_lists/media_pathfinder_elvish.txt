@@ -1,4 +1,4 @@
-### Pathfinder elvish
+﻿### Pathfinder elvish
 ### Names all from random name generation at http://www.fantasynamegenerators.com
 
 cybrxkhan_pathfinder_elvish = {	

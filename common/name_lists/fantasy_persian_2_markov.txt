@@ -1,4 +1,4 @@
-### Markov Persian
+﻿### Markov Persian
 ### Names from throwing Iranian names and words into a markov generator
 
 cybrxkhan_handmade_persian_2 = {

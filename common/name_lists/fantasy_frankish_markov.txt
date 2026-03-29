@@ -1,4 +1,4 @@
-### Fantasy frankish
+﻿### Fantasy frankish
 ### Names made using a markov generator, based on Old Frankish namelist by Blood Merchant
 
 cybrxkhan_handmade_frankish = {	

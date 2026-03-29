@@ -1,4 +1,4 @@
-### Fantasy Dwarven
+﻿### Fantasy Dwarven
 ### Names all from random name generation at donjon and fantasy name generator
 
 cybrxkhan_fantasy_dwarven = {

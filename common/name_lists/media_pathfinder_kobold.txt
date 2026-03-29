@@ -1,4 +1,4 @@
-### Pathfinder kobold
+﻿### Pathfinder kobold
 ### Names all from random name generation at http://fantasynamegenerators.com/
 
 cybrxkhan_pathfinder_kobold = {	

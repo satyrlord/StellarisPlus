@@ -1,4 +1,4 @@
-### Arthropoid 8
+﻿### Arthropoid 8
 ### Based on vanilla Arthropoid 4 - names from Spiderfolk name generator (neutral only, to distinguish from Fantasy 11 namelist)
 
 ART8 = {	

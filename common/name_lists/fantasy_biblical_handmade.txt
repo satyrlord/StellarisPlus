@@ -1,4 +1,4 @@
-### handmade biblical
+﻿### handmade biblical
 ### Names randomly generated myself by using elements from biblical names
 
 cybrxkhan_handmade_biblical = {	

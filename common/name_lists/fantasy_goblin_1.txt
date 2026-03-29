@@ -1,4 +1,4 @@
-### Fantasy goblin_1
+﻿### Fantasy goblin_1
 ### Names all from random name generation at http://www.seventhsanctum.com/generate.php?Genname=goblinnamer
 
 cybrxkhan_fantasy_goblin_1 = {	

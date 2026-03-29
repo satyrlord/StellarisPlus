@@ -1,4 +1,4 @@
-### Necron Namelist
+﻿### Necron Namelist
 ### Made By Scudilo
 
 cybrxkhan_warhammer40k_necron = {

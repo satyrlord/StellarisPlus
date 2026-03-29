@@ -1,4 +1,4 @@
-### Fantasy Pirate
+﻿### Fantasy Pirate
 ### Most names taken from fantasynamegenerators.com and some also put through Markov generator, so many of the names aren't real English names but could work for a pirate fantasy setting
 
 cybrxkhan_handmade_pirate = {

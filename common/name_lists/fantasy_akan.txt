@@ -1,4 +1,4 @@
-### Fantasy Akan
+﻿### Fantasy Akan
 ### From Anansi name generator https://www.fantasynamegenerators.com/anansi-names.php
 
 cybrxkhan_fantasy_akan = {

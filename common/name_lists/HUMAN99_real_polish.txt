@@ -1,4 +1,4 @@
-### Real Polish 
+﻿### Real Polish 
 ### Most names taken from wikipedia - includes contemporary ships, ships from the Cold War Era, WWII, WWI, etc.
 
 cybrxkhan_real_polish = {

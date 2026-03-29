@@ -1,4 +1,4 @@
-### Real Greek
+﻿### Real Greek
 ### Most ship names taken from wikipedia from existing and decommissioned ships of the Greek navy; personal names taken from Vicky II and EUIV Greek names
 
 cybrxkhan_real_greek = {

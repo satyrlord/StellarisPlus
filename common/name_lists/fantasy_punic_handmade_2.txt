@@ -1,4 +1,4 @@
-### Handmade punic
+﻿### Handmade punic
 ### Names from throwing Punic names into a markov generator
 
 cybrxkhan_handmade_punic_2 = {

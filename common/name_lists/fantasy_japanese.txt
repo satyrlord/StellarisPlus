@@ -1,4 +1,4 @@
-### Fantasy Japanese
+﻿### Fantasy Japanese
 ### Names all from random name generation at donjon
 
 cybrxkhan_fantasy_japanese = {	

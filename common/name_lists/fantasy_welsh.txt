@@ -1,4 +1,4 @@
-### Fantasy welsh
+﻿### Fantasy welsh
 ### Names from Welsh name generator at http://www.mwyler.com/fng/ several of the name generators at https://www.kirith.com/name/ , and the Arthurian name generator at http://fantasynamegenerators.com/
 
 cybrxkhan_fantasy_welsh = {	

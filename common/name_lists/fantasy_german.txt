@@ -1,4 +1,4 @@
-### Fantasy german
+﻿### Fantasy german
 ### Names all from random name generation at donjon http://fantasynamegenerators.com/
 
 cybrxkhan_fantasy_german = {

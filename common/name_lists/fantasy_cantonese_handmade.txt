@@ -1,4 +1,4 @@
-### Fantasy Cantonese
+﻿### Fantasy Cantonese
 ### Names randomly generated myself using psosible Cantonese syllables, based off a modified version of the Yale romanization system used by Wikipedia
 
 cybrxkhan_handmade_cantonese = {

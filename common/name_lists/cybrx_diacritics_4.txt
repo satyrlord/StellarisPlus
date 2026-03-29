@@ -1,4 +1,4 @@
-### Diacritics 4 - fantasy namelists with diacritics
+﻿### Diacritics 4 - fantasy namelists with diacritics
 ### Various Spanish names and words put through a custom language mixer at http://chaoticshiny.com/langreplace.php
 ### a: u b: c c: s d: c e: ü f: d g: c h: i: a j: x k: x l: s m: ch n: t o: i p: m q: n r: n s: t: d u: a v: ñ w: ñ x: ñ y: e z: s
 

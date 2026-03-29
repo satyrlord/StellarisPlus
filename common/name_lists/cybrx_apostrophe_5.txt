@@ -1,4 +1,4 @@
-### Fantasy apostrophe_5
+﻿### Fantasy apostrophe_5
 ### Names all from random English name generation at http://www.fantasynamegen.com/ and put through the "Standard 2" language mixer at http://chaoticshiny.com/langreplace.php
 ### Specifically, (English) ship names for ships, Renaissance English names for planet names, http://random-name-generator.info/random/ for the first names, and the text of Scarborough Fair for last names 
 ### This is kind of a parody of all those apostrophes in fantasy and sci'fi

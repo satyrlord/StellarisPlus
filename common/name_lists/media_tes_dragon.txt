@@ -1,4 +1,4 @@
-### dragon_language
+﻿### dragon_language
 ### Names from http://fantasynamegenerators.com/ - randomly generated, but based on the dragon language in TES
 
 cybrxkhan_dragon_language = {

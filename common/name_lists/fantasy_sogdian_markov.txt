@@ -1,4 +1,4 @@
-### Handmade Sogdian
+﻿### Handmade Sogdian
 ### Sogdian names and words put into a Markov name generator
 
 cybrxkhan_handmade_sogdian = {	

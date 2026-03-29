@@ -1,4 +1,4 @@
-### falmer
+﻿### falmer
 ### Some from uesp. net but the randomly generated ones are from http://fantasynamegenerators.com/ - based on the patterns found in names of falmer
 
 cybrxkhan_falmer = {

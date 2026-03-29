@@ -1,4 +1,4 @@
-### Chimer
+﻿### Chimer
 ### Some names from uesp.net and fantasynamegenerators, but also tossed some into a Markov generator along with Dunmer names to generate more names
 
 cybrxkhan_chimer_tes = {

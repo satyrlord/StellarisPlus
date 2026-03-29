@@ -1,4 +1,4 @@
-### Fantasy Breton
+﻿### Fantasy Breton
 ### Breton names tossed in a markov generator
 
 cybrxkhan_fantasy_breton = {	

@@ -1,4 +1,4 @@
-### Dungeons and Dragons elvish
+﻿### Dungeons and Dragons elvish
 ### Names all from random name generation at fantasynamegenerator.com
 
 cybrxkhan_dd_elvish = {	

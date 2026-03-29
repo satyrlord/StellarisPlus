@@ -1,4 +1,4 @@
-### Fantasy ancient greek_3
+﻿### Fantasy ancient greek_3
 ### Names from random name generation at fantasynamegenerators.com - specifically Kelari (Rift) and Amazon name generators
 
 cybrxkhan_fantasy_ancient_greek_3 = {

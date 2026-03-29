@@ -1,4 +1,4 @@
-### Molluscoid 10
+﻿### Molluscoid 10
 ### Lovecraftian name generator from http://donjon.bin.sh/name/
 ### Fleet sequential names and army names from vanila Molluscoid 1 namelist
 MOL10 = {

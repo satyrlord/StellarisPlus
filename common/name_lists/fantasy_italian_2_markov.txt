@@ -1,4 +1,4 @@
-### Fantasy Italian 2
+﻿### Fantasy Italian 2
 ### Names generated using markov generator
 
 cybrxkhan_fantasy_italian_2 = {

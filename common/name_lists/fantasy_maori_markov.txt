@@ -1,4 +1,4 @@
-### Fantasy Maori
+﻿### Fantasy Maori
 ### Maori names thrown into markov generator
 
 cybrxkhan_handmade_maori = {

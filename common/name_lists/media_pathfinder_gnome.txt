@@ -1,4 +1,4 @@
-### Pathfinder Gnome
+﻿### Pathfinder Gnome
 ### Names all from random name generation at http://fantasynamegenerators.com/
 
 cybrxkhan_pathfinder_gnome = {

@@ -1,4 +1,4 @@
-### Fantasy ancient greek
+﻿### Fantasy ancient greek
 ### Names from random name generation at donjon and http://www.mwyler.com/fng/
 
 cybrxkhan_fantasy_ancient_greek = {	

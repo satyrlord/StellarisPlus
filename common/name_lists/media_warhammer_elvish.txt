@@ -1,4 +1,4 @@
-### Warhammer high elvish
+﻿### Warhammer high elvish
 ### Names from https://www.fantasynamegenerators.com/warhammer-high-elf-names.php and various online sources
 
 cybrxkhan_warhammer_elvish = {	

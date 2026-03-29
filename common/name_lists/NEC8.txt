@@ -1,4 +1,4 @@
-### Necroid 8
+﻿### Necroid 8
 # Armies based on Necroid 4
 # fantasynamegenerator.com misc, including Necromancer
 

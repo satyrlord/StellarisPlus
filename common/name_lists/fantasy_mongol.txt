@@ -1,4 +1,4 @@
-### fantasy mongol
+﻿### fantasy mongol
 ### Names randomly generated based on name generators at http://fantasynamegenerators.com/ specifically the Au Ra, Bahmi, and East Asian and Middle Eastern town names generators
 cybrxkhan_fantasy_mongol = {
 	category = "Humanoid"

@@ -1,4 +1,4 @@
-### Fantasy Asian
+﻿### Fantasy Asian
 ### Names made combining various Asian namesets and markov where necessary
 
 cybrxkhan_fantasy_asian = {	

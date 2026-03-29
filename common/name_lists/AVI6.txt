@@ -1,4 +1,4 @@
-### Avian 6
+﻿### Avian 6
 ### Based on vanilla Avian 3, but with different handmade names generated using awkwords
 
 #a*5/oo*3/aa*2/o*2/i

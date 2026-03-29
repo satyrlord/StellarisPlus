@@ -1,4 +1,4 @@
-### Fantasy Yoruba
+﻿### Fantasy Yoruba
 ### Names thrown into markov generator
 
 cybrxkhan_handmade_yoruba = {

@@ -1,4 +1,4 @@
-### Fantasy german
+﻿### Fantasy german
 ### Markov generator
 
 cybrxkhan_fantasy_german_2 = {	

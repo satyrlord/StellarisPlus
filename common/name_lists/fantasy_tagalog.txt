@@ -1,4 +1,4 @@
-### Fantasy Tagalog
+﻿### Fantasy Tagalog
 ### Names from the Manananggal name generator at fantasynamegenerators.com
 
 cybrxkhan_fantasy_tagalog = {	

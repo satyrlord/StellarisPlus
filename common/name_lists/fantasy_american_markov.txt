@@ -1,4 +1,4 @@
-### Fantasy American
+﻿### Fantasy American
 ### Names made by throwing in American English words into a markov generator
 
 cybrxkhan_handmade_american = {	

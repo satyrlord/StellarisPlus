@@ -1,4 +1,4 @@
-### Real Turkish
+﻿### Real Turkish
 ### Most ship names taken from wikipedia from existing and decommissioned ships of the Greek Fleet; personal names taken from Vicky II and EUIV Turkish names
 
 cybrxkhan_real_turkish = {

@@ -1,4 +1,4 @@
-### Handmade Nabatean
+﻿### Handmade Nabatean
 ### Nabatean names thrown in a Markov generator
 
 cybrxkhan_handmade_nabatean = {	

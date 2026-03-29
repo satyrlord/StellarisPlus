@@ -1,4 +1,4 @@
-### Ewok
+﻿### Ewok
 ### Names all from random generators at https://donjon.bin.sh/ and fantasynamegenerator.com
 
 cybrxkhan_starwars_ewok = {

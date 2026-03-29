@@ -1,4 +1,4 @@
-### Dis 'ere's da namelist for da Orkz
+﻿### Dis 'ere's da namelist for da Orkz
 ### Made by da right an' proppa git, Scudilo
 
 cybrxkhan_warhammer40k_orks = {

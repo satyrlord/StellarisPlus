@@ -1,4 +1,4 @@
-### Fantasy Inca
+﻿### Fantasy Inca
 ### Inca names thrown into a markov generator
 
 cybrxkhan_handmade_inca_2 = {

@@ -1,4 +1,4 @@
-### Molluscoid 8
+﻿### Molluscoid 8
 ### Steps to making these words:
 ###	1. Google translate the opening and ending paragraphs of The Catcher in the Rye into Korean.
 ###	2. Throw in romanization of said Korean text into the Cthulhu-themed language mixer here: http://chaoticshiny.com/langreplace.php

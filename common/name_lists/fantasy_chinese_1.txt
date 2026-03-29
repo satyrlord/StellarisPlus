@@ -1,4 +1,4 @@
-### Fantasy Chinese
+﻿### Fantasy Chinese
 ### Names all from random name generation at donjon and http://fantasynamegenerators.com/
 
 cybrxkhan_fantasy_chinese = {

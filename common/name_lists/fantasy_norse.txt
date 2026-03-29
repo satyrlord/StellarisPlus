@@ -1,4 +1,4 @@
-### Fantasy norse
+﻿### Fantasy norse
 ### Names from icelandic name generator at http://www.mwyler.com/fng/ and the norse name generator at http://donjon.bin.sh/name/
 
 cybrxkhan_fantasy_norse = {

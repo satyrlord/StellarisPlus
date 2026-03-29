@@ -1,4 +1,4 @@
-### Fantasy French 2
+﻿### Fantasy French 2
 ### Markov generator
 
 cybrxkhan_fantasy_french_2 = {

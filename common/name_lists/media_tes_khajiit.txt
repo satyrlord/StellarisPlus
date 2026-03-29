@@ -1,4 +1,4 @@
-### Khajiit
+﻿### Khajiit
 ### Names all from uesp.net
 
 cybrxkhan_khajiit = {	

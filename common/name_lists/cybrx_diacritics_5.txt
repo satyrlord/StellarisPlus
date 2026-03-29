@@ -1,4 +1,4 @@
-### Diacritics 5 - fantasy namelists with diacritics
+﻿### Diacritics 5 - fantasy namelists with diacritics
 ### made up random words myself and then threw them into a markov generator (see planet names section for the originals)
 
 

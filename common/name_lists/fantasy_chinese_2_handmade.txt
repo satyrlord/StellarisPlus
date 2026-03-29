@@ -1,4 +1,4 @@
-### Fantasy chinese_2
+﻿### Fantasy chinese_2
 ### Names handmade using the awkwords generator, using all pinyin syllables
 
 cybrxkhan_fantasy_chinese_2 = {	

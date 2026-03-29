@@ -1,4 +1,4 @@
-### Imperial/Star Wars Human
+﻿### Imperial/Star Wars Human
 ### Names all from random generators at https://donjon.bin.sh/ and fantasynamegenerator.com as well as various online sources
 
 cybrxkhan_starwars_imperial = {

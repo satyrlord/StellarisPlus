@@ -1,4 +1,4 @@
-### Molluscoid 9
+﻿### Molluscoid 9
 ### Sea Creature generator from http://fantasynamegenerators.com/
 ### Fleet sequential names and army names from vanila Molluscoid 3 namelist
 MOL9 = {

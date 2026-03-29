@@ -1,4 +1,4 @@
-### handmade hunnic
+﻿### handmade hunnic
 ### Names randomly generated based on syllables from real hunnic names
 cybrxkhan_handmade_hunnic = {
 	category = "Plantoid"

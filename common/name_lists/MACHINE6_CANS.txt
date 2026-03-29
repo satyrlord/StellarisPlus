@@ -1,4 +1,4 @@
-### Machine 6
+﻿### Machine 6
 ### Based on vanilla Machine 3
 ### names from fantasynamegenerators.com - used Robot
 MACHINE6 = {

@@ -1,4 +1,4 @@
-### Handmade Old Chinese
+﻿### Handmade Old Chinese
 ### Names randomly generated myself by using a very rough adaptation of the Baxter-Sagart (2014) reconstruction of Old Chinese phonology to generate the syllables. I've done a lot of things to make this easier for me so this isn't 100% accurate to Baxter-Sagart's reconstruction of Old Chinese per se. You could just call this 'loosely inspired.'
 ### Old Chinese was the ancestor of various modern-day Chinese languages, and the oldest attested stage of Chinese spoken approximately during the 1st millennium BCE. The earliest forms of it have been found on late Shang dynasty oracle bones.
 

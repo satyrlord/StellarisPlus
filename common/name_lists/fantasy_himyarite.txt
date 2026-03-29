@@ -1,4 +1,4 @@
-### Fantasy Himyarite
+﻿### Fantasy Himyarite
 ### Names from Himyarites and other south Arabian peoples like Sabaeans, put into a markov blender
 
 cybrxkhan_fantasy_himyarite = {

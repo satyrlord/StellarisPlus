@@ -1,4 +1,4 @@
-### Fantasy Korean
+﻿### Fantasy Korean
 ### Names handmade using the awkwords generator, using various Korean syllables
 
 cybrxkhan_fantasy_korean = {

@@ -1,4 +1,4 @@
-### Dungeons and Dragons Dwarven
+﻿### Dungeons and Dragons Dwarven
 ### Names all from random name generation at fantasy name generator and some further extra generated using markov generator
 
 cybrxkhan_dd_dwarven = {
