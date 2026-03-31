@@ -542,8 +542,6 @@ agenda_tr_plentiful_transformation = {
 }
 # === merged from 99_orphan_matrix_council_agendas.txt ===
 @base_agenda_cost = 7000
-@ascension_agenda_cost = 3500		# Same as short_agenda_cost from traditions
-@ascension_agenda_cooldown = 1080	# 3 Years
 
 agenda_sensor_4_breakthrough = {
 	agenda_cost = @base_agenda_cost
