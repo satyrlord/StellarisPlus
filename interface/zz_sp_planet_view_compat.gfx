@@ -1,0 +1,13 @@
+spriteTypes = {
+	# Fallback for UI Overhaul Dynamic compatibility.
+	# UIO's planet_view.gui uses GFX_ui_planet_view_gradient instead of
+	# vanilla GFX_planet_view_gradient.  Our zz_planet_view.gui (LIOS)
+	# overrides UIO's GUI, so it must reference the UIO sprite name.
+	# This file provides a vanilla-textured fallback when UIO is absent;
+	# when UIO is loaded its own corneredTileSpriteType definition wins.
+	corneredTileSpriteType = {
+		name = "GFX_ui_planet_view_gradient"
+		textureFile = "gfx/interface/planetview/planet_view_gradient.dds"
+		borderSize = { x = 189 y = 0 }
+	}
+}

@@ -135,7 +135,7 @@ guiTypes = {
 				size = { width = 415 height = 100%% }
 				background = {
 					name = "leader_background"
-					spriteType = "GFX_planet_view_gradient"
+					spriteType = "GFX_ui_planet_view_gradient"
 					alwaysTransparent = yes
 				}
 			}
