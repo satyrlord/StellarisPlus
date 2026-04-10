@@ -1,0 +1,34 @@
+decision_vfb_buildspeed_m = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_vfb_buildspeed_m
+	enactment_time = 10
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 200
+			unity = 10
+		}
+	}
+
+	allow = {
+		planet = {
+			AND = {
+				NOT = { has_modifier = vfb_buildspeed_m }
+				OR = {
+					has_building = building_vfb_wharf
+					has_building = building_vfb_harbor
+				}
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = { modifier = "vfb_buildspeed_m" days = 1800 }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

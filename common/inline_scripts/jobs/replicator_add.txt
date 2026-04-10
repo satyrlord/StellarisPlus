@@ -1,0 +1,10 @@
+# VF's Buildings compatibility stub -- machine empires only
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = { is_machine_empire = yes }
+    }
+    modifier = {
+        job_replicator_add = $AMOUNT$
+    }
+}

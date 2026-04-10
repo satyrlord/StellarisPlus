@@ -1,0 +1,296 @@
+namespace = vfb
+
+country_event = {
+	id = vfb.0
+	hide_window = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { has_global_flag = has_vfb_mod }
+	}
+
+	immediate = {
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = { id = vfb.1 }
+		}
+		set_global_flag = has_vfb_mod
+	}
+}
+
+country_event = {
+	id = vfb.1
+	title = vfb.1.name
+	desc = vfb.1.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_ship_bridge
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #Vanilla Start
+		name = vfb.1.a
+		custom_tooltip = vfb.1.a.tooltip
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			country_event = {
+				id = vfb.2
+			}
+		}
+	}
+	
+	option = { #Techs
+		name = vfb.1.b
+		custom_tooltip = vfb.1.b.tooltip
+		ai_chance = { 
+			factor = 100
+		}
+		every_country = {
+			limit = {
+				is_fallen_empire = no
+			}
+			hidden_effect = {
+				give_technology = { tech = tech_building_vfb_base message = no }
+				give_technology = { tech = tech_building_vfb_armory message = no }
+				give_technology = { tech = tech_building_vfb_workshop message = no }
+				give_technology = { tech = tech_building_vfb_harbor message = no }
+				give_technology = { tech = tech_building_vfb_logistichub message = no }
+				give_technology = { tech = tech_building_vfb_orbitalhub message = no }
+				give_technology = { tech = tech_building_vfb_refinery message = no }
+				give_technology = { tech = tech_building_vfb_resort message = no }
+				give_technology = { tech = tech_building_vfb_preserve message = no }
+				give_technology = { tech = tech_building_vfb_asteroid_station message = no }
+				give_technology = { tech = tech_building_vfb_asteroid_hub_b message = no }
+				give_technology = { tech = tech_building_vfb_fusion_plant message = no }
+				give_technology = { tech = tech_building_vfb_fusion_complex_b message = no }
+				give_technology = { tech = tech_building_vfb_plastic_plant message = no }
+				give_technology = { tech = tech_building_vfb_plastic_facility_b message = no }
+				give_technology = { tech = tech_building_vfb_siderurgy message = no }
+				give_technology = { tech = tech_building_vfb_lyceum message = no }
+				give_technology = { tech = tech_building_vfb_museum message = no }
+				give_technology = { tech = tech_building_vfb_administration message = no }
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = vfb.2
+			}
+		}
+	}
+
+	option = {
+		name = vfb.1.c
+		custom_tooltip = vfb.1.c.tooltip
+		ai_chance = {
+			factor = 0
+		}
+		every_country = {
+			limit = {
+				is_fallen_empire = no
+			}
+			hidden_effect = {
+				give_technology = { tech = tech_building_vfb_armory message = yes }
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = vfb.2
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = vfb.2
+	title = vfb.2.name
+	desc = vfb.2.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_ship_bridge
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = vfb.2.a
+		custom_tooltip = vfb.2.a.tooltip
+		ai_chance = {
+			factor = 100
+		}
+		set_global_flag = vfb_polar_cap_1_flag
+		hidden_effect = {
+			country_event = {
+				id = vfb.3
+			}
+		}
+	}
+
+	option = {
+		name = vfb.2.b
+		custom_tooltip = vfb.2.b.tooltip
+		ai_chance = {
+			factor = 0
+		}
+		set_global_flag = vfb_polar_cap_2_flag
+		hidden_effect = {
+			country_event = {
+				id = vfb.3
+			}
+		}
+	}
+
+	option = {
+		name = vfb.2.c
+		custom_tooltip = vfb.2.c.tooltip
+		ai_chance = {
+			factor = 0
+		}
+		set_global_flag = vfb_polar_cap_0_flag
+		hidden_effect = {
+			country_event = {
+				id = vfb.3
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = vfb.3
+	title = vfb.3.name
+	desc = vfb.3.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_ship_bridge
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = vfb.3.a
+		custom_tooltip = vfb.3.a.tooltip
+		ai_chance = { factor = 100 }
+		hidden_effect = { 
+			set_global_flag = vfb_polar_limit_infinite_flag 
+		}
+		hidden_effect = {
+			country_event = {
+				id = vfb.4
+			}
+		}
+	}
+
+	option = {
+		name = vfb.3.b
+		custom_tooltip = vfb.3.b.tooltip
+		ai_chance = { factor = 0 }
+		hidden_effect = { 
+			set_global_flag = vfb_polar_limit_1_flag 
+		}
+		hidden_effect = {
+			country_event = {
+				id = vfb.4
+			}
+		}
+	}
+
+	option = {
+		name = vfb.3.c
+		custom_tooltip = vfb.3.c.tooltip
+		ai_chance = { factor = 0 }
+		hidden_effect = { 
+			set_global_flag = vfb_polar_limit_2_flag 
+		}
+		hidden_effect = {
+			country_event = {
+				id = vfb.4
+			}
+		}
+	}
+
+	option = {
+		name = vfb.3.d
+		custom_tooltip = vfb.3.d.tooltip
+		ai_chance = { factor = 0 }
+		hidden_effect = { 
+			set_global_flag = vfb_polar_limit_3_flag 
+		}
+		hidden_effect = {
+			country_event = {
+				id = vfb.4
+			}
+		}
+	}
+
+	option = {
+		name = vfb.3.e
+		custom_tooltip = vfb.3.e.tooltip
+		ai_chance = { factor = 0 }
+		hidden_effect = { 
+			set_global_flag = vfb_polar_limit_5_flag 
+		}
+		hidden_effect = {
+			country_event = {
+				id = vfb.4
+			}
+		}
+	}
+
+	option = {
+		name = vfb.3.f
+		custom_tooltip = vfb.3.f.tooltip
+		ai_chance = { factor = 0 }
+		hidden_effect = { 
+			set_global_flag = vfb_polar_limit_10_flag 
+		}
+		hidden_effect = {
+			country_event = {
+				id = vfb.4
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = vfb.4
+	title = vfb.4.name
+	desc = vfb.4.desc
+	picture = GFX_evt_fallen_empire
+	show_sound = event_ship_bridge
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = vfb.4.a
+		custom_tooltip = vfb.4.a.tooltip
+		ai_chance = { factor = 0 }
+		hidden_effect = { 
+			set_global_flag = vfb_addon_cap_1_flag 
+		}
+	}
+
+	option = {
+		name = vfb.4.b
+		custom_tooltip = vfb.4.b.tooltip
+		ai_chance = { factor = 100 }
+		hidden_effect = { 
+			set_global_flag = vfb_addon_cap_2_flag 
+		}
+	}
+
+	option = {
+		name = vfb.4.c
+		custom_tooltip = vfb.4.c.tooltip
+		ai_chance = { factor = 0 }
+		hidden_effect = { 
+			set_global_flag = vfb_addon_cap_3_flag 
+		}
+	}
+}

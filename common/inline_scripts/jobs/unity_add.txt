@@ -1,0 +1,16 @@
+# VF's Buildings compatibility stub -- mirrors unity_jobs_add for 4.3+
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = { is_regular_empire = yes }
+    }
+    job_bureaucrat_add = $AMOUNT$
+}
+
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = { is_regular_empire = no }
+    }
+    job_coordinator_add = $AMOUNT$
+}

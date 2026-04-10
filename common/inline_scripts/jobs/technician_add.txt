@@ -1,0 +1,23 @@
+# VF's Buildings compatibility stub -- regular empires only
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = {
+            is_regular_empire = yes
+            is_fallen_empire_spiritualist = no
+        }
+    }
+    modifier = {
+        job_technician_add = $AMOUNT$
+    }
+}
+
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = { is_fallen_empire_spiritualist = yes }
+    }
+    modifier = {
+        job_fe_acolyte_generator_add = $AMOUNT$
+    }
+}

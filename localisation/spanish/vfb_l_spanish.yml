@@ -1,0 +1,245 @@
+﻿l_spanish:
+ 
+building_vfb_wharf:0 "Astillero Estelar"
+building_vfb_wharf_desc:0 "Mientras que las colonias normales dependen del transporte transorbital y la exploración con naves desmontadas, nosotros podemos ir un paso más allá en planetas de mayor importancia estratégica. Los Astilleros Estelares son estructuras masivas diseñadas para reducir el consumo de combustible de las naves, facilitar la operación de naves en órbita exterior, monitorear el espacio, centralizar el anclaje naval y albergar las oficinas de aduana planetaria. Al conectar el espacio exterior con el interior, sirven como muelles para naves espaciales y bahías de atraque para los flujos de producción. Actuando tanto como torre de control como pista de aterrizaje, el Astillero Estelar también concentra todas las intrusiones atmosféricas en nuestro planeta."
+
+building_vfb_harbor:0 "Puerto Interestelar"
+building_vfb_harbor_desc:0 "El crecimiento exponencial de nuestra infraestructura planetaria, comercio, producción y flujo de recursos ha dejado obsoletos nuestros Astilleros Estelares. Ya no nos enfocamos únicamente en monitorear las intrusiones atmosféricas; nuestras responsabilidades se han expandido para ayudar a nuestras Estaciones a gestionar la economía espacial, que se ha vuelto tan rentable y rica. El Puerto Interestelar consiste en una serie de expansiones orbitales a nuestra ya significativa infraestructura vertical. Protocolos de atraque estándar, transporte público Estación-Planeta, despliegues de flotillas de escolta y respuesta rápida, atención médica avanzada no disponible en estaciones y servir como respaldo para coordinar naves dentro del sistema son algunas de sus nuevas responsabilidades. Como los Astilleros, nuestros Puertos conectan el transporte exterior-interior orbital, enlazando todo el flujo local de estación-planeta."
+
+building_vfb_workshop:0 "Talleres Modulares"
+building_vfb_workshop_desc:0 "Equipados con forjas, impresoras y plantillas, un Taller Modular satisface las necesidades especiales de cualquier colono y proporciona todas las cuotas de equipos y materiales de reparación. La producción excedente también puede exportarse."
+
+building_vfb_logistichub:0 "Centros Logísticos Centrales"
+building_vfb_logistichub_desc:0 "Estos grandes terminales conectan y controlan una red planetaria de Hyperloops y Maglevs, distribuyendo rápidamente suministros donde se necesiten y asegurando que todos nuestros centros de producción operen a máxima eficiencia. Los Centros Logísticos Centrales también regulan la mayoría de los transportes de carga aérea suborbital y conectan nuestra red planetaria en expansión de recolectores solares, replicadores de nutrientes y extractores de minerales, asegurando que no se desperdicie energía, minerales ni alimentos."
+
+building_vfb_orbitalhub:0 "Centros Orbitales Integrados"
+building_vfb_orbitalhub_desc:0 "Sobre la infraestructura existente de nuestros Puertos Interestelares, los Centros Orbitales Integrados amplían la misión de sus predecesores de maximizar la eficiencia de los protocolos de transporte aprovechando el impulso de la rotación planetaria. Además de optimizar estos protocolos, este esfuerzo centraliza nuestras redes eléctricas planetarias, instalaciones de purificación de minerales y centros de procesamiento de alimentos, aumentando la producción de recursos brutos y refinados mientras reduce significativamente el desperdicio. Sin embargo, esto será tremendamente costoso."
+
+building_vfb_plaza:0 "Plazas Cívicas"
+building_vfb_plaza_desc:0 "Aunque tuvimos milenios para desarrollar infraestructura pública en nuestro mundo natal, nuestras colonias carecen de ese lujo. Nuestros nuevos planetas necesitan urgentemente la presencia de un gobierno central, pero no tienen tiempo para que se desarrolle de forma natural. Las Plazas Cívicas concentran el bienestar y las funciones administrativas del estado en instalaciones centrales planetarias, organizadas cuidadosamente para asegurar la máxima eficiencia de los servicios públicos. Estos edificios albergan a los gendarmes planetarios, servicios sanitarios, departamentos de obras públicas y el Servicio Civil para garantizar simultáneamente la seguridad, la salud, la infraestructura y la estabilidad de todos los ciudadanos."
+
+building_vfb_manufactory:0 "Complejos de Manufactura"
+building_vfb_manufactory_desc:0 "Estos grandes centros de producción amalgaman impresoras 3D, forjas, bahías de atraque, depósitos de materias primas, plantillas de construcción y otras necesidades de manufactura. Abierto a todos, un Complejo de Manufactura permite a los ciudadanos crear lo que sus hogares y muelles requieran, en sus propios planetas y por sus propias manos o las de especialistas, prometiendo reemplazar la industria tradicional de nuestro mundo natal."
+
+building_vfb_residence:0 "Residencias Estructurales"
+building_vfb_residence_desc:0 "Los grandes arcos y paredes de aleación de nuestros hábitats proporcionan amplio espacio para la construcción de viviendas."
+
+building_vfb_refinery:0 "Estaciones de Refinación"
+building_vfb_refinery_desc:0 "Ahora que entendemos el potencial de los recursos raros, deberíamos concentrar su producción en Estaciones de Refinación dedicadas para asegurar que todas las colonias tengan acceso a suministros locales de estos valiosos bienes."
+
+building_vfb_resort:0 "Resorts Paradisíacos"
+building_vfb_resort_desc:0 "Mientras que nuestro imperio generalmente solo puede financiar un mundo de resorts, podemos ayudar a establecer resorts de gran tamaño en muchos planetas para proporcionar a los turistas entretenimiento, excelente comida y actividades culturales y recreativas atractivas."
+
+building_vfb_preserve:0 "Hubs de Santuario"
+building_vfb_preserve_desc:0 "El aumento de la urbanización y la prosperidad económica emergente han puesto en gran peligro los ecosistemas de nuestros planetas. Proteger la vida silvestre natural, independientemente de cuán extraordinarias sean las fauna y flora nativas, e incluso instalar zoológicos para salvaguardar los ecosistemas de nuestras colonias más desarrolladas, mantendrá nuestra conciencia limpia, asegurará que ningún ecosistema en ninguna colonia se extinga permanentemente y proporcionará valiosos conocimientos sobre la vida silvestre xeno."
+
+building_vfb_siderurgy:0 "Tetra-Siderurgias"
+building_vfb_siderurgy_desc:0 "La Tetra-Siderurgia es un avanzado centro de fundición y procesamiento que conecta Alloyworks más pequeños, concentrando su afluencia de material y generadores térmicos, a nuestras Forjas de Aleación. Esto permite la creación de grandes cantidades de componentes metálicos valiosos con relativamente poco personal y menos gasto y desperdicio de material, aunque a un alto costo energético. Cuantas más forjas tengamos en planetas con esta instalación, más intensos serán los fundidores y más recursos produciremos.\n\n§Y¡Las pilas de producción de metalurgistas se acumulan por cada fundición de aleación o mejora equivalente construida, hasta 5.§!"
+
+building_vfb_asteroid_station:0 "Causa Circumstellar"
+building_vfb_asteroid_station_desc:0 "Al redirigir y fragmentar la materia circumstellar en el espacio exterior y llevarla a nuestras órbitas planetarias, podemos aprovechar grandes cantidades de materiales muy necesarios sin dañar las cortezas de nuestras superficies. Es un esfuerzo costoso y arriesgado, aún así."
+building_vfb_asteroid_hub:0 "Array de Causa Circumstellar"
+building_vfb_asteroid_hub_desc:0 "Al redirigir y fragmentar la materia circumstellar en el espacio exterior y llevarla a nuestras órbitas planetarias, podemos aprovechar grandes cantidades de materiales muy necesarios sin dañar las cortezas de nuestras superficies. Es un esfuerzo costoso y arriesgado, aún así.\n\n§Y¡Esta instalación mejorada acomoda bahías adicionales para naves prospectoras y puede ser equipada con Molinos de Meteoritos para aún más producción.§!"
+building_vfb_asteroid_hub_b:0 "Molinos de Meteoritos" 
+building_vfb_asteroid_hub_b_desc:0 "Estas instalaciones de extensión para los Muelles de Materia Circumstellar refinan meteoritos aterrizados. Sus instalaciones liberan a nuestros equipos de muelle de este deber, permitiéndoles concentrarse mejor en tareas importantes en órbita exterior, principalmente la recuperación de asteroides. Además, los equipos en tierra tienen más tiempo para clasificar sus recursos y maximizar lo que traen sus compañeros del cielo. \n\n§B¡Requiere que se construya un Array de Causa Circumstellar.§!"
+building_vfb_asteroid_hub_c:0 "Liquidadores de Lattice"
+building_vfb_asteroid_hub_c_desc:0 "Los Liquidadores de Lattice son instalaciones construidas junto a nuestro Array de Causa Circumstellar para crear y cosechar Metal Vivo. Usando muestras actuales de metal vivo como iniciadores, sometemos grandes cantidades de materia a presiones y temperaturas extremas, descomponiendo sus estructuras macroatómicas y licuando sus retículos. Sujetos a presiones similares, nuestros iniciadores de Metal Vivo se expanden hacia afuera, integrando esta materia desreticulada en su estructura. Esto requiere un delicado equilibrio de elementos metálicos en la composición total y produce relativamente pequeñas cantidades de excedente de Metal Vivo en comparación con la inversión inicial de materia.\n\n§B¡Requiere que se construya al menos un Molino de Meteoritos.§!"
+
+building_vfb_fusion_plant:0 "Puente Beta"
+building_vfb_fusion_plant_desc:0 "Si bien nuestra tecnología de conversión de materia a energía no es ni de cerca tan eficiente como se predijo, ya podemos hacerlo colisionando núcleos a gran velocidad y excitando celdas de reciclaje térmico con la energía térmica resultante. A diferencia de las plantas de energía por fusión, este proceso - Cosecha Beta - no produce ningún residuo sólido, siendo entonces mucho más eficiente. Producirá una cantidad razonable de energía, a costa de una cantidad razonable de materia para realizar colisiones beta."
+building_vfb_fusion_complex:0 "Array de Puente Beta"
+building_vfb_fusion_complex_desc:0 "Si bien nuestra tecnología de conversión de materia a energía no es ni de cerca tan eficiente como se predijo, ya podemos hacerlo colisionando núcleos a gran velocidad y excitando celdas de reciclaje térmico con la energía térmica resultante. A diferencia de las plantas de energía por fusión, este proceso - Cosecha Beta - no produce ningún residuo sólido, siendo entonces mucho más eficiente. Producirá una cantidad razonable de energía, a costa de una cantidad razonable de materia para realizar colisiones beta.\n\n§Y¡Esta instalación mejorada acomoda colisionadores adicionales, y puede ser equipada con Transformadores Térmicos para aún más producción.§!"
+building_vfb_fusion_complex_b:0 "Transformadores Térmicos"
+building_vfb_fusion_complex_b_desc:0 "Estas instalaciones de extensión para los Arrays de Túneles Beta, instaladas alrededor de los grandes saltos de los Túneles, añaden muchos puntos de inserción de materia física - similares a los sincrotrones - alrededor de los arrays y establecen una red de Estaciones de Reciclaje Térmico, permitiendo un aumento en la eficiencia y volumen de la actividad de producción de energía a través del reciclaje térmico.\n\n§B¡Requiere que se construya un Array de Puente Beta.§!"
+building_vfb_fusion_complex_c:0 "Revestimiento Resonante"
+  building_vfb_fusion_complex_c_desc:0 "Los Revestimientos Resonantes (sic, no Revestment, sino Revetment) son modificaciones opcionales a nuestros Arrays de Puente Beta que permiten la creación y cosecha de Materia Oscura. A través de nuestra infraestructura actual, podemos acelerar, criar e inyectar fotones en un bucle secundario de puentes, separados de sus colisionadores de materia principales por revestimientos revetment magnéticamente activos y densos en núcleos. De estos campos de energía en estos revestimientos, los fotones se transmutan en axiones, una partícula de bajo masa, baja energía y activa cromodinámicamente que puede ser agrupada y procesada en Reactores de Materia Oscura. Para evitar que estos axiones se descompongan instantáneamente de nuevo en fotones y energía, lo que generaría una violenta expansión de energía térmica, los tamizamos a través de un campo de gluones hasta una cámara resonante. Así es como se extrae actualmente la Materia Oscura en los discos de acreción de los agujeros negros, donde simulan este efecto a través de su propia inercia rotacional y colisiones de materia cerca de sus Horizontes de Eventos. No hace falta decir que esto es muy intensivo en energía y recursos. Esto también nos obligará a llevar nuestros umbrales de seguridad del Puente Beta a parámetros más estrictos, reduciendo su eficiencia operativa.\n\n§B¡Requiere que se construya al menos un Transformador Térmico.§!"
+ 
+building_vfb_plastic_plant:0 "Paletizador de Polímeros"
+building_vfb_plastic_plant_desc:0 "Nuestra dependencia de minerales dañinos para el suelo extraídos del suelo siempre ha sido un problema en nuestros esfuerzos por la preservación ambiental y las cuotas de producción de recursos. Nuestros agroingenieros han encontrado recientemente una solución; Basados en nuestro uso anterior de productos sólidos a base de petróleo, nuevas composiciones de bioplásticos serían un reemplazo eficiente de los minerales extraídos para la producción de chapas de aleación y bienes de consumo. Completamente ecológicos, naturalmente degradables y omni-reciclables, los desechos de biomasa de los procesos de refinación de dichos bioplásticos también se enriquecerán en metanol, etanol y otras alternativas de combustible para nuestras colonias."
+building_vfb_plastic_facility:0 "Array de Paletización de Polímeros"
+building_vfb_plastic_facility_desc:0 "Las optimizaciones en la síntesis, moldeo y reciclaje de biomasa y bioplásticos han abierto una nueva frontera para nuestro mercado de bienes en bruto. Al dispersar nuestra instalación de polimerización en plantas locales, podemos asegurar que la mayoría de las comunidades coloniales tengan una alternativa limpia y eficiente a los bienes de consumo construidos con minerales extraídos.\n\n§Y¡Esta instalación mejorada acomoda separadores de sacarosa adicionales, y puede ser equipada con Separadores de Sacarosa para aún más producción.§Y!"
+building_vfb_plastic_facility_b:0 "Separadores de Sacarosa"
+building_vfb_plastic_facility_b_desc:0 "Ciertos arreglos moleculares son químicamente más fáciles para que los procesos orgánicos construyan azúcares. Sin embargo, estos compuestos requieren más trabajo para que nuestras plantas de polimerización los descompongan. Al enrutar las etapas de bioprocesamiento exclusivas para esos carbohidratos ampliamente disponibles pero difíciles de descomponer a instalaciones separadas, podemos dedicar nuestra instalación principal exclusivamente a esas etapas que son comunes en todos los procesos de descomposición, aumentando el volumen de biomasa procesada simultáneamente.\n\n§B¡Requiere que se construya un Array de Paletización de Polímeros.§!"
+
+building_vfb_plastic_facility_c:0 "Destilador de Aerosoles"
+building_vfb_plastic_facility_c_desc:0 "Los Destiladores de Aerosoles son modificaciones opcionales a nuestra red de Separación de Sacarosa. Por lo general, la alta presión dentro de los vatios de separación ayuda en el proceso de descomposición del carbono, acelerando la composición de sacarosa hacia materia utilizable y re-polimerizable. Sin embargo, al conectar estos vatios entre sí en condiciones de baja presión, e introducir algo de aireación artificial, podemos inducir la acumulación de aerosoles originados de la descomposición de dichas sacarosas, y luego forzar su precipitación arrastrándolos a través de finos destiladores. Después de este proceso, podemos continuar con múltiples procesos de destilación en este aerosol hasta alcanzar una combinación de compuestos similar a la encontrada en el Zro extraído. Esto, por supuesto, reduce significativamente la eficiencia del proceso de separación de sacarosa, y genera desechos adicionales. \n\n§B¡Requiere que se construya al menos un Separador de Sacarosa.§!"
+building_vfb_plastic_facility_d:0 "Nomograma Neonatal"
+building_vfb_plastic_facility_d_desc:0 "Los Nomogramas Neonatales son instalaciones opcionales que operan alineando finamente la biomasa dentro de una cuadrícula de patrones complejos, física y en su material genético. Considerando que los nanites son máquinas, que reúnen y procesan entradas físicas del mundo podemos, a través de estos patrones, explotar puertas traseras en su interfaz de entrada a procesamiento para instalar un acceso no autorizado en un solo nanite, y luego forzarlo a reproducir un lote a través de la autorreplicación. La trampa es que solo podemos iniciar un ciclo de reproducción basado en la alimentación con la misma biomasa, lo que significa que necesitamos trabajar en lotes en lugar de permitirles consumir materia desprotegida y sin ceremonias \n\n§B¡Requiere que se construya al menos un Separador de Sacarosa.§!"
+
+building_vfb_lyceum:0 "Liceo"
+building_vfb_lyceum_desc:0 "Si bien la Academia y las Instalaciones de Investigación están repartidas por nuestros planetas ciudadanos, como regla general, estos centros de aprendizaje están demasiado dispersos y demasiado enfocados en su investigación para trabajar juntos y proporcionar información sobre el trabajo de los demás. Al interconectar estos núcleos intelectuales - dondequiera que sean relevantes - a través de infraestructura informativa no solo aceleraremos la investigación por emergencia, sino que también proporcionaremos oportunidades adicionales - dado que esta red requiere infraestructura física - para archiveros, profesores e incluso filósofos para trabajar cómodamente en un espacio dedicado; el Liceo. \n\n§Y¡La producción de investigadores se acumula por cada laboratorio de investigación o mejora equivalente construida, hasta 5.§!"
+ 
+building_vfb_museum:0 "Museo"
+building_vfb_museum_desc:0 "La expansión de la academia planetaria en la forma del Liceo - y las capacidades educativas que concentra - ha convertido a este planeta en un núcleo de innovación y conocimiento. A medida que nos expandimos por la galaxia, encontrando cada vez más artefactos y maravillas de edades pasadas, nos damos cuenta de cuánto desperdicio es explorarles en el campo y almacenarlos después. Hay mucho que aprender solo con el análisis, y podemos sacar conclusiones más profundas de estos elementos dedicando personal de investigación en instalaciones de investigación arqueológica. ¡Incluso podemos abrir descubrimientos menos impactantes al público para que los vean!.\n\n§Y¡Descubre artefactos menores mientras cuesta puntos de investigación§!"
+ 
+building_vfb_base:0 "Sitio de Trabajo Polar"
+building_vfb_base_desc:0 "Convertir una tierra salvaje (o estéril, para ese asunto) en un centro de producción y el posterior avance de nuestra civilización requiere una gran inversión infrastructural. Si vamos a construir estructuras grandiosas para albergar nuestros proyectos de adquisición y gestión de recursos, deberíamos hacer un gran patio para acumularlos. Desafortunadamente, la ejecución de proyectos grandiosos se vuelve casi imposible debido a la gravedad y rotación de la mayoría de los planetas, que crean condiciones adversas para la construcción y mantenimiento fuera de las regiones cercanas a los polos. Afortunadamente, los polos son donde se construye la mayoría de la infraestructura geoestacionaria transplanetaria. \n\n§Y¡Permite la construcción de múltiples edificios como mejoras.§!\n\n§GLos siguientes edificios pueden construirse como mejoras a este Sitio de Trabajo:\n\n - Puente Beta\n - Causa Circumstellar\n - Paletizador de Polímeros\n - Centros Logísticos Centrales\n - Centros Orbitales Integrados\n - Tetra-Siderurgias\n - Liceo\n - Hubs de Santuario\n - Resorts Paradisíacos\n - Atelier\n - Museo\n - Servicio Civil§!"
+
+ 
+building_vfb_constructor:0 "Atelier"
+building_vfb_constructor_desc:0 "La descentralización y adopción de técnicas industriales modernas para la producción de la mayoría—si no es que de todos—los bienes de consumo de nuestro imperio ha sido un éxito indiscutible. Sin embargo, dejar la tarea de diseñar prototipos a nuestros fabricantes en el sitio ha llevado a ineficiencias con diseños redundantes. El Atelier crea planos para nuestros productos más deseados y libera espacio en los sitios de alta demanda para aumentar la producción. \n\n §Y¡La producción de artesanos se acumula por cada fábrica civil o mejora equivalente construida, hasta 5.§!"
+  
+building_vfb_administration:0 "Servicio Civil"
+building_vfb_administration_desc:0 "La carga de la administración pública ciertamente no es fácil de llevar. Nuestra expansión espacial ha visto cierto grado de descentralización en este sentido. Sin embargo, lo que hemos ganado en flexibilidad, lo hemos perdido en coordinación. Una oficina dedicada que interconecta las muchas comisiones departamentales, parques administrativos locales y liderazgo electo—o impuesto—seguro mejorará la estabilidad y eficiencia del gobierno, aunque a costa de más nóminas y una burocracia aún más influyente.\n\n§Y¡La producción de burócratas se acumula por cada edificio burocrático o mejoras construidas, hasta 5.§!"
+ 
+building_vfb_dockyard:0 "Bays Sidereales"
+building_vfb_dockyard_desc:0 "Estas bahías alternas, flotantes y en movimiento expanden el espacio de atraque en Astilleros Estelares y Puertos Interestelares sin grandes expansiones infraestructurales. Son de bajo costo, baja importancia y altamente desechables.\n\n§B¡Requiere que se construya el Astillero Estelar o el Puerto Interestelar§!\n\n§Y¡Los efectos aumentan con niveles de edificios de requisitos más altos.§!"
+ 
+job_vfb_accretion_drone:0 "Drone Suplementario"
+job_vfb_accretion_drone_plural:0 "Drones Suplementarios"
+job_vfb_accretion_drone_desc:0 "Los Drones Suplementarios son la designación para nuestras unidades y destacamentos agrupados y diversos. Flexibles en su propósito, coordinan operaciones menores en el campo, prospectan, son pioneros, actúan como zapadores para la expansión de nuestra conciencia y mantienen las operaciones en el planeta funcionando sin problemas."
+job_vfb_accretion_drone_effect_desc:0 "£job_vfb_accretion_drone£ $job_vfb_accretion_drone_plural$ cumplen varias funciones suplementarias."
+mod_job_vfb_accretion_drone_add:0 "$job_vfb_accretion_drone$ Jobs"
+mod_job_vfb_accretion_drone_per_pop:0 "§G+1§! $job_vfb_accretion_drone$ Job por cada $VALUE$ Pops"
+mod_job_vfb_accretion_drone_per_pop_short:0 "\n§G+1§! £mod_job_vfb_accretion_drone_add£ por cada $VALUE$ £pop£"
+
+vfb.1:0 "¡Los Edificios de VF están §Gactivos§!"
+vfb.1.name:0 "¡Los Edificios de VF están §Gactivos§!"
+vfb.1.desc:0 "§Y¡Es genial verte aquí! Gracias por suscribirte e instalar los Edificios de VF!§! Esto está aquí para decirle al juego (y a usted) que este mod está en funcionamiento y funcionando!\n\n¡De todos modos, que tengas una gran limpieza/befriending/both Xeno. ¡Todo lo mejor!"
+vfb.1.a:0 "§B(Sin Tecnologías Iniciales en absoluto)§! ¡Genial!"
+vfb.1.a.tooltip:0 "Genial ¡Diviértete, supongo!"
+vfb.1.b:0 "§Y(Todas las Tecnologías Iniciales)§!Oye, mientras estoy aquí, ¿podrías darme y a la galaxia las §Btecnologías§!?"
+vfb.1.b.tooltip:0 "Claro, diviértete, campeón.\n\n§YCada imperio en la galaxia podrá comenzar a construir todos los edificios del mod de inmediato.§!"
+vfb.1.c:0 "§G(Arsenal Inicial - Recomendado)§! Creo que solo el Arsenal debería estar disponible al comienzo del juego."
+vfb.1.c.tooltip:0 "Esto hará que el Arsenal sea el único edificio disponible al inicio del juego, y te permitirá construirlo de inmediato.\n\n§Y¡Esta es la opción recomendada para una experiencia más equilibrada.§!"
+vfb.1.d:0 "§R(Saltar Personalización)§!Por cierto, ¿podemos no tener eventos de personalización en este momento? Solo quiero jugar el juego."
+vfb.1.d.tooltip:0 "Esta opción no activará ningún evento de personalización, por lo que no podrás cambiar los límites de los edificios del mod. Si deseas personalizar algo más tarde, simplemente escribe 'event vfb.2' en la consola y las tres personalizaciones estarán disponibles nuevamente."
+
+vfb.2:0 "(VFB)  Establecer Capacidad Polar"
+vfb.2.name:0 "(VFB) Establecer Capacidad Polar"
+vfb.2.desc:0 "§YAntes de que te vayas§!, tienes la opción de cuántas evoluciones de Sitio de Trabajo Polar puedes construir por planeta. Esto puede volverse loco, ya que las evoluciones del Sitio de Trabajo Polar están diseñadas para ser especializaciones planetarias definitivas, así que no te enojes si 2 no está equilibrado, pero probablemente será divertido.\n\nOh, esta decisión es permanente y afecta a la IA!"
+vfb.2.a:0 "§G(Experiencia Intencionada)§! ¡Mantenlo como uno por planeta!"
+vfb.2.a.tooltip:0 "Esta opción mantiene tu Límite Planetario para construcciones principales en 1. Esta es la experiencia intencionada, y se recomienda para un juego más equilibrado."
+vfb.2.b:0 "§Y(Potencialmente Desequilibrado)§! Bueno, cada planeta tiene dos polos... ¿Verdad?"
+vfb.2.b.tooltip:0 "Esta opción aumenta tu Límite Planetario para construcciones principales a 2. Esto es muy divertido. Aún no podrás construir dos del mismo edificio, simplemente rompería todo."
+vfb.2.c:0 "§R(Versión Colonial Legado)§! En realidad, solo quiero los edificios pequeños. Sin Sitios de Trabajo Polar."
+vfb.2.c.tooltip:0 "VFB comenzó como un mod para agregar dos pequeños edificios, el Arsenal y el Taller, para facilitar los primeros años en los que tienes muchos planetas recién colonizados y poco productivos. Con esto, podrás construir tanto el Arsenal como el Taller, la Refinería y el Astillero en sus dos evoluciones. ¡En caso de que lo quieras, aquí tienes!"
+
+vfb.3:0 "(VFB) Establecer Límite Polar por Imperio"
+vfb.3.name:0 "(VFB) Establecer Límite Polar por Imperio"
+vfb.3.desc:0 "§YOtra cosa más§!, tienes la opción de cuántas evoluciones de Sitio de Trabajo Polar puedes construir por imperio. ¿Por qué? Muchas personas están solicitando esto. Personalmente, desagrado esta opción, pero bueno, soy un hombre del pueblo.\n\n ¡Esto también es permanente y afecta a la IA!"
+vfb.3.a:0 "§G(Experiencia Intencionada)§! ¡Sin límites!"
+vfb.3.a.tooltip:0 "Al seleccionar esto, aún podrás construir tantos Sitios de Trabajo Polar y sus evoluciones como desees en total. Esta es la experiencia intencionada."
+vfb.3.b:0 "§Y(1)§! 1 Sitio de Trabajo Polar por Imperio."
+vfb.3.b.tooltip:0 "Al seleccionar esto, podrás construir hasta 1 Sitio de Trabajo Polar y sus evoluciones en total."
+vfb.3.c:0 "§Y(2)§! 2 Sitios de Trabajo Polar por Imperio."
+vfb.3.c.tooltip:0 "Al seleccionar esto, podrás construir hasta 2 Sitios de Trabajo Polar y sus evoluciones en total."
+vfb.3.d:0 "§Y(3)§! 3 Sitios de Trabajo Polar por Imperio."
+vfb.3.d.tooltip:0 "Al seleccionar esto, podrás construir hasta 3 Sitios de Trabajo Polar y sus evoluciones en total."
+vfb.3.e:0 "§Y(5)§! 5 Sitios de Trabajo Polar por Imperio."
+vfb.3.e.tooltip:0 "Al seleccionar esto, podrás construir hasta 5 Sitios de Trabajo Polar y sus evoluciones en total."
+vfb.3.f:0 "§Y(10)§! 10 Sitios de Trabajo Polar por Imperio."
+vfb.3.f.tooltip:0 "Al seleccionar esto, podrás construir hasta 10 Sitios de Trabajo Polar y sus evoluciones en total."
+
+vfb.4:0 "(VFB) Establecer Límite de Complementos de Recursos"
+vfb.4.name:0 "(VFB) Establecer Límite de Complementos de Recursos"
+vfb.4.desc:0 "§YJuro que casi he terminado§!, tienes la opción de cuántos Complementos de Recursos puedes construir por planeta. Esto puede volverse bastante loco rápidamente, pero ahora aprendí a codificar estos límites y me estoy divirtiendo con ello. 2 para recursos básicos y 1 para recursos avanzados es lo que estás acostumbrado si has jugado este mod antes, pero creo que la mayoría de las personas diría que 1-1 es más equilibrado. Personalmente, juego con 3-2.!\n\nEste es el límite de construcción por planeta para los Molinos de Meteoritos, Transformadores Térmicos y Separadores de Sacarosa (recursos básicos), Nomogramas Neonatales, Destiladores Drag, Liquidadores de Lattice y Revestimientos Resonantes (recursos avanzados). ¡Esto también es permanente y afecta a la IA!"
+vfb.4.a:0 "§Y(El Más Equilibrado)§! 1-1, 1 recurso básico y 1 recurso avanzado por planeta."
+vfb.4.a.tooltip:0 "Esta es la opción más aburrida, y la que recomiendo si eres más un jugador serio. Te permite construir 1 Molino de Meteoritos, 1 Transformador Térmico o 1 Separador de Sacarosa, y 1 Nomograma Neonatal, 1 Destilador Drag, 1 Liquidador de Lattice y 1 Revestimiento Resonante por planeta."
+vfb.4.b:0 "§G(Recomendado)§! 3-2, 3 recursos básicos y 2 recursos avanzados por planeta."
+vfb.4.b.tooltip:0 "Esta es la opción recomendada en cuanto a cómo imagino que debería funcionar la economía en Stellaris. Te permite construir 2 Molinos de Meteoritos, 2 Transformadores Térmicos o 2 Separadores de Sacarosa, y 1 Nomograma Neonatal, 1 Destilador Drag, 1 Liquidador de Lattice o 1 Revestimiento Resonante por planeta."
+vfb.4.c:0 "§R(El Más Divertido)§! 3-2, 3 recursos básicos y 2 recursos avanzados por planeta."
+vfb.4.c.tooltip:0 "Esta es la opción más divertida, y la que recomiendo si eres más un jugador casual, quieres enfrentarte rápidamente a los FE o estás jugando uno de esos mods que tienes que usar Materia Oscura para todo. Te permite construir 3 Molinos de Meteoritos, 3 Transformadores Térmicos o 3 Separadores de Sacarosa, y 2 Nomogramas Neonatales, 2 Destiladores Drag, 2 Liquidadores de Lattice o 2 Revestimientos Resonantes por planeta."
+
+tech_building_vfb_base:0 "Ingeniería Geoestacionaria"
+tech_building_vfb_base_desc:0 "Para enfrentar los desafíos de la Era Espacial, nuestra civilización debe emprender grandes proyectos que, debido a su grandeza, requieren más que mecánica a nivel del suelo para tener éxito."
+ 
+tech_building_vfb_armory:0 "Pioneros Coloniales"
+tech_building_vfb_armory_desc:0 "Equipar instalaciones blindadas con equipos médicos, de investigación y de defensa personal, mientras se entrena a los colonos en su uso, acelerará y mejorará el proceso de ocupación planetaria. Es importante que también necesitamos agregar instalaciones de manufactura local para asegurar que nuestros colonos puedan producir el equipo y suministros necesarios en el lugar. Idealmente, queremos eliminar la dependencia de cadenas de suministro distantes para las primeras colonias, salvo para planetas estratégicos o inhóspitos."
+
+tech_building_vfb_workshop:0 "Producción Bajo Demanda"
+tech_building_vfb_workshop_desc:0 "Producir una cantidad excesiva de bienes, con la esperanza de liquidar existencias y a menudo fallando en hacerlo, es absurdamente ineficiente. Los avances en las tecnologías de plantillas hacen que la artesanía bajo demanda sea notablemente más rápida, materialmente más barata, más limpia y más eficiente."
+ 
+tech_building_vfb_harbor:0 "Autoridad Portuaria Solar"
+tech_building_vfb_harbor_desc:0 "El crecimiento exponencial de nuestra economía requiere innovaciones infraestructurales y administrativas en constante expansión."
+ 
+tech_building_vfb_logistichub:0 "Distribución Centralizada"
+tech_building_vfb_logistichub_desc:0 "'Extracción, Procesamiento, Manufactura y Consumo' es una cadena inmensamente compleja. Podemos hacerla un poco más organizada."
+ 
+tech_building_vfb_orbitalhub:0 "Logística Transorbital"
+tech_building_vfb_orbitalhub_desc:0 "Transporte. En el espacio."
+ 
+tech_building_vfb_refinery:0 "Instalaciones de Refinamiento Concentrado"
+tech_building_vfb_refinery_desc:0 "Ahora que hemos dominado las tecnologías de síntesis de recursos estratégicos, nos hemos dado cuenta de que no necesitamos tantos edificios para que funcione."
+ 
+tech_building_vfb_resort:0 "Lógica Epicúrea"
+tech_building_vfb_resort_desc:0 "Una población satisfecha es una población productiva. No es exactamente hedonismo, pero no somos monstruos."
+ 
+tech_building_vfb_preserve:0 "Bio-Hábitats"
+tech_building_vfb_preserve_desc:0 "Es nuestro deber proteger la flora y fauna nativas, pero esto no significa que no debamos colonizar en absoluto."
+ 
+tech_building_vfb_asteroid_station:0 "Prospección Espacial"
+tech_building_vfb_asteroid_station_desc:0 "Los asteroides y la materia circumstellar miscelánea son increíblemente ricos en recursos. Estacionarlos en nuestros planetas en lugar de minarlos en el espacio nos permite reciclar y distribuir mejor estos minerales."
+ 
+tech_building_vfb_asteroid_hub_b:0 "Revisiones de Protocolo de Procesamiento"
+tech_building_vfb_asteroid_hub_b_desc:0 "Los avances significativos en la tecnología de fresado significan que cada gramo es valioso. Bueno, no literalmente, pero probablemente podamos encontrar algunos usos para ellos."
+ 
+tech_building_vfb_fusion_plant:0 "Dínamos Entropicos"
+tech_building_vfb_fusion_plant_desc:0 "La conversión eficiente de materia inorgánica a energía siempre ha sido un sueño para la mayoría de las civilizaciones."
+ 
+tech_building_vfb_fusion_complex_b:0 "Redes de Inserción Isocéntricas"
+tech_building_vfb_fusion_complex_b_desc:0 "Tener un gran túnel para lanzar cosas y simplemente lanzarlas una a la vez suena increíblemente aburrido."
+ 
+tech_building_vfb_plastic_plant:0 "Utilidades Plásticas"
+tech_building_vfb_plastic_plant_desc:0 "Si bien abandonar el plástico hace siglos fue fundamental para evitar que nuestro mundo natal se convirtiera en un Mundo Tumba—si es que no lo ha hecho ya—las polimerizaciones no derivadas de productos petroquímicos sino de productos agrícolas tendrán sus usos en nuestra civilización. Lo que importa es que se descomponen mucho más rápido y, crucialmente, en absoluto."
+ 
+tech_building_vfb_plastic_facility_b:0 "Instalaciones Dedicadas de De-Polimerización"
+tech_building_vfb_plastic_facility_b_desc:0 "Algunos azúcares son difíciles de descomponer. Simplemente guárdalos en un barril en algún lugar hasta que se nos ocurra algo."
+ 
+tech_building_vfb_siderurgy:0 "Neo-Siderurgia"
+tech_building_vfb_siderurgy_desc:0 "El fresado de acero fue abandonado hace muchos años por mejores aleaciones, pero nuestra antigua práctica de concentrar calor y hierro crudo para obtener la mayor cantidad de acero posible todavía tiene sus lecciones."
+ 
+tech_building_vfb_lyceum:0 "Neo-Filosofía"
+tech_building_vfb_lyceum_desc:0 "El 'amor al conocimiento' llevó a nuestros ancestros hacia el Método Científico y, eventualmente, hacia las estrellas. Hoy en día, la especulación abstracta y el entrelazamiento del conocimiento se han perdido en la empiria. ¿O no?"
+ 
+tech_building_vfb_museum:0 "Archivos Dinámicos"
+tech_building_vfb_museum_desc:0 "Al integrar datos, hacer referencias cruzadas de información y proporcionar a nuestros científicos de campo métodos de comunicación más fáciles con sus investigadores en el planeta, podemos construir una base de datos de artefactos mucho más eficiente, auto-actualizable y completa."
+ 
+tech_building_vfb_constructor:0 "Universalización de Plantillas"
+tech_building_vfb_constructor_desc:0 "Si bien ciertamente la creatividad nos llevó hasta aquí, no vino acompañada de muchos de nosotros."
+ 
+tech_building_vfb_administration:0 "La Política de la Administración"
+tech_building_vfb_administration_desc:0 "¿No es esta la constitución del Primer Ministro?\n\n¡Oh mira, un parque!"
+ 
+tech_building_vfb_dockyard:0 "Atraque en Capas"
+tech_building_vfb_dockyard_desc:0 "Nuestros Astilleros Estelares y Puertos Interestelares son magníficas muestras de ingeniería y genio administrativo. Como cualquier proyecto importante, independientemente de eso, pueden y serán sobrecargados por órdenes de atraque y reparación en crecimiento, que quitan tiempo y espacio preciosos de los principales muelles y bahías de los Astilleros y Puertos. Adaptar las instalaciones actuales para una retención de doble nivel para acomodar bahías de naves espaciales flotantes y alternas aumentará las capacidades de atraque, reparación, construcción y almacenamiento de naves espaciales simultáneas.
+ 
+decision_vfb_buildspeed_m:0 "Organizar Frentes Pioneros"
+decision_vfb_buildspeed_m_desc:0 "Los Astilleros Estelares han facilitado la afluencia logística de bienes y personas hacia y desde nuestros planetas más habitados, así como los viajes interplanetarios. Con las decisiones administrativas adecuadas, podemos orientarlos hacia las tareas masivas de colonizar nuevos mundos. Redirigir su personal e instalaciones hacia plantillas de construcción y recepción de materiales, dedicar muelles a la gestión de inmigración y atención médica, y usar los muelles restantes como líneas de ensamblaje acelerará el proceso de asentamiento efectivo, aunque dejando a la instalación incapaz de realizar sus deberes habituales con normalidad."
+vfb_buildspeed_m:0 "Pionerismo Organizado"
+vfb_buildspeed_m_desc:0 "Nuestros Astilleros están orientados a recibir inmigrantes, ensamblar robots, proporcionar atención médica y ayudar en la construcción de infraestructuras, con pesadas cargas logísticas, administrativas y productivas."
+pm_vfb_buildspeed_m:0 "Pionerismo Organizado"
+pm_vfb_buildspeed_m_desc:0 "Nuestros Astilleros están orientados a recibir inmigrantes, ensamblar robots, proporcionar atención médica y ayudar en la construcción de infraestructuras, con una pesada carga administrativa."
+
+mod_planet_engineers_minerals_produces_mult:0 "$minerals_with_icon$ from £job_engineer£ $job_engineer_plural$"
+mod_planet_physicists_energy_produces_mult:0 "$energy_with_icon$ from £job_physicist£ $job_physicist_plural$"
+mod_planet_biologists_energy_produces_add:0 "$energy_with_icon$ per 100 £job_biologist£ $job_biologist_plural$"
+mod_planet_biologists_minerals_produces_add:0 "$minerals_with_icon$ per 100 £job_biologist£ $job_biologist_plural$"
+mod_planet_farmers_minerals_produces_add:0 "$minerals_with_icon$ per 100 £job_farmer£ $job_farmer_plural$"
+mod_planet_entertainers_trade_produces_add:0 "$trade_with_icon$ per 100 £job_entertainer£ $job_entertainer_plural$"
+mod_planet_entertainers_food_upkeep_add:0 "$food_with_icon$ Upkeep per 100 £job_entertainer£ $job_entertainer_plural$"
+mod_planet_biologists_unity_produces_add:0 "$unity_with_icon$ per 100 £job_biologist£ $job_biologist_plural$"
+mod_planet_biologists_sr_zro_produces_add:0 "$i_zro$ per 100 £job_biologist£ $job_biologist_plural$"
+mod_planet_biologists_nanites_produces_add:0 "$i_nanites$ per 100 £job_biologist£ $job_biologist_plural$"
+mod_planet_engineers_sr_living_metal_produces_add:0 "$i_living_metal$ per 100 £job_engineer£ $job_engineer_plural$"
+mod_planet_physicists_sr_dark_matter_produces_add:0 "$i_dark_matter$ per 100 £job_physicist£ $job_physicist_plural$"
+mod_pop_clerk_bonus_workforce_mult:0 "Job Efficiency for £job_clerk£ Clerks"
+
+tech_building_vfb_plastic_facility_c:0 "Técnicas de Destilación de Aerosoles"
+tech_building_vfb_plastic_facility_c_desc:0 "Hemos desarrollado una forma de fabricar una síntesis de compuestos similares al Zro aprovechando las redes de separación de sacarosa a baja presión. A través de la acumulación de aerosoles y técnicas avanzadas de destilación, estas instalaciones extraen compuestos valiosos a costa de una eficiencia reducida y un aumento en la generación de desechos."
+
+tech_building_vfb_plastic_facility_d:0 "Técnicas de Inducción Cognito-peligras"
+tech_building_vfb_plastic_facility_d_desc:0 "Con un enfoque completamente surrealista para la planificación de la interfaz de entrada a procesamiento en nanites, es posible inducir una alineación intrincada de la biomasa para explotar las vías de replicación de nanites, lo que permite la producción controlada por lotes de nanites. Este proceso avanzado exige una gestión precisa de la biomasa y una supervisión cuidadosa para garantizar la estabilidad."
+
+tech_building_vfb_fusion_complex_c:0 "Técnicas Primakoff Tangenciales"
+tech_building_vfb_fusion_complex_c_desc:0 "Es posible fabricar y cosechar Materia Oscura simulando las condiciones extremas que se encuentran cerca de los agujeros negros. Este proceso, aunque intensivo en recursos, permite la extracción de este material elusivo a través de la manipulación avanzada de fotones y la resonancia del campo de gluones."
+
+tech_building_vfb_asteroid_hub_c:0 "Técnicas de Inyección Ultrapneumática"
+tech_building_vfb_asteroid_hub_c_desc:0 "Podemos construir instalaciones especializadas diseñadas para producir Metal Vivo rompiendo estructuras macroatómicas bajo condiciones extremas. Este proceso, aunque costoso, proporciona un suministro constante de este recurso raro y valioso, esencial para la construcción y investigación avanzadas."
+
+bombardment_vfb_kinectic:0 "Cinético"
+bombardment_vfb_kinectic_desc:3 "El Bombardeo Cinético emplea tecnología de rayos tractor para arrastrar asteroides hacia rutas de colisión destinadas a planetas hostiles.\n- §R¡Daño Masivo§! a §Y¡Ejércitos§!\n- §R¡Daño Masivo§! a §Y¡Planeta§!\n- §R¡Daño Gargantuesco§! a §Y¡Poblaciones (200-400/m)§!\n- Bombardeará planetas indefensos\n- Puede reducir planetas a Mundos Tumba sin vida\n- El bombardeo cesará cuando comience el combate terrestre"
+orbital_bombardment_vfb_kinectic:0 "Bombardeo Cinético"
+orbital_bombardment_vfb_kinectic_desc:1 "El Bombardeo Cinético emplea tecnología de rayos tractor para arrastrar asteroides hacia rutas de colisión destinadas a planetas hostiles.\n- §R¡Daño Masivo§! a §Y¡Ejércitos§!\n- §R¡Daño Masivo§! a §Y¡Planeta§!\n- §R¡Daño Gargantuesco§! a §Y¡Poblaciones (200-400/m)§!\n- Bombardeará planetas indefensos\n- Puede reducir planetas a Mundos Tumba sin vida\n- El bombardeo cesará cuando comience el combate terrestre"
+orbital_bombardment_vfb_kinectic_name:0 "Bombardeo Cinético"
+tech_building_vfb_asteroid_station_tooltip:0 "Desbloquea la postura de §YKinectic Bombardment§!"

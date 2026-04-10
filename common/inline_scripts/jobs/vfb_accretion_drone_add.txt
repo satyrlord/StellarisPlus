@@ -1,0 +1,21 @@
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = {
+            OR = { is_gestalt = yes is_machine_empire = yes }
+        }
+    }
+    modifier = {
+        job_vfb_accretion_drone_add = $AMOUNT$
+    }
+}
+
+triggered_desc = {
+    trigger = {
+        exists = owner
+        owner = {
+            OR = { is_gestalt = yes is_machine_empire = yes }
+        }
+    }
+    text = job_vfb_accretion_drone_effect_desc
+}

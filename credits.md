@@ -5,6 +5,11 @@ Their original authors are credited below.
 
 Integrated Workshop mods:
 
+- [4.3] VF's Buildings (Workshop ID: 3492424138)
+  Source: backup/3492424138/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3492424138>
+  Author: VFacure <https://steamcommunity.com/id/VFacure/myworkshopfiles/?appid=281990>
+
 - BPV Reborn - Zone Single Row Mode (Workshop ID: 3485762595)
   Source: backup/3485762595/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3485762595>

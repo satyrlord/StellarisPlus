@@ -1,0 +1,10 @@
+# VF's Buildings compatibility stub -- gestalt empires only
+triggered_planet_modifier = {
+    potential = {
+        exists = owner
+        owner = { is_gestalt = yes }
+    }
+    modifier = {
+        job_technician_drone_add = $AMOUNT$
+    }
+}

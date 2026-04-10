@@ -1,0 +1,21 @@
+alloys_expenditure_planets_vf_buildings = {
+	resource = alloys
+	type = expenditure
+	category = planets
+
+	potential = {
+		always = yes
+	}
+
+	weight = {
+		weight = 0.1 #doesn't matter since we have a min and max, but it prob shouldn't be 0
+	}
+
+	desired_min = {
+		base = 500
+	}
+
+	desired_max = {
+		base = 1000
+	}
+}

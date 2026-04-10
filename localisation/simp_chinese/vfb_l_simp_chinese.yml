@@ -1,0 +1,172 @@
+﻿l_simp_chinese:
+  
+  building_vfb_wharf: "恒星码头"
+  building_vfb_wharf_desc: "虽然普通殖民地依赖于跨轨道运输和拆解船只的开拓，但在战略意义更高的星球上，我们可以更进一步。恒星码头是巨型结构，旨在降低舰船燃料消耗，促进外轨道舰船的运作，监控太空，集中海军停泊，并设立行星海关总部。它们连接外轨道与内轨道空间，既是航天器的码头，也是生产流的停泊湾。恒星码头既充当空管塔台，也充当机场本身，还将所有大气入侵集中到我们的星球。"
+  
+  building_vfb_harbor: "星际港口"
+  building_vfb_harbor_desc: "随着我们行星基础设施、贸易、生产和资源流的指数级增长，恒星码头已变得过时。我们不再只关注大气入侵的监控；我们的职责已扩展到协助空间站管理日益繁荣的外太空经济。星际港口由一系列轨道扩展组成，连接到我们已相当庞大的垂直基础设施。标准停靠协议、空间站-行星公共交通、护航和快速反应舰队部署、空间站无法提供的先进医疗，以及作为协调系统内航天器的备份，都是其新职责。像码头一样，港口连接外轨道与内轨道运输，联通所有本地空间站-行星流。"
+  
+  building_vfb_workshop: "模块化工坊"
+  building_vfb_workshop_desc: "模块化工坊配备有锻造、打印机和模板，满足任何殖民者的特殊需求，并提供所有设备和维修材料配额。多余的产能也可出口。"
+  
+  building_vfb_logistichub: "中央物流枢纽"
+  building_vfb_logistichub_desc: "这些大型终端连接并控制着行星上的高速环和磁悬浮网络，能快速分配物资，确保所有生产中心高效运作。中央物流枢纽还调节大多数亚轨道空运货物，并连接我们不断扩展的太阳能收集器、营养复制器和矿石提取器网络，确保没有多余的能量、矿物或食物被浪费。"
+  
+  building_vfb_orbitalhub: "综合轨道枢纽"
+  building_vfb_orbitalhub_desc: "在现有星际港口基础设施上，综合轨道枢纽通过利用行星自转动能，进一步提升运输协议效率。除了优化这些协议外，该项目还集中管理行星电网、矿物净化设施和食品加工中心，提高原材料和精炼资源产出，同时显著减少浪费。不过，这将极其昂贵。"
+  
+  building_vfb_plaza: "市民广场"
+  building_vfb_plaza_desc: "虽然我们的母星有数千年发展公共基础设施的时间，但殖民地却没有这种奢侈。新星球迫切需要中央政府的存在，却没有时间让其自然发展。市民广场将国家的福利和行政职责集中在行星上的中央设施中，精心组织以确保公共服务的最大效率。这些建筑容纳了行星宪兵、卫生设施、公共工程部门和公务员体系，确保所有公民同时获得安全、医疗、基础设施和稳定。"
+  
+  building_vfb_manufactory: "制造综合体"
+  building_vfb_manufactory_desc: "这些大型生产中心融合了3D打印机、锻造、停泊湾、原材料仓库、建筑模板和其他制造必需品。对所有人开放，制造综合体允许公民在自己的星球上、由自己或专家之手，制造家园和码头所需的一切，有望取代母星的传统工业。"
+  
+  building_vfb_residence: "结构化住宅"
+  building_vfb_residence_desc: "我们栖息地的巨大拱门和合金墙壁为房屋的建造提供了充足的空间。"
+  
+  building_vfb_refinery: "精炼站"
+  building_vfb_refinery_desc: "现在我们了解了稀有资源的潜力，我们应该集中精力在专用的精炼站中生产这些资源，以确保所有殖民地都能获得当地供应的这些宝贵物资。"
+  
+  building_vfb_resort: "天堂度假村"
+  building_vfb_resort_desc: "虽然我们的帝国通常只能资助一个度假世界，但我们可以帮助在许多星球上建立大型度假村，为游客提供娱乐、优质食物以及丰富的文化和休闲活动。"
+  
+  building_vfb_preserve: "保护区中心"
+  building_vfb_preserve_desc: "日益增长的城市化和新兴的经济繁荣使我们星球的生态系统面临巨大威胁。保护自然野生动物，无论是多么非凡的本土动植物，甚至为我们开发程度较高的殖民地安装动物园，将使我们的良心得到安宁，确保任何殖民地的生态系统都不会永久灭绝，并为我们提供对外星野生动物的宝贵见解。"
+  
+  building_vfb_siderurgy: "四元锻造厂"
+  building_vfb_siderurgy_desc: "四元锻造厂是一种先进的冶炼和加工中心，将较小的合金厂连接起来，集中它们的物料流入和热能发电机，供给我们的合金锻造厂。这使得以相对较少的人员和较少的物料支出和浪费，生产出大量的有价值的金属组件成为可能，尽管这需要很高的能量成本。我们在拥有该设施的星球上锻造厂的数量越多，冶炼炉的强度就越大，生产的资源就越多。\n\n§Y每建造一个合金铸造厂或同等升级，冶炼师的产出叠加上限提高1，最高可叠加至5.§!"
+  
+  building_vfb_asteroid_station: "日心道"
+  building_vfb_asteroid_station_desc: "通过重新引导和分裂日心物质到外太空，并将其带入我们的行星轨道，我们可以在不损害星球表面地壳的情况下，利用大量急需的材料。这是一个代价高昂且风险重重的事业。"
+  building_vfb_asteroid_hub: "日心道阵列"
+  building_vfb_asteroid_hub_desc: "通过重新引导和分裂日心物质到外太空，并将其带入我们的行星轨道，我们可以在不损害星球表面地壳的情况下，利用大量急需的材料。这是一个代价高昂且风险重重的事业。\n\n§Y该升级设施可容纳更多的探矿者航天器停泊位，并可安装陨石磨坊以提高产品产出.§!"
+  building_vfb_asteroid_hub_b: "陨石磨坊" 
+  building_vfb_asteroid_hub_b_desc: "这些日心物质码头的扩展设施用于精炼已着陆的陨石。它们的设施解放了我们的码头团队，使他们能够更好地专注于重要的外轨道任务，主要是小行星采集。此外，地面团队有更多时间筛选资源，最大化他们的天空同伴带来的资源。 \n\n§B需要建造一个日心道阵列.§!"
+  building_vfb_asteroid_hub_c: "晶格液化器"
+  building_vfb_asteroid_hub_c_desc: "晶格液化器是与我们的日心道阵列一起建造的设施，用于制造和收集活体金属。利用当前的活体金属样本作为起始物质，我们对大量物质施加极端的压力和温度，打破它们的宏观原子结构并液化它们的晶格。在类似的压力下，我们的活体金属起始物质向外扩展，将这些去晶格化的物质整合到它们的结构中。这需要对总成分中金属元素的精细平衡，并且与初始物质投资相比，产生相对较少的活体金属盈余。\n\n§B需要建造至少一个陨石磨坊.§!"
+
+  building_vfb_fusion_plant: "β桥"
+  building_vfb_fusion_plant_desc: "虽然我们的物质转能技术还远未达到预期的高效，但我们已经可以通过高速碰撞原子核并利用释放的热能激发热回收单元来实现物质转能。与聚变电厂不同，这一过程——β收获——不会产生任何剩余的固体物质，因此更为高效。它将以合理的物质成本产生合理的能量。"
+  building_vfb_fusion_complex: "β桥阵列"
+  building_vfb_fusion_complex_desc: "虽然我们的物质转能技术还远未达到预期的高效，但我们已经可以通过高速碰撞原子核并利用释放的热能激发热回收单元来实现物质转能。与聚变电厂不同，这一过程——β收获——不会产生任何剩余的固体物质，因此更为高效。它将以合理的物质成本产生合理的能量。\n\n§Y该升级设施可容纳更多的碰撞器，并可安装热转换器以提高产品产出.§!"
+  building_vfb_fusion_complex_b: "热转换器"
+  building_vfb_fusion_complex_b_desc: "这些β隧道阵列的扩展设施，安装在隧道的巨大跃迁周围，增加了许多物理物质插入点——类似于同步辐射装置——并建立了热回收站的网络，从而提高了通过热回收进行的能量生产活动的效率和数量。\n\n§B需要建造一个β桥阵列.§!"
+  building_vfb_fusion_complex_c: "共振护壁"
+  building_vfb_fusion_complex_c_desc: "共振护壁（音，非涂层，而是护壁）是对我们β桥阵列的可选改造，允许制造和收获暗物质。通过我们当前的基础设施，我们可以加速、繁殖并注入光子到一条与主要物质碰撞器分开的次级桥梁循环中，这些桥梁通过磁性活跃、核密集的护壁分隔。通过这些护壁上的能量场，光子转变为轴子，一种低质量、低能量、色动力学活跃的粒子，可以在暗物质反应堆中捆绑和处理。为了避免这些轴子立即衰变回光子和能量，从而产生剧烈的热能扩散，我们通过胶子场将它们筛选到共振腔中。这就是目前在黑洞的吸积盘中提取暗物质的方式，它们通过自身的旋转惯性和接近事件视界的物质碰撞模拟了这种效应。无需多言，这需要大量的能量和资源。这也将迫使我们将β桥的安全阈值提高到更严格的参数，从而降低其操作效率。\n\n§B需要建造至少一个热转换器.§!"
+  
+  building_vfb_plastic_plant: "聚合物托盘机"
+  building_vfb_plastic_plant_desc: "我们对地面开采的土壤破坏性矿物的依赖，一直是我们在环境保护和资源产出配额方面努力的一个问题。我们的农业工程师最近想出了一个解决方案；基于我们以前对石油基固体产品的使用，新型生物塑料的组成将有效替代提取的矿物，用于生产合金板和消费品。完全环保、天然可降解和全回收的生物塑料精炼过程中的废弃生物物质，也将被转化为甲醇、乙醇和其他燃料替代品，供我们殖民地使用。"
+  building_vfb_plastic_facility: "聚合物托盘化阵列"
+  building_vfb_plastic_facility_desc: "在生物物质和生物塑料的合成、成型和回收方面的优化，为我们的原材料市场开辟了新天地。通过将聚合物化设施分散到地方工厂，我们可以确保大多数殖民地社区拥有清洁高效的替代品，取代提取矿物制造的消费品。\n\n§Y该升级设施可容纳更多的糖分解设备，并可安装分糖器以提高产品产出.§Y!"
+  building_vfb_plastic_facility_b: "分糖器"
+  building_vfb_plastic_facility_b_desc: "某些分子排列在化学上更容易被有机过程构建成糖。然而，这些化合物需要更多的劳动力来分解。通过将那些广泛存在但难以分解的碳水化合物的生物加工阶段路由到单独的设施，我们可以将主要设施专门用于所有分解过程中的共同阶段，从而同时提高处理的生物物质的数量。\n\n§B需要建造一个聚合物托盘化阵列.§!"
+
+  building_vfb_plastic_facility_c: "气溶胶蒸馏技术"
+  building_vfb_plastic_facility_c_desc: "我们已经开发出了一种通过利用低压糖分离网络来制造类似Zro化合物的合成方法。通过气溶胶积累和先进的蒸馏技术，这些设施以降低的效率和增加的废物产生提取有价值的化合物。"
+
+  building_vfb_plastic_facility_d: "认知危害诱导技术"
+  building_vfb_plastic_facility_d_desc: "通过对纳米机器人输入-处理规划的全新、完全超现实的方法，可以诱导复杂的生物物质排列，以利用纳米机器人复制通道，从而实现纳米机器人的受控批量生产。这一先进过程需要精确的生物物质管理和仔细的监督，以确保其稳定性。"
+
+
+  tech_building_vfb_base: "地球同步工程"
+  tech_building_vfb_base_desc: "为了应对太空时代的挑战，我们的文明必须开展伟大的项目，这些项目由于其宏伟，成功实施需要超越地面机械的更多东西。"
+  
+  tech_building_vfb_armory: "殖民开拓"
+  tech_building_vfb_armory_desc: "为装甲设施配备医疗、研究和个人防御设备，并培训殖民者使用，将加速和改善行星占领的过程。重要的是，我们还需要增加当地制造设施，以确保我们的殖民者能够在现场生产所需的设备和补给。理想情况下，我们希望消除对遥远供应链的依赖，特别是对于战略性或不适宜居住的行星。"
+
+  tech_building_vfb_workshop: "按需生产"
+  tech_building_vfb_workshop_desc: "生产过量商品，寄希望于清理库存而往往未能如愿，这是极其低效的。模板技术的进步使得按需手工业的速度、材料成本、清洁度和效率都有了显著提高。"
+  
+  tech_building_vfb_harbor: "太阳港务局"
+  tech_building_vfb_harbor_desc: "我们经济的指数级增长需要不断扩展的基础设施和行政创新。"
+  
+  tech_building_vfb_logistichub: "集中分配"
+  tech_building_vfb_logistichub_desc: "'提取、加工、制造和消费'是一个极其复杂的链条。我们可以让它更有条理一些。"
+  
+  tech_building_vfb_orbitalhub: "跨轨道物流"
+  tech_building_vfb_orbitalhub_desc: "太空中的运输。"
+  
+  tech_building_vfb_refinery: "集中精炼设施"
+  tech_building_vfb_refinery_desc: "现在我们已经掌握了战略资源合成技术，我们意识到我们不需要那么多建筑物来使其发挥作用。"
+  
+  tech_building_vfb_resort: "美食逻辑"
+  tech_building_vfb_resort_desc: "一个满意的民众就是一个高效的民众。这与享乐主义并不完全相同，但我们也不是怪物。"
+  
+  tech_building_vfb_preserve: "生物栖息地"
+  tech_building_vfb_preserve_desc: "保护本土植物和动物的责任在于我们，但这并不意味着我们就不应该殖民。"
+  
+  tech_building_vfb_asteroid_station: "太空勘探"
+  tech_building_vfb_asteroid_station_desc: "小行星和其他日心物质富含资源。将它们停放在我们的星球上，而不是在太空中开采，可以让我们更好地回收和分配这些矿物。"
+  
+  tech_building_vfb_asteroid_hub_b: "加工协议修订"
+  tech_building_vfb_asteroid_hub_b_desc: "铣削技术的重大进步意味着每一克都是宝贵的。好吧，不能字面理解，但我们可能会找到一些用途。"
+  
+  tech_building_vfb_fusion_plant: "熵发电机"
+  tech_building_vfb_fusion_plant_desc: "无机物质高效转化为能量一直是大多数文明的梦想。"
+  
+  tech_building_vfb_fusion_complex_b: "同心插入网络"
+  tech_building_vfb_fusion_complex_b_desc: "拥有一个巨大的隧道来逐个投掷物体听起来无比乏味。"
+  
+  tech_building_vfb_plastic_plant: "塑料公用事业"
+  tech_building_vfb_plastic_plant_desc: "虽然几个世纪前放弃塑料对防止我们的母星变成墓地世界至关重要——如果它还没有变成的话——但不是源自石油化学的聚合物化合物在我们文明中将会有其用武之地。重要的是，它们降解的速度要快得多，并且，关键是，能够完全降解。"
+  
+  tech_building_vfb_plastic_facility_b: "专用去聚合物化设施"
+  tech_building_vfb_plastic_facility_b_desc: "有些糖类很难分解。只需把它们放在某个地方的桶里，直到我们想出办法为止。"
+  
+  tech_building_vfb_siderurgy: "新锻造术"
+  tech_building_vfb_siderurgy_desc: "多年前，钢铁铣削被更好的合金所取代，但我们通过集中热量和原铁来尽可能多地提炼钢铁的古老工艺仍然有其借鉴之处。"
+  
+  tech_building_vfb_lyceum: "新哲学"
+  tech_building_vfb_lyceum_desc: "对知识的热爱驱使我们的祖先走向科学方法，最终走向星辰。今天，抽象的推测和知识的交织已被经验主义所取代。难道不是吗？"
+  
+  tech_building_vfb_museum: "动态档案馆"
+  tech_building_vfb_museum_desc: "通过整合数据、交叉引用信息以及为我们的实地科学家与行星研究人员提供更便捷的沟通方式，我们可以建立一个更高效、自我实现和完整的文物数据库。"
+  
+  tech_building_vfb_constructor: "模板通用化"
+  tech_building_vfb_constructor_desc: "虽然创造力无疑使我们走到了今天，但并不是所有人都具备这种能力。"
+  
+  tech_building_vfb_administration: "行政政策"
+  tech_building_vfb_administration_desc: "这是总理的选区，不是么？\n\n哦，看，一个公园！"
+  
+  tech_building_vfb_dockyard: "分层对接"
+  tech_building_vfb_dockyard_desc: "我们的恒星码头和星际港口是工程和行政天才的壮丽展示。像任何重大项目一样，无论如何，它们都将被日益增长的对接和维修订单所累，这些订单会占用码头和港口主要圆形船坞的宝贵时间和空间。改造现有设施，实现双层停靠，以容纳自由漂浮的交替航天器船坞，将增加同时对接、维修、建造和存储航天器的能力。
+  
+  decision_vfb_buildspeed_m: "组织开拓前线"
+  decision_vfb_buildspeed_m_desc: "恒星码头促进了货物和人员往返于我们最有人口的行星之间，以及星际旅行。通过正确的行政决策，我们可以将其用于协助殖民新世界的重大任务。重新部署人员和设施，专注于建筑模板和物资接收，专门划出船坞用于移民和医疗管理，其余船坞作为组装线，将加快有效定居的过程，尽管这会使设施无法正常履行其通常的职责。"
+  vfb_buildspeed_m: "有序开拓"
+  vfb_buildspeed_m_desc: "我们的码头已调整为接收移民、组装机器人、提供医疗和协助基础设施建设，但这会带来巨大的物流、行政和生产负担。"
+  pm_vfb_buildspeed_m: "有序开拓"
+  pm_vfb_buildspeed_m_desc: "我们的码头已调整为接收移民、组装机器人、提供医疗和协助基础设施建设，但这会带来巨大的行政负担。"
+
+  mod_planet_engineers_minerals_produces_mult: "$minerals_with_icon$ from £job_engineer£ $job_engineer_plural$"
+  mod_planet_physicists_energy_produces_mult: "$energy_with_icon$ from £job_physicist£ $job_physicist_plural$"
+  mod_planet_biologists_energy_produces_add: "$energy_with_icon$ per 100 £job_biologist£ $job_biologist_plural$"
+  mod_planet_biologists_minerals_produces_add: "$minerals_with_icon$ per 100 £job_biologist£ $job_biologist_plural$"
+  mod_planet_farmers_minerals_produces_add: "$minerals_with_icon$ per 100 £job_farmer£ $job_farmer_plural$"
+  mod_planet_entertainers_trade_produces_add: "$trade_with_icon$ per 100 £job_entertainer£ $job_entertainer_plural$"
+  mod_planet_entertainers_food_upkeep_add: "$food_with_icon$ Upkeep per 100 £job_entertainer£ $job_entertainer_plural$"
+  mod_planet_biologists_unity_produces_add: "$unity_with_icon$ per 100 £job_biologist£ $job_biologist_plural$"
+  mod_planet_biologists_sr_zro_produces_add: "$i_zro$ per 100 £job_biologist£ $job_biologist_plural$"
+  mod_planet_biologists_nanites_produces_add: "$i_nanites$ per 100 £job_biologist£ $job_biologist_plural$"
+  mod_planet_engineers_sr_living_metal_produces_add: "$i_living_metal$ per 100 £job_engineer£ $job_engineer_plural$"
+  mod_planet_physicists_sr_dark_matter_produces_add: "$i_dark_matter$ per 100 £job_physicist£ $job_physicist_plural$"
+  mod_pop_clerk_bonus_workforce_mult: "Job Efficiency for £job_clerk£ Clerks"
+
+  tech_building_vfb_plastic_facility_c: "气溶胶蒸馏技术"
+  tech_building_vfb_plastic_facility_c_desc: "我们已经开发出了一种通过利用低压糖分离网络来制造类似Zro化合物的合成方法。通过气溶胶积累和先进的蒸馏技术，这些设施以降低的效率和增加的废物产生提取有价值的化合物。"
+
+  tech_building_vfb_plastic_facility_d: "认知危害诱导技术"
+  tech_building_vfb_plastic_facility_d_desc: "通过对纳米机器人输入-处理规划的全新、完全超现实的方法，可以诱导复杂的生物物质排列，以利用纳米机器人复制通道，从而实现纳米机器人的受控批量生产。这一先进过程需要精确的生物物质管理和仔细的监督，以确保其稳定性。"
+
+  tech_building_vfb_fusion_complex_c: "切向普里马科夫技术"
+  tech_building_vfb_fusion_complex_c_desc: "通过模拟黑洞附近的极端条件，可以制造和收获暗物质。这一过程虽然资源密集，但通过先进的光子操控和胶子场共振，允许提取这种难以捉摸的物质。"
+
+  tech_building_vfb_asteroid_hub_c: "超气动注射技术"
+  tech_building_vfb_asteroid_hub_c_desc: "我们可以建造专门的设施，通过在极端条件下分解宏观原子结构来生产活体金属。这一过程尽管代价高昂，但为这种稀有而宝贵的资源提供了稳定的供应，对先进的建筑和研究至关重要。"
+
+  bombardment_vfb_kinectic: "动能"
+  bombardment_vfb_kinectic_desc:3 "动能轰炸利用牵引波束技术将小行星拖入针对敌对行星的碰撞轨道。\n- 对§Y军队§!造成§R巨大的§!伤害\n- 对§Y行星§!造成§R巨大的§!伤害\n- 对§Y人口（每200-400人）§!造成§RGargantuan§!伤害\n- 将轰炸未防御的行星\n- 可将行星减少为无生命的墓地世界\n- 当地面战斗开始时，轰炸将停止"
+  orbital_bombardment_vfb_kinectic: "动能轰炸"
+  orbital_bombardment_vfb_kinectic_desc:1 "动能轰炸利用牵引波束技术将小行星拖入针对敌对行星的碰撞轨道。\n- 对§Y军队§!造成§R巨大的§!伤害\n- 对§Y行星§!造成§R巨大的§!伤害\n- 对§Y人口（每200-400人）§!造成§RGargantuan§!伤害\n- 将轰炸未防御的行星\n- 可将行星减少为无生命的墓地世界\n- 当地面战斗开始时，轰炸将停止"
+  orbital_bombardment_vfb_kinectic_name: "动能轰炸"
+  tech_building_vfb_asteroid_station_tooltip: "解锁§YKinectic Bombardment§!姿态"

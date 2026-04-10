@@ -10,6 +10,9 @@ tags={
 	"Diplomacy"
 	"Events"
 	"Gameplay"
+	"Technologies"
+	"Economy"
+	"Overhaul"
 }
 name="StellarisPlus"
 supported_version="v4.3.*"
