@@ -1,19 +1,6 @@
-# === merged from aspmod_tech.txt ===
-tech_aspmod_geocentric_device = {
-	cost = 0
-	area = physics
-	tier = 5
-	category = { particles }
-    weight = 0
-
-	ai_weight = {
-        weight = 0      
-	}
-}
-
 # === merged from plentiful_traditions_tech_placeholder.txt ===
-# Placeholder
-
+# NOTE: @variable declarations from this file are placed here at the
+# file head for early resolution. Tech definitions follow after the aspmod_tech section below.
 ##################
 ### TECH COSTS ###
 ##################
@@ -63,7 +50,444 @@ tech_aspmod_geocentric_device = {
 @tier5weight2 = 25
 @tier5weight3 = 20
 
-#######################################################################
+# === merged from 00_vfb_tech.txt ===
+tech_building_vfb_base = {
+	cost = @tier1cost1
+	area = engineering
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_space_exploration" }
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_armory = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_space_exploration" }
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_vfb_workshop = {
+	cost = @tier1cost1
+	area = physics
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { computing }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_harbor = {
+	cost = @tier1cost1
+	area = engineering
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+		#ship_orbit_upkeep_mult = -0.25
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_logistichub = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { new_worlds }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_orbitalhub = {
+	cost = @tier1cost1
+	#REQANTIGRAVITY
+	area = society
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { new_worlds }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_refinery = {
+	cost = @tier1cost1
+	area = engineering
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { industry }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_resort = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { new_worlds }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_preserve = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { new_worlds }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+		
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_asteroid_station = {
+	cost = @tier1cost1
+	area = engineering
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { voidcraft } 
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+		custom_tooltip = tech_building_vfb_asteroid_station_tooltip
+		planet_miners_minerals_produces_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_asteroid_hub_b = {
+	cost = @tier1cost1
+	area = engineering
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { voidcraft }
+	prerequisites = { "tech_building_vfb_base" "tech_building_vfb_asteroid_station" }
+	weight = @tier1weight1
+	
+	modifier = {
+		planet_miners_minerals_produces_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_asteroid_hub_c = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 3
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { materials }
+	prerequisites = { "tech_building_vfb_base" "tech_building_vfb_asteroid_station" "tech_mine_living_metal" }
+	weight = @tier2weight1
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+
+tech_building_vfb_fusion_plant = {
+	cost = @tier1cost1
+	area = physics
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { particles }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+		planet_technician_energy_produces_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_fusion_complex_b = {
+	cost = @tier1cost1
+	area = physics
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { particles }
+	prerequisites = { "tech_building_vfb_base" "tech_building_vfb_fusion_plant" }
+	weight = @tier1weight1
+	
+	modifier = {
+		planet_technician_energy_produces_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_fusion_complex_c = {
+	cost = @tier5cost1
+	area = physics
+	tier = 3
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { particles }
+	prerequisites = { "tech_building_vfb_base" "tech_building_vfb_fusion_complex_b" "tech_mine_dark_matter" }
+	weight = @tier2weight1
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_plastic_plant = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+		planet_farmers_food_produces_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_plastic_facility_b = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_vfb_base" "tech_building_vfb_plastic_plant" }
+	weight = @tier1weight1
+	
+	modifier = {
+		planet_farmers_food_produces_mult = 0.05
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_plastic_facility_c = {
+	cost = @tier5cost1
+	area = society
+	tier = 3
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_vfb_base" "tech_building_vfb_plastic_facility_b" "tech_mine_zro" }
+	weight = @tier2weight1
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_plastic_facility_d = {
+	cost = @tier5cost1
+	area = society
+	tier = 3
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { biology }
+	prerequisites = { "tech_building_vfb_base" "tech_building_vfb_plastic_facility_b" "tech_nanite_transmutation" }
+	weight = @tier2weight1
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+
+tech_building_vfb_siderurgy = {
+	cost = @tier1cost1
+	area = physics
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_lyceum = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_museum = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_building_vfb_administration = {
+	cost = @tier1cost1
+	area = society
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { statecraft }
+	prerequisites = { "tech_building_vfb_base" }
+	weight = @tier1weight1
+	
+	modifier = {
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tech_aspmod_geocentric_device = {
+	cost = 0
+	area = physics
+	tier = 5
+	category = { particles }
+    weight = 0
+
+	ai_weight = {
+        weight = 0      
+	}
+}
+
+# (tech definitions from plentiful_traditions_tech_placeholder.txt)
 
 tech_plentiful_traditions_orbital_fracking_cannon = { #minerals
 	cost = 0

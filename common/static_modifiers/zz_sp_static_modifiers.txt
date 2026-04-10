@@ -336,7 +336,6 @@ introspective_calculator_energy_deficit_3 = {
 introspective_calculator_energy_deficit_4 = {
 	pop_introspective_calculator_bonus_workforce_mult = @stage_4_workforce_penalty
 }
-# === merged from zz_sp_static_modifiers.txt (original) ===
 # === merged from aspmod_static_modifers.txt ===
 #ASP_geocentrism
 aspmod_engineering_bonus = {
@@ -1612,4 +1611,13 @@ simple_planet_refinery_gestalt = {
 	planet_jobs_volatile_motes_upkeep_mult = -0.1
 	planet_jobs_exotic_gases_produces_mult = 0.2
 	planet_jobs_exotic_gases_upkeep_mult = -0.1
+}
+# === merged from 00_vfb_modifiers.txt ===
+vfb_buildspeed_m = {
+	planet_building_build_speed_mult = 0.5
+	bonus_pop_growth_mult = 0.2
+	planet_pop_assembly_mult = 0.2
+	planet_jobs_produces_mult = -0.2
+	icon = "gfx/interface/icons/planet_modifiers/pm_vfb_buildspeed_m.dds"
+	icon_frame = 1
 }

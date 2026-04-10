@@ -1,3 +1,19 @@
+# === merged from vfb_script_values.txt ===
+vfb_polar_cap_variable = {
+	# 'set' modifiers replace the running total rather than adding to it.
+	# Modifiers evaluate top-to-bottom; last matching 'set' wins.
+	# Flag 1 sets value=1; flag 2 overrides to 2 if both flags are present.
+	base = 1
+	modifier = {
+		set = 1
+		has_global_flag = { vfb_polar_cap_1_flag }
+	}
+	modifier = {
+		set = 2
+		has_global_flag = { vfb_polar_cap_2_flag }
+	}
+}
+
 introspective_calculators_job_number = {
 	base = 0
 	add = modifier:codex_quest_progress_add
