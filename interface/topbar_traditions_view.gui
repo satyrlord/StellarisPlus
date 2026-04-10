@@ -401,17 +401,6 @@ guiTypes = {
 					text = "ASCENSION_PERKS"
 					alwaysTransparent = yes
 				}
-				instantTextBoxType = {
-					name = "PLENTIFUL_TRADITIONS_VERSION"
-					font = "cg_16b"
-					position = { x = -18 y = 5 }
-					orientation = upper_right
-					maxWidth = 300
-					maxHeight = 36
-					fixedSize = yes
-					format = right
-					text = "PLENTIFUL_TRADITIONS_VERSION"
-				}
 
 			}
 			containerWindowType = {
