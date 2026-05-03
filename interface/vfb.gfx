@@ -69,6 +69,26 @@ spriteTypes = {
 		name = "GFX_building_vfb_plastic"
 		textureFile = "gfx/interface/icons/buildings/building_vfb_plastic.dds"
 	}
+
+	spriteType = {
+		name = "GFX_building_vfb_comms_a"
+		textureFile = "gfx/interface/icons/buildings/building_vfb_comms_a.dds"
+	}
+
+	spriteType = {
+		name = "GFX_building_vfb_comms_b"
+		textureFile = "gfx/interface/icons/buildings/building_vfb_comms_b.dds"
+	}
+
+	spriteType = {
+		name = "GFX_building_vfb_comms_c"
+		textureFile = "gfx/interface/icons/buildings/building_vfb_comms_c.dds"
+	}
+
+	spriteType = {
+		name = "GFX_building_vfb_comms_d"
+		textureFile = "gfx/interface/icons/buildings/building_vfb_comms_d.dds"
+	}
 	
 	spriteType = {
 		name = "GFX_job_vfb_prospector_bio"
@@ -128,6 +148,24 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_job_vfb_accretion_drone"
 		textureFile = "gfx/interface/icons/jobs/job_vfb_accretion_drone.dds"
+	}
+
+	spriteType = {
+		name = "GFX_colony_type_vfb_engineer_minerals"
+		sprite_sheet_sprite_type = "GFX_colony_type"
+		default_frame = 2
+	}
+
+	spriteType = {
+		name = "GFX_colony_type_col_vfb_physicist_energy"
+		sprite_sheet_sprite_type = "GFX_colony_type"
+		default_frame = 4
+	}
+
+	spriteType = {
+		name = "GFX_colony_type_vfb_biologist_food"
+		sprite_sheet_sprite_type = "GFX_colony_type"
+		default_frame = 7
 	}
 	
 }

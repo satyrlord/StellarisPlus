@@ -1,0 +1,31 @@
+origin_orphan_matrix = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_orphan_matrix.dds"
+	picture = origin_orphan_matrix
+
+	playable = {
+		host_has_dlc = "Synthetic Dawn Story Pack"
+		has_ancrel = yes
+	}
+
+	possible = {
+		authority = { value = auth_machine_intelligence }
+		civics = {
+			NOR = {
+				value = civic_machine_terminator
+				value = civic_machine_servitor
+				value = civic_machine_assimilator
+				value = civic_machine_memorialist
+				value = civic_machine_tactical_algorithms
+			}
+		}
+	}
+
+	random_weight = {
+		base = 100
+	}
+
+	description = "origin_tooltips_orphan_matrix_effects"
+	negative_description = "origin_tooltips_orphan_matrix_negative_effects"
+	flags = { custom_start_screen }
+}

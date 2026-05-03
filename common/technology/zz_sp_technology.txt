@@ -475,6 +475,83 @@ tech_building_vfb_administration = {
 	}
 }
 
+tech_building_vfb_comms_a = {
+	cost = @tier1cost1
+	area = physics
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	prerequisites = { "tech_space_exploration" }
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+}
+
+
+tech_building_vfb_comms_b = {
+	cost = @tier3cost1
+	area = physics
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	prerequisites = { "tech_building_vfb_comms_a" "tech_power_plant_2"}
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_vfb_comms_c = {
+	cost = @tier4cost1
+	area = physics
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	prerequisites = { "tech_building_vfb_comms_b" "tech_power_plant_4"}
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+}
+
+tech_building_vfb_comms_d = {
+	cost = @tier5cost1
+	area = physics
+	tier = 1
+	is_rare = no
+	is_reverse_engineerable = no
+	category = { field_manipulation }
+	prerequisites = { "tech_building_vfb_comms_c"}
+	weight = @tier1weight1
+	
+	modifier = {
+
+	}
+	
+	ai_weight = {
+		factor = 100
+	}
+}
+
 tech_aspmod_geocentric_device = {
 	cost = 0
 	area = physics

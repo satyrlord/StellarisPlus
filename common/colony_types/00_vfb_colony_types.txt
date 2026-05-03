@@ -1,0 +1,145 @@
+#root = planet
+
+@stickiness = 10
+@stickiness_low = 5
+@zone_urban = 100
+@zone_rural = 10
+@rural_max_size = 13
+@rural_over_max_size = -20
+
+col_vfb_engineer_minerals = {
+	icon = GFX_colony_type_vfb_engineer_minerals
+
+	potential = {
+		exists = owner_or_space_owner
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = cosmogenesis_world
+		}
+		is_special_colony_type = no
+		is_capital = no
+		owner_or_space_owner = { is_wilderness_empire = no }
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	inline_script = {
+		script = colony_types/colony_type_planet_modifier
+		MODIFIER = planet_engineers_minerals_produces_mult
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_vfb_engineer_minerals
+		}
+		modifier = {
+			OR = {
+				num_buildings = {
+					type = building_vfb_asteroid_station
+					value > 0
+				}
+				num_buildings = {
+					type = building_vfb_asteroid_hub
+					value > 0
+				}
+			}
+
+			add = @zone_urban
+		}
+	}
+}
+
+col_vfb_physicist_energy = {
+	icon = GFX_colony_type_col_vfb_physicist_energy
+
+	potential = {
+		exists = owner_or_space_owner
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = cosmogenesis_world
+		}
+		is_special_colony_type = no
+		is_capital = no
+		owner_or_space_owner = { is_wilderness_empire = no }
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	inline_script = {
+		script = colony_types/colony_type_planet_modifier
+		MODIFIER = planet_physicists_energy_produces_mult
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_vfb_physicist_energy
+		}
+		modifier = {
+			OR = {
+				num_buildings = {
+					type = building_vfb_fusion_plant
+					value > 0
+				}
+				num_buildings = {
+					type = building_vfb_fusion_complex
+					value > 0
+				}
+			}
+
+			add = @zone_urban
+		}
+	}
+}
+
+col_vfb_biologist_food = {
+	icon = GFX_colony_type_vfb_biologist_food
+
+	potential = {
+		exists = owner_or_space_owner
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = cosmogenesis_world
+		}
+		is_special_colony_type = no
+		is_capital = no
+		owner_or_space_owner = { is_wilderness_empire = no }
+		NOT = { is_planet_class = pc_nanotech }
+	}
+
+	inline_script = {
+		script = colony_types/colony_type_planet_modifier
+		MODIFIER = planet_biologists_energy_produces_mult
+	}
+
+	inline_script = {
+		script = colony_types/colony_type_planet_modifier
+		MODIFIER = planet_biologists_minerals_produces_mult
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = @stickiness
+			has_designation = col_vfb_biologist_food
+		}
+		modifier = {
+			OR = {
+				num_buildings = {
+					type = building_vfb_plastic_plant
+					value > 0
+				}
+				num_buildings = {
+					type = building_vfb_plastic_facility
+					value > 0
+				}
+			}
+
+			add = @zone_urban
+		}
+	}
+}

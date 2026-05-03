@@ -2537,6 +2537,292 @@ building_vfb_museum = {
 	
 
 }
+
+building_vfb_comms_a = {
+
+	category = government
+	
+	base_buildtime = @b1_time
+	empire_limit = { base = 1 }
+	can_build = yes
+	position_priority = 60
+
+	icon = building_vfb_comms_a
+	building_sets = {
+		urban
+		physics
+		engineering
+		society
+		research
+		unity
+		trade
+		government
+	}
+	
+	#desc_placeholder
+	
+	allow = {
+
+	}
+	
+	prerequisites = {
+		"tech_building_vfb_comms_a"
+	}
+	
+	destroy_trigger = {
+		OR = {
+			planet = {
+				OR = {
+					has_modifier = slave_colony
+					has_modifier = resort_colony
+				}
+			}
+		}
+	}
+	
+	planet_modifier = {
+		planet_sensor_range_add = 1
+	}
+	
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 40
+			society_research = 40
+			engineering_research = 40
+			unity = 10
+		}
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_vfb_comms_b"
+	}
+
+	ai_weight_coefficient = 1000
+
+}
+
+building_vfb_comms_b = {
+
+	category = government
+	
+	base_buildtime = @b1_time
+	can_build = no
+	position_priority = 60
+
+	icon = building_vfb_comms_b
+	building_sets = {
+		urban
+		physics
+		engineering
+		society
+		research
+		unity
+		trade
+		government
+	}
+	
+	#desc_placeholder
+	
+	allow = {
+
+	}
+	
+	prerequisites = {
+		"tech_building_vfb_comms_b"
+	}
+	
+	destroy_trigger = {
+		OR = {
+			planet = {
+				OR = {
+					has_modifier = slave_colony
+					has_modifier = resort_colony
+				}
+			}
+			owner = { 
+				is_machine_empire = yes
+				is_hive_empire = yes
+			}
+		}
+	}
+	
+	planet_modifier = {
+
+	}
+	
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 60
+			society_research = 60
+			engineering_research = 60
+			unity = 20
+		}
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_vfb_comms_c"
+	}
+
+	ai_weight_coefficient = 1000
+
+}
+
+
+building_vfb_comms_c = {
+
+	category = government
+	
+	base_buildtime = @b1_time
+	can_build = no
+	position_priority = 60
+
+	icon = building_vfb_comms_c
+	building_sets = {
+		urban
+		physics
+		engineering
+		society
+		research
+		unity
+		trade
+		government
+	}
+	
+	#desc_placeholder
+	
+	allow = {
+
+	}
+	
+	prerequisites = {
+		"tech_building_vfb_comms_c"
+	}
+	
+	destroy_trigger = {
+		OR = {
+			planet = {
+				OR = {
+					has_modifier = slave_colony
+					has_modifier = resort_colony
+				}
+			}
+		}
+	}
+	
+	planet_modifier = {
+
+
+	}
+	
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 80
+			society_research = 80
+			engineering_research = 80
+			unity = 30
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	upgrades = {
+		"building_vfb_comms_d"
+	}
+
+	ai_weight_coefficient = 1000
+
+}
+
+
+building_vfb_comms_d = {
+
+	category = government
+	
+	base_buildtime = @b1_time
+	can_build = no
+	position_priority = 60
+
+	icon = building_vfb_comms_d
+	building_sets = {
+		urban
+		physics
+		engineering
+		society
+		research
+		unity
+		trade
+		government
+	}
+	
+	#desc_placeholder
+	
+	allow = {
+
+	}
+	
+	prerequisites = {
+		"tech_building_vfb_comms_d"
+	}
+	
+	destroy_trigger = {
+		OR = {
+			planet = {
+				OR = {
+					has_modifier = slave_colony
+					has_modifier = resort_colony
+				}
+			}
+			owner = { 
+				is_machine_empire = yes
+				is_hive_empire = yes
+			}
+		}
+	}
+	
+	planet_modifier = {
+
+
+	}
+	
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 100
+			society_research = 100
+			engineering_research = 100
+			unity = 40
+		}
+		cost = {
+			minerals = @b2_minerals
+		}
+		upkeep = {
+			energy = @b2_upkeep
+		}
+	}
+
+	ai_weight_coefficient = 1000
+
+}
+
 # === merged from 99_orphaned_matrix_buildings.txt ===
 @building_introspective_lab_cost_0 = 800
 @building_introspective_lab_cost_1 = 1000
