@@ -93,7 +93,7 @@
  
  # 3rd ARC - Entering the Precursor system
  orphan_matrix_events.52.name:0 "The Graveyard : Dead Star"
- orphan_matrix_events.52.desc:0 "We have arrived into the §Y[from.GetName]§! system.\n\nAs we thought, there is nothing here but silence and death.\nThe star has morphed into a pulsar a long time ago, probably ending any life form and civilization in the system in the process.\n\nFortunately, among debris, deadly radiations and electromagnetic interferences, scanners have revealed what we were looking for : An abandonned §Y$pc_city$§! !"
+ orphan_matrix_events.52.desc:0 "We have arrived into the §Y[From.GetName]§! system.\n\nAs we thought, there is nothing here but silence and death.\nThe star has morphed into a pulsar a long time ago, probably ending any life form and civilization in the system in the process.\n\nFortunately, among debris, deadly radiations and electromagnetic interferences, scanners have revealed what we were looking for : An abandonned §Y$pc_city$§! !"
  orphan_matrix_events.52.option:0 "... H-... Home..?"
  
  # Ruined Arc Furnace
@@ -114,7 +114,7 @@
  
  # 3rd ARC - Home Planet of the Designers
  orphan_matrix_events.60.name:0 "The Graveyard : Among the Ruins"
- orphan_matrix_events.60.desc:0 "We now have a clear scan of §Y[from.GetName]§!'s surface.\n\nThe lifeless and abandonned $pc_city$ is now a pile of forgotten irradiated stones only disturbed by the howling winds in its abandonned streets and the silence of its emptied skies.\n\nThis once thriving world is now a graveyard, a tomb... and a thrilling pile of long forgotten secrets !\n\nWe should explore the surface in order to find something of interest."
+ orphan_matrix_events.60.desc:0 "We now have a clear scan of §Y[From.GetName]§!'s surface.\n\nThe lifeless and abandonned $pc_city$ is now a pile of forgotten irradiated stones only disturbed by the howling winds in its abandonned streets and the silence of its emptied skies.\n\nThis once thriving world is now a graveyard, a tomb... and a thrilling pile of long forgotten secrets !\n\nWe should explore the surface in order to find something of interest."
  orphan_matrix_events.60.option:0 "Activating Archeological Procedures."
  
  # 3rd ARC - Digsite Stage 1

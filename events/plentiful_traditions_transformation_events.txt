@@ -669,6 +669,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		exists = owner
 		owner = {
 			has_tradition = tr_plentiful_transformation_3
 		}
