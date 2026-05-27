@@ -3,6 +3,14 @@
 Date: 2026-03-22
 Order: reverse chronological (latest changes first)
 
+- Bug fix: combat-computer auto-design stuck on Default Combat Computer
+  - Added common/component_templates/zz_sp_combat_computer_fix.txt (LIOS)
+  - Hides COMBAT_COMPUTER_DEFAULT and BIO_COMBAT_COMPUTER_DEFAULT, which
+    have no upgrades_to chain on upgrade_path = default
+  - Restores visible role-specific default computers (Swarm, Picket, Line,
+    Artillery, Torpedo, Carrier, Buffer, Debuffer) so AI and auto-design
+    can upgrade through combat-computer tech tiers again
+
 - Bug fix: More Zones urban support zones now use BPV slot counts
   - Added @BPV_compatibility_load = 1 to
     common/scripted_variables/zz_bpv_defines.txt so integrated BPV
