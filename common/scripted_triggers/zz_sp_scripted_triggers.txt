@@ -1,3 +1,158 @@
+# === merged from soe_triggers.txt ===
+# Scion Origin Expanded — scripted triggers (namespace: soe)
+
+soe_is_active_scion = {
+	has_origin = origin_scion
+	is_ai = no
+	any_agreement = {
+		agreement_preset = preset_scion
+	}
+}
+
+soe_overlord_is_fallen_empire = {
+	exists = overlord
+	overlord = {
+		OR = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+}
+
+soe_has_former_fe_overlord = {
+	any_country = {
+		OR = {
+			root = { has_country_flag = soe_former_overlord@prev }
+			AND = {
+				has_country_flag = scion_master
+				OR = {
+					is_country_type = fallen_empire
+					is_country_type = awakened_fallen_empire
+				}
+			}
+		}
+	}
+}
+
+soe_eligible_for_fleet_gift = {
+	soe_is_active_scion = yes
+	soe_overlord_is_fallen_empire = yes
+	NOT = { has_country_flag = soe_gave_expanded_fleet }
+	mid_game_years_passed >= @soe_fleet_gift_midgame_years
+}
+
+soe_eligible_for_tech_gift = {
+	soe_is_active_scion = yes
+	NOT = { has_country_flag = soe_gave_expanded_tech }
+	mid_game_years_passed >= @soe_tech_gift_midgame_years
+	soe_has_fe_rare_tech_option = yes
+}
+
+soe_has_fe_rare_tech_option = {
+	OR = {
+		soe_can_receive_tech_gift = { TECH = tech_dark_matter_deflector }
+		soe_can_receive_tech_gift = { TECH = tech_dark_matter_power_core }
+		soe_can_receive_tech_gift = { TECH = tech_dark_matter_propulsion }
+	}
+}
+
+soe_can_receive_tech_gift = {
+	NOT = { has_technology = $TECH$ }
+}
+
+soe_eligible_for_crisis_disapproval_event = {
+	has_origin = origin_scion
+	is_ai = no
+	has_country_flag = soe_autonomy_granted
+	has_crisis_level = crisis_level_3
+	NOT = { has_country_flag = soe_crisis_stage3_reaction_fired }
+	soe_has_former_fe_overlord = yes
+}
+
+soe_spiritualist_fe_overlord = {
+	exists = overlord
+	overlord = {
+		is_spiritualist = yes
+		OR = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+}
+
+soe_eligible_for_mind_over_matter_transmission = {
+	has_origin = origin_scion
+	is_ai = no
+	soe_is_active_scion = yes
+	has_ascension_perk = ap_mind_over_matter
+	soe_spiritualist_fe_overlord = yes
+	NOT = { has_country_flag = soe_mind_over_matter_transmission_fired }
+}
+
+soe_materialist_fe_overlord = {
+	exists = overlord
+	overlord = {
+		is_materialist = yes
+		OR = {
+			is_country_type = fallen_empire
+			is_country_type = awakened_fallen_empire
+		}
+	}
+}
+
+soe_eligible_for_artificial_administration_transmission = {
+	has_origin = origin_scion
+	is_ai = no
+	soe_is_active_scion = yes
+	last_increased_tech = tech_synthetic_workers
+	NOT = { has_country_flag = soe_artificial_administration_transmission_fired }
+}
+
+soe_eligible_for_artificial_administration_mat_transmission = {
+	soe_eligible_for_artificial_administration_transmission = yes
+	soe_materialist_fe_overlord = yes
+}
+
+soe_eligible_for_artificial_administration_spirit_transmission = {
+	soe_eligible_for_artificial_administration_transmission = yes
+	soe_spiritualist_fe_overlord = yes
+}
+
+soe_is_valid_tomb_conversion_target = {
+	is_colony = no
+	has_owner = no
+	is_star = no
+	is_asteroid = no
+	NOR = {
+		is_planet_class = pc_gas_giant
+		is_planet_class = pc_molten
+		is_planet_class = pc_toxic
+		is_planet_class = pc_broken
+		is_planet_class = pc_ringworld_habitable
+		is_planet_class = pc_habitat
+	}
+	OR = {
+		is_planet_class = pc_barren
+		is_planet_class = pc_barren_cold
+		is_planet_class = pc_frozen
+	}
+	NOT = { has_planet_flag = soe_tomb_world }
+}
+
+soe_block_fe_milestone_from_soe_gift = {
+	OR = {
+		has_country_flag = soe_suppress_scion_fe_milestone
+		AND = {
+			has_country_flag = soe_gave_expanded_tech
+			OR = {
+				last_increased_tech = tech_dark_matter_deflector
+				last_increased_tech = tech_dark_matter_power_core
+				last_increased_tech = tech_dark_matter_propulsion
+			}
+		}
+	}
+}
+
 # has_precursor_intro is overridden by zz_sp_scripted_triggers.txt which already includes origin_orphan_matrix
 
 is_aggressive_crisis_player = {
@@ -2013,5 +2168,59 @@ gpm_has_other_mod_relic = {
 		has_relic = r_scfe_sless_gene_template
 		has_relic = r_scfe_diary_of_innovo
 		has_relic = r_scfe_astanine_last_projector
+	}
+}
+# === merged from zzz_soe_just_researched_fe_tech.txt ===
+# Suppresses duplicate crisis.7280 after SOE dark-matter gifts (see soe_block_fe_milestone_from_soe_gift).
+# Replaces vanilla just_researched_fe_tech; "already exists" in error.log is expected — mod version wins.
+
+just_researched_fe_tech = {
+	AND = {
+		OR = {
+			last_increased_tech = tech_dark_matter_deflector
+			last_increased_tech = tech_dark_matter_power_core
+			last_increased_tech = tech_dark_matter_propulsion
+			last_increased_tech = tech_cloaking_dark_matter
+			last_increased_tech = tech_fe_affluence_1
+			last_increased_tech = tech_fe_affluence_2
+			last_increased_tech = tech_fe_nourishment_1
+			last_increased_tech = tech_fe_nourishment_2
+			last_increased_tech = tech_fe_fabricator_1
+			last_increased_tech = tech_fe_fabricator_2
+			last_increased_tech = tech_fe_singularity_1
+			last_increased_tech = tech_fe_singularity_2
+			last_increased_tech = tech_fe_forge_1
+			last_increased_tech = tech_fe_forge_2
+			last_increased_tech = tech_fe_dome_1
+			last_increased_tech = tech_fe_dome_2
+			last_increased_tech = tech_fe_fortress_1
+			last_increased_tech = tech_fe_fortress_2
+			last_increased_tech = tech_fe_administration_1
+			last_increased_tech = tech_fe_administration_2
+			last_increased_tech = tech_fe_assembly_1
+			last_increased_tech = tech_fe_assembly_2
+			last_increased_tech = tech_fe_clinic_1
+			last_increased_tech = tech_fe_clinic_2
+			last_increased_tech = tech_fe_security_1
+			last_increased_tech = tech_fe_security_2
+			last_increased_tech = tech_fe_market_1
+			last_increased_tech = tech_fe_market_2
+			last_increased_tech = tech_fe_silo_1
+			last_increased_tech = tech_fe_silo_2
+			last_increased_tech = tech_fe_entertainment_1
+			last_increased_tech = tech_fe_entertainment_2
+			last_increased_tech = tech_fe_lab_1
+			last_increased_tech = tech_fe_lab_2
+			last_increased_tech = tech_fe_mine_1
+			last_increased_tech = tech_fe_mine_2
+			last_increased_tech = tech_cosmogenesis_escort
+			last_increased_tech = tech_cosmogenesis_battlecruiser
+			last_increased_tech = tech_cosmogenesis_FE_titan
+			last_increased_tech = tech_cosmogenesis_mauler
+			last_increased_tech = tech_cosmogenesis_weaver
+			last_increased_tech = tech_cosmogenesis_harbinger
+			last_increased_tech = tech_cosmogenesis_stinger
+		}
+		NOT = { soe_block_fe_milestone_from_soe_gift = yes }
 	}
 }

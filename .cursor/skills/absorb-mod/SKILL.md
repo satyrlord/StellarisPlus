@@ -130,8 +130,6 @@ After user confirms:
    copy English strings as fallback to `l_braz_por`, `l_french`,
    `l_german`, `l_polish`, `l_russian`, `l_simp_chinese`,
    `l_spanish`.
-4. **Run `merge-local-files`** only after quality gate is green. If
-   it introduces issues, fix and re-run.
 
 ### Phase 5 -- Finalize
 

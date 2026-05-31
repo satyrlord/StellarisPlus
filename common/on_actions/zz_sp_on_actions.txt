@@ -1,3 +1,50 @@
+# === merged from soe_on_actions.txt ===
+# Scion Origin Expanded — on_action hooks (namespace: soe)
+
+on_game_start_country = {
+	events = {
+		soe.1
+	}
+}
+
+on_post_communications_established_always_fire = {
+	events = {
+		soe.2
+	}
+}
+
+on_yearly_pulse_country = {
+	events = {
+		soe.3
+		soe.5
+	}
+}
+
+on_monthly_pulse_country = {
+	events = {
+		soe.4
+	}
+}
+
+on_survey_planet = {
+	events = {
+		soe.80
+	}
+}
+
+on_ascension_perk_picked = {
+	events = {
+		soe.90
+	}
+}
+
+on_tech_increased = {
+	events = {
+		soe.91
+		soe.92
+	}
+}
+
 # === merged from !zz_sp_scfe_on_actions.txt ===
 # Preserves the original early-scanning SCFE on_actions ordering in this MERGE folder.
 # === merged from !scfe_on_actions.txt ===
@@ -472,12 +519,6 @@ on_leader_level_up = {
 	events = {
 		plentiful_traditions_experimentalism.4
 		plentiful_traditions_experimentalism.5
-	}
-}
-
-on_tech_increased = {
-	events = {
-
 	}
 }
 
