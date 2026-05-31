@@ -1,7 +1,7 @@
 spriteTypes = {
 
 	spriteType = {
-		name = "GFX_origin_orphan_matrix"
+		name = "origin_orphan_matrix"
 		textureFile = "gfx/event_pictures/origins/origin_orphan_matrix.dds"
 		alwaystransparent = yes
 	}

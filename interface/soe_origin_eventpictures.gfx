@@ -1,0 +1,23 @@
+# Replaces vanilla Scion origin selection art (GFX_origin_scion)
+# Texture: origin_scion.png at native 220x110 — no resize or crop
+
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_origin_scion"
+		textureFile = "gfx/event_pictures/origins/origin_scion.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		parent = "GFX_origin_scion"
+		name = "GFX_origin_scion_zoom_1"
+		upper_left = { x = 0 y = 0 }
+		lower_right = { x = 220 y = 110 }
+	}
+	spriteType = {
+		parent = "GFX_origin_scion"
+		name = "GFX_origin_scion_zoom_2"
+		upper_left = { x = 0 y = 0 }
+		lower_right = { x = 220 y = 110 }
+	}
+}

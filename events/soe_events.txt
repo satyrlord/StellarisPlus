@@ -1,0 +1,519 @@
+###################################
+# Scion Origin Expanded
+# Namespace: soe
+###################################
+
+namespace = soe
+
+##############
+# Game start
+##############
+
+country_event = {
+	id = soe.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_scion
+	}
+
+	immediate = {
+		soe_apply_starting_pop_penalty = yes
+		if = {
+			limit = { is_ai = no }
+			soe_apply_scion_start_modifiers = yes
+			country_event = { id = soe.75 days = 5 }
+		}
+	}
+}
+
+country_event = {
+	id = soe.75
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_scion
+		is_ai = no
+		NOT = { has_country_flag = soe_tomb_world_placed }
+	}
+
+	immediate = {
+		soe_setup_nearby_tomb_world = yes
+	}
+}
+
+country_event = {
+	id = soe.76
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_scion
+		is_ai = no
+		NOT = { has_country_flag = soe_tomb_world_placed }
+	}
+
+	immediate = {
+		soe_setup_nearby_tomb_world = yes
+	}
+}
+
+#############################
+# Parental Supervision upkeep
+#############################
+
+country_event = {
+	id = soe.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			AND = {
+				has_modifier = soe_parental_supervision
+				from = { is_country_type = default }
+			}
+			AND = {
+				from = { has_modifier = soe_parental_supervision }
+				is_country_type = default
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_modifier = soe_parental_supervision
+				from = { is_country_type = default }
+			}
+			soe_apply_parental_supervision_opinion_to_country = { TARGET = from }
+		}
+		if = {
+			limit = {
+				from = { has_modifier = soe_parental_supervision }
+				is_country_type = default
+			}
+			from = {
+				soe_apply_parental_supervision_opinion_to_country = { TARGET = root }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = soe.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_modifier = soe_parental_supervision
+		NOT = { soe_is_active_scion = yes }
+	}
+
+	immediate = {
+		soe_remove_parental_supervision = yes
+	}
+}
+
+#########################
+# Ongoing Scion content
+#########################
+
+country_event = {
+	id = soe.4
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_eligible_for_crisis_disapproval_event = yes
+	}
+
+	immediate = {
+		set_country_flag = soe_crisis_stage3_reaction_fired
+		country_event = { id = soe.70 days = 10 random = 15 }
+	}
+}
+
+country_event = {
+	id = soe.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_scion
+		is_ai = no
+	}
+
+	immediate = {
+		if = {
+			limit = { soe_eligible_for_fleet_gift = yes }
+			random_list = {
+				80 = {}
+				20 = {
+					country_event = { id = soe.40 days = 5 random = 30 }
+				}
+			}
+		}
+		if = {
+			limit = { soe_eligible_for_tech_gift = yes }
+			random_list = {
+				80 = {}
+				20 = {
+					country_event = { id = soe.50 days = 5 random = 30 }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = soe.30
+	title = TRANSMISSION
+	desc = soe.30.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = event_target:soe_overlord
+		planet_background = event_target:soe_overlord
+		graphical_culture = event_target:soe_overlord
+		city_level = event_target:soe_overlord
+		room = event_target:soe_overlord.ruler
+	}
+
+	immediate = {
+		soe_save_overlord_portrait_target = yes
+	}
+
+	option = {
+		name = soe.30.a
+		response_text = soe.30.a.response
+		soe_grant_autonomy_effect = yes
+	}
+}
+
+country_event = {
+	id = soe.40
+	title = TRANSMISSION
+	desc = soe.40.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = overlord
+		planet_background = overlord
+		graphical_culture = overlord
+		city_level = overlord
+		room = overlord.ruler
+	}
+
+	immediate = {
+		soe_save_scion_master_portrait = yes
+	}
+
+	option = {
+		name = soe.40.a
+		custom_tooltip = soe.40.fleet_tooltip
+		hidden_effect = {
+			soe_grant_expanded_fleet_gift = yes
+		}
+	}
+}
+
+country_event = {
+	id = soe.50
+	title = TRANSMISSION
+	desc = soe.50.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = overlord
+		planet_background = overlord
+		graphical_culture = overlord
+		city_level = overlord
+		room = overlord.ruler
+	}
+
+	immediate = {
+		soe_save_scion_master_portrait = yes
+	}
+
+	option = {
+		name = soe.50.a
+		response_text = soe.50.a.response
+		custom_tooltip = soe.50.tech_tooltip
+		soe_grant_random_fe_rare_tech = yes
+	}
+}
+
+country_event = {
+	id = soe.70
+	title = TRANSMISSION
+	desc = soe.70.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = event_target:soe_overlord
+		planet_background = event_target:soe_overlord
+		graphical_culture = event_target:soe_overlord
+		city_level = event_target:soe_overlord
+		room = event_target:soe_overlord.ruler
+	}
+
+	immediate = {
+		soe_save_overlord_portrait_target = yes
+	}
+
+	option = {
+		name = soe.70.a
+	}
+}
+
+# Spiritualist FE overlord — Mind Over Matter ascension perk
+country_event = {
+	id = soe.90
+	title = TRANSMISSION
+	desc = soe.90.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_eligible_for_mind_over_matter_transmission = yes
+	}
+
+	picture_event_data = {
+		portrait = overlord
+		planet_background = overlord
+		graphical_culture = overlord
+		city_level = overlord
+		room = overlord.ruler
+	}
+
+	immediate = {
+		set_country_flag = soe_mind_over_matter_transmission_fired
+		soe_save_scion_master_portrait = yes
+	}
+
+	option = {
+		name = soe.90.a
+		custom_tooltip = soe.90.a.tooltip
+		hidden_effect = {
+			add_resource = { unity = 3000 }
+		}
+	}
+}
+
+# Materialist FE overlord — Artificial Administration (tech_synthetic_workers)
+country_event = {
+	id = soe.91
+	title = TRANSMISSION
+	desc = soe.91.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_eligible_for_artificial_administration_mat_transmission = yes
+	}
+
+	picture_event_data = {
+		portrait = overlord
+		planet_background = overlord
+		graphical_culture = overlord
+		city_level = overlord
+		room = overlord.ruler
+	}
+
+	immediate = {
+		set_country_flag = soe_artificial_administration_transmission_fired
+		soe_save_scion_master_portrait = yes
+	}
+
+	option = {
+		name = soe.91.a
+		add_modifier = {
+			modifier = soe_cautious_ai_research
+			days = 3600
+		}
+	}
+}
+
+# Spiritualist FE overlord — Artificial Administration (tech_synthetic_workers)
+country_event = {
+	id = soe.92
+	title = TRANSMISSION
+	desc = soe.92.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_eligible_for_artificial_administration_spirit_transmission = yes
+	}
+
+	picture_event_data = {
+		portrait = overlord
+		planet_background = overlord
+		graphical_culture = overlord
+		city_level = overlord
+		room = overlord.ruler
+	}
+
+	immediate = {
+		set_country_flag = soe_artificial_administration_transmission_fired
+		soe_save_scion_master_portrait = yes
+	}
+
+	option = {
+		name = soe.92.a
+		add_modifier = {
+			modifier = soe_reconsidered_ai_path
+			days = 3600
+		}
+	}
+
+	option = {
+		name = soe.92.b
+		custom_tooltip = soe.92.b.tooltip
+		add_modifier = {
+			modifier = soe_defiant_ai_research
+			days = 3600
+		}
+		hidden_effect = {
+			overlord = {
+				add_opinion_modifier = {
+					who = root
+					modifier = opinion_soe_defied_spiritualist_ai_warning
+				}
+			}
+		}
+	}
+}
+
+#####################
+# Tomb world chain
+#####################
+
+country_event = {
+	id = soe.79
+	title = soe.80.name
+	desc = soe.80.desc
+	picture = GFX_evt_nuclear_explosion
+	show_sound = event_scanner
+	location = event_target:soe_tomb_planet
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_scion
+		is_ai = no
+		exists = event_target:soe_tomb_planet
+		NOT = { has_country_flag = soe_tomb_investigation_started }
+	}
+
+	immediate = {
+		soe_try_begin_tomb_investigation = yes
+	}
+
+	option = {
+		name = FASCINATING
+	}
+}
+
+ship_event = {
+	id = soe.80
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = owner
+		from = { has_planet_flag = soe_tomb_world }
+		owner = {
+			has_origin = origin_scion
+			is_ai = no
+			NOT = { has_country_flag = soe_tomb_investigation_started }
+		}
+	}
+
+	immediate = {
+		owner = {
+			country_event = { id = soe.79 }
+		}
+	}
+}
+
+country_event = {
+	id = soe.81
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_scion
+		is_ai = no
+		NOT = { has_country_flag = soe_tomb_story_complete }
+	}
+
+	immediate = {
+		set_country_flag = soe_tomb_story_complete
+		country_event = { id = soe.82 days = 3 }
+	}
+}
+
+country_event = {
+	id = soe.82
+	title = TRANSMISSION
+	desc = soe.82.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = overlord
+		planet_background = overlord
+		graphical_culture = overlord
+		city_level = overlord
+		room = overlord.ruler
+	}
+
+	immediate = {
+		soe_save_scion_master_portrait = yes
+	}
+
+	option = {
+		name = soe.82.a
+		hidden_effect = {
+			country_event = { id = soe.83 }
+		}
+	}
+}
+
+country_event = {
+	id = soe.83
+	title = TRANSMISSION
+	desc = soe.83.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	picture_event_data = {
+		portrait = overlord
+		planet_background = overlord
+		graphical_culture = overlord
+		city_level = overlord
+		room = overlord.ruler
+	}
+
+	immediate = {
+		soe_save_scion_master_portrait = yes
+	}
+
+	option = {
+		name = soe.82.b
+		custom_tooltip = soe.83.reward_tooltip
+		hidden_effect = {
+			add_resource = {
+				society_research = 6000
+				unity = 5000
+			}
+		}
+	}
+}

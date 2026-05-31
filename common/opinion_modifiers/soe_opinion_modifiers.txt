@@ -1,0 +1,14 @@
+# Scion Origin Expanded — opinion modifiers (namespace: soe)
+
+# Other default empires view our Scion with suspicion while subject to a Fallen Empire
+opinion_soe_parental_supervision = {
+	opinion = {
+		base = -25
+	}
+}
+
+opinion_soe_defied_spiritualist_ai_warning = {
+	opinion = {
+		base = -30
+	}
+}

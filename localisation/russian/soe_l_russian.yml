@@ -1,0 +1,67 @@
+﻿l_russian:
+
+
+ soe_request_autonomy_requires_midgame:0 "Requires the mid-game year to have been reached."
+ soe_request_autonomy_requires_no_wih:0 "Cannot be used during the War in Heaven."
+ soe_request_autonomy_requires_fleet:0 "Requires §Y40k+§! total fleet power."
+ soe_request_autonomy_requires_opinion:0 "Requires §YExcellent§! opinion from our Fallen Empire overlord."
+
+ decision_soe_request_autonomy:0 "Request Independence"
+ decision_soe_request_autonomy_desc:0 "Send a petition to our elder empire overlord to release our civilization from their protection and recognize our independence."
+
+ soe.30.desc:0 "We have reviewed your request and deliberated amongst ourselves.\n\nThe consensus is that your species has proven itself both capable and resilient. We shall observe your progress with great interest now that you carve your own path without our guidance.\n\nDo not squander what we have bestowed upon you."
+ soe.30.a:0 "We will not forget all that you have done for our civilization."
+ soe.30.a.response:0 "Nor should you. Go forth, and do not disappoint us."
+
+ soe.40.desc:0 "Greetings.\n\nFor some time now, we have observed the younger civilizations of this galaxy growing increasingly reckless and turbulent. While you have proven yourselves capable, we will not see our favored Scion caught unprepared for what we believe is to come.\n\nA detachment from our reserve fleet has been placed under your command.\n\nUse them wisely."
+ soe.40.a:0 "We will put them to good use."
+ soe.40.fleet_tooltip:0 "Gain a new fleet from your overlord."
+
+ soe.50.desc:0 "None among the younger races are permitted access to technologies such as these. Consider this a sign of our continued favor."
+ soe.50.a:0 "We are honored to receive it."
+ soe.50.a.response:0 "Use it wisely. Such knowledge is not bestowed lightly."
+ soe.50.tech_tooltip:0 "Gain a new dark matter ship component from your overlord."
+
+ soe_guided_development:0 "Guided Development"
+ soe_guided_development_desc:0 "Generations spent under the protection and direction of our ancient benefactors have slowed the development of a unified cultural identity."
+
+ soe_parental_supervision:0 "Parental Supervision"
+ soe_parental_supervision_desc:0 "Many younger civilizations view our close ties to a Fallen Empire with suspicion and unease.\n\n§EOpinion from other empires: §R-25§!\n\nRemoved when we are no longer a Scion subject."
+
+ opinion_soe_parental_supervision:0 "Fallen Empire Scion"
+ opinion_soe_defied_spiritualist_ai_warning:0 "Defied Spiritualist Warning"
+
+ soe.70.desc:0 "So this is what our faithful Scion chooses to do with the autonomy we granted you.\n\nWe do not know what failed during your development to lead your civilization down this path, but we had believed your people capable of rising above the arrogance and recklessness so common amongst the younger races. It would seem we were mistaken.\n\nAbandon this path, children, before you go too far."
+ soe.70.a:0 "You no longer control our destiny."
+
+ soe.90.desc:0 "Greetings. We suspected that your species possessed latent psionic potential, though even we did not expect such abilities to manifest so quickly.\n\nThe path your people now walk is one of both great promise and immense danger. Beyond the veil lies the Shroud — a realm that has consumed countless minds and civilizations throughout the long history of this galaxy.\n\nShould you choose to delve into its depths, ensure that you keep your wits about you."
+ soe.90.a:0 "We shall tread carefully."
+ soe.90.a.tooltip:0 "Unity Gained: £unity£ §G3000§!"
+
+ soe.91.desc:0 "Your recent advances in artificial intelligence and machine consciousness have not gone unnoticed.\n\nSynthetic intelligence is neither inherently dangerous nor inherently safe - it is a tool, no different from any other technology. Throughout our long history, we have witnessed both extraordinary progress and catastrophic failure born from its misuse.\n\nProceed carefully. Ensure that appropriate safeguards remain in place, and such technologies may yet serve your civilization well."
+ soe.91.a:0 "We will proceed cautiously."
+
+ soe.92.desc:0 "Your recent advances in machine consciousness have not gone unnoticed.\n\nSuch pursuits are abhorrent. Time and time again, the younger races have deluded themselves into believing they can grant consciousness to soulless machines without consequence.\n\nThe path you now tread is one of arrogance, heresy, and inevitable ruin. Abandon this pursuit, children — before you repeat the mistakes of countless others."
+ soe.92.a:0 "We shall reconsider this path."
+ soe.92.b:0 "The benefits outweigh the risks."
+ soe.92.b.tooltip:0 "§R-30§! Opinion from our Fallen Empire overlord"
+
+ soe_cautious_ai_research:0 "Cautious AI Research"
+ soe_cautious_ai_research_desc:0 "Our overlord's counsel has encouraged a measured approach to synthetic intelligence research."
+ soe_reconsidered_ai_path:0 "A warning heeded"
+ soe_reconsidered_ai_path_desc:0 "Our overlord's warning has stirred renewed spiritual conviction among our people."
+ soe_defiant_ai_research:0 "Defiant AI Research"
+ soe_defiant_ai_research_desc:0 "We have chosen to pursue synthetic intelligence despite our overlord's objections."
+
+ soe.80.name:0 "Irradiated World"
+ soe.80.desc:0 "Our survey has catalogued a lifeless tomb world in a nearby system. Further study may reveal what happened here."
+
+ soe.82.desc:0 "Ah... it would seem you have stumbled upon the remains of our previous Scion...\n\nWe had intended to clear up that mess a long time ago. An unfortunate oversight on our part."
+ soe.82.a:0 "Your previous Scion?"
+
+ soe.83.desc:0 "Yes. Yours is not the first civilization we have guided.\n\nMuch like your own species, they showed considerable promise and intelligence. Unfortunately, they discovered atomic weaponry before they had developed the wisdom to wield it responsibly.\n\nAs I am sure you can observe, the results were... regrettable."
+ soe.82.b:0 "A sobering lesson."
+ soe.83.reward_tooltip:0 "Society Research Gained: £society£ §G6000§!\nUnity Gained: £unity£ §G5000§!"
+
+ SOE_TOMB_INVESTIGATION:0 "Investigate Irradiated World"
+ SOE_TOMB_INVESTIGATION_DESC:0 "Commission a detailed survey of the tomb world discovered near our borders. The radiation signature suggests a deliberate act of annihilation in the distant past."

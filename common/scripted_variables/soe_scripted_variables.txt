@@ -1,0 +1,10 @@
+# Scion Origin Expanded — timing constants (days; 360 days per in-game year)
+
+@soe_fleet_gift_midgame_years = 10
+@soe_tech_gift_midgame_years = 40
+@soe_fleet_gift_large_ships = 3
+@soe_fleet_gift_small_ships = 8
+@soe_request_autonomy_unity_cost = 7000
+@soe_guided_development_years = 40
+@soe_starting_pop_penalty_stacks = 2
+@soe_starting_pop_penalty_chunk = 100

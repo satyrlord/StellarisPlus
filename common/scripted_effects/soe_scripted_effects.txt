@@ -1,0 +1,350 @@
+# Scion Origin Expanded — scripted effects (namespace: soe)
+
+soe_apply_parental_supervision_opinion_to_country = {
+	if = {
+		limit = {
+			exists = $TARGET$
+			root = { has_modifier = soe_parental_supervision }
+			$TARGET$ = {
+				is_country_type = default
+				NOT = { is_same_value = root }
+				NOT = {
+					has_opinion_modifier = {
+						who = root
+						modifier = opinion_soe_parental_supervision
+					}
+				}
+			}
+		}
+		$TARGET$ = {
+			add_opinion_modifier = {
+				who = root
+				modifier = opinion_soe_parental_supervision
+			}
+		}
+	}
+}
+
+soe_refresh_parental_supervision_opinion = {
+	if = {
+		limit = { has_modifier = soe_parental_supervision }
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { is_same_value = root }
+				NOT = {
+					has_opinion_modifier = {
+						who = root
+						modifier = opinion_soe_parental_supervision
+					}
+				}
+			}
+			add_opinion_modifier = {
+				who = root
+				modifier = opinion_soe_parental_supervision
+			}
+		}
+	}
+}
+
+soe_remove_parental_supervision = {
+	if = {
+		limit = { has_modifier = soe_parental_supervision }
+		remove_modifier = soe_parental_supervision
+		every_country = {
+			limit = {
+				has_opinion_modifier = {
+					who = root
+					modifier = opinion_soe_parental_supervision
+				}
+			}
+			remove_opinion_modifier = {
+				who = root
+				modifier = opinion_soe_parental_supervision
+			}
+		}
+	}
+}
+
+soe_convert_planet_to_tomb_world = {
+	change_pc = pc_nuked
+	set_planet_flag = soe_tomb_world
+	prevent_anomaly = yes
+	save_global_event_target_as = soe_tomb_planet
+}
+
+soe_setup_nearby_tomb_world = {
+	if = {
+		limit = { has_country_flag = soe_tomb_world_placed }
+		break = yes
+	}
+	capital_scope = {
+		solar_system = {
+			save_event_target_as = soe_capital_system
+		}
+	}
+	# Prefer unowned worlds 2 hyperlanes out; widen search if Scion borders FE space.
+	random_galaxy_planet = {
+		limit = {
+			soe_is_valid_tomb_conversion_target = yes
+			solar_system = {
+				NOT = { is_same_value = event_target:soe_capital_system }
+				has_owner = no
+				closest_system = {
+					use_bypasses = no
+					min_steps = 2
+					max_steps = 2
+					limit = { is_same_value = event_target:soe_capital_system }
+				}
+			}
+		}
+		soe_convert_planet_to_tomb_world = yes
+	}
+	if = {
+		limit = { NOT = { exists = event_target:soe_tomb_planet } }
+		random_galaxy_planet = {
+			limit = {
+				soe_is_valid_tomb_conversion_target = yes
+				solar_system = {
+					NOT = { is_same_value = event_target:soe_capital_system }
+					closest_system = {
+						use_bypasses = no
+						min_steps = 2
+						max_steps = 3
+						limit = { is_same_value = event_target:soe_capital_system }
+					}
+				}
+			}
+			soe_convert_planet_to_tomb_world = yes
+		}
+	}
+	if = {
+		limit = { NOT = { exists = event_target:soe_tomb_planet } }
+		random_galaxy_planet = {
+			limit = {
+				soe_is_valid_tomb_conversion_target = yes
+				solar_system = {
+					NOT = { is_same_value = event_target:soe_capital_system }
+					closest_system = {
+						use_bypasses = no
+						min_steps = 2
+						max_steps = 5
+						limit = { is_same_value = event_target:soe_capital_system }
+					}
+				}
+			}
+			soe_convert_planet_to_tomb_world = yes
+		}
+	}
+	if = {
+		limit = { exists = event_target:soe_tomb_planet }
+		set_country_flag = soe_tomb_world_placed
+		event_target:soe_tomb_planet = {
+			if = {
+				limit = {
+					root = { is_ai = no }
+					is_surveyed = {
+						who = root
+						status = yes
+					}
+				}
+				root = {
+					country_event = { id = soe.79 days = 1 }
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_country_flag = soe_tomb_world_placed }
+			NOT = { has_country_flag = soe_tomb_placement_retry_scheduled }
+		}
+		set_country_flag = soe_tomb_placement_retry_scheduled
+		country_event = { id = soe.76 days = 60 }
+	}
+}
+
+soe_try_begin_tomb_investigation = {
+	if = {
+		limit = {
+			has_origin = origin_scion
+			is_ai = no
+			NOT = { has_country_flag = soe_tomb_investigation_started }
+			exists = event_target:soe_tomb_planet
+		}
+		event_target:soe_tomb_planet = {
+			if = {
+				limit = {
+					has_planet_flag = soe_tomb_world
+					NOT = { has_planet_flag = soe_tomb_investigated }
+				}
+				set_planet_flag = soe_tomb_investigated
+				root = {
+					set_country_flag = soe_tomb_investigation_started
+					enable_special_project = {
+						name = SOE_TOMB_INVESTIGATION
+						location = prev
+						owner = this
+					}
+				}
+			}
+		}
+	}
+}
+
+soe_apply_starting_pop_penalty = {
+	while = {
+		count = @soe_starting_pop_penalty_stacks
+		random_owned_pop_group = {
+			limit = { pop_group_size >= @soe_starting_pop_penalty_chunk }
+			remove_pop_amount = @soe_starting_pop_penalty_chunk
+		}
+	}
+}
+
+soe_apply_scion_start_modifiers = {
+	add_modifier = {
+		modifier = soe_guided_development
+		years = @soe_guided_development_years
+	}
+	add_modifier = {
+		modifier = soe_parental_supervision
+		days = -1
+	}
+	soe_refresh_parental_supervision_opinion = yes
+}
+
+soe_grant_autonomy_effect = {
+	if = {
+		limit = { exists = overlord }
+		overlord = { save_event_target_as = soe_overlord }
+		set_country_flag = soe_former_overlord@overlord
+	}
+	release_subject = yes
+	soe_remove_parental_supervision = yes
+	set_country_flag = soe_autonomy_granted
+	if = {
+		limit = { exists = event_target:soe_overlord }
+		add_opinion_modifier = {
+			who = event_target:soe_overlord
+			modifier = opinion_subject_released
+		}
+	}
+}
+
+soe_save_scion_master_portrait = {
+	if = {
+		limit = { soe_overlord_is_fallen_empire = yes }
+		overlord = { save_event_target_as = scion_master }
+	}
+}
+
+soe_save_overlord_portrait_target = {
+	if = {
+		limit = { exists = event_target:soe_overlord }
+		event_target:soe_overlord = { save_event_target_as = soe_overlord }
+	}
+	else_if = {
+		limit = { soe_overlord_is_fallen_empire = yes }
+		overlord = { save_event_target_as = soe_overlord }
+	}
+	else = {
+		random_country = {
+			limit = {
+				OR = {
+					root = { has_country_flag = soe_former_overlord@prev }
+					has_country_flag = scion_master
+				}
+			}
+			weights = {
+				base = 1
+				modifier = {
+					factor = 1000
+					root = { has_country_flag = soe_former_overlord@prev }
+				}
+			}
+			save_event_target_as = soe_overlord
+		}
+	}
+}
+
+soe_begin_expanded_tech_gift = {
+	set_country_flag = soe_gave_expanded_tech
+	set_timed_country_flag = { flag = soe_suppress_scion_fe_milestone days = 30 }
+}
+
+soe_grant_expanded_fleet_gift = {
+	set_country_flag = soe_gave_expanded_fleet
+	capital_scope = {
+		create_fleet = {
+			effect = {
+				set_owner = event_target:scion_master
+				while = {
+					count = @soe_fleet_gift_large_ships
+					create_fallen_empire_large_ship = yes
+				}
+				while = {
+					count = @soe_fleet_gift_small_ships
+					create_fallen_empire_small_ship = yes
+				}
+				set_location = {
+					target = prev
+					distance = 45
+					angle = random
+				}
+				set_owner = root
+			}
+		}
+	}
+}
+
+soe_give_tech_dark_matter_deflector = {
+	soe_begin_expanded_tech_gift = yes
+	give_tech_no_error_effect = { MESSAGE = no TECH = tech_shields_3 }
+	give_tech_no_error_effect = { MESSAGE = no TECH = tech_shields_4 }
+	give_tech_no_error_effect = { MESSAGE = no TECH = tech_shields_5 }
+	give_technology = { tech = tech_dark_matter_deflector message = yes }
+}
+
+soe_give_tech_dark_matter_power_core = {
+	soe_begin_expanded_tech_gift = yes
+	give_tech_no_error_effect = { MESSAGE = no TECH = tech_fusion_power }
+	give_tech_no_error_effect = { MESSAGE = no TECH = tech_cold_fusion_power }
+	give_tech_no_error_effect = { MESSAGE = no TECH = tech_antimatter_power }
+	give_tech_no_error_effect = { MESSAGE = no TECH = tech_zero_point_power }
+	give_technology = { tech = tech_dark_matter_power_core message = yes }
+}
+
+soe_give_tech_dark_matter_propulsion = {
+	soe_begin_expanded_tech_gift = yes
+	give_tech_no_error_effect = { MESSAGE = no TECH = tech_thrusters_2 }
+	give_tech_no_error_effect = { MESSAGE = no TECH = tech_thrusters_3 }
+	give_tech_no_error_effect = { MESSAGE = no TECH = tech_thrusters_4 }
+	give_technology = { tech = tech_dark_matter_propulsion message = yes }
+}
+
+soe_grant_random_fe_rare_tech = {
+	locked_random_list = {
+		1 = {
+			modifier = {
+				factor = 0
+				has_technology = tech_dark_matter_deflector
+			}
+			soe_give_tech_dark_matter_deflector = yes
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				has_technology = tech_dark_matter_power_core
+			}
+			soe_give_tech_dark_matter_power_core = yes
+		}
+		1 = {
+			modifier = {
+				factor = 0
+				has_technology = tech_dark_matter_propulsion
+			}
+			soe_give_tech_dark_matter_propulsion = yes
+		}
+	}
+}

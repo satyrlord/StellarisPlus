@@ -1,0 +1,24 @@
+# Scion Origin Expanded — special projects (namespace: soe)
+
+special_project = {
+	key = "SOE_TOMB_INVESTIGATION"
+	cost = 1200
+	tech_department = society_technology
+	timelimit = -1
+	location = yes
+	picture = GFX_evt_nuclear_explosion
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = soe.81 }
+		}
+	}
+}

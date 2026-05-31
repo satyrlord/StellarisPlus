@@ -1,0 +1,25 @@
+# Scion Origin Expanded — empire modifiers (namespace: soe)
+
+soe_guided_development = {
+	icon = "gfx/interface/icons/modifiers/mod_unity_loss_mult.dds"
+	country_unity_produces_mult = -0.10
+}
+
+soe_parental_supervision = {
+	icon = "gfx/interface/icons/modifiers/cost_of_freedom_penalty.dds"
+}
+
+soe_cautious_ai_research = {
+	icon = "gfx/interface/icons/modifiers/mod_job_calculator_add.dds"
+	all_technology_research_speed = 0.05
+}
+
+soe_reconsidered_ai_path = {
+	icon = "gfx/interface/icons/modifiers/mod_ethic_attraction_mult.dds"
+	pop_ethic_spiritualist_attraction_mult = 0.10
+}
+
+soe_defiant_ai_research = {
+	icon = "gfx/interface/icons/modifiers/mod_job_calculator_add.dds"
+	all_technology_research_speed = 0.05
+}

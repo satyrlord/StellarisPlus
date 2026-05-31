@@ -1,0 +1,6 @@
+﻿l_spanish:
+
+
+ origin_scion_desc:0 "A Fallen Empire has meddled in the development of this civilization for thousands of years, guiding them onto a path of their choosing. Yet generations spent beneath the protection and direction of their ancient benefactors have stifled the growth of a unified cultural identity, while other young civilizations view such close ties to a Fallen Empire with suspicion and unease."
+
+ origin_tooltip_scion_effects:0 "- ['concept_scion', £scion£ Scion] of a ['concept_fallen_empire'] Overlord\n- $HOME_SYSTEM$ Connected to Overlord's capital via a ['concept_wormhole']\n- §YFallen Empire§! present in the galaxy regardless of Galaxy settings\n- Chance of receiving powerful gifts from Overlord\n\n§EModifiers:§!\n- Monthly Unity: §R-10%§!\n- Opinion from other empires: §R-25§!\n\n§EPenalties:§!\n- Initial £pop£ §YPops§!: §R-200§!"

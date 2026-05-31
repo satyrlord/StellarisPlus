@@ -62,6 +62,14 @@
 		"3079374348": { "grep": ["3079374348", "Archaeology Story"] },
 		"2807778592": { "grep": ["2807778592", "Extra Events"] },
 		"3062038863": { "grep": ["3062038863", "Forgotten Empires"] },
-		"3160178733": { "grep": ["3160178733", "Orphaned Matrix"] }
+		"3160178733": { "grep": ["3160178733", "Orphaned Matrix"] },
+		"3733766940": {
+			"grep": ["3733766940", "Scion Origin Expanded", "soe_"],
+			"paths": [
+				"events/soe_events.txt",
+				"common/scripted_effects/soe_scripted_effects.txt",
+				"localisation/english/soe_l_english.yml"
+			]
+		}
 	}
 }
