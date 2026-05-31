@@ -55,7 +55,8 @@ analyze, merge, validate, and credit.
 ## Security
 
 - Add the absorbed mod to `credits.md` with name, Workshop ID, source
-  path, and author.
+  path, and author. Extend `tools/credits_date_probes.json` when needed,
+  then run `tools/stellarisplus-refresh-credits-dates.ps1`.
 - Update `descriptor.mod` only to add new `tags` if applicable.
 
 ---
@@ -144,9 +145,12 @@ After user confirms:
 ### Phase 5 -- Finalize
 
 1. **Update `credits.md`** with mod name, Workshop ID, source path,
-   author.
-2. **Update `descriptor.mod`** only to add new `tags` if applicable.
-3. **Report summary**:
+   author. Add a probe entry for the Workshop ID in
+   `tools/credits_date_probes.json` when grep/path heuristics help.
+2. Run `& "tools/stellarisplus-refresh-credits-dates.ps1"` to fill
+   `Last updated` dates from git history.
+3. **Update `descriptor.mod`** only to add new `tags` if applicable.
+4. **Report summary**:
 
    | Metric | Count |
    | ------ | ----- |

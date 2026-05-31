@@ -6,14 +6,6 @@
 
 ### PRE-SCRIPTED
 
-part = {
-	location = 0
-	localization = "START_SCREEN_ASTRORAPTORS"
-	
-	trigger = {
-		has_country_flag = is_astroraptors
-	}		
-}
 # === merged from 99_orphaned_matrix_start_screen.txt ===
 # Orphaned Matrix
 part = {

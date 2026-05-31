@@ -124,7 +124,9 @@ cleanup.
 
 1. **Clean up backup**: `Remove-Item -Path "backup\<id>" -Recurse -Force`
 2. **Update `credits.md`** if mod name or author changed.
-3. **Report summary**:
+3. Run `& "tools/stellarisplus-refresh-credits-dates.ps1"` to refresh
+   `Last updated` dates from git history.
+4. **Report summary**:
 
    | Metric | Count |
    | ------ | ----- |

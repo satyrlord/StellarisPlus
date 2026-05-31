@@ -1,4 +1,0 @@
-
-empire_astroraptors = {
-	flags = { is_astroraptors custom_start_screen }
-}
