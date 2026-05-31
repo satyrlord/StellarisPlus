@@ -1,0 +1,8 @@
+# Any owned planet in a system whose star has eotf_ancient_legacy_chain_system (use solar_system = { has_star_flag … }, not solar_system.star).
+eotf_ancient_legacy_chain_has_survey_candidate = {
+	any_owned_planet = {
+		solar_system = {
+			has_star_flag = eotf_ancient_legacy_chain_system
+		}
+	}
+}

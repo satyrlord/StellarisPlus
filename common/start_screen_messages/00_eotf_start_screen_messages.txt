@@ -1,0 +1,38 @@
+# Start Screen Messages
+# Parameters:
+#	trigger, a trigger with country which decides if this is a valid part. Empty will be treated as always=yes.
+#	localization, a key to a localized string.
+#	location, decides where this chunk of text is located in the description, cannot be negative.
+
+### FIRST PARTS
+
+# Ancient Legacy (Echoes of the Fallen)
+part = {
+	location = 0
+	localization = "START_SCREEN_ANCIENT_LEGACY"
+
+	trigger = {
+		has_origin = origin_ancient_legacy
+		is_gestalt = no
+	}
+}
+
+part = {
+	location = 0
+	localization = "START_SCREEN_ANCIENT_LEGACY_GESTALT"
+
+	trigger = {
+		has_origin = origin_ancient_legacy
+		is_gestalt = yes
+	}
+}
+
+# Divine Hulk
+part = {
+	location = 0
+	localization = "START_SCREEN_DIVINE_HULK"
+
+	trigger = {
+		has_origin = origin_divine_hulk
+	}
+}

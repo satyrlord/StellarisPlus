@@ -1,0 +1,66 @@
+# Ancient Legacy FE infrastructure: add_research_option at Echoes milestones (vanilla buildings, no building overrides).
+# Random FE draws for this origin are gated in zzz_eotf_ancient_legacy_fe_tech_gate.txt by eotf_fe_buildings_tier_* flags.
+# Tier 1 = eotf.8 (habitat databanks). Tier 2 = eotf.12 (design archives). Tier 3 = eotf.14 (capital inheritance).
+# Precursor Archive Recovery counter: +1 per six narrative milestones in events only (not per tech / not eotf.299).
+
+eotf_add_fe_tier1_building_research = {
+	if = {
+		limit = { NOT = { has_technology = tech_fe_security_1 } }
+		add_research_option = tech_fe_security_1
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_dome_1 } }
+		add_research_option = tech_fe_dome_1
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_silo_1 } }
+		add_research_option = tech_fe_silo_1
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_nourishment_1 } }
+		add_research_option = tech_fe_nourishment_1
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_fabricator_1 } }
+		add_research_option = tech_fe_fabricator_1
+	}
+}
+
+eotf_add_fe_tier2_building_research = {
+	if = {
+		limit = {
+			has_technology = tech_fe_nourishment_1
+			NOT = { has_technology = tech_fe_nourishment_2 }
+		}
+		add_research_option = tech_fe_nourishment_2
+	}
+	if = {
+		limit = {
+			has_technology = tech_fe_dome_1
+			NOT = { has_technology = tech_fe_dome_2 }
+		}
+		add_research_option = tech_fe_dome_2
+	}
+	if = {
+		limit = {
+			has_technology = tech_fe_fabricator_1
+			NOT = { has_technology = tech_fe_fabricator_2 }
+		}
+		add_research_option = tech_fe_fabricator_2
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_singularity_1 } }
+		add_research_option = tech_fe_singularity_1
+	}
+}
+
+eotf_add_fe_tier3_building_research = {
+	if = {
+		limit = { NOT = { has_technology = tech_fe_forge_1 } }
+		add_research_option = tech_fe_forge_1
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_mine_1 } }
+		add_research_option = tech_fe_mine_1
+	}
+}

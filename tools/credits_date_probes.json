@@ -70,6 +70,14 @@
 				"common/scripted_effects/soe_scripted_effects.txt",
 				"localisation/english/soe_l_english.yml"
 			]
+		},
+		"3696989150": {
+			"grep": ["3696989150", "Echoes of the Fallen", "eotf_"],
+			"paths": [
+				"events/eotf_events.txt",
+				"common/on_actions/eotf_on_actions.txt",
+				"localisation/english/eotf_l_english.yml"
+			]
 		}
 	}
 }

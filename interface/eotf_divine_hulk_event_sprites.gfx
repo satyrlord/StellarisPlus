@@ -1,0 +1,20 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eotf_evt_divine_hulk"
+		texturefile = "gfx/event_pictures/eotf/divine_hulk.png"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_eotf_evt_repaired_escort"
+		texturefile = "gfx/event_pictures/eotf/repaired_escort.png"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_eotf_evt_divine_hulk_excavation"
+		texturefile = "gfx/event_pictures/eotf/divine_hulk_excavation.png"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+}

@@ -1,0 +1,106 @@
+# Burial world + chain system flags (capital moves do not move the chain).
+# Referenced from eotf.191 and eotf.190.
+
+eotf_ensure_ancient_legacy_chain_markers = {
+	if = {
+		limit = {
+			NOT = {
+				any_owned_planet = {
+					has_planet_flag = eotf_ancient_legacy_burial_world
+				}
+			}
+		}
+		capital_scope = {
+			set_planet_flag = eotf_ancient_legacy_burial_world
+			solar_system = {
+				set_star_flag = eotf_ancient_legacy_chain_system
+			}
+		}
+	}
+	every_owned_planet = {
+		limit = {
+			has_planet_flag = eotf_ancient_legacy_burial_world
+		}
+		solar_system = {
+			set_star_flag = eotf_ancient_legacy_chain_system
+		}
+	}
+}
+
+eotf_save_burial_planet_as_event_target = {
+	random_owned_planet = {
+		limit = {
+			has_planet_flag = eotf_ancient_legacy_burial_world
+		}
+		save_event_target_as = eotf_burial_planet
+	}
+	if = {
+		limit = {
+			NOT = { exists = event_target:eotf_burial_planet }
+		}
+		capital_scope = {
+			save_event_target_as = eotf_burial_planet
+		}
+	}
+}
+
+# Re-save project location for delayed follow-ups (eotf.5–6, 8, 10–11): from = completing ship, orbit = project body.
+
+eotf_restore_outer_survey_world_from_from_orbit = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:eotf_outer_survey_world }
+			exists = from
+		}
+		from = {
+			orbit = {
+				save_event_target_as = eotf_outer_survey_world
+			}
+		}
+	}
+}
+
+eotf_restore_command_trace_world_from_from_orbit = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:eotf_command_trace_world }
+			exists = from
+		}
+		from = {
+			orbit = {
+				save_event_target_as = eotf_command_trace_world
+			}
+		}
+	}
+}
+
+eotf_restore_battlegroup_world_from_from_orbit = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:eotf_battlegroup_world }
+			exists = from
+		}
+		from = {
+			orbit = {
+				save_event_target_as = eotf_battlegroup_world
+			}
+		}
+	}
+}
+
+# Precursor counter +1 (milestone bundles in events). Gated by eotf_chain_started OR has_event_chain.
+eotf_precursor_archive_recovered_one = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = eotf_chain_started
+				has_event_chain = "eotf_echoes_of_the_fallen_chain"
+			}
+		}
+		add_event_chain_counter = {
+			event_chain = "eotf_echoes_of_the_fallen_chain"
+			counter = "eotf_precursor_archive_recovery"
+			amount = 1
+		}
+	}
+}

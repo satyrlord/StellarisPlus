@@ -1,0 +1,132 @@
+# Orbital debris / wreckage (visual only). Prefer a random non-capital planet in the home system.
+
+eotf_spawn_orbital_debris_visuals_on_this = {
+	create_ambient_object = {
+		type = "large_debris_object"
+		use_3d_location = yes
+		entity_offset_height = { min = -14 max = 14 }
+		location = this
+	}
+	last_created_ambient_object = {
+		set_location = {
+			target = prev
+			distance = 38
+			angle = random
+		}
+	}
+	create_ambient_object = {
+		type = "medium_debris_01_object"
+		use_3d_location = yes
+		entity_offset_height = { min = -10 max = 10 }
+		location = this
+	}
+	last_created_ambient_object = {
+		set_location = {
+			target = prev
+			distance = 48
+			angle = random
+		}
+	}
+	while = {
+		count = 5
+		create_ambient_object = {
+			type = "small_debris_object"
+			use_3d_location = yes
+			entity_offset_height = { min = -10 max = 10 }
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 58
+				angle = random
+			}
+		}
+	}
+}
+
+# One debris cluster on a random planet in the home system (requires event_target:eotf_orbital_debris_homeworld_capital).
+# Divine Hulk origin only — called from eotf_spawn_divine_hulk_homeworld_debris.
+eotf_spawn_one_divine_hulk_orbital_debris_field = {
+	if = {
+		limit = {
+			any_system_planet = {
+				is_star = no
+				NOT = { is_same_value = event_target:eotf_orbital_debris_homeworld_capital }
+				NOT = { has_planet_flag = eotf_divine_hulk_debris_host }
+			}
+		}
+		random_system_planet = {
+			limit = {
+				is_star = no
+				NOT = { is_same_value = event_target:eotf_orbital_debris_homeworld_capital }
+				NOT = { has_planet_flag = eotf_divine_hulk_debris_host }
+			}
+			set_planet_flag = eotf_divine_hulk_debris_host
+			eotf_spawn_orbital_debris_visuals_on_this = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_system_planet = {
+				is_star = no
+				NOT = { has_planet_flag = eotf_divine_hulk_debris_host }
+			}
+		}
+		random_system_planet = {
+			limit = {
+				is_star = no
+				NOT = { has_planet_flag = eotf_divine_hulk_debris_host }
+			}
+			set_planet_flag = eotf_divine_hulk_debris_host
+			eotf_spawn_orbital_debris_visuals_on_this = yes
+		}
+	}
+	else = {
+		random_system_planet = {
+			limit = {
+				is_star = no
+			}
+			eotf_spawn_orbital_debris_visuals_on_this = yes
+		}
+	}
+}
+
+# Divine Hulk origin — capital modifier, two orbital debris fields, home-system tag (eotf.250).
+eotf_spawn_divine_hulk_homeworld_debris = {
+	capital_scope = {
+		add_modifier = {
+			modifier = eotf_planet_the_divine_hulk
+			days = -1
+		}
+		save_event_target_as = eotf_orbital_debris_homeworld_capital
+		solar_system = {
+			set_star_flag = eotf_divine_hulk_home_system
+			eotf_spawn_one_divine_hulk_orbital_debris_field = yes
+			eotf_spawn_one_divine_hulk_orbital_debris_field = yes
+			every_system_planet = {
+				limit = {
+					has_planet_flag = eotf_divine_hulk_debris_host
+				}
+				set_planet_flag = eotf_divine_hulk_debris_survey_site
+			}
+		}
+	}
+}
+
+# Begins Questioning the Divine (empire-wide; target = root).
+eotf_start_divine_hulk_debris_situation = {
+	if = {
+		limit = {
+			NOT = {
+				country_has_situation = {
+					SITUATION = situation_eotf_questioning_the_divine
+				}
+			}
+		}
+		start_situation = {
+			type = situation_eotf_questioning_the_divine
+			target = root
+		}
+	}
+}

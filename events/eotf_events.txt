@@ -1,0 +1,2932 @@
+namespace = eotf
+
+# =============================================================================
+# Game start — tag original homeworld system (capital moves do not move the chain).
+# =============================================================================
+
+country_event = {
+    id = eotf.190
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_ancient_legacy
+    }
+
+    immediate = {
+        capital_scope = {
+            set_planet_flag = eotf_ancient_legacy_burial_world
+            solar_system = {
+                set_star_flag = eotf_ancient_legacy_chain_system
+            }
+        }
+    }
+}
+
+# =============================================================================
+# Divine Hulk — debris setup; intro popup two in-game years later (eotf.255 player / eotf.256 AI).
+# =============================================================================
+
+country_event = {
+    id = eotf.250
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_divine_hulk
+    }
+
+    immediate = {
+        eotf_spawn_divine_hulk_homeworld_debris = yes
+        if = {
+            limit = {
+                is_ai = no
+            }
+            country_event = {
+                id = eotf.255
+                days = 720
+            }
+        }
+        else = {
+            country_event = {
+                id = eotf.256
+                days = 720
+            }
+        }
+    }
+}
+
+country_event = {
+    id = eotf.255
+    title = eotf.255.name
+    desc = eotf.255.desc
+    picture = GFX_eotf_evt_divine_hulk
+    show_sound = event_mystic_reveal_light
+    location = capital_scope
+
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_divine_hulk
+    }
+
+    option = {
+        name = eotf.255.a
+        custom_tooltip = eotf.255.a_tt
+
+        hidden_effect = {
+            eotf_start_divine_hulk_debris_situation = yes
+        }
+    }
+}
+
+country_event = {
+    id = eotf.256
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = yes
+        has_origin = origin_divine_hulk
+    }
+
+    immediate = {
+        eotf_start_divine_hulk_debris_situation = yes
+    }
+}
+
+# =============================================================================
+# Divine Hulk archaeology — Unearthing the Divine Hulk (eotf_site_divine_hulk): eotf.257 / eotf.258 / eotf.263
+# =============================================================================
+
+fleet_event = {
+    id = eotf.257
+    title = eotf_dh_arc1_name
+    desc = eotf_dh_arc1_desc
+    picture = GFX_eotf_evt_divine_hulk_excavation
+    show_sound = archeology_log_entry_neutral
+    location = from
+
+    archaeology = yes
+    is_triggered_only = yes
+
+    immediate = {
+        from = {
+            set_site_progress_locked = yes
+        }
+    }
+
+    after = {
+        from = {
+            set_site_progress_locked = no
+        }
+    }
+
+    option = {
+        name = eotf_dh_arc1_a
+    }
+}
+
+fleet_event = {
+    id = eotf.258
+    title = eotf_dh_arc2_name
+    desc = eotf_dh_arc2_desc
+    picture = GFX_eotf_evt_divine_hulk_excavation
+    show_sound = archeology_log_entry_positive
+    location = from
+
+    archaeology = yes
+    is_triggered_only = yes
+
+    immediate = {
+        from = {
+            set_site_progress_locked = yes
+        }
+    }
+
+    after = {
+        from = {
+            set_site_progress_locked = no
+        }
+    }
+
+    option = {
+        name = eotf_dh_arc2_a
+    }
+}
+
+fleet_event = {
+    id = eotf.263
+    title = eotf_dh_arc3_name
+    desc = eotf_dh_arc3_desc
+    picture = GFX_eotf_evt_divine_hulk_excavation
+    show_sound = archeology_log_entry_positive
+    location = from
+
+    archaeology = yes
+    is_triggered_only = yes
+
+    immediate = {
+        from = {
+            set_site_progress_locked = yes
+        }
+    }
+
+    after = {
+        from = {
+            set_site_progress_locked = no
+        }
+    }
+
+    option = {
+        name = eotf_dh_arc3_a
+
+        hidden_effect = {
+            owner = {
+                capital_scope = {
+                    enable_special_project = {
+                        name = "eotf_divine_hulk_restoration"
+                        location = this
+                        owner = prev
+                    }
+                }
+            }
+        }
+    }
+}
+
+country_event = {
+    id = eotf.259
+    title = eotf.259.name
+    desc = eotf.259.desc
+    picture = GFX_eotf_evt_repaired_escort
+    show_sound = event_ship_bridge
+
+    is_triggered_only = yes
+
+    location = capital_scope
+
+    trigger = {
+        has_origin = origin_divine_hulk
+    }
+
+    option = {
+        name = eotf.259.a
+
+        hidden_effect = {
+            every_owned_planet = {
+                limit = {
+                    has_modifier = eotf_planet_the_divine_hulk
+                }
+                remove_modifier = eotf_planet_the_divine_hulk
+            }
+            set_country_flag = eotf_divine_hulk_restored
+            add_modifier = {
+                modifier = eotf_divine_hulk_legacy
+                days = -1
+            }
+            capital_scope = {
+                solar_system = {
+                    star = {
+                        save_event_target_as = eotf_dh_reward_star
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    exists = event_target:eotf_dh_reward_star
+                }
+                create_fleet = {
+                    name = "NAME_Divine_Hulk_Fleet"
+                    settings = {
+                        spawn_debris = no
+                        is_boss = no
+                        uses_naval_capacity = yes
+                    }
+                    effect = {
+                        set_owner = root
+                        create_ship = {
+                            name = "NAME_Divine_Hulk"
+                            design = "NAME_Divine_Hulk"
+                            graphical_culture = "fallen_empire_02"
+                            prefix = no
+                            upgradable = yes
+                            effect = {
+                                set_ship_flag = eotf_divine_hulk_ship
+                                add_modifier = {
+                                    modifier = eotf_divine_hulk_awakened
+                                    days = -1
+                                }
+                                add_modifier = {
+                                    modifier = eotf_divine_hulk_free_upkeep
+                                    days = -1
+                                }
+                            }
+                        }
+                        set_location = {
+                            target = event_target:eotf_dh_reward_star
+                            distance = 45
+                            angle = random
+                            direction = in_system
+                        }
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    is_ai = no
+                    NOT = { has_country_flag = eotf_dh_reverse_engineering_queued }
+                }
+                set_country_flag = eotf_dh_reverse_engineering_queued
+                country_event = {
+                    id = eotf.265
+                    days = 5400
+                }
+            }
+            if = {
+                limit = {
+                    is_ai = no
+                    NOT = { has_country_flag = eotf_dh_divide_healed_queued }
+                }
+                set_country_flag = eotf_dh_divide_healed_queued
+                country_event = {
+                    id = eotf.267
+                    days = 1800
+                }
+            }
+        }
+    }
+}
+
+# Divine Hulk — restored escort destroyed (on_ship_destroyed_victim; ship flag set at eotf.259).
+country_event = {
+    id = eotf.264
+    title = eotf.264.name
+    desc = eotf.264.desc
+    picture = GFX_evt_exploding_ship
+    show_sound = event_bad_omen
+
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_divine_hulk
+        has_country_flag = eotf_divine_hulk_restored
+        NOT = { has_country_flag = eotf_divine_hulk_memorial_done }
+        fromfrom = {
+            has_ship_flag = eotf_divine_hulk_ship
+        }
+    }
+
+    immediate = {
+        set_country_flag = eotf_divine_hulk_memorial_done
+    }
+
+    option = {
+        name = eotf.264.a
+    }
+}
+
+# Divine Hulk — Reverse Engineering Initiative (15 years after eotf.259; player only).
+
+country_event = {
+    id = eotf.265
+    title = eotf.265.name
+    desc = eotf.265.desc
+    picture = GFX_eotf_evt_repaired_escort
+    show_sound = event_laboratory_sound
+
+    is_triggered_only = yes
+
+    location = capital_scope
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_divine_hulk
+        has_country_flag = eotf_divine_hulk_restored
+        NOT = { has_technology = tech_cosmogenesis_escort }
+        NOT = { has_country_flag = eotf_dh_reverse_engineering_done }
+    }
+
+    option = {
+        name = eotf.265.a
+        custom_tooltip = eotf.265.a_tt
+
+        hidden_effect = {
+            set_country_flag = eotf_dh_reverse_engineering_done
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_cosmogenesis_escort }
+                }
+                add_research_option = tech_cosmogenesis_escort
+            }
+        }
+    }
+}
+
+# Divine Hulk — The Divide Healed (~5 years after eotf.259; player only).
+
+country_event = {
+    id = eotf.267
+    title = eotf.267.name
+    desc = eotf.267.desc
+    picture = GFX_evt_grand_speech
+    show_sound = event_celebration
+
+    is_triggered_only = yes
+
+    location = capital_scope
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_divine_hulk
+        has_country_flag = eotf_divine_hulk_restored
+        NOT = { has_country_flag = eotf_dh_divide_healed_done }
+    }
+
+    immediate = {
+        set_country_flag = eotf_dh_divide_healed_done
+        remove_country_flag = eotf_dh_divide_healed_queued
+    }
+
+    option = {
+        name = eotf.267.a
+        custom_tooltip = eotf.267.a_tt
+
+        hidden_effect = {
+            add_modifier = {
+                modifier = eotf_united_by_the_divine_hulk
+                days = 18000
+            }
+        }
+    }
+}
+
+# Divine Hulk — Questioning the Divine: stage milestones (situation hooks).
+# eotf.260 / eotf.261: situation_event (fired from situation on_first_enter; avoids blank country_event shells).
+# eotf.262: country_event on situation completion; only queued from script for human empires (no event trigger).
+
+situation_event = {
+    id = eotf.260
+    title = eotf.260.name
+    desc = eotf.260.desc
+    picture = GFX_eotf_evt_divine_hulk
+    show_sound = event_mystic_reveal_light
+    location = owner.capital_scope
+
+    is_triggered_only = yes
+
+    option = {
+        name = eotf.260.a
+        custom_tooltip = eotf.260.a_tt
+    }
+}
+
+situation_event = {
+    id = eotf.261
+    title = eotf.261.name
+    desc = eotf.261.desc
+    picture = GFX_evt_alien_propaganda
+    show_sound = event_bad_omen
+    location = owner.capital_scope
+
+    is_triggered_only = yes
+
+    option = {
+        name = eotf.261.a
+        custom_tooltip = eotf.261.a_tt
+    }
+}
+
+country_event = {
+    id = eotf.262
+    title = eotf.262.name
+    desc = eotf.262.desc
+    picture = GFX_eotf_evt_divine_hulk
+    show_sound = event_mystic_reveal
+    location = capital_scope
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_divine_hulk
+    }
+
+    option = {
+        name = eotf.262.a
+        custom_tooltip = eotf.262.a_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    capital_scope = {
+                        NOT = { exists = archaeological_site }
+                        NOT = { has_planet_flag = suppress_archaeological_sites }
+                    }
+                }
+                capital_scope = {
+                    create_archaeological_site = eotf_site_divine_hulk
+                }
+            }
+        }
+    }
+}
+
+# Divine Hulk — religious extremist bombing (random 1–10 years after stage 3; queued from situation).
+
+country_event = {
+    id = eotf.266
+    title = eotf.266.name
+    desc = eotf.266.desc
+    picture = GFX_evt_surrender
+    show_sound = event_ground_battle
+
+    is_triggered_only = yes
+
+    location = capital_scope
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_divine_hulk
+        NOT = { has_country_flag = eotf_dh_extremist_attack_done }
+    }
+
+    immediate = {
+        set_country_flag = eotf_dh_extremist_attack_done
+        remove_country_flag = eotf_dh_extremist_attack_scheduled
+    }
+
+    option = {
+        name = eotf.266.a
+        custom_tooltip = eotf.266.a_tt
+
+        hidden_effect = {
+            capital_scope = {
+                add_modifier = {
+                    modifier = eotf_planet_religious_protests
+                    days = 3600
+                }
+                add_planet_devastation = 15
+            }
+        }
+    }
+}
+
+# =============================================================================
+# Enigmatic Signals / eotf.199 (~2215): optional flavor + nudge before main gate (eotf.191 → eotf.1).
+# Subterranean Signals still waits on eotf.191 (year + tech); we do not override vanilla tech_sensors_2.
+# =============================================================================
+
+country_event = {
+    id = eotf.189
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        NOT = { has_country_flag = eotf_unresolved_echo_fired }
+        NOT = { has_country_flag = eotf_signal_event_issued }
+        NOT = { has_technology = tech_sensors_2 }
+        years_passed > 14
+    }
+
+    immediate = {
+        country_event = { id = eotf.199 }
+    }
+}
+
+country_event = {
+    id = eotf.199
+    title = eotf.199.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.199.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.199.desc_gestalt"
+    }
+    picture = GFX_evt_mysterious_signal
+    show_sound = event_mystic_reveal
+
+    is_triggered_only = yes
+
+    immediate = {
+        set_country_flag = eotf_unresolved_echo_fired
+    }
+
+    location = capital_scope
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.199.a_gestalt
+        custom_tooltip = eotf.199.reward_tt_gestalt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_sensors_2 }
+                }
+                add_research_option = tech_sensors_2
+            }
+            capital_scope = {
+                add_modifier = {
+                    modifier = eotf_unresolved_subsurface_readings_gestalt
+                    days = 3600
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.199.a
+        custom_tooltip = eotf.199.reward_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_sensors_2 }
+                }
+                add_research_option = tech_sensors_2
+            }
+            capital_scope = {
+                add_modifier = {
+                    modifier = eotf_unresolved_subsurface_readings
+                    days = 3600
+                }
+            }
+        }
+    }
+}
+
+# =============================================================================
+# Yearly gates (2200 start: years_passed > N => first eligible calendar year 2201+N; e.g. >24 => 2225)
+# eotf.191 also requires tech_sensors_2 (Gravitic Sensors): narrative + gate until sensor tier catches up.
+# =============================================================================
+
+country_event = {
+    id = eotf.191
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        NOT = { has_country_flag = eotf_signal_event_issued }
+        years_passed > 24
+        has_technology = tech_sensors_2
+    }
+
+    immediate = {
+        set_country_flag = eotf_signal_event_issued
+        eotf_ensure_ancient_legacy_chain_markers = yes
+        if = {
+            limit = {
+                NOT = { has_country_flag = eotf_gravitic_sensor_completion_recorded }
+            }
+            set_country_flag = eotf_gravitic_sensor_completion_recorded
+        }
+        country_event = { id = eotf.1 }
+    }
+}
+
+# =============================================================================
+# Relative chain pacing: +1 / year while eotf_echo_use_relative_pacing and chain unfinished.
+# Must run before eotf.192–198 on the yearly list so gates see the updated counter.
+# =============================================================================
+
+country_event = {
+    id = eotf.115
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_echo_use_relative_pacing
+        NOT = { has_country_flag = eotf_chain_complete }
+    }
+
+    immediate = {
+        change_variable = {
+            which = eotf_echo_years_since_chain
+            value = 1
+        }
+    }
+}
+
+country_event = {
+    id = eotf.192
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_homeworld_site_complete
+        NOT = { has_country_flag = eotf_metallurgy_complete }
+        NOT = { has_country_flag = eotf_metallurgy_offer_issued }
+        OR = {
+            AND = {
+                has_country_flag = eotf_echo_use_relative_pacing
+                check_variable = {
+                    which = eotf_echo_years_since_chain
+                    value >= 5
+                }
+            }
+            AND = {
+                NOT = { has_country_flag = eotf_echo_use_relative_pacing }
+                years_passed > 40
+            }
+        }
+    }
+
+    immediate = {
+        set_country_flag = eotf_metallurgy_offer_issued
+        country_event = { id = eotf.3 }
+    }
+}
+
+country_event = {
+    id = eotf.193
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_metallurgy_complete
+        NOT = { has_country_flag = eotf_outer_system_offer_issued }
+        NOT = { has_special_project = eotf_outer_system_investigation }
+        eotf_ancient_legacy_chain_has_survey_candidate = yes
+        OR = {
+            AND = {
+                has_country_flag = eotf_echo_use_relative_pacing
+                check_variable = {
+                    which = eotf_echo_years_since_chain
+                    value >= 14
+                }
+            }
+            AND = {
+                NOT = { has_country_flag = eotf_echo_use_relative_pacing }
+                years_passed > 53
+            }
+        }
+    }
+
+    immediate = {
+        country_event = { id = eotf.4 }
+    }
+}
+
+country_event = {
+    id = eotf.194
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_containment_complete
+        NOT = { has_country_flag = eotf_command_offer_issued }
+        NOT = { has_special_project = eotf_trace_command_signal }
+        eotf_ancient_legacy_chain_has_survey_candidate = yes
+        OR = {
+            AND = {
+                has_country_flag = eotf_echo_use_relative_pacing
+                check_variable = {
+                    which = eotf_echo_years_since_chain
+                    value >= 24
+                }
+            }
+            AND = {
+                NOT = { has_country_flag = eotf_echo_use_relative_pacing }
+                years_passed > 68
+            }
+        }
+    }
+
+    immediate = {
+        set_country_flag = eotf_command_offer_issued
+        country_event = { id = eotf.7 }
+    }
+}
+
+country_event = {
+    id = eotf.195
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_command_nexus_found
+        NOT = { has_country_flag = eotf_battlegroup_offer_issued }
+        NOT = { has_special_project = eotf_locate_battlegroup }
+        NOT = { has_special_project = eotf_restore_anchorage }
+        eotf_ancient_legacy_chain_has_survey_candidate = yes
+        OR = {
+            AND = {
+                has_country_flag = eotf_echo_use_relative_pacing
+                check_variable = {
+                    which = eotf_echo_years_since_chain
+                    value >= 34
+                }
+            }
+            AND = {
+                NOT = { has_country_flag = eotf_echo_use_relative_pacing }
+                years_passed > 84
+            }
+        }
+    }
+
+    immediate = {
+        set_country_flag = eotf_battlegroup_offer_issued
+        country_event = { id = eotf.9 }
+    }
+}
+
+country_event = {
+    id = eotf.196
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_battlegroup_restored
+        NOT = { has_country_flag = eotf_design_archives_recovered }
+        NOT = { has_country_flag = eotf_archives_offer_issued }
+        OR = {
+            AND = {
+                has_country_flag = eotf_echo_use_relative_pacing
+                check_variable = {
+                    which = eotf_echo_years_since_chain
+                    value >= 44
+                }
+            }
+            AND = {
+                NOT = { has_country_flag = eotf_echo_use_relative_pacing }
+                years_passed > 94
+            }
+        }
+    }
+
+    immediate = {
+        set_country_flag = eotf_archives_offer_issued
+        country_event = { id = eotf.12 }
+    }
+}
+
+country_event = {
+    id = eotf.197
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_design_archives_recovered
+        NOT = { has_country_flag = eotf_fe_notice_triggered }
+        NOT = { has_country_flag = eotf_fe_notice_offer_issued }
+        OR = {
+            AND = {
+                has_country_flag = eotf_echo_use_relative_pacing
+                check_variable = {
+                    which = eotf_echo_years_since_chain
+                    value >= 52
+                }
+            }
+            AND = {
+                NOT = { has_country_flag = eotf_echo_use_relative_pacing }
+                years_passed > 99
+            }
+        }
+    }
+
+    immediate = {
+        set_country_flag = eotf_fe_notice_offer_issued
+        country_event = { id = eotf.13 }
+    }
+}
+
+country_event = {
+    id = eotf.198
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_fe_notice_triggered
+        NOT = { has_country_flag = eotf_chain_complete }
+        NOT = { has_country_flag = eotf_finale_offer_issued }
+        OR = {
+            AND = {
+                has_country_flag = eotf_echo_use_relative_pacing
+                check_variable = {
+                    which = eotf_echo_years_since_chain
+                    value >= 62
+                }
+            }
+            AND = {
+                NOT = { has_country_flag = eotf_echo_use_relative_pacing }
+                years_passed > 114
+            }
+        }
+    }
+
+    immediate = {
+        set_country_flag = eotf_finale_offer_issued
+        country_event = { id = eotf.14 }
+    }
+}
+
+# =============================================================================
+# EVENT 114 — Count years then fire eotf.61 (hidden; on_yearly_pulse_country)
+# Delayed country_event { years = 5 } from options is unreliable in current builds.
+# =============================================================================
+
+country_event = {
+    id = eotf.114
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_escort_schematics_pending
+        has_machine_age_dlc = yes
+        country_uses_bio_ships = no
+    }
+
+    immediate = {
+        change_variable = {
+            which = eotf_escort_years_elapsed
+            value = 1
+        }
+        if = {
+            limit = {
+                check_variable = {
+                    which = eotf_escort_years_elapsed
+                    value >= 5
+                }
+            }
+            remove_country_flag = eotf_escort_schematics_pending
+            country_event = { id = eotf.61 }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 1 — Subterranean Signals (≥2225 + Gravitic Sensors via eotf.191)
+# =============================================================================
+
+country_event = {
+    id = eotf.1
+    title = eotf.1.name
+    desc = {
+        trigger = {
+            is_gestalt = yes
+            has_country_flag = eotf_gravitic_completed_before_2215
+        }
+        text = "eotf.1.desc_early_gestalt"
+    }
+    desc = {
+        trigger = {
+            has_country_flag = eotf_gravitic_completed_before_2215
+        }
+        text = "eotf.1.desc_early"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.1.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.1.desc_gestalt"
+    }
+    picture = GFX_evt_treasure_hunt_1
+    show_sound = event_mystic_reveal
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_save_burial_planet_as_event_target = yes
+    }
+
+    location = event_target:eotf_burial_planet
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.1.a_gestalt
+
+        set_country_flag = eotf_chain_started
+
+        capital_scope = {
+            set_planet_flag = eotf_ancient_legacy_burial_world
+            solar_system = {
+                set_star_flag = eotf_ancient_legacy_chain_system
+            }
+            create_archaeological_site = eotf_site_homeworld
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.1.a
+
+        set_country_flag = eotf_chain_started
+
+        capital_scope = {
+            set_planet_flag = eotf_ancient_legacy_burial_world
+            solar_system = {
+                set_star_flag = eotf_ancient_legacy_chain_system
+            }
+            create_archaeological_site = eotf_site_homeworld
+        }
+    }
+}
+
+# =============================================================================
+# Archaeology stage 1 — Buried Foundations
+# =============================================================================
+
+fleet_event = {
+    id = eotf.50
+    title = eotf.arc1.name
+    desc = eotf.arc1.desc
+    picture = GFX_evt_mining_operations
+    show_sound = archeology_log_entry_neutral
+    location = from
+
+    archaeology = yes
+    is_triggered_only = yes
+
+    immediate = {
+        from = { set_site_progress_locked = yes }
+    }
+
+    after = {
+        from = { set_site_progress_locked = no }
+    }
+
+    option = {
+        name = eotf.arc1.a
+    }
+}
+
+# =============================================================================
+# Archaeology completion — triggers EVENT 2
+# =============================================================================
+
+fleet_event = {
+    id = eotf.51
+    title = eotf.arc2.name
+    desc = eotf.arc2.desc
+    picture = GFX_evt_mining_operations
+    show_sound = archeology_log_entry_positive
+    location = from
+
+    archaeology = yes
+    is_triggered_only = yes
+
+    immediate = {
+        from = { set_site_progress_locked = yes }
+    }
+
+    after = {
+        from = { set_site_progress_locked = no }
+    }
+
+    option = {
+        name = eotf.arc2.a
+
+        owner = {
+            country_event = { id = eotf.2 }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 2 — Ancient Unearthed Complex
+# =============================================================================
+
+country_event = {
+    id = eotf.2
+    title = eotf.2.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.2.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.2.desc_gestalt"
+    }
+    picture = GFX_evt_mining_operations
+    show_sound = archeology_log_entry_positive
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_save_burial_planet_as_event_target = yes
+    }
+
+    location = event_target:eotf_burial_planet
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.2.a_gestalt
+
+        hidden_effect = {
+            set_country_flag = eotf_echo_use_relative_pacing
+            set_variable = {
+                which = eotf_echo_years_since_chain
+                value = 0
+            }
+        }
+
+        set_country_flag = eotf_homeworld_site_complete
+
+        begin_event_chain = {
+            event_chain = eotf_echoes_of_the_fallen_chain
+            target = this
+        }
+
+        capital_scope = {
+            add_modifier = {
+                modifier = eotf_capital_industrial_substrate
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.2.a
+
+        hidden_effect = {
+            set_country_flag = eotf_echo_use_relative_pacing
+            set_variable = {
+                which = eotf_echo_years_since_chain
+                value = 0
+            }
+        }
+
+        set_country_flag = eotf_homeworld_site_complete
+
+        begin_event_chain = {
+            event_chain = eotf_echoes_of_the_fallen_chain
+            target = this
+        }
+
+        capital_scope = {
+            add_modifier = {
+                modifier = eotf_capital_industrial_substrate
+            }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 3 — Ancient Metallurgy (eotf.192: ≥5y after eotf.2 or legacy years_passed > 40)
+# =============================================================================
+
+country_event = {
+    id = eotf.3
+    title = eotf.3.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.3.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.3.desc_gestalt"
+    }
+    picture = GFX_evt_analyzing_artifacts
+    show_sound = event_mystic_reveal
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_save_burial_planet_as_event_target = yes
+    }
+
+    location = event_target:eotf_burial_planet
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.3.a_gestalt
+        custom_tooltip = eotf.3.reward_tt
+
+        set_country_flag = eotf_metallurgy_complete
+
+        add_modifier = {
+            modifier = eotf_engineering_insight
+            days = 3600
+        }
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_mine_living_metal }
+                }
+                add_research_option = tech_mine_living_metal
+            }
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.3.a
+        custom_tooltip = eotf.3.reward_tt
+
+        set_country_flag = eotf_metallurgy_complete
+
+        add_modifier = {
+            modifier = eotf_engineering_insight
+            days = 3600
+        }
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_mine_living_metal }
+                }
+                add_research_option = tech_mine_living_metal
+            }
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 4 — Outer System Anomalies (eotf.193: ≥14y / legacy > 53)
+# =============================================================================
+
+country_event = {
+    id = eotf.4
+    title = eotf.4.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.4.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.4.desc_gestalt"
+    }
+    picture = GFX_evt_communication_event
+    show_sound = event_mystic_reveal
+    location = event_target:eotf_outer_survey_world
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        random_owned_planet = {
+            limit = {
+                solar_system = {
+                    has_star_flag = eotf_ancient_legacy_chain_system
+                }
+            }
+            solar_system = {
+                ordered_system_planet = {
+                    limit = {
+                        is_star = no
+                        NOR = {
+                            has_planet_flag = eotf_ancient_legacy_burial_world
+                            is_same_value = root.capital_scope
+                        }
+                    }
+                    order_by = value:distance_to_system_star
+                    position = 0
+                    inverse = yes
+                    save_event_target_as = eotf_outer_survey_world
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = event_target:eotf_outer_survey_world }
+            }
+            random_owned_planet = {
+                limit = {
+                    solar_system = {
+                        has_star_flag = eotf_ancient_legacy_chain_system
+                    }
+                }
+                solar_system = {
+                    random_system_planet = {
+                        limit = {
+                            is_star = no
+                            NOR = {
+                                has_planet_flag = eotf_ancient_legacy_burial_world
+                                is_same_value = root.capital_scope
+                            }
+                        }
+                        save_event_target_as = eotf_outer_survey_world
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = event_target:eotf_outer_survey_world }
+            }
+            random_owned_planet = {
+                limit = {
+                    solar_system = {
+                        has_star_flag = eotf_ancient_legacy_chain_system
+                    }
+                }
+                solar_system = {
+                    random_system_planet = {
+                        limit = {
+                            is_star = no
+                            NOT = { has_planet_flag = eotf_ancient_legacy_burial_world }
+                        }
+                        save_event_target_as = eotf_outer_survey_world
+                    }
+                }
+            }
+        }
+        # Single-body home systems: no non-burial planet to survey; use capital so the event has a valid location.
+        if = {
+            limit = {
+                NOT = { exists = event_target:eotf_outer_survey_world }
+            }
+            capital_scope = {
+                save_event_target_as = eotf_outer_survey_world
+            }
+        }
+        if = {
+            limit = {
+                exists = event_target:eotf_outer_survey_world
+            }
+            set_country_flag = eotf_outer_system_offer_issued
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.4.a_gestalt
+        custom_tooltip = eotf.4.project_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = event_target:eotf_outer_survey_world
+                }
+                set_country_flag = eotf_outer_system_site_found
+                event_target:eotf_outer_survey_world = {
+                    enable_special_project = {
+                        name = "eotf_outer_system_investigation"
+                        location = this
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.4.a
+        custom_tooltip = eotf.4.project_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = event_target:eotf_outer_survey_world
+                }
+                set_country_flag = eotf_outer_system_site_found
+                event_target:eotf_outer_survey_world = {
+                    enable_special_project = {
+                        name = "eotf_outer_system_investigation"
+                        location = this
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 5 — Sealed Containment Site
+# =============================================================================
+
+country_event = {
+    id = eotf.5
+    title = eotf.5.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.5.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.5.desc_gestalt"
+    }
+    picture = GFX_evt_the_last_stormshelter
+    show_sound = event_bad_omen
+    location = event_target:eotf_outer_survey_world
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_restore_outer_survey_world_from_from_orbit = yes
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.5.a_gestalt
+        custom_tooltip = eotf.5.stabilize_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = event_target:eotf_outer_survey_world
+                }
+                event_target:eotf_outer_survey_world = {
+                    enable_special_project = {
+                        name = "eotf_stabilize_containment_core"
+                        location = this
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.5.a
+        custom_tooltip = eotf.5.stabilize_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = event_target:eotf_outer_survey_world
+                }
+                event_target:eotf_outer_survey_world = {
+                    enable_special_project = {
+                        name = "eotf_stabilize_containment_core"
+                        location = this
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 6 — Exotic Matter Recovered
+# =============================================================================
+
+country_event = {
+    id = eotf.6
+    title = eotf.6.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.6.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.6.desc_gestalt"
+    }
+    picture = GFX_evt_cosmic_storms_calibration
+    show_sound = archeology_log_entry_positive
+    location = event_target:eotf_outer_survey_world
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_restore_outer_survey_world_from_from_orbit = yes
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.6.a_gestalt
+        custom_tooltip = eotf.6.reward_tt
+
+        set_country_flag = eotf_containment_complete
+
+        add_modifier = {
+            modifier = eotf_dark_matter_theory
+        }
+
+        hidden_effect = {
+            add_resource = { physics_research = 4000 }
+            add_resource = { society_research = 4000 }
+            add_resource = { engineering_research = 4000 }
+            add_resource = { unity = 500 }
+
+            set_country_flag = dark_matter_found
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_mine_dark_matter }
+                }
+                add_research_option = tech_mine_dark_matter
+            }
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.6.a
+        custom_tooltip = eotf.6.reward_tt
+
+        set_country_flag = eotf_containment_complete
+
+        add_modifier = {
+            modifier = eotf_dark_matter_theory
+        }
+
+        hidden_effect = {
+            add_resource = { physics_research = 4000 }
+            add_resource = { society_research = 4000 }
+            add_resource = { engineering_research = 4000 }
+            add_resource = { unity = 500 }
+
+            set_country_flag = dark_matter_found
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_mine_dark_matter }
+                }
+                add_research_option = tech_mine_dark_matter
+            }
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 7 — Command Echoes (eotf.194: ≥24y / legacy > 68)
+# =============================================================================
+
+country_event = {
+    id = eotf.7
+    title = eotf.7.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.7.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.7.desc_gestalt"
+    }
+    picture = GFX_evt_satellite_in_orbit
+    show_sound = event_comms_cutoff
+    location = event_target:eotf_command_trace_world
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        random_owned_planet = {
+            limit = {
+                solar_system = {
+                    has_star_flag = eotf_ancient_legacy_chain_system
+                }
+            }
+            solar_system = {
+                random_system_planet = {
+                    limit = {
+                        is_star = no
+                        NOR = {
+                            has_planet_flag = eotf_ancient_legacy_burial_world
+                            is_same_value = root.capital_scope
+                        }
+                        OR = {
+                            NOT = { exists = event_target:eotf_outer_survey_world }
+                            NOT = { is_same_value = event_target:eotf_outer_survey_world }
+                        }
+                    }
+                    save_event_target_as = eotf_command_trace_world
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = event_target:eotf_command_trace_world }
+            }
+            random_owned_planet = {
+                limit = {
+                    solar_system = {
+                        has_star_flag = eotf_ancient_legacy_chain_system
+                    }
+                }
+                solar_system = {
+                    random_system_planet = {
+                        limit = {
+                            is_star = no
+                            NOR = {
+                                has_planet_flag = eotf_ancient_legacy_burial_world
+                                is_same_value = root.capital_scope
+                            }
+                        }
+                        save_event_target_as = eotf_command_trace_world
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = event_target:eotf_command_trace_world }
+            }
+            random_owned_planet = {
+                limit = {
+                    solar_system = {
+                        has_star_flag = eotf_ancient_legacy_chain_system
+                    }
+                }
+                solar_system = {
+                    random_system_planet = {
+                        limit = {
+                            is_star = no
+                            NOT = { has_planet_flag = eotf_ancient_legacy_burial_world }
+                        }
+                        save_event_target_as = eotf_command_trace_world
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.7.a_gestalt
+        custom_tooltip = eotf.7.project_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = event_target:eotf_command_trace_world
+                }
+                event_target:eotf_command_trace_world = {
+                    enable_special_project = {
+                        name = "eotf_trace_command_signal"
+                        location = this
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.7.a
+        custom_tooltip = eotf.7.project_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = event_target:eotf_command_trace_world
+                }
+                event_target:eotf_command_trace_world = {
+                    enable_special_project = {
+                        name = "eotf_trace_command_signal"
+                        location = this
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 8 — Dormant Command Nexus
+# =============================================================================
+
+country_event = {
+    id = eotf.8
+    title = eotf.8.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.8.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.8.desc_gestalt"
+    }
+    picture = GFX_evt_ancient_databank
+    show_sound = event_mystic_reveal
+    location = event_target:eotf_command_trace_world
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_restore_command_trace_world_from_from_orbit = yes
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.8.a_gestalt
+        custom_tooltip = eotf.8.reward_tt
+
+        hidden_effect = {
+            set_country_flag = eotf_command_nexus_found
+            set_country_flag = eotf_fe_buildings_tier_1
+            eotf_add_fe_tier1_building_research = yes
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.8.a
+        custom_tooltip = eotf.8.reward_tt
+
+        hidden_effect = {
+            set_country_flag = eotf_command_nexus_found
+            set_country_flag = eotf_fe_buildings_tier_1
+            eotf_add_fe_tier1_building_research = yes
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 9 — Reserve Fleet Registries (2295)
+# =============================================================================
+
+country_event = {
+    id = eotf.9
+    title = eotf.9.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.9.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.9.desc_gestalt"
+    }
+    picture = GFX_evt_fleet_neutral
+    show_sound = event_announcement
+    location = event_target:eotf_battlegroup_world
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        random_owned_planet = {
+            limit = {
+                solar_system = {
+                    has_star_flag = eotf_ancient_legacy_chain_system
+                }
+            }
+            solar_system = {
+                random_system_planet = {
+                    limit = {
+                        is_star = no
+                        NOR = {
+                            has_planet_flag = eotf_ancient_legacy_burial_world
+                            is_same_value = root.capital_scope
+                        }
+                        OR = {
+                            NOT = { exists = event_target:eotf_outer_survey_world }
+                            NOT = { is_same_value = event_target:eotf_outer_survey_world }
+                        }
+                        OR = {
+                            NOT = { exists = event_target:eotf_command_trace_world }
+                            NOT = { is_same_value = event_target:eotf_command_trace_world }
+                        }
+                    }
+                    save_event_target_as = eotf_battlegroup_world
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = event_target:eotf_battlegroup_world }
+            }
+            random_owned_planet = {
+                limit = {
+                    solar_system = {
+                        has_star_flag = eotf_ancient_legacy_chain_system
+                    }
+                }
+                solar_system = {
+                    random_system_planet = {
+                        limit = {
+                            is_star = no
+                            NOR = {
+                                has_planet_flag = eotf_ancient_legacy_burial_world
+                                is_same_value = root.capital_scope
+                            }
+                        }
+                        save_event_target_as = eotf_battlegroup_world
+                    }
+                }
+            }
+        }
+        if = {
+            limit = {
+                NOT = { exists = event_target:eotf_battlegroup_world }
+            }
+            random_owned_planet = {
+                limit = {
+                    solar_system = {
+                        has_star_flag = eotf_ancient_legacy_chain_system
+                    }
+                }
+                solar_system = {
+                    random_system_planet = {
+                        limit = {
+                            is_star = no
+                            NOT = { has_planet_flag = eotf_ancient_legacy_burial_world }
+                        }
+                        save_event_target_as = eotf_battlegroup_world
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.9.a_gestalt
+        custom_tooltip = eotf.9.project_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = event_target:eotf_battlegroup_world
+                }
+                event_target:eotf_battlegroup_world = {
+                    enable_special_project = {
+                        name = "eotf_locate_battlegroup"
+                        location = this
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.9.a
+        custom_tooltip = eotf.9.project_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    exists = event_target:eotf_battlegroup_world
+                }
+                event_target:eotf_battlegroup_world = {
+                    enable_special_project = {
+                        name = "eotf_locate_battlegroup"
+                        location = this
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 10 — Silent Anchorage (after locate battlegroup project)
+# =============================================================================
+
+country_event = {
+    id = eotf.10
+    title = eotf.10.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.10.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.10.desc_gestalt"
+    }
+    picture = GFX_evt_space_debris
+    show_sound = event_machinery
+    location = event_target:eotf_battlegroup_world
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_restore_battlegroup_world_from_from_orbit = yes
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.10.a_gestalt
+        custom_tooltip = eotf.10.reward_tt
+
+        hidden_effect = {
+            add_resource = { engineering_research = 1500 }
+            if = {
+                limit = {
+                    exists = event_target:eotf_battlegroup_world
+                }
+                event_target:eotf_battlegroup_world = {
+                    enable_special_project = {
+                        name = "eotf_restore_anchorage"
+                        location = this
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.10.a
+        custom_tooltip = eotf.10.reward_tt
+
+        hidden_effect = {
+            add_resource = { engineering_research = 1500 }
+            if = {
+                limit = {
+                    exists = event_target:eotf_battlegroup_world
+                }
+                event_target:eotf_battlegroup_world = {
+                    enable_special_project = {
+                        name = "eotf_restore_anchorage"
+                        location = this
+                        owner = root
+                    }
+                }
+            }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 11 — Guardians Reawakened (after restore anchorage project)
+# =============================================================================
+
+country_event = {
+    id = eotf.11
+    title = eotf.11.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.11.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.11.desc_gestalt"
+    }
+    picture = GFX_evt_small_space_battle
+    show_sound = event_space_battle
+    location = event_target:eotf_battlegroup_world
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_restore_battlegroup_world_from_from_orbit = yes
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.11.a_gestalt
+
+        hidden_effect = {
+            random_owned_planet = {
+                limit = {
+                    solar_system = {
+                        has_star_flag = eotf_ancient_legacy_chain_system
+                    }
+                }
+                solar_system = {
+                    star = {
+                        save_event_target_as = eotf_chain_system_star
+                    }
+                }
+            }
+
+            if = {
+                limit = {
+                    exists = event_target:eotf_chain_system_star
+                }
+                set_country_flag = eotf_anchorage_skirmish_pending
+
+                create_fleet = {
+                    name = "NAME_EOTF_Recovered_Fleet"
+                    settings = {
+                        spawn_debris = no
+                        is_boss = no
+                        uses_naval_capacity = yes
+                    }
+                    effect = {
+                        set_owner = root
+                        while = {
+                            count = 5
+                            create_ship = {
+                                name = random
+                                design = "NAME_EOTF_Reserve_Escort"
+                                graphical_culture = "fallen_empire_01"
+                                upgradable = yes
+                            }
+                        }
+                        while = {
+                            count = 2
+                            create_ship = {
+                                name = random
+                                design = "NAME_EOTF_Reserve_Battlecruiser"
+                                graphical_culture = "fallen_empire_01"
+                                upgradable = yes
+                            }
+                        }
+                        set_location = {
+                            target = event_target:eotf_chain_system_star
+                            distance = 40
+                            angle = 90
+                            direction = in_system
+                        }
+                    }
+                }
+
+                create_country = {
+                    name = "NAME_EOTF_Rogue_Ancients"
+                    type = faction
+                    auto_delete = yes
+                    flag = {
+                        icon = {
+                            category = "special"
+                            file = "unknown.dds"
+                        }
+                        background = {
+                            category = "backgrounds"
+                            file = "00_solid.dds"
+                        }
+                        colors = {
+                            "red"
+                            "dark_grey"
+                            "null"
+                            "null"
+                        }
+                    }
+                    effect = {
+                        set_country_flag = eotf_rogue_anchorage_faction
+                        establish_communications_no_message = root
+                        set_faction_hostility = {
+                            target = root
+                            set_hostile = yes
+                            set_neutral = no
+                            set_friendly = no
+                        }
+                        create_fleet = {
+                            name = "NAME_EOTF_Rogue_Fleet"
+                            settings = {
+                                spawn_debris = no
+                                is_boss = no
+                                uses_naval_capacity = no
+                            }
+                            effect = {
+                                set_owner = prev
+                                set_fleet_flag = eotf_rogue_anchorage_fleet
+                                while = {
+                                    count = 3
+                                    create_ship = {
+                                        name = random
+                                        design = "NAME_EOTF_Reserve_Escort"
+                                        graphical_culture = "fallen_empire_01"
+                                        upgradable = yes
+                                    }
+                                }
+                                set_location = {
+                                    target = event_target:eotf_chain_system_star
+                                    distance = 55
+                                    angle = 270
+                                    direction = in_system
+                                }
+                                set_fleet_stance = aggressive
+                                set_aggro_range_measure_from = self
+                                set_aggro_range = 350
+                            }
+                        }
+                    }
+                }
+
+                last_created_country = {
+                    save_event_target_as = eotf_rogue_ancients_country
+                }
+                root = {
+                    establish_communications_no_message = event_target:eotf_rogue_ancients_country
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.11.a
+
+        hidden_effect = {
+            random_owned_planet = {
+                limit = {
+                    solar_system = {
+                        has_star_flag = eotf_ancient_legacy_chain_system
+                    }
+                }
+                solar_system = {
+                    star = {
+                        save_event_target_as = eotf_chain_system_star
+                    }
+                }
+            }
+
+            if = {
+                limit = {
+                    exists = event_target:eotf_chain_system_star
+                }
+                set_country_flag = eotf_anchorage_skirmish_pending
+
+                create_fleet = {
+                    name = "NAME_EOTF_Recovered_Fleet"
+                    settings = {
+                        spawn_debris = no
+                        is_boss = no
+                        uses_naval_capacity = yes
+                    }
+                    effect = {
+                        set_owner = root
+                        while = {
+                            count = 5
+                            create_ship = {
+                                name = random
+                                design = "NAME_EOTF_Reserve_Escort"
+                                graphical_culture = "fallen_empire_01"
+                                upgradable = yes
+                            }
+                        }
+                        while = {
+                            count = 2
+                            create_ship = {
+                                name = random
+                                design = "NAME_EOTF_Reserve_Battlecruiser"
+                                graphical_culture = "fallen_empire_01"
+                                upgradable = yes
+                            }
+                        }
+                        set_location = {
+                            target = event_target:eotf_chain_system_star
+                            distance = 40
+                            angle = 90
+                            direction = in_system
+                        }
+                    }
+                }
+
+                create_country = {
+                    name = "NAME_EOTF_Rogue_Ancients"
+                    type = faction
+                    auto_delete = yes
+                    flag = {
+                        icon = {
+                            category = "special"
+                            file = "unknown.dds"
+                        }
+                        background = {
+                            category = "backgrounds"
+                            file = "00_solid.dds"
+                        }
+                        colors = {
+                            "red"
+                            "dark_grey"
+                            "null"
+                            "null"
+                        }
+                    }
+                    effect = {
+                        set_country_flag = eotf_rogue_anchorage_faction
+                        establish_communications_no_message = root
+                        set_faction_hostility = {
+                            target = root
+                            set_hostile = yes
+                            set_neutral = no
+                            set_friendly = no
+                        }
+                        create_fleet = {
+                            name = "NAME_EOTF_Rogue_Fleet"
+                            settings = {
+                                spawn_debris = no
+                                is_boss = no
+                                uses_naval_capacity = no
+                            }
+                            effect = {
+                                set_owner = prev
+                                set_fleet_flag = eotf_rogue_anchorage_fleet
+                                while = {
+                                    count = 3
+                                    create_ship = {
+                                        name = random
+                                        design = "NAME_EOTF_Reserve_Escort"
+                                        graphical_culture = "fallen_empire_01"
+                                        upgradable = yes
+                                    }
+                                }
+                                set_location = {
+                                    target = event_target:eotf_chain_system_star
+                                    distance = 55
+                                    angle = 270
+                                    direction = in_system
+                                }
+                                set_fleet_stance = aggressive
+                                set_aggro_range_measure_from = self
+                                set_aggro_range = 350
+                            }
+                        }
+                    }
+                }
+
+                last_created_country = {
+                    save_event_target_as = eotf_rogue_ancients_country
+                }
+                root = {
+                    establish_communications_no_message = event_target:eotf_rogue_ancients_country
+                }
+            }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 112 — Command Authority Established (after rogue anchorage ships destroyed)
+# =============================================================================
+
+country_event = {
+    id = eotf.112
+    title = eotf.112.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.112.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.112.desc_gestalt"
+    }
+    picture = GFX_evt_fallen_empire
+    show_sound = event_ship_bridge
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_save_burial_planet_as_event_target = yes
+    }
+
+    location = event_target:eotf_burial_planet
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.112.a_gestalt
+        custom_tooltip = eotf.112.system_docks_tt
+
+        hidden_effect = {
+            set_country_flag = eotf_battlegroup_restored
+            random_owned_planet = {
+                limit = {
+                    solar_system = {
+                        has_star_flag = eotf_ancient_legacy_chain_system
+                    }
+                }
+                solar_system = {
+                    starbase = {
+                        add_modifier = {
+                            modifier = eotf_anchorage_fleet_docks
+                            days = -1
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.112.a
+        custom_tooltip = eotf.112.system_docks_tt
+
+        hidden_effect = {
+            set_country_flag = eotf_battlegroup_restored
+            random_owned_planet = {
+                limit = {
+                    solar_system = {
+                        has_star_flag = eotf_ancient_legacy_chain_system
+                    }
+                }
+                solar_system = {
+                    starbase = {
+                        add_modifier = {
+                            modifier = eotf_anchorage_fleet_docks
+                            days = -1
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 113 — Detect end of anchorage skirmish (hidden; on_monthly_pulse_country)
+# =============================================================================
+
+country_event = {
+    id = eotf.113
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        is_ai = no
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_anchorage_skirmish_pending
+        NOT = {
+            any_country = {
+                has_country_flag = eotf_rogue_anchorage_faction
+                num_ships > 0
+            }
+        }
+    }
+
+    immediate = {
+        remove_country_flag = eotf_anchorage_skirmish_pending
+        country_event = { id = eotf.112 }
+    }
+}
+
+# =============================================================================
+# EVENT 12 — Recovered Design Archives (timed follow-up)
+# =============================================================================
+
+country_event = {
+    id = eotf.12
+    title = eotf.12.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.12.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.12.desc_gestalt"
+    }
+    picture = GFX_evt_engineering_research
+    show_sound = event_laboratory_sound
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_save_burial_planet_as_event_target = yes
+    }
+
+    location = event_target:eotf_burial_planet
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.12.a_gestalt
+        custom_tooltip = eotf.12.reward_tt
+
+        hidden_effect = {
+            set_country_flag = eotf_design_archives_recovered
+            set_country_flag = eotf_fe_buildings_tier_2
+
+            add_modifier = {
+                modifier = eotf_reverse_engineering_surge
+                days = 5400
+            }
+
+            eotf_add_fe_tier2_building_research = yes
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_dark_matter_deflector }
+                }
+                add_research_option = tech_dark_matter_deflector
+            }
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_dark_matter_power_core }
+                }
+                add_research_option = tech_dark_matter_power_core
+            }
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_dark_matter_propulsion }
+                }
+                add_research_option = tech_dark_matter_propulsion
+            }
+            eotf_precursor_archive_recovered_one = yes
+            if = {
+                limit = {
+                    has_machine_age_dlc = yes
+                    country_uses_bio_ships = no
+                }
+                set_country_flag = eotf_escort_schematics_pending
+                set_variable = {
+                    which = eotf_escort_years_elapsed
+                    value = 0
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.12.a
+        custom_tooltip = eotf.12.reward_tt
+
+        hidden_effect = {
+            set_country_flag = eotf_design_archives_recovered
+            set_country_flag = eotf_fe_buildings_tier_2
+
+            add_modifier = {
+                modifier = eotf_reverse_engineering_surge
+                days = 5400
+            }
+
+            eotf_add_fe_tier2_building_research = yes
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_dark_matter_deflector }
+                }
+                add_research_option = tech_dark_matter_deflector
+            }
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_dark_matter_power_core }
+                }
+                add_research_option = tech_dark_matter_power_core
+            }
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_dark_matter_propulsion }
+                }
+                add_research_option = tech_dark_matter_propulsion
+            }
+            eotf_precursor_archive_recovered_one = yes
+            if = {
+                limit = {
+                    has_machine_age_dlc = yes
+                    country_uses_bio_ships = no
+                }
+                set_country_flag = eotf_escort_schematics_pending
+                set_variable = {
+                    which = eotf_escort_years_elapsed
+                    value = 0
+                }
+            }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 61 — Recovered Escort Schematics (~5 years after eotf.12; id kept for saves — eotf.13 is FE notice)
+# =============================================================================
+
+country_event = {
+    id = eotf.61
+    title = eotf.61.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.61.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.61.desc_gestalt"
+    }
+    picture = GFX_evt_engineering_research
+    show_sound = event_laboratory_sound
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_save_burial_planet_as_event_target = yes
+    }
+
+    location = event_target:eotf_burial_planet
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.61.a_gestalt
+        custom_tooltip = eotf.61.reward_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_cosmogenesis_escort }
+                }
+                add_research_option = tech_cosmogenesis_escort
+            }
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.61.a
+        custom_tooltip = eotf.61.reward_tt
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    NOT = { has_technology = tech_cosmogenesis_escort }
+                }
+                add_research_option = tech_cosmogenesis_escort
+            }
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 13 — Unauthorized Reactivation
+# =============================================================================
+
+country_event = {
+    id = eotf.13
+    title = eotf.13.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.13.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.13.desc_gestalt"
+    }
+    picture = GFX_evt_fallen_empire_awakes
+    show_sound = event_air_raid_siren
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_save_burial_planet_as_event_target = yes
+    }
+
+    location = event_target:eotf_burial_planet
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.13.a_gestalt
+        custom_tooltip = eotf.13.reward_tt
+
+        hidden_effect = {
+            set_country_flag = eotf_fe_notice_triggered
+
+            add_modifier = {
+                modifier = eotf_galactic_infamy
+            }
+
+            every_country = {
+                limit = {
+                    OR = {
+                        is_country_type = fallen_empire
+                        is_country_type = awakened_fallen_empire
+                    }
+                }
+                add_opinion_modifier = {
+                    who = root
+                    modifier = opinion_eotf_unauthorized_reactivation
+                }
+            }
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.13.a
+        custom_tooltip = eotf.13.reward_tt
+
+        hidden_effect = {
+            set_country_flag = eotf_fe_notice_triggered
+
+            add_modifier = {
+                modifier = eotf_galactic_infamy
+            }
+
+            every_country = {
+                limit = {
+                    OR = {
+                        is_country_type = fallen_empire
+                        is_country_type = awakened_fallen_empire
+                    }
+                }
+                add_opinion_modifier = {
+                    who = root
+                    modifier = opinion_eotf_unauthorized_reactivation
+                }
+            }
+        }
+    }
+}
+
+# =============================================================================
+# EVENT 14 — Inheritance Claimed (finale)
+# =============================================================================
+
+country_event = {
+    id = eotf.14
+    title = eotf.14.name
+    desc = {
+        trigger = {
+            is_gestalt = no
+        }
+        text = "eotf.14.desc"
+    }
+    desc = {
+        trigger = {
+            is_gestalt = yes
+        }
+        text = "eotf.14.desc_gestalt"
+    }
+    picture = GFX_evt_coronation
+    show_sound = event_celebration
+    event_chain = eotf_echoes_of_the_fallen_chain
+
+    is_triggered_only = yes
+
+    immediate = {
+        eotf_save_burial_planet_as_event_target = yes
+    }
+
+    location = event_target:eotf_burial_planet
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.14.a_gestalt
+        custom_tooltip = eotf.14.reward_tt_power
+
+        hidden_effect = {
+            set_country_flag = eotf_chain_complete
+            set_country_flag = eotf_fe_buildings_tier_3
+
+            add_modifier = {
+                modifier = eotf_galactic_ascendancy
+            }
+
+            eotf_add_fe_tier3_building_research = yes
+
+            if = {
+                limit = {
+                    has_machine_age_dlc = yes
+                    country_uses_bio_ships = no
+                    NOT = { has_technology = tech_cosmogenesis_battlecruiser }
+                }
+                add_research_option = tech_cosmogenesis_battlecruiser
+            }
+
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.14.a
+        custom_tooltip = eotf.14.reward_tt_power
+
+        hidden_effect = {
+            set_country_flag = eotf_chain_complete
+            set_country_flag = eotf_fe_buildings_tier_3
+
+            add_modifier = {
+                modifier = eotf_galactic_ascendancy
+            }
+
+            eotf_add_fe_tier3_building_research = yes
+
+            if = {
+                limit = {
+                    has_machine_age_dlc = yes
+                    country_uses_bio_ships = no
+                    NOT = { has_technology = tech_cosmogenesis_battlecruiser }
+                }
+                add_research_option = tech_cosmogenesis_battlecruiser
+            }
+
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = yes
+        }
+        name = eotf.14.b_gestalt
+        custom_tooltip = eotf.14.reward_tt_wisdom
+
+        hidden_effect = {
+            set_country_flag = eotf_chain_complete
+            set_country_flag = eotf_fe_buildings_tier_3
+
+            add_resource = { unity = 10000 }
+
+            add_modifier = {
+                modifier = eotf_worthy_successors
+                days = 7200
+            }
+
+            eotf_add_fe_tier3_building_research = yes
+
+            if = {
+                limit = {
+                    has_machine_age_dlc = yes
+                    country_uses_bio_ships = no
+                    NOT = { has_technology = tech_cosmogenesis_battlecruiser }
+                }
+                add_research_option = tech_cosmogenesis_battlecruiser
+            }
+
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+
+    option = {
+        trigger = {
+            is_gestalt = no
+        }
+        name = eotf.14.b
+        custom_tooltip = eotf.14.reward_tt_wisdom
+
+        hidden_effect = {
+            set_country_flag = eotf_chain_complete
+            set_country_flag = eotf_fe_buildings_tier_3
+
+            add_resource = { unity = 10000 }
+
+            add_modifier = {
+                modifier = eotf_worthy_successors
+                days = 7200
+            }
+
+            eotf_add_fe_tier3_building_research = yes
+
+            if = {
+                limit = {
+                    has_machine_age_dlc = yes
+                    country_uses_bio_ships = no
+                    NOT = { has_technology = tech_cosmogenesis_battlecruiser }
+                }
+                add_research_option = tech_cosmogenesis_battlecruiser
+            }
+
+            eotf_precursor_archive_recovered_one = yes
+        }
+    }
+}
+
+# =============================================================================
+# Gravitic Sensors completion timing (on_tech_increased) — picks Subterranean Signals desc when eotf.191 fires.
+# years_passed < 15 matches ~before calendar 2215 (same cutoff as Enigmatic Signals year floor years_passed > 14).
+# Use tech_sensors_2 only: technology_swap names (e.g. tech_bioship_sensors_2) are invalid in triggers.
+# =============================================================================
+
+country_event = {
+    id = eotf.298
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_ancient_legacy
+        NOT = { has_country_flag = eotf_gravitic_sensor_completion_recorded }
+        last_increased_tech = tech_sensors_2
+    }
+
+    immediate = {
+        set_country_flag = eotf_gravitic_sensor_completion_recorded
+        if = {
+            limit = {
+                years_passed < 15
+            }
+            set_country_flag = eotf_gravitic_completed_before_2215
+        }
+    }
+}
+
+# =============================================================================
+# Tech chain — FE building upgrades after design archives (on_tech_increased)
+# Tier-2 research options fire once the matching tier-1 tech completes (player may finish tier 1 after eotf.12).
+# Singularity chain stops at Class-3 (tech_fe_singularity_1); Class-4 / tech_fe_singularity_2 is not granted by this mod.
+# =============================================================================
+
+country_event = {
+    id = eotf.299
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+        has_origin = origin_ancient_legacy
+        has_country_flag = eotf_fe_buildings_tier_2
+        OR = {
+            last_increased_tech = tech_fe_nourishment_1
+            last_increased_tech = tech_fe_dome_1
+            last_increased_tech = tech_fe_fabricator_1
+        }
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                last_increased_tech = tech_fe_nourishment_1
+                NOT = { has_technology = tech_fe_nourishment_2 }
+            }
+            add_research_option = tech_fe_nourishment_2
+        }
+        if = {
+            limit = {
+                last_increased_tech = tech_fe_dome_1
+                NOT = { has_technology = tech_fe_dome_2 }
+            }
+            add_research_option = tech_fe_dome_2
+        }
+        if = {
+            limit = {
+                last_increased_tech = tech_fe_fabricator_1
+                NOT = { has_technology = tech_fe_fabricator_2 }
+            }
+            add_research_option = tech_fe_fabricator_2
+        }
+    }
+}

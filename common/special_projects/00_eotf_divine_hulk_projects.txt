@@ -1,0 +1,19 @@
+# Divine Hulk — post-excavation restoration (enabled after dig stage 2)
+
+special_project = {
+	key = "eotf_divine_hulk_restoration"
+	cost = 18000
+	tech_department = engineering_technology
+	timelimit = -1
+	picture = GFX_evt_engineering_research
+	icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+
+	event_scope = country_event
+
+	on_success = {
+		country_event = { id = eotf.259 }
+	}
+
+	on_fail = {
+	}
+}

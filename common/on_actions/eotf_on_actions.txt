@@ -1,0 +1,43 @@
+# Vanilla hook — runs once per empire at game start
+on_game_start_country = {
+	events = {
+		eotf.190
+		eotf.250
+	}
+}
+
+on_yearly_pulse_country = {
+    events = {
+        eotf.189
+        eotf.191
+        eotf.115
+        eotf.192
+        eotf.193
+        eotf.194
+        eotf.195
+        eotf.196
+        eotf.197
+        eotf.198
+        eotf.114
+    }
+}
+
+on_monthly_pulse_country = {
+    events = {
+        eotf.113
+    }
+}
+
+on_tech_increased = {
+    events = {
+        eotf.298
+        eotf.299
+    }
+}
+
+# This = owner of destroyed ship; FromFrom = destroyed ship (see vanilla on_ship_destroyed_victim).
+on_ship_destroyed_victim = {
+    events = {
+        eotf.264
+    }
+}

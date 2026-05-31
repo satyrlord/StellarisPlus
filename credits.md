@@ -170,3 +170,9 @@ Integrated Workshop mods:
   Source: backup/3160178733/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3160178733>
   Author: Zefnar <https://steamcommunity.com/profiles/76561198047900754/myworkshopfiles/?appid=281990>
+
+- Echoes of the Fallen (Workshop ID: 3696989150)
+  Last updated: 2026-05-31
+  Source: backup/3696989150/
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3696989150>
+  Author: (see Workshop page)

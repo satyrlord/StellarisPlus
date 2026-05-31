@@ -239,6 +239,7 @@ _EXPECTED_DUPLICATE_SUBFOLDERS = {
     "component_sets",
     "component_templates",
     "defines",
+    "global_ship_designs",
     "on_actions",
     "special_projects",
     "species_names",

@@ -1,0 +1,13 @@
+# Fallen Empires react to Echoes of the Fallen chain (event 12)
+
+opinion_eotf_unauthorized_reactivation = {
+	opinion = {
+		base = -120
+	}
+
+	min = -200
+
+	decay = {
+		base = 0.15
+	}
+}

@@ -1,0 +1,97 @@
+# Echoes of the Fallen — homeworld dig (Ancient Legacy)
+
+eotf_site_homeworld = {
+	desc = eotf_site_homeworld_desc
+	picture = GFX_evt_archaeology_camp
+	stages = 2
+	weight = 0
+
+	potential = {
+		owner = {
+			has_origin = origin_ancient_legacy
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+		owner = {
+			has_origin = origin_ancient_legacy
+		}
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = no_events }
+		}
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_E1
+		event = eotf.50
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_E2
+		event = eotf.51
+	}
+}
+
+# Divine Hulk — capital excavation (after situation stage 3)
+
+eotf_site_divine_hulk = {
+	desc = eotf_site_divine_hulk_desc
+	picture = GFX_eotf_evt_divine_hulk_excavation
+	stages = 3
+	weight = 0
+
+	potential = {
+		owner = {
+			has_origin = origin_divine_hulk
+		}
+	}
+
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+		owner = {
+			has_origin = origin_divine_hulk
+		}
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = no_events }
+		}
+	}
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_E1
+		event = eotf.257
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_E2
+		event = eotf.258
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_E3
+		event = eotf.263
+	}
+}

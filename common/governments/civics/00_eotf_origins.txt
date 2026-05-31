@@ -1,0 +1,51 @@
+origin_ancient_legacy = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_origin_treasure_hunters
+
+	flags = { custom_start_screen }
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+	}
+
+	modifier = {
+	}
+
+	description = "origin_tooltip_ancient_legacy_effects"
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_divine_hulk = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_payback.dds"
+	picture = GFX_origin_divine_hulk
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
+
+	modifier = {
+	}
+
+	description = "origin_tooltip_divine_hulk_effects"
+}

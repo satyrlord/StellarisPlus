@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_origin_divine_hulk"
+		texturefile = "gfx/interface/icons/origins/origin_divine_hulk.png"
+	}
+}

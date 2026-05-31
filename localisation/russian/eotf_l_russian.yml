@@ -1,0 +1,570 @@
+﻿l_russian:
+
+
+
+	origin_ancient_legacy:0 "Ancient Legacy"
+
+	origin_ancient_legacy_desc:0 "Long before this civilization reached for the stars, their home system had already been touched by something ancient. Buried beneath the crust of their homeworld and scattered among the distant reaches of their star system lie the silent remnants of a forgotten power. Though their purpose has long been lost to time, the echoes of that fallen inheritance remain - and in time, they may yet be claimed."
+
+	origin_tooltip_ancient_legacy_effects:0 "Includes §YEchoes of the Fallen§! event chain.\n\nEvent chain begins once the year is at least §Y2225§! and you have researched §YGravitic Sensors§!."
+
+	origin_divine_hulk:0 "Divine Hulk"
+
+	origin_divine_hulk_desc:0 "Long before this civilisation reached for the stars, a colossal ancient machine fell from the heavens. Worshipped for generations as the Divine Hulk, its true nature may finally be within reach of discovery."
+
+	origin_tooltip_divine_hulk_effects:0 "Includes §YQuestioning the Divine§! situation."
+
+	eotf_planet_the_divine_hulk:0 "The Divine Hulk"
+
+	eotf_planet_the_divine_hulk_desc:0 "A colossal ancient machine rests upon this world. Revered for generations as the Divine Hulk, its presence has profoundly shaped the development of this civilisation."
+
+	eotf.255.name:0 "Questioning the Divine"
+
+	eotf.255.desc:0 "Recent scans of a dense debris field within our home system have revealed something deeply unsettling.\n\nThe metallic fragments scattered throughout the field possess structural and compositional properties nearly identical to those found within the Divine Hulk itself.\n\nThis discovery has reignited long-standing debates surrounding the true nature of the so-called Divine Hulk. While the faithful insist the debris are merely fragments cast from the heavens alongside the divine machine, sceptics increasingly argue that the Hulk may not be divine at all, but rather the remains of an ancient and impossibly advanced construct.\n\nScientific interest in the Divine Hulk has surged across our civilisation, but the truth is still shrouded in mystery."
+
+	eotf.255.a:0 "We must uncover the truth."
+
+	eotf.255.a_tt:0 "Begins the §YQuestioning the Divine§! situation."
+
+	eotf.260.name:0 "Sacred Relic"
+
+	eotf.260.desc:0 "The Divine Hulk remains primarily a sacred object of worship, though recent discoveries within a nearby debris field have reignited scientific interest in the ancient machine.\n\nMaterial analysis of the recovered fragments reveals striking similarities to the alloys and structures found within the Divine Hulk itself, suggesting the ancient construct may not be unique in origin. Despite this, many still reject such claims as blasphemy."
+
+	eotf.260.a:0 "Pursue Further Study"
+
+	eotf.260.a_tt:0 "Recent discoveries within the debris field warrant a formal scientific investigation into the true nature of the Divine Hulk."
+
+	eotf.261.name:0 "Cracks in the Faith"
+
+	eotf.261.desc:0 "Continued investigation into the Divine Hulk has uncovered increasingly undeniable evidence of artificial construction.\n\nInternal structural analysis has revealed maintenance corridors, reactor conduits, and dormant subsystems far beyond the capabilities of our own civilisation. Even more disturbing, several newly uncovered sections contain markings and machine-coded sequences that appear intentionally manufactured rather than divine in origin.\n\nThese discoveries have shaken the foundations of our society.\n\nReligious authorities condemn the ongoing investigation as heretical desecration, while sceptics argue that the Divine Hulk is not a god at all, but the wreckage of an impossibly advanced machine from a forgotten age."
+
+	eotf.261.a:0 "The truth must be uncovered"
+
+	eotf.261.a_tt:0 "We will not halt the inquiry while the evidence of artifice continues to mount."
+
+	eotf.262.name:0 "The Truth Revealed"
+
+	eotf.262.desc:0 "The truth can no longer be denied.\n\nDeep within the Divine Hulk, our scientists have uncovered fragmented archival records identifying the ancient construct as a heavily damaged warship dating back to a conflict fought long before our civilisation emerged.\n\nThe so-called Divine Hulk was never a god. It was a machine of war.\n\nYet despite the societal upheaval caused by this revelation, the technological breakthroughs gained from studying the wreck have accelerated our scientific understanding far beyond that of most young interstellar civilisations.\n\nAnd perhaps most astonishing of all - portions of the ancient vessel still respond to our restoration efforts.\n\nPerhaps given enough time, we may be able to restore the Divine Hulk to its former glory."
+
+	eotf.262.a:0 "Begin excavation"
+
+	eotf.262.a_tt:0 "Creates the Unearthing the Divine Hulk archaeological site on your capital if no site is already present there."
+
+	eotf.266.name:0 "Religious Extremist Attack"
+
+	eotf.266.desc:0 "Tensions surrounding the investigation into the Divine Hulk have inevitably erupted into violence.\n\nA radical group of religious extremists has carried out a coordinated bombing within one of the scientific districts, denouncing the continued study of the Divine Hulk as heretical desecration.\n\nSeveral research facilities were damaged in the attack, while protests and civil unrest continue spreading across portions of the capital.\n\nThough many among the faithful condemn the violence, the ideological divide surrounding the Divine Hulk is becoming increasingly unstable."
+
+	eotf.266.a:0 "We must put a stop to this"
+
+	eotf.266.a_tt:0 "Adds §YSchism of the Faithful§! to [capital_scope.GetName] for 10 years."
+
+	eotf_planet_religious_protests:0 "Schism of the Faithful"
+
+	eotf_planet_religious_protests_desc:0 "Bombings and unrest in the wake of the Divine Hulk inquiry have disrupted scientific districts and shaken public order on this world."
+
+	situation_eotf_questioning_the_divine:0 "Questioning the Divine"
+
+	situation_eotf_questioning_the_divine_type:0 "Questioning the Divine"
+
+	situation_eotf_questioning_the_divine_desc:0 "For generations, the Divine Hulk has been worshipped as a sacred machine-god that fell from the heavens. But as scientific understanding advances, more within our civilisation have begun questioning its true nature.\n\nThe chosen investigation approach sets ongoing effects on stability, unity, and research for the whole arc. Stage milestones still mark how public debate and evidence evolve until the truth can be settled."
+
+	situation_eotf_questioning_the_divine_monthly_change_tooltip:0 "Monthly progress is affected by the current approach: Measured Inquiry (slower) or Forceful Inquiry (faster). Ongoing stability, unity, and research effects come from the approach, not the stage."
+
+	situation_eotf_questioning_the_divine_progress_measured:0 "Measured inquiry (current approach)"
+
+	situation_eotf_questioning_the_divine_progress_forceful:0 "Forceful inquiry (current approach)"
+
+	situation_eotf_questioning_the_divine_complete_tt:0 "We may uncover the truth behind the Divine Hulk"
+
+	stage_eotf_dh_1_tt:0 "Debris resembles the Hulk; worship and science disagree."
+
+	stage_eotf_dh_2_tt:0 "Evidence mounts that the Hulk was built, not divine."
+
+	stage_eotf_dh_3_tt:0 "Records show an ancient warship; finishing the situation may unlock the capital dig."
+
+	approach_eotf_dh_measured_inquiry:0 "Measured Inquiry"
+
+	approach_eotf_dh_measured_inquiry_select_tt:0 ""
+
+	approach_eotf_dh_forceful_inquiry:0 "Forceful Inquiry"
+
+	approach_eotf_dh_forceful_inquiry_select_tt:0 ""
+
+	stage_eotf_dh_1:0 "Sacred Relic"
+
+	stage_eotf_dh_2:0 "Cracks in the Faith"
+
+	stage_eotf_dh_3:0 "The Truth Revealed"
+
+	eotf_divine_hulk_legacy:0 "Legacy of the Divine Hulk"
+
+	eotf_divine_hulk_legacy_desc:0 "Study and restoration of the Divine Hulk has granted our civilisation access to technological principles far beyond those of most young interstellar powers."
+
+	eotf_site_divine_hulk:0 "Unearthing the Divine Hulk"
+
+	eotf_site_divine_hulk_desc:0 "Now known to be the wreckage of an ancient warship rather than a divine entity, the Divine Hulk may finally reveal the truth hidden within its colossal shell."
+
+	eotf_dh_arc1_name:0 "The Outer Hull"
+
+	eotf_dh_arc1_desc:0 "Initial excavation efforts have exposed vast sections of the Divine Hulk's lower section.\n\nAncient battle scars, fused armor plating, and catastrophic structural damage suggest the machine suffered immense damage before crashing upon our world."
+
+	eotf_dh_arc1_a:0 "The curiosity is palpable"
+
+	eotf_dh_arc2_name:0 "The Sleeping Machine"
+
+	eotf_dh_arc2_desc:0 "Excavation teams have successfully entered the Divine Hulk's internal structure. Within lie vast corridors, dormant machinery, and partially active systems far beyond our current understanding.\n\nAgainst all expectations, portions of the vessel still appear functional."
+
+	eotf_dh_arc2_a:0 "We're almost there"
+
+	eotf_dh_arc3_name:0 "Restoration Potential Confirmed"
+
+	eotf_dh_arc3_desc:0 "After a significant excavation effort, the Divine Hulk has finally been freed from the ground in which it rested for millennia.\n\nAssessment of the ancient vessel's external hull and internal systems has revealed something extraordinary: despite its immense age and catastrophic damage, large portions of the machine remain partially functional.\n\nEven more remarkably, our engineers believe the vessel may have already initiated its dormant self-repair protocols when we began excavating it. With sufficient resources and expertise, it may now be possible to fully restore the Divine Hulk to operational status."
+
+	eotf_dh_arc3_a:0 "Begin Restoration Efforts"
+
+	eotf_divine_hulk_restoration:0 "Restore the Divine Hulk"
+
+	eotf_divine_hulk_restoration_DESC:0 "Enough of the Divine Hulk's internal systems remain functional for our scientists and engineers to attempt full restoration of the ancient vessel.\n\nThough much of the technology powering the machine remains beyond our complete understanding, surviving automated systems and dormant self-repair protocols may greatly assist restoration efforts.\n\nIf successful, the Divine Hulk may sail among the stars once more."
+
+	eotf.259.name:0 "The Divine Hulk Awakens"
+
+	eotf.259.desc:0 "After decades of excavation, study, and restoration, the impossible has become reality - the ancient vessel lives once more.\n\nFor countless generations, the Divine Hulk shaped our myths, our faith, and our understanding of the universe. Now, it will serve us in an entirely different way.\n\nDespite the ideological divide surrounding its true nature, in many ways the machine still seems almost god-like. While our scientists and engineers have succeeded in restoring the vessel to operational status, the highly advanced technology and systems that power it remain far beyond our complete understanding.\n\nEven so, the restoration of the Divine Hulk has already transformed our civilisation.\n\nAnd perhaps, given enough time, we may one day learn to build such vessels ourselves."
+
+	eotf.259.a:0 "The Divine Hulk lives again"
+
+	eotf.264.name:0 "Final Rest of the Divine Hulk"
+
+	eotf.264.desc:0 "The unthinkable has happened.\n\nAfter serving our civilisation for generations first as a symbol of faith, then as the foundation of our scientific awakening, the Divine Hulk has fallen - this time for good.\n\nThough born from an age long before our own and forged by powers we still barely understand, the ancient vessel did not perish forgotten beneath the soil of our homeworld. It sailed among the stars once more beneath the banner of [Root.GetName], and in its final moments served our people with honour.\n\nAcross our empire, citizens gather in mourning. Some grieve the loss of a sacred relic, while others honour the vessel as the catalyst that carried our species into the stars.\n\nIts light has faded, but its legacy will endure."
+
+	eotf.264.a:0 "We will never forget"
+
+	eotf.265.name:0 "Reverse Engineering Initiative"
+
+	eotf.265.desc:0 "Now that the Divine Hulk has been restored to operational status, our scientists and engineers have finally been granted unprecedented access to the vessel's internal systems and construction methods.\n\nAlthough much of the ancient machine's technology remains far beyond our complete understanding, continued study of its hull architecture has already yielded extraordinary breakthroughs.\n\nOf particular interest are fragmented design records referencing the Escort-class vessels that once operated alongside the Divine Hulk during the ancient conflict that brought it crashing to our world.\n\nThe surviving schematics remain incomplete and heavily corrupted, but our scientists believe they may contain enough information to begin preliminary reverse engineering efforts into these ancient warships.\n\nGiven enough time, we may eventually learn to construct such vessels ourselves."
+
+	eotf.265.a:0 "Begin reverse engineering"
+
+	eotf.265.a_tt:0 "Adds §YRiddle Escort§! as a research option."
+
+	eotf.267.name:0 "The Divide Healed"
+
+	eotf.267.desc:0 "In the wake of the Divine Hulk's restoration, the ideological divide that once threatened to fracture our civilisation has finally begun to fade.\n\nFor the sceptics, the restored vessel stands as proof of scientific triumph and the limitless potential of discovery. For the faithful, the Divine Hulk remains a sacred symbol that shaped our civilisation and guided our people for generations, regardless of its true origin.\n\nAcross the [Root.GetName], what was once a source of division has become a symbol of unity and shared purpose."
+
+	eotf.267.a:0 "A New Era Begins"
+
+	eotf.267.a_tt:0 "Adds §YUnited by the Divine Hulk§! empire modifier for 50 years."
+
+	eotf_united_by_the_divine_hulk:0 "United by the Divine Hulk"
+
+	eotf_united_by_the_divine_hulk_desc:0 "Faith and science find common cause in the restored Divine Hulk, and the empire celebrates a hard-won reconciliation."
+
+	NAME_Divine_Hulk:0 "The Divine Hulk"
+
+	NAME_Divine_Hulk_Fleet:0 "The Divine Hulk"
+
+	eotf_divine_hulk_awakened:0 "Awakened Hull"
+	eotf_divine_hulk_awakened_desc:0 "Ancient systems stir to full power. This vessel fights above the performance of a typical Elite-ranked warship."
+	eotf_divine_hulk_free_upkeep:0 "Self-Sustaining Hull"
+	eotf_divine_hulk_free_upkeep_desc:0 "This vessel imposes no energy or alloy upkeep on the empire."
+
+	START_SCREEN_ANCIENT_LEGACY:0 "In recent years, our system scans have begun to register something unusual.\n\nAt first, the signals were dismissed as interference - faint and inconsistent buried beneath natural background noise. But as our sensors improve, the pattern has grown harder to ignore.\n\nWe do not yet know where it originates, or what could be producing it.\n\nBut something in our system is not as it seems."
+
+	START_SCREEN_ANCIENT_LEGACY_GESTALT:0 "Anomalous signal patterns detected within home system.\n\nInitial classification: background interference.\n\nReclassification: non-random structure confirmed.\n\nSignal exhibits repetition and modulation inconsistent with natural phenomena.\n\nSource unresolved. Origin unknown.\n\nConclusion: anomaly warrants further observation."
+
+	START_SCREEN_DIVINE_HULK:0 "Before recorded history began, a great mechanical entity fell from the heavens.\n\nFor generations, its silent metallic hulk was worshipped as a divine being, shaping the development of our civilisation and our understanding of the cosmos.\n\nBut as our scientific knowledge advanced, so too did doubts surrounding the true nature of the so-called Divine Hulk.\n\nNow, at the dawn of our interstellar age, the secrets hidden within the ancient machine may finally be uncovered."
+
+
+
+	eotf_echoes_of_the_fallen_chain_title:0 "Echoes of the Fallen"
+
+	eotf_echoes_of_the_fallen_chain_desc:0 "Scattered throughout your home system are the forgotten remains of a long-fallen precursor civilization.\n\nAs its forgotten installations and technologies are brought back into service, your empire will gradually inherit the power once wielded by those who came before."
+
+	eotf_precursor_archive_recovery:0 "Precursor archives recovered:"
+
+
+
+	opinion_eotf_unauthorized_reactivation:0 "Unauthorized Precursor Reactivation"
+
+	opinion_eotf_unauthorized_reactivation_desc:0 "This upstart empire has reactivated architectures that were never meant for them."
+
+
+
+	eotf_site_homeworld:0 "Signals from the Deep"
+
+	eotf_site_homeworld_desc:0 "A hidden source beneath the crust of [From.Planet.GetName] is emitting periodic artificial signals. An archaeology survey team may allow us to pinpoint its exact location and uncover the source."
+
+
+
+	eotf_capital_industrial_substrate:0 "Ancient Industrial Substrate"
+
+	eotf_capital_industrial_substrate_desc:0 "This world's crust conceals the remnants of a vast ancient industrial network. Recovered structural and metallurgical principles continue to influence local production and engineering."
+
+
+
+	eotf_engineering_insight:0 "Inspired Engineers"
+
+	eotf_engineering_insight_desc:0 "Recovered ancient industrial materials have inspired a wave of engineering breakthroughs across the empire."
+
+
+
+	eotf_dark_matter_theory:0 "Dark Matter Studies"
+
+	eotf_dark_matter_theory_desc:0 "Recovered ancient containment principles have opened entirely new avenues of theoretical physics and exotic energy research."
+
+
+
+	eotf_containment_rush_stress:0 "Containment Lattice Stress"
+
+	eotf_containment_rush_stress_desc:0 "Hasty probing of unstable precursor fields is disrupting precision physics work."
+
+
+
+	eotf_command_reconstruction:0 "Recovered Command Protocols"
+
+	eotf_command_reconstruction_desc:0 "Recovered fragments of an ancient command architecture have improved research output, shipyard throughput, and system-wide planning. Linked storage from long-disused habitat complexes also yielded fragmentary §Yblueprints§!: enough to begin reverse-engineering the §Gbase§! tier of certain fallen-empire support structures, even though the full design archives remain locked behind later milestones."
+
+
+
+	eotf_military_reconstruction:0 "Recovered Military Architecture"
+
+	eotf_military_reconstruction_desc:0 "Ancient military design principles recovered from the reserve battlegroup are already reshaping our understanding of naval warfare."
+
+
+
+	eotf_reverse_engineering_surge:0 "Reverse Engineering Surge"
+
+	eotf_reverse_engineering_surge_desc:0 "Recovered design archives have sparked a rapid wave of breakthroughs in advanced systems engineering and applied reconstruction."
+
+
+
+	eotf_galactic_infamy:0 "Ancient Signatures Detected"
+
+	eotf_galactic_infamy_desc:0 "Our empire's rapid technological ascent has not gone unnoticed. Others are beginning to see us through the lens of forbidden inheritances."
+
+
+
+
+
+	eotf_outer_system_investigation:0 "Outer System Survey"
+
+	eotf_outer_system_investigation_DESC:0 "A hidden ancient installation has been detected in the distant reaches of our home system. A science vessel with a scientist in orbit of the marked world may reveal its purpose and any technologies it once supported."
+
+
+
+	eotf_stabilize_containment_core:0 "Stabilize the Containment Core"
+
+	eotf_stabilize_containment_core_DESC:0 "The ancient containment systems remain partially active, but dangerously unstable. If properly stabilized, the facility may yet yield its original purpose - and whatever substance it was built to contain."
+
+
+
+	eotf_trace_command_signal:0 "Trace Ancient Command Signal"
+
+	eotf_trace_command_signal_DESC:0 "An encrypted ancient signal appears to connect the sites we have uncovered throughout our home system. If traced to its source, it may reveal the system's original command infrastructure."
+
+
+
+	eotf_locate_battlegroup:0 "Locate Reserve Fleet"
+
+	eotf_locate_battlegroup_DESC:0 "Ancient command records suggest a dormant reserve fleet may still exist somewhere within our home system. If located, it could lead us to vessels and installations we have not yet surveyed."
+
+
+
+	eotf_restore_anchorage:0 "Restore Silent Anchorage"
+
+	eotf_restore_anchorage_DESC:0 "The ancient anchorage remains structurally stable, but its power systems, command relays, and docking control frameworks have all degraded significantly over time.\n\nA dedicated engineering and scientific effort may allow us to reactivate the installation and determine whether any of the docked warships can still be made operational."
+
+
+
+	eotf.199.name:0 "Enigmatic Signals"
+
+	eotf.199.desc:0 "There is something not quite right beneath [Root.Capital.GetName].\n\nOur sensors have detected a strange, highly structured signal emanating from deep within the planet's crust. The readings are unquestionably artificial in origin, yet our current instrumentation is unable to determine its exact location.\n\nUntil we can pinpoint the source, authorising any excavation would be reckless. With more advanced sensors, we may be able to uncover whatever is buried beneath our world."
+
+	eotf.199.desc_gestalt:0 "Anomalous readings detected beneath [Root.Capital.GetName].\n\nSensor arrays have identified a persistent, highly structured signal originating deep within the planetary crust. Pattern analysis confirms artificial origin, but resolution is insufficient to determine structure, scale, or function.\n\nSource cannot be isolated with current instrumentation. Excavation without precise targeting parameters is not advised.\n\nAdditional sensor refinement required."
+
+	eotf.199.reward_tt:0 "Add §YUnresolved Subsurface Readings§! to §Y[Root.Capital.GetName]§!.\nAdds §YGravitic Sensors§! as a research option."
+
+	eotf.199.reward_tt_gestalt:0 "Add §YUnresolved Subsurface Readings§! to §Y[Root.Capital.GetName]§!.\nAdds §YGravitic Sensors§! as a research option."
+
+	eotf.199.a:0 "We must uncover the source of this signal."
+
+	eotf.199.a_gestalt:0 "Allocate resources to enhance sensor precision"
+
+	eotf_unresolved_subsurface_readings:0 "Unresolved Subsurface Readings"
+
+	eotf_unresolved_subsurface_readings_desc:0 "Strange sensor anomalies beneath this world have prompted increased study into advanced sensor technology."
+
+	eotf_unresolved_subsurface_readings_gestalt:0 "Unresolved Subsurface Readings"
+
+	eotf_unresolved_subsurface_readings_gestalt_desc:0 "Strange sensor anomalies beneath this world have prompted increased study into advanced detection and gravitic analysis."
+
+
+
+	eotf.1.name:0 "Subterranean Signals"
+
+	eotf.1.desc:0 "Now that §YGravitic Sensors§! have been researched and deployed across our science vessels and listening posts, we have finally managed to pinpoint the exact source of the subterranean signals first detected beneath [Root.Capital.GetName]."
+
+	eotf.1.desc_early:0 "Now that §YGravitic Sensors§! have been deployed across our science vessels and listening posts, we have detected a strange, highly structured signal emanating from deep beneath the crust of [Root.Capital.GetName].\n\nThe signal is unquestionably artificial in origin, yet its source appears to be buried deep within the planet's crust. Weak, degraded, and somehow still active after untold ages, it seems whatever lies hidden beneath our homeworld had remained invisible to the comparatively primitive sensor systems we once relied upon."
+
+	eotf.1.desc_gestalt:0 "With §YGravitic Sensors§! deployed across all science vessels and sensor arrays, signal triangulation is now possible.\n\nThe source of the previously detected subsurface anomaly beneath [Root.Capital.GetName] has been isolated.\n\nOrigin confirmed: artificial. Depth: extreme. Function: unknown."
+
+	eotf.1.desc_early_gestalt:0 "§YGravitic Sensors§! are active across science hulls and system sensor grids. A structured subsurface return has been correlated beneath [Root.Capital.GetName].\n\nOrigin: artificial. Depth: extreme crustal band. Resolution insufficient for structural mapping until excavation or deeper passive survey."
+
+	eotf.1.a:0 "Begin excavation immediately"
+
+	eotf.1.a_gestalt:0 "Initiate excavation protocols."
+
+
+
+	eotf.arc1.name:0 "Buried Foundations"
+
+	eotf.arc1.desc:0 "Beneath kilometers of bedrock lies a massive artificial structure of unknown origin. Its scale suggests this is no mere bunker or vault, but part of a much larger subterranean complex.\n\nThe site is too deeply embedded for conventional excavation. A major planetary recovery effort will be required."
+
+	eotf.arc1.a:0 "We must keep digging."
+
+
+
+	eotf.arc2.name:0 "Ancient Unearthed Complex"
+
+	eotf.arc2.desc:0 "After months of controlled excavation, the buried structure has finally been exposed.\n\nWhat has emerged is not a military installation, archive, or shelter, but a colossal subterranean industrial complex. Vast drilling arrays, refining chambers, and self-repairing metallic frameworks suggest it was once part of an extraction and manufacturing network far beyond anything our civilization has ever constructed.\n\nThough dormant and partially collapsed, faint energy signatures still persist throughout the site. Whatever this installation once was, it was not built for a primitive world."
+
+	eotf.arc2.a:0 "Catalogue everything."
+
+
+
+	eotf.2.name:0 "Ancient Unearthed Complex"
+
+	eotf.2.desc:0 "$eotf.arc2.desc$"
+
+	eotf.2.desc_gestalt:0 "Excavation complete. Subsurface structure exposed.\n\nIdentified installation: large-scale industrial complex.\n\nStructural analysis indicates advanced extraction, refinement, and automated fabrication processes exceeding current empire capabilities.\n\nSystems are degraded but not fully inactive. Residual energy signatures persist.\n\nClassification: legacy infrastructure. Origin: unknown."
+
+	eotf.2.a:0 "Catalogue everything."
+
+	eotf.2.a_gestalt:0 "Begin full system analysis."
+
+
+
+	eotf.3.name:0 "Ancient Metallurgy"
+
+	eotf.3.desc:0 "Our scientists have spent years studying the immense industrial complex beneath [Root.Capital.GetName], yet much of its layout and purpose remain opaque.\n\nProgress has nonetheless come from an unexpected angle: the bulk material of the structural framework. It shows signs of self-repair, extreme cohesion, and durability far beyond anything our metallurgists thought achievable.\n\nHow it was forged is still unknown—but we have proof that such materials can exist."
+
+	eotf.3.desc_gestalt:0 "Analysis of the subsurface complex continues. Functional understanding remains incomplete.\n\nFocus has shifted to structural materials.\n\nObserved properties: self-repair, extreme cohesion, high durability.\n\nManufacturing process unknown. Material replication currently not possible.\n\nConclusion: advanced metallurgical methods confirmed."
+
+	eotf.3.reward_tt:0 "§GLiving Metal§! mining may appear as a research option if unknown.\n§YInspired Engineers§! for §G10 years§!.\n\n§G+1§! Precursor archives recovered"
+
+	eotf.3.a:0 "We will not stop until we understand it."
+
+	eotf.3.a_gestalt:0 "Continue analysis until replication is achieved."
+
+
+
+	eotf.4.name:0 "Outer System Anomalies"
+
+	eotf.4.desc:0 "We have been scanning our home system and its surrounding bodies for signals similar to those emitted by the ancient mining complex beneath [Root.Capital.GetName].\n\nThese scans have now revealed a cluster of unnatural energy signatures emanating from a celestial body within the system.\n\nInitial readings suggest the presence of concealed structures exhibiting the same ancient signature first detected beneath [Root.Capital.GetName]."
+
+	eotf.4.desc_gestalt:0 "System-wide scans initiated for signal pattern correlation.\n\nMatching energy signatures detected on a distant celestial body within the home system.\n\nSignal characteristics align with subsurface installation beneath [Root.Capital.GetName].\n\nConclusion: additional concealed structures present."
+
+	eotf.4.project_tt:0 "Issues Special Project: §YOuter System Survey§!"
+
+	eotf.4.a:0 "Dispatch a scientific expedition immediately."
+
+	eotf.4.a_gestalt:0 "Deploy investigation units."
+
+
+
+	eotf.5.name:0 "Sealed Containment Site"
+
+	eotf.5.desc:0 "Our science teams have successfully entered the ancient installation on the surveyed world.\n\nWhat they found was not a communications relay, archive, or refinery node but a sealed containment facility. Though much of the structure has long since fallen to time, several inner chambers remain partially active, protected by unstable energy fields that continue to fluctuate unpredictably.\n\nPreliminary analysis suggests the site was once used to store or stabilize an extremely volatile exotic substance.\n\nWe do not yet understand its nature, but probing deeper without preparation may be dangerous."
+
+	eotf.5.desc_gestalt:0 "Installation breach successful.\n\nIdentified structure: containment facility.\n\nMultiple chambers remain active. Energy field stability: fluctuating.\n\nHistorical function: storage of highly volatile substance.\n\nSubstance properties unknown. Risk level: elevated.\n\nRecommendation: proceed with controlled stabilization."
+
+	eotf.5.stabilize_tt:0 "Issues Special Project: §YStabilize the Containment Core§!"
+
+	eotf.5.a:0 "Proceed with extreme caution."
+
+	eotf.5.a_gestalt:0 "Initiate controlled stabilization procedures."
+
+
+
+	eotf.6.name:0 "Exotic Matter Recovered"
+
+	eotf.6.desc:0 "After extensive efforts, our scientists have managed to restore power to the ancient facility's central containment systems.\n\nThough heavily degraded, the site still preserved trace quantities of an impossibly dense and highly reactive matter.\n\nWe may not yet possess the means to harness it directly, but we now understand enough of its theoretical properties to begin formal study."
+
+	eotf.6.desc_gestalt:0 "Isolated subsystem detected.\n\nInternal chamber remains structurally intact and sealed from surrounding network.\n\nNo degradation observed. No external access points detected.\n\nSegmentation appears intentional.\n\nClassification: containment structure.\n\nContainment chamber accessed.\n\nPrimary contents degraded. Residual traces detected.\n\nSubstance classification: unknown. Density and energy signatures exceed standard parameters.\n\nEnvironmental impact persists across containment systems.\n\nConclusion: stored material presented significant instability risk."
+
+	eotf.6.reward_tt:0 "Physics Research Gained: £physics_research£ 4000\nSociety Research Gained: £society_research£ 4000\nEngineering Research Gained: £engineering_research£ 4000\nUnity Gained: £unity£ 500\n\n§YDark Matter§! mining may appear as a research option if unknown.\n\n§G+1§! Precursor archives recovered"
+
+	eotf.6.a:0 "Begin formal dark matter studies."
+
+	eotf.6.a_gestalt:0 "Begin material analysis."
+
+
+
+	eotf.7.name:0 "Command Echoes"
+
+	eotf.7.desc:0 "While analyzing the recovered containment telemetry, our scientists identified encrypted synchronization pulses embedded within the site's dormant control systems.\n\nThese signals were not local. They were being routed elsewhere in our home system.\n\nCould these all be part of some ancient network?"
+
+	eotf.7.desc_gestalt:0 "Analysis of containment telemetry complete.\n\nEncrypted synchronization pulses detected within dormant control systems.\n\nSignal routing extends beyond local installation parameters.\n\nHypothesis: distributed network architecture."
+
+	eotf.7.project_tt:0 "Issues Special Project: §YTrace Ancient Command Signal§!"
+
+	eotf.7.a:0 "Trace the command signal."
+
+	eotf.7.a_gestalt:0 "Initiate signal tracing protocols."
+
+
+
+	eotf.8.name:0 "Dormant Command Nexus"
+
+	eotf.8.desc:0 "The signal has led us to a hidden command installation that had not appeared on any prior planetary surveys.\n\nThough much of the structure is inert, enough remains functional to reveal its true purpose: this was once a command nexus used to coordinate assets across the entire system.\n\nOur teams have recovered fragmentary §Yconstruction blueprints§! from the installation's databanks. Though heavily corrupted, they may still contain enough information for our scientists to begin reverse-engineering some of the advanced support infrastructure once maintained by this network."
+
+	eotf.8.desc_gestalt:0 "Centralized control node detected.\n\nSystem integrity compromised but partially recoverable.\n\nFunction: coordination and command distribution across linked infrastructure.\n\nRestoration potential: viable."
+
+	eotf.8.reward_tt:0 "Adds §YJustice Complex§!, §YSky Dome§!, §YShrinkspace Depot§!, §YNourishment Complex§! and §YDimensional Replicator§! as research options.\n\n§G+1§! Precursor archives recovered"
+
+	eotf.8.a:0 "Claim the databanks."
+
+	eotf.8.a_gestalt:0 "Initiate system restoration."
+
+
+
+	eotf.9.name:0 "Reserve Fleet Registries"
+
+	eotf.9.desc:0 "With partial command access restored, the dormant registries within the nexus have finally begun yielding something of value.\n\nBuried among the corrupted archives is a fragmented military reserve index that references a detached battlegroup assigned to this system and marked not as destroyed, but inactive.\n\nIf the records are accurate, then somewhere hidden within this system may still rest a reserve fleet of ancient warships, forgotten for untold ages."
+
+	eotf.9.desc_gestalt:0 "Partial command access established.\n\nDormant registry systems now accessible.\n\nEntry references detached battlegroup assigned to local system.\n\nStatus: inactive.\n\nConclusion: dormant fleet assets may still be present."
+
+	eotf.9.project_tt:0 "Issues Special Project: §YLocate Reserve Fleet§!"
+
+	eotf.9.a:0 "Locate the battlegroup."
+
+	eotf.9.a_gestalt:0 "Initiate fleet asset search."
+
+
+
+	eotf.10.name:0 "Silent Anchorage"
+
+	eotf.10.desc:0 "The registry records were accurate.\n\nConcealed within a long-forgotten anchorage and masked by centuries of debris, several ancient warships lie dormant.\n\nThey are without power and badly worn, yet the hulls are largely intact. Frame members, power trunking, and weapons hardpoints all point to a design philosophy far beyond our own.\n\nThese are not conventional warships—they are relics of a power centuries ahead of us.\n\nIf we restore the anchorage and its command systems, part of this fleet may yet answer to us again."
+
+	eotf.10.desc_gestalt:0 "Registry confirmation achieved.\n\nAnchorage contains dormant fleet assets.\n\nHull integrity: degraded but recoverable.\n\nStructural design exceeds current naval capabilities.\n\nRestoration of power and command systems may enable control of the fleet."
+
+	eotf.10.reward_tt:0 "Engineering Research Gained: £engineering_research£ 1500\n\nIssues Special Project: §YRestore Silent Anchorage§!"
+
+	eotf.10.a:0 "Begin restoration efforts."
+
+	eotf.10.a_gestalt:0 "Initiate anchorage restoration."
+
+
+
+	eotf.11.name:0 "Guardians Reawakened"
+
+	eotf.11.desc:0 "After significant restoration works, the ancient power conduits have surged to life, dormant command relays are responding, and sealed docking cradles throughout the anchorage have begun to disengage.\n\nMultiple vessels are powering up, but something has gone wrong.\n\nWhile many of the reactivated warships appear to have accepted our command authority, a number of vessels are rejecting our access codes and identifying both us and the newly awakened fleet as hostile intruders.\n\nThe defence fleet has begun firing on itself. If control of this reserve force is to be secured, the rogue vessels must be destroyed immediately."
+
+	eotf.11.desc_gestalt:0 "Anchorage systems restored.\n\nPower conduits active. Command relays responding.\n\nMultiple fleet assets reactivating.\n\nCommand authority partially accepted.\n\nSeveral units rejecting authorization and classifying all entities as hostile."
+
+	NAME_EOTF_Recovered_Fleet:0 "Recovered Ancient Ships"
+
+	NAME_EOTF_Rogue_Ancients:0 "Errant Anchorage Units"
+
+	NAME_EOTF_Rogue_Fleet:0 "Unidentified Escorts"
+
+	eotf.11.a:0 "To battlestations!"
+
+	eotf.11.a_gestalt:0 "Engage hostile units."
+
+
+
+	eotf.112.name:0 "Command Authority Established"
+
+	eotf.112.desc:0 "With the rogue escorts destroyed, the anchorage has fallen silent once more.\n\nFortunately, enough of the ancient guardians accepted our command authority for the conflict to be resolved in our favor.\n\nFor the first time in untold ages, these warships serve once more - but to a new master."
+
+	eotf.112.desc_gestalt:0 "Hostile units eliminated.\n\nAnchorage secure and all remaining fleet assets fully compliant."
+
+	eotf.112.system_docks_tt:0 "Adds §G+5%§! Starbase Shipyard Build Speed at the starbase in the §Y[Root.Capital.GetStarName]§! system."
+
+	eotf.112.a:0 "The fleet is ours"
+
+	eotf.112.a_gestalt:0 "Command authority established."
+
+	eotf_anchorage_fleet_docks:0 "Anchorage Fleet Docks"
+
+	eotf_anchorage_fleet_docks_desc:0 "Reserve anchorage logistics and recovered yard protocols speed ship construction at this starbase."
+
+
+
+	eotf.12.name:0 "Recovered Design Archives"
+
+	eotf.12.desc:0 "The anchorage's command core has yielded fragments of §Yancient design archives§! that align with the construction data previously recovered from the command nexus.\n\nTaken together, they offer new insight into how this network's support infrastructure was expanded and sustained across the system. Though the largest industrial systems still elude full reconstruction, enough survives for our scientists to begin replicating more advanced installations once thought beyond us."
+
+	eotf.12.desc_gestalt:0 "Command core data recovery successful.\n\nExtracted archives align with previously recovered construction datasets.\n\nCombined analysis reveals sustainment protocols for system-wide infrastructure.\n\nPartial reconstruction of advanced installations now viable."
+
+	eotf.12.reward_tt:0 "Grants §YReverse Engineering Surge§! for §G15 years§!.\n\nAdds §YEmpyrean Dome§!, §YNourishment Center§!, §YDimensional Fabricator§! and §YClass-3 Singularity§! as research options.\n\n§G+1§! Precursor archives recovered"
+
+	eotf.12.a:0 "Begin reverse engineering at once."
+
+	eotf.12.a_gestalt:0 "Initiate reverse engineering protocols."
+
+
+
+	eotf.61.name:0 "Recovered Escort Schematics"
+
+	eotf.61.desc:0 "Further study of the recovered military archives has yielded a workable set of partial schematics for a class of small warships once deployed throughout this system.\n\nWhile incomplete, the surviving data is sufficient for our scientists to begin research into these escort-class vessels. The larger hulls referenced elsewhere in the archives remain beyond our present understanding. For now."
+
+	eotf.61.desc_gestalt:0 "Military archive analysis updated.\n\nPartial schematics recovered for §Yescort-class§! vessels.\n\nData integrity sufficient for research initiation.\n\nLarger vessel classifications remain beyond current comprehension thresholds."
+
+	eotf.61.reward_tt:0 "Adds §YRiddle Escort§! as a research option.\n\n§G+1§! Precursor archives recovered"
+
+	eotf.61.a:0 "This could come in handy"
+
+	eotf.61.a_gestalt:0 "Begin escort-class research."
+
+
+
+	eotf.13.name:0 "Unauthorized Reactivation"
+
+	eotf.13.desc:0 "A transmission has been received from an unknown source.\n\nThough we believed the creators of these ancient technologies to be long gone, it would seem they still endure—and they have noticed the reactivation of what was once theirs.\n\nIts message is cold, immediate, and unmistakably hostile. To them, our discoveries are not a miracle. They are a breach.\n\nWhatever remnants of the old order still linger among the stars have now taken notice of us."
+
+	eotf.13.desc_gestalt:0 "Incoming transmission detected.\n\nSource: unknown. Origin: external.\n\nSignal content decoded.\n\nMessage classification: §Rhostile§!.\n\nSender identifies reactivation of ancient systems as unauthorized breach.\n\nConclusion: originating civilization remnants still active."
+
+	eotf.13.reward_tt:0 "Gain §YAncient Signatures Detected§! (naval capacity, unity from jobs).\n\n§RFallen Empires§! gain §Rstrong§! negative opinion toward us."
+
+	eotf.13.a:0 "We will not surrender what we have earned."
+
+	eotf.13.a_gestalt:0 "Reject external authority."
+
+
+
+	eotf.14.name:0 "Inheritance Claimed"
+
+	eotf.14.desc:0 "At last, enough of the ancient network has been restored to reconstruct the truth.\n\nOur home system was not merely a collection of isolated installations or forgotten ruins. It was once part of a hyper-advanced civilization - long forgotten, even by those who built it.\n\nWhat we uncovered was never meant for us, but piece by piece, we have claimed it for our empire all the same.\n\nFrom the fragments that remained, our scientists have recovered enough schematic data to replicate the heaviest industrial infrastructure still archived here: the §YHyper-Forge§! and the §YQuantum Drilling Plant§! beneath [Root.Capital.GetName].\n\nAdditionally, the same archive pass has also yielded the first viable reconstruction data for the precursor §YEnigma Battlecruiser§!.\n\nWith sufficient study, our scientists may soon be able to replicate the largest warships yet recovered from the military archives."
+
+	eotf.14.desc_gestalt:0 "Network reconstruction complete.\n\nSystem origin identified: component of advanced precursor civilization.\n\nInstallations previously classified as isolated are confirmed as integrated infrastructure.\n\nSchematic recovery successful.\n\nReplication protocols unlocked: §YHyper-Forge§!, §YQuantum Drilling Plant§! beneath [Root.Capital.GetName].\n\nAdditional dataset recovered: §YEnigma Battlecruiser§!.\n\nConclusion: large-scale reconstruction now achievable."
+
+	eotf.14.reward_tt_power:0 "Gain the permanent §YGalactic Ascendancy§! modifier.\n\nAdds §YHyper-Forge§! and §YQuantum Drilling Plant§! as research options.\n\nAdds §YEnigma Battlecruiser§! as research option.\n\nCompletes §YEchoes of the Fallen§!.\n\n§G+1§! Precursor archives recovered"
+
+	eotf.14.reward_tt_wisdom:0 "Unity Gained: £unity£ 10000\n\nGain the §YWorthy Successors§! modifier for §Y20 years§!.\n\nAdds §YHyper-Forge§! and §YQuantum Drilling Plant§! as research options.\n\nAdds §YEnigma Battlecruiser§! as research option.\n\nCompletes §YEchoes of the Fallen§!.\n\n§G+1§! Precursor archives recovered"
+
+	eotf.14.a:0 "We will rise above all others."
+
+	eotf.14.a_gestalt:0 "Optimize for galactic supremacy."
+
+	eotf.14.b:0 "We will be better than our precursors."
+
+	eotf.14.b_gestalt:0 "Pursue superior evolution."
+
+	eotf_galactic_ascendancy:0 "Galactic Ascendancy"
+
+	eotf_galactic_ascendancy_desc:0 "Our empire has embraced the full potential of the ancient technology hidden in our home system. It now fuels our ascendancy."
+
+	eotf_worthy_successors:0 "Worthy Successors"
+
+	eotf_worthy_successors_desc:0 "Rather than repeating the failures of the civilization that came before us, we have chosen to build something greater from its remnants—a legacy not of domination, but of purpose."
+
+
+
+	NAME_EOTF_Reserve_Escort:0 "Recovered Escort"
+
+	NAME_EOTF_Reserve_Battlecruiser:0 "Recovered Battlecruiser"
+
+
+
+
