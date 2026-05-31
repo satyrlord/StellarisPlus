@@ -1,3 +1,4 @@
+# === merged from 00_eotf_event_ships.txt ===
 # Event-only FE hulls for eotf.11 Guardians Reawakened (vanilla NAME_Sage / NAME_Scholar loadouts; no special_buildable FE gate).
 # Cosmogenesis escort hull research: eotf.61 (~5 yearly ticks after eotf.12 via eotf.114 counter when Machine Age + non-bio; eotf.13 is the separate FE notice).
 
@@ -282,4 +283,19 @@ ship_design = {
 	required_component = "COMBAT_COMPUTER_LINE_SAPIENT"
 	required_component = "BATTLESHIP_DARK_MATTER_REACTOR"
 	required_component = "BATTLESHIP_SHIP_THRUSTER_5"
+}
+# === merged from ASP_ship_designs.txt ===
+ship_design = {
+	name = "NAME_ASP_Dawn_Star_Ship"
+	ship_size = science
+
+	section = {
+		template = "DEFAULT_SCIENCESHIP_SECTION"
+		slot = "mid"
+	}
+	
+	required_component = "HYPER_DRIVE_3"
+	required_component = "SHIP_THRUSTER_3"
+	required_component = "SENSOR_3"
+	required_component = "CORVETTE_ANTIMATTER_REACTOR"
 }

@@ -1,3 +1,311 @@
+# === merged from 00_eotf_chain_markers.txt ===
+# Burial world + chain system flags (capital moves do not move the chain).
+# Referenced from eotf.191 and eotf.190.
+
+eotf_ensure_ancient_legacy_chain_markers = {
+	if = {
+		limit = {
+			NOT = {
+				any_owned_planet = {
+					has_planet_flag = eotf_ancient_legacy_burial_world
+				}
+			}
+		}
+		capital_scope = {
+			set_planet_flag = eotf_ancient_legacy_burial_world
+			solar_system = {
+				set_star_flag = eotf_ancient_legacy_chain_system
+			}
+		}
+	}
+	every_owned_planet = {
+		limit = {
+			has_planet_flag = eotf_ancient_legacy_burial_world
+		}
+		solar_system = {
+			set_star_flag = eotf_ancient_legacy_chain_system
+		}
+	}
+}
+
+eotf_save_burial_planet_as_event_target = {
+	random_owned_planet = {
+		limit = {
+			has_planet_flag = eotf_ancient_legacy_burial_world
+		}
+		save_event_target_as = eotf_burial_planet
+	}
+	if = {
+		limit = {
+			NOT = { exists = event_target:eotf_burial_planet }
+		}
+		capital_scope = {
+			save_event_target_as = eotf_burial_planet
+		}
+	}
+}
+
+# Re-save project location for delayed follow-ups (eotf.5–6, 8, 10–11): from = completing ship, orbit = project body.
+
+eotf_restore_outer_survey_world_from_from_orbit = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:eotf_outer_survey_world }
+			exists = from
+		}
+		from = {
+			orbit = {
+				save_event_target_as = eotf_outer_survey_world
+			}
+		}
+	}
+}
+
+eotf_restore_command_trace_world_from_from_orbit = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:eotf_command_trace_world }
+			exists = from
+		}
+		from = {
+			orbit = {
+				save_event_target_as = eotf_command_trace_world
+			}
+		}
+	}
+}
+
+eotf_restore_battlegroup_world_from_from_orbit = {
+	if = {
+		limit = {
+			NOT = { exists = event_target:eotf_battlegroup_world }
+			exists = from
+		}
+		from = {
+			orbit = {
+				save_event_target_as = eotf_battlegroup_world
+			}
+		}
+	}
+}
+
+# Precursor counter +1 (milestone bundles in events). Gated by eotf_chain_started OR has_event_chain.
+eotf_precursor_archive_recovered_one = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = eotf_chain_started
+				has_event_chain = "eotf_echoes_of_the_fallen_chain"
+			}
+		}
+		add_event_chain_counter = {
+			event_chain = "eotf_echoes_of_the_fallen_chain"
+			counter = "eotf_precursor_archive_recovery"
+			amount = 1
+		}
+	}
+}
+# === merged from 00_eotf_homeworld_ambient.txt ===
+# Orbital debris / wreckage (visual only). Prefer a random non-capital planet in the home system.
+
+eotf_spawn_orbital_debris_visuals_on_this = {
+	create_ambient_object = {
+		type = "large_debris_object"
+		use_3d_location = yes
+		entity_offset_height = { min = -14 max = 14 }
+		location = this
+	}
+	last_created_ambient_object = {
+		set_location = {
+			target = prev
+			distance = 38
+			angle = random
+		}
+	}
+	create_ambient_object = {
+		type = "medium_debris_01_object"
+		use_3d_location = yes
+		entity_offset_height = { min = -10 max = 10 }
+		location = this
+	}
+	last_created_ambient_object = {
+		set_location = {
+			target = prev
+			distance = 48
+			angle = random
+		}
+	}
+	while = {
+		count = 5
+		create_ambient_object = {
+			type = "small_debris_object"
+			use_3d_location = yes
+			entity_offset_height = { min = -10 max = 10 }
+			location = this
+		}
+		last_created_ambient_object = {
+			set_location = {
+				target = prev
+				distance = 58
+				angle = random
+			}
+		}
+	}
+}
+
+# One debris cluster on a random planet in the home system (requires event_target:eotf_orbital_debris_homeworld_capital).
+# Divine Hulk origin only — called from eotf_spawn_divine_hulk_homeworld_debris.
+eotf_spawn_one_divine_hulk_orbital_debris_field = {
+	if = {
+		limit = {
+			any_system_planet = {
+				is_star = no
+				NOT = { is_same_value = event_target:eotf_orbital_debris_homeworld_capital }
+				NOT = { has_planet_flag = eotf_divine_hulk_debris_host }
+			}
+		}
+		random_system_planet = {
+			limit = {
+				is_star = no
+				NOT = { is_same_value = event_target:eotf_orbital_debris_homeworld_capital }
+				NOT = { has_planet_flag = eotf_divine_hulk_debris_host }
+			}
+			set_planet_flag = eotf_divine_hulk_debris_host
+			eotf_spawn_orbital_debris_visuals_on_this = yes
+		}
+	}
+	else_if = {
+		limit = {
+			any_system_planet = {
+				is_star = no
+				NOT = { has_planet_flag = eotf_divine_hulk_debris_host }
+			}
+		}
+		random_system_planet = {
+			limit = {
+				is_star = no
+				NOT = { has_planet_flag = eotf_divine_hulk_debris_host }
+			}
+			set_planet_flag = eotf_divine_hulk_debris_host
+			eotf_spawn_orbital_debris_visuals_on_this = yes
+		}
+	}
+	else = {
+		random_system_planet = {
+			limit = {
+				is_star = no
+			}
+			eotf_spawn_orbital_debris_visuals_on_this = yes
+		}
+	}
+}
+
+# Divine Hulk origin — capital modifier, two orbital debris fields, home-system tag (eotf.250).
+eotf_spawn_divine_hulk_homeworld_debris = {
+	capital_scope = {
+		add_modifier = {
+			modifier = eotf_planet_the_divine_hulk
+			days = -1
+		}
+		save_event_target_as = eotf_orbital_debris_homeworld_capital
+		solar_system = {
+			set_star_flag = eotf_divine_hulk_home_system
+			eotf_spawn_one_divine_hulk_orbital_debris_field = yes
+			eotf_spawn_one_divine_hulk_orbital_debris_field = yes
+			every_system_planet = {
+				limit = {
+					has_planet_flag = eotf_divine_hulk_debris_host
+				}
+				set_planet_flag = eotf_divine_hulk_debris_survey_site
+			}
+		}
+	}
+}
+
+# Begins Questioning the Divine (empire-wide; target = root).
+eotf_start_divine_hulk_debris_situation = {
+	if = {
+		limit = {
+			NOT = {
+				country_has_situation = {
+					SITUATION = situation_eotf_questioning_the_divine
+				}
+			}
+		}
+		start_situation = {
+			type = situation_eotf_questioning_the_divine
+			target = root
+		}
+	}
+}
+# === merged from 00_eotf_infra_unlocks.txt ===
+# Ancient Legacy FE infrastructure: add_research_option at Echoes milestones (vanilla buildings, no building overrides).
+# Random FE draws for this origin are gated in zzz_eotf_ancient_legacy_fe_tech_gate.txt by eotf_fe_buildings_tier_* flags.
+# Tier 1 = eotf.8 (habitat databanks). Tier 2 = eotf.12 (design archives). Tier 3 = eotf.14 (capital inheritance).
+# Precursor Archive Recovery counter: +1 per six narrative milestones in events only (not per tech / not eotf.299).
+
+eotf_add_fe_tier1_building_research = {
+	if = {
+		limit = { NOT = { has_technology = tech_fe_security_1 } }
+		add_research_option = tech_fe_security_1
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_dome_1 } }
+		add_research_option = tech_fe_dome_1
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_silo_1 } }
+		add_research_option = tech_fe_silo_1
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_nourishment_1 } }
+		add_research_option = tech_fe_nourishment_1
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_fabricator_1 } }
+		add_research_option = tech_fe_fabricator_1
+	}
+}
+
+eotf_add_fe_tier2_building_research = {
+	if = {
+		limit = {
+			has_technology = tech_fe_nourishment_1
+			NOT = { has_technology = tech_fe_nourishment_2 }
+		}
+		add_research_option = tech_fe_nourishment_2
+	}
+	if = {
+		limit = {
+			has_technology = tech_fe_dome_1
+			NOT = { has_technology = tech_fe_dome_2 }
+		}
+		add_research_option = tech_fe_dome_2
+	}
+	if = {
+		limit = {
+			has_technology = tech_fe_fabricator_1
+			NOT = { has_technology = tech_fe_fabricator_2 }
+		}
+		add_research_option = tech_fe_fabricator_2
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_singularity_1 } }
+		add_research_option = tech_fe_singularity_1
+	}
+}
+
+eotf_add_fe_tier3_building_research = {
+	if = {
+		limit = { NOT = { has_technology = tech_fe_forge_1 } }
+		add_research_option = tech_fe_forge_1
+	}
+	if = {
+		limit = { NOT = { has_technology = tech_fe_mine_1 } }
+		add_research_option = tech_fe_mine_1
+	}
+}
+
 orphan_matrix_random_events = {
 	random_list = {
 		10 = { site_collapsed_roof = yes }
@@ -760,3 +1068,190 @@ soe_grant_random_fe_rare_tech = {
 		}
 	}
 }
+# === merged from zzz_eotf_ancient_legacy_fe_grants.txt ===
+	# NOTE: grant_random_fe_building intentionally overrides the narrower vanilla
+	# random-grant entry point. Ancient Legacy skips random FE-building grants so
+	# Echoes milestone research remains its only unlock path.
+grant_random_fe_building = {
+	if = {
+		limit = { has_origin = origin_ancient_legacy }
+		# No-op: do not set *_can_build flags outside the Echoes tier progression.
+	}
+	else = {
+		random_list = {
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = micro_forge_can_build
+				}
+				grant_fe_building = { BUILDING = micro_forge }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = affluence_emporium_can_build
+						is_hive_empire = yes
+					}
+				}
+				grant_fe_building = { BUILDING = affluence_emporium }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = nourishment_complex_can_build
+						country_uses_food = no
+					}
+				}
+				grant_fe_building = { BUILDING = nourishment_complex }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = dimensional_replicator_can_build
+				}
+				grant_fe_building = { BUILDING = dimensional_replicator }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = class_3_singularity_can_build
+				}
+				grant_fe_building = { BUILDING = class_3_singularity }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = fe_sky_dome_can_build
+				}
+				grant_fe_building = { BUILDING = fe_sky_dome }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = fe_fortress_can_build
+				}
+				grant_fe_building = { BUILDING = fe_fortress }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = fe_administration_1_can_build
+						is_gestalt = yes
+						is_spiritualist = yes
+						has_make_spiritualist_perk = yes
+					}
+				}
+				grant_fe_building = { BUILDING = fe_administration_1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = fe_administration_hive_1_can_build
+						is_hive_empire = no
+					}
+				}
+				grant_fe_building = { BUILDING = fe_administration_hive_1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = fe_administration_machine_1_can_build
+						is_machine_empire = no
+					}
+				}
+				grant_fe_building = { BUILDING = fe_administration_machine_1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = fe_assembly_1_can_build
+						has_policy_flag = robots_outlawed
+						is_hive_empire = yes
+					}
+				}
+				grant_fe_building = { BUILDING = fe_assembly_1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					NOR = {
+						NOT = { has_country_flag = fe_clinic_1_can_build }
+						is_regular_empire = yes
+						is_hive_empire = yes
+					}
+				}
+				grant_fe_building = { BUILDING = fe_clinic_1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = fe_security_1_can_build
+				}
+				grant_fe_building = { BUILDING = fe_security_1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = fe_market_1_can_build
+						is_gestalt = yes
+					}
+				}
+				grant_fe_building = { BUILDING = fe_market_1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = fe_silo_1_can_build
+				}
+				grant_fe_building = { BUILDING = fe_silo_1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					OR = {
+						has_country_flag = fe_entertainment_1_can_build
+						is_gestalt = yes
+					}
+				}
+				grant_fe_building = { BUILDING = fe_entertainment_1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = fe_lab_1_can_build
+				}
+				grant_fe_building = { BUILDING = fe_lab_1 }
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_country_flag = fe_mine_1_can_build
+				}
+				grant_fe_building = { BUILDING = fe_mine_1 }
+			}
+		}
+	}
+}
+
+# Keep the shared helper aligned with vanilla so non-random FE building grants,
+# future upstream uses, and other mods do not inherit the Ancient Legacy gate.
+grant_fe_building = {
+	change_variable = { which = $BUILDING$_build_count value = 1 }
+	change_variable = { which = $BUILDING$_upgrade_count value = 1 }
+	set_country_flag = $BUILDING$_can_build
+	set_timed_country_flag = { flag = recently_got_$BUILDING$ days = 30 }
+	create_message = {
+		type = FALLEN_EMPIRE_BUILDING_GAINED
+		localization = MESSAGE_FALLEN_EMPIRE_BUILDING_GAINED
+		target = root
+		days = 30
+	}
+}
+

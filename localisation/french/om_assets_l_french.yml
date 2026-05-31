@@ -72,7 +72,7 @@
  # SPECIAL PROJECTS
  
  CRYO_VATS_PROJECT:0 "Projet des Cryocuves"
- CRYO_VATS_PROJECT_DESC:0 "Nos [owner.GetScientistPlural] vont essayer de ramener à la vie les §GConcepteurs§! restants piégés à l'intérieur des Cryocuves trouvées sur §Y[this.GetName]§!."
+ CRYO_VATS_PROJECT_DESC:0 "Nos [Owner.GetScientistPlural] vont essayer de ramener à la vie les §GConcepteurs§! restants piégés à l'intérieur des Cryocuves trouvées sur §Y[This.GetName]§!."
  
  # DISTRICTS AND JOBS
  

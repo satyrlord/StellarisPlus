@@ -4,7 +4,7 @@
  # Event : root = ship, from = planet
 
  # Energy Vortex, alias « Houston, we have a problem »
- eev_houston.1.name: "[Root.owner.Capital.GetName], we have a problem."
+ eev_houston.1.name: "[Root.Owner.Capital.GetName], we have a problem."
  eev_houston.1.desc: "Unfortunately, the scan has had dire consequences. It agitated the vortex, unleashing a potent energy surge that disrupted the ship's engines. As a result, the §B[Root.GetFleetName]§! now drifts inexorably toward the planet's gravitational pull. Without repairs, it will crash into §Y[From.GetName]§!."
  eev_houston.1a: "Send a construction ship at once!"
  eev_houston.2.name: "Rescuing the science ship"
@@ -12,21 +12,21 @@
  eev_houston.2a: "Have a military ship haul them to safety."
  eev_houston.2b: "We can't take the risk."
  eev_houston.3.name: "Left without repairs"
- eev_houston.3.desc: "The crew of §B[Root.GetFleetName]§! acknowledged the bad news and use their remaining time to gather as much data as they can. They were about to send a report when the anomaly erupts again. We would clearly have lost our construction ship too if we had sent one to help."
+ eev_houston.3.desc: "The crew of §B[Root.GetFleetName]§! acknowledged the bad news and used their remaining time to gather as much data as they can. They were about to send a report when the anomaly erupts again. We would clearly have lost our construction ship too if we had sent one to help."
  eev_houston.4.name: "Military to the rescue"
- eev_houston.4.desc: "Our military vessels met with §B[eev_vortex_sci.GetFleetName]§! and our constructor and started to swiftly drag them away from the orbit of §Y[eev_vortex_pla.GetName]§!. The vortex exploded again but our guess was right: our fleet only suffered some minor malfunctions, and their redundant systems seamlessly kicked in. But a few minutes later, §G[eev_vortex_sci.Leader.GetName]§! warned that the anomaly's instability was now critical and urged the fleet to speed up, but before they could escape, the vortex ultimately collapsed, unleashing an colossal surge of energy - a final, blinding burst that was the last bit of information we recieved before losing all communications from [From.System.GetName]."
+ eev_houston.4.desc: "Our military vessels met with §B[eev_vortex_sci.GetFleetName]§! and our constructor and started to swiftly drag them away from the orbit of §Y[eev_vortex_pla.GetName]§!. The vortex exploded again but our guess was right: our fleet only suffered some minor malfunctions, and their redundant systems seamlessly kicked in. But a few minutes later, §G[eev_vortex_sci.Leader.GetName]§! warned that the anomaly's instability was now critical and urged the fleet to speed up, but before they could escape, the vortex ultimately collapsed, unleashing a colossal surge of energy - a final, blinding burst that was the last bit of information we received before losing all communications from [From.System.GetName]."
  eev_houston.4a: "This is bad..."
  eev_houston.5.name: "Military to the rescue"
- eev_houston.5.desc: "Our military vessels met with §B[eev_vortex_sci.GetFleetName]§! and started hauling it far from the orbit of §Y[eev_vortex_pla.GetName]§!. The vortex exploded again but our guess was right: our ships only suffered some minor malfunctions, and their redundant systems seamlessly kicked in. But a few minutes later, §G[eev_vortex_sci.Leader.GetName]§! warned that the anomaly's instability was now critical and urged the fleet to speed up, but before they could escape, the vortex ultimately collapsed, unleashing an colossal surge of energy - a final, blinding burst that was the last bit of information we recieved before losing all communications from [From.System.GetName]."
+ eev_houston.5.desc: "Our military vessels met with §B[eev_vortex_sci.GetFleetName]§! and started hauling it far from the orbit of §Y[eev_vortex_pla.GetName]§!. The vortex exploded again but our guess was right: our ships only suffered some minor malfunctions, and their redundant systems seamlessly kicked in. But a few minutes later, §G[eev_vortex_sci.Leader.GetName]§! warned that the anomaly's instability was now critical and urged the fleet to speed up, but before they could escape, the vortex ultimately collapsed, unleashing a colossal surge of energy - a final, blinding burst that was the last bit of information we received before losing all communications from [From.System.GetName]."
  eev_houston.6.name: "No rescue"
  eev_houston.6.desc: "The last transmission we received from §B[Root.GetFleetName]§! was the final gigantic destruction of the energy vortex as the ship started to enter the atmosphere of §Y[From.GetName]§!. There's no way they could have survived that."
  eev_houston.6a: "The universe is a dangerous place."
  eev_houston.7.name: "Rescue from out there"
- eev_houston.7.desc: "To the surprise of [Root.owner.Capital.GetName] control center, we received a transmission from our lost ships! They are all safe and excitedly reported an incredible story.\n\nAs they thought to be doomed, an alien ship of unknown design emerged from nowhere and shielded them from the full strength of the explosion. Then it used some energy beams to repair the damaged ships before disappearing at an incredible speed.\n\n§B[Root.GetFleetName]§!'s systems could only scan it for a few seconds, revealing that the strange ship wasn't using any known means of propulsion."
+ eev_houston.7.desc: "To the surprise of [Root.Owner.Capital.GetName] control center, we received a transmission from our lost ships! They are all safe and excitedly reported an incredible story.\n\nAs they thought to be doomed, an alien ship of unknown design emerged from nowhere and shielded them from the full strength of the explosion. Then it used some energy beams to repair the damaged ships before disappearing at an incredible speed.\n\n§B[Root.GetFleetName]§!'s systems could only scan it for a few seconds, revealing that the strange ship wasn't using any known means of propulsion."
  eev_houston.7a: "Concerning..."
  eev_houston.7b: "We have friends out there."
  eev_houston.8.name: "Rescue from out there"
- eev_houston.8.desc: "To the surprise of [Root.owner.Capital.GetName] control center, we received a transmission from our lost ships! They are all safe and excitedly reported an incredible story.\n\nAs they thought to be doomed, an alien ship of unknown design emerged from nowhere and shielded them from the full strength of the explosion. Then it used some energy beams to repair the damaged ships before disappearing at an incredible speed.\n\n§B[Root.GetFleetName]§!'s systems could only scan it for a few seconds, revealing that the strange ship wasn't using any known means of propulsion."
+ eev_houston.8.desc: "To the surprise of [Root.Owner.Capital.GetName] control center, we received a transmission from our lost ships! They are all safe and excitedly reported an incredible story.\n\nAs they thought to be doomed, an alien ship of unknown design emerged from nowhere and shielded them from the full strength of the explosion. Then it used some energy beams to repair the damaged ships before disappearing at an incredible speed.\n\n§B[Root.GetFleetName]§!'s systems could only scan it for a few seconds, revealing that the strange ship wasn't using any known means of propulsion."
  eev_houston.9.name: "A parting gift"
  eev_houston.9.desc: "While conducting an evaluation of §B[Root.GetFleetName]§!'s systems after the recent events, §G[Root.Leader.GetName]§! stumbled upon a concealed cache of scientific data within the ship's computer. He is certain that it wasn't present prior to the incident and suspects it may have originated from the enigmatic ship. After a comprehensive analysis, he confirmed that the data is entirely safe and subsequently made it publicly accessible. These mysterious aliens, dubbed §SAncient Beholders§!, might cross our path again in the future."
  EEV_SCI_REPAIR: "Repairing the science ship"
@@ -48,7 +48,7 @@
 
  # Mysterious Cache
  eev_mysterious_cache.1.name: "A gift from the past"
- eev_mysterious_cache.1.desc: "Gaining entry into the building proved a formidable challenge due to its thick, impregnable walls and a conspicuous absence of any visible entrance. These robust fortifications concealed a small room that harbored a central altar adorned with an intricately designed box. Scans indicate the building and the box are eleven thousands years old. However, the most perplexing revelation was the presence of inscriptions on the altar, inscribed in our modern language! Even more disconcerting is that they precisely name §G[Root.Leader.GetName]§!, claiming the box as a gift for [Root.Leader.GetHerHim]. The box itself, crafted from an unknown alloy, exhibited an astonishing heft - a treasure trove of untold potential for our scientists to dissect and analyze. But who made this remarkable gift, and  how did they possess such prescient knowledge of our arrival?"
+ eev_mysterious_cache.1.desc: "Gaining entry into the building proved a formidable challenge due to its thick, impregnable walls and a conspicuous absence of any visible entrance. These robust fortifications concealed a small room that harbored a central altar adorned with an intricately designed box. Scans indicate the building and the box are eleven thousand years old. However, the most perplexing revelation was the presence of inscriptions on the altar, inscribed in our modern language! Even more disconcerting is that they precisely name §G[Root.Leader.GetName]§!, claiming the box as a gift for [Root.Leader.GetHerHim]. The box itself, crafted from an unknown alloy, exhibited an astonishing heft - a treasure trove of untold potential for our scientists to dissect and analyze. But who made this remarkable gift, and how did they possess such prescient knowledge of our arrival?"
 
  # Crashed colony ship
  eev_crashcol.1.name: "Crashed colony ship"
@@ -67,7 +67,7 @@
 
  # Anomalies - alternate endings
  supernova.1.name: "Unusual fluctuations"
- supernova.1.desc: "§B[Root.GetFleetName]§!'s instruments has detected internal fluctuations of plasma on a massive scale. The crew is having a hard time getting detailed readings due to the gravimetric interference emitted by these fluctuations and they will have to get closer to the star to know what's going on."
+ supernova.1.desc: "§B[Root.GetFleetName]§!'s instruments have detected internal fluctuations of plasma on a massive scale. The crew is having a hard time getting detailed readings due to the gravimetric interference emitted by these fluctuations and they will have to get closer to the star to know what's going on."
  supernova.2.name: "Massive plasma vortexes"
  supernova.2.desc: "Our science ship has observed the most violent and massive plasma vortexes ever spotted in a star. This phenomenon is generating extreme waves of radiations but §B[Root.GetFleetName]§!'s shields support their assault. §G[Root.Leader.GetName]§! announced that this star will probably explode in a supernova before the next millennia. The crew has collected some exciting data that will have an important impact in physics research."
 
@@ -227,7 +227,7 @@
  eev_lotsofmoney.1.b: "Launch a cultural initiative"
  eev_lotsofmoney.1.c: "Fund a scientific project"
  eev_lotsofmoney.1.d: "I would rather keep my money."
- eev_lotsofmoney.2.name: "Frixian plage cured"
+ eev_lotsofmoney.2.name: "Frixian plague cured"
  eev_lotsofmoney.2.desc: "It appears that our generous donation months ago has played a pivotal role in finding a cure for the once-incurable Frixian plague! Last night our capital planet celebrated when they heard the news!"
 
  # Haven
@@ -246,7 +246,7 @@
 
  # Faint Asteroid
  eev_faint_asteroid.2.name: "Catastrophic breach"
- eev_faint_asteroid.2.desc: "The alarms began sounding far too late, as an unusually faint asteroid managed to slip through our early detecton systems and breach into §Y[From.GetName]§!, causing substantial damage to the habitat's infrastructure. Although the emergency systems swiftly initiated containment protocols, the incident resulted in significant casualties among the population."
+ eev_faint_asteroid.2.desc: "The alarms began sounding far too late, as an unusually faint asteroid managed to slip through our early detection systems and breach into §Y[From.GetName]§!, causing substantial damage to the habitat's infrastructure. Although the emergency systems swiftly initiated containment protocols, the incident resulted in significant casualties among the population."
  eev_faint_asteroid.2.a: "Send help immediately!"
  eev_faint_asteroid.4.name: "Faint asteroid"
  eev_faint_asteroid.4.desc: "The faint asteroid that breached our habitat, now secured within our research facilities, has revealed a remarkable secret. To our scientists' surprise, it contains a significant quantity of dark matter, a substance of immense cosmic significance. This discovery has left our scientists in awe, this has been so far a mysterious and elusive substance."

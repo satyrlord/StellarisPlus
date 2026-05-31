@@ -1,20 +1,31 @@
-# === merged from soe_on_actions.txt ===
-# Scion Origin Expanded — on_action hooks (namespace: soe)
-
+# === merged from eotf_on_actions.txt ===
+# Vanilla hook — runs once per empire at game start
 on_game_start_country = {
 	events = {
+		eotf.190
+		eotf.250
 		soe.1
-	}
-}
-
-on_post_communications_established_always_fire = {
-	events = {
-		soe.2
+		asp_game_start.1
+		eev_start.2
+		more_zones.1000 # payback recurring check
+		# more_zones.2000 # starlit citadel recurring check
+		more_zones.3000 # prosperous unification initializer
 	}
 }
 
 on_yearly_pulse_country = {
 	events = {
+		eotf.189
+		eotf.191
+		eotf.115
+		eotf.192
+		eotf.193
+		eotf.194
+		eotf.195
+		eotf.196
+		eotf.197
+		eotf.198
+		eotf.114
 		soe.3
 		soe.5
 	}
@@ -22,26 +33,76 @@ on_yearly_pulse_country = {
 
 on_monthly_pulse_country = {
 	events = {
+		eotf.113
 		soe.4
+		plentiful_traditions_malice.4
+		simple_tradition.7
+	}
+}
+
+on_tech_increased = {
+	events = {
+		eotf.298
+		eotf.299
+		soe.91
+		soe.92
+	}
+}
+
+# This = owner of destroyed ship; FromFrom = destroyed ship (see vanilla on_ship_destroyed_victim).
+on_ship_destroyed_victim = {
+	events = {
+		eotf.264
+	}
+}
+
+# === merged from soe_on_actions.txt ===
+# Scion Origin Expanded — on_action hooks (namespace: soe)
+
+on_post_communications_established_always_fire = {
+	events = {
+		soe.2
 	}
 }
 
 on_survey_planet = {
 	events = {
 		soe.80
+		scfe_ziaskehorn.1
+		scfe_celestial_disturbance.3
+		scfe_celestial_disturbance.4
+		scfe_celestial_disturbance.5
+		scfe_celestial_disturbance.6
+		scfe_celestial_disturbance.7
+		scfe_celestial_disturbance.8
+		scfe_celestial_disturbance.9
+		scfe_shaded.225
+		scfe_ghost_planet.204
+		scfe_ghost_planet.206
+		scfe_ghost_planet.212
+		scfe_precursor_init.2
+		scfe_precursor_init.4
+		scfe_precursor_init.6
+		scfe_precursor_init.8
+		scfe_precursor_init.10
+		scfe_sless.204
+		scfe_sless.209
+		orphan_matrix_events.60
+		orphan_matrix_events.53
+	}
+	random_events = {
+		12 = scfe_precursor_init.1
+		12 = scfe_precursor_init.3
+		12 = scfe_precursor_init.5
+		12 = scfe_precursor_init.7
+		12 = scfe_precursor_init.9
 	}
 }
 
 on_ascension_perk_picked = {
 	events = {
 		soe.90
-	}
-}
-
-on_tech_increased = {
-	events = {
-		soe.91
-		soe.92
+		scfe_shaded_engine.1
 	}
 }
 
@@ -92,6 +153,7 @@ on_entering_system_first_time = {
 		scfe_jex_init.1
 		scfe_riki_init.1
 		scfe_znkar.10
+		orphan_matrix_events.52
 	}
 }
 on_entering_system = {
@@ -147,40 +209,7 @@ on_planet_transfer = {
 		scfe_strange_on_actions.5
 		scfe_roots.1
 		scfe_strange_on_actions.6
-	}
-}
-
-# A ship has surveyed a planet.
-# Scope = Ship
-# From = Planet
-on_survey_planet = {
-	events = {
-		scfe_ziaskehorn.1
-		scfe_celestial_disturbance.3
-		scfe_celestial_disturbance.4
-		scfe_celestial_disturbance.5
-		scfe_celestial_disturbance.6
-		scfe_celestial_disturbance.7
-		scfe_celestial_disturbance.8
-		scfe_celestial_disturbance.9
-		scfe_shaded.225
-		scfe_ghost_planet.204
-		scfe_ghost_planet.206
-		scfe_ghost_planet.212
-		scfe_precursor_init.2
-		scfe_precursor_init.4
-		scfe_precursor_init.6
-		scfe_precursor_init.8
-		scfe_precursor_init.10
-		scfe_sless.204
-		scfe_sless.209
-	}
-	random_events = {
-		12 = scfe_precursor_init.1
-		12 = scfe_precursor_init.3
-		12 = scfe_precursor_init.5
-		12 = scfe_precursor_init.7
-		12 = scfe_precursor_init.9
+		plentiful_traditions_faith.2
 	}
 }
 
@@ -240,13 +269,6 @@ on_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
 		scfe_strange_on_actions.53 # Xenograss thrives
 	}
 }
-# Executed when a country picks an ascension perk
-# THIS = country
-on_ascension_perk_picked = {
-	events = {
-		scfe_shaded_engine.1
-	}
-}
 # Executed when a country picks any tradition (including starters and finishers)
 # THIS = country
 on_tradition_picked = {
@@ -260,6 +282,7 @@ on_tradition_picked = {
 on_terraforming_complete = {
 	events = {
 		scfe_tomb_of_dead_whales.10
+		plentiful_traditions_transformation_pedict.11
 	}
 }
 #This = ship (starbase)
@@ -275,6 +298,7 @@ on_building_starbase_outpost = {
 on_country_destroyed = {
 	events = {
 		scfe_nyblax_country.13
+		orphan_matrix_events.140
 	}
 }
 # This = subject
@@ -285,30 +309,26 @@ on_becoming_subject = {
 	}
 }
 
-# === merged from vfb_on_actions.txt ===
-on_game_start = {
-	events = {
-		vfb.0
-	}
-}
-
-on_game_start_country = {
-
-}
-
 # === merged from zz_sp_on_actions.txt ===
 # === merged from vfb_on_actions.txt ===
 on_game_start = {
 	events = {
+		# vfb_on_actions.txt
 		vfb.0
-	}
-}
 
-# Triggers when the game starts
-on_game_start = {
-	events = {
-		# Set-up
+		# 99_orphan_matrix_on_actions.txt - Set-up
 		orphan_matrix_events.0
+
+		# aspmod_on_actions.txt
+		aspetc.1
+		aspetc.2
+		aspetc.3
+
+		# eev_on_actions.txt
+		eev_start.1
+
+		# z_scfe_on_actions.txt
+		scfe_game_start.3
 	}
 }
 
@@ -348,40 +368,16 @@ on_monthly_pulse = {
 		
 		# Spot amount of Chroniclers within each Memorialist Empire
 		orphan_matrix_events.142
-	}
-}
-
-# Triggers event when each country first sends a ship into the system (once per country)
-# Scope = Ship
-# From = System
-# FromFrom = Country
-on_entering_system_first_time = {
-	events = {
-		# The Orphaned Matrix enters their Precursor home system for the first time
-		orphan_matrix_events.52
-	}
-}
-
-# A ship has surveyed a planet.
-# Scope = Ship
-# From = Planet
-on_survey_planet = {
-	events = {
-		# The Orphaned Matrix scans their Designers home planet for the first time
-		orphan_matrix_events.60
-		
-		# The Orphaned Matrix scans the Ruined Arc Furnace in their Designers home system
-		orphan_matrix_events.53
-	}
-}
-
-# An empire is destroyed
-#This = destroyed country
-#From = optional, destroyer (country)
-on_country_destroyed = {
-	events = {
-		# An empire gets destroyed, as such, the Orphaned Matrix having taken the Memorialist path will get their reward
-		orphan_matrix_events.140
+		plentiful_traditions_anguish.1
+		plentiful_traditions_anguish.3
+		plentiful_traditions_affinity.1
+		plentiful_traditions_affinity.2
+		plentiful_traditions_affinity.3
+		plentiful_traditions_experimentalism.3
+		# plentiful_traditions_announcement.2
+		# plentiful_traditions_aspiration.1
+		plentiful_traditions_aspiration.2
+		plentiful_traditions_robotics.1
 	}
 }
 
@@ -397,18 +393,6 @@ on_megastructure_upgraded = {
 }
 # === merged from 99_orphan_matrix_on_actions.txt ===
 # === merged from aspmod_on_actions.txt ===
-on_game_start = {
-	events = {
-		aspetc.1
-		aspetc.2
-		aspetc.3
-	}
-}
-on_game_start_country = {
-	events = {
-		asp_game_start.1
-	}
-}
 on_destroy_planet_with_PLANET_KILLER_GEOCENTRIC_DEVICE = {
 	events = {
 		asprelic.1
@@ -430,20 +414,9 @@ on_system_lost = {
 }
 
 # === merged from eev_on_actions.txt ===
-on_game_start = {
-	events = {
-		eev_start.1
-	}
-}
 on_single_player_save_game_load = {
 	events = {
 		eev_start.1
-	}
-}
-
-on_game_start_country = {
-	events = {
-		eev_start.2
 	}
 }
 
@@ -456,49 +429,18 @@ on_bi_yearly_pulse_country = {
 # === merged from zz_sp_on_actions.txt ===
 # === merged from 00_nson_on_actions.txt ===
 on_yearly_pulse = {
-	events = { nson.1 }
+	events = {
+		nson.1
+		plentiful_traditions_fixer.1
+		plentiful_traditions_technology.1
+		# plentiful_traditions_malice.6
+	}
 }
 # === merged from MZ_on_actions.txt ===
-on_game_start_country = {
-	events = {
-        more_zones.1000 # payback recurring check
-        #more_zones.2000 # starlit citadel recurring check
-        more_zones.3000 # prosperous unification initializer
-    }
-}
 # === merged from plentiful_traditions_on_actions.txt ===
 on_building_upgraded = {
 	events = {
 		plentiful_traditions_faith.1
-	}
-}
-
-on_yearly_pulse = {
-	events = {
-		plentiful_traditions_fixer.1
-		plentiful_traditions_technology.1
-#		plentiful_traditions_malice.6
-	}
-}
-
-on_monthly_pulse = {
-	events = {
-		plentiful_traditions_anguish.1
-		plentiful_traditions_anguish.3
-		plentiful_traditions_affinity.1
-		plentiful_traditions_affinity.2
-		plentiful_traditions_affinity.3
-		plentiful_traditions_experimentalism.3
-#		plentiful_traditions_announcement.2
-#		plentiful_traditions_aspiration.1
-		plentiful_traditions_aspiration.2
-		plentiful_traditions_robotics.1
-	}
-}
-
-on_monthly_pulse_country = {
-	events = {
-		plentiful_traditions_malice.4
 	}
 }
 
@@ -541,27 +483,12 @@ on_building_mining_station = {
 	}
 }
 
-on_planet_transfer = {
-	events = {
-		plentiful_traditions_faith.2
-	}
-}
-
 # Planets starts being terraformed
 # This = Planet
 # From = Terraforming country
 on_terraforming_begun = {
 	events = {
 		plentiful_traditions_transformation_pedict.10
-	}
-}
-
-# Planet has been terraformed
-# This = Planet
-# From = Terraforming country
-on_terraforming_complete = {
-	events = {
-		plentiful_traditions_transformation_pedict.11
 	}
 }
 
@@ -574,12 +501,6 @@ on_war_ended = {
 	}
 }
 # === merged from simple_traditions_on_actions.txt ===
-on_monthly_pulse_country = {
-	events = {
-		simple_tradition.7
-	}
-}
-
 on_leader_spawned = {
 	events = {
 		simple_tradition.9
@@ -590,11 +511,6 @@ on_leader_spawned = {
 # === merged from zzz_sp_scfe_on_actions.txt ===
 # Preserves the original late-loading SCFE on_actions ordering in this MERGE folder.
 # === merged from z_scfe_on_actions.txt ===
-on_game_start = {
-	events = {
-		scfe_game_start.3
-	}
-}
 on_press_begin = {
 	events = {
 		scfe_menu.1

@@ -72,7 +72,7 @@
  # SPECIAL PROJECTS
  
  CRYO_VATS_PROJECT:0 "Cryo-Vats Project"
- CRYO_VATS_PROJECT_DESC:0 "Our [owner.GetScientistPlural] will try to bring to life all the remaining §GDesigners§! beings trapped in the Cryo-vats found on §Y[this.GetName]§!."
+ CRYO_VATS_PROJECT_DESC:0 "Our [Owner.GetScientistPlural] will try to bring to life all the remaining §GDesigners§! beings trapped in the Cryo-vats found on §Y[This.GetName]§!."
  
  # ZONE, DISTRICTS AND JOBS
  

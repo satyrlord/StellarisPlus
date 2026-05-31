@@ -30,7 +30,7 @@
  FHMP.52.name: "Multispecies Society"
  FHMP.52.desc: "After studying the nearby ruins and comparing the artifacts found there with those found in the building our [Root.Owner.GetScientistPlural] have concluded that the city and the building was  built and owned by two different empires. Whatever the Ixardian Corporation's purpose was, they at least seem to have lived peacefully alongside their hosts."
  FHMP.53.name: "A Place For Trade"
- FHMP.53.desc: "After further studies of the items left behind on [from.Planet.GetName], our [Root.Owner.GetScientistPlural] has concluded that the building was once a bustling center of trade, owned by The Ixardian Corporation, where the Ixardians would provide wares and services to the natives of the [from.Planet.GetPlanetMoon] in exchange for energy credits, a currency which somehow still existed back then."
+ FHMP.53.desc: "After further studies of the items left behind on [From.Planet.GetName], our [Root.Owner.GetScientistPlural] has concluded that the building was once a bustling center of trade, owned by The Ixardian Corporation, where the Ixardians would provide wares and services to the natives of the [From.Planet.GetPlanetMoon] in exchange for energy credits, a currency which somehow still existed back then."
  FHMP.54.name: "A Trail Of Credits"
  FHMP.54.desc: "While most of the equipment belonging to the ancient traders has long since stopped working, one of the computer terminals appears to be in a working condition, and was presumably used to transfer energy credits to what we assume is their headquarters or home empire. By inserting a miniscule amount of energy credits into the machine, our [Root.Owner.GetScientistPlural] has been able to track the emitted signals to [new_ixardian_digsite.solar_system.GetName], a system not too far from here."
 
@@ -41,7 +41,7 @@
  FHMP.55.desc: "Despite throughout investigation of the ruins, no trace of Ixardian remains has been found. It's as if they just vanished, leaving their belongings to be destroyed by some unknown enemy."
  FHMP.55.a: "Disconcerting"
  FHMP.56.name: "Evacuation Notice"
- FHMP.56.desc: "During the investigation of the ruins on [from.Planet.GetName], the [root.GetName] has begun recieving transmissions from the planet, eminating from somewhere else in the system. After translating the message, it was revealed to be an evacuation notice sent to the Ixardians who worked on the [from.Planet.GetPlanetMoon], telling them to evacuate immediately.\nThe message does not reveal the reason for the evacuation, but there's no signs of the Ixardians having returned to the [from.Planet.GetPlanetMoon] after their evacuation."
+ FHMP.56.desc: "During the investigation of the ruins on [From.Planet.GetName], the [Root.GetName] has begun recieving transmissions from the planet, eminating from somewhere else in the system. After translating the message, it was revealed to be an evacuation notice sent to the Ixardians who worked on the [From.Planet.GetPlanetMoon], telling them to evacuate immediately.\nThe message does not reveal the reason for the evacuation, but there's no signs of the Ixardians having returned to the [From.Planet.GetPlanetMoon] after their evacuation."
  FHMP.56.a: "Disconcerting"
  FHMP.57.name: "Tracing The Signal"
  FHMP.57.desc: "Our [Root.Owner.GetScientistPlural] has succesfully traced the transmissions to [new_ixardian_digsite.GetName], a [new_ixardian_digsite.GetPlanetMoon] where we have found the remains of a crashed Ixardian starbase. How it ended up there is unknown, but it would be unwise to ignore it."
@@ -96,7 +96,7 @@
 
  # random events
  FHMP_random_arcsite.100.name: "Small Database Found"
- FHMP_random_arcsite.100.desc: "During excavations, [from.Leader.GetName] has found a small databank belonging to the ancient Ixardians. Although the information on it is insagnificent, it has has yielded some insights relating to the Ixardian civilization nonetheless."
+ FHMP_random_arcsite.100.desc: "During excavations, [From.Leader.GetName] has found a small databank belonging to the ancient Ixardians. Although the information on it is insagnificent, it has has yielded some insights relating to the Ixardian civilization nonetheless."
  FHMP_random_arcsite.100.a: "Ok"
 
  ixardian_artifact_research_unlocked: "Minor Artifact Action Unlocked: §Y$artifact_ixardian_research$§!"
@@ -147,15 +147,15 @@
  ################################
 
  FHMP_jungle: "deep in the jungle"
- FHMP_forest: "towering over one flora of the [from.Planet.GetPlanetMoon]'s forests"
- FHMP_continental: "towering over one flora of the [from.Planet.GetPlanetMoon]'s forests"
- FHMP_ocean: "towering over one flora of the [from.Planet.GetPlanetMoon]'s few forests"
+ FHMP_forest: "towering over one flora of the [From.Planet.GetPlanetMoon]'s forests"
+ FHMP_continental: "towering over one flora of the [From.Planet.GetPlanetMoon]'s forests"
+ FHMP_ocean: "towering over one flora of the [From.Planet.GetPlanetMoon]'s few forests"
  FHMP_desert: "standing in the middle of the desert"
  FHMP_arid: "standing in the middle of the desert"
  FHMP_savannah: "standing in the middle of the savannah"
  FHMP_arctic: "half of it covered by snow"
- FHMP_tundra: "standing in the middle of one of the [from.Planet.GetPlanetMoon]'s forests"
- FHMP_alpine: "located near the [from.Planet.GetPlanetMoon]'s biggest mountain range"
+ FHMP_tundra: "standing in the middle of one of the [From.Planet.GetPlanetMoon]'s forests"
+ FHMP_alpine: "located near the [From.Planet.GetPlanetMoon]'s biggest mountain range"
  FHMP_nuked: "surrounded by countless ruins of less fortunate buildings"
  FHMP_gaia: "surrounded by something described in many religions"
  FHMP_frozen: "half of it covered by ice and snow"
@@ -187,9 +187,9 @@
  FHMP.107.name: "Identical Tower"
  FHMP.107.desc: "After tracking down the source of the signal, our team was surprised to see a radio tower identical to the one we found on [werediran_planet_1.GetName], which should be impossible, considering the one on [werediran_planet_1.GetName] was made by primitives incapable of interstellar travel."
  FHMP.108.name: "Primitive Technology"
- FHMP.108.desc: "The tower on this [from.Planet.GetPlanetMoon] also appears to have been made around 500 000 years ago, by primitives in an atomic-age society, judging by the city ruins found in the vicinity. This, however, does not seem to have been a hindrance to the tower builders, who had managed to complete the advanced construction. What happened to the soicety is unknown, but our leading [Root.Owner.GetArchaeologistPlural] believe their grand project distracted them from more important concerns, ultimately leading to their downfall."
+ FHMP.108.desc: "The tower on this [From.Planet.GetPlanetMoon] also appears to have been made around 500 000 years ago, by primitives in an atomic-age society, judging by the city ruins found in the vicinity. This, however, does not seem to have been a hindrance to the tower builders, who had managed to complete the advanced construction. What happened to the soicety is unknown, but our leading [Root.Owner.GetArchaeologistPlural] believe their grand project distracted them from more important concerns, ultimately leading to their downfall."
  FHMP.109.name: "The Signal"
- FHMP.109.desc: "While investigating the ruins and the tower itself, [Root.Leader.GetName] managed to stumble upon some new information in the form of a data log made by the tower builders. According to it, the tower was built shortly after the primitive society on [from.Planet.GetName] detected a signal from space, which they dubbed the 'Werediran Signal'. The tower's purpose appears to be to amplify this signal, although why they wanted to do that is, as of yet, unknown."
+ FHMP.109.desc: "While investigating the ruins and the tower itself, [Root.Leader.GetName] managed to stumble upon some new information in the form of a data log made by the tower builders. According to it, the tower was built shortly after the primitive society on [From.Planet.GetName] detected a signal from space, which they dubbed the 'Werediran Signal'. The tower's purpose appears to be to amplify this signal, although why they wanted to do that is, as of yet, unknown."
  FHMP.110.name: "Recorded Transmission"
  FHMP.110.desc: "After extracting the rest of the information, we have found serveral logs detailing the findings of the tower builders, including a recording of a transmission almost identical to the one we recieved from this system, confirming that it was the Werediran Signal.\n\nMany of our leading [Root.Owner.GetScientistPlural] believes it's likely we'll recieve more of these transmissions from other systems if more towers exist."
  FHMP.111.name: "Incoming Transmission"
@@ -283,7 +283,7 @@
  FHMP_random_arcsite.2.desc: "During Excavation, all equipment experienced a sudden malfunction at the same time. Most of it needs to be replaced."
  FHMP_random_arcsite.2.a: "Disconcerting"
  FHMP_random_arcsite.3.name: "Vanished"
- FHMP_random_arcsite.3.desc: "After investigation of the ruins on [fromfrom.Planet.GetName], lead scientist [dead_scientist.GetName] failed to return to camp. No one knows where [dead_scientist.GetSheHe] went, or why [dead_scientist.GetSheHe] failed to return to the camp, but no traces of [dead_scientist.GetSheHe] can be found, and as such has been presumed killed in action."
+ FHMP_random_arcsite.3.desc: "After investigation of the ruins on [FromFrom.Planet.GetName], lead scientist [dead_scientist.GetName] failed to return to camp. No one knows where [dead_scientist.GetSheHe] went, or why [dead_scientist.GetSheHe] failed to return to the camp, but no traces of [dead_scientist.GetSheHe] can be found, and as such has been presumed killed in action."
  FHMP_random_arcsite.3.a: "Tragic"
  FHMP_random_arcsite.4.name: "Visions"
  FHMP_random_arcsite.4.desc: "Today, chief archaeologist [From.Leader.GetName] reported having a vision where a glowing orb told [From.Leader.GetHerHim] about the ruin's past. While what the vision told was true, and what [From.Leader.GetName] learned from it has been very helpful, [From.Leader.GetSheHe] has been freaked out by this event and refused to leave the camp for the rest of the day."
@@ -508,7 +508,7 @@
  ################################
 
  FHMP_ixardian_starbase: "Crashed Trade Hub"
- FHMP_ixardian_starbase_desc_short: "An ancient Ixardian trade hub. It crashed onto [fromfrom.Planet.GetName] after an emergency evacuation"
+ FHMP_ixardian_starbase_desc_short: "An ancient Ixardian trade hub. It crashed onto [FromFrom.Planet.GetName] after an emergency evacuation"
  FHMP_ixardian_starbase_desc_details: "This Ixardian trade hub comes with top of the line, 100mm collapsable stain free steel doors sourced from the remains of Volgan laboratories. It comes in 5812 different colors, and can be costumized for the small sum of 800 Energy Credits*.**\n\n*Price increased based on 42% of your net worth.\n**May contain traces of peanut."
 
  FHMP_werediran_signal_specimen: "Werediran Signal Recording"
@@ -516,13 +516,13 @@
  FHMP_werediran_signal_specimen_desc_details: "A simple message encoded in radio waves that somehow has incredible influence over any organic or mechanical organisms. Too big of an exposure to this signal can lead to lasting cognitive impairment."
 
  FHMP_werediran_reciever: "Amplifying Tower Reciever"
- FHMP_werediran_reciever_desc_short: "A radiowave signal reciever recovered from the large radio amplifying tower on [fromfrom.Planet.GetName]"
+ FHMP_werediran_reciever_desc_short: "A radiowave signal reciever recovered from the large radio amplifying tower on [FromFrom.Planet.GetName]"
  FHMP_werediran_reciever_desc_details: "This reciever was incorporated into the structure of a larga radiowave reciver-and-transmitter, essentially a gigantic amplifier. The incoming signal would be retransmitted at full strength to the nearby star clusters, where other identical towers could potentially pick it up and spread it further."
 
  FHMP_ezentian_memorial_stone: "Memorial to Ezentar"
- FHMP_ezentian_memorial_stone_desc_short: "A mural found on [fromfrom.Planet.GetName]. It tells the story of a regretful fearmonger"
+ FHMP_ezentian_memorial_stone_desc_short: "A mural found on [FromFrom.Planet.GetName]. It tells the story of a regretful fearmonger"
  FHMP_ezentian_memorial_stone_desc_details: "A gravestone for an empire."
 
  FHMP_ezentian_station: "Ezentian Mining Station"
- FHMP_ezentian_station_desc_short: "An Ezentian Mobile Mining Station recovered on [fromfrom.Planet.GetName]. It lacks its mining beam"
+ FHMP_ezentian_station_desc_short: "An Ezentian Mobile Mining Station recovered on [FromFrom.Planet.GetName]. It lacks its mining beam"
  FHMP_ezentian_station_desc_details: "At the height of the Ezentian Combine, these Mobile Mining Stations were used to extract minerals from planets. By blowing them up."

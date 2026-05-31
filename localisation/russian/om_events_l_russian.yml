@@ -5,11 +5,11 @@
  orphan_matrix_events.1.option:0 "Dispatching Exploration Drones"
  
  orphan_matrix_digsite.1.name:0 "$ancient_buried_vault_digsite$"
- orphan_matrix_digsite.1.desc:0 "First analysis inside the structure shows evidence of ancient unidentified civilization prior to §Y[owner.GetName]§!.\nSite age has been estimated to §Y368K§! cycles old.\nSimilarities with §Y[owner.GetName]§! culture observed.\n\nExploration drones dispatched further into the structure : §GYES§!\n\nMapping location ongoing...\nCurrent depth : 785 units.\n\n§YMAJOR CHAMBER SPOTTED.\nSTRONG LOCK MECHANISM PREVENTS PASSAGE.§!\n\nInvestigation recommended."
+ orphan_matrix_digsite.1.desc:0 "First analysis inside the structure shows evidence of ancient unidentified civilization prior to §Y[Owner.GetName]§!.\nSite age has been estimated to §Y368K§! cycles old.\nSimilarities with §Y[Owner.GetName]§! culture observed.\n\nExploration drones dispatched further into the structure : §GYES§!\n\nMapping location ongoing...\nCurrent depth : 785 units.\n\n§YMAJOR CHAMBER SPOTTED.\nSTRONG LOCK MECHANISM PREVENTS PASSAGE.§!\n\nInvestigation recommended."
  orphan_matrix_digsite.1.option:0 "RESUME §YCURRENT_OPERATION§!: §GTRUE§!"
  
  orphan_matrix_digsite.2.name:0 "$ancient_buried_vault_digsite$"
- orphan_matrix_digsite.2.desc:0 "Major Chamber penetrated.\nFurther symbols of §Y[owner.GetName]§! culture.\nChronological evidences of an unknown civilization §Y(Set_name = §!§GTHE DESIGNERS§!§Y)§! identified.\nProbability of §G(THE DESIGNERS)§! being §GCONCEPTORS§! of §Y[owner.GetName]§! :\n§GVERY HIGH§!.\n\nHypothesis yet to be confirmed.\n\nStrange artifact retrieved : §Y$artifact_codex$§!\n\nAnalysis ongoing..."
+ orphan_matrix_digsite.2.desc:0 "Major Chamber penetrated.\nFurther symbols of §Y[Owner.GetName]§! culture.\nChronological evidences of an unknown civilization §Y(Set_name = §!§GTHE DESIGNERS§!§Y)§! identified.\nProbability of §G(THE DESIGNERS)§! being §GCONCEPTORS§! of §Y[Owner.GetName]§! :\n§GVERY HIGH§!.\n\nHypothesis yet to be confirmed.\n\nStrange artifact retrieved : §Y$artifact_codex$§!\n\nAnalysis ongoing..."
  orphan_matrix_digsite.2.option:0 "Retrieve §YStrange Artifact§! : §GYES§!"
  orphan_matrix_digsite.2.option.tooltip:0 "We will study the strange unearthed artifact..."
  
@@ -29,7 +29,7 @@
  # Random events
  
  orphan_matrix_events.98.name:0 "§Y$situation_delve_old_codex$§! - §GSmall Insights§!"
- orphan_matrix_events.98.desc:0 "Our §Y$job_introspective_calculator_plural$§! have made a minor, yet interesting discovery, while deciphering the §Y$artifact_codex$§!.\nAlthough not relevant enough to perform a significant breakthrough inside the strange object database, it still nonetheless serves the purpose of §Y[owner.GetName]§!.\n\nThey are now sending their findings to the surface."
+ orphan_matrix_events.98.desc:0 "Our §Y$job_introspective_calculator_plural$§! have made a minor, yet interesting discovery, while deciphering the §Y$artifact_codex$§!.\nAlthough not relevant enough to perform a significant breakthrough inside the strange object database, it still nonetheless serves the purpose of §Y[Owner.GetName]§!.\n\nThey are now sending their findings to the surface."
  
  orphan_matrix_events.99.name:0 "§Y$situation_delve_old_codex$§! - §RMemory Leaks§!"
  orphan_matrix_events.99.desc:0 "Our overloaded §Y$job_introspective_calculator_plural$§! are sending numerous §Rerror logs§! :\nBy letting them work on their own on the §Y$artifact_codex$§! without the proper resources, they are crippling our overall efficiency by creating growing memory leaks !\n\nWe could fix those loops by §Yoffloading these units work by giving them energy§!, but it would recquire us to change our §Y$situation_delve_old_codex$§! situation approach."
@@ -71,19 +71,19 @@
  
  # 2nd ARC - Chapter IV
  orphan_matrix_events.40.name:0 "The Designers : The Downfall"
- orphan_matrix_events.40.desc:0 "We have made a major breakthrough in our study of the §Y$artifact_codex$§!.\n\nIt appears that the Designers civilization had been §Rdestroyed§! a long time ago.\nIndeed, their star, source of deadly radiations, was also unstable, to the point that its decline was bound to happen.\nOn a fateful day, it took its last breath and morphed in a powerful super-nova!\n\nThe Designers' homeworld, although having been transformed into a solid §H$pc_city$§! a long time ago, was devastated by the sheer force of the cosmic explosion.\nOnly §Rone§! survivor eventually reached §Y[owner.capital_scope.GetName]§! in order to leave a legacy, a final message: the §Y$artifact_codex$§!, buried deep beneath the surface of §Y[owner.capital_scope.GetName]§!.\n\nIf only we could find the Designers' home system... Perhaps we could find further elements to help us..?\n\nA vast operation to develop technologies able to detect and travel through hidden hyperlanes has been launched.\n\nWe will need to research the following technologies to be able to progress further :§!\n- £physics_research£ §Y$tech_sensors_4$§!\n- £physics_research£ §Y$tech_hyper_drive_3$§!\n\nSpecial §Y$country_agendas$§! have been issued to help us out."
+ orphan_matrix_events.40.desc:0 "We have made a major breakthrough in our study of the §Y$artifact_codex$§!.\n\nIt appears that the Designers civilization had been §Rdestroyed§! a long time ago.\nIndeed, their star, source of deadly radiations, was also unstable, to the point that its decline was bound to happen.\nOn a fateful day, it took its last breath and morphed in a powerful super-nova!\n\nThe Designers' homeworld, although having been transformed into a solid §H$pc_city$§! a long time ago, was devastated by the sheer force of the cosmic explosion.\nOnly §Rone§! survivor eventually reached §Y[Owner.capital_scope.GetName]§! in order to leave a legacy, a final message: the §Y$artifact_codex$§!, buried deep beneath the surface of §Y[Owner.capital_scope.GetName]§!.\n\nIf only we could find the Designers' home system... Perhaps we could find further elements to help us..?\n\nA vast operation to develop technologies able to detect and travel through hidden hyperlanes has been launched.\n\nWe will need to research the following technologies to be able to progress further :§!\n- £physics_research£ §Y$tech_sensors_4$§!\n- £physics_research£ §Y$tech_hyper_drive_3$§!\n\nSpecial §Y$country_agendas$§! have been issued to help us out."
  orphan_matrix_events.40.and_now:0 "Standing by."
  orphan_matrix_events.40.and_now.speed:0 "Interpolating Hyperspace Synchronicity Algorithms."
  orphan_matrix_events.40.give_up:0 "Then the Designers are no more, abort operations."
- orphan_matrix_events.40.give_up_tooltip:0 "\n§RGive up and move on.\n\nThis will destroy the§! §Y$d_introspective_lab$§! §Rand all related infrastructure §Ron§! §Y[owner.capital_scope.GetName]§!§R.\nYou will never be able to progress further in your origin.§!"
+ orphan_matrix_events.40.give_up_tooltip:0 "\n§RGive up and move on.\n\nThis will destroy the§! §Y$d_introspective_lab$§! §Rand all related infrastructure §Ron§! §Y[Owner.capital_scope.GetName]§!§R.\nYou will never be able to progress further in your origin.§!"
  
  # 2nd ARC - Give up
  orphan_matrix_events.97.name:0 "The §Y$artifact_codex$§! : a Heavy Burden"
- orphan_matrix_events.97.desc:0 "Since we have started studying the §Y$artifact_codex$§!, £energy£ §Y$energy$§! has always been a concern.\nIt has been around §Y40 years§! since we started studying it, and albeit some breakthrough leading to benefits, we have been struggling to cope up with growth expectations.\n\nAs our §Y$job_introspective_calculator_plural$§! are getting wearier and wearier over the years, several internal reports state that we should give up upon this whole situation and focus on ourselves and our future, rather than digging in the past for some hypothetical findings.\n\nYet, some other §Y$job_introspective_calculator_plural$§! would like to redouble their efforts with some more resources and maintenance, assuring they are progressing and that their work could benefit the rest of the §Y[owner.GetName]§!."
+ orphan_matrix_events.97.desc:0 "Since we have started studying the §Y$artifact_codex$§!, £energy£ §Y$energy$§! has always been a concern.\nIt has been around §Y40 years§! since we started studying it, and albeit some breakthrough leading to benefits, we have been struggling to cope up with growth expectations.\n\nAs our §Y$job_introspective_calculator_plural$§! are getting wearier and wearier over the years, several internal reports state that we should give up upon this whole situation and focus on ourselves and our future, rather than digging in the past for some hypothetical findings.\n\nYet, some other §Y$job_introspective_calculator_plural$§! would like to redouble their efforts with some more resources and maintenance, assuring they are progressing and that their work could benefit the rest of the §Y[Owner.GetName]§!."
  orphan_matrix_events.97.boost:0 "§GGRANT§! : Investing Requested Resources"
  orphan_matrix_events.97.nothing:0 "§YDENY§! : Resume Process as intended"
  orphan_matrix_events.97.concede:0 "§RABORT§! : Abort Introspective Procedures"
- orphan_matrix_events.97.concede.tooltip:0 "\n§RWe're chasing ghosts... Our resources are precious and should be invested elsewhere.\n\nThis will destroy the§! §Y$d_introspective_lab$§! §Rand all related infrastructure §Ron§! §Y[owner.capital_scope.GetName]§!§R.\nYou will never be able to progress further in your origin.§!"
+ orphan_matrix_events.97.concede.tooltip:0 "\n§RWe're chasing ghosts... Our resources are precious and should be invested elsewhere.\n\nThis will destroy the§! §Y$d_introspective_lab$§! §Rand all related infrastructure §Ron§! §Y[Owner.capital_scope.GetName]§!§R.\nYou will never be able to progress further in your origin.§!"
  
  # 3rd ARC - System charted
  orphan_matrix_events.51.name:0 "Home comming : Designers Homesystem found"
@@ -93,7 +93,7 @@
  
  # 3rd ARC - Entering the Precursor system
  orphan_matrix_events.52.name:0 "The Graveyard : Dead Star"
- orphan_matrix_events.52.desc:0 "We have arrived into the §Y[from.GetName]§! system.\n\nAs we thought, there is nothing here but silence and death.\nThe star has morphed into a pulsar a long time ago, probably ending any life form and civilization in the system in the process.\n\nFortunately, among debris, deadly radiations and electromagnetic interferences, scanners have revealed what we were looking for : An abandonned §Y$pc_city$§! !"
+ orphan_matrix_events.52.desc:0 "We have arrived into the §Y[From.GetName]§! system.\n\nAs we thought, there is nothing here but silence and death.\nThe star has morphed into a pulsar a long time ago, probably ending any life form and civilization in the system in the process.\n\nFortunately, among debris, deadly radiations and electromagnetic interferences, scanners have revealed what we were looking for : An abandonned §Y$pc_city$§! !"
  orphan_matrix_events.52.option:0 "... H-... Home..?"
  
  # Ruined Arc Furnace
@@ -114,7 +114,7 @@
  
  # 3rd ARC - Home Planet of the Designers
  orphan_matrix_events.60.name:0 "The Graveyard : Among the Ruins"
- orphan_matrix_events.60.desc:0 "We now have a clear scan of §Y[from.GetName]§!'s surface.\n\nThe lifeless and abandonned $pc_city$ is now a pile of forgotten irradiated stones only disturbed by the howling winds in its abandonned streets and the silence of its emptied skies.\n\nThis once thriving world is now a graveyard, a tomb... and a thrilling pile of long forgotten secrets !\n\nWe should explore the surface in order to find something of interest."
+ orphan_matrix_events.60.desc:0 "We now have a clear scan of §Y[From.GetName]§!'s surface.\n\nThe lifeless and abandonned $pc_city$ is now a pile of forgotten irradiated stones only disturbed by the howling winds in its abandonned streets and the silence of its emptied skies.\n\nThis once thriving world is now a graveyard, a tomb... and a thrilling pile of long forgotten secrets !\n\nWe should explore the surface in order to find something of interest."
  orphan_matrix_events.60.option:0 "Activating Archeological Procedures."
  
  # 3rd ARC - Digsite Stage 1
@@ -140,7 +140,7 @@
  
  # 3rd ARC - Digsite Stage 5
  orphan_matrix_digsite.74.name:0 "Ancient Cryogenic Vats"
- orphan_matrix_digsite.74.desc:0 "We have made a major discovery.\n\nAfter several months of errands, deep beneath the surface, we have found an energy source.\n\nAfter following its trail we have found... an §H$d_ancient_cryo_chamber$§! !\nLayers, and layers and layers of them ! Millions !\n\nMoreover, some of these units are still working after all this time !\n\nThey contain biological individuals corresponding to our §GDesigners§! description !\n\nFrail bodies... Poor constitution... They managed to focus on knowledge, wisdom and hard work over millenia to be able to build this. What was it for...? Safekeeping their future..?\n\nBut why did they stayed on a dying planet and instead try to run into space? Why didn't they come to §Y[owner.capital_scope.GetName]§!?\nAnd what was our purpose with them...?\n\nSo many questions... So few answers...\n\nFor now, those functionning vats are the most promising assets we have found here, and the §GDesigners§! are sleeping."
+ orphan_matrix_digsite.74.desc:0 "We have made a major discovery.\n\nAfter several months of errands, deep beneath the surface, we have found an energy source.\n\nAfter following its trail we have found... an §H$d_ancient_cryo_chamber$§! !\nLayers, and layers and layers of them ! Millions !\n\nMoreover, some of these units are still working after all this time !\n\nThey contain biological individuals corresponding to our §GDesigners§! description !\n\nFrail bodies... Poor constitution... They managed to focus on knowledge, wisdom and hard work over millenia to be able to build this. What was it for...? Safekeeping their future..?\n\nBut why did they stayed on a dying planet and instead try to run into space? Why didn't they come to §Y[Owner.capital_scope.GetName]§!?\nAnd what was our purpose with them...?\n\nSo many questions... So few answers...\n\nFor now, those functionning vats are the most promising assets we have found here, and the §GDesigners§! are sleeping."
  orphan_matrix_digsite.74.option:0 "Estimating still-functionning Units : §Y35%§!"
  
  # 3rd ARC - Digsite Stage 6

@@ -1,3 +1,147 @@
+# === merged from 00_eotf_divine_hulk_projects.txt ===
+# Divine Hulk — post-excavation restoration (enabled after dig stage 2)
+
+special_project = {
+    key = "eotf_divine_hulk_restoration"
+    cost = 18000
+    tech_department = engineering_technology
+    timelimit = -1
+    picture = GFX_evt_engineering_research
+    icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+
+    event_scope = country_event
+
+    on_success = {
+        country_event = { id = eotf.259 }
+    }
+}
+
+# === merged from 00_eotf_projects.txt ===
+# Echoes of the Fallen — outer system survey (event 4)
+
+special_project = {
+    key = "eotf_outer_system_investigation"
+    event_chain = "eotf_echoes_of_the_fallen_chain"
+    cost = 2000
+    tech_department = physics_technology
+    timelimit = -1
+    picture = GFX_evt_space_debris
+    icon = "gfx/interface/icons/situation_log/situation_log_physics.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        prev = {
+            country_event = { id = eotf.5 }
+        }
+    }
+}
+
+# Stabilize containment (event 5)
+
+special_project = {
+    key = "eotf_stabilize_containment_core"
+    event_chain = "eotf_echoes_of_the_fallen_chain"
+    cost = 2500
+    tech_department = society_technology
+    timelimit = -1
+    picture = GFX_evt_derelict_interior
+    icon = "gfx/interface/icons/situation_log/situation_log_society.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        prev = {
+            country_event = { id = eotf.6 days = 1 }
+        }
+    }
+}
+
+# Trace command signal (event 7)
+
+special_project = {
+    key = "eotf_trace_command_signal"
+    event_chain = "eotf_echoes_of_the_fallen_chain"
+    cost = 2200
+    tech_department = physics_technology
+    timelimit = -1
+    picture = GFX_evt_satellite_in_orbit
+    icon = "gfx/interface/icons/situation_log/situation_log_physics.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        prev = {
+            country_event = { id = eotf.8 days = 1 }
+        }
+    }
+}
+
+# Locate reserve battlegroup (event 9 → completes → event 10)
+
+special_project = {
+    key = "eotf_locate_battlegroup"
+    event_chain = "eotf_echoes_of_the_fallen_chain"
+    cost = 3000
+    tech_department = engineering_technology
+    timelimit = -1
+    picture = GFX_evt_fleet_neutral
+    icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        prev = {
+            country_event = { id = eotf.10 days = 1 }
+        }
+    }
+}
+
+# Restore silent anchorage (event 10 option → completes → event 11 fleet)
+
+special_project = {
+    key = "eotf_restore_anchorage"
+    event_chain = "eotf_echoes_of_the_fallen_chain"
+    cost = 2800
+    tech_department = engineering_technology
+    timelimit = -1
+    picture = GFX_evt_derelict_interior
+    icon = "gfx/interface/icons/situation_log/situation_log_engineering.dds"
+
+    event_scope = ship_event
+
+    requirements = {
+        shipclass_science_ship = 1
+        leader = scientist
+    }
+
+    on_success = {
+        prev = {
+            country_event = { id = eotf.11 days = 1 }
+        }
+    }
+}
+
 # === merged from soe_projects.txt ===
 # Scion Origin Expanded — special projects (namespace: soe)
 
@@ -42,9 +186,6 @@ special_project = {
 		owner = {
 			country_event = { id = orphan_matrix_events.102 }
 		}
-	}
-
-	on_fail = {
 	}
 }
 # === merged from 99_orphan_matrix_projects.txt ===
@@ -677,8 +818,6 @@ special_project = {
     }
 
     on_cancel = {  }
-
-    on_fail = {  }
 }
 special_project = {
     key = "SCFE_ROOTS_PROJECT_2"
@@ -703,8 +842,6 @@ special_project = {
     }
 
     on_cancel = {  }
-
-    on_fail = {  }
 }
 special_project = {
     key = "SCFE_ROOTS_PROJECT_3"
@@ -729,8 +866,6 @@ special_project = {
     }
 
     on_cancel = {  }
-
-    on_fail = {  }
 }
 special_project = {
     key = "SCFE_ROOTS_PROJECT_4"
@@ -773,8 +908,6 @@ special_project = {
     }
 
     on_cancel = {  }
-
-    on_fail = {  }
 }
 special_project = {
     key = "SCFE_ROOTS_PROJECT_6"
@@ -797,8 +930,6 @@ special_project = {
     }
 
     on_cancel = {  }
-
-    on_fail = {  }
 }
 special_project = {
     key = "SCFE_ROOTS_PROJECT_7"
@@ -820,8 +951,6 @@ special_project = {
     }
 
     on_cancel = {  }
-
-    on_fail = {  }
 }
 special_project = {
     key = "SCFE_ROOTS_PROJECT_8"
@@ -844,8 +973,6 @@ special_project = {
     }
 
     on_cancel = {  }
-
-    on_fail = {  }
 }
 special_project = {
     key = "SCFE_ROOTS_PROJECT_9"
@@ -868,8 +995,6 @@ special_project = {
     }
 
     on_cancel = {  }
-
-    on_fail = {  }
 }
 
 # === merged from scfe_shaded_projects.txt ===
@@ -1162,8 +1287,6 @@ special_project = {
     }
 
     on_cancel = {  }
-
-    on_fail = {  }
 }
 
 # === merged from scfe_war_torn_project.txt ===

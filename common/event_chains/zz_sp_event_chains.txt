@@ -1,3 +1,17 @@
+# === merged from 00_eotf_event_chains.txt ===
+# Echoes of the Fallen — situation log chain (begins when the player accepts Event 1)
+
+eotf_echoes_of_the_fallen_chain = {
+	icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+	picture = GFX_evt_physics_research
+
+	counter = {
+		eotf_precursor_archive_recovery = {
+			max = 6
+		}
+	}
+}
+
 orphan_matrix_chain = {
 	icon = "gfx/interface/icons/situation_log/situation_log_physics.dds"
 	picture = GFX_evt_ship_travel
