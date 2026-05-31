@@ -1,14 +1,12 @@
 ---
 name: handoff
-description: >
-  Creates a concise continuation handoff document for another agent and stores
-  it under tmp/. Use when the user asks to hand off current progress, preserve
-  session context, prepare the next agent run, or when another local workflow
-  explicitly requires a handoff artifact.
+description: 'Creates a concise continuation handoff document for another agent and stores it under tmp/. Use when the user asks to hand off current progress, preserve session context, prepare the next agent run, or when another local workflow explicitly requires a handoff artifact.'
 argument-hint: "What will the next session be used for?"
 ---
 
 # Handoff
+
+## Purpose & Scope
 
 Write a handoff document summarising the current conversation so a fresh agent
 can continue the work. Save under `tmp/` at the repository root (not the OS

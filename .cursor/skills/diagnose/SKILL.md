@@ -1,14 +1,11 @@
 ---
 name: diagnose
-description: >
-  Runs a disciplined diagnosis loop for hard bugs and performance regressions.
-  Reproduce, minimise, hypothesise, instrument, fix, and regression-test. Use
-  when the user says "diagnose this", the bug is flaky or not yet
-  reproducible, root cause is unknown after triage, or a performance
-  regression needs measurement before fixing.
+description: 'Runs a disciplined diagnosis loop for hard bugs and performance regressions. Reproduce, minimise, hypothesise, instrument, fix, and regression-test. Use when the user says "diagnose this", the bug is flaky or not yet reproducible, root cause is unknown after triage, or a performance regression needs measurement before fixing.'
 ---
 
 # Diagnose
+
+## Purpose & Scope
 
 A discipline for hard bugs. Prefer `debugging-and-error-recovery` first when
 the MixJam failure mode and repro are already narrow (build error, one import

@@ -1,14 +1,6 @@
 ---
 name: update-mod
-description: >-
-   Update an already-integrated Stellaris mod in StellarisPlus to its
-   latest Workshop version. Backs up the new upstream, diffs against
-   the current integration, applies new features and bug fixes, and
-   resolves conflicts.
-   USE WHEN: user says "update mod", "refresh mod", "sync mod",
-   "upgrade mod", "re-sync mod", "pull latest mod", "update Workshop mod",
-   "update integrated mod", "check for mod updates", or wants to bring
-   an already-absorbed mod up to date with its latest Workshop release.
+description: 'Update an already-integrated Stellaris mod in StellarisPlus to its latest Workshop version. Backs up the new upstream, diffs against the current integration, applies new features and bug fixes, and resolves conflicts. Use when user says "update mod", "refresh mod", "sync mod", "upgrade mod", "re-sync mod", "pull latest mod", "update Workshop mod", "update integrated mod", "check for mod updates", or wants to bring an already-absorbed mod up to date with its latest Workshop release.'
 argument-hint: >-
    Workshop ID or mod name to update (must already be in credits.md)
 ---

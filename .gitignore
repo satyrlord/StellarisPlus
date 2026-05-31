@@ -1,8 +1,6 @@
 backup/
 tmp/
-.github/
 .env.local
 .venv/
 pyrightconfig.json
 .vscode/
-tools/

@@ -1,15 +1,6 @@
 ---
 name: merge-local-files
-description: >-
-   Analyze the StellarisPlus mod's own files, produce a safe-merge
-   report by folder (LIOS/FIOS/DUPL/MERGE), and then consolidate
-   redundant files into fewer files without changing load-order
-   behaviour or game functionality.
-   USE WHEN: user says "merge local files", "consolidate files",
-   "reduce file count", "merge mod files", "file consolidation",
-   "clean up files", "merge duplicate files", or wants to avoid
-   repeated load-order analysis by running a single automated
-   merge pass over the mod's internal files.
+description: 'Analyze the StellarisPlus mod''s own files, produce a safe-merge report by folder (LIOS/FIOS/DUPL/MERGE), and then consolidate redundant files into fewer files without changing load-order behaviour or game functionality. Use when user says "merge local files", "consolidate files", "reduce file count", "merge mod files", "file consolidation", "clean up files", "merge duplicate files", or wants to avoid repeated load-order analysis by running a single automated merge pass over the mod''s internal files.'
 argument-hint: >-
   Optional: folder path to scope (e.g. "common/buildings"). Omit
   the argument to scan the whole mod.

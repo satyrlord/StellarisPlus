@@ -1,10 +1,6 @@
 ---
 name: stellaris-log-fix
-description: >-
-   Collect Stellaris runtime logs, analyze errors, and automatically fix
-   mod issues. USE WHEN: user says 'fix errors', 'check logs', 'analyze
-   logs', 'spcollect', 'log fix', 'runtime errors', 'error log', or
-   wants to debug Stellaris mod issues after a test run.
+description: 'Collect Stellaris runtime logs, analyze errors, and automatically fix mod issues. Use when user says ''fix errors'', ''check logs'', ''analyze logs'', ''spcollect'', ''log fix'', ''runtime errors'', ''error log'', or wants to debug Stellaris mod issues after a test run.'
 argument-hint: >-
    Optionally describe specific errors or symptoms to focus on
 ---

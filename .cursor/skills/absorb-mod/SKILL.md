@@ -1,15 +1,6 @@
 ---
 name: absorb-mod
-description: >-
-   Absorb an external Stellaris mod into StellarisPlus by backing it up,
-   analyzing its contents, integrating files, resolving conflicts, and
-   validating the result. Also supports undoing a previous absorption.
-   USE WHEN: user says "absorb mod", "integrate mod", "merge mod",
-   "import mod", "add Workshop mod", "include mod",
-   "copy mod into StellarisPlus", "undo absorb", "remove mod",
-   "revert mod", "unmerge mod", "de-integrate mod", or wants to
-   incorporate or remove a Stellaris mod (by Workshop ID, folder path,
-   or zip file) in this project.
+description: 'Absorb an external Stellaris mod into StellarisPlus by backing it up, analyzing its contents, integrating files, resolving conflicts, and validating the result. Also supports undoing a previous absorption. Use when user says "absorb mod", "integrate mod", "merge mod", "import mod", "add Workshop mod", "include mod", "copy mod into StellarisPlus", "undo absorb", "remove mod", "revert mod", "unmerge mod", "de-integrate mod", or wants to incorporate or remove a Stellaris mod (by Workshop ID, folder path, or zip file) in this project.'
 argument-hint: >-
    Workshop ID, folder path, or zip path to absorb; or mod name/ID to undo
 ---

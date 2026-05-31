@@ -1,0 +1,67 @@
+{
+	"groups": {
+		"bpv": {
+			"grep": ["BPV"],
+			"paths": [
+				"common/scripted_variables/zz_bpv_defines.txt",
+				"common/defines/zzzz_bpv_zone_slots_override.txt",
+				"common/inline_scripts/districts/BPV_district_slots.txt"
+			]
+		}
+	},
+	"mods": {
+		"3492424138": {
+			"grep": ["VFB", "3492424138"],
+			"paths": [
+				"events/vfb_events.txt",
+				"interface/vfb.gfx",
+				"localisation/english/vfb_l_english.yml",
+				"common/colony_types/00_vfb_colony_types.txt"
+			]
+		},
+		"3485762595": { "group": "bpv" },
+		"3575256162": { "group": "bpv" },
+		"3575256424": { "group": "bpv" },
+		"3575256652": { "group": "bpv" },
+		"3576125834": { "group": "bpv" },
+		"827354193": {
+			"grep": ["827354193", "2D Galaxy"],
+			"paths": ["interface/galaxy_view.gui"]
+		},
+		"3257903117": { "grep": ["3257903117", "NoSkull"] },
+		"1783381443": { "grep": ["1783381443"] },
+		"2212643108": { "grep": ["2212643108", "Emblem"] },
+		"1223822935": { "grep": ["1223822935", "More Insults"] },
+		"3439854455": { "grep": ["3439854455", "Stellar Legions", "SL categories"] },
+		"2436408502": { "grep": ["2436408502", "Simple Traditions"] },
+		"1311725711": {
+			"grep": ["1311725711", "Plentiful Traditions"],
+			"paths": [
+				"common/traditions/plentiful_traditions_adopt.txt",
+				"interface/topbar_traditions_view.gui"
+			]
+		},
+		"3513435391": {
+			"grep": ["3513435391", "More Zones"],
+			"paths": ["common/zones/zz_sp_zones.txt"]
+		},
+		"3538765396": {
+			"grep": ["3538765396", "Reworked Planetary"],
+			"paths": ["common/buildings/RPA_buildings.txt"]
+		},
+		"682691478": {
+			"grep": ["682691478", "Namelists"],
+			"paths": ["common/name_lists/"]
+		},
+		"2951278683": { "grep": ["2951278683", "Hyper Relay"] },
+		"701432146": { "grep": ["701432146", "AI Personalities"] },
+		"3665532588": { "grep": ["3665532588", "Astroraptor"] },
+		"1591647610": { "grep": ["1591647610", "Remastered Human"] },
+		"3256755424": { "grep": ["3256755424", "Leader Level"] },
+		"3245570160": { "grep": ["3245570160", "Technology Tier"] },
+		"3079374348": { "grep": ["3079374348", "Archaeology Story"] },
+		"2807778592": { "grep": ["2807778592", "Extra Events"] },
+		"3062038863": { "grep": ["3062038863", "Forgotten Empires"] },
+		"3160178733": { "grep": ["3160178733", "Orphaned Matrix"] }
+	}
+}

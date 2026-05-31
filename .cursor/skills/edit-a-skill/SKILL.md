@@ -1,12 +1,15 @@
 ---
 name: edit-a-skill
-description: >
-  Updates existing agent skills with proper structure, progressive disclosure,
-  and bundled resources. Use when user wants to edit, revise, update,
-  refactor, or improve an existing skill.
+description: 'Updates existing agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to edit, revise, update, refactor, or improve an existing skill.'
 ---
 
 # Editing Skills
+
+## Purpose & Scope
+
+Edit existing Agent Skills in place: update `SKILL.md`, bundled references,
+scripts, and repo routing when name, scope, or triggers change. Follow the
+same structure and frontmatter rules as `write-a-skill`.
 
 ## Process
 

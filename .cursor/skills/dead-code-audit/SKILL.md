@@ -1,16 +1,11 @@
 ---
 name: dead-code-audit
-description: >
-  Runs the deterministic MixJam dead-code scan, triages findings into live dead
-  code or false positives, and optionally removes provably dead code with
-  focused validation. Use when the user asks for a dead-code scan, unused-code
-  audit, orphan-file scan, unused-export triage, or cleanup from scan
-  findings.
+description: 'Runs the deterministic MixJam dead-code scan, triages findings into live dead code or false positives, and optionally removes provably dead code with focused validation. Use when the user asks for a dead-code scan, unused-code audit, orphan-file scan, unused-export triage, or cleanup from scan findings.'
 ---
 
 # Dead Code Audit
 
-## Goal
+## Purpose & Scope
 
 Run the deterministic repo dead-code scan, inspect only the reported
 artifacts, and either:
@@ -18,7 +13,7 @@ artifacts, and either:
 - report live findings and validated false positives, or
 - remove provably dead code when the user explicitly asked for cleanup.
 
-Use this skill for dead-code work only. Use `full-code-review` for ordinary
+Use this skill for dead-code work only. Use `stellaris-code-review` for ordinary
 review, security review, performance review, or merge-readiness review.
 
 ## Read First

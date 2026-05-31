@@ -1,15 +1,11 @@
 ---
 name: refactor
-description: >
-  Surgical, behavior-preserving cleanup for the native MixJam repository. Use
-  when the user asks to refactor, simplify, clean up, reduce complexity,
-  untangle, de-duplicate, or make code easier to change without adding
-  features.
+description: 'Surgical, behavior-preserving cleanup for the native MixJam repository. Use when the user asks to refactor, simplify, clean up, reduce complexity, untangle, de-duplicate, or make code easier to change without adding features.'
 ---
 
 # Refactor
 
-## Goal
+## Purpose & Scope
 
 Reduce structural and local complexity without changing behavior, contracts, or
 validation coverage.
@@ -80,4 +76,4 @@ threading are easy to break by accident.
 Apply `.cursor/rules/quality-gate.instructions.md` after each cleanup
 step. Preserve existing tests and add a focused regression test before risky
 structural changes when needed. If the cleanup changes a durable seam, follow
-with `full-code-review` or `specs-and-decisions` as needed.
+with `stellaris-code-review` or `specs-and-decisions` as needed.

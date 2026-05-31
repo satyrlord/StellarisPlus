@@ -1,15 +1,10 @@
 ---
 name: stellaris-code-review
-description: >-
-   Code review for Paradox Script in Stellaris mods. Validates syntax,
-   scope correctness, localisation, GFX/GUI integrity, load-order
-   safety, and cross-file consistency. USE WHEN: user says "code
-   review", "review code", "review changes", "check script",
-   "validate mod", "review mod", "review project", "script review",
-   or wants to inspect uncommitted changes or audit the full project.
+description: 'Code review for Paradox Script in Stellaris mods. Validates syntax, scope correctness, localisation, GFX/GUI integrity, load-order safety, and cross-file consistency. Use when user says "code review", "review code", "review changes", "check script", "validate mod", "review mod", "review project", "script review", or wants to inspect uncommitted changes or audit the full project.'
 argument-hint: >-
    Optionally specify files, folders, or focus areas (e.g., "only
    localisation", "just the events")
+disable-model-invocation: true
 ---
 
 # Stellaris Code Review
@@ -19,6 +14,51 @@ argument-hint: >-
 Two-phase review for Paradox Script in Stellaris mods: Phase 1 = deep
 review of uncommitted changes; Phase 2 = broad project audit.
 
+This review is strict and merge-readiness oriented: surface concrete
+defects and ship risk first, then design-quality issues.
+
+## Goal
+
+Review the change like a strict senior teammate: find real defects and
+ship-risk first, then identify design quality issues that should be
+fixed before merge.
+
+## Read First
+
+1. `AGENTS.md`
+2. the relevant source-of-truth docs under `docs/`
+3. changed tests and nearby tests
+4. changed implementation files
+
+Use `.cursor/references/security-checklist.md` and
+`.cursor/references/performance-checklist.md` when the slice touches
+trust boundaries or hot paths.
+
+For Stellaris-script reviews, continue to use the Stellaris reference
+order below to keep script and load-order decisions linear.
+
+## Use When
+
+- the user asks for review, code review, PR review, or merge readiness
+- a change touches parsers, file paths, settings, bridge payloads, or
+  process launch paths
+- import, extraction, playback, or UI responsiveness may have regressed
+- user asks for script review, mod validation, or uncommitted-change
+  audit in this repository
+
+## Review Workflow
+
+1. Confirm intended behavior from task text, docs, or tests.
+2. Review tests first to establish expected behavior and gaps.
+3. Review implementation across five axes:
+   - correctness
+   - readability and simplicity
+   - architecture and layer boundaries
+   - input/output safety
+   - performance and responsiveness
+4. Escalate findings by severity and include the smallest concrete fix.
+5. Report verification gaps separately from confirmed defects.
+
 - Use this reference order to keep decisions linear:
 
   | Step | Reference | Use for |
@@ -27,10 +67,31 @@ review of uncommitted changes; Phase 2 = broad project audit.
   | 2 | `doc/mod_load_reference.md` | Override behavior and LIOS/FIOS/DUPL/MERGE safety |
   | 3 | `doc/mod_merge_order_report.md` | Only when reviewing duplicated or merged local files |
 
-- **Evidence-first**: cross-check all assumptions against actual
-  vanilla/DLC/mod files.
-- Do not make assumptions about missing references or override
+- **Evidence-first**: cross-check assumptions against actual
+  vanilla/DLC/mod files; do not assume missing references or override
   validity without concrete evidence.
+
+## Output Contract
+
+Return findings first, highest severity first, then open questions and
+residual risk. If no findings remain, say `No findings` and call out
+any test gap.
+
+## Quick Finding Example
+
+```markdown
+## Findings
+
+### High
+- `MixJam/Import/Foo.cs`: parser accepts unchecked offset and can read
+  past bounds for malformed input; validate length before read and
+  return a user-readable import warning.
+```
+
+## Deep Review Reference
+
+Use [REFERENCE.md](references/REFERENCE.md) for the full strict-review policy,
+structural quality rules, approval bar, and expanded prompts.
 
 ---
 
