@@ -18,3 +18,20 @@ Notes:
 - Existing content inside each source block was preserved unchanged.
 - Section separators were added as: # === merged from <original_filename> ===
 - Files in events/ and common/solar_system_initializers/ remain unmerged by policy.
+
+## 2026-05-31 Component Templates Merge
+
+Scope approved by user:
+
+- common/component_templates
+
+| Folder | Strategy | Consolidated Filename | Source Files Removed |
+| --- | --- | --- | --- |
+| common/component_templates | LIOS | zz_sp_component_templates.txt | zz_sp_combat_computer_fix.txt |
+
+Notes:
+
+- Merged in ASCII filename order (combat-computer fix first,
+  additive templates last).
+- Existing content inside each source block was preserved unchanged.
+- Section separators were added as: # === merged from <original_filename> ===
