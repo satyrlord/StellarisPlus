@@ -400,7 +400,6 @@ agenda_tr_plentiful_order_megastructure = {
 	}
 	potential = {
 		OR = {
-			has_utopia = yes
 			has_megacorp = yes
 			has_overlord_dlc = yes
 			has_federations_dlc = yes

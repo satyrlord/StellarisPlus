@@ -1223,7 +1223,7 @@ map_psychotic_hordes = {
 		is_country_type = default
 		OR = {
 			AND = {
-				NOT = { host_has_dlc = "Utopia" }  
+				NOT = { has_civic = "civic_fanatic_purifiers" }
 				NOR = {
 					has_ethic = "ethic_xenophile"
 					has_ethic = "ethic_fanatic_xenophile"					
@@ -1240,7 +1240,6 @@ map_psychotic_hordes = {
 				}				
 			}
 			AND = {
-				host_has_dlc = "Utopia"
 				has_civic = "civic_fanatic_purifiers"
 			}
 		}
@@ -1251,7 +1250,7 @@ map_psychotic_hordes = {
 		weight = 1000
 		modifier = {
 			add = 2
-			NOT = { host_has_dlc = "Utopia" } 
+			NOT = { has_civic = "civic_fanatic_purifiers" }
 			OR = {
 				has_ethic = "ethic_xenophobe"
 				has_ethic = "ethic_fanatic_xenophobe"		
@@ -1267,7 +1266,7 @@ map_psychotic_hordes = {
 		}
 		modifier = {
 			add = -990 #-320 #-32
-			NOT = { host_has_dlc = "Utopia" } 
+			NOT = { has_civic = "civic_fanatic_purifiers" }
 		}
 	}
 }
@@ -3207,14 +3206,13 @@ map_trapped_in_a_machine = {
 		is_country_type = default
 		OR = {
 			AND = {
-				NOT = { host_has_dlc = "Utopia" }  				
+				NOT = { has_civic = "civic_fanatic_purifiers" }
 				NOR = {	
 					has_ethic = "ethic_pacifist"
 					has_ethic = "ethic_fanatic_pacifist"
 				}
 			}
 			AND = {
-				host_has_dlc = "Utopia"
 				has_civic = "civic_fanatic_purifiers"
 			}
 		}
@@ -3226,22 +3224,22 @@ map_trapped_in_a_machine = {
 		weight = 1000
 		modifier = {
 			add = 1
-			host_has_dlc = "Utopia"
+			has_civic = "civic_fanatic_purifiers"
 			has_trait = "trait_intelligent"
 		}
 		modifier = {
 			add = 1
-			host_has_dlc = "Utopia"
+			has_civic = "civic_fanatic_purifiers"
 			has_trait = "trait_charismatic"
 		}
 		modifier = {
 			add = 1
-			host_has_dlc = "Utopia"
+			has_civic = "civic_fanatic_purifiers"
 			has_trait = "trait_wasteful"
 		}
 		modifier = {
 			add = -993
-			NOT = { host_has_dlc = "Utopia" } 
+			NOT = { has_civic = "civic_fanatic_purifiers" }
 		}
 		modifier = {
 			add = 1
@@ -5016,7 +5014,7 @@ map_experts_in_xenocide = {
 		is_country_type = default
 		OR = {
 			AND = {
-				NOT = { host_has_dlc = "Utopia" }  				
+				NOT = { has_civic = "civic_fanatic_purifiers" }
 				NOR = {
 					has_ethic = "ethic_xenophile"
 					has_ethic = "ethic_fanatic_xenophile"	
@@ -5025,7 +5023,6 @@ map_experts_in_xenocide = {
 				}
 			}
 			AND = {
-				host_has_dlc = "Utopia"
 				has_civic = "civic_fanatic_purifiers"
 			}
 		}
@@ -5047,7 +5044,7 @@ map_experts_in_xenocide = {
 		weight = 1000
 		modifier = {
 			add = 1
-			NOT = { host_has_dlc = "Utopia" }  
+			NOT = { has_civic = "civic_fanatic_purifiers" }
 			OR = {
 				has_ethic = "ethic_militarist"
 				has_ethic = "ethic_fanatic_militarist"			
@@ -5055,27 +5052,27 @@ map_experts_in_xenocide = {
 		}
 		modifier = {
 			add = 1
-			host_has_dlc = "Utopia"
+			has_civic = "civic_fanatic_purifiers"
 			has_trait = "trait_thrifty"
 		}
 		modifier = {
 			add = 1
-			host_has_dlc = "Utopia"
+			has_civic = "civic_fanatic_purifiers"
 			has_trait = "trait_industrious"
 		}
 		modifier = {
 			add = 1
-			host_has_dlc = "Utopia"
+			has_civic = "civic_fanatic_purifiers"
 			has_trait = "trait_charismatic"
 		}
 		modifier = {
 			add = 1
-			host_has_dlc = "Utopia"
+			has_civic = "civic_fanatic_purifiers"
 			has_trait = "trait_ingenious"
 		}
 		modifier = {
 			add = -993
-			NOT = { host_has_dlc = "Utopia" } 
+			NOT = { has_civic = "civic_fanatic_purifiers" }
 		}		
 	}
 }

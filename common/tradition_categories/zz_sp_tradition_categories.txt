@@ -466,7 +466,6 @@ tradition_plentiful_genetic_cyborg = {
 	finish_bonus = "tr_plentiful_genetic_cyborg_finish"
 
 	potential = {
-		has_utopia = yes
 		is_machine_empire = no
 		OR = {
 			# Has Cybernetic Ascension

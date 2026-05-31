@@ -52,7 +52,7 @@ iterating until all true mod-owned findings are resolved.
    & "tools/stellarisplus-quality-gate.ps1"
    ```
 
-2. Check the VS Code Problems view with `get_errors`.
+2. Check the Problems view with `get_errors`.
 3. Classify findings:
    - True mod-owned issue: fix it.
    - External noise or false positive: verify before dismissing.

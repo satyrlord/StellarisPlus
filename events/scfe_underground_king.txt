@@ -141,7 +141,6 @@ fleet_event = {
 	option = {
 		name = scfe_king_of_underground_city.4.a
 		trigger = {
-			has_utopia = yes
 			owner = { is_hive_empire = yes }
 		}
 		from.planet = {
@@ -155,7 +154,6 @@ fleet_event = {
 	option = {
 		name = scfe_king_of_underground_city.4.a
 		trigger = {
-			has_synthetic_dawn = yes
 			owner = {
 				is_mechanical_empire = yes
 			}

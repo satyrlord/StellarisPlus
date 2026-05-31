@@ -4,7 +4,6 @@ origin_orphan_matrix = {
 	picture = origin_orphan_matrix
 
 	playable = {
-		host_has_dlc = "Synthetic Dawn Story Pack"
 		has_ancrel = yes
 	}
 

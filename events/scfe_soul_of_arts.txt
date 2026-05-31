@@ -128,7 +128,7 @@ fleet_event = {
 		small_artifact_reward = yes
 	}
 }
-#painted rmains
+#painted remains
 fleet_event = {
 	id = scfe_soul_of_the_art.3
 	title = scfe_soul_of_the_art.3.name
@@ -245,14 +245,8 @@ fleet_event = {
 					has_country_flag = colossus_project
 					is_spiritualist = yes
 					OR = {
-						AND = {
-							NOT = { host_has_dlc = Utopia }
-							has_technology = tech_telepathy
-						}
-						AND = {
-							host_has_dlc = Utopia
-							has_ascension_perk = ap_mind_over_matter
-						}
+						has_technology = tech_telepathy
+						has_ascension_perk = ap_mind_over_matter
 					}
 					NOT = { has_technology = tech_pk_godray }
 				}
@@ -270,14 +264,8 @@ fleet_event = {
 						has_country_flag = colossus_project
 						is_spiritualist = yes
 						OR = {
-							AND = {
-								NOT = { host_has_dlc = Utopia }
-								has_technology = tech_telepathy
-							}
-							AND = {
-								host_has_dlc = Utopia
-								has_ascension_perk = ap_mind_over_matter
-							}
+							has_technology = tech_telepathy
+							has_ascension_perk = ap_mind_over_matter
 						}
 						NOT = { has_technology = tech_pk_godray }
 					}

@@ -77,7 +77,7 @@ ship_event = {
 	show_sound = event_sensor_ping
 	location = event_target:scfe_lonely_planet
 	option = {
-		exclusive_trigger = { owner = { is_hive_empire = yes } has_utopia = yes }
+		exclusive_trigger = { owner = { is_hive_empire = yes } }
 		name = scfe_lonely_shroud.3.th
 		event_target:scfe_lonely_planet = {
 			change_pc = pc_hive
@@ -88,7 +88,7 @@ ship_event = {
 		}
 	}
 	option = {
-		exclusive_trigger = { owner = { is_mechanical_empire = yes } has_synthetic_dawn = yes }
+		exclusive_trigger = { owner = { is_mechanical_empire = yes } }
 		name = scfe_lonely_shroud.3.tm
 		event_target:scfe_lonely_planet = {
 			change_pc = pc_machine
