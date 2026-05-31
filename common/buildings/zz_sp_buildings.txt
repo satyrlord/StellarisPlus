@@ -3249,7 +3249,8 @@ building_woorskyr_biofuel_refinery = {
             exists = owner
             OR = {
                 owner = {
-                    can_add_transgenic_traits = yes
+                    has_tradition = tr_genetics_finish
+                    has_tradition = tr_genetics_enhanced_expression
                 }
                 owner_main_species = {
                     is_species_class = LITHOID
@@ -3486,7 +3487,8 @@ building_woorskyr_barkfarm = {
             exists = owner
             OR = {
                 owner = {
-                    can_add_transgenic_traits = yes
+                    has_tradition = tr_genetics_finish
+                    has_tradition = tr_genetics_enhanced_expression
                 }
                 owner_main_species = {
                     OR = {

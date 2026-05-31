@@ -13,7 +13,7 @@ $failed = $false
 Push-Location $repoRoot
 try {
 	Write-Host "Running Paradox validator..." -ForegroundColor Cyan
-	& uv run .github/skills/stellaris-code-review/scripts/pdx_validate.py $resolvedModRoot
+	& uv run .cursor/skills/stellaris-code-review/scripts/pdx_validate.py $resolvedModRoot
 	if ($LASTEXITCODE -ne 0) {
 		$failed = $true
 	}
