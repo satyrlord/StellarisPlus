@@ -35,6 +35,9 @@ on_monthly_pulse_country = {
 	events = {
 		eotf.113
 		soe.4
+		soe.98
+		soe.123
+		soe.124
 		plentiful_traditions_malice.4
 		simple_tradition.7
 	}
@@ -99,10 +102,46 @@ on_survey_planet = {
 	}
 }
 
+on_tradition_picked = {
+	events = {
+		soe.89
+	}
+}
+
 on_ascension_perk_picked = {
 	events = {
 		soe.90
 		scfe_shaded_engine.1
+	}
+}
+
+on_country_type_changed = {
+	events = {
+		soe.100
+	}
+}
+
+on_war_won = {
+	events = {
+		soe.110
+	}
+}
+
+on_war_beginning = {
+	events = {
+		soe.120
+	}
+}
+
+on_war_ended = {
+	events = {
+		soe.121
+	}
+}
+
+on_country_destroyed = {
+	events = {
+		soe.122
 	}
 }
 

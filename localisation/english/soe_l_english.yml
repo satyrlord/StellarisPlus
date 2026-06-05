@@ -64,3 +64,30 @@
 
  SOE_TOMB_INVESTIGATION:0 "Investigate Irradiated World"
  SOE_TOMB_INVESTIGATION_DESC:0 "Commission a detailed survey of the tomb world discovered near our borders. The radiation signature suggests a deliberate act of annihilation in the distant past."
+
+ soe.101.desc.sleepers.mat:0 "You have no doubt observed the increased activity within our borders.\n\nFor centuries, we have remained content to observe the affairs of the younger races from afar. Recent developments have altered our assessment of the galaxy's long-term stability.\n\nAs our favored Scion, you should understand that our decision to re-enter galactic affairs was reached only after considerable deliberation. The probability of significant disruption in the coming decades has risen beyond acceptable limits.\n\nEnsure that your civilization is prepared. We suspect your capabilities will soon be tested."
+ soe.101.desc.sleepers.spi:0 "You have no doubt noticed the increased activity within our borders.\n\nFor many generations, we have watched the younger races from afar, content to allow the galaxy to follow its natural course. Yet troubling currents now move beneath the surface of reality.\n\nAs our favored Scion, you should understand that our return to galactic affairs is not a decision we have made lightly. The years ahead will bring significant change, and many younger civilizations will find themselves unprepared for what is to come.\n\nRemain vigilant, young ones. You may soon find yourselves called upon to demonstrate whether our faith in your species was justified."
+ soe.101.desc.guardians.mat:0 "Greetings, young ones.\n\nAs you no doubt know, the threat now facing this galaxy is unlike anything the younger races have encountered before. We can no longer sit idly by and watch as the galaxy is consumed.\n\nWe hope that you will stand with us, and together we shall ensure that sapient life endures whatever darkness approaches.\n\nThe galaxy will look to us for leadership. We trust that we can rely upon you when the time comes."
+ soe.101.a:0 "We understand."
+ soe.101.a.guardians:0 "We will stand beside you."
+
+ soe.111.desc.mat:0 "An interesting development. We have observed that several additional civilizations now find themselves beneath our stewardship.\n\nWe suspect this was not entirely their idea.\n\nNevertheless, the younger races have a remarkable tendency to reject guidance until experience teaches them otherwise. Through your efforts, these civilizations may yet avoid some of the more predictable mistakes that accompany rapid development.\n\nWe shall watch their progress with interest."
+ soe.111.desc.spi:0 "We have observed that several additional civilizations now find themselves under our guidance.\n\nIt would seem they required some encouragement.\n\nThe younger races are often reluctant to accept wisdom, preferring instead to stumble through the darkness and learn their lessons through hardship. Such is the burden of youth.\n\nThrough your efforts, these civilizations may yet be spared some of the mistakes that have claimed countless others throughout the ages.\n\nWe are pleased to see that our teachings have not fallen upon deaf ears."
+ soe.111.a.mat:0 "Only time will tell"
+ soe.111.a.spi:0 "We are honored by your praise"
+
+ soe.114.desc:0 "Greetings.\n\nWe have decided to reward you for your recent efforts in bringing additional civilizations into our sphere of influence.\n\nExpanding the number of younger races willing to benefit from our guidance is a worthwhile endeavor."
+ soe.114.a:0 "A battlecruiser would serve us best"
+ soe.114.a.tooltip:0 "Gain 1 Fallen Empire Battlecruiser"
+ soe.114.b:0 "Escorts would better suit our needs"
+ soe.114.b.tooltip:0 "Gain 3 Fallen Empire Escorts"
+
+ soe.130.desc.start:0 "Greetings, steadfast Scion.\n\nAs you know, our ancient rivals from a bygone era have emerged from their self-imposed isolation and seek to settle old grievances with us.\n\nA war that will encompass the entire galaxy has begun, and we understand how daunting such a prospect may seem.\n\nYou have served us faithfully over the last few centuries, and now we ask that you stand with us once more."
+ soe.130.a:0 "We will stand beside you."
+ soe.130.b:0 "Do we have a choice?"
+ soe.130.desc.won:0 "The war is over.\n\nOur ancient rivals have finally been defeated, and the threat they posed to galactic stability has been snuffed out.\n\nThroughout this conflict, you stood beside us and your loyalty and resolve have not gone unnoticed.\n\nThe galaxy now enters a new era and we trust that your civilization will continue to prosper within it."
+ soe.130.a.won:0 "It was an honor"
+ soe.130.desc.fell.mat:0 "If you are receiving this message, then we have fallen.\n\nThe long history of our civilization ends here, and with it one of the galaxy's oldest repositories of knowledge.\n\nThough we will not live to witness what the future has in store for your people, we take some comfort in knowing that our legacy endures through those we once called our Scion.\n\nThe younger races often underestimate the fragility of civilization. We hope that the lessons we have imparted will serve you well in the uncertain years ahead.\n\nFarewell, young ones."
+ soe.130.a.fell.mat:0 "Your lessons will not be forgotten"
+ soe.130.desc.fell.spi:0 "If you are receiving this message, then we have fallen.\n\nOur ancient rivals have extinguished our light, and the galaxy is darker for it.\n\nThough our time has come to an end, we take some comfort in knowing that our teachings endure through those we once called our Scion.\n\nThe younger races have long mistaken our vigilance for arrogance and our guidance for interference. In time, they may come to understand what has truly been lost.\n\nWalk carefully, young ones.\n\nFarewell."
+ soe.130.a.fell.spi:0 "We will carry on your legacy"

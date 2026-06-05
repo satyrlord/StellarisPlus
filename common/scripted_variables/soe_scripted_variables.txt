@@ -8,3 +8,11 @@
 @soe_guided_development_years = 40
 @soe_starting_pop_penalty_stacks = 2
 @soe_starting_pop_penalty_chunk = 100
+@soe_bring_into_fold_wins_threshold = 3
+@soe_bring_into_fold_transmission_delay_days = 30
+@soe_fold_reward_delay_days = 90
+@soe_fold_reward_large_ships = 1
+@soe_fold_reward_escorts = 3
+@soe_wih_start_transmission_delay_days = 90
+@soe_wih_won_transmission_delay_days = 30
+@soe_wih_fell_transmission_delay_days = 5

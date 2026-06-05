@@ -149,6 +149,76 @@ soe_is_valid_tomb_conversion_target = {
 	NOT = { has_planet_flag = soe_tomb_world }
 }
 
+soe_eligible_for_mind_over_matter_transmission_delivery = {
+	has_country_flag = soe_mind_over_matter_transmission_scheduled
+	has_origin = origin_scion
+	is_ai = no
+	soe_is_active_scion = yes
+	has_ascension_perk = ap_mind_over_matter
+	soe_spiritualist_fe_overlord = yes
+}
+
+soe_overlord_awakening_reason_guardians = {
+	has_country_flag = guardians_of_the_galaxy
+}
+
+soe_overlord_awakening_reason_sleepers = {
+	has_country_flag = sleepers_awake_first_sleeper
+	NOT = { has_country_flag = guardians_of_the_galaxy }
+}
+
+soe_eligible_for_overlord_awakening_transmission = {
+	OR = {
+		soe_overlord_awakening_reason_guardians = yes
+		soe_overlord_awakening_reason_sleepers = yes
+	}
+}
+
+soe_is_awakened_scion_master = {
+	is_country_type = awakened_fallen_empire
+	has_country_flag = scion_master
+	OR = {
+		is_fanatic_materialist = yes
+		is_fanatic_spiritualist = yes
+	}
+}
+
+soe_eligible_for_bring_into_fold_win_count = {
+	soe_is_active_scion = yes
+	fromfrom = {
+		using_war_goal = { type = wg_scion owner = attacker }
+	}
+	NOT = { has_country_flag = soe_bring_into_fold_transmission_fired }
+}
+
+soe_is_wih_active = {
+	OR = {
+		has_global_flag = war_in_heaven_ongoing
+		has_global_flag = war_in_heaven_started
+		has_global_flag = war_in_heaven_ended
+	}
+}
+
+soe_is_wih_war = {
+	OR = {
+		using_war_goal = { type = wg_war_in_heaven owner = attacker }
+		using_war_goal = { type = wg_war_in_heaven owner = defender }
+	}
+}
+
+soe_eligible_for_wih_start_transmission = {
+	has_origin = origin_scion
+	is_ai = no
+	soe_is_active_scion = yes
+	NOT = { has_country_flag = soe_wih_started_transmission_scheduled }
+	NOT = { has_country_flag = soe_wih_transmission_start }
+	exists = overlord
+	overlord = {
+		soe_is_awakened_scion_master = yes
+		soe_is_wih_war = yes
+	}
+}
+
 soe_block_fe_milestone_from_soe_gift = {
 	OR = {
 		has_country_flag = soe_suppress_scion_fe_milestone

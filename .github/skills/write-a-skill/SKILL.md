@@ -44,7 +44,7 @@ Spec: <https://agentskills.io/specification>
 - Subdirectory names: `scripts/`, `references/`, `assets/`,
   `templates/` (lowercase, plural).
 - Script files: descriptive names matching their purpose (e.g.
-  `magnific_generate.py`, `pdx_validate.py`).
+  `generate_portrait.py`, `pdx_validate.py`).
 
 ## Code Style
 

@@ -30,8 +30,8 @@ fixed before merge.
 3. changed tests and nearby tests
 4. changed implementation files
 
-Use `.cursor/references/security-checklist.md` and
-`.cursor/references/performance-checklist.md` when the slice touches
+Use `.github/references/security-checklist.md` and
+`.github/references/performance-checklist.md` when the slice touches
 trust boundaries or hot paths.
 
 For Stellaris-script reviews, continue to use the Stellaris reference

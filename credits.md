@@ -130,7 +130,7 @@ Integrated Workshop mods:
   Author: (see Workshop page)
 
 - Scion Origin Expanded (Workshop ID: 3733766940)
-  Last updated: 2026-05-31
+  Last updated: 2026-06-05
   Source: backup/3733766940/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3733766940>
   Author: (see Workshop page)

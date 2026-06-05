@@ -1068,6 +1068,158 @@ soe_grant_random_fe_rare_tech = {
 		}
 	}
 }
+
+soe_grant_fold_battlecruiser_reward = {
+	soe_save_scion_master_portrait = yes
+	capital_scope = {
+		create_fleet = {
+			effect = {
+				set_owner = event_target:scion_master
+				while = {
+					count = @soe_fold_reward_large_ships
+					create_fallen_empire_large_ship = yes
+				}
+				set_location = {
+					target = prev
+					distance = 45
+					angle = random
+				}
+				set_owner = root
+			}
+		}
+	}
+}
+
+soe_grant_fold_escort_reward = {
+	soe_save_scion_master_portrait = yes
+	capital_scope = {
+		create_fleet = {
+			effect = {
+				set_owner = event_target:scion_master
+				while = {
+					count = @soe_fold_reward_escorts
+					create_fallen_empire_small_ship = yes
+				}
+				set_location = {
+					target = prev
+					distance = 45
+					angle = random
+				}
+				set_owner = root
+			}
+		}
+	}
+}
+
+soe_fire_overlord_awakening_transmission = {
+	if = {
+		limit = { exists = overlord }
+		overlord = { save_event_target_as = soe_overlord }
+	}
+	else = {
+		random_country = {
+			limit = {
+				soe_is_awakened_scion_master = yes
+			}
+			save_event_target_as = soe_overlord
+		}
+	}
+	if = {
+		limit = {
+			exists = event_target:soe_overlord
+			event_target:soe_overlord = { soe_eligible_for_overlord_awakening_transmission = yes }
+		}
+		country_event = { id = soe.101 }
+	}
+}
+
+soe_notify_scion_wih_won = {
+	every_playable_country = {
+		limit = {
+			soe_is_active_scion = yes
+			NOT = { has_country_flag = soe_wih_overlord_won_transmission_fired }
+			NOT = { has_country_flag = soe_wih_transmission_won }
+			exists = overlord
+			overlord = {
+				has_country_flag = scion_master
+				is_country_type = awakened_fallen_empire
+			}
+		}
+		set_country_flag = soe_wih_transmission_won
+		country_event = { id = soe.130 days = @soe_wih_won_transmission_delay_days }
+	}
+}
+
+soe_set_wih_fell_overlord_ethos_flags = {
+	if = {
+		limit = {
+			NOT = { has_country_flag = soe_wih_fell_overlord_mat }
+			NOT = { has_country_flag = soe_wih_fell_overlord_spi }
+		}
+		if = {
+			limit = {
+				event_target:soe_wih_destroyed_overlord = { is_fanatic_materialist = yes }
+			}
+			set_country_flag = soe_wih_fell_overlord_mat
+		}
+		else_if = {
+			limit = {
+				event_target:soe_wih_destroyed_overlord = { is_fanatic_spiritualist = yes }
+			}
+			set_country_flag = soe_wih_fell_overlord_spi
+		}
+		else_if = {
+			limit = { has_country_flag = soe_scion_fe_materialist }
+			set_country_flag = soe_wih_fell_overlord_mat
+		}
+		else_if = {
+			limit = { has_country_flag = soe_scion_fe_spiritualist }
+			set_country_flag = soe_wih_fell_overlord_spi
+		}
+	}
+}
+
+soe_notify_scion_wih_fell = {
+	every_playable_country = {
+		limit = {
+			soe_is_active_scion = yes
+			NOT = { has_country_flag = soe_autonomy_granted }
+			NOT = { has_country_flag = soe_wih_overlord_fell_transmission_fired }
+			NOT = { has_country_flag = soe_wih_transmission_fell }
+			event_target:soe_wih_destroyed_overlord = { is_overlord_to = prev }
+		}
+		set_country_flag = soe_former_overlord@event_target:soe_wih_destroyed_overlord
+		soe_set_wih_fell_overlord_ethos_flags = yes
+		event_target:soe_wih_destroyed_overlord = { save_event_target_as = soe_overlord }
+		set_country_flag = soe_wih_transmission_fell
+		country_event = { id = soe.130 days = @soe_wih_fell_transmission_delay_days }
+	}
+}
+
+soe_notify_scion_wih_fell_backup = {
+	if = {
+		limit = { has_country_flag = soe_scion_fe_materialist }
+		set_country_flag = soe_wih_fell_overlord_mat
+	}
+	else_if = {
+		limit = { has_country_flag = soe_scion_fe_spiritualist }
+		set_country_flag = soe_wih_fell_overlord_spi
+	}
+	else_if = {
+		limit = {
+			any_country = {
+				root = { has_country_flag = soe_former_overlord@prev }
+				is_fanatic_materialist = yes
+			}
+		}
+		set_country_flag = soe_wih_fell_overlord_mat
+	}
+	else = {
+		set_country_flag = soe_wih_fell_overlord_spi
+	}
+	set_country_flag = soe_wih_transmission_fell
+	country_event = { id = soe.130 days = @soe_wih_fell_transmission_delay_days }
+}
 # === merged from zzz_eotf_ancient_legacy_fe_grants.txt ===
 	# NOTE: grant_random_fe_building intentionally overrides the narrower vanilla
 	# random-grant entry point. Ancient Legacy skips random FE-building grants so

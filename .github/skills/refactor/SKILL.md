@@ -73,7 +73,7 @@ threading are easy to break by accident.
 
 ## Validation
 
-Apply `.cursor/rules/quality-gate.instructions.md` after each cleanup
+Apply `.github/rules/quality-gate.instructions.md` after each cleanup
 step. Preserve existing tests and add a focused regression test before risky
 structural changes when needed. If the cleanup changes a durable seam, follow
 with `stellaris-code-review` or `specs-and-decisions` as needed.

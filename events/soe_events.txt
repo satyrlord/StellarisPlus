@@ -23,6 +23,20 @@ country_event = {
 		if = {
 			limit = { is_ai = no }
 			soe_apply_scion_start_modifiers = yes
+			if = {
+				limit = {
+					exists = overlord
+					overlord = { is_fanatic_materialist = yes }
+				}
+				set_country_flag = soe_scion_fe_materialist
+			}
+			else_if = {
+				limit = {
+					exists = overlord
+					overlord = { is_fanatic_spiritualist = yes }
+				}
+				set_country_flag = soe_scion_fe_spiritualist
+			}
 			country_event = { id = soe.75 days = 5 }
 		}
 	}
@@ -273,7 +287,23 @@ country_event = {
 	}
 }
 
-# Spiritualist FE overlord — Mind Over Matter ascension perk
+# Spiritualist FE overlord — Psionics tradition adopted (schedules transmission)
+country_event = {
+	id = soe.89
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_eligible_for_mind_over_matter_transmission = yes
+	}
+
+	immediate = {
+		set_country_flag = soe_mind_over_matter_transmission_scheduled
+		country_event = { id = soe.90 days = 30 }
+	}
+}
+
+# Spiritualist FE overlord — Mind Over Matter ascension perk (delivery)
 country_event = {
 	id = soe.90
 	title = TRANSMISSION
@@ -282,7 +312,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		soe_eligible_for_mind_over_matter_transmission = yes
+		soe_eligible_for_mind_over_matter_transmission_delivery = yes
 	}
 
 	picture_event_data = {
@@ -294,6 +324,7 @@ country_event = {
 	}
 
 	immediate = {
+		remove_country_flag = soe_mind_over_matter_transmission_scheduled
 		set_country_flag = soe_mind_over_matter_transmission_fired
 		soe_save_scion_master_portrait = yes
 	}
@@ -514,6 +545,502 @@ country_event = {
 				society_research = 6000
 				unity = 5000
 			}
+		}
+	}
+}
+
+#############################
+# Overlord awakening
+#############################
+
+# on_country_type_changed — Root = country that changed type
+country_event = {
+	id = soe.100
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = awakened_fallen_empire
+		OR = {
+			is_fanatic_materialist = yes
+			is_fanatic_spiritualist = yes
+		}
+		OR = {
+			has_country_flag = scion_master
+			any_playable_country = {
+				has_origin = origin_scion
+				is_ai = no
+				has_country_flag = soe_former_overlord@root
+			}
+		}
+	}
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				has_origin = origin_scion
+				is_ai = no
+				NOT = { has_country_flag = soe_overlord_awakening_transmission_fired }
+				OR = {
+					AND = {
+						exists = overlord
+						overlord = {
+							is_same_value = root
+							soe_is_awakened_scion_master = yes
+							soe_eligible_for_overlord_awakening_transmission = yes
+						}
+					}
+					AND = {
+						has_country_flag = soe_former_overlord@root
+						root = { soe_eligible_for_overlord_awakening_transmission = yes }
+					}
+				}
+			}
+			soe_fire_overlord_awakening_transmission = yes
+		}
+	}
+}
+
+# Fallback — catches awakening if on_country_type_changed does not fire (e.g. console .3 only)
+country_event = {
+	id = soe.98
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_scion
+		is_ai = no
+		NOT = { has_country_flag = soe_overlord_awakening_transmission_fired }
+		exists = overlord
+		overlord = {
+			soe_is_awakened_scion_master = yes
+			soe_eligible_for_overlord_awakening_transmission = yes
+		}
+	}
+
+	immediate = {
+		soe_fire_overlord_awakening_transmission = yes
+	}
+}
+
+country_event = {
+	id = soe.101
+	title = TRANSMISSION
+	diplomatic = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = event_target:soe_overlord
+		event_target:soe_overlord = { soe_eligible_for_overlord_awakening_transmission = yes }
+	}
+
+	picture_event_data = {
+		portrait = event_target:soe_overlord
+		planet_background = event_target:soe_overlord
+		graphical_culture = event_target:soe_overlord
+		city_level = event_target:soe_overlord
+		room = event_target:soe_overlord.ruler
+	}
+
+	desc = {
+		text = soe.101.desc.guardians.mat
+		trigger = {
+			event_target:soe_overlord = {
+				soe_overlord_awakening_reason_guardians = yes
+				is_materialist = yes
+			}
+		}
+	}
+
+	desc = {
+		text = soe.101.desc.sleepers.mat
+		trigger = {
+			event_target:soe_overlord = {
+				soe_overlord_awakening_reason_sleepers = yes
+				is_materialist = yes
+			}
+		}
+	}
+
+	desc = {
+		text = soe.101.desc.sleepers.spi
+		trigger = {
+			event_target:soe_overlord = {
+				soe_overlord_awakening_reason_sleepers = yes
+				is_spiritualist = yes
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = soe_overlord_awakening_transmission_fired
+		soe_save_overlord_portrait_target = yes
+	}
+
+	option = {
+		name = soe.101.a.guardians
+		trigger = {
+			event_target:soe_overlord = { soe_overlord_awakening_reason_guardians = yes }
+		}
+	}
+
+	option = {
+		name = soe.101.a
+		trigger = {
+			event_target:soe_overlord = { NOT = { soe_overlord_awakening_reason_guardians = yes } }
+		}
+	}
+}
+
+#############################
+# Bring Into the Fold (3 wins)
+#############################
+
+country_event = {
+	id = soe.110
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_eligible_for_bring_into_fold_win_count = yes
+	}
+
+	immediate = {
+		change_variable = { which = soe_bring_into_fold_wins value = 1 }
+		if = {
+			limit = {
+				check_variable_arithmetic = {
+					which = soe_bring_into_fold_wins
+					value >= @soe_bring_into_fold_wins_threshold
+				}
+			}
+			country_event = { id = soe.111 days = @soe_bring_into_fold_transmission_delay_days }
+		}
+	}
+}
+
+country_event = {
+	id = soe.111
+	title = TRANSMISSION
+	diplomatic = yes
+	is_triggered_only = yes
+
+	desc = {
+		text = soe.111.desc.mat
+		trigger = {
+			soe_materialist_fe_overlord = yes
+		}
+	}
+
+	desc = {
+		text = soe.111.desc.spi
+		trigger = {
+			soe_spiritualist_fe_overlord = yes
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master.ruler
+	}
+
+	immediate = {
+		set_country_flag = soe_bring_into_fold_transmission_fired
+		soe_save_scion_master_portrait = yes
+	}
+
+	option = {
+		name = soe.111.a.mat
+		trigger = {
+			soe_materialist_fe_overlord = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = soe_bring_into_fold_reward_scheduled } }
+				set_country_flag = soe_bring_into_fold_reward_scheduled
+				country_event = { id = soe.114 days = @soe_fold_reward_delay_days }
+			}
+		}
+	}
+
+	option = {
+		name = soe.111.a.spi
+		trigger = {
+			soe_spiritualist_fe_overlord = yes
+		}
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_country_flag = soe_bring_into_fold_reward_scheduled } }
+				set_country_flag = soe_bring_into_fold_reward_scheduled
+				country_event = { id = soe.114 days = @soe_fold_reward_delay_days }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = soe.114
+	title = TRANSMISSION
+	desc = soe.114.desc
+	diplomatic = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_is_active_scion = yes
+		has_country_flag = soe_bring_into_fold_reward_scheduled
+		NOT = { has_country_flag = soe_bring_into_fold_reward_fired }
+		soe_overlord_is_fallen_empire = yes
+	}
+
+	picture_event_data = {
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master.ruler
+	}
+
+	immediate = {
+		set_country_flag = soe_bring_into_fold_reward_fired
+		soe_save_scion_master_portrait = yes
+	}
+
+	option = {
+		name = soe.114.a
+		custom_tooltip = soe.114.a.tooltip
+		soe_grant_fold_battlecruiser_reward = yes
+	}
+
+	option = {
+		name = soe.114.b
+		custom_tooltip = soe.114.b.tooltip
+		soe_grant_fold_escort_reward = yes
+	}
+}
+
+#############################
+# War in Heaven
+#############################
+
+country_event = {
+	id = soe.120
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_eligible_for_wih_start_transmission = yes
+	}
+
+	immediate = {
+		set_country_flag = soe_wih_started_transmission_scheduled
+		set_country_flag = soe_wih_transmission_start
+		country_event = { id = soe.130 days = @soe_wih_start_transmission_delay_days }
+	}
+}
+
+# on_war_ended — Root = Loser, From = Main Winner (no FromFrom on this hook)
+country_event = {
+	id = soe.121
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_is_wih_active = yes
+		is_country_type = awakened_fallen_empire
+		OR = {
+			AND = {
+				NOT = { has_country_flag = scion_master }
+				from = {
+					is_country_type = awakened_fallen_empire
+					has_country_flag = scion_master
+				}
+			}
+			AND = {
+				has_country_flag = scion_master
+				from = {
+					is_country_type = awakened_fallen_empire
+					NOT = { has_country_flag = scion_master }
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = scion_master }
+			save_event_target_as = soe_wih_destroyed_overlord
+			soe_notify_scion_wih_fell = yes
+		}
+		else = {
+			soe_notify_scion_wih_won = yes
+		}
+	}
+}
+
+# on_country_destroyed — Root = destroyed country
+country_event = {
+	id = soe.122
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_is_wih_active = yes
+		is_country_type = awakened_fallen_empire
+	}
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = scion_master }
+			save_event_target_as = soe_wih_destroyed_overlord
+			soe_notify_scion_wih_fell = yes
+		}
+		else_if = {
+			limit = {
+				any_playable_country = {
+					soe_is_active_scion = yes
+					has_country_flag = soe_former_overlord@root
+				}
+			}
+			save_event_target_as = soe_wih_destroyed_overlord
+			soe_notify_scion_wih_fell_backup = yes
+		}
+		else = {
+			soe_notify_scion_wih_won = yes
+		}
+	}
+}
+
+# on_monthly_pulse — triggered by on_monthly_pulse_country; fallback for soe.100/soe.120 misfire
+country_event = {
+	id = soe.123
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		soe_eligible_for_wih_start_transmission = yes
+	}
+
+	immediate = {
+		set_country_flag = soe_wih_started_transmission_scheduled
+		set_country_flag = soe_wih_transmission_start
+		country_event = { id = soe.130 days = @soe_wih_start_transmission_delay_days }
+	}
+}
+
+country_event = {
+	id = soe.124
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_scion
+		is_ai = no
+		NOT = { has_country_flag = soe_overlord_awakening_transmission_fired }
+		exists = overlord
+		overlord = {
+			soe_is_awakened_scion_master = yes
+			soe_eligible_for_overlord_awakening_transmission = yes
+		}
+	}
+
+	immediate = {
+		soe_fire_overlord_awakening_transmission = yes
+	}
+}
+
+# WiH transmission — shared by start/won/fell variants
+country_event = {
+	id = soe.130
+	title = TRANSMISSION
+	diplomatic = yes
+	is_triggered_only = yes
+
+	trigger = {
+		exists = overlord
+		overlord = {
+			soe_is_awakened_scion_master = yes
+		}
+	}
+
+	picture_event_data = {
+		portrait = event_target:soe_overlord
+		planet_background = event_target:soe_overlord
+		graphical_culture = event_target:soe_overlord
+		city_level = event_target:soe_overlord
+		room = event_target:soe_overlord.ruler
+	}
+
+	desc = {
+		text = soe.130.desc.start
+		trigger = {
+			has_country_flag = soe_wih_transmission_start
+		}
+	}
+
+	desc = {
+		text = soe.130.desc.won
+		trigger = {
+			has_country_flag = soe_wih_transmission_won
+		}
+	}
+
+	desc = {
+		text = soe.130.desc.fell.mat
+		trigger = {
+			has_country_flag = soe_wih_transmission_fell
+			has_country_flag = soe_wih_fell_overlord_mat
+		}
+	}
+
+	desc = {
+		text = soe.130.desc.fell.spi
+		trigger = {
+			has_country_flag = soe_wih_transmission_fell
+			has_country_flag = soe_wih_fell_overlord_spi
+		}
+	}
+
+	immediate = {
+		soe_save_overlord_portrait_target = yes
+	}
+
+	option = {
+		name = soe.130.a
+		trigger = {
+			has_country_flag = soe_wih_transmission_start
+		}
+	}
+
+	option = {
+		name = soe.130.b
+		trigger = {
+			has_country_flag = soe_wih_transmission_start
+		}
+	}
+
+	option = {
+		name = soe.130.a.won
+		trigger = {
+			has_country_flag = soe_wih_transmission_won
+		}
+	}
+
+	option = {
+		name = soe.130.a.fell.mat
+		trigger = {
+			has_country_flag = soe_wih_transmission_fell
+			has_country_flag = soe_wih_fell_overlord_mat
+		}
+	}
+
+	option = {
+		name = soe.130.a.fell.spi
+		trigger = {
+			has_country_flag = soe_wih_transmission_fell
+			has_country_flag = soe_wih_fell_overlord_spi
 		}
 	}
 }

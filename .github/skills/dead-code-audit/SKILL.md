@@ -20,7 +20,7 @@ review, security review, performance review, or merge-readiness review.
 
 1. `AGENTS.md`
 2. `docs/implementation-roadmap-and-acceptance.md`
-3. `.cursor/rules/quality-gate.instructions.md`
+3. `.github/rules/quality-gate.instructions.md`
 4. `tmp/dead-code-scan/summary.json` after running the scan command
 
 ## Command
