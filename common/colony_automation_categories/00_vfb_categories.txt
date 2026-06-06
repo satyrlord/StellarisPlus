@@ -1,7 +1,0 @@
-# VFB Polar Worksite colony automation category
-# Used by common/colony_automation_exceptions/00_vfb_exceptions.txt
-planet_automation_vfb_buildings = {
-	available = {
-		exists = owner
-	}
-}

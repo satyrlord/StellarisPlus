@@ -10,15 +10,6 @@
 		}
 	},
 	"mods": {
-		"3492424138": {
-			"grep": ["VFB", "3492424138"],
-			"paths": [
-				"events/vfb_events.txt",
-				"interface/vfb.gfx",
-				"localisation/english/vfb_l_english.yml",
-				"common/colony_types/00_vfb_colony_types.txt"
-			]
-		},
 		"3485762595": { "group": "bpv" },
 		"3575256162": { "group": "bpv" },
 		"3575256424": { "group": "bpv" },

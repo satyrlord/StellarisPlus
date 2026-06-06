@@ -1,45 +1,4 @@
-# === merged from 00_vfb_jobs.txt ===
-# Unified VFB drone job that replaces 15 individual bio/bot job pairs.
-# High weight (5000) ensures gestalt empires always fill this drone slot.
-# Zero upkeep is intentional -- VFB buildings already have high upkeep.
-vfb_accretion_drone = {
-	category = complex_drone
 
-	swappable_data = {
-		default = {
-			condition_string = DRONE_JOB_TRIGGER
-			building_icon = building_vfb_wharf
-		}
-	}
-	
-	possible_pre_triggers = {
-		has_owner = yes
-		# no additional slavery restriction; gestalt drones fill this slot
-		is_being_purged = no
-		is_being_assimilated = no
-	}
-	
-	possible_precalc = can_fill_drone_job
-
-	# Commented out: gestalt drones don't require specialist check.
-	#possible = {
-	#	complex_specialist_job_check_trigger = yes
-	#}
-	
-	resources = {
-		category = planet_miners
-		produces = {
-			alloys = 4
-			energy = 4
-			unity = 2
-		}
-		# No upkeep defined; zero upkeep is intentional (VFB buildings have high upkeep)
-	}	
-	
-	weight = {
-		weight = 5000
-	}
-}
 # === merged from 99_orphan_matrix_complex_jobs.txt ===
 introspective_calculator = {
 	category = complex_drone

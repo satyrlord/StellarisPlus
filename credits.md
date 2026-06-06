@@ -8,12 +8,6 @@ and subsequent content changes).
 
 Integrated Workshop mods:
 
-- [4.3] VF's Buildings (Workshop ID: 3492424138)
-  Last updated: 2026-05-31
-  Source: backup/3492424138/
-  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3492424138>
-  Author: VFacure <https://steamcommunity.com/id/VFacure/myworkshopfiles/?appid=281990>
-
 - BPV Reborn - Zone Single Row Mode (Workshop ID: 3485762595)
   Last updated: 2026-05-31
   Source: backup/3485762595/
