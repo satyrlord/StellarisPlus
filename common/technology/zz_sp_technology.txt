@@ -1771,3 +1771,38 @@ tech_dark_matter_propulsion = {
 		}
 	}
 }
+
+# === placeholder techs for Plentiful Traditions (give_technology targets) ===
+
+tech_plentiful_traditions_orbital_fertilizer_array = {
+	cost = 0	area = society	tier = 0	category = { new_worlds }
+	weight = 0	ai_weight = { weight = 0 }
+}
+tech_plentiful_traditions_orbital_fracking_cannon = {
+	cost = 0	area = engineering	tier = 0	category = { industry }
+	weight = 0	ai_weight = { weight = 0 }
+}
+tech_plentiful_traditions_orbital_trading_beacon = {
+	cost = 0	area = society	tier = 0	category = { statecraft }
+	weight = 0	ai_weight = { weight = 0 }
+}
+tech_plentiful_traditions_orbital_r_s = {
+	cost = 0	area = physics	tier = 0	category = { computing }
+	weight = 0	ai_weight = { weight = 0 }
+}
+tech_plentiful_traditions_orbital_c_r_s = {
+	cost = 0	area = society	tier = 0	category = { statecraft }
+	weight = 0	ai_weight = { weight = 0 }
+}
+tech_plentiful_traditions_orbital_c_h = {
+	cost = 0	area = society	tier = 0	category = { statecraft }
+	weight = 0	ai_weight = { weight = 0 }
+}
+tech_plentiful_traditions_orbital_a_s_p_i = {
+	cost = 0	area = physics	tier = 0	category = { computing }
+	weight = 0	ai_weight = { weight = 0 }
+}
+tech_plentiful_traditions_robotics_construct_amplifiers = {
+	cost = 0	area = engineering	tier = 0	category = { industry }
+	weight = 0	ai_weight = { weight = 0 }
+}

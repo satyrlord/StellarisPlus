@@ -1,5 +1,27 @@
 
 # === merged from 99_orphan_matrix_script_values.txt ===
+introspective_calculator_unity_output_modifier = {
+	base = 1
+}
+introspective_calculator_research_output_modifier = {
+	base = 1
+}
+introspective_calculators_job_number = {
+	base = 0
+}
+orphan_matrix_custodian_matrix_empire_size_output_modifier = {
+	base = 1
+}
+orphan_matrix_memorialists_number_modifier = {
+	base = 1
+}
+orphaned_matrix_assimilator_matrix_energy_output_modifier = {
+	base = 1
+}
+orphaned_matrix_dead_empires_output_modifier = {
+	base = 1
+}
+
 # === merged from PRA_sv.txt ===
 #	Planetary ascension effect
 PRA_sv_plnt_ASCEND_show_sprawl = {
