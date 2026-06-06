@@ -1,9 +1,10 @@
-ambient_object = {
-	name = "asp_site_epilogue_sphere_object"
-	entity = "asp_site_epilogue_sphere_entity"
-	selectable = no
-	show_name = no
-}
+# Removed: invalid entity "asp_site_epilogue_sphere_entity" (from external mod content)
+#ambient_object = {
+#	name = "asp_site_epilogue_sphere_object"
+#	entity = "asp_site_epilogue_sphere_entity"
+#	selectable = no
+#	show_name = no
+#}
 ambient_object = {
     name = "scfe_astral_scar"
     entity = "astral_scar_entity"
@@ -18,12 +19,13 @@ ambient_object = {
 	tooltip = "scfe_riki_observation_tooltip"
 	description = "scfe_riki_observation_desc"
 }
-ambient_object = {
-	name = "scfe_toxoid_science_ship_amb"
-	entity = "scfe_toxoid_science_ship_entity"
-	selectable = no
-	show_name = no
-}
+# Removed: invalid entity "scfe_toxoid_science_ship_entity" (from external mod content)
+#ambient_object = {
+#	name = "scfe_toxoid_science_ship_amb"
+#	entity = "scfe_toxoid_science_ship_entity"
+#	selectable = no
+#	show_name = no
+#}
 ambient_object = {
 	name = "scfe_precursor_cargo_01_amb"
 	entity = "cargo_transport_containers_entity"

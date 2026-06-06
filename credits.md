@@ -147,24 +147,6 @@ Integrated Workshop mods:
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3245570160>
   Author: (see Workshop page)
 
-- Archaeology Story Pack 4.2 (Workshop ID: 3079374348)
-  Last updated: 2026-05-31
-  Source: backup/3079374348/
-  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3079374348>
-  Author: Inny <https://steamcommunity.com/id/Inny78/myworkshopfiles/?appid=281990>
-
-- Extra Events 4.2 Continued (Workshop ID: 2807778592)
-  Last updated: 2026-05-31
-  Source: backup/2807778592/
-  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=2807778592>
-  Author: Inny <https://steamcommunity.com/id/Inny78/myworkshopfiles/?appid=281990>
-
-- Forgotten Empires 4.2 (Workshop ID: 3062038863)
-  Last updated: 2026-05-31
-  Source: backup/3062038863/
-  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3062038863>
-  Author: Inny <https://steamcommunity.com/id/Inny78/myworkshopfiles/?appid=281990>
-
 - Orphaned Matrix Origin (Workshop ID: 3160178733)
   Last updated: 2026-05-31
   Source: backup/3160178733/

@@ -1993,7 +1993,7 @@ tr_plentiful_endure_3 = {
 tr_plentiful_endure_4 = {
 #	cost = { unity = @cost }
 	modifier = {
-		planet_jobs_slave_produces_mult = 0.2
+		planet_jobs_produces_mult = 0.2
 	}
 	
 	ai_weight = {
@@ -2667,7 +2667,7 @@ tr_plentiful_malice_3 = {
 		has_tradition = tr_plentiful_malice_1
 	}
 	modifier = {
-		planet_jobs_slave_produces_mult = 0.1
+		planet_jobs_produces_mult = 0.1
 	}
 	
 	ai_weight = {

@@ -1,6 +1,7 @@
 ﻿l_english:
   # Warning cleanup: missing modifier localisation
   mod_shipclass_research_station_build_speed_mult:0 "Research Station Build Speed"
+  mod_shipclass_research_station_build_cost_mult:0 "Research Station Build Cost"
   mod_weapon_type_explosive_speed_mult:0 "Explosive Weapon Speed"
   mod_planet_jobs_volatile_motes_upkeep_mult:0 "Volatile Motes Upkeep"
   mod_planet_jobs_exotic_gases_upkeep_mult:0 "Exotic Gases Upkeep"
@@ -8,6 +9,11 @@
   mod_station_researchers_energy_upkeep_mult:0 "Station Researchers Energy Upkeep"
   mod_station_researchers_cost_mult:0 "Station Researchers Cost"
   mod_job_healthcare_pop_assembly_organic_add:0 "Organic Pop Assembler Jobs"
+  mod_megastructures_habitat_influence_cost_mult:0 "Habitat Influence Cost"
+  mod_megastructures_habitat_alloys_cost_mult:0 "Habitat Alloys Cost"
+  mod_stations_energy_produces_mult:0 "Station Energy Production"
+  mod_stations_minerals_produces_mult:0 "Station Minerals Production"
+  mod_stations_food_produces_mult:0 "Station Food Production"
 
   # Warning cleanup: missing leader-name localisation keys
   Central:0 "Central"
@@ -30,3 +36,17 @@
   building_automation_farming_1_desc:0 "$building_automation_1_desc$"
   building_automation_farming_2:0 "$building_automation_2$"
   building_automation_farming_2_desc:0 "$building_automation_2_desc$"
+
+  # Technology localisation
+  tech_aspmod_geocentric_device:0 "Geocentric Device"
+  tech_aspmod_geocentric_device_desc:0 "A revolutionary device that redefines our understanding of planetary physics."
+
+  # Opinion modifier localisation
+  triggered_opinion_scfe_diary_of_innovo:0 "Diary of Innovo"
+  triggered_opinion_scfe_true_identity:0 "True Identity Revealed"
+  scfe_opinion_angered_fallen_empire:0 "Angered Fallen Empire"
+  scfe_opinion_angered_machine_fallen_empire:0 "Angered Machine Fallen Empire"
+  scfe_opinion_irritated_fallen_empire:0 "Irritated Fallen Empire"
+  scfe_opinion_irritated_machine_fallen_empire:0 "Irritated Machine Fallen Empire"
+  scfe_opinion_compromise_attempt:0 "Compromise Attempt"
+  scfe_opinion_coords_attempt:0 "Coords Attempt"

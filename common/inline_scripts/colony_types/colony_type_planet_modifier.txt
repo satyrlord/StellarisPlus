@@ -1,0 +1,6 @@
+# This inline script is referenced by common/colony_types/00_vfb_colony_types.txt
+# $MODIFIER$ is the planet modifier to apply (e.g. planet_engineers_minerals_produces_mult)
+modifier = {
+	$MODIFIER$ = 0.10
+}
+planet_jobs_produces_mult = 0.05

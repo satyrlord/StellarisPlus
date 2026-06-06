@@ -1017,7 +1017,7 @@ guiTypes = {
 						origo = upper_right
 						instantTextBoxType = {
 							name = "planet_districts_amount"
-							font = "font_text_16"
+							font = "font_text_18"
 							text = "10"
 							position = { x = 0 y = 0 }
 							maxWidth = 50
@@ -1102,7 +1102,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_desc"
-						font = "font_text_16"
+						font = "font_text_18"
 						text = ""
 						position = { x = 10 y = 10 }
 						maxWidth = 276
@@ -1141,7 +1141,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_primitives"
-						font = "font_text_16"
+						font = "font_text_18"
 						text = ""
 						position = { x = 10 y = 10 }
 						maxWidth = 275
@@ -1428,7 +1428,7 @@ guiTypes = {
 					}
 					buttonType = {
 						name = "automated_development_button"
-						quadTextureSprite = "GFX_ui_button_automate"
+						quadTextureSprite = "GFX_button_small"
 						position = { x = -20 y = 0 }
 						orientation = center_right
 						centerPosition = yes
@@ -2038,7 +2038,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "ascension_text"
-						font = "font_text_16"
+						font = "font_text_18"
 						text = "PLANET_ASCENSION_TEXT_NONE"
 						position = { x = 15 y = 60 }
 						maxWidth = 280
@@ -2215,7 +2215,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "job_types_amount"
-							font = "font_text_16"
+							font = "font_text_18"
 							text = "0 Job Types"
 							position = { x = 10 y = 0 }
 							maxWidth = 118
@@ -2317,7 +2317,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "combat_width"
-					font = "font_text_16"
+					font = "font_text_18"
 					text = "Combat Width: 16"
 					position = { x = -220 y = 59 }
 					orientation = upper_right
@@ -2400,7 +2400,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "defender_reserves"
-					font = "font_text_16"
+					font = "font_text_18"
 					text = "GROUND_COMBAT_RESERVES"
 					position = { x = 130 y = 399 }
 					maxWidth = 140
@@ -2422,7 +2422,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "defender_disengaged_text"
-					font = "font_text_16"
+					font = "font_text_18"
 					text = "ARMY_IS_DISENGAGED"
 					position = { x = 20 y = 399 }
 					maxWidth = 100
@@ -2489,7 +2489,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "attacker_reserves"
-					font = "font_text_16"
+					font = "font_text_18"
 					text = "GROUND_COMBAT_RESERVES"
 					position = { x = -270 y = 399 }
 					orientation = upper_right
@@ -2513,7 +2513,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "attacker_disengaged_text"
-					font = "font_text_16"
+					font = "font_text_18"
 					text = "ARMY_IS_DISENGAGED"
 					position = { x = -120 y = 399 }
 					orientation = upper_right
@@ -3281,10 +3281,10 @@ guiTypes = {
 		# Planet Tab
 		buttonType = {
 			name = "summary_tab"
-			quadTextureSprite = "GFX_ui_tab_1_long_inactive"
+			quadTextureSprite = "GFX_tab_1_inactive"
 			position = { x = 0 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_16"
+			buttonFont = "font_text_18"
 			buttonText = "PLANET_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3295,10 +3295,10 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "summary_tab_active"
-			quadTextureSprite = "GFX_ui_tab_1_long_active"
+			quadTextureSprite = "GFX_tab_1_active"
 			position = { x = 0 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_16"
+			buttonFont = "font_text_18"
 			buttonText = "PLANET_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3310,10 +3310,10 @@ guiTypes = {
 		# Management Tab
 		buttonType = {
 			name = "management_tab"
-			quadTextureSprite = "GFX_ui_tab_2_long_inactive"
+			quadTextureSprite = "GFX_tab_2_inactive"
 			position = { x = 155 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_16"
+			buttonFont = "font_text_18"
 			buttonText = "MANAGEMENT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3324,10 +3324,10 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "management_tab_active"
-			quadTextureSprite = "GFX_ui_tab_2_long_active"
+			quadTextureSprite = "GFX_tab_2_active"
 			position = { x = 155 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_16"
+			buttonFont = "font_text_18"
 			buttonText = "MANAGEMENT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3339,10 +3339,10 @@ guiTypes = {
 		# Population Tab
 		buttonType = {
 			name = "population_tab"
-			quadTextureSprite = "GFX_ui_tab_2_long_inactive"
+			quadTextureSprite = "GFX_tab_2_inactive"
 			position = { x = 330 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_16"
+			buttonFont = "font_text_18"
 			buttonText = "POPULATION_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3353,10 +3353,10 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "population_tab_active"
-			quadTextureSprite = "GFX_ui_tab_2_long_active"
+			quadTextureSprite = "GFX_tab_2_active"
 			position = { x = 330 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_16"
+			buttonFont = "font_text_18"
 			buttonText = "POPULATION_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3368,10 +3368,10 @@ guiTypes = {
 		# Ground Combat Tab
 		buttonType = {
 			name = "armies_tab"
-			quadTextureSprite = "GFX_ui_tab_2_long_inactive"
+			quadTextureSprite = "GFX_tab_2_inactive"
 			position = { x = 505 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_16"
+			buttonFont = "font_text_18"
 			buttonText = "GROUND_COMBAT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3382,10 +3382,10 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "armies_tab_active"
-			quadTextureSprite = "GFX_ui_tab_2_long_active"
+			quadTextureSprite = "GFX_tab_2_active"
 			position = { x = 505 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_16"
+			buttonFont = "font_text_18"
 			buttonText = "GROUND_COMBAT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3397,10 +3397,10 @@ guiTypes = {
 		# Corporate Tab
 		buttonType = {
 			name = "corporate_tab"
-			quadTextureSprite = "GFX_ui_tab_2_long_inactive"
+			quadTextureSprite = "GFX_tab_2_inactive"
 			position = { x = 680 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_16"
+			buttonFont = "font_text_18"
 			buttonText = "CORPORATE_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3411,10 +3411,10 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "corporate_tab_active"
-			quadTextureSprite = "GFX_ui_tab_2_long_active"
+			quadTextureSprite = "GFX_tab_2_active"
 			position = { x = 680 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_16"
+			buttonFont = "font_text_18"
 			buttonText = "CORPORATE_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3603,7 +3603,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "building_effects"
-						font = "font_text_16"
+						font = "font_text_18"
 						text = "Building effects go here"
 						position = { x = 105 y = 36 }
 						maxWidth = 320
@@ -3762,7 +3762,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "district_effects"
-						font = "font_text_16"
+						font = "font_text_18"
 						text = "District effects go here"
 						position = { x = 105 y = 36 }
 						maxWidth = 320
@@ -3906,7 +3906,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "traits_title"
-						font = "font_text_16"
+						font = "font_text_18"
 						text = "TRAITS_LIST"
 						position = { x = 20 y = 328 }
 						maxWidth = 70
@@ -3922,7 +3922,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "ethics_title"
-						font = "font_text_16"
+						font = "font_text_18"
 						text = "ETHICS_LIST"
 						position = { x = 20 y = 360 }
 						maxWidth = 70
