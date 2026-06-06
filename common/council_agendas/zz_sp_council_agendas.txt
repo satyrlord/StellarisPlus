@@ -328,7 +328,7 @@ agenda_tr_plentiful_malice = {
 		always = yes
 	}
 	modifier = {
-		planet_jobs_slave_produces_mult = 0.05
+		planet_jobs_produces_mult = 0.05
 	}
 	finish_modifier = agenda_tr_plentiful_malice_finish
 #	effect = {

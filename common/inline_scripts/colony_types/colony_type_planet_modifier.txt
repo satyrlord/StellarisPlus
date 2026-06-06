@@ -1,6 +1,13 @@
-# This inline script is referenced by common/colony_types/00_vfb_colony_types.txt
-# $MODIFIER$ is the planet modifier to apply (e.g. planet_engineers_minerals_produces_mult)
-modifier = {
+# Colony type planet modifier inline script
+# $MODIFIER$ is the planet modifier to apply (e.g. planet_jobs_produces_mult)
+planet_modifier = {
 	$MODIFIER$ = 0.10
 }
-planet_jobs_produces_mult = 0.05
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner_or_space_owner
+		owner_or_space_owner = { has_tradition = tr_adaptability_finish }
+	}
+	modifier = { $MODIFIER$ = 0.05 }
+}

@@ -1,0 +1,10 @@
+# Compatibility override for vanilla is_individual_machine.
+# Some temporary/non-standard country contexts can evaluate this trigger
+# without a founder species, which throws runtime scope errors.
+is_individual_machine = {
+	is_gestalt = no
+	exists = founder_species
+	founder_species = {
+		is_archetype = MACHINE
+	}
+}

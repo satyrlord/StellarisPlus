@@ -26,7 +26,7 @@ col_vfb_engineer_minerals = {
 
 	inline_script = {
 		script = colony_types/colony_type_planet_modifier
-		MODIFIER = planet_engineers_minerals_produces_mult
+		MODIFIER = planet_jobs_minerals_produces_mult
 	}
 
 	weight_modifier = {

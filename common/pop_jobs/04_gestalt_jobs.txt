@@ -2348,7 +2348,7 @@ mote_harvesting_drone = {
 	possible = { can_think = yes }
 
 	resources = {
-		category = planet_sr_miners
+		category = planet_chemists
 		produces = {
 			volatile_motes = 2
 		}
@@ -2420,7 +2420,7 @@ crystal_mining_drone = {
 	possible = { can_think = yes }
 
 	resources = {
-		category = planet_sr_miners
+		category = planet_translucers
 		produces = {
 			rare_crystals = 2
 		}
@@ -2492,7 +2492,7 @@ gas_extraction_drone = {
 	possible = { can_think = yes }
 
 	resources = {
-		category = planet_sr_miners
+		category = planet_refiners
 		produces = {
 			exotic_gases = 2
 		}
@@ -3497,7 +3497,7 @@ offworld_prospector_drone = {
 	possible = { can_think = yes }
 
 	resources = {
-		category = planet_sr_miners
+		category = planet_jobs
 		upkeep = {
 			energy = @offworld_prospector_upkeep
 		}

@@ -20,6 +20,8 @@
   Processor:0 "Processor"
   Nooteau:0 "Nooteau"
   Awomsuenahki:0 "Awomsuenahki"
+  Ikussuul:0 "Ikussuul"
+  Lalaku:0 "Lalaku"
 
   # Warning cleanup: active mod keys missing English localisation
   planet_replicator:0 "Replicator"
@@ -50,3 +52,6 @@
   scfe_opinion_irritated_machine_fallen_empire:0 "Irritated Machine Fallen Empire"
   scfe_opinion_compromise_attempt:0 "Compromise Attempt"
   scfe_opinion_coords_attempt:0 "Coords Attempt"
+
+  # Modifier localisation
+  mod_r_scfe_diary_of_innovo:0 "Diary of Innovo"

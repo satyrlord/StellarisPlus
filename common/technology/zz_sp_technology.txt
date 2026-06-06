@@ -557,6 +557,7 @@ tech_aspmod_geocentric_device = {
 	area = physics
 	tier = 5
 	category = { particles }
+	icon = "gfx/interface/icons/technologies/tech_physics_4.dds"
     weight = 0
 
 	ai_weight = {

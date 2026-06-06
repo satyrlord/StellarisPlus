@@ -2682,7 +2682,7 @@ tr_plentiful_malice_4 = {
 	}
 	modifier = {
 		max_rivalries = 4
-		planet_jobs_slave_minerals_produces_mult = 0.15
+		planet_jobs_minerals_produces_mult = 0.15
 		#slave_food_output = 0.05
 	}
 	
@@ -3242,7 +3242,7 @@ tr_plentiful_robotics_finish = {
 	}
 	
 	modifier = {
-		planet_jobs_robotic_produces_mult = 0.1
+		planet_jobs_produces_mult = 0.1
 		ROBOT_species_trait_points_add = 1
 		MACHINE_species_trait_points_add = 1
 		ascension_perks_add = 1

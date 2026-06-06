@@ -506,28 +506,28 @@ modifier_plentiful_traditions_blockchain_1 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_blockchain_1.dds"
 	icon_frame = 1
 	planet_pop_assembly_mult = 0.05
-	planet_jobs_robotic_produces_mult = 0.025
+	planet_jobs_produces_mult = 0.025
 }
 
 modifier_plentiful_traditions_blockchain_2 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_blockchain_1.dds"
 	icon_frame = 1
 	planet_pop_assembly_mult = 0.1
-	planet_jobs_robotic_produces_mult = 0.05
+	planet_jobs_produces_mult = 0.05
 }
 
 modifier_plentiful_traditions_blockchain_3 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_blockchain_1.dds"
 	icon_frame = 1
 	planet_pop_assembly_mult = 0.15
-	planet_jobs_robotic_produces_mult = 0.075
+	planet_jobs_produces_mult = 0.075
 }
 
 modifier_plentiful_traditions_blockchain_4 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_blockchain_4.dds"
 	icon_frame = 1
 	planet_pop_assembly_mult = 0.2
-	planet_jobs_robotic_produces_mult = 0.1
+	planet_jobs_produces_mult = 0.1
 }
 
 modifier_plentiful_traditions_united1 = {
@@ -993,7 +993,7 @@ agenda_tr_plentiful_kleptocracy_finish = {
 }
 
 agenda_tr_plentiful_malice_finish = {
-		planet_jobs_slave_produces_mult = 0.15
+		planet_jobs_produces_mult = 0.15
 		slave_market_cost_mult = -0.5
 }
 
@@ -1249,4 +1249,9 @@ soe_reconsidered_ai_path = {
 soe_defiant_ai_research = {
 	icon = "gfx/interface/icons/modifiers/mod_job_calculator_add.dds"
 	all_technology_research_speed = 0.05
+}
+
+# Compatibility stub for integrated SCFE trigger checks.
+mod_r_scfe_diary_of_innovo = {
+	icon = "gfx/interface/icons/modifiers/mod_unity_produces_mult.dds"
 }

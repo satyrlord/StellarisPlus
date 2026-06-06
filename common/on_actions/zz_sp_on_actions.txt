@@ -5,6 +5,7 @@ on_game_start_country = {
 		eotf.190
 		eotf.250
 		soe.1
+		vfb.0
 		more_zones.1000 # payback recurring check
 		# more_zones.2000 # starlit citadel recurring check
 		more_zones.3000 # prosperous unification initializer
@@ -120,9 +121,6 @@ on_country_destroyed = {
 # === merged from vfb_on_actions.txt ===
 on_game_start = {
 	events = {
-		# vfb_on_actions.txt
-		vfb.0
-
 		# 99_orphan_matrix_on_actions.txt - Set-up
 		orphan_matrix_events.0
 

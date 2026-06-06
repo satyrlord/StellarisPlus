@@ -216,7 +216,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "planet_name"
-			font = "font_header_20"
+			font = "malgun_goth_24"
 			text = ""
 			position = { x = 77 y = -8 }
 			maxWidth = 263
@@ -357,7 +357,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "terraforming_text"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = "TERRAFORMING_TEXT"
 				position = { x = -90 y = 2 }
 				orientation = center_up
@@ -385,7 +385,7 @@ guiTypes = {
 				name = "colonize_button"
 				position = { x = 0 y = 0 }
 				spriteType = "GFX_button_hex_151_43"
-				buttonFont = "font_text_14"
+				buttonFont = "cg_16b"
 				buttonText = "PLANETVIEW_COLONIZE"
 				oversound = "mouse_over"
 				shortcut = "I"
@@ -414,7 +414,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "colony_type_text"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = "Happy World"
 				position = { x = 35 y = 0 }
 				maxWidth = 235
@@ -500,7 +500,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "devastation_text"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = "Devastation: 10%"
 				position = { x = 0 y = 0 }
 				maxWidth = 160
@@ -575,7 +575,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "colonizing_planet_label"
-					font = "font_text_20"
+					font = "cg_16b"
 					text = "COLONIZING_PLANET"
 					position = { x = 0 y = 6 }
 					maxWidth = 222
@@ -612,7 +612,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "planet_pops_amount"
-					font = "font_text_14"
+					font = "cg_16b"
 					text = "12"
 					position = { x = 25 y = 0 }
 					maxWidth = 62
@@ -644,7 +644,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "planet_stability_amount"
-					font = "font_text_14"
+					font = "cg_16b"
 					text = "100"
 					position = { x = 25 y = 0 }
 					maxWidth = 62
@@ -681,7 +681,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_crime_amount"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "100"
 						position = { x = 25 y = 0 }
 						maxWidth = 62
@@ -712,7 +712,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_housing_amount"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "10"
 						position = { x = 25 y = 0 }
 						maxWidth = 62
@@ -752,7 +752,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_amenities_amount"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "10"
 						position = { x = 25 y = 0 }
 						maxWidth = 62
@@ -783,7 +783,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_jobs_amount"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "2"
 						position = { x = 25 y = 0 }
 						maxWidth = 62
@@ -814,7 +814,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_unemployed_amount"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "0"
 						position = { x = 32 y = 0 }
 						maxWidth = 40
@@ -880,7 +880,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "planet_text"
-							font = "font_header_20"
+							font = "malgun_goth_24"
 							text = "SHIPSETS_DESCRIPTION_LABEL"
 							position = { x = 30 y = 0 }
 							maxWidth = 300
@@ -925,7 +925,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planetary_resources_title"
-						font = "font_header_20"
+						font = "malgun_goth_24"
 						text = "RESOURCES"
 						position = { x = 15 y = 10 }
 						maxWidth = 270
@@ -936,7 +936,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planetary_resources_amount"
-						font = "font_header_20"
+						font = "malgun_goth_24"
 						text = "10"
 						position = { x = 20 y = 40 }
 						maxWidth = 298
@@ -979,7 +979,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "districts_text"
-							font = "font_header_20"
+							font = "malgun_goth_24"
 							text = "DISTRICTS_AND_BUILDINGS_TITLE"
 							position = { x = 30 y = 0 }
 							maxWidth = 300
@@ -1017,7 +1017,7 @@ guiTypes = {
 						origo = upper_right
 						instantTextBoxType = {
 							name = "planet_districts_amount"
-							font = "font_text_18"
+							font = "cg_16b"
 							text = "10"
 							position = { x = 0 y = 0 }
 							maxWidth = 50
@@ -1102,7 +1102,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_desc"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = ""
 						position = { x = 10 y = 10 }
 						maxWidth = 276
@@ -1141,7 +1141,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_primitives"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = ""
 						position = { x = 10 y = 10 }
 						maxWidth = 275
@@ -1194,7 +1194,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "planetary_production_output_title"
-							font = "font_text_14"
+							font = "cg_16b"
 							text = "PLANETARY_PRODUCTION"
 							position = { x = 10 y = 0 }
 							maxWidth = 270
@@ -1207,7 +1207,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planetary_production_output_amount"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "" # produced resources set in code
 						position = { x = 10 y = 36 }
 						maxWidth = 280
@@ -1238,7 +1238,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "planetary_consumption_output_title"
-							font = "font_text_14"
+							font = "cg_16b"
 							text = "PLANETARY_DEFICIT"
 							position = { x = 10 y = 0 }
 							maxWidth = 270
@@ -1251,7 +1251,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planetary_consumption_output_amount"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "" # consumed resources set in code
 						position = { x = 10 y = 136 }
 						maxWidth = 280
@@ -1299,7 +1299,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "header"
-						font = "font_header_20"
+						font = "malgun_goth_24"
 						text = "PLANET_SUMMARY_TITLE"
 						position = { x = 10 y = 5 }
 						maxWidth = 180
@@ -1311,7 +1311,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "management_planet_class_text"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Type World"
 						position = { x = 10 y = 36 }
 						maxWidth = 190
@@ -1323,7 +1323,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "management_habitability"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Habitability: XXX%"
 						position = { x = 10 y = 54 }
 						maxWidth = 190
@@ -1334,7 +1334,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "colonization_date"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Colonized: 01.01.22XX"
 						position = { x = 10 y = 72 }
 						maxWidth = 190
@@ -1345,7 +1345,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_size"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Size: XX"
 						position = { x = 10 y = 90 }
 						maxWidth = 190
@@ -1362,7 +1362,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "terraform_label"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "TERRAFORMING_IN_PROGRESS"
 						position = { x = 170 y = 80 }
 						maxWidth = 136
@@ -1377,7 +1377,7 @@ guiTypes = {
 						position = { x = -4 y = -54 }
 						orientation = lower_left
 						spriteType = "GFX_standard_button_142_34_button"
-						buttonFont = "font_text_14"
+						buttonFont = "cg_16b"
 						buttonText = "DECISIONS_TITLE"
 						oversound = "mouse_over"
 						navLeft = "change"
@@ -1389,7 +1389,7 @@ guiTypes = {
 						position = { x = -162 y = -54 }
 						orientation = lower_right
 						spriteType = "GFX_standard_button_142_34_button"
-						buttonFont = "font_text_14"
+						buttonFont = "cg_16b"
 						buttonText = "TERRAFORM_TITLE"
 						oversound = "mouse_over"
 						navLeft = "change"
@@ -1398,40 +1398,36 @@ guiTypes = {
 				}
 				containerWindowType = {
 					name = "designation_button_container"
-					position = { x = 0 y = 186 }
-					size = { width = 310 height = 40 }
+					position = { x = 5 y = 204 }
 					buttonType = {
 						position = { x = 0 y = 0 }
 						name = "designation_button"
 						quadTextureSprite = "GFX_button_dark_job"
-						size = { x = 310 y = 40 }
+						size = { x = 302 y = 32 }
 					}
 					iconType = {
 						name = "designation_icon"
 						quadTextureSprite = "GFX_colony_type"
-						position = { x = 20 y = 0 }
-						orientation = center_left
-						centerPosition = yes
+						position = { x = 5 y = 1 }
 						alwaysTransparent = yes
 					}
 					instantTextBoxType = {
 						name = "designation_name"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "designation type"
-						position = { x = 40 y = 0 }
-						maxWidth = 230
-						maxHeight = 40
+						position = { x = 37 y = 5 }
+						maxWidth = 130
+						maxHeight = 20
 						fixedSize = yes
 						format = left
+						orientation = lower_left
 						vertical_alignment = center
 						alwaysTransparent = yes
 					}
 					buttonType = {
 						name = "automated_development_button"
-						quadTextureSprite = "GFX_button_small"
-						position = { x = -20 y = 0 }
-						orientation = center_right
-						centerPosition = yes
+						position = { x = 273 y = 4 }
+						quadTextureSprite = "GFX_button_automation_small"
 					}
 				}
 				containerWindowType = {
@@ -1452,7 +1448,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "header"
-							font = "font_text_18"
+							font = "cg_16b"
 							text = "QUEUE"
 							position = { x = 10 y = 0 }
 							maxWidth = 280
@@ -1533,7 +1529,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "text"
-						font = "font_header_20"
+						font = "malgun_goth_24"
 						text = "HELP_TUTORIAL_PLANET_MANAGEMENT_TITLE"
 						position = { x = 30 y = 0 }
 						maxWidth = 300
@@ -1564,7 +1560,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "header"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "DEPOSITS_TITLE"
 						position = { x = 10 y = 0 }
 						maxWidth = 260
@@ -1592,7 +1588,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "blocker_deposit_num"
-							font = "font_text_14"
+							font = "cg_16b"
 							text = "x5"
 							position = { x = 25 y = 0 }
 							maxWidth = 35
@@ -1621,7 +1617,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "blocker_deposit_num"
-							font = "font_text_14"
+							font = "cg_16b"
 							text = "x5"
 							position = { x = 15 y = 0 }
 							maxWidth = 35
@@ -1645,7 +1641,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "deposits_no_intel"
-					font = "font_text_18"
+					font = "cg_16b"
 					text = "DEPOSITS_NO_INTEL"
 					position = { x = -180 y = 80 }
 					orientation = center_up
@@ -1676,7 +1672,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "header"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "CURRENT_POPULATION"
 						position = { x = 10 y = 0 }
 						maxWidth = 280
@@ -1736,7 +1732,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "header"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "DEMOGRAPHICS_SUMMARY_TITLE"
 						position = { x = 10 y = 0 }
 						maxWidth = 230
@@ -1755,7 +1751,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "total_growth"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "+135"
 						position = { x = -50 y = 0 }
 						orientation = upper_right
@@ -1779,7 +1775,7 @@ guiTypes = {
 							}
 							instantTextBoxType = {
 								name = "header"
-								font = "font_text_14"
+								font = "cg_16b"
 								text = "GROWTH"
 								position = { x = 0 y = 0 }
 								maxWidth = 95
@@ -1798,7 +1794,7 @@ guiTypes = {
 							}
 							instantTextBoxType = {
 								name = "value"
-								font = "font_text_14"
+								font = "cg_16b"
 								text = "+135"
 								position = { x = 40 y = 31 }
 								maxWidth = 55
@@ -1821,7 +1817,7 @@ guiTypes = {
 							}
 							instantTextBoxType = {
 								name = "header"
-								font = "font_text_14"
+								font = "cg_16b"
 								text = "PLANET_MIGRATION_TITLE"
 								position = { x = 0 y = 0 }
 								maxWidth = 95
@@ -1840,7 +1836,7 @@ guiTypes = {
 							}
 							instantTextBoxType = {
 								name = "value"
-								font = "font_text_14"
+								font = "cg_16b"
 								text = "+135"
 								position = { x = 40 y = 31 }
 								maxWidth = 55
@@ -1863,7 +1859,7 @@ guiTypes = {
 							}
 							instantTextBoxType = {
 								name = "header"
-								font = "font_text_14"
+								font = "cg_16b"
 								text = "GROWTH_CAT_ASSEMBLY"
 								position = { x = 0 y = 0 }
 								maxWidth = 95
@@ -1882,7 +1878,7 @@ guiTypes = {
 							}
 							instantTextBoxType = {
 								name = "value"
-								font = "font_text_14"
+								font = "cg_16b"
 								text = "+135"
 								position = { x = 40 y = 31 }
 								maxWidth = 55
@@ -1942,7 +1938,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "sector_name"
-						font = "font_header_20"
+						font = "malgun_goth_24"
 						text = "SECTOR NAME"
 						position = { x = 10 y = 0 }
 						maxWidth = 190
@@ -1955,7 +1951,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "sector_type"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "SECTOR TYPE"
 						position = { x = 10 y = 32 }
 						maxWidth = 190
@@ -2025,7 +2021,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "ascension_tier"
-						font = "font_header_20"
+						font = "malgun_goth_24"
 						text = ""
 						position = { x = -110 y = 8 }
 						orientation = center_up
@@ -2038,7 +2034,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "ascension_text"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "PLANET_ASCENSION_TEXT_NONE"
 						position = { x = 15 y = 60 }
 						maxWidth = 280
@@ -2088,7 +2084,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "title_text"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "JOBS_TITLE"
 					position = { x = 30 y = 0 }
 					maxWidth = 320
@@ -2100,7 +2096,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "job_desc_text"
-					font = "font_text_14"
+					font = "cg_16b"
 					text = "FAVORITE_JOB_DESC"
 					position = { x = 320 y = 0 }
 					maxWidth = 200
@@ -2118,7 +2114,7 @@ guiTypes = {
 				size = { x = 140 y = 32 }
 				spriteType = "GFX_button_dark_job"
 				buttonText = "POP_ACTION_RESETTLE"
-				buttonFont = "font_text_14"
+				buttonFont = "cg_16b"
 				oversound = "mouse_over"
 				borderSize = { x = 2 y = 0 }
 				multiline = yes
@@ -2131,7 +2127,7 @@ guiTypes = {
 				size = { x = 205 y = 32 }
 				quadTextureSprite = "GFX_button_light"
 				buttonText = "Restore Jobs ( 10 )"
-				buttonFont = "font_text_14"
+				buttonFont = "cg_16b"
 				borderSize = { x = 2 y = 0 }
 				multiline = yes
 				shortcut = "J"
@@ -2195,7 +2191,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "header"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "STRATA_SUMMARY_TITLE"
 						position = { x = 10 y = 0 }
 						maxWidth = 290
@@ -2215,7 +2211,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "job_types_amount"
-							font = "font_text_18"
+							font = "cg_16b"
 							text = "0 Job Types"
 							position = { x = 10 y = 0 }
 							maxWidth = 118
@@ -2304,7 +2300,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "title_text"
-						font = "font_header_20"
+						font = "malgun_goth_24"
 						text = "POP_FACTION_NATIONALIST_MEMBERS_GROUND_COMBAT"
 						position = { x = 30 y = 0 }
 						maxWidth = 300
@@ -2317,7 +2313,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "combat_width"
-					font = "font_text_18"
+					font = "cg_16b"
 					text = "Combat Width: 16"
 					position = { x = -220 y = 59 }
 					orientation = upper_right
@@ -2329,7 +2325,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "frontline"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "GROUND_COMBAT_FRONTLINE"
 					position = { x = -150 y = 59 }
 					orientation = center_up
@@ -2361,7 +2357,7 @@ guiTypes = {
 				# Defender
 				instantTextBoxType = {
 					name = "defender_power"
-					font = "font_text_18"
+					font = "cg_16b"
 					text = "Defender Power: 15"
 					position = { x = 20 y = 104 }
 					maxWidth = 212
@@ -2400,7 +2396,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "defender_reserves"
-					font = "font_text_18"
+					font = "cg_16b"
 					text = "GROUND_COMBAT_RESERVES"
 					position = { x = 130 y = 399 }
 					maxWidth = 140
@@ -2422,7 +2418,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "defender_disengaged_text"
-					font = "font_text_18"
+					font = "cg_16b"
 					text = "ARMY_IS_DISENGAGED"
 					position = { x = 20 y = 399 }
 					maxWidth = 100
@@ -2445,7 +2441,7 @@ guiTypes = {
 				# Attacker
 				instantTextBoxType = {
 					name = "attacker_power"
-					font = "font_text_18"
+					font = "cg_16b"
 					text = "Attacker Power: 15"
 					position = { x = -232 y = 104 }
 					orientation = upper_right
@@ -2489,7 +2485,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "attacker_reserves"
-					font = "font_text_18"
+					font = "cg_16b"
 					text = "GROUND_COMBAT_RESERVES"
 					position = { x = -270 y = 399 }
 					orientation = upper_right
@@ -2513,7 +2509,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "attacker_disengaged_text"
-					font = "font_text_18"
+					font = "cg_16b"
 					text = "ARMY_IS_DISENGAGED"
 					position = { x = -120 y = 399 }
 					orientation = upper_right
@@ -2539,7 +2535,7 @@ guiTypes = {
 					name = "retreat_button"
 					position = { x = -112 y = -80 }
 					spriteType = "GFX_standard_button_200_34_button"
-					buttonFont = "font_text_20"
+					buttonFont = "cg_16b"
 					text = "PLANET_VIEW_RETREAT"
 					orientation = center_down
 					oversound = mouse_over
@@ -2582,7 +2578,7 @@ guiTypes = {
 							}
 							instantTextBoxType = {
 								name = "header"
-								font = "font_text_18"
+								font = "cg_16b"
 								text = "ORBITING_ARMIES"
 								position = { x = 10 y = 0 }
 								maxWidth = 280
@@ -2651,7 +2647,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "title_text"
-						font = "font_header_20"
+						font = "malgun_goth_24"
 						text = "ARMIES"
 						position = { x = 30 y = 0 }
 						maxWidth = 300
@@ -2684,7 +2680,7 @@ guiTypes = {
 					# Armies Strength Garrison & Assault
 					instantTextBoxType = {
 						name = "garrison_power"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "15"
 						position = { x = 10 y = 0 }
 						maxWidth = 170
@@ -2696,7 +2692,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "garrison_assault_power"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "15"
 						position = { x = 10 y = 30 }
 						maxWidth = 170
@@ -2709,7 +2705,7 @@ guiTypes = {
 					# Army checkboxes
 					instantTextBoxType = {
 						name = "deploy_in_orbit_text"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "DEPLOY_IN_ORBIT"
 						position = { x = -320 y = 0 }
 						orientation = upper_right
@@ -2729,7 +2725,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "include_in_army_builder_text"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "ARMY_BUILDER_CHECKBOX"
 						position = { x = -320 y = 30 }
 						orientation = upper_right
@@ -2769,7 +2765,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "armies_count"
-						font = "font_header_20"
+						font = "malgun_goth_24"
 						text = "PLANET_VIEW_ARMIES_COUNT"
 						position = { x = 10 y = 0 }
 						maxWidth = 250
@@ -2784,10 +2780,10 @@ guiTypes = {
 						name = "embark_all_button"
 						position = { x = 362 y = -8 }
 						spriteType = "GFX_standard_button_116_34"
-						buttonFont = "font_text_14"
+						buttonFont = "cg_16b"
 						text = "PLANET_VIEW_EMBARK_ALL"
 						pdx_tooltip = "PLANET_VIEW_EMBARK_INFO"
-						font = "font_text_14"
+						font = "cg_16b"
 						oversound = "mouse_over"
 						navLeft = "change"
 					}
@@ -2802,7 +2798,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "no_armies"
-							font = "font_header_20"
+							font = "malgun_goth_24"
 							text = "NO_ARMIES"
 							position = { x = 0 y = 8 }
 							maxWidth = 420
@@ -2843,7 +2839,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "recruit_header"
-							font = "font_text_18"
+							font = "cg_16b"
 							text = "RECRUITMENT"
 							position = { x = 10 y = 0 }
 							maxWidth = 300
@@ -2895,7 +2891,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "orbiting_title"
-							font = "font_text_18"
+							font = "cg_16b"
 							text = "ORBITING_ARMIES"
 							position = { x = 10 y = 0 }
 							maxWidth = 300
@@ -2963,7 +2959,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "title_text"
-							font = "font_text_18"
+							font = "cg_16b"
 							text = "GENERAL_TITLE"
 							position = { x = 10 y = 0 }
 							maxWidth = 280
@@ -3002,7 +2998,7 @@ guiTypes = {
 							}
 							instantTextBoxType = {
 								name = "header"
-								font = "font_text_18"
+								font = "cg_16b"
 								text = "QUEUE"
 								position = { x = 10 y = 0 }
 								maxWidth = 280
@@ -3081,7 +3077,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "title_text"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "CORPORATE_TAB"
 					position = { x = 30 y = 0 }
 					maxWidth = 300
@@ -3151,7 +3147,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "holdings_planet_owner_production_output_title"
-							font = "font_text_14"
+							font = "cg_16b"
 							text = "PLANETARY_PRODUCTION"
 							position = { x = 10 y = 0 }
 							maxWidth = 280
@@ -3164,7 +3160,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "holdings_planet_owner_production_output_amount"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "" # produced resources set in code
 						position = { x = 10 y = 36 }
 						maxWidth = 290
@@ -3192,7 +3188,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "holdings_planet_owner_consumption_output_title"
-							font = "font_text_14"
+							font = "cg_16b"
 							text = "PLANETARY_DEFICIT"
 							position = { x = 10 y = 0 }
 							maxWidth = 270
@@ -3205,7 +3201,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "holdings_planet_owner_consumption_output_amount"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "" # consumed resources set in code
 						position = { x = 12 y = 144 }
 						maxWidth = 290
@@ -3232,7 +3228,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "header"
-							font = "font_text_18"
+							font = "cg_16b"
 							text = "QUEUE"
 							position = { x = 10 y = 0 }
 							maxWidth = 280
@@ -3284,7 +3280,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tab_1_inactive"
 			position = { x = 0 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "cg_16b"
 			buttonText = "PLANET_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3298,7 +3294,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tab_1_active"
 			position = { x = 0 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "cg_16b"
 			buttonText = "PLANET_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3313,7 +3309,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tab_2_inactive"
 			position = { x = 155 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "cg_16b"
 			buttonText = "MANAGEMENT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3327,7 +3323,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tab_2_active"
 			position = { x = 155 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "cg_16b"
 			buttonText = "MANAGEMENT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3342,7 +3338,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tab_2_inactive"
 			position = { x = 330 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "cg_16b"
 			buttonText = "POPULATION_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3356,7 +3352,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tab_2_active"
 			position = { x = 330 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "cg_16b"
 			buttonText = "POPULATION_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3371,7 +3367,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tab_2_inactive"
 			position = { x = 505 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "cg_16b"
 			buttonText = "GROUND_COMBAT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3385,7 +3381,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tab_2_active"
 			position = { x = 505 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "cg_16b"
 			buttonText = "GROUND_COMBAT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3400,7 +3396,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tab_2_inactive"
 			position = { x = 680 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "cg_16b"
 			buttonText = "CORPORATE_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3414,7 +3410,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_tab_2_active"
 			position = { x = 680 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "cg_16b"
 			buttonText = "CORPORATE_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3476,7 +3472,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "BUILDING_DETAILS_TITLE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -3491,7 +3487,7 @@ guiTypes = {
 					spriteType = "GFX_button_dark_job"
 					position = { x = 20 y = 53 }
 					size = { x = 200 y = 32 }
-					buttonFont = "font_text_14"
+					buttonFont = "cg_16b"
 					buttonText = "REPLACE"
 					oversound = "mouse_over"
 					navLeft = "change"
@@ -3502,7 +3498,7 @@ guiTypes = {
 					spriteType = "GFX_button_dark_job"
 					position = { x = 230 y = 53 }
 					size = { x = 200 y = 32 }
-					buttonFont = "font_text_14"
+					buttonFont = "cg_16b"
 					buttonText = "DESTROY"
 					oversound = "mouse_over"
 					navLeft = "change"
@@ -3513,7 +3509,7 @@ guiTypes = {
 					spriteType = "GFX_button_dark_job"
 					position = { x = 20 y = 95 }
 					size = { x = 200 y = 32 }
-					buttonFont = "font_text_14"
+					buttonFont = "cg_16b"
 					buttonText = "DISABLE"
 					oversound = "mouse_over"
 					navLeft = "change"
@@ -3523,7 +3519,7 @@ guiTypes = {
 					spriteType = "GFX_button_dark_job"
 					position = { x = 230 y = 95 }
 					size = { x = 200 y = 32 }
-					buttonFont = "font_text_14"
+					buttonFont = "cg_16b"
 					buttonText = "REPAIR"
 					oversound = "mouse_over"
 					navLeft = "change"
@@ -3591,7 +3587,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "building_name"
-							font = "font_text_20"
+							font = "cg_16b"
 							text = "Building Name"
 							position = { x = 0 y = 1 }
 							maxWidth = @[ sidebar_width - 20 ]
@@ -3603,7 +3599,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "building_effects"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "Building effects go here"
 						position = { x = 105 y = 36 }
 						maxWidth = 320
@@ -3618,7 +3614,7 @@ guiTypes = {
 					position = { x = 0 y = 280 }
 					instantTextBoxType = {
 						name = "upgrades_to_header"
-						font = "font_header_20"
+						font = "malgun_goth_24"
 						text = "UPGRADES_TO"
 						position = { x = 10 y = 0 }
 						maxWidth = @[ sidebar_width - 20 ]
@@ -3642,7 +3638,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "DISTRICT_DETAILS_TITLE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -3657,7 +3653,7 @@ guiTypes = {
 					spriteType = "GFX_button_dark_job"
 					position = { x = 20 y = 53 }
 					size = { x = 200 y = 32 }
-					buttonFont = "font_text_14"
+					buttonFont = "cg_16b"
 					buttonText = "BUILD"
 					oversound = "mouse_over"
 					navLeft = "change"
@@ -3669,7 +3665,7 @@ guiTypes = {
 					spriteType = "GFX_button_dark_job"
 					position = { x = 230 y = 53 }
 					size = { x = 200 y = 32 }
-					buttonFont = "font_text_14"
+					buttonFont = "cg_16b"
 					buttonText = "REPLACE"
 					oversound = "mouse_over"
 					navLeft = "change"
@@ -3680,7 +3676,7 @@ guiTypes = {
 					spriteType = "GFX_button_dark_job"
 					position = { x = 20 y = 95 }
 					size = { x = 200 y = 32 }
-					buttonFont = "font_text_14"
+					buttonFont = "cg_16b"
 					buttonText = "DESTROY"
 					oversound = "mouse_over"
 					navLeft = "change"
@@ -3691,7 +3687,7 @@ guiTypes = {
 					spriteType = "GFX_button_dark_job"
 					position = { x = 230 y = 95 }
 					size = { x = 200 y = 32 }
-					buttonFont = "font_text_14"
+					buttonFont = "cg_16b"
 					buttonText = "CLEAR_BLOCKER"
 					oversound = "mouse_over"
 					navLeft = "change"
@@ -3727,7 +3723,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "district_name"
-							font = "font_text_20"
+							font = "cg_16b"
 							text = "District Name"
 							position = { x = 0 y = 1 }
 							maxWidth = @[ sidebar_width - 20 ]
@@ -3762,7 +3758,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "district_effects"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "District effects go here"
 						position = { x = 105 y = 36 }
 						maxWidth = 320
@@ -3794,7 +3790,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "POP_GROUP_DETAILS_TITLE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -3856,7 +3852,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "pop_count"
-							font = "font_text_20"
+							font = "cg_16b"
 							text = "9999"
 							position = { x = -98 y = -30 }
 							orientation = lower_right
@@ -3894,7 +3890,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "species"
-						font = "font_text_20"
+						font = "cg_16b"
 						text = "Species: Hooman"
 						text_color_code = "H"
 						position = { x = 10 y = 275 }
@@ -3906,7 +3902,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "traits_title"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "TRAITS_LIST"
 						position = { x = 20 y = 328 }
 						maxWidth = 70
@@ -3922,7 +3918,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "ethics_title"
-						font = "font_text_18"
+						font = "cg_16b"
 						text = "ETHICS_LIST"
 						position = { x = 20 y = 360 }
 						maxWidth = 70
@@ -3938,7 +3934,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "habitability"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Habitability: 12%"
 						position = { x = 210 y = 360 }
 						maxWidth = 200
@@ -3968,7 +3964,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "species_rights"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "species rights go here"
 						position = { x = 20 y = 656 }
 						maxWidth = 395
@@ -3989,7 +3985,7 @@ guiTypes = {
 					buttonType = {
 						name = "view_species_button"
 						spriteType = "GFX_button_150_24"
-						buttonFont = "font_text_14"
+						buttonFont = "cg_16b"
 						buttonText = "VIEW_SPECIES"
 						position = { x = 33 y = -48 }
 						orientation = lower_left
@@ -4000,7 +3996,7 @@ guiTypes = {
 					buttonType = {
 						name = "species_rights_or_policy_button"
 						spriteType = "GFX_button_150_24"
-						buttonFont = "font_text_14"
+						buttonFont = "cg_16b"
 						buttonText = "SET_RIGHTS"
 						position = { x = 223 y = -48 }
 						orientation = lower_left
@@ -4035,7 +4031,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "job_type"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Job: Ice Cream Truck Driver"
 						position = { x = 10 y = 0 }
 						maxWidth = 390
@@ -4045,7 +4041,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "pop_category"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Strata: Prole"
 						position = { x = 10 y = 20 }
 						maxWidth = 390
@@ -4055,7 +4051,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "pop_faction"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Faction: Peaceful Progress Network"
 						position = { x = 10 y = 40 }
 						maxWidth = 390
@@ -4065,7 +4061,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "happiness"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Happiness: 50%"
 						position = { x = 10 y = 60 }
 						maxWidth = 390
@@ -4075,7 +4071,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "political_power"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Political Power: 0.5"
 						position = { x = 10 y = 80 }
 						maxWidth = 390
@@ -4085,7 +4081,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "crime"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Crime: 1.7"
 						position = { x = 10 y = 100 }
 						maxWidth = 390
@@ -4095,7 +4091,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "empire_sprawl"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Empire Sprawl: 1"
 						position = { x = 10 y = 120 }
 						maxWidth = 390
@@ -4105,7 +4101,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "housing_needs"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Housing Needs: 2"
 						position = { x = 10 y = 140 }
 						maxWidth = 390
@@ -4115,7 +4111,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "amenities_usage"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "Amenities Usage: 2"
 						position = { x = 10 y = 160 }
 						maxWidth = 390
@@ -4125,7 +4121,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "production"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "12 minerals"
 						position = { x = 10 y = 180 }
 						maxWidth = 390
@@ -4136,7 +4132,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "upkeep"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "5 energy"
 						position = { x = 10 y = 200 }
 						maxWidth = 390
@@ -4146,7 +4142,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "overlord_production"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "12 minerals"
 						position = { x = 10 y = 220 }
 						maxWidth = 390
@@ -4156,7 +4152,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "overlord_upkeep"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "5 energy"
 						position = { x = 10 y = 240 }
 						maxWidth = 390
@@ -4171,7 +4167,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "TERRAFORM_TITLE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -4242,7 +4238,7 @@ guiTypes = {
 						}
 						instantTextBoxType = {
 							name = "planet_class_name"
-							font = "font_text_14"
+							font = "cg_16b"
 							text = "Continental World"
 							position = { x = 0 y = 3 }
 							maxWidth = @[ sidebar_width - 20 ]
@@ -4254,7 +4250,7 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "terraforming_time"
-						font = "font_text_14"
+						font = "cg_16b"
 						text = "500 energy credits"
 						position = { x = 0 y = 65 }
 						maxWidth = @[ sidebar_width - 20 ]
@@ -4268,9 +4264,9 @@ guiTypes = {
 						quadTextureSprite = "GFX_standard_button_116_34"
 						position = { x = -140 y = 25 }
 						orientation = upper_right
-						buttonFont = "font_text_14"
+						buttonFont = "cg_16b"
 						text = "CANCEL"
-						font = "font_text_14"
+						font = "cg_16b"
 						clicksound = "back_click"
 					}
 				}
@@ -4280,7 +4276,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "AUTOMATION_SETTINGS_TITLE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -4313,7 +4309,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "DECISIONS_TITLE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -4347,7 +4343,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "DECISIONS_TITLE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -4381,7 +4377,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "DESIGNATIONS_TITLE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -4415,7 +4411,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "CONSTRUCTION_TITLE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -4449,7 +4445,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "DISTRICT_CONSTRUCTION_TITLE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -4483,7 +4479,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "zone_construction_title"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -4518,7 +4514,7 @@ guiTypes = {
 				size = { width = @sidebar_width height = 100% }
 				instantTextBoxType = {
 					name = "header"
-					font = "font_header_20"
+					font = "malgun_goth_24"
 					text = "QUEUE"
 					position = { x = 10 y = 10 }
 					maxWidth = @[ sidebar_width - 20 ]
@@ -4589,7 +4585,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "name"
-			font = "font_text_14"
+			font = "cg_16b"
 			text = "District Name"
 			position = { x = @district_card_title_x y = @district_card_title_y }
 			maxWidth = 190
@@ -4602,7 +4598,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "triggered_name"
-			font = "font_text_14"
+			font = "cg_16b"
 			text = "Triggered Name"
 			position = { x = @district_card_title_x y = @district_card_triggered_name_y }
 			maxWidth = 190
@@ -4619,7 +4615,7 @@ guiTypes = {
 			position = { x = @district_card_build_button_x y = -6 }
 			orientation = upper_right
 			spriteType = "GFX_button_animated_75_24"
-			buttonFont = "font_text_14"
+			buttonFont = "cg_16b"
 			buttonText = "BUILD_DISTRICT_BUTTON"
 			borderSize = { x = 8 y = 0 }
 			oversound = "mouse_over"
@@ -4653,7 +4649,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "not_surveyed"
-			font = "font_header_20"
+			font = "malgun_goth_24"
 			text = "UNKNOWN_SHORT"
 			position = { x = 8 y = 135 }
 			maxWidth = 79
@@ -4691,7 +4687,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "num_districts_text"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = "10"
 				position = { x = 0 y = 0 }
 				maxWidth = 46
@@ -4751,7 +4747,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "zone_available"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = "zone_available"
 				position = { x = 32 y = -8 }
 				maxWidth = 125
@@ -4763,7 +4759,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "zone_unavailable"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = ""
 				position = { x = 0 y = 0 }
 				maxWidth = 165
@@ -4799,7 +4795,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "name"
-			font = "font_text_14"
+			font = "cg_16b"
 			text = "District Name"
 			position = { x = @district_card_title_x y = @district_card_title_y }
 			maxWidth = 230
@@ -4812,7 +4808,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "triggered_name"
-			font = "font_text_14"
+			font = "cg_16b"
 			text = "Triggered Name"
 			position = { x = @district_card_title_x y = @district_card_triggered_name_y }
 			maxWidth = 230
@@ -4829,7 +4825,7 @@ guiTypes = {
 			position = { x = @district_card_build_button_x y = -6 }
 			orientation = upper_right
 			spriteType = "GFX_button_animated_75_24"
-			buttonFont = "font_text_14"
+			buttonFont = "cg_16b"
 			buttonText = "BUILD_DISTRICT_BUTTON"
 			borderSize = { x = 8 y = 0 }
 			oversound = "mouse_over"
@@ -4863,7 +4859,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "not_surveyed"
-			font = "font_header_20"
+			font = "malgun_goth_24"
 			text = "UNKNOWN_SHORT"
 			position = { x = 8 y = 135 }
 			maxWidth = 79
@@ -4901,7 +4897,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "num_districts_text"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = "10"
 				position = { x = 0 y = 0 }
 				maxWidth = 46
@@ -4964,7 +4960,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "zone_available"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = "zone_available"
 				position = { x = 40 y = 5 }
 				maxWidth = 119
@@ -4976,7 +4972,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "zone_unavailable"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = ""
 				position = { x = 5 y = 5 }
 				maxWidth = 154
@@ -5023,7 +5019,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "name"
-			font = "font_text_14"
+			font = "cg_16b"
 			text = "District Name"
 			position = { x = @district_card_title_x y = @district_card_title_y }
 			maxWidth = 230
@@ -5036,7 +5032,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "triggered_name"
-			font = "font_text_14"
+			font = "cg_16b"
 			text = "Triggered Name"
 			position = { x = @district_card_title_x y = @district_card_triggered_name_y }
 			maxWidth = 230
@@ -5053,7 +5049,7 @@ guiTypes = {
 			position = { x = @district_card_build_button_x y = -6 }
 			orientation = upper_right
 			spriteType = "GFX_button_animated_75_24"
-			buttonFont = "font_text_14"
+			buttonFont = "cg_16b"
 			buttonText = "BUILD_DISTRICT_BUTTON"
 			borderSize = { x = 8 y = 0 }
 			oversound = "mouse_over"
@@ -5087,7 +5083,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "not_surveyed"
-			font = "font_header_20"
+			font = "malgun_goth_24"
 			text = "UNKNOWN_SHORT"
 			position = { x = 8 y = 135 }
 			maxWidth = 79
@@ -5125,7 +5121,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "num_districts_text"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = "10"
 				position = { x = 0 y = 0 }
 				maxWidth = 46
@@ -5187,7 +5183,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "zone_available"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = "zone_available"
 				position = { x = 40 y = 5 }
 				maxWidth = 119
@@ -5199,7 +5195,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "zone_unavailable"
-				font = "font_text_14"
+				font = "cg_16b"
 				text = ""
 				position = { x = 5 y = 5 }
 				maxWidth = 154
@@ -5250,7 +5246,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "zone_title"
-			font = "font_text_14"
+			font = "cg_16b"
 			text = "zone_early_industry"
 			position = { x = 34 y = 0 }
 			maxWidth = 100
@@ -5286,7 +5282,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "zone_available"
-			font = "font_text_14"
+			font = "cg_16b"
 			text = "zone_available"
 			position = { x = 50 y = 0 }
 			maxWidth = 220
@@ -5298,7 +5294,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "zone_unavailable"
-			font = "font_text_14"
+			font = "cg_16b"
 			text = ""
 			position = { x = 50 y = 0 }
 			maxWidth = 220
