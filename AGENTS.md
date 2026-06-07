@@ -21,6 +21,22 @@
 - Budget: 50 tool calls maximum.
 - When a task can be split into independent investigations, use sub-agents in parallel.
 
+## Codebase Exploration (Graphify)
+
+`graphify-out/graph.json` contains a knowledge graph of the entire mod. **Always use Graphify**
+for codebase questions instead of the Explore subagent or manual grep searches.
+
+- `graphify query "<question>"` — understand how components relate, trace data flow, find
+  what connects two systems. Answers are scoped subgraphs, faster than reading files.
+- `graphify path "A" "B"` — shortest path between two concepts (e.g. `graphify path
+  "zz_sp_traditions" "zz_sp_ascension_perks"`).
+- `graphify explain "<concept>"` — plain-language explanation of a specific node.
+- Read `graphify-out/GRAPH_REPORT.md` for broad architecture review (god nodes, surprising
+  connections, community structure).
+- Read source files **only** when (a) modifying or debugging specific code, (b) the graph
+  lacks the needed detail, or (c) the graph is missing or stale.
+- Type `/graphify` in Copilot Chat to rebuild or update the graph.
+
 ## Naming Conventions
 
 - Filename prefixes must match load-order strategy (see `doc/mod_load_reference.md`).

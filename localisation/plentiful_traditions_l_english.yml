@@ -1984,6 +1984,7 @@ mod_planet_jobs_worker_nanites_produces_add:0 "£nanites£ $nanites$ from £job�
 mod_planet_jobs_worker_nanites_produces_mult:0 "£nanites£ $nanites$ from £job£ $pop_cat_worker$"
 mod_planet_telepaths_unity_produces_add:0 "£unity£ $unity$ from £job£ $job_telepath$"
 mod_planet_telepaths_unity_produces_mult:0 "£unity£ $unity$ from £job£ $job_telepath$"
+planet_telepath:0 "Telepaths"
 mod_planet_pop_assemblers_alloys_upkeep_mult:0 "£alloys£ $alloys$ upkeep from £job£ $job_replicator$"
 mod_planet_replicator_produces_add:0 "Produktion from £job£ $job_replicator$"
 mod_planet_replicator_alloys_upkeep_mult:0 "£alloys£ $alloys$ upkeep from £job_replicator£ $job_replicator$"

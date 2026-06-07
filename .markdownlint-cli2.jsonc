@@ -1,4 +1,4 @@
 {
   "globs": ["**/*.md"],
-  "ignores": [".venv/**", "backup/**", "tmp/**", ".git/**"]
+  "ignores": [".venv/**", "backup/**", "tmp/**", ".git/**", "graphify/**"]
 }
