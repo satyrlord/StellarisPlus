@@ -15,4 +15,7 @@ tags={
 	"Overhaul"
 }
 name="StellarisPlus"
+dependencies={
+	"UI Overhaul Dynamic"
+}
 supported_version="v4.3.*"

@@ -3277,10 +3277,10 @@ guiTypes = {
 		# Planet Tab
 		buttonType = {
 			name = "summary_tab"
-			quadTextureSprite = "GFX_tab_1_inactive"
+			quadTextureSprite = "GFX_ui_tab_1_long_inactive"
 			position = { x = 0 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "font_text_16"
 			buttonText = "PLANET_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3291,10 +3291,10 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "summary_tab_active"
-			quadTextureSprite = "GFX_tab_1_active"
+			quadTextureSprite = "GFX_ui_tab_1_long_active"
 			position = { x = 0 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "font_text_16"
 			buttonText = "PLANET_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3306,10 +3306,10 @@ guiTypes = {
 		# Management Tab
 		buttonType = {
 			name = "management_tab"
-			quadTextureSprite = "GFX_tab_2_inactive"
+			quadTextureSprite = "GFX_ui_tab_2_long_inactive"
 			position = { x = 155 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "font_text_16"
 			buttonText = "MANAGEMENT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3320,10 +3320,10 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "management_tab_active"
-			quadTextureSprite = "GFX_tab_2_active"
+			quadTextureSprite = "GFX_ui_tab_2_long_active"
 			position = { x = 155 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "font_text_16"
 			buttonText = "MANAGEMENT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3335,10 +3335,10 @@ guiTypes = {
 		# Population Tab
 		buttonType = {
 			name = "population_tab"
-			quadTextureSprite = "GFX_tab_2_inactive"
+			quadTextureSprite = "GFX_ui_tab_2_long_inactive"
 			position = { x = 330 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "font_text_16"
 			buttonText = "POPULATION_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3349,10 +3349,10 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "population_tab_active"
-			quadTextureSprite = "GFX_tab_2_active"
+			quadTextureSprite = "GFX_ui_tab_2_long_active"
 			position = { x = 330 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "font_text_16"
 			buttonText = "POPULATION_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3364,10 +3364,10 @@ guiTypes = {
 		# Ground Combat Tab
 		buttonType = {
 			name = "armies_tab"
-			quadTextureSprite = "GFX_tab_2_inactive"
+			quadTextureSprite = "GFX_ui_tab_2_long_inactive"
 			position = { x = 505 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "font_text_16"
 			buttonText = "GROUND_COMBAT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3378,10 +3378,10 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "armies_tab_active"
-			quadTextureSprite = "GFX_tab_2_active"
+			quadTextureSprite = "GFX_ui_tab_2_long_active"
 			position = { x = 505 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "font_text_16"
 			buttonText = "GROUND_COMBAT_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3393,10 +3393,10 @@ guiTypes = {
 		# Corporate Tab
 		buttonType = {
 			name = "corporate_tab"
-			quadTextureSprite = "GFX_tab_2_inactive"
+			quadTextureSprite = "GFX_ui_tab_2_long_inactive"
 			position = { x = 680 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "font_text_16"
 			buttonText = "CORPORATE_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes
@@ -3407,10 +3407,10 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "corporate_tab_active"
-			quadTextureSprite = "GFX_tab_2_active"
+			quadTextureSprite = "GFX_ui_tab_2_long_active"
 			position = { x = 680 y = 0 }
 			orientation = lower_left
-			buttonFont = "font_text_18"
+			buttonFont = "font_text_16"
 			buttonText = "CORPORATE_TAB"
 			borderSize = { x = 20 y = 0 }
 			multiline = yes

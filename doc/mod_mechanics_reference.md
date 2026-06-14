@@ -9,6 +9,21 @@ relationships.
 
 ---
 
+## Dependency: UI Overhaul Dynamic (ID 1623423360)
+
+UI Overhaul Dynamic is a **required external dependency** -- it is not
+integrated into the mod folder, but StellarisPlus expects it at runtime.
+
+- **Why:** Our Planet View tab overrides in `interface/zz_planet_view.gui`
+  reference UIOD-specific sprite names (`GFX_ui_tab_1_long_*`,
+  `GFX_ui_tab_2_long_*`) and use UIOD's tab spacing coordinates.
+- **Load order:** StellarisPlus must load *after* UIOD to override the
+  tab definitions with the correct sprites.
+- **Enforcement:** The `descriptor.mod` should list UIOD in
+  `dependencies = { ... }` (Workshop ID 1623423360).
+
+---
+
 ## Naming Conventions
 
 - Scripted variables follow `@UPPER_SNAKE_CASE` (e.g.

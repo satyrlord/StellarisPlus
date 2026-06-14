@@ -1,5 +1,18 @@
 # StellarisPlus -- Credits
 
+## Expected Dependencies (must subscribe separately)
+
+These mods are not integrated into the mod folder but are required at
+runtime for StellarisPlus to display correctly.
+
+- UI Overhaul Dynamic (Workshop ID: 1623423360)
+  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360>
+  Author: (see Workshop page)
+
+---
+
+## Integrated Workshop Mods
+
 The following Workshop mods have been integrated into StellarisPlus.
 Their original authors are credited below.
 

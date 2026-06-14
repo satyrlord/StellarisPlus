@@ -1,5 +1,18 @@
 # StellarisPlus -- Changelog
 
+Date: 2026-06-09
+
+- Documentation: UI Overhaul Dynamic (ID 1623423360) is now a required
+  external dependency
+  - Added "UI Overhaul Dynamic" to `dependencies` in `descriptor.mod`
+  - Added UIOD section to `doc/mod_mechanics_reference.md`
+  - Listed UIOD under a new "Expected Dependencies" heading in
+    `credits.md`
+
+- UI fix: Planet View tabs now use UIOD long-tab sprites
+  (`GFX_ui_tab_1_long_*`, `GFX_ui_tab_2_long_*`) with font_text_16
+  in `interface/zz_planet_view.gui`, matching UIOD layout coordinates
+
 Date: 2026-03-22
 Order: reverse chronological (latest changes first)
 
