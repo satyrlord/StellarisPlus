@@ -1,0 +1,285 @@
+﻿### Diacritics 1 - fantasy namelists with diacritics
+### This is a conlang phonology I quickly whipped up for this namelist set
+
+#############################################################################
+#
+# PHONOLOGY
+#
+# Stops: 		b t d k g
+# Affricates:	ts dz
+# Fricatives:	f s z
+# Nasals:		m n ng
+# Approximants:	r l j w
+#
+# Vowels Chart:
+#	i 	ï 	u
+#	e 	ë 	o
+#	  ae  
+#
+# <c z> represent affricates
+#
+# Syllable Structure
+#
+# CV(r, l)(m, n, ng, l, r)
+#
+#############################################################################
+
+
+cybrxkhan_fantasy_diacritics_1 = {	
+	category = "Humanoid"
+
+	ship_names = {
+		generic = {			
+			Ba Babetu Babo Babï Bafan Ballon Balnolcul Balt Bam Bamëgë Ban Bane Bangur Bar Basisïl Basn Bat Bayuln Be Beda Bedï Bef Begewi Belwo Belër Ben Ber Berngëcin Bewon Beyofurn Beykar Bi Bifern Biki Bikërmë Bil Bilda Bilm Bilr Bim Bing Bingeng Biniri Birba Birmë Birode Biroy Birye Bizu Bizïkën Bo Bobël Bodul Bofong Bokïfi Bomo Bon Bongizu Bono Bordë Bori Bororse Bowo Bowu Bu Bufdon Bug Bulë Bumar Bun Bungocï Bur Bure Busï Busïme Butur Buzike Bbu Bda Bfarn Blza Bmezï Bn Bng Bnur Br Bw Bwrci Bë Bëcwë Bëcë Bëdil Bëf Bëgadal Bëln Bëlynr Bëlïrm Bëm Bëme Bëmuz Bën Bëng Bërng Bërngï Bërsru Bëti Bëyiwi Bëyum Bëza Bï Bïbudi Bïfë Bïfïnal Bïgo Bïl Bïl Bïlrl Bïm Bïmë Bïmïr Bïngi Bïngur Bïnë Bïr Bïrfë Bïrn Bïrom Bïsazang Bïwin Bïyar Ca Cabarnam Cadrï Cafalng Cagam Cage Cagosr Calwebërn Calyël Calït Cam Camurgën Can Cangol Cangga Carinu Caror Caru Casa Casur Catïrfi Catïy Cayï Cazur Caz Cazïr Ce Ceki Cel Celirïl Celterle Cemr Cen Ceng Cengefa Cer Cermom Cersërn Cerwu Cese Ceseln Cesu Cewuzi Cewëlyi Ceyl Ceza Cez Ci Cidagur Cidl Cima Cimiser Cin Cinodïl Cinurz Cir Cirwgi Cisu Cit Citgo Cizilkl Codetem Col Coli Com Con Cong Conëbl Corna Corwegil Cotë Cowën Cu Cubir Cucu Cudume Cudï Cugm Cuk Cul Culange Culer Cullo Culm Culying Cullfo Cum Cun Cunabïl Cung Cunl Cur Curnrun Cuzï C Cbïwor Cdeke Cdum Clke Cm Cmig Cr Cwïlyï Cyul Czida Czïr Cë Cëbi Cëdëme Cëker Cël Cën Cëngsï Cënëngo Cërkëc Cërmi Cërnïng Cërze Cësu Cësur Cësë Cëyolr Cëyng Cëzen Cï Cïgiwu Cïgëlteng Cïldda Cïlibe Cïlzun Cïlër Cïm Cïn Cïr Cïroln Cïr Cïsel Cïtï Cïweyo Cïwo Cïwë Cïyoze Cïy Cïzëlngo Cïzï Cïzïr Da Dage Dag Daln Dam Dan Daneln Danon Danër Dar Darn Daryër Darïci Dasircal Dawor Dazel Dazïng De Debif Defirl Del Delnagu Delnasë Delëti Dem Demï Den Denza Dercer Detuce Dewëm Deyul Di Dibë Didami Didba Didërmi Difo Dikëm Dilewung Dilm Dilrïl Din Dingolë Dinn Dir Dirma Diwsë Diyu Dizo Do Doba Dobon Dob Dokogël Domol Don Dong Dongog Dongëke Donïrmu Dor Dosi Dotul Dowëbo Doyï Du Dubëc Dugi Dukamï Dul Dulden Duleg Dulnigir Dum Dun Dung Dung Dun Duwëgë D Dbu Dcïze Dfe Dge Dgur Dgïrwu Dlres Dm Dn Dng Dngangu Dr Drra Drurl Drzol Dsu Dsë Dë Dëcelu Dëco Dëdë Dëgosër Dël Dële Dëlwol Dëlyasel Dël Dëngorzul Dëngïzi Dërl Dër Dësul Dëtëm Dëzïlga Dï Dïbamëm Dïfol Dïf Dïfïri Dïg Dïgëgë Dïkun Dïlum Dïlë Dïn Dïnga Dïngïl Dïr Dïyrng Fa Fafe Fag Fakïl Fal Falfarcë Fam Faman Fan Fanga Far Fargïl Faru Fatu Fatfën Fawermr Faweryr Fawï Faza Fazyë Fazënge Fe Febel Fedu Fegr Felfi Fel Fem Fen Fenewn Feng Feni Fenu Fenïka Fenïl Fer Fero Ferïr Feza Fezi Fi Fibëd Fige Fikika Fikërn Filil Filn Filr Filru Filyo Fim Fingrn Fingëlë Firmïr Fisr Fizëfë Fo Fob Focan Focïr Foddë Fofosi Fol Folci Foldë Fom Fon Foyë Fu Fubo Fufare Fuf Fugirn Ful Fuldo Fulku Ful Fumocën Fumuni Fun Funing Funin Futa Futorn Futule Fuwa Fuyib F Fk Fkëlfrng Fkï Fl Fnë Fr Fre Frneso Frï Fyo Fë Fëcurl Fëdu Fëke Fël Fëlco Fëlsïn Fëlwurn Fël Fëmimr Fën Fënuci Fër Fësesï Fësulr Fëtuca Fëyimir Fï Fïbo Fïdësïr Fïfïrm Fïken Fïlbo Fïldur Fïma Fïn Fïr Fïrfëwor Fïrl Fïse Fïtëfi Fïtësur Fïwewïl Fïwobi Ga Gabrto Gacu Gaga Gageting Gakicel Gakur Gal Gam Gamorë Gam Gar Gawe Ge Gebulna Gefeng Gefë Gel Gengo Gengë Ger Gerg Germe Geruga Gesonï Gesuy Geyal Gezrng Gi Gicen Gideyur Gifob Giga Gil Gim Gimusë Gin Ging Ging Gino Gir Girl Girn Girën Giwïl Giyumin Gobo Gocatï Godrn Gofib Gogïce Golcon Golnë Gon Gongange Gor Gorgïr Gorir Gorng Goya Gozu Gu Gudobï Gulmo Gulng Gulweye Gum Gumoce Guml Gun Gungï Gur Gurcïkam Gurm Guromi Gurosom Gusod Guwemo Guwewa Guwi Guwwe Guzo G Gbëfr Gca Gce Gfetï Glbiye Gm Gma Gn Gngurlul Gnu Gnïl Grgïlo Grn Grr Gtan Gtifo Gworko Gza Gzer Gë Gëbdo Gëbke Gëbë Gëferfum Gëgokï Gëllirïr Gëlëmun Gëm Gër Gërya Gëtim Gëza Gëzilnï Gï Gïbo Gïdi Gïkebën Gïl Gïl Gïm Gïn Gïngulngïr Gïnuwa Gïr Gïrgïn Gïri Gïsë Gïtël Kabaln Kadyi Kafe Kafëlwel Kakon Kaldar Kalga Kallefing Kaluler Kam Kan Kanar Kangël Kar Karu Kato Katëm Kawefë Kawë Kayago Kayi Kebodol Kele Kemïm Kenar Keng Kengcë Ker Kermotol Kernuwa Kesi Keson Keyofe Kezïzo Ki Kibïl Kicol Kifelwa Kigul Kilcu Kilcïn Kilgil Kin Kinger Kir Kirak Kircë Kirerci Kiro Kirrz Kitïr Kiyingi Kizisël Ko Kobonun Kocu Kofno Kogir Koke Kol Kolr Kon Kor Korfemu Korm Korno Korofr Ku Kubutn Kubuyën Kubëwu Kufo Kufïy Kuki Kukëgï Kum Kun Kung Kungamel Kungë Kur Kurnuzïlr Kuwa Kuyïlbu K Kcaco Kfu Kgir Kl Klil Kldi Km Kme Kr Krta Krtel Krë Ksafo Ksiyë Ktil Ktor Ktëm Kwiwu Kyor Kyï Kyïn Kë Këcï Këdofër Kël Kële Këlgo Këlnïr Këllm Këm Këmaya Kën Kënam Këngeto Këngï Kënomïlm Kërda Këre Këwe Këwï Këyel Kï Kïcoyln Kïdë Kïdïso Kïgïm Kïk Kïlar Kïlci Kïm Kïml Kïmno Kïmta Kïn Kïng Kïngilmu Kïnil Kïnëlu Kïnï Kïr Kïrga Kïr Kïwayer Lada Lako Lakïrsu Lal Lam Lamon Lan Lang Lanëm Lanï Lar Larukë Lasi Layë Lazon Le Lecë Ledo Ledu Led Lel Lelnul Lelka Lem Lemïl Len Lengem Ler Lewangom Lewimim Leyelfa Leyom Li Licë Lide Lifur Ligon Likër Lil Lilacïr Liresë Lisi Lisute Liwo Liwï Liyë Lo Loce Locum Lofalr Logic Lokongi Lolkufor Loltïl Lom Longuso Long Lonïgë Lowu Low Loywër Loyën Lu Lube Ludodel Lufumi Lugong Lul Luldërng Lul Lulmum Lumï Lungorger Lur Lureng Lurïm Lusiner Luso Lusïrng Luwrn Luzil L Lbï Lcelfë Ldë Lfï Lgu Lmë Lr Lrmïn Ltu Lyong Lyulcu Lë Lëbolel Lëdimu Lëdïg Lëkibu Lëkongum Lëlr Lëlzu Lën Lënguka Lënë Lësom Lëyirzern Lëyul Lëyïy Lëzï Lï Lïbongon Lïcurng Lïdë Lïfem Lïfodi Lïfïni Lïgune Lïgën Lïke Lïl Lïlniyë Lïlsefo Lïm Lïn Lïne Lïngen Lïnglm Lïyëbu Lïyïyir Ma Mabe Maburïr Made Mal Maln Mam Mamekel Mar Marl Mar Maruge Mawan Mawol Mazïly Me Mecer Meculrï Medirur Medï Medïm Mefegul Megafi Megaye Mela Meldacl Melgi Melgodi Melgëta Mem Meme Mer Mernëne Mersiko Mesiko Mesil Metom Metu Mewdï Mi Mibarfurl Midufï Mifo Migo Miglr Mikor Mil Mim Mimongel Min Mingarzo Minuke Mirbba Mircël Mirkë Misërl Miyin Miz Mo Mobë Mocëlfe Modoln Modï Mofngëm Mokëku Mol Molngarng Molnun Mom Mon Mona Monal Monga Mongi Mongo Mor Moral Morfel Mosen Mosëm Moyife Moyr Moyër Mozugu Mu Mudili Mudorn Mufa Muge Mugïz Muki Mul Mulrul Muly Mulzer Mum Munga Mungusin Mung Murngege Muroln Mursë Murku Mutm Mutwol M Mbin Mdilër Mgol Ml Mluz Mm Mmo Mn Mne Mng Mr Mrnë Mr Msega Myer Myr Mza Mëbëdin Mëdi Mël Mëlfikï Mël Mëm Mëmolu Mëmïclm Mën Mër Mërn Mërzï Mëzl Mï Mïbenël Mïbocë Mïbï Mïciner Mïda Mïgako Mïgi Mïkïco Mïkïmël Mïl Mïllakur Mïlng Mïmecu Mïmï Mïn Mïnamn Mïngal Mïngë Mïnu Mïrralyor Mïru Mïrëm Mïsang Mïsugi Mïtë Mïwëtu Mïyl Mïzë Na Naba Nacë Nacër Nafo Nagim Nago Naltyor Nami Namum Nan Nar Narer Narna Naryim Nasn Nateca Nawgo Nawrel Nayëfe Nazar Naze Nazu Nazërn Nazïlr Nebïrëm Nedatl Nedifu Negal Neku Nek Nekïrbë Nelwï Nelë Nem Nengatu Nengok Nerme Nerzë Nesar Nesïn Netir Newërwu Neya Nezël Nga Ngacun Ngafa Ngafuyï Ngali Ngalsë Ngalun Ngalwën Ngam Ngamo Ngamom Nganarzi Nganbi Ngant Ngarn Ngarï Ngase Ngayïl Ngazisu Nge Ngedilel Ngefïrker Ngekerkë Ngekën Ngelfënar Ngeln Ngen Nger Ngese Ngesol Ngeyï Ngeyïm Ngi Ngicïn Ngide Ngifi Ngil Ngiloda Ngim Ngin Ngir Ngiren Ngirin Ngirmi Ngirnolë Ngirzn Ngirzn Ngise Ngiser Ngismïng Ngo Ngoba Ngobon Ngode Ngodi Ngogo Ngol Ngolaga Ngom Ngon Ngone Ngongo Ngorël Ngorïr Ngos Ngosï Ngotom Ngotë Ngotëngël Ngowefm Ngoycï Ngoyël Ngu Ngubim Ngubudï Ngucirl Ngucngm Ngufl Ngugo Ngukfi Ngul Ngul Ngullën Ngulm Ngulrï Nguma Ngumifan Ngumil Ngun Ngungïr Ngurde Ngurika Ngurër Ngusekï Ngutu Nguwezan Ng Ngfe Ngmi Ngmirim Ngn Ngr Ngtursi Ngtl Ngyimr Ngë Ngëdod Ngëgyal Ngëgë Ngël Ngëlm Ngëloyi Ngën Ngëngubï Ngëta Ngët Ngëzu Ngï Ngïblzer Ngïcocë Ngïdrm Ngïdwe Ngïfucal Ngïga Ngïgëlcu Ngïkult Ngïmugo Ngïn Ngïngë Ngïran Ngïrbi Ngïrtom Ngïrza Ngïse Ngïsëwe Ngïzuk Ni Nibuce Nige Nigo Nign Nikayë Nikon Nilal Nili Nilmë Nim Nin Ning Nin Nirgor Nisïzl Niwecun Noboco Nofose Nolozen Nom Nomezë Nomi Nonaye Nonun Nor Nor Nowa Noyel Noyr Nozunu Nozë Nu Nucïm Nudil Nudë Nugago Nul Nulr Nulreze Nulron Num Nur Nurko Nurn Nurngïsï Nurï Nuzokën N Nda Ndusing Nfr Nfïwon Ngo Nke Nkozë Nl Nlnë Nlr Nn Nrl Nrnï Nsi Nwïl Nyel Nyem Nyika Në Nëdu Nëkazor Nëkë Nëkïm Nël Nëlbëlzu Nëleme Nëlerbul Nën Nëngerdë Nëngo Nëngïtë Nënu Nënul Nënte Nër Nërbar Nërgomë Nëru Nërusu Nësë Nëyilo Nëzonïm Nëzun Nï Nïba Nïlfuwa Nïloki Nïlol Nïm Nïn Nïnïn Nïrcu Nïrugor Nïsedal Nïzal Ra Racon Racërda Radïno Rafang Ragayor Ragollë Rali Ralk Ralm Ralëng Ram Rangol Ranir Rar Rarl Rasarl Rata Rawadi Razuz Re Rede Refa Rel Rel Relm Relmme Relneng Reltir Relzul Relëm Relïr Reng Rerllng Rerë Resm Resë Retë Reyoda Reyu Rezëga Ri Ribufa Ridër Ril Riler Rilsago Rilwel Rimelnul Rin Ringarum Ringer Ringulmë Rirtëdï Risï Riwë Ro Robicë Rogim Rokaziln Rokul Rol Rolcem Ron Ror Rorcam Rosn Rowe Royï Rucï Ruga Rugda Rul Rula Ruliki Rulmizu Ruln Rulo Run Rur Rurbem Rurlir Ruso Ruyigï Ruzo Ruzolki Ruzï R Rcm Rdudi Rl Rlfibï Rli Rlru Rlu Rm Rmiman Rmu Rng Rngum Rningo Rno Rr Rrbulso Rrsïrbë Rë Rëdi Rëdwor Rëfisu Rëfulngël Rëfïl Rëgïlli Rël Rëlr Rëlle Rëmo Rën Rëng Rënr Rër Rërzate Rërïrn Rëwowam Rï Rïdcïrn Rïdl Rïgadlng Rïgï Rïkol Rïl Rïlzfi Rïn Rïnge Rïnïdi Rïr Rïryero Rïryïl Rïsirn Rïsgi Rïsm Rïwm Sa Sadum Safufï Salcalfu Salce Salngilnga Salrm Salsë Sang Sangocir Sangudo Sangul Sar Sayïn Se Sefal Sel Selen Selger Sem Seme Semïrgum Sen Senagën Sengazu Senu Serdengur Serlïmï Serngël Serru Seselr Seso Sesï Sewrë Seyi Seyger Sibal Sider Sife Sifong Sil Siln Silng Siltim Sil Sim Simagi Sin Sing Singïln Sir Sirci Sirl Sirmal Sirng Sirngadorm Sisa Sisor Siwago So Sodirol Sokot Solwë Solcu Somagor Son Songilër Songï Sor Sorbode Sordircï Sorgerzu Sosëlyu Sotï Sowng Soyefi Sozïyan Su Sulgo Sulor Sune Sungbëln Sunorso Suril Sursemu Surï Suto Suton Suzong S Scesë Scul Scngo Sden Skol Slr Sn Sng Snga Srenïr Srer Sruba Sr Ssïl Syi Syofo Syëne Së Sëbnïl Sëbë Sëcan Sëcerm Sëdelde Sëdurë Sëgu Sëkebe Sëkoki Sëlwilwë Sëm Sëma Sëmulr Sërn Sërtnu Sëryay Sësoril Sëstol Sëyo Sëyuyi Sï Sïl Sïlbusol Sïlsabë Sïlëdu Sïm Sïma Sïmigi Sïnim Sïror Sïrzumï Ta Tabï Tafel Tafu Takir Tal Talal Talngërlr Talng Tan Tang Tango Tangu Tar Tayingul Te Tebi Tec Tegum Teldatïl Telfu Telngïrë Telolgim Telsërla Tema Temo Ten Tengëdur Tenu Terral Terrmem Tezoti Ti Tidye Tik Til Til Timal Timo Tin Tinabal Ting Tingë Tir Tirewm Tiryarzï Tistul Titïlm Tiwu Tizuna To Tocël Togëgl Tokëm Tolm Tolsolba Tom Tonen Toni Tonu Tonë Torba Torb Torde Toru Toseng Tosïngu Toti Toybi Tozu Tozë Tu Tuki Tul Tularl Tumoye Tungesïn Turbel Turem Turgëka Tuse Tusger Tuttï Tutïng Tuyona Tuyu Tuzïker T Tbl Tcï Tkom Tle Tlerging Tltiko Tm Tngërbïr Tngïwa Trmeb Trnam Trn Tsarzol Tselng Twocur Të Tëba Tëgul Tëkoto Tëku Tël Tël Tëlun Tën Tëngil Tëngizo Tër Tërki Tërzë Tërë Tëtigol Tëwur Tëyërcol Tëzu Tïca Tïce Tïd Tïgïtë Tïl Tïlcëlirn Tïl Tïlzë Tïmo Tïn Tïngurn Tïngï Tïrmong Tïrmï Tïser Tïwi Tïyël Wafelmor Wafëmo Wagim Waguga Wal Walfofir Walner Wamëcol Wangi Wani War Wasu Wasl Wawï Wayn Wayë We Wedit Wedo Wedë Wel Welefun Weli Welyoyul Wemi Wemil Wemuc Wen Wengi Wenërm Wer Werngar Wero Wer Weto Wew Wewmer Weyïyël Wi Wibe Wibi Wicu Wifa Wilgar Willike Win Wina Wingërdë Wir Wirl Wirn Wirnen Wirngï Wirn Wo Wolnizï Wom Womël Wong Wongakil Wongën Wor Wordaming Wosë Woyol Woyun Woyïlfu Wozur Wu Wubëlm Wufël Wufër Wugozil Wukel Wul Wulam Wulm Wulnan Wulnum Wulrarrum Wum Wun Wungï Wur Wurfolwa Wur Wurïlnel Wusinga Wus Wuyilng Wuzel W Wcï Wlo Wm Wn Wnangër Wnil Wnomë Wr Wrk Wrsïtur Wtïy Wwolngu Wzil Wë Wëdor Wëgu Wëkï Wël Wëla Wëlw Wërb Wërwi Wëto Wëyuyï Wï Wïdul Wïfucï Wïfïni Wïl Wïln Wïlsu Wïng Wïng Wïr Wïrnotar Wïrïn Wïs Wïyï Ya Yabël Yadi Yafeco Yafim Yagir Yagwï Yaka Yal Yalid Yal Yalnum Yam Yamo Yangi Yar Yarforbo Yasa Yatël Yatër Yatï Yayin Yayul Ye Yecï Yelam Yeldakelm Yelmakan Yenglgu Yer Yerbu Yern Yi Yicu Yida Yiduyo Yifengi Yilecï Yilr Yilë Yinatïl Yirn Yirno Yiwengï Yiyar Yiyole Yo Yofulr Yol Yom Yoma Yome Yon Yongolr Yoni Yor Yorngl Yorung Yosrnel Yoticil Yotul Yowasul Yowërfu Yoyëfo Yoza Yu Yuk Yul Yul Yulr Yulrum Yultiyon Yumn Yunguzi Yur Yuril Yurlong Yurtësu Yuryu Yusa Yusw Y Ybu Ydolra Ydbo Ygufër Ygung Ykuza Yl Yldelgun Yle Ylfi Yll Ylr Ylzur Ym Yn Ynem Yng Ynguzu Ynëcu Yr Yrari Yrwë Ysïya Yzïl Yë Yëckern Yëfdë Yël Yëldul Yëlngi Yëltël Yën Yënar Yëne Yër Yërerï Yëro Yërwum Yëtï Yëwer Yï Yïdem Yïdo Yïfa Yïfarbul Yïfe Yïka Yïl Yïl Yïmël Yïn Yïno Yïn Yïnl Yïr Yïral Yïrru Yïsï Yïtëdi Za Zaden Zafusm Zagono Zagung Zagërn Zalcel Zalr Zalïmin Zam Zamci Zangë Zangïr Zar Zarkin Ze Zedï Zefum Zegam Zeglr Zegï Zel Zelu Zem Zen Zengizï Zer Zeryamu Zetiri Zezem Zi Zibelur Zibin Zibïlu Zicol Zicïzë Zidur Zid Zildë Zil Zilnga Zilngelsu Zimisel Zin Zinungem Zinëm Zirï Zitn Zitë Zitël Zitën Ziwunel Ziyu Zo Zobar Zobelo Zob Zoguni Zol Zoldal Zolde Zom Zome Zomefa Zon Zonn Zor Zorfol Zorzan Zosïrom Zote Zozï Zu Zucur Zudï Zugulg Zug Zul Zula Zullin Zuln Zulnl Zum Zungici Zurwabl Zurë Zusengë Zusïl Zuzengï Z Zdil Zfel Zfïng Zlecam Zma Zn Zr Zrbïm Zrk Zrne Zyena Zë Zëbanga Zëbe Zëcaci Zëcïfe Zëdefï Zëdn Zëfiwe Zël Zële Zën Zëne Zëng Zëng Zëngï Zër Zëtison Zëtïl Zëwe Zï Zïcuka Zïcï Zïcïnm Zïcïsa Zïdzan Zïfor Zïgzel Zïl Zïlir Zïln Zïlnn Zïlu Zïl Zïn Zïnër Zïrcakl Zïwïr Zïzusi
+		}
+	
+		corvette = {		
+	
+		}
+		
+		destroyer = {		
+
+		}
+		
+		cruiser = {		
+
+		}
+		
+		battleship = {		
+
+		}
+		
+		science = {		
+			Kaculkuner Lingïmusë Malkobile Metorëlga Mibizïye Netantul Ngusïngongn Ngïdakirsel Ngïzfangïl Ninalkïmm Rartïlewong Roluduze Sezacrïl Sërrïrmïnar Tetodënl Wumïrkïzë Yocïnrfo Yngezisu Zabirkeyong Zayilyalkur
+		}
+		
+		colonizer = {
+		
+		}
+		
+		constructor = {		
+	
+		}
+		
+		#orbital_station = { }
+		mining_station = { }
+		research_station = { }
+		#wormhole_station = { }
+		#terraform_station = { }
+		#observation_station = { }
+		#outpost_station = {	}
+		
+		transport = {
+		}
+	
+		military_station_small = {
+		}
+
+		ion_cannon = {
+		}
+	}	
+	
+	fleet_names = {
+		random_names = {
+			"Mozer Navy Unit" "Dewïrna Navy Unit" "Gifader Navy Unit" "Socwi Navy Unit" "Yalsan Navy Unit" "Bemersi Navy Unit" 
+		}
+		sequential_name = CYBRX_DIACRITICS_1_xxFLEETNAMES_ORD
+	}
+
+	###ARMIES
+	army_names = {
+	
+		generic = {
+			sequential_name = CYBRX_DIACRITICS_1_xxASSAULTARMY_ORD
+		}
+	
+		machine_defense = {
+			sequential_name = CYBRX_DIACRITICS_1_xxMACHINEDEFENSE_ORD
+		}
+			
+		machine_assault_1 = {
+			sequential_name = CYBRX_DIACRITICS_1_xxMACHINEASSAULT1_ORD
+		}
+			
+		machine_assault_2 = {
+			sequential_name = CYBRX_DIACRITICS_1_xxMACHINEASSAULT2_ORD
+		}
+			
+		machine_assault_3 = {
+			sequential_name = CYBRX_DIACRITICS_1_xxMACHINEASSAULT3_ORD
+		}
+	
+		defense_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxDEFENSEARMY_ORD
+		}
+			
+		assault_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxASSAULTARMY_ORD
+		}
+		
+		slave_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxSLAVEARMY_ORD
+		}
+		
+		clone_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxCLONEARMY_ORD
+		}
+		
+		perfected_clone_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxCLONEARMY_ORD
+		}
+		
+		undead_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxUNDEADARMY_ORD
+		}
+		
+		robotic_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxROBOTICARMY_ORD
+		}
+		
+		robotic_defense_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxROBOTICDEFENSEARMY_ORD
+		}
+		
+		psionic_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxPSIONICARMY_ORD
+		}
+		
+		xenomorph_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxXENOMORPHARMY_ORD
+		}
+		
+		gene_warrior_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxGENEWARRIORARMY_ORD
+		}
+		
+		occupation_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxOCCUPATIONARMY_ORD
+		}
+
+		robotic_occupation_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxROBOTICOCCUPATIONARMY_ORD
+		}
+
+		individual_machine_occupation_army = {
+			sequential_name = CYBRX_DIACRITICS_1_xxROBOTICOCCUPATIONARMY_ORD
+		}
+
+		primitive_army = {
+			sequential_name = CYBRX_DIACRITICS_1_PRIMITIVEARMYxx_SEQ
+		}
+		industrial_army = {
+			sequential_name = CYBRX_DIACRITICS_1_INDUSTRIALARMYxx_SEQ
+		}
+		postatomic_army = {
+			sequential_name = CYBRX_DIACRITICS_1_POSTATOMICARMYxx_SEQ
+		}
+		warpling_army = {
+			sequential_name = seq_warpling_army
+		}
+		
+		ember_legion = {
+			sequential_name = seq_ember_legion
+		}
+		
+		lm_imbued_army = {
+			sequential_name = seq_lm_imbued_army
+		}
+
+		abomination_army = {
+			sequential_name = seq_abomination_army
+		}
+		wilderness_pre_sapient_defence_army = {
+			sequential_name = seq_wilderness_pre_sapient_defence_army
+		}
+		wilderness_pre_sapient_assault_army = {
+			sequential_name = seq_wilderness_pre_sapient_assault_army
+		}
+	}
+	
+	### PLANETS
+	
+	planet_names = {
+	
+		generic = {
+			names = {
+				Ba Bafan Bedesal Bicann Bicer Biyin Bo Budi Burwen Bti Bë Bëdcar Can Car Celngi Cer Cewurta Ci Cozë Cuyëly C Cnn Cëng Cïyilu Dange Danowu Desëcr Di Dicengol Dom Dorngu Doso Dun Dnenul Dëdëdan Dërmo Dëyëm Dïcë Dïgïzo Dïkeng Dïsa Fadr Fafïfu Fase Fe Felni Fer Fezaldo Fim Fira Firmr Firïcë Fiwem For Fukoyi Fëlm Fïlgin Fïmïki Fïriren Gan Garngagë Ge Gegn Gerwë Gesïm Gi Gifan Gim Go Gocu Gocïle Gol Goloku Gon Goser Guyë Gëlë Gërn Gïkër Kanemu Kartowëng Kazë Kem Ken Keyine Kifafo Kilgl Kucer Kusï Kfër Kësën Kï Kïnilngo Kïsirder Kïyi La Lagatë Lan Le Lengërn Lewadir Limame Liman Limul Liwïrm Liyomë Lo Lol Lor Lul Lute Lëlyibo Lïlring Ma Me Meyïwa Milo Mir Muyu Mduzu Mtï Mël Mëre Mëzëlyïng Mïlngm Mïzn Nangu Nezafa Ngacmurm Ngang Ngero Ngil Ngoy Ngum Ngfirng Ngëmar Ngëmil Ngërë Ngïnorri Nir Norg Nul Nusëbi Nm Nnung Nr Nënulo Nïflwil Nïr Re Rel Ren Rig Rim Rirgil Roc Rollën Rongëlye Roso Rum Rurmagëm Rëbïsi Se Serm Sin Som Sosite Sulzayal Sur Srm Sëbal Sëdo Sëzi Sïdm Tarn Teng Tibiwe Tifuwe Tilriyi Time Tir Tiwosi Tosëga Tu Tum Tunec Tbëbë Tgusa Tlr Tëniyu Tïn Tïro Wabe War Wasowi Wayl Wel Wol Wolïl Wonazï Wul Wl Wë Wëbm Wël Wërn Wïlfolëng Wïmlnge Wïrn Wïyengu Yabu Yagï Yelm Yemïcu Yen Yewo Yiyolzem Yom Yuwë Ycucër Ylkin Yzar Yëdbë Yï Yïl Yïlbo Yïngu Yïnguker Yïzrcolr Za Zadï Zakryëng Zam Ze Zeme Zesuwul Zewë Zici Zim Ziyem Zo Zungïnon Zurn Zën Zërong Zëyïrsën Zëzm Zïnalng Zïwa
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+			}
+		}		
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+		
+	}
+	
+	### CHARACTERS
+	
+
+
+	character_names = {
+		default = {
+			# A complete name
+			full_names = {
+				Baci'Z Baga'Ngïka Balco'Bul Barcno'Ngïka Barl'Sem Bate'Kamër Bawë'Ngïka Bayacï'Kamër Be'Bëdel Bekel'Wulm Ben'Ngïka Bene'Bul Bengu'Ngïka Benël'Sem Berkë'Dol Bernë'Wulm Bewag'Sem Bife'Ngïka Bifi'Can Bim'Bul Bin'Kamër Bir'Z Birilzi'Can Birka'Can Birngzë'Yarng Biyo'Ngïka Bizye'Sem Bo'Bul Bo'Z Bodin'Bul Bol'Sem Bon'Ngïka Bugza'Bëdel Buli'Kamër Burar'F Burbu'Dol Buyeyo'Kamër Buyï'To B'Kamër Bkën'Dol Blmïr'Can Bmë'Z Bnge'Ngïka Btï'Z Bëll'Can Bëlr'Kamër Bëlë'To Bëmrlu'Bëdel Bërdu'Kamër Bï'Yarng Bïbëki'Dol Bïngïlbï'To Bïnë'Ngïka Bïsïdël'Malom Bïyben'Wulm Ca'Bul Ca'Yarng Caci'Can Can'Bul Can'Ngïka Canecun'Bul Caya'Ngïka Ce'Bëdel Ce'Can Ce'Ngïka Cedo'Yarng Cekosu'Malom Cel'Yarng Cerr'Bul Cerr'F Cil'Bul Cil'Sem Cim'Wulm Cirn'Can Co'Kamër Con'Yarng Cormïso'Malom Cufë'Wulm Cufïr'Kamër Cullëlgem'Sem Culng'Bul Curngër'Can Curë'Dol Cuyï'Yarng Cuzi'Kamër C'To Ccol'Wulm Cnu'Ngïka Cnë'Can Crï'Bul Ctël'Bul Cë'Bul Cëbl'F Cëdë'Bëdel Cëladar'Z Cën'Ngïka Cër'Z Cërwï'Bëdel Cëti'Bul Cëwada'Dol Cëwël'Z Cï'Z Cïbë'Ngïka Cïdudïr'Bëdel Cïll'Malom Cïlng'Bul Cïlol'Bëdel Cïngalfem'Kamër Cïngëwi'Can Cïrnï'Bëdel Cïsorse'Wulm Cïwerzï'Can Daform'Kamër Damë'Ngïka Dato'Kamër Delalë'Kamër Dem'Sem Den'Wulm Der'Bëdel Der'Kamër Desa'Bul Di'Yarng Dicibë'Ngïka Dikil'Can Din'Bul Ding'Bëdel Dinun'Dol Dizul'Malom Dofawe'Kamër Doln'Can Dom'Can Dom'F Dom'To Dor'Kamër Dorbr'Bul Duki'F D'Bul Dl'Bëdel Dlmal'Can Dm'Kamër Dn'Wulm Dnolnë'Can Dr'Can Drl'Can Dwengi'Z Dë'F Dëbo'Kamër Dëbm'Wulm Dël'F Dëryïnu'Malom Dëtu'Yarng Dïlt'Can Dïn'Z Dïngëbu'F Dïrawo'To Dïsim'Dol Dïsinëlr'Dol Dïtëng'F Dïwe'Yarng Dïzayï'Wulm Fabini'Bëdel Fadi'Yarng Fakë'To Falgel'Bul Fam'To Fang'Bul Fawang'Yarng Faya'Yarng Febetar'Dol Febi'Dol Fece'Ngïka Fengi'Yarng Fengë'Bëdel Fesïlzu'Ngïka Fidïlnga'Can Filcil'F Filung'Z Fizi'To Fo'Sem Fom'To Fongar'Yarng Fu'Can Fu'Dol Fucï'Malom Ful'Bëdel Fun'Dol Fbu'Yarng Fdm'Sem Fn'F Fngogan'Sem Fwagï'Bëdel Fwce'Yarng Fë'Yarng Fëketi'To Fël'Dol Fël'Z Fëme'Dol Fënesa'Yarng Fër'Dol Fï'Ngïka Fï'Wulm Fï'Z Fïlm'Yarng Fïlsul'Wulm Fïlïkr'Malom Fïng'Bul Fïr'Can Fïzom'Dol Ga'Can Ga'Dol Gabucil'Yarng Gabïr'Bëdel Gafelm'Yarng Galfen'Z Gar'Yarng Garzo'Can Gazafrn'F Ge'Z Geco'Sem Gegr'Can Gegëcël'Bul Gen'F Geng'Dol Geni'F Getam'Bëdel Gildor'Bëdel Gini'Sem Ginuru'Kamër Gir'Z Giyorï'Bëdel Gobelmun'Bëdel Gocate'Ngïka Gu'To Guban'Yarng Gungi'Ngïka Guromu'Yarng Guye'F G'Bëdel Gn'Bul Gngafa'Sem Grfew'Bëdel Gyï'Sem Gëboyem'Yarng Gëgo'Ngïka Gëku'Bul Gënobo'Sem Gï'F Gï'Kamër Gïgër'Kamër Gïkë'Bëdel Gïlï'Z Gïmun'Ngïka Gïng'Dol Gïwalzo'F Kaligung'Dol Kamu'Bul Kanarel'Can Kang'Malom Kanï'Kamër Kasimël'Z Katid'Dol Ke'Can Ke'Kamër Ke'Ngïka Kecld'Bul Kel'Kamër Kem'Ngïka Ken'Yarng Kengëkl'Malom Keryan'Can Ketëlu'To Kilcën'F Kimulm'Bul Kinalï'Bëdel Kir'Bul Kirbe'Bëdel Kizïyï'To Ko'Bul Ko'Ngïka Koll'Dol Kong'Sem Kongerï'Malom Kongitu'To Koni'F Koyïgu'Dol Kubë'Sem Kucë'Wulm Kul'Yarng Kum'Bul Kumowa'Dol Kun'Bëdel Kungeci'Bëdel Kur'Kamër Kuruming'Yarng Kuta'Bul Kuyaro'Malom Kuyëso'Bëdel Kuze'Dol K'Bëdel K'Dol K'Malom Kce'Can Kcel'Can Kl'Z Klr'Yarng Kmetï'Can Kr'Yarng Ktuma'Dol Kë'Bul Kë'Yarng Këbïl'Bëdel Këganë'Kamër Kël'Kamër Këwecing'Bëdel Kïbngïl'Yarng Kïdëm'Bëdel Kïdëyir'Ngïka Kïgëfë'Bëdel Kïn'Bul Kïr'Bul Kïrn'Z Kïrzil'Bul La'Ngïka Labu'Ngïka Ladel'Yarng Lami'Kamër Lam'Malom Lare'Ngïka Larkï'Kamër Legï'Bëdel Leku'Kamër Lekul'Sem Lelbïrung'Yarng Len'Kamër Ler'Wulm Li'Dol Licula'Yarng Lifug'Kamër Lilfelïl'Z Lilor'Bul Lin'Kamër Lin'Malom Lircï'Z Lol'Kamër Lolasa'Dol Lolbu'Can Lon'Bul Lon'Kamër Lordil'Yarng Lotakïl'Dol Lubïza'Yarng Lum'Bëdel Lungu'Can Lungël'Bëdel Lurn'Kamër Lbin'Malom Llo'To Llr'Bul Lngacor'Wulm Lrm'Sem Lza'Yarng Lë'Can Lë'Ngïka Lëban'Can Lël'Yarng Lëm'Z Lënam'Malom Lërr'Dol Lësu'Ngïka Lïdun'Can Lïkr'Bëdel Lïll'Can Lïng'Dol Lïrgi'To Lïrn'Malom Lïrng'Sem Ma'Kamër Ma'Sem Macu'Malom Mader'Can Maful'Dol Mafïr'Dol Maln'Bëdel Malngïrkïl'Bul Malwol'Z Mal'Kamër Me'Yarng Mecïl'F Medim'To Mega'Wulm Megorr'Bul Mel'Bëdel Mengawo'Malom Mifutër'Can Mimel'Ngïka Mimum'Sem Ming'Can Mirë'Kamër Mokë'Can Mona'Can Monïrn'Yarng Mosr'Ngïka Mu'Ngïka Mubël'Wulm Mufazo'Bëdel Mufe'Bul Mung'Bëdel Mungurol'Sem Mur'Kamër Muyilyi'To M'Kamër M'Yarng Mfol'Can Mm'Bëdel Mng'Bul Mng'Malom Mngïsel'Ngïka Mr'Bul Mrngikïng'Kamër Mzïmu'To Më'Sem Mëko'Kamër Mël'Bul Mën'Can Mër'Yarng Mërn'Bul Mëten'F Mïbi'Bul Mïm'Wulm Mïrn'Sem Mïru'Ngïka Mïryo'Yarng Mïtgo'Bëdel Mïtë'To Mïwa'Kamër Nabël'Kamër Nacidl'Yarng Nal'Kamër Nan'Dol Nan'Wulm Nara'Can Narëdu'Sem Nayazo'Can Nefon'Z Nekï'Malom Neln'Can Nemolu'F Nenili'Sem Ner'F Nesenr'Z Neyase'Sem Ngal'Bul Ngalban'Dol Ngam'Can Ngam'Kamër Ngang'Bëdel Nganu'Z Nganïm'Bëdel Ngarkëdën'Can Ngaryego'Ngïka Ngegega'Malom Ngekne'To Ngel'Ngïka Ngelser'Yarng Ngelë'Bul Ngen'Bul Ngerayï'Kamër Ngetla'Dol Ngetïn'Bëdel Ngeyïmë'Can Ngici'Can Ngilil'Kamër Ngini'F Nginigïn'Ngïka Ngir'Dol Ngira'Kamër Ngizïzulm'Dol Ngogï'Kamër Ngol'Can Ngoln'Yarng Ngolu'Wulm Ngon'Can Ngonger'Dol Ngor'F Ngorzu'Malom Ngosang'Yarng Ngotur'Can Ngu'F Ngu'Wulm Ngude'Bëdel Ngum'F Ngurlil'Bëdel Ngurzke'Malom Nguwiro'Yarng Nguza'F Nguzëcë'Wulm Ng'Z Nggafir'Wulm Ngkï'F Ngkïm'Sem Ngl'Can Ngngi'To Ngr'Bëdel Ngrën'Sem Ngwiz'To Ngëbal'Can Ngëlbë'Bëdel Ngëme'Bul Ngëng'Bul Ngërdu'Malom Ngï'Bëdel Ngï'F Ngï'Ngïka Ngïbu'Bul Ngïcëln'Sem Ngïdolfe'Bëdel Ngïmï'Ngïka Ngïn'Bëdel Ngïrl'Wulm Ngïyln'To Ngïyïgï'Bul Ni'Malom Nidungun'Bëdel Nigë'Can Nikïdë'Dol Ning'Dol Niwë'F No'Bëdel No'Sem No'Yarng Nobul'Bëdel Noge'Can Noka'To Nom'Kamër Nom'Yarng Noma'Dol Norwïkï'F Noyufam'Can Nozagï'Yarng Nu'Bëdel Nulnëzïng'Malom Num'Bul Nunge'Can Nur'Ngïka Nusëbr'Kamër Nusëlïm'Z N'Bëdel N'Dol Nbogu'F Nkel'To Nn'Can Nn'To Nngu'Bul Nryïtïr'Bul Nëlskel'To Nër'Kamër Nër'Malom Nësir'F Nï'Ngïka Nï'To Nïkëm'Bëdel Nïkïrnïlng'Dol Nïleya'Wulm Nïll'Dol Nïrm'Ngïka Nïyabi'Malom Ra'To Rabayïr'Can Ral'Bëdel Ralbo'Bëdel Rale'Wulm Rang'Can Ranigïm'Malom Rano'Wulm Rar'Yarng Rat'Wulm Raweg'Dol Re'Can Re'Yarng Rel'Dol Rel'Z Relël'Z Rerm'Z Ri'Bul Ri'To Rilwe'Bul Rimunul'Kamër Rin'Dol Rirm'Ngïka Risu'Ngïka Ritowu'F Riz'Malom Ro'Can Rokan'Malom Ron'Dol Rong'Can Rongo'Can Rorl'Bëdel Rorë'Yarng Rufëln'Wulm Run'Sem Rur'F Rurbi'Malom Ruya'Wulm Rlfor'Dol Rlkitë'Dol Rlngore'Dol Rm'To Rn'Can Rtëzi'F Rzuz'Kamër Rëfo'Malom Rëng'Yarng Rër'Yarng Rëtëlni'Ngïka Rëwelc'Dol Rëz'Malom Rïbïyu'F Rïcasë'Bul Rïfïrde'Yarng Rïl'F Rïln'Sem Rïrr'F Rïs'F Rïtëdë'Dol Sabël'Yarng Safu'Bul Salm'F Sarre'Bëdel Se'Can Seban'Wulm Secël'Bul Sekor'Malom Semu'Sem Sen'Kamër Sengir'Kamër Sil'Bul Sin'Yarng Singomï'Ngïka Singï'Kamër Sinur'Sem Sirl'Z Siwïy'Sem Siyïlba'Kamër Siz'Bul So'Kamër Soln'Ngïka Solye'Ngïka Som'Z Son'Z Sor'Sem Su'Dol Su'To Suka'Can Sur'Ngïka Suwë'Bëdel S'Malom Skuti'Yarng Sl'Wulm Sl'Z Slë'Can Sm'Can Sr'Wulm Stno'Can Së'Bëdel Së'Can Sëto'Bëdel Sëzr'Yarng Sï'Wulm Sï'Z Sïge'To Sïl'Bul Sïme'To Sïmolël'Malom Sïn'Wulm Sïr'To Ta'To Tarmi'Wulm Te'Wulm Tegïwël'Yarng Tel'Wulm Telwer'Bëdel Temeli'F Temullo'Kamër Tesa'Bëdel Tete'Kamër Ti'Kamër Tido'F Tidurdï'F Tilbocul'Bëdel Ting'Can Ting'Kamër Tingolbi'Ngïka Tir'Can Titïn'Ngïka To'Bul Todam'Malom Todë'Malom Tokbolm'Yarng Tolmilbïl'F Tol'To Totu'Z Towïwel'Kamër Toyër'Kamër Tu'Bëdel Tul'Kamër Tule'F Tunero'Malom Tunë'Bëdel Ture'Bul Turl'Kamër T'Malom Tlngir'Bul Tm'Malom Trdo'Can Twïr'Bëdel Tyu'Kamër Tëbërwong'Malom Tëcocën'Bëdel Tëcï'Kamër Tëlsi'Bëdel Tën'To Tër'Sem Tërbti'Ngïka Tësï'Wulm Tëyëkin'To Tïdë'Dol Tïk'Can Tïlngar'Wulm Tïm'Bul Tïn'Z Tïrngu'Bëdel Tïrëm'Sem Tïyat'Kamër Wa'Malom Wacor'Dol Wagom'Bul Wam'Malom Wan'Can We'F Weg'Ngïka Wer'Bëdel Wertun'Bëdel Wertïlë'Bëdel Wibëlse'Yarng Wico'Kamër Wife'To Wifudol'Malom Wiro'Wulm Wo'Z Wogong'Yarng Wom'Bul Worgërsë'Ngïka Woru'Kamër Worërmu'Bëdel Wotëcun'Sem Wowë'Malom Woyi'Wulm Wozuw'Ngïka Wufum'Bul Wukumë'Ngïka Wul'Bul Wul'Wulm Wunge'Bul Wur'F Wur'Kamër Wuydi'Bëdel W'F Wl'Malom Wlim'Can Wng'Can Wr'Bëdel Wr'Yarng Wë'Bul Wë'To Wëge'Z Wëkëngi'Ngïka Wërrï'Dol Wësal'Can Wëtël'To Wï'Ngïka Wïl'Malom Wïngunerl'Ngïka Wïr'Yarng Ya'Ngïka Yaba'Bul Yabel'Kamër Yaleto'Ngïka Yani'Bëdel Yasom'F Yawï'Sem Ye'F Yedadë'Can Yemi'Malom Yer'Yarng Yibïrër'Dol Yico'Malom Yifïrni'Can Yir'Can Yiralgan'Dol Yirwerlë'Ngïka Yiwr'Bul Yiyïse'Bëdel Yiza'Sem Yo'Bëdel Yo'Malom Yogite'Can Yokïfe'Can Yolta'Bul Yoltl'Yarng Yongalfïr'To Yon'Wulm Yu'Bëdel Yufim'Yarng Yumïr'Dol Yunï'Dol Yur'Bëdel Yuwa'Dol Y'Bul Yde'Dol Ylm'Ngïka Yë'Malom Yë'Yarng Yëbeng'To Yëdezël'Bul Yëdolbal'F Yëlïngo'Bëdel Yëngor'Can Yër'Yarng Yërn'Z Yës'Wulm Yësëng'F Yï'Z Yïlcërm'Can Yïner'Dol Yïngë'Can Yïr'Can Yïse'Sem Yïsnga'Bul Yïzil'Dol Yïzol'Yarng Zacm'Sem Zefuwu'To Zege'Malom Zel'Sem Zel'Yarng Zemre'Kamër Zeni'Z Zetakïng'Bul Zetïlng'Yarng Zi'Can Zi'To Zildemë'Wulm Zim'Bul Zimnam'Bul Zirl'Can Zom'Malom Zomofi'F Zor'F Zow'Can Zoyonge'To Zufen'Bul Zugicël'Wulm Zul'F Zulnë'Wulm Zung'F Zurbilu'Can Zutïyi'To Zl'Sem Zn'Yarng Zëdëcll'Yarng Zël'Bul Zël'Z Zëldïng'Sem Zëln'Dol Zëlo'Can Zëskelng'Ngïka Zët'Malom Zï'F Zïl'Bëdel Zïl'Z Zïlu'Malom Zïm'Bul Zïm'Yarng Zïngimurm'Dol Zïr'Bëdel Zïrel'Sem Zïrfer'Wulm Zïsulm'Kamër Zïzïn'Malom
+			}
+			
+			# Always combined with a second name
+			first_names = {
+			}
+			
+			# Always combined with a first name
+			second_names = {
+			}
+			
+			regnal_first_names = {
+				Bon'Rasa'Lum Cirdï'Rasa'Lum Como'Rasa'Lum Gzdl'Rasa'Lum Gïbëgo'Rasa'Lum Kim'Rasa'Lum Mebacï'Rasa'Lum Migël'Rasa'Lum Myïda'Rasa'Lum Ngim'Rasa'Lum Ngomë'Rasa'Lum Ngoyï'Rasa'Lum Selwci'Rasa'Lum Tigo'Rasa'Lum Torn'Rasa'Lum Tote'Rasa'Lum Yewe'Rasa'Lum Yisënu'Rasa'Lum Zanur'Rasa'Lum Zel'Rasa'Lum
+				
+				Busuwï'Carnu'Yï Ceto'Carnu'Yï Dëring'Carnu'Yï Dïza'Carnu'Yï Flfyïn'Carnu'Yï Geko'Carnu'Yï Kïn'Carnu'Yï Nësuyr'Carnu'Yï Recn'Carnu'Yï Zinë'Carnu'Yï
+				
+				Besel'Ko'Buw Ceyiye'Ko'Buw Dawëkum'Ko'Buw Ficel'Ko'Buw Megofon'Ko'Buw Nrm'Ko'Buw Nërm'Ko'Buw Ron'Ko'Buw Tazi'Ko'Buw Wïzugim'Ko'Buw
+
+			}
+			
+			regnal_second_names = {
+				Bir Com Gur Kem Ngïlwï Ridï Sa Sang Som Sëzë Wirkëlrï W Yo Zfu
+			}
+		}
+	}
+}

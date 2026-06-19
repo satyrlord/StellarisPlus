@@ -4,7 +4,7 @@ triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
 		OR = {
-			NOT = { has_planet_flag = toxic_knights_habitat }
+			planet = { NOT = { has_planet_flag = toxic_knights_habitat } }
 			owner = { NOT = { has_origin = origin_toxic_knights } }
 		}
 		owner = {
@@ -23,7 +23,7 @@ triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
 		OR = {
-			NOT = { has_planet_flag = toxic_knights_habitat }
+			planet = { NOT = { has_planet_flag = toxic_knights_habitat } }
 			owner = { NOT = { has_origin = origin_toxic_knights } }
 		}
 		owner = {
@@ -41,7 +41,7 @@ triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
 		OR = {
-			NOT = { has_planet_flag = toxic_knights_habitat }
+			planet = { NOT = { has_planet_flag = toxic_knights_habitat } }
 			owner = { NOT = { has_origin = origin_toxic_knights } }
 		}
 		owner = {
@@ -59,7 +59,7 @@ triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
 		OR = {
-			NOT = { has_planet_flag = toxic_knights_habitat }
+			planet = { NOT = { has_planet_flag = toxic_knights_habitat } }
 			owner = { NOT = { has_origin = origin_toxic_knights } }
 		}
 		owner = {

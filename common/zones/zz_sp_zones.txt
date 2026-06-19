@@ -3,18 +3,18 @@ zone_introspective_laboratory = {
 	icon = "GFX_district_introspective_lab"
 	base_buildtime = @zone_buildtime
 
-	potential = { # planet scope
+	potential = { # colony scope
 		exists = owner
 		owner = { has_origin = origin_orphan_matrix }
 		has_deposit = d_introspective_lab
-		has_planet_flag = d_introspective_lab
+		planet = { has_planet_flag = d_introspective_lab }
 	}
 
-	unlock = { # planet scope
+	unlock = { # colony scope
 		exists = owner
 		owner = { has_origin = origin_orphan_matrix }
 		has_deposit = d_introspective_lab
-		has_planet_flag = d_introspective_lab
+		planet = { has_planet_flag = d_introspective_lab }
 	}
 
 	resources = {
@@ -488,12 +488,12 @@ zone_habitat_knights = {
 			}
 		}
 		OR = {
-			has_planet_flag = toxic_knights_habitat
+			planet = { has_planet_flag = toxic_knights_habitat }
 			has_building = building_order_castle
 		}
 	}
 
-	unlock = { # planet scope
+	unlock = { # colony scope
 		hidden_trigger = {
 			exists = owner
 			owner = {
@@ -503,7 +503,7 @@ zone_habitat_knights = {
 				}
 			}
 			OR = {
-				has_planet_flag = toxic_knights_habitat
+				planet = { has_planet_flag = toxic_knights_habitat }
 				has_building = building_order_castle
 			}
 		}
@@ -2090,10 +2090,10 @@ zone_MZ_elite = {
         }
     }
 
-    potential = { # planet scope
+    potential = { # colony scope
         hidden_trigger = { exists = owner }
         OR = {
-            NOT = { has_planet_flag = toxic_knights_habitat }
+            planet = { NOT = { has_planet_flag = toxic_knights_habitat } }
             owner = { NOT = { has_origin = origin_toxic_knights } }
         }
         owner = {
@@ -2103,10 +2103,10 @@ zone_MZ_elite = {
         }
     }
 
-    unlock = { # planet scope
+    unlock = { # colony scope
         hidden_trigger = { exists = owner }
         OR = {
-            NOT = { has_planet_flag = toxic_knights_habitat }
+            planet = { NOT = { has_planet_flag = toxic_knights_habitat } }
             owner = { NOT = { has_origin = origin_toxic_knights } }
         }
         owner = {
@@ -2530,4 +2530,882 @@ zone_research_engineering = {
 	}
 
 	ai_priority = 15
+}
+# === merged from BPVR More Building Slots - arkship zones (4.4 Nomads) ===
+zone_ark_research_unity = {
+	icon = GFX_district_specialization_ark_research_unity_consumer_goods
+	base_buildtime = @zone_buildtime
+	potential = {
+	hidden_trigger = {
+		owner = {
+			is_nomadic = yes
+			is_gestalt = no
+		}
+	}
+}
+	unlock = {
+	hidden_trigger = {
+		owner = {
+			is_nomadic = yes
+			is_gestalt = no
+		}
+	}
+}
+	resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+	zone_sets = {
+	ark_urban
+}
+	included_building_sets = {
+	research
+	unity
+	origin
+	trade
+	physics
+	society
+	engineering
+}
+	convert_to = {
+	zone_research_unity
+}
+	inline_script = {
+	script = zones/shared_city_non_urban_zone_modifiers
+}
+	inline_script = {
+	script = jobs/zone_researchers_add
+	AMOUNT = @scaling_district_researchers_5_jobs
+	LARGE_AMOUNT = @scaling_district_researchers_2_jobs
+}
+	inline_script = {
+	script = jobs/zone_unity_jobs_add
+	AMOUNT = @scaling_district_unity_5_jobs
+}
+	inline_script = {
+	script = jobs/zone_trader_add
+	AMOUNT = @scaling_district_unity_5_jobs
+}
+	planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+}
+	triggered_desc = {
+	trigger = {
+		always = yes
+	}
+	text = zone_research_unity_triggered_desc
+}
+	ai_priority = 8
+}
+
+zone_ark_industrial = {
+	icon = GFX_district_specialization_ark_research_alloys_support
+	base_buildtime = @zone_buildtime
+	potential = {
+	hidden_trigger = {
+		owner = {
+			is_nomadic = yes
+			is_gestalt = no
+		}
+	}
+}
+	unlock = {
+	hidden_trigger = {
+		owner = {
+			is_nomadic = yes
+			is_gestalt = no
+		}
+	}
+}
+	resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+	zone_sets = {
+	ark_urban
+}
+	included_building_sets = {
+	industrial
+	foundry
+	factory
+	trade
+	origin
+}
+	convert_to = {
+	zone_industrial
+}
+	inline_script = {
+	script = zones/shared_city_non_urban_zone_modifiers
+}
+	inline_script = {
+	script = jobs/zone_foundry_add
+	AMOUNT = @scaling_district_3_jobs
+	AMOUNT2 = @scaling_district_2_jobs
+}
+	inline_script = {
+	script = jobs/zone_factory_add
+	AMOUNT = @scaling_district_3_jobs
+	AMOUNT2 = @scaling_district_3_jobs
+}
+	inline_script = {
+	script = jobs/zone_trader_add
+	AMOUNT = @scaling_district_3_jobs
+}
+	planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+}
+	triggered_desc = {
+	trigger = {
+		always = yes
+	}
+	text = zone_research_unity_triggered_desc
+}
+	ai_priority = 8
+}
+
+zone_ark_research_unity_gestalt = {
+	icon = GFX_district_specialization_ark_research_unity_consumer_goods
+	base_buildtime = @zone_buildtime
+	potential = {
+	hidden_trigger = {
+		owner = {
+			is_nomadic = yes
+			is_gestalt = yes
+		}
+	}
+}
+	unlock = {
+	hidden_trigger = {
+		owner = {
+			is_nomadic = yes
+			is_gestalt = yes
+		}
+	}
+}
+	resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+	zone_sets = {
+	ark_urban
+}
+	included_building_sets = {
+	research
+	unity
+	origin
+	trade
+}
+	convert_to = {
+	zone_research_unity
+}
+	inline_script = {
+	script = zones/shared_city_non_urban_zone_modifiers
+}
+	inline_script = {
+	script = jobs/zone_researchers_add
+	AMOUNT = @scaling_district_researchers_5_jobs
+	LARGE_AMOUNT = @scaling_district_researchers_2_jobs
+}
+	inline_script = {
+	script = jobs/zone_unity_jobs_add
+	AMOUNT = @scaling_district_unity_5_jobs
+}
+	inline_script = {
+	script = jobs/zone_trader_add
+	AMOUNT = @scaling_district_unity_5_jobs
+}
+	planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+}
+	triggered_desc = {
+	trigger = {
+		always = yes
+	}
+	text = zone_research_unity_triggered_desc
+}
+	ai_priority = 8
+}
+
+zone_ark_foundry = {
+	icon = GFX_district_specialization_ark_research_alloys_support
+	base_buildtime = @zone_buildtime
+	potential = {
+	hidden_trigger = {
+		owner = {
+			is_nomadic = yes
+			is_gestalt = yes
+		}
+	}
+}
+	unlock = {
+	hidden_trigger = {
+		owner = {
+			is_nomadic = yes
+			is_gestalt = yes
+		}
+	}
+}
+	resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+	zone_sets = {
+	ark_urban
+}
+	included_building_sets = {
+	industrial
+	foundry
+	factory
+	trade
+}
+	convert_to = {
+	zone_foundry
+}
+	inline_script = {
+	script = zones/shared_city_non_urban_zone_modifiers
+}
+	inline_script = {
+	script = jobs/zone_foundry_add
+	AMOUNT = @scaling_district_2_jobs
+	AMOUNT2 = @scaling_district_2_jobs
+}
+	inline_script = {
+	script = jobs/zone_trader_add
+	AMOUNT = @scaling_district_2_jobs
+	AMOUNT2 = @scaling_district_2_jobs
+}
+	planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+}
+	triggered_desc = {
+	trigger = {
+		always = yes
+	}
+	text = zone_research_unity_triggered_desc
+}
+	ai_priority = 8
+}
+
+zone_ark_engine_bypass = {
+	icon = GFX_district_specialization_ark_reactor
+	inline_script = {
+	script = zones/shared_ark_reactor_zone
+	AMOUNT = 50
+}
+	potential = {
+	owner = {
+		has_technology = tech_afterburners_1
+	}
+}
+	show_in_tech = tech_afterburners_1
+	show_tech_unlock_if = {
+	is_nomadic = yes
+}
+	planet_modifier = {
+	planet_technician_energy_produces_add = -2
+	ship_speed_from_technicians = 0.05
+}
+	swap_type = district_ark_engine_bypass
+	swap_type_weight = 5
+	zone_sets = {
+	ark_reactor
+}
+}
+
+zone_ark_shield_overloader = {
+	icon = GFX_district_specialization_exotic_gases
+	inline_script = {
+	script = zones/shared_ark_reactor_zone
+	AMOUNT = 50
+}
+	potential = {
+	owner = {
+		has_technology = tech_shields_2
+	}
+}
+	show_in_tech = tech_shields_2
+	show_tech_unlock_if = {
+	is_nomadic = yes
+}
+	planet_modifier = {
+	planet_technician_exotic_gases_upkeep_add = 0.02
+	planet_technician_energy_produces_add = -1
+	ship_shield_from_technicians = 0.02
+	ship_shield_regen_from_technicians = 0.02
+}
+	swap_type = district_ark_shield_overloader
+	swap_type_weight = 5
+	zone_sets = {
+	ark_reactor
+}
+}
+
+zone_ark_reactor_physics = {
+	inline_script = {
+	script = zones/shared_research_physics_zone
+	AMOUNT = @scaling_district_1_job
+}
+	potential = {
+	hidden_trigger = {
+		owner = {
+			has_technology = tech_physics_1
+		}
+	}
+}
+	show_in_tech = tech_physics_1
+	show_tech_unlock_if = {
+	is_nomadic = yes
+}
+	swap_type = district_ark_generator_physics
+	swap_type_weight = 5
+	zone_sets = {
+	ark_reactor
+}
+	included_building_sets = {
+	generator
+	fallen_empire_generator
+	generator_automation
+}
+	ai_priority = 15
+	ai_weight_coefficient = 1.1
+}
+
+zone_ark_food = {
+	inline_script = {
+	script = zones/shared_food_zone
+	AMOUNT = @base_rural_nomad_district_jobs
+}
+	zone_sets = {
+	ark_basic
+}
+	show_in_tech = tech_food_processing_1
+	swap_type = district_ark_food
+	swap_type_weight = 5
+}
+
+zone_ark_farm_society = {
+	inline_script = {
+	script = zones/shared_research_society_zone
+	AMOUNT = @scaling_district_1_job
+}
+	potential = {
+	hidden_trigger = {
+		owner = {
+			has_technology = tech_society_1
+		}
+	}
+}
+	show_in_tech = tech_society_1
+	show_tech_unlock_if = {
+	is_nomadic = yes
+}
+	zone_sets = {
+	ark_basic
+}
+	included_building_sets = {
+	society
+	zoo
+	medical
+}
+	swap_type = district_ark_basic_society
+	swap_type_weight = 5
+	ai_priority = 15
+	ai_weight_coefficient = 1.1
+}
+
+zone_ark_harvest = {
+	inline_script = {
+	script = zones/shared_ark_harvest_zone
+	AMOUNT = @base_rural_district_jobs
+}
+	show_in_tech = tech_nomads_mechanized_mining
+	show_tech_unlock_if = {
+	is_nomadic = yes
+}
+	zone_sets = {
+	ark_basic
+}
+}
+
+zone_ark_waystation_trade = {
+	icon = GFX_district_specialization_trade
+	base_buildtime = @zone_buildtime
+	potential = {
+	owner = {
+		is_nomadic = yes
+		has_technology = tech_waystation_2
+	}
+}
+	show_in_tech = tech_waystation_2
+	show_tech_unlock_if = {
+	is_nomadic = yes
+}
+	resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+	inline_script = {
+	script = jobs/zone_ark_waystation_trader_add
+	AMOUNT = @base_rural_district_jobs
+}
+	planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+}
+	ai_weight_coefficient = 0.8
+	ai_priority = 10
+	zone_sets = {
+	ark_basic
+}
+	included_building_sets = {
+	trade
+	urban
+	urban_automation
+}
+	swap_type = district_ark_waystation_trade
+	swap_type_weight = 5
+}
+
+zone_ark_missile_silos = {
+	icon = GFX_district_specialization_missile
+	base_buildtime = @zone_buildtime
+	potential = {
+	owner = {
+		has_technology = tech_missiles_2
+	}
+}
+	show_in_tech = tech_missiles_2
+	show_tech_unlock_if = {
+	is_nomadic = yes
+	NOT = {
+		has_origin = origin_forever_cruise
+	}
+}
+	resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+	inline_script = {
+	script = jobs/zone_soldiers_add
+	AMOUNT = @scaling_district_1_job
+}
+	included_building_sets = {
+	fortress
+}
+	planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+	planet_soldiers_alloys_upkeep_add = 0.15
+	weapon_explosive_from_soldiers = 0.05
+}
+	zone_sets = {
+	ark_military
+}
+	triggered_desc = {
+	text = zone_ark_missile_silos_module_synergy_tt
+}
+	ai_priority = 5
+}
+
+zone_ark_ammunition_lines = {
+	icon = GFX_district_specialization_gun
+	base_buildtime = @zone_buildtime
+	potential = {
+	owner = {
+		has_technology = tech_mass_drivers_2
+	}
+}
+	show_in_tech = tech_mass_drivers_2
+	show_tech_unlock_if = {
+	is_nomadic = yes
+	NOT = {
+		has_origin = origin_forever_cruise
+	}
+}
+	resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+	inline_script = {
+	script = jobs/zone_soldiers_add
+	AMOUNT = @scaling_district_1_job
+}
+	included_building_sets = {
+	fortress
+}
+	planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+	planet_soldiers_alloys_upkeep_add = 0.15
+	weapon_kinetic_from_soldiers = 0.05
+}
+	zone_sets = {
+	ark_military
+}
+	triggered_desc = {
+	text = zone_ark_ammunition_lines_module_synergy_tt
+}
+	ai_priority = 5
+}
+
+zone_ark_laser_capacitors = {
+	icon = GFX_district_specialization_laser
+	base_buildtime = @zone_buildtime
+	potential = {
+	owner = {
+		has_technology = tech_lasers_2
+	}
+}
+	show_in_tech = tech_lasers_2
+	show_tech_unlock_if = {
+	is_nomadic = yes
+	NOT = {
+		has_origin = origin_forever_cruise
+	}
+}
+	resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+	inline_script = {
+	script = jobs/zone_soldiers_add
+	AMOUNT = @scaling_district_1_job
+}
+	included_building_sets = {
+	fortress
+}
+	planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+	planet_soldiers_alloys_upkeep_add = 0.15
+	weapon_energy_from_soldiers = 0.05
+}
+	zone_sets = {
+	ark_military
+}
+	triggered_desc = {
+	text = zone_ark_laser_capacitors_module_synergy_tt
+}
+	ai_priority = 5
+}
+
+zone_ark_flight_decks = {
+	icon = GFX_district_specialization_fighter
+	base_buildtime = @zone_buildtime
+	potential = {
+	owner = {
+		has_technology = tech_strike_craft_1
+	}
+}
+	show_in_tech = tech_strike_craft_1
+	show_tech_unlock_if = {
+	is_nomadic = yes
+	NOT = {
+		has_origin = origin_forever_cruise
+	}
+}
+	resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+	inline_script = {
+	script = jobs/zone_soldiers_add
+	AMOUNT = @scaling_district_1_job
+}
+	included_building_sets = {
+	fortress
+}
+	planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+	planet_soldiers_alloys_upkeep_add = 0.15
+	weapon_strike_craft_from_soldiers = 0.05
+}
+	zone_sets = {
+	ark_military
+}
+	triggered_desc = {
+	text = zone_ark_flight_decks_module_synergy_tt
+}
+	ai_priority = 5
+}
+
+zone_ark_military_eco = {
+	inline_script = {
+	script = zones/shared_ark_foundry_zone
+	AMOUNT = @scaling_district_2_jobs
+	LARGE_AMOUNT = @scaling_district_1_job
+}
+	show_in_tech = tech_basic_industry
+	show_tech_unlock_if = {
+	is_nomadic = yes
+	NOT = {
+		has_origin = origin_forever_cruise
+	}
+}
+	swap_type = district_ark_military_industrial
+	swap_type_weight = 5
+	zone_sets = {
+	ark_military
+}
+}
+
+zone_ark_shipwright = {
+	icon = GFX_district_specialization_forever_cruise_crew
+	base_buildtime = @zone_buildtime
+	potential = {
+	owner = {
+		has_technology = tech_doctrine_navy_size_1
+	}
+}
+	show_in_tech = tech_doctrine_navy_size_1
+	show_tech_unlock_if = {
+	is_nomadic = yes
+	NOT = {
+		has_origin = origin_forever_cruise
+	}
+}
+	resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+	inline_script = {
+	script = jobs/zone_foundry_add
+	AMOUNT = @scaling_district_2_jobs
+	AMOUNT2 = @scaling_district_1_job
+}
+	included_building_sets = {
+	industrial
+	foundry
+}
+	planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+	planet_soldiers_alloys_upkeep_add = 0.25
+	naval_cap_from_shipwright = 2
+	ship_build_speed_from_shipwright = 0.015
+}
+	zone_sets = {
+	ark_military
+}
+	triggered_desc = {
+	trigger = {
+		owner = {
+			is_gestalt = no
+		}
+	}
+	text = zone_ark_shipwright_module_synergy_tt
+}
+	triggered_desc = {
+	trigger = {
+		owner = {
+			is_gestalt = yes
+		}
+	}
+	text = zone_ark_shipwright_module_synergy_gestalt_tt
+}
+	ai_priority = 5
+}
+
+zone_ark_military_engineering = {
+	inline_script = {
+	script = zones/shared_research_engineering_zone
+	AMOUNT = @scaling_district_1_job
+}
+	potential = {
+	hidden_trigger = {
+		owner = {
+			has_technology = tech_engineering_1
+		}
+	}
+}
+	show_in_tech = tech_engineering_1
+	show_tech_unlock_if = {
+	is_nomadic = yes
+	NOT = {
+		has_origin = origin_forever_cruise
+	}
+}
+	swap_type = district_ark_military_engineering
+	swap_type_weight = 5
+	zone_sets = {
+	ark_military
+}
+	included_building_sets = {
+	fortress
+}
+	ai_priority = 15
+	ai_weight_coefficient = 1.1
+}
+
+zone_ark_forever_cruise_passenger = {
+	icon = GFX_district_specialization_forever_cruise_passenger
+	inline_script = {
+	script = zones/shared_ark_forever_cruise_passenger_zone
+	AMOUNT = @scaling_district_1_job
+}
+	zone_sets = {
+	ark_forever_cruise
+}
+}
+
+zone_ark_forever_cruise_crew = {
+	icon = GFX_district_specialization_forever_cruise_crew
+	inline_script = {
+	script = zones/shared_ark_forever_cruise_crew_zone
+	AMOUNT = @scaling_district_1_job
+}
+	zone_sets = {
+	ark_forever_cruise
+}
+}
+
+zone_ark_forever_cruise_engineering = {
+	inline_script = {
+	script = zones/shared_research_engineering_zone
+	AMOUNT = @scaling_district_1_job
+}
+	potential = {
+	hidden_trigger = {
+		owner = {
+			has_technology = tech_engineering_1
+		}
+	}
+}
+	show_in_tech = tech_engineering_1
+	show_tech_unlock_if = {
+	is_nomadic = yes
+	has_origin = origin_forever_cruise
+}
+	swap_type = district_ark_forever_cruise_engineering
+	swap_type_weight = 5
+	zone_sets = {
+	ark_forever_cruise
+}
+	included_building_sets = {
+	ark_forever_cruise_passengers
+	ark_forever_cruise_crew
+}
+	ai_priority = 15
+	ai_weight_coefficient = 1.1
+}
+
+zone_ark_forever_cruise_city_passenger = {
+	icon = GFX_district_specialization_forever_cruise_city_passenger
+	inline_script = {
+	script = zones/shared_ark_forever_cruise_passenger_zone
+	AMOUNT = @doubled_scaling_district_1_job
+}
+	zone_sets = {
+	ark_forever_cruise_city
+}
+}
+
+zone_ark_forever_cruise_city_crew = {
+	icon = GFX_district_specialization_forever_cruise_city_crew
+	inline_script = {
+	script = zones/shared_ark_forever_cruise_crew_zone
+	AMOUNT = @doubled_scaling_district_1_job
+}
+	zone_sets = {
+	ark_forever_cruise_city
+}
+}
+
+zone_ark_forever_cruise_city_mixed = {
+	icon = GFX_district_specialization_forever_cruise_city_mixed
+	inline_script = {
+	script = zones/shared_ark_forever_cruise_city_mixed_zone
+	AMOUNT = @scaling_district_2_jobs
+}
+	zone_sets = {
+	ark_forever_cruise_city
+}
+	excluded_building_sets = {
+	generator
+	mining
+}
+}
+
+zone_ark_sacred_path_pilgrims = {
+	icon = GFX_district_specialization_ark_pilgrimage
+	inline_script = {
+	script = zones/shared_ark_pilgrim_zone
+	AMOUNT = @scaling_district_2_jobs
+}
+	inline_script = {
+	script = jobs/zone_researchers_add
+	AMOUNT = @scaling_district_researchers_4_jobs
+}
+	inline_script = {
+	script = zones/shared_city_non_urban_zone_modifiers
+}
+	zone_sets = {
+	ark_urban
+	ark_pilgrim
+	research
+	unity
+}
+	triggered_desc = {
+	text = zone_ark_sacred_path_pilgrims_tt
+	trigger = {
+		owner = {
+			has_origin = origin_sacred_path
+		}
+	}
+}
 }

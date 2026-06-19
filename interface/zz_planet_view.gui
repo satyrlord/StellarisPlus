@@ -425,6 +425,466 @@ guiTypes = {
 				alwaysTransparent = yes
 			}
 		}
+
+		# Arkship
+		containerWindowType = {
+			name = "arkship_elements"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 0 }
+			background = {
+				name = "arkship_elements"
+				spriteType = "GFX_invisible"
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "arkship_stage_icon"
+				spriteType = "GFX_arkship_blueprint_civilian_tier_1"
+				position = { x = 155 y = 292 }
+				scale = 1
+			}
+			containerWindowType = {
+				name = "arkship_header_info"
+				position = { x = 30 y = 58 }
+				instantTextBoxType = {
+					name = "arkship_level"
+					font = "font_header_20"
+					text = "ARKSHIP_CONTROLS_SHIP_SIZE"
+					position = { x = 0 y = 0 }
+					maxWidth = 500
+					maxHeight = 30
+					fixedSize = yes
+					format = left
+					vertical_alignment = center
+				}
+				instantTextBoxType = {
+					name = "hull_points"
+					font = "font_text_14"
+					text = "100%"
+					position = { x = 0 y = 30 }
+					maxWidth = 65
+					maxHeight = 24
+					fixedSize = yes
+					format = left
+					vertical_alignment = center
+				}
+				instantTextBoxType = {
+					name = "armor_points"
+					font = "font_text_14"
+					text = "100%"
+					position = { x = 70 y = 30 }
+					maxWidth = 65
+					maxHeight = 24
+					fixedSize = yes
+					format = left
+					vertical_alignment = center
+				}
+				instantTextBoxType = {
+					name = "shield_points"
+					font = "font_text_14"
+					text = "100%"
+					position = { x = 140 y = 30 }
+					maxWidth = 65
+					maxHeight = 24
+					fixedSize = yes
+					format = left
+					vertical_alignment = center
+				}
+				containerWindowType = {
+					name = "arkship_pops"
+					size = { width = 70 height = 32 }
+					position = { x = 210 y = 26 }
+					background = {
+						name = "arkship_pops"
+						spriteType = "GFX_invisible"
+					}
+					iconType = {
+						name = "arkship_pops_icon"
+						spriteType = "GFX_pop"
+						position = { x = 0 y = 0 }
+						tooltip_mode_enabled = yes
+					}
+					instantTextBoxType = {
+						name = "arkship_pops_amount"
+						font = "font_text_14"
+						text = "12"
+						position = { x = 25 y = 0 }
+						maxWidth = 45
+						maxHeight = 32
+						fixedSize = yes
+						format = left
+						vertical_alignment = center
+					}
+				}
+				containerWindowType = {
+					name = "arkship_cloaking_values"
+					position = { x = 280 y = 32 }
+					iconType = {
+						name = "arkship_cloaking_detection"
+						spriteType = "GFX_cloaking_detection_icon"
+					}
+					iconType = {
+						name = "arkship_cloaking_level"
+						spriteType = "GFX_cloaking_level_0"
+						position = { x = 20 y = 0 }
+					}
+				}
+			}
+			buttonType = {
+				name = "arkship_upgrade"
+				size = { x = 140 y = 52 }
+				position = { x = 708 y = 60 }
+				quadTextureSprite = "GFX_tiling_button_standard_seethrough"
+				buttonFont = "font_text_14"
+				clicksound = "tab_click"
+				text = "STARBASE_UPGRADE"
+			}
+			containerWindowType = {
+				name = "systems_header_container"
+				position = { x = 30 y = 201 }
+				size = { width = 136 height = 36 }
+				background = {
+					name = "systems_header_bg"
+					spriteType = "GFX_black_box_planet_view"
+				}
+				instantTextBoxType = {
+					name = "systems_header"
+					font = "font_text_16"
+					text = "SYSTEMS"
+					position = { x = 0 y = 0 }
+					maxWidth = 136
+					maxHeight = 36
+					fixedSize = yes
+					format = center
+					vertical_alignment = center
+				}
+			}
+			gridBoxType = {
+				name = "arkship_buildings_grid"
+				position = { x = 40 y = 240 }
+				size = { width = 120 height = 180 }
+				format = "UPPER_LEFT"
+				slotSize = { width = 60 height = 60 }
+				add_horizontal = yes
+				max_slots_horizontal = 2
+			}
+			containerWindowType = {
+				name = "modules_header_container"
+				position = { x = 692 y = 201 }
+				size = { width = 136 height = 36 }
+				background = {
+					name = "modules_header_bg"
+					spriteType = "GFX_black_box_planet_view"
+				}
+				instantTextBoxType = {
+					name = "modules_header"
+					font = "font_text_14"
+					text = "STARBASE_MODULES"
+					position = { x = 0 y = 0 }
+					maxWidth = 136
+					maxHeight = 36
+					fixedSize = yes
+					format = center
+					vertical_alignment = center
+				}
+			}
+			gridBoxType = {
+				name = "arkship_modules_grid"
+				position = { x = 702 y = 240 }
+				size = { width = 120 height = 180 }
+				format = "UPPER_LEFT"
+				slotSize = { width = 58 height = 58 }
+				add_horizontal = yes
+				max_slots_horizontal = 2
+			}
+			containerWindowType = {
+				name = "spinal_header_container"
+				position = { x = 692 y = 441 }
+				size = { width = 136 height = 36 }
+				background = {
+					name = "spinal_header_bg"
+					spriteType = "GFX_black_box_planet_view"
+				}
+				instantTextBoxType = {
+					name = "spinal_mount_header"
+					font = "font_text_14"
+					text = "ARKSHIP_SPINAL_MOUNT"
+					position = { x = 0 y = 0 }
+					maxWidth = 136
+					maxHeight = 36
+					fixedSize = yes
+					format = center
+					vertical_alignment = center
+				}
+			}
+			gridBoxType = {
+				name = "arkship_spinal_mount_grid"
+				position = { x = 732 y = 480 }
+				size = { width = 60 height = 60 }
+				format = "UPPER_LEFT"
+				slotSize = { width = 58 height = 58 }
+				add_horizontal = yes
+				max_slots_horizontal = 1
+			}
+			containerWindowType = {
+				name = "view_contract_header_container"
+				position = { x = 608 y = 595 }
+				size = { width = 220 height = 36 }
+				background = {
+					name = "view_contract_header_bg"
+					spriteType = "GFX_black_box_planet_view"
+				}
+				instantTextBoxType = {
+					name = "view_contract_header"
+					font = "font_text_14"
+					text = "ARKSHIP_CONTROLS_VIEW_CONTRACT_HEADER"
+					position = { x = 0 y = 0 }
+					maxWidth = 220
+					maxHeight = 36
+					fixedSize = yes
+					format = center
+					vertical_alignment = center
+					text_color_code = "H"
+				}
+			}
+			buttonType = {
+				name = "view_contract"
+				size = { x = 170 y = 42 }
+				position = { x = 633 y = 636 }
+				quadTextureSprite = "GFX_tiling_button_standard_seethrough"
+				buttonFont = "font_text_14"
+				clicksound = "tab_click"
+				buttonText = "ARKSHIP_CONTROLS_VIEW_CONTRACT"
+			}
+			containerWindowType = {
+				name = "lower_systems_header_container"
+				position = { x = 372 y = 620 }
+				size = { width = 116 height = 36 }
+				background = {
+					name = "lower_systems_header_bg"
+					spriteType = "GFX_black_box_planet_view"
+				}
+				instantTextBoxType = {
+					name = "lower_systems_header"
+					font = "font_text_14"
+					text = "SYSTEMS"
+					position = { x = 0 y = 0 }
+					maxWidth = 116
+					maxHeight = 36
+					fixedSize = yes
+					format = center
+					vertical_alignment = center
+				}
+			}
+			gridBoxType = {
+				name = "arkship_lower_buildings_grid"
+				position = { x = 311 y = 662 }
+				size = { width = 240 height = 60 }
+				format = "UPPER_LEFT"
+				slotSize = { width = 60 height = 60 }
+				add_horizontal = yes
+				max_slots_horizontal = 4
+			}
+			buttonType = {
+				name = "arkship_inspect_ship"
+				quadTextureSprite = "GFX_fleetview_inspect_ship"
+				position = { x = 795 y = 77 }
+				orientation = upper_right
+				buttonFont = "font_text_14"
+			}
+			# Arkship Fleet UI
+			containerWindowType = {
+				name = "fleet_status_container"
+				position = { x = 30 y = 595 }
+				size = { width = 220 height = 36 }
+				background = {
+					name = "fleet_status_bg"
+					spriteType = "GFX_black_box_planet_view"
+				}
+				instantTextBoxType = {
+					name = "fleet_status"
+					font = "font_text_16"
+					text = "STATUS"
+					position = { x = 0 y = 0 }
+					maxWidth = 220
+					maxHeight = 36
+					fixedSize = yes
+					format = center
+					vertical_alignment = center
+					text_color_code = "H"
+				}
+			}
+			instantTextBoxType = {
+				name = "arkship_orders_text"
+				font = "font_text_14"
+				text = "ORDERS"
+				position = { x = 35 y = 635 }
+				maxWidth = 210
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+				vertical_alignment = center
+			}
+			instantTextBoxType = {
+				name = "arkship_activity_text"
+				font = "font_text_14"
+				text = "ACTIVITY"
+				position = { x = 35 y = 660 }
+				maxWidth = 210
+				maxHeight = 64
+				fixedSize = yes
+				format = left
+			}
+			containerWindowType = {
+				name = "arkship_right_panel"
+				position = { x = -10 y = 52 }
+				size = { width = 320 height = 340 }
+				orientation = upper_right
+				origo = upper_right
+				background = {
+					name = "control_bg"
+					spriteType = "GFX_dark_area_cut_light"
+				}
+				containerWindowType = {
+					name = "arkship_controls_title_background"
+					size = { width = 100% height = 40 }
+					position = { x = 0 y = 0 }
+					background = {
+						name = "background"
+						spriteType = "GFX_dark_area_cut_light"
+					}
+					instantTextBoxType = {
+						name = "header"
+						font = "font_text_18"
+						text = "ARKSHIP_CONTROLS_CONTROLS"
+						position = { x = 10 y = 0 }
+						maxWidth = 280
+						maxHeight = 40
+						fixedSize = yes
+						vertical_alignment = center
+						text_color_code = "E"
+						alwaysTransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "arkship_governor_window"
+					position = { x = 5 y = 50 }
+					size = { width = 152 height = 160 }
+					clipping = yes
+					background = {
+						name = "background"
+						spriteType = "GFX_dark_area_cut_light"
+					}
+				}
+				containerWindowType = {
+					name = "arkship_leader_portrait_container"
+					position = { x = 163 y = 50 }
+					size = { width = 152 height = 160 }
+					clipping = yes
+					background = {
+						name = "background"
+						spriteType = "GFX_dark_area_cut_light"
+					}
+				}
+				containerWindowType = {
+					name = "modifiers_info"
+					position = { x = 0 y = 0 }
+					size = { width = 100% height = 94 }
+					orientation = center_down
+					origo = center_down
+					background = {
+						name = "orbitals_background"
+						spriteType = "GFX_darker_green_frame_area"
+						alwaysTransparent = yes
+					}
+					gridBoxType = {
+						name = "modifiers_grid"
+						position = { x = 18 y = 12 }
+						size = { width = -10 height = -10 }
+						format = "UPPER_LEFT"
+						slotSize = { width = 94 height = 30 }
+						add_horizontal = yes
+						max_slots_horizontal = 3
+					}
+					buttonType = {
+						name = "arkship_build_armies"
+						size = { x = 125 y = 32 }
+						position = { x = 25 y = -42 }
+						orientation = lower_left
+						quadTextureSprite = "GFX_tiling_button_standard_seethrough"
+						buttonFont = "font_text_14"
+						clicksound = "tab_click"
+						text = "Assault Armies"
+					}
+					buttonType = {
+						name = "arkship_build_ships"
+						size = { x = 125 y = 32 }
+						position = { x = -150 y = -42 }
+						orientation = lower_right
+						quadTextureSprite = "GFX_tiling_button_standard_seethrough"
+						buttonFont = "font_text_14"
+						clicksound = "tab_click"
+						text = "Shipyard"
+					}
+				}
+			}
+			containerWindowType = {
+				name = "arkship_build_queue_info"
+				size = { width = 310 height = -10 }
+				position = { x = -10 y = 500 }
+				orientation = upper_right
+				origo = upper_right
+				background = {
+					name = "build_queue_background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+				containerWindowType = {
+					name = "holdings_build_queue_title_background"
+					size = { width = 100% height = 40 }
+					position = { x = 0 y = 0 }
+					background = {
+						name = "background"
+						spriteType = "GFX_dark_area_cut_light"
+					}
+					instantTextBoxType = {
+						name = "header"
+						font = "font_text_18"
+						text = "QUEUE"
+						position = { x = 10 y = 0 }
+						maxWidth = 280
+						maxHeight = 40
+						fixedSize = yes
+						vertical_alignment = center
+						text_color_code = "E"
+						alwaysTransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "build_queue_subwindow"
+					size = { width = 310 height = -10 }
+					position = { x = 0 y = 40 }
+					background = {
+						name = "build_queue_background"
+						spriteType = "GFX_invisible"
+					}
+					smoothListBoxType = {
+						name = "arkship_build_queue_list"
+						position = { x = 5 y = 4 }
+						size = { x = 300 y = 558 }
+						if_scaled_resolution = {
+							min_height = 1200
+							size = { x = 300 y = 658 }
+						}
+						if_scaled_resolution = {
+							min_height = 1440
+							size = { x = 300 y = 698 }
+						}
+						borderSize = { x = 0 y = 0 }
+						scrollbarType = "standardlistbox_slider_thick"
+					}
+				}
+			}
+			# End Fleet UI
+		}
 		#<-------------------------- GOVERNOR --------------------------->
 		containerWindowType = {
 			name = "governor_window"

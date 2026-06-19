@@ -15,7 +15,7 @@ country_event = {
 
     immediate = {
         capital_scope = {
-            set_planet_flag = eotf_ancient_legacy_burial_world
+            planet = { set_planet_flag = eotf_ancient_legacy_burial_world }
             solar_system = {
                 set_star_flag = eotf_ancient_legacy_chain_system
             }
@@ -462,7 +462,7 @@ country_event = {
                 limit = {
                     capital_scope = {
                         NOT = { exists = archaeological_site }
-                        NOT = { has_planet_flag = suppress_archaeological_sites }
+                        planet = { NOT = { has_planet_flag = suppress_archaeological_sites } }
                     }
                 }
                 capital_scope = {
@@ -981,7 +981,7 @@ country_event = {
         set_country_flag = eotf_chain_started
 
         capital_scope = {
-            set_planet_flag = eotf_ancient_legacy_burial_world
+            planet = { set_planet_flag = eotf_ancient_legacy_burial_world }
             solar_system = {
                 set_star_flag = eotf_ancient_legacy_chain_system
             }
@@ -998,7 +998,7 @@ country_event = {
         set_country_flag = eotf_chain_started
 
         capital_scope = {
-            set_planet_flag = eotf_ancient_legacy_burial_world
+            planet = { set_planet_flag = eotf_ancient_legacy_burial_world }
             solar_system = {
                 set_star_flag = eotf_ancient_legacy_chain_system
             }

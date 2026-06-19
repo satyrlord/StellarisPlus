@@ -1,18 +1,5 @@
 # StellarisPlus -- Credits
 
-## Expected Dependencies (must subscribe separately)
-
-These mods are not integrated into the mod folder but are required at
-runtime for StellarisPlus to display correctly.
-
-- UI Overhaul Dynamic (Workshop ID: 1623423360)
-  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=1623423360>
-  Author: (see Workshop page)
-
----
-
-## Integrated Workshop Mods
-
 The following Workshop mods have been integrated into StellarisPlus.
 Their original authors are credited below.
 
@@ -22,7 +9,7 @@ and subsequent content changes).
 Integrated Workshop mods:
 
 - BPV Reborn - Zone Single Row Mode (Workshop ID: 3485762595)
-  Last updated: 2026-05-31
+  Last updated: 2026-06-19
   Source: backup/3485762595/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3485762595>
   Author: Sakura <https://steamcommunity.com/id/sgjsakura/myworkshopfiles/?appid=281990>
@@ -46,7 +33,7 @@ Integrated Workshop mods:
   Author: Sakura <https://steamcommunity.com/id/sgjsakura/myworkshopfiles/?appid=281990>
 
 - BPVR - More Building Slots (Workshop ID: 3576125834)
-  Last updated: 2026-05-31
+  Last updated: 2026-06-19
   Source: backup/3576125834/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3576125834>
   Author: Sakura <https://steamcommunity.com/id/sgjsakura/myworkshopfiles/?appid=281990>
@@ -113,19 +100,19 @@ Integrated Workshop mods:
   Author: Kasako
 
 - Cybrxkhan's Assortment of Namelists for Stellaris (Workshop ID: 682691478)
-  Last updated: 2026-05-31
+  Last updated: 2026-06-19
   Source: backup/682691478/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=682691478>
   Author: cybrxkhan <https://steamcommunity.com/profiles/76561198030765209/myworkshopfiles/?appid=281990>
 
 - Hyper Relay - Thinner Hyperlanes (Workshop ID: 2951278683)
-  Last updated: 2026-05-31
+  Last updated: 2026-06-19
   Source: backup/2951278683/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=2951278683>
   Author: (see Workshop page)
 
 - More AI Personalities (Workshop ID: 701432146)
-  Last updated: 2026-05-31
+  Last updated: 2026-06-19
   Source: backup/701432146/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=701432146>
   Author: cybrxkhan <https://steamcommunity.com/profiles/76561198030765209/myworkshopfiles/?appid=281990>
@@ -155,7 +142,7 @@ Integrated Workshop mods:
   Author: (see Workshop page)
 
 - Orphaned Matrix Origin (Workshop ID: 3160178733)
-  Last updated: 2026-05-31
+  Last updated: 2026-06-19
   Source: backup/3160178733/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3160178733>
   Author: Zefnar <https://steamcommunity.com/profiles/76561198047900754/myworkshopfiles/?appid=281990>

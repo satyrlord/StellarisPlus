@@ -50,16 +50,6 @@ introspective_calculator = {
 		}
 	}
 
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
-
 	weight = {
 		weight = @complex_drone_job_weight
 		mult = value:job_weights_modifier|JOB|evaluator|RESOURCE|unity|
@@ -530,15 +520,6 @@ PRA_job_administer_DEFAULT = {
 	}
 
 	#inline_script = "jobs/automodding_priority_unity"
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = ruler
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 #	Egalitarian
 PRA_job_administer_EQUAL = {
@@ -670,15 +651,6 @@ PRA_job_administer_GESTALT = {
 	}
 
 	#inline_script = "jobs/automodding_priority_unity"
-	promotion = {
-		time = @standard_promotion_time
-		effect = {
-			pop_amount_change_category = {
-				CATEGORY = complex_drone
-				AMOUNT = local_pop_amount
-			}
-		}
-	}
 }
 #	Machine
 PRA_job_administer_MACHINE = {

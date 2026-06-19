@@ -1,6 +1,6 @@
 planet_introspective_calculators = {
 	parent = planet_jobs
-	modifier_category = pop_job
+	modifier_category = pop
 	generate_mult_modifiers = {
 		produces
 		upkeep
@@ -164,7 +164,7 @@ planet_soldiers = {
 		produces
 		upkeep
 	}
-	modifier_category = pop_job
+	modifier_category = pop
 }
 # === merged from category_fix.txt ===
 stations = {
