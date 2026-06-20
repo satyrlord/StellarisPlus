@@ -2090,10 +2090,10 @@ zone_MZ_elite = {
         }
     }
 
-    potential = { # colony scope
+    potential = { # ship scope (evaluated from construction ship)
         hidden_trigger = { exists = owner }
         OR = {
-            planet = { NOT = { has_planet_flag = toxic_knights_habitat } }
+            orbit = { NOT = { has_planet_flag = toxic_knights_habitat } }
             owner = { NOT = { has_origin = origin_toxic_knights } }
         }
         owner = {
@@ -2103,10 +2103,10 @@ zone_MZ_elite = {
         }
     }
 
-    unlock = { # colony scope
+    unlock = { # ship scope
         hidden_trigger = { exists = owner }
         OR = {
-            planet = { NOT = { has_planet_flag = toxic_knights_habitat } }
+            orbit = { NOT = { has_planet_flag = toxic_knights_habitat } }
             owner = { NOT = { has_origin = origin_toxic_knights } }
         }
         owner = {

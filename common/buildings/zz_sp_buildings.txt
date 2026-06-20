@@ -1818,7 +1818,6 @@ building_slave_processing = {
 
 	planet_modifier = {
 		planet_jobs_produces_mult = 0.05
-		pop_cat_slave_political_power = -0.25
 		planet_resettlement_unemployed_mult = -0.50
 	}
 
@@ -1907,7 +1906,6 @@ building_plentiful_traditions_advanced_slave_processing = {
 	planet_modifier = {
 		job_slave_enforcer_add = 500
 		planet_jobs_produces_mult = 0.10
-		pop_cat_slave_political_power = -0.50
 		planet_resettlement_unemployed_mult = -0.75
 	}	
 

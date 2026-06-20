@@ -52,7 +52,6 @@ introspective_calculator = {
 
 	weight = {
 		weight = @complex_drone_job_weight
-		mult = value:job_weights_modifier|JOB|evaluator|RESOURCE|unity|
 		modifier = {
 			factor = 0.9
 			exists = owner
@@ -101,8 +100,7 @@ slave_enforcer = {
 	
 	triggered_planet_modifier = {
 		modifier = {
-			pop_cat_slave_political_power = -0.05
-			planet_jobs_produces_mult = 0.01
+				planet_jobs_produces_mult = 0.01
 		}		
 	}
 	
@@ -443,7 +441,6 @@ PRA_job_administer_DEFAULT = {
 	planet_modifier = {
 		PRA_smod_plnt_JOB_default = 1
 		pop_government_ethic_attraction = 0.05
-		pop_demotion_time_mult = -0.1	# ethic swap
 	}
 	triggered_planet_modifier = { # corporate
 		potential = { exists = owner		owner = { is_megacorp = yes } }
@@ -454,48 +451,40 @@ PRA_job_administer_DEFAULT = {
 	triggered_planet_modifier = { # egalitarian
 		potential = { exists = owner		owner = { has_ethic = ethic_egalitarian } }
 		pop_happiness = 0.025
-		pop_demotion_time_mult = 0.03
 	}
 	triggered_planet_modifier = {
 		potential = { exists = owner		owner = { has_ethic = ethic_fanatic_egalitarian } }
 		pop_happiness = 0.05
-		pop_demotion_time_mult = 0.06
 	}
 	triggered_planet_modifier = { # militarist
 		potential = { exists = owner		owner = { has_ethic = ethic_militarist } }
 		armies_cost_mult = -0.04
 		planet_army_build_speed_mult = 0.06
-		pop_demotion_time_mult = 0.03
 	}
 	triggered_planet_modifier = {
 		potential = { exists = owner		owner = { has_ethic = ethic_fanatic_militarist } }
 		armies_cost_mult = -0.08
 		planet_army_build_speed_mult = 0.12
-		pop_demotion_time_mult = 0.06
 	}
 	triggered_planet_modifier = { # spiritualist
 		potential = { exists = owner		owner = { has_ethic = ethic_spiritualist } }
 		planet_jobs_unity_produces_mult = 0.02
-		pop_demotion_time_mult = 0.03
 	}
 	triggered_planet_modifier = {
 		potential = { exists = owner		owner = { has_ethic = ethic_fanatic_spiritualist } }
 		planet_jobs_unity_produces_mult = 0.04
-		pop_demotion_time_mult = 0.06
 	}
 	triggered_planet_modifier = { # public scholar
 		potential = { exists = owner		owner = { has_ethic = ethic_materialist } }
 		planet_jobs_society_research_produces_mult = 0.02
 		planet_jobs_physics_research_produces_mult = 0.02
 		planet_jobs_engineering_research_produces_mult = 0.02
-		pop_demotion_time_mult = 0.03
 	}
 	triggered_planet_modifier = {
 		potential = { exists = owner		owner = { has_ethic = ethic_fanatic_materialist } }
 		planet_jobs_society_research_produces_mult = 0.04
 		planet_jobs_physics_research_produces_mult = 0.04
 		planet_jobs_engineering_research_produces_mult = 0.04
-		pop_demotion_time_mult = 0.06
 	}
 
 	weight = {

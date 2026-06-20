@@ -353,7 +353,7 @@ orphan_matrix_destroy_introspective_lab = {
 	}
 	
 	remove_deposit = d_introspective_lab
-	remove_planet_flag = d_introspective_lab
+	planet = { remove_planet_flag = d_introspective_lab }
 	
 	add_zone = {
 		district = district_nexus

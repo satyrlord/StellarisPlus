@@ -2642,7 +2642,6 @@ tr_plentiful_malice_finish = {
 tr_plentiful_malice_1 = {
 #	cost = { unity = @cost }
 	modifier = {
-		pop_cat_slave_happiness = 0.2
 	}
 	
 	ai_weight = {

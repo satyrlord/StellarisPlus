@@ -14,7 +14,7 @@ pop_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		colony = {
+		planet = {
 			owner = {
 				has_tradition = tr_plentiful_malice_adopt
 			}
@@ -52,7 +52,7 @@ pop_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		colony = {
+		planet = {
 			owner = {
 				has_tradition = tr_plentiful_malice_5
 			}
