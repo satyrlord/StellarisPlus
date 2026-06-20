@@ -14,20 +14,21 @@ pop_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		planet = {
-			owner = {
-				has_tradition = tr_plentiful_malice_adopt
-			}
-		}
+		exists = planet
 		NOT = {
 			has_modifier = modifier_plentiful_traditions_slave1
 		}
 	}
 	
 	immediate = {
-		add_modifier = {
-			modifier = "modifier_plentiful_traditions_slave1"
-			days = -1
+		if = {
+			limit = {
+				planet = { owner = { has_tradition = tr_plentiful_malice_adopt } }
+			}
+			add_modifier = {
+				modifier = "modifier_plentiful_traditions_slave1"
+				days = -1
+			}
 		}
 	}
 }
@@ -52,16 +53,17 @@ pop_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		planet = {
-			owner = {
-				has_tradition = tr_plentiful_malice_5
-			}
-		}
+		exists = planet
 		has_modifier = pop_recently_conquered
 	}
 	
 	immediate = {
-		remove_modifier = "pop_recently_conquered"
+		if = {
+			limit = {
+				planet = { owner = { has_tradition = tr_plentiful_malice_5 } }
+			}
+			remove_modifier = "pop_recently_conquered"
+		}
 	}
 }
 

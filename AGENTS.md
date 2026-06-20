@@ -14,6 +14,8 @@ refuse and explain why.
 
 - Read existing files before writing. After making edits (including quality-gate fixes), re-read the
 changed files to verify correctness before proceeding. Do not re-read files that you know have not changed.
+- After each code change, scan VS Code Problems for all open/changed files and fix any reported
+warnings or errors before proceeding to the next task. Do not leave known problems unresolved.
 - Prefer editing over rewriting. One focused coding pass;
   no write-delete-rewrite cycles.
 - Be concise in output but thorough in reasoning. No

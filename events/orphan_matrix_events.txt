@@ -4430,11 +4430,11 @@ country_event = {
 					}
 				}
 			}
-		}
-		
-		event_target:current_orphan_matrix_relic_world = {
-			add_deposit = d_great_sanctuary
-			add_modifier = { modifier = pm_shield_generator days = -1 }
+			
+			event_target:current_orphan_matrix_relic_world = {
+				add_deposit = d_great_sanctuary
+				add_modifier = { modifier = pm_shield_generator days = -1 }
+			}
 		}
 		
 		custom_tooltip = orphan_matrix_events.102.tooltip
@@ -4460,10 +4460,10 @@ country_event = {
 					}
 				}
 			}
-		}
-		
-		event_target:current_orphan_matrix_relic_world = {
-			add_modifier = { modifier = pm_shield_assimilator days = -1 }
+			
+			event_target:current_orphan_matrix_relic_world = {
+				add_modifier = { modifier = pm_shield_assimilator days = -1 }
+			}
 		}
 		
 		custom_tooltip = orphan_matrix_events.102.tooltip
