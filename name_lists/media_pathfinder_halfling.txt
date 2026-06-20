@@ -1,4 +1,4 @@
-﻿### Halfling
+### Halfling
 ### Names were made with a markov generator as well as the halfling name generators at http://www.fantasynamegenerators.com since the initial namelists were small - i have separated the names made from markov generators vs the ones i took from the sources above.
 
 cybrxkhan_pathfinder_halfling = {	

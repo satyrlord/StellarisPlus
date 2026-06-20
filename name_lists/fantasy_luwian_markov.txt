@@ -1,4 +1,4 @@
-﻿### Fantasy Luwian
+### Fantasy Luwian
 ### Luwian names and words thrown in the usual markov name generator blender thingy
 
 cybrxkhan_markov_luwian = {	

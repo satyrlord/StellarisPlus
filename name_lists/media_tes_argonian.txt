@@ -1,4 +1,4 @@
-﻿### Argonian
+### Argonian
 ### Names all from uesp.net
 
 cybrxkhan_argonian_tes = {

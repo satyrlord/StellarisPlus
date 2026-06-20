@@ -1,4 +1,4 @@
-﻿### Fantasy Paleoiberian and Celtiberian
+### Fantasy Paleoiberian and Celtiberian
 ### Names thrown into a markov generator
 
 cybrxkhan_handmade_paleoiberian = {	

@@ -7,12 +7,12 @@ eotf_ensure_ancient_legacy_chain_markers = {
 		limit = {
 			NOT = {
 				any_owned_planet = {
-					has_planet_flag = eotf_ancient_legacy_burial_world
+					planet = { has_planet_flag = eotf_ancient_legacy_burial_world }
 				}
 			}
 		}
 		capital_scope = {
-			set_planet_flag = eotf_ancient_legacy_burial_world
+			planet = { set_planet_flag = eotf_ancient_legacy_burial_world }
 			solar_system = {
 				set_star_flag = eotf_ancient_legacy_chain_system
 			}
@@ -20,7 +20,7 @@ eotf_ensure_ancient_legacy_chain_markers = {
 	}
 	every_owned_planet = {
 		limit = {
-			has_planet_flag = eotf_ancient_legacy_burial_world
+			planet = { has_planet_flag = eotf_ancient_legacy_burial_world }
 		}
 		solar_system = {
 			set_star_flag = eotf_ancient_legacy_chain_system
@@ -31,7 +31,7 @@ eotf_ensure_ancient_legacy_chain_markers = {
 eotf_save_burial_planet_as_event_target = {
 	random_owned_planet = {
 		limit = {
-			has_planet_flag = eotf_ancient_legacy_burial_world
+			planet = { has_planet_flag = eotf_ancient_legacy_burial_world }
 		}
 		save_event_target_as = eotf_burial_planet
 	}

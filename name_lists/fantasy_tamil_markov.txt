@@ -1,4 +1,4 @@
-﻿### Fantasy Tamil
+### Fantasy Tamil
 ### Names made by putting in Tamil words and names in a markov generator
 
 cybrxkhan_handmade_tamil = {

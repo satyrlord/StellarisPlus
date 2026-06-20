@@ -1,4 +1,4 @@
-﻿### Fantasy Zulu
+### Fantasy Zulu
 ### Zulu names put into a Markov name generator
 
 cybrxkhan_handmade_zulu = {	

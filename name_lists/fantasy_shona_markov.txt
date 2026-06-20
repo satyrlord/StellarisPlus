@@ -1,4 +1,4 @@
-﻿### Fantasy Shona
+### Fantasy Shona
 ### Shona names put into a Markov name generator
 
 cybrxkhan_handmade_shona = {

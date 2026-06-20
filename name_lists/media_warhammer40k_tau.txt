@@ -1,4 +1,4 @@
-﻿### Tau Namelist
+### Tau Namelist
 ### Made by Scudilo
 
 cybrxkhan_warhammer40k_tau ={

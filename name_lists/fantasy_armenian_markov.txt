@@ -1,4 +1,4 @@
-﻿### Fantasy Armenian
+### Fantasy Armenian
 ### Threw Armenian names into a markov generator
 
 cybrxkhan_handmade_armenian = {	

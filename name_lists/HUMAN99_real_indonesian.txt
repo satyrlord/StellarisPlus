@@ -1,4 +1,4 @@
-﻿### Real Indonesian
+### Real Indonesian
 ### Names taken from wikipedia
 
 cybrxkhan_real_indonesian = {

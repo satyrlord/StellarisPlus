@@ -1,4 +1,4 @@
-﻿### Handmade Etruscan
+### Handmade Etruscan
 ### Threw Etruscan names in a markov word generator
 
 cybrxkhan_handmade_etruscan = {	

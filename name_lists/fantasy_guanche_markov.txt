@@ -1,4 +1,4 @@
-﻿### Fantasy Guanche
+### Fantasy Guanche
 ### Names thrown into a markov generator
 
 cybrxkhan_handmade_guanche = {	

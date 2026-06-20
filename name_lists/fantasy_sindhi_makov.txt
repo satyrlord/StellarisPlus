@@ -1,4 +1,4 @@
-﻿### Fantasy Sindhi
+### Fantasy Sindhi
 ### Sindhi names thrown into a markov generator
 
 cybrxkhan_fantasy_sindhi = {

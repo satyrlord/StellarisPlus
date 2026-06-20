@@ -1,4 +1,4 @@
-﻿### Fantasy Egyptian
+### Fantasy Egyptian
 ### Names all from random name generation at fantasynamegenerators.com specifically the Rift/Eth and Egyptian town name generators
 
 cybrxkhan_fantasy_egyptian_2 = {

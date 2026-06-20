@@ -1,4 +1,4 @@
-﻿### CANS' EARTH
+### CANS' EARTH
 HUM5 = {
 	category = "Humanoid"
 	randomized = no

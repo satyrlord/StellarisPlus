@@ -1,4 +1,4 @@
-﻿### Real Sarmatian
+### Real Sarmatian
 ### Names from various online sources pertaining to the Sarmatians and their descendants, the Alans and Ossetians; leader namelist from Woody Man's Sarmatian namelist for CKII
 
 cybrxkhan_real_sarmatian = {

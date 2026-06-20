@@ -1,4 +1,4 @@
-﻿### Real Beothuk
+### Real Beothuk
 ### Credits to duinin for compiling original CKII namelist, 
 
 cybrxkhan_real_beothuk = {

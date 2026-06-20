@@ -1,4 +1,4 @@
-﻿### Fantasy Nubian
+### Fantasy Nubian
 ### Nubian names put into a markov name generator
 
 cybrxkhan_handmade_nubian = {

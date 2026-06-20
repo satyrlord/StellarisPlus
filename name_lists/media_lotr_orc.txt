@@ -1,4 +1,4 @@
-﻿### orc
+### orc
 ### Names all from uesp.net
 
 cybrxkhan_lotr_orc = {	

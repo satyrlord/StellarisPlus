@@ -1,4 +1,4 @@
-﻿### Reptilian 7 Namelist
+### Reptilian 7 Namelist
 ### Credits to Scudilo for his Kraddl namelist, I only made some minor changes/tweaks.
 REP7 = {
 	category = "Reptilian"

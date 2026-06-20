@@ -1,4 +1,4 @@
-﻿### Plantoid 6
+### Plantoid 6
 ### Took some elements from vanilla Plantoid 2 list but most names were from random generators at fantasynamegenerators.com (various place name generators for planets, Space Fleet for ship classes) and seventhsanctum (ship/pirate ship name generator for ship names)
 ### 
 

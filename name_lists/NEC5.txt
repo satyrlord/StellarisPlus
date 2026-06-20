@@ -1,4 +1,4 @@
-﻿### Necroid 5
+### Necroid 5
 # Armies and such based on Necroid 1 Namelist
 # Markov generated from English/American and French names
 

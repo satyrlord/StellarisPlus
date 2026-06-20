@@ -1,4 +1,4 @@
-﻿### Plantoid 7
+### Plantoid 7
 ### Took some elements from vanilla Plantoid 3 list but most names were from random generators at fantasynamegenerators.com (Ent names for ships, and fruit/vegetable names for planets and characters)
 ### 
 

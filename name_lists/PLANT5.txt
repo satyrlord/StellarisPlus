@@ -1,4 +1,4 @@
-﻿### Plantoid 5
+### Plantoid 5
 ### Took some elements from vanilla Plantoid 1 list but most names were from random generators at fantasynamegenerators.com (Energy Type for ship classes, Nymph for ship and planet names)
 ### 
 

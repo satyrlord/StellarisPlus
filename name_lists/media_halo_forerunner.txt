@@ -1,4 +1,4 @@
-﻿### halo_forerunner
+### halo_forerunner
 ### Names all from uesp.net
 
 cybrxkhan_halo_forerunner = {

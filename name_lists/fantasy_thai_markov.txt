@@ -1,4 +1,4 @@
-﻿### Fantasy Thai
+### Fantasy Thai
 ### Thai names thrown into a markov generator
 
 cybrxkhan_fantasy_thai = {	

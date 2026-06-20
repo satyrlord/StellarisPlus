@@ -1,4 +1,4 @@
-﻿### fantasy khazar
+### fantasy khazar
 ### Threw Khazar names into markov generator
 
 cybrxkhan_fantasy_khazar = {

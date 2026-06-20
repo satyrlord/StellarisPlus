@@ -1,4 +1,4 @@
-﻿### Fantasy Ethiopian
+### Fantasy Ethiopian
 ### Ethiopian names put into a Markov name generator
 
 cybrxkhan_handmade_ethiopian = {	

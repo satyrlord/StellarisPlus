@@ -1,4 +1,4 @@
-﻿### Reptilian 6
+### Reptilian 6
 ### Names are random Mongol names and words put through the "Siblant 2" language mixer at http://chaoticshiny.com/langreplace.php
 ### Fleet sequential names and army names from vanila Reptilian 3 namelist
 REP6 = {

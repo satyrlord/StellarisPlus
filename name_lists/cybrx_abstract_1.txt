@@ -1,4 +1,4 @@
-﻿### Abstract Names
+### Abstract Names
 
 cybrxkhan_abstract_1 = {	
 	category = "Reptilian"

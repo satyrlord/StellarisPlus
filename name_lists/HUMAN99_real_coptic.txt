@@ -1,4 +1,4 @@
-﻿### Real Coptic
+### Real Coptic
 ### Post-Pharaonic Egyptian names, credits to Mamluk from the PI forums
 
 cybrxkhan_real_coptic = {

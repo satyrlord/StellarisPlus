@@ -2582,7 +2582,6 @@ zone_ark_research_unity = {
 	inline_script = {
 	script = jobs/zone_researchers_add
 	AMOUNT = @scaling_district_researchers_5_jobs
-	LARGE_AMOUNT = @scaling_district_researchers_2_jobs
 }
 	inline_script = {
 	script = jobs/zone_unity_jobs_add
@@ -2657,7 +2656,6 @@ zone_ark_industrial = {
 	inline_script = {
 	script = jobs/zone_factory_add
 	AMOUNT = @scaling_district_3_jobs
-	AMOUNT2 = @scaling_district_3_jobs
 }
 	inline_script = {
 	script = jobs/zone_trader_add
@@ -2722,7 +2720,6 @@ zone_ark_research_unity_gestalt = {
 	inline_script = {
 	script = jobs/zone_researchers_add
 	AMOUNT = @scaling_district_researchers_5_jobs
-	LARGE_AMOUNT = @scaling_district_researchers_2_jobs
 }
 	inline_script = {
 	script = jobs/zone_unity_jobs_add
@@ -2796,7 +2793,6 @@ zone_ark_foundry = {
 	inline_script = {
 	script = jobs/zone_trader_add
 	AMOUNT = @scaling_district_2_jobs
-	AMOUNT2 = @scaling_district_2_jobs
 }
 	planet_modifier = {
 	zone_building_slots_add = @BPV_ZONE_SLOT

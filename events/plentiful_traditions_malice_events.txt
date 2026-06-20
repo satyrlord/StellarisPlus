@@ -14,8 +14,10 @@ pop_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		owner = {
-			has_tradition = tr_plentiful_malice_adopt
+		colony = {
+			owner = {
+				has_tradition = tr_plentiful_malice_adopt
+			}
 		}
 		NOT = {
 			has_modifier = modifier_plentiful_traditions_slave1
@@ -50,8 +52,10 @@ pop_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		owner = {
-			has_tradition = tr_plentiful_malice_5
+		colony = {
+			owner = {
+				has_tradition = tr_plentiful_malice_5
+			}
 		}
 		has_modifier = pop_recently_conquered
 	}

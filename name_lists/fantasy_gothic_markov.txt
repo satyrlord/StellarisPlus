@@ -1,4 +1,4 @@
-﻿### Fantasy gothic
+### Fantasy gothic
 ### Names made using a markov generator, based on Old gothic namelist by Blood Merchant
 
 cybrxkhan_handmade_gothic = {	

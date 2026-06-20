@@ -1,4 +1,4 @@
-﻿### Real Sogdian
+### Real Sogdian
 ### Names from various online sources
 
 cybrxkhan_real_sogdian = {	

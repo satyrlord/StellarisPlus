@@ -1,4 +1,4 @@
-﻿### Naboo
+### Naboo
 ### Names from fantasynamegenerator.com
 
 cybrxkhan_starwars_naboo = {

@@ -1,4 +1,4 @@
-﻿### Real Burushaski
+### Real Burushaski
 
 cybrxkhan_real_burushaski = {
 	category = "Humanoid"

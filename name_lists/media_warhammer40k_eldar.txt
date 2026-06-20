@@ -1,4 +1,4 @@
-﻿### Eldar Namelist
+### Eldar Namelist
 ### Made by Scudilo
 
 cybrxkhan_warhammer40k_eldar = {

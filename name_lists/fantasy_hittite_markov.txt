@@ -1,4 +1,4 @@
-﻿### Fantasy Hittite
+### Fantasy Hittite
 ### Hittite names and words thrown in the usual markov name generator blender thingy
 
 cybrxkhan_markov_hittite = {

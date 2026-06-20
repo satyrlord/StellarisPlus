@@ -1,4 +1,4 @@
-﻿### Real japanese
+### Real japanese
 ### Names from various online sources
 
 cybrxkhan_real_japanese = {	

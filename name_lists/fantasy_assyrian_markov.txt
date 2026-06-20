@@ -1,4 +1,4 @@
-﻿### Fantasy Assyrian
+### Fantasy Assyrian
 ### Threw Assyrian names into a markov generator
 
 cybrxkhan_handmade_assyrian = {	

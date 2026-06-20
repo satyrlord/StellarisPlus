@@ -1,4 +1,4 @@
-﻿### Warhammer Empire
+### Warhammer Empire
 ### Names all from random name generation at donjon http://fantasynamegenerators.com/ and also thrown into markov generator
 
 cybrxkhan_warhammer_empire = {

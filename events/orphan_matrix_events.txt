@@ -810,7 +810,7 @@ country_event = {
 			
 			capital_scope = {
 				add_deposit = d_introspective_lab
-				set_planet_flag = d_introspective_lab
+				planet = { set_planet_flag = d_introspective_lab }
 				
 				add_zone = {
 					district = district_nexus
@@ -844,7 +844,7 @@ country_event = {
 			
 			capital_scope = {
 				add_deposit = d_introspective_lab
-				set_planet_flag = d_introspective_lab
+				planet = { set_planet_flag = d_introspective_lab }
 			}
 			
 			set_timed_country_flag = { flag = situation_not_boring_yet days = 14400 }
@@ -4420,13 +4420,8 @@ country_event = {
 		hidden_effect = {
 			remove_country_flag = cryo_vats_project_ongoing
 			set_country_flag = cryo_vats_project_done
-		}
-		
-		event_target:current_orphan_matrix_relic_world = {
-			add_deposit = d_great_sanctuary
-			add_modifier = { modifier = pm_shield_generator days = -1 }
 			
-			hidden_effect = {
+			event_target:current_orphan_matrix_relic_world = {
 				while = {
 					count = 20
 					create_pop = {
@@ -4442,9 +4437,14 @@ country_event = {
 					}
 				}
 			}
-			
-			custom_tooltip = orphan_matrix_events.102.tooltip
 		}
+		
+		event_target:current_orphan_matrix_relic_world = {
+			add_deposit = d_great_sanctuary
+			add_modifier = { modifier = pm_shield_generator days = -1 }
+		}
+		
+		custom_tooltip = orphan_matrix_events.102.tooltip
 	}
 	
 	option = {
@@ -4457,12 +4457,8 @@ country_event = {
 		hidden_effect = {
 			remove_country_flag = cryo_vats_project_ongoing
 			set_country_flag = cryo_vats_project_done
-		}
-		
-		event_target:current_orphan_matrix_relic_world = {
-			add_modifier = { modifier = pm_shield_assimilator days = -1 }
 			
-			hidden_effect = {
+			event_target:current_orphan_matrix_relic_world = {
 				while = {
 					count = 20
 					create_pop = {
@@ -4478,9 +4474,13 @@ country_event = {
 					}
 				}
 			}
-			
-			custom_tooltip = orphan_matrix_events.102.tooltip
 		}
+		
+		event_target:current_orphan_matrix_relic_world = {
+			add_modifier = { modifier = pm_shield_assimilator days = -1 }
+		}
+		
+		custom_tooltip = orphan_matrix_events.102.tooltip
 	}
 	
 	after = {}

@@ -1,4 +1,4 @@
-﻿### Fantasy Turkish
+### Fantasy Turkish
 ### Threw turkish names into a blender markov generator
 
 cybrxkhan_handmade_turkish = {

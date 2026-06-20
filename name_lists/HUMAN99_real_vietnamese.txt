@@ -1,4 +1,4 @@
-﻿### Real Vietnamese
+### Real Vietnamese
 ### Most ship names taken from wikipedia from both the South Vietnamese navies and the current Vietnam's navies
 
 cybrxkhan_real_vietnamese = {

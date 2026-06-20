@@ -48,7 +48,7 @@ event = {
 					has_modifier = modifier_mutagenesis_transformation
 					owner = { has_ascension_perk = ap_plentiful_traditions_mutagenesis_universalis }
 				}
-				planet_event = { id = plentiful_traditions_mutagenesis.3 }
+				planet = { planet_event = { id = plentiful_traditions_mutagenesis.3 } }
 			}
 			every_owned_planet = {
 				limit = {

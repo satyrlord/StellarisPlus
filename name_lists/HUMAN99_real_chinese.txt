@@ -1,4 +1,4 @@
-﻿### Real Chinese
+### Real Chinese
 ### Most ship names taken from wikipedia
 
 cybrxkhan_real_chinese = {

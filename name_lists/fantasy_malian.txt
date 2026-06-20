@@ -1,4 +1,4 @@
-﻿### Fantasy Malian/West African
+### Fantasy Malian/West African
 ### Names all from random name generation at donjon and http://fantasynamegenerators.com/
 
 cybrxkhan_fantasy_malian = {

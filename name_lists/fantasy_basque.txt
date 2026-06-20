@@ -1,4 +1,4 @@
-﻿### Fantasy basque
+### Fantasy basque
 ### Names all from random name generation at http://www.mwyler.com/fng/
 
 cybrxkhan_fantasy_basque = {

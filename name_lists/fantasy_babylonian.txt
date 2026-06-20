@@ -1,4 +1,4 @@
-﻿### Fantasy Babylonian
+### Fantasy Babylonian
 ### Names all from random name generation at donjon and http://www.dragonsmark.com/names.php
 
 cybrxkhan_fantasy_babylonian = {

@@ -1,4 +1,4 @@
-﻿### Kushan/Hiigaran Namelist
+### Kushan/Hiigaran Namelist
 ### Made By Scudilo
 
 cybrxkhan_homeworld_kushan = {

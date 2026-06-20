@@ -1,4 +1,4 @@
-﻿### Fantasy samoan
+### Fantasy samoan
 ### Tossed IRL Samoan names into a markov generator
 
 cybrxkhan_handmade_samoan = {

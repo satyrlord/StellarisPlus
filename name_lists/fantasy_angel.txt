@@ -1,4 +1,4 @@
-﻿### Fantasy Angel
+### Fantasy Angel
 ### Names based on Angel and God/Goddess names from fantasynamegenerator.com
 
 cybrxkhan_fantasy_angel = {	

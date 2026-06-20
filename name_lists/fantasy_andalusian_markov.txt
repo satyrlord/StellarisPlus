@@ -1,4 +1,4 @@
-﻿### Andalusian
+### Andalusian
 ### Threw andalusian names into a markov generator woot
 
 cybrxkhan_fantasy_andalusian = {

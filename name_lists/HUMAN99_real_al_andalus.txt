@@ -1,4 +1,4 @@
-﻿### Real Al-Andalus
+### Real Al-Andalus
 ### Credits to the CKII Andalusian Arabic namelist, and for duinin for compiling original Moorish/Andalusian namelist for CKII
 
 cybrxkhan_real_al_andalus = {

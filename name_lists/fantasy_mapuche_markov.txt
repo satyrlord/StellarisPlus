@@ -1,4 +1,4 @@
-﻿### Fantasy Mapuche
+### Fantasy Mapuche
 ### Mapuche names thrown into a markov generator
 
 cybrxkhan_handmade_mapuche = {	

@@ -1,4 +1,4 @@
-﻿### Fantasy apostrophe_3
+### Fantasy apostrophe_3
 ### This is kind of a parody of all those apostrophes in fantasy and sci'fi
 ### However, I quickly whipped up a conlang phonology for this one, so the apostrophes here actually make logical sense - in this case, the apostrophes represent ejective consonants
 ### For more on ejective consonants, and one way real world languages use apostrophes, see here: https://en.wikipedia.org/wiki/Ejective_consonant

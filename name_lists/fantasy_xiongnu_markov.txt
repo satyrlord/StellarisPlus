@@ -1,4 +1,4 @@
-﻿### Xiongnu
+### Xiongnu
 ### Xiongnu names thrown into a markov generator
 
 cybrxkhan_handmade_xiongnu = {

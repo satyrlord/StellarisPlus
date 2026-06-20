@@ -52,7 +52,7 @@ situation_eotf_questioning_the_divine = {
 						limit = {
 							capital_scope = {
 								NOT = { exists = archaeological_site }
-								NOT = { has_planet_flag = suppress_archaeological_sites }
+								planet = { NOT = { has_planet_flag = suppress_archaeological_sites } }
 							}
 						}
 						capital_scope = {

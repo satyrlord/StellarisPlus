@@ -1,4 +1,4 @@
-﻿### altmer
+### altmer
 ### Names all from uesp.net
 
 cybrxkhan_altmer = {

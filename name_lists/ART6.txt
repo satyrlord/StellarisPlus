@@ -1,4 +1,4 @@
-﻿### Arthropoid 6
+### Arthropoid 6
 ### Based on vanilla Arthropoid 3
 
 ART6 = {	

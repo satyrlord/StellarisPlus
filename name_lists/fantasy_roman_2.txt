@@ -1,4 +1,4 @@
-﻿### Fantasy Roman
+### Fantasy Roman
 ### Names all from random name generation at http://fantasynamegenerators.com/ (specifically the Turian (Mass Effect) name generator, the Cassian (Wildstar) name geneator the SE European name generator)
 
 cybrxkhan_fantasy_roman_2 = {	

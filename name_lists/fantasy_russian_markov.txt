@@ -1,4 +1,4 @@
-﻿### Fantasy Russian
+### Fantasy Russian
 ### markov name generator
 
 cybrxkhan_fantasy_russian = {

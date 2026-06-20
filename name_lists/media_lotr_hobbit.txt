@@ -1,4 +1,4 @@
-﻿### Hobbitses
+### Hobbitses
 ### Names taken from http://www.halloftimelibrary.com/shireofthehobbits/concerninghobbits/names.htm 
 ### Some were made with a markov generator as well as the hobbit name generators at http://www.fantasynamegenerators.com since the initial namelists were small - i have separated the names made from markov generators vs the ones i took from the sources above.
 
