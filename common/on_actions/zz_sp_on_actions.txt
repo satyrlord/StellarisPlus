@@ -196,10 +196,8 @@ on_megastructure_upgraded = {
 }
 # === merged from 99_orphan_matrix_on_actions.txt ===
 # === merged from zz_sp_on_actions.txt ===
-# === merged from 00_nson_on_actions.txt ===
 on_yearly_pulse = {
 	events = {
-		nson.1
 		plentiful_traditions_fixer.1
 		plentiful_traditions_technology.1
 		# plentiful_traditions_malice.6

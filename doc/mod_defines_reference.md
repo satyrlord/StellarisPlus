@@ -125,7 +125,6 @@ Paradox Script (`.txt`). Event chains and on-action hooks.
 - `events/simpletraditions_events.txt` -- Simple Traditions events
 - `events/MZ_events.txt` -- More Zones district-swap events
 - `events/permanent_decisions_events.txt` -- Permanent Decisions events
-- `events/zz_nson_events.txt` -- NoSkullOnlyNumber events
 
 ### Interface -- `interface/`
 

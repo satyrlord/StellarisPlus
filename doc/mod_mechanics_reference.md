@@ -190,18 +190,6 @@ Content files (prefixed `PRA_`):
 
 ---
 
-## Integrated Mod: NoSkullOnlyNumber
-
-Removes skull icons from fleet power displays and replaces them with
-numeric values. Runs via a yearly pulse event.
-
-Content files:
-
-- `common/on_actions/00_nson_on_actions.txt` -- Yearly pulse hook
-- `events/zz_nson_events.txt` -- Fleet iteration event
-
----
-
 ## Integrated Mod: Permanent Decisions
 
 Adds permanent planet decisions for Encourage Planetary Growth and

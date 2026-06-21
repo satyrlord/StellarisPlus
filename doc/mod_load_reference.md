@@ -41,7 +41,6 @@ or verifying per-folder load behaviour.
 - `zz_bpv_*`, `zzzz_bpv_*` -- BPV Reborn slot system files
 - `BPV_district_slots*` -- BPV inline script templates
 - `PRA_*` -- Reworked Planetary Ascension files
-- `zz_nson_*`, `00_nson_*` -- NoSkullOnlyNumber files
 - `permanent_decisions_*` -- Permanent Decisions files
 - `simpletraditions_*` -- Simple Traditions files
 

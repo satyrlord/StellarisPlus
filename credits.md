@@ -44,12 +44,6 @@ Integrated Workshop mods:
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=827354193>
   Author: SeeleDE <https://steamcommunity.com/profiles/76561198051415785/myworkshopfiles/?appid=281990>
 
-- NoSkullOnlyNumber (Workshop ID: 3257903117)
-  Last updated: 2026-05-31
-  Source: backup/3257903117/
-  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3257903117>
-  Author: Aeryn <https://steamcommunity.com/id/Zoryn4163/myworkshopfiles/?appid=281990>
-
 - Permanent Decisions - Encourage Planetary Growth / Distribute Luxury
   Last updated: 2026-05-31
   Goods (Workshop ID: 1783381443)
