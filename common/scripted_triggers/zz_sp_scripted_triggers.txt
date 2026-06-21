@@ -368,23 +368,10 @@ has_precursor_intro = {
 }
 # === merged from zz_sp_gpm_relic_compat.txt ===
 # zz_sp_ late override: narrow GPM relic probing to relic keys that StellarisPlus actually provides.
+# StellarisPlus does not ship any custom relics; this trigger always returns false to
+# prevent "Failed to deferred read key reference" crashes from invalid external relic keys.
 gpm_has_other_mod_relic = {
-	OR = {
-		has_relic = r_aspmod_geocentric_device
-		has_relic = r_aspmod_communist_manifesto
-		has_relic = r_aspmod_vermifugum
-		has_relic = r_aspmod_deadspace_marker
-		has_relic = r_aspmod_synthetic_god_mummy
-		has_relic = r_aspmod_the_replicator
-		has_relic = r_aspmod_the_last_tribute
-		has_relic = r_aspmod_parasite_machine
-		has_relic = r_aspmod_parasite_machine_2
-		has_relic = r_scfe_music_of_the_universe
-		has_relic = r_scfe_protagonist_of_the_show
-		has_relic = r_scfe_sless_gene_template
-		has_relic = r_scfe_diary_of_innovo
-		has_relic = r_scfe_astanine_last_projector
-	}
+	always = no
 }
 # === merged from zzz_soe_just_researched_fe_tech.txt ===
 # Suppresses duplicate crisis.7280 after SOE dark-matter gifts (see soe_block_fe_milestone_from_soe_gift).

@@ -1,5 +1,25 @@
 # StellarisPlus -- Changelog
 
+Date: 2026-06-21
+
+- Bug fix: CTD when opening diplomacy with fallen empires
+  - Root cause: UI Overhaul Dynamic's diplomacy_view.gui omits 4 vanilla
+    positionTypes (diplo_full_width, diplo_compact_width,
+    target_selector_full_position, target_selector_compact_position);
+    when the diplomacy UI tries to look them up, the null gui_type
+    causes a crash-to-desktop.
+  - Created interface/zzzz_sp_uiod_diplomacy_compat.gui to restore
+    the missing positionTypes with vanilla values.
+  - Load order note: StellarisPlus should be placed AFTER UI Overhaul
+    Dynamic in the launcher so its zz_/zzzz_ file-level overrides win.
+
+- Bug fix: Deferred key reference crashes from gpm_has_other_mod_relic
+  - Replaced 14 references to non-existent external mod relic keys
+    (r_aspmod_*, r_scfe_*) with always = no in
+    common/scripted_triggers/zz_sp_scripted_triggers.txt.
+  - StellarisPlus ships no custom relics; the trigger now correctly
+    always returns false.
+
 Date: 2026-06-10
 
 - Bug fix: Missing effects tradition errors for 7 traditions
