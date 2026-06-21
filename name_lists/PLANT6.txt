@@ -109,19 +109,19 @@ PLANT6 = {
 		}
 
 		clone_army = { 
-			sequential_name = "Stalk of Many %R%"
+			sequential_name = PLANT6_xxCLONEARMY_SEQ
 		}
 
 		perfected_clone_army = { 
-			sequential_name = "Stalk of Many %R%"
+			sequential_name = PLANT6_xxCLONEARMY_SEQ
 		}
 		
 		robotic_army = {
-			sequential_name = "Iron Stalk %R%"
+			sequential_name = PLANT6_xxROBOTICARMY_SEQ
 		}
 
 		robotic_defense_army = {
-			sequential_name = "Iron Branch %R%"
+			sequential_name = PLANT6_xxROBOTICDEFENSEARMY_SEQ
 		}
 		
 		psionic_army = { 
