@@ -22,7 +22,7 @@ pop_event = {
 	immediate = {
 		if = {
 			limit = {
-				owner = { has_tradition = tr_plentiful_malice_adopt }
+				planet = { owner = { has_tradition = tr_plentiful_malice_adopt } }
 			}
 			add_modifier = {
 				modifier = "modifier_plentiful_traditions_slave1"
@@ -58,7 +58,7 @@ pop_event = {
 	immediate = {
 		if = {
 			limit = {
-				owner = { has_tradition = tr_plentiful_malice_5 }
+				planet = { owner = { has_tradition = tr_plentiful_malice_5 } }
 			}
 			remove_modifier = "pop_recently_conquered"
 		}
