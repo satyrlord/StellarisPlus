@@ -2,6 +2,11 @@
 
 Date: 2026-06-21
 
+- Bug fix: Introspection Complex (zone_introspective_laboratory) had only 3 building
+  slots — a vanilla remnant — instead of the mod-standard 6 (@BPV_ZONE_SLOT).
+  Changed max_buildings from hardcoded 3 to @BPV_ZONE_SLOT in
+  common/zones/zz_sp_zones.txt.
+
 - Feature: Machine Empire Food District Zone Retrofit
   - Added two machine-empire-only zones (zone_sp_machine_food_energy,
     zone_sp_machine_food_minerals) that fit in slot_food and use swap_type
@@ -11,6 +16,25 @@ Date: 2026-06-21
     to allow machine empire access without food_processing_1 tech.
   - Added to common/zones/zz_sp_zones.txt and
     common/zone_slots/zz_sp_specialization_unlocks.txt.
+
+- Bug fix: Orphaned Matrix event chain never triggered — archaeological site not created
+  - Two independent bugs prevented site creation:
+    1. `orphan_matrix_events.1` (a country_event) had a `trigger` block wrapping
+       conditions in an invalid `owner = { ... }` scope. From a country scope,
+       `owner` does not exist, so the trigger always evaluated to false, silently
+       preventing the event from firing.
+    2. The archaeological site type `ancient_buried_vault_digsite` had a `potential`
+       trigger depending on `@from.planet` to resolve a per-planet country flag.
+       During site creation via `create_archaeological_site`, `from` is unset
+       (no scanning ship exists yet), so `@from.planet` resolved to nothing,
+       the flag check always failed, and the creation effect silently did nothing.
+  - Fixed by: (a) removing the `owner` wrapper in the event trigger; (b) replacing
+    the fragile `@from.planet` flag check in the site's `potential` and `visible`
+    triggers with a direct origin check (`is_machine_empire = yes` +
+    `has_origin = origin_orphan_matrix`), matching the pattern used by the other
+    Orphaned Matrix site (`om_ancient_ecu_digsite`) and all EOTF sites.
+  - Removed the now-unused `set_country_flag = ancient_buried_vault_arcsite_owner`
+    from the event.
 
 - Bug fix: CTD when opening diplomacy with fallen empires
   - Root cause: UI Overhaul Dynamic's diplomacy_view.gui omits 4 vanilla

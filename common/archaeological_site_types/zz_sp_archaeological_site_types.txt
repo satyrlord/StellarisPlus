@@ -113,17 +113,17 @@ ancient_buried_vault_digsite = {
 	}
 
 	potential = {
-		hidden_trigger = {
-			owner = {
-				has_country_flag = ancient_buried_vault_arcsite_owner@from.planet
-			}
+		owner = {
+			is_machine_empire = yes
+			has_origin = origin_orphan_matrix
 		}
 	}
 
 	visible = {
 		default_site_visible_trigger = yes
 		owner = {
-			has_country_flag = ancient_buried_vault_arcsite_owner@from.planet
+			is_machine_empire = yes
+			has_origin = origin_orphan_matrix
 		}
 	}
 

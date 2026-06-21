@@ -24,7 +24,7 @@ zone_introspective_laboratory = {
 		}
 	}
 
-	max_buildings = 3
+	max_buildings = @BPV_ZONE_SLOT
 
 	zone_sets = {
 		urban
