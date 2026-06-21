@@ -3405,3 +3405,97 @@ zone_ark_sacred_path_pilgrims = {
 	}
 }
 }
+
+# === STELLARISPLUS ORIGINAL FEATURE ===
+# Machine Empire Food District Retrofit Zones
+# Allows machine empires to swap the zone in slot_food to transform
+# food districts into generator or mining districts.
+# See doc/new-features.md 2026-06-21.
+
+# Machine Empire — Food District → Energy
+zone_sp_machine_food_energy = {
+	icon = GFX_district_specialization_wilderness_energy
+	base_buildtime = @zone_buildtime
+
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+
+	unlock = {
+		always = yes
+	}
+
+	resources = {
+		category = planet_zones
+		cost = { minerals = @zone_cost }
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = { food }
+
+	included_building_sets = {
+		generator
+		generator_automation
+		urban
+	}
+
+	swap_type = district_generator
+	swap_type_weight = 5
+
+	inline_script = {
+		script = jobs/technicians_add
+		AMOUNT = @base_rural_district_jobs
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	ai_priority = 1
+}
+
+# Machine Empire — Food District → Minerals
+zone_sp_machine_food_minerals = {
+	icon = GFX_district_specialization_wilderness_minerals
+	base_buildtime = @zone_buildtime
+
+	potential = {
+		exists = owner
+		owner = { is_machine_empire = yes }
+	}
+
+	unlock = {
+		always = yes
+	}
+
+	resources = {
+		category = planet_zones
+		cost = { minerals = @zone_cost }
+	}
+
+	max_buildings = @BPV_ZONE_SLOT
+
+	zone_sets = { food }
+
+	included_building_sets = {
+		mining
+		mining_automation
+		urban
+	}
+
+	swap_type = district_mining
+	swap_type_weight = 5
+
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = @base_rural_district_jobs
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	ai_priority = 1
+}

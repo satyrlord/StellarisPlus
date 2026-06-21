@@ -2,6 +2,16 @@
 
 Date: 2026-06-21
 
+- Feature: Machine Empire Food District Zone Retrofit
+  - Added two machine-empire-only zones (zone_sp_machine_food_energy,
+    zone_sp_machine_food_minerals) that fit in slot_food and use swap_type
+    to transform farming districts into generator or mining districts via
+    the zone-swap UI.
+  - Overrode slot_food unlock in zone_slots/zz_sp_specialization_unlocks.txt
+    to allow machine empire access without food_processing_1 tech.
+  - Added to common/zones/zz_sp_zones.txt and
+    common/zone_slots/zz_sp_specialization_unlocks.txt.
+
 - Bug fix: CTD when opening diplomacy with fallen empires
   - Root cause: UI Overhaul Dynamic's diplomacy_view.gui omits 4 vanilla
     positionTypes (diplo_full_width, diplo_compact_width,
