@@ -1130,7 +1130,7 @@ tr_plentiful_anguish_4 = {
 
 tr_plentiful_anguish_5 = {
 #	cost = { unity = @cost }
-	
+	custom_tooltip_with_modifiers = tr_plentiful_anguish_5_desc
 	possible = {
 		has_tradition = tr_plentiful_anguish_3
 	}
@@ -1510,6 +1510,7 @@ tr_plentiful_assault_5 = {
 
 tr_plentiful_biogenesis_adopt = {
 #	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_biogenesis_adopt_desc
 	modifier = {
 		category_biology_research_speed_mult = 0.2
 	}
@@ -2641,6 +2642,7 @@ tr_plentiful_malice_finish = {
 
 tr_plentiful_malice_1 = {
 #	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_malice_1_desc
 	modifier = {
 	}
 	
@@ -2917,7 +2919,7 @@ tr_plentiful_mysticism_1 = {
 		leader_lifespan_add = 20
 	}
 #Obelisk1
-		custom_tooltip_with_modifiers = tr_plentiful_mysticism_1_desc
+	custom_tooltip_with_modifiers = tr_plentiful_mysticism_1_desc
 	ai_weight = {
 		factor = 1000
 	}
@@ -2931,6 +2933,7 @@ tr_plentiful_mysticism_1 = {
 			has_authority = auth_machine_intelligence
 		}
 
+		custom_tooltip_with_modifiers = tr_plentiful_mysticism_1_machine_desc
 		modifier = {
 			category_field_manipulation_research_speed_mult = 0.2
 		}
@@ -3142,6 +3145,7 @@ tr_plentiful_order_2 = {
 
 tr_plentiful_order_3 = {
 #	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_order_3_desc
 	
 	modifier = {
 		category_voidcraft_research_speed_mult = 0.25
@@ -3190,6 +3194,7 @@ tr_plentiful_order_5 = {
 
 tr_plentiful_robotics_adopt = {
 #	cost = { unity = @cost }
+	custom_tooltip_with_modifiers = tr_plentiful_robotics_adopt_desc
 	
 	modifier = {
 		category_computing_research_speed_mult = 0.2
@@ -3203,6 +3208,7 @@ tr_plentiful_robotics_adopt = {
 		trigger = {
 			has_authority = auth_hive_mind
 		}
+		custom_tooltip_with_modifiers = tr_plentiful_robotics_hive_adopt_desc
 		
 		modifier = {
 			category_computing_research_speed_mult = 0.2

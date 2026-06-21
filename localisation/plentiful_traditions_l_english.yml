@@ -120,11 +120,11 @@ tradition_plentiful_robotics_hive:0 "Mass"
 tradition_plentiful_robotics_hive_desc:0 "Through mass we reach infinite power!"
 
 tr_plentiful_robotics_adopt:0 "Robotics Traditions"
-#tr_plentiful_robotics_adopt_desc:0 "$tradition_plentiful_robotics_desc$\n\n$tr_plentiful_robotics_adopt_effect$\n\n$tr_plentiful_robotics_finish_effect$"
+tr_plentiful_robotics_adopt_desc:0 "Adopt the §H$tr_plentiful_robotics_adopt$§! tradition tree."
 #tr_plentiful_robotics_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\n§Y$mod_category_computing_research_speed_mult$§! increased by §G+20%§!."
 
 tr_plentiful_robotics_hive_adopt:0 "Mass-Traditions"
-#tr_plentiful_robotics_hive_adopt_desc:0 "$tradition_plentiful_robotics_hive_desc$\n\n$tr_plentiful_robotics_hive_adopt_effect$\n\n$tr_plentiful_robotics_hive_finish_effect$"
+tr_plentiful_robotics_hive_adopt_desc:0 "Adopt the §H$tr_plentiful_robotics_hive_adopt$§! tradition tree."
 #tr_plentiful_robotics_hive_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\n§Y$mod_category_computing_research_speed_mult$§! increased by §G+20%§!."
 
 tr_plentiful_robotics_finish:0 "Robotics Traditions Finished"
@@ -248,7 +248,7 @@ trait_plentiful_traditions_robot_blockchain_enthusiasts_desc:0 "§LQuantum block
 tradition_plentiful_biogenesis:0 "Biogenesis"
 tradition_plentiful_biogenesis_desc:0 "Any living organism can be altered for the better, striving for perfection at all cost."
 tr_plentiful_biogenesis_adopt:0 "Biogenesis Traditions"
-#tr_plentiful_biogenesis_adopt_desc:0 "$tradition_plentiful_biogenesis_desc$\n\n$tr_plentiful_biogenesis_adopt_effect$\n\n$tr_plentiful_biogenesis_finish_effect$"
+tr_plentiful_biogenesis_adopt_desc:0 "Adopt the §H$tr_plentiful_biogenesis_adopt$§! tradition tree."
 #tr_plentiful_biogenesis_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\n§Y$mod_category_biology_research_speed_mult$§! increased by §G+20%§!."
 
 tr_plentiful_biogenesis_finish:0 "Biogenesis Traditions Finished"
@@ -907,7 +907,7 @@ tr_plentiful_anguish_4_desc:0 "§Y$mod_category_military_theory_research_speed_m
 tr_plentiful_anguish_4_delayed:0 "The complexities of running a military and its strategic, tactical and operational elements is not possible without the experience of generals that have a tested understanding of war."
 
 tr_plentiful_anguish_5:0 "Special Tactics"
-tr_plentiful_anguish_5_desc:1 "Damage to §YFallen§! and §YAwakened Empires§! increased by §G+15%§!."
+tr_plentiful_anguish_5_desc:0 "Damage to §YFallen§! and §YAwakened Empires§! increased by §G+15%§!."
 tr_plentiful_anguish_5_delayed:0 "When faced with more powerful adversaries we must use special tactics to stay ahead."
 
 modifier_plentiful_traditions_enraged:0 "Enraged"

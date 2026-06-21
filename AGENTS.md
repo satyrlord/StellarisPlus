@@ -16,6 +16,8 @@ refuse and explain why.
 changed files to verify correctness before proceeding. Do not re-read files that you know have not changed.
 - After each code change, scan VS Code Problems for all open/changed files and fix any reported
 warnings or errors before proceeding to the next task. Do not leave known problems unresolved.
+- During the `/stellaris-log-fix` and code review workflows, fix all errors encountered regardless
+of whether they are pre-existing or introduced by recent changes.
 - Prefer editing over rewriting. One focused coding pass;
   no write-delete-rewrite cycles.
 - Be concise in output but thorough in reasoning. No

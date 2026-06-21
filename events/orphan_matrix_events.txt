@@ -4422,12 +4422,8 @@ country_event = {
 			set_country_flag = cryo_vats_project_done
 			
 			event_target:current_orphan_matrix_relic_world = {
-				create_pop = {
+				create_pop_group = {
 					species = event_target:designer_species
-					ethos = {
-						ethic = ethic_fanatic_materialist
-						ethic = ethic_egalitarian
-					}
 				}
 			}
 			
@@ -4452,12 +4448,8 @@ country_event = {
 			set_country_flag = cryo_vats_project_done
 			
 			event_target:current_orphan_matrix_relic_world = {
-				create_pop = {
+				create_pop_group = {
 					species = event_target:designer_species
-					ethos = {
-						ethic = ethic_fanatic_materialist
-						ethic = ethic_egalitarian
-					}
 				}
 			}
 			

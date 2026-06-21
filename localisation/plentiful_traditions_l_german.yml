@@ -120,11 +120,11 @@ tradition_plentiful_robotics_hive:0 "Masse"
 tradition_plentiful_robotics_hive_desc:0 "Wie sind viele. Durch Masse erreichen wir unendliche Macht!"
 
 tr_plentiful_robotics_adopt:0 "Robotik-Traditionen"
-#tr_plentiful_robotics_adopt_desc:0 "$tradition_plentiful_robotics_desc$\n\n$tr_plentiful_robotics_adopt_effect$\n\n$tr_plentiful_robotics_finish_effect$"
+tr_plentiful_robotics_adopt_desc:0 "Adopt the §H$tr_plentiful_robotics_adopt$§! tradition tree."
 #tr_plentiful_robotics_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\n§Y$mod_category_computing_research_speed_mult$§! erhöht um §G+20%§!."
 
 tr_plentiful_robotics_hive_adopt:0 "Masse-Traditionen"
-#tr_plentiful_robotics_hive_adopt_desc:0 "$tradition_plentiful_robotics_hive_desc$\n\n$tr_plentiful_robotics_hive_adopt_effect$\n\n$tr_plentiful_robotics_hive_finish_effect$"
+tr_plentiful_robotics_hive_adopt_desc:0 "Adopt the §H$tr_plentiful_robotics_hive_adopt$§! tradition tree."
 #tr_plentiful_robotics_hive_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\n§Y$mod_category_computing_research_speed_mult$§! erhöht um §G+20%§!."
 
 tr_plentiful_robotics_finish:0 "Robotik-Traditionen vollendet"
@@ -248,7 +248,7 @@ trait_plentiful_traditions_robot_blockchain_enthusiasts_desc:0 "§LDie Quantum B
 tradition_plentiful_biogenesis:0 "Biogenese"
 tradition_plentiful_biogenesis_desc:0 "Jeder lebende Organismus kann strebend nach Perfektion zum Besseren verändert werden."
 tr_plentiful_biogenesis_adopt:0 "Biogenese Traditionen"
-#tr_plentiful_biogenesis_adopt_desc:0 "$tradition_plentiful_biogenesis_desc$\n\n$tr_plentiful_biogenesis_adopt_effect$\n\n$tr_plentiful_biogenesis_finish_effect$"
+tr_plentiful_biogenesis_adopt_desc:0 "Adopt the §H$tr_plentiful_biogenesis_adopt$§! tradition tree."
 #tr_plentiful_biogenesis_adopt_effect:0 "§E$TRADITIONS_ADOPT$:§!\n§Y$mod_category_biology_research_speed_mult$§! erhöht um §G+20%§!."
 
 tr_plentiful_biogenesis_finish:0 "Biogenese Traditionen vollendet"

@@ -1,5 +1,38 @@
 # StellarisPlus -- Changelog
 
+Date: 2026-06-10
+
+- Bug fix: Missing effects tradition errors for 7 traditions
+  - Added `custom_tooltip_with_modifiers` to `tr_plentiful_anguish_5`,
+    `tr_plentiful_biogenesis_adopt`, `tr_plentiful_malice_1`,
+    `tr_plentiful_mysticism_1_machine` (tradition_swap),
+    `tr_plentiful_order_3`, `tr_plentiful_robotics_adopt`, and
+    `tr_plentiful_robotics_hive_adopt` (tradition_swap) in
+    `common/traditions/zz_sp_traditions.txt`
+  - Uncommented and simplified localisation keys
+    `tr_plentiful_robotics_adopt_desc`,
+    `tr_plentiful_robotics_hive_adopt_desc`, and
+    `tr_plentiful_biogenesis_adopt_desc` in
+    `localisation/plentiful_traditions_l_english.yml`
+
+- Bug fix: Invalid scripted effect create_pop in orphan_matrix_events.txt
+  - Replaced deprecated `create_pop` with `create_pop_group` (4.0+ API)
+    in both option blocks of `orphan_matrix_events.102`
+  - Fixed cascading "Unexpected token: custom_tooltip" and
+    "Corrupt Event Table Entry" errors caused by the invalid effect
+
+- Bug fix: Invalid scope for event target 'planet' in
+  plentiful_traditions_malice_events.txt
+  - Removed `exists = planet` from pop_event triggers (lines 17, 56)
+  - Replaced `planet = { owner = { ... } }` with `owner = { ... }`
+    in immediate blocks (lines 26, 63) since planet scope switch is
+    invalid from pop scope in 4.0+
+
+- Bug fix: Invalid context switch [orbit] in zz_sp_zones.txt
+  - Removed `orbit = { }` scope wrapper in zone potential and unlock
+    blocks (lines 2096, 2109) since orbit scope is invalid from colony
+    scope; check `has_planet_flag` directly
+
 Date: 2026-06-09
 
 - Documentation: UI Overhaul Dynamic (ID 1623423360) is now a required
