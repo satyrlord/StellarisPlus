@@ -1332,3 +1332,51 @@ district_ark_forever_cruise = {
 		text = district_ark_forever_cruise_flavor_desc
 	}
 }
+
+# === STELLARISPLUS ORIGINAL FEATURE ===
+# Machine Empire Food District Retrofit — District Stubs
+# Hidden districts (potential = always = no) used as swap_type targets
+# for the retrofit zones. Provide custom names and overlay icons.
+# See doc/new-features.md 2026-06-22.
+
+district_sp_machine_food_energy = {
+	icon = district_generator
+	overlay_icon = GFX_MZ_resource_food_energy_large
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = district_sp_machine_food_energy
+	}
+}
+
+district_sp_machine_food_minerals = {
+	icon = district_mining
+	overlay_icon = GFX_MZ_resource_minerals_food_large
+
+	zone_slots = {
+		slot_empty
+	}
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	triggered_name = {
+		text = district_sp_machine_food_minerals
+	}
+}

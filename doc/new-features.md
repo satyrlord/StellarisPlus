@@ -46,18 +46,29 @@ or agrarian idyll civic — none of which machine empires have. The
 (zone_slots/ is LIOS) to add `is_machine_empire = yes` as an unlock
 condition.
 
-**Decision: Use vanilla `jobs/technicians_add` and `jobs/miners_add`.**
+**Decision: Hybrid district design — both food and retrofit jobs.**</zone>
 
-These inline scripts already handle gestalt empires correctly, adding
-`job_technician_drone` and `job_mining_drone` for machine empires.
-No new job definitions needed.
+The retrofit zones ADD technician/mining jobs on top of the existing
+agri-drone jobs from `district_farming`'s inline script. Both job types
+run simultaneously — the district produces food AND energy (or minerals).
+Building sets include both farming and the retrofit type for full
+hybrid building support.
+
+**Decision: Custom district stubs for distinct names and icons.**
+
+Following the More Zones pattern, two hidden district stubs
+(`district_sp_machine_food_energy`, `district_sp_machine_food_minerals`)
+serve as `swap_type` targets. They provide custom names ("Photosynthetic
+Grid", "Geotrophic Belt") and reuse existing More Zones icons
+(`GFX_MZ_resource_food_energy_large`, `GFX_MZ_resource_minerals_food_large`)
+from the Hydroponic Fusion Chambers and Lithoflora Excavation Corps.
 
 ### Zone Summary
 
-| Zone | `swap_type` | Jobs | Unlock |
-| --- | --- | --- | --- |
-| `zone_sp_machine_food_energy` | `district_generator` | Technician drones (×2) | Machine empire, no tech gate |
-| `zone_sp_machine_food_minerals` | `district_mining` | Mining drones (×2) | Machine empire, no tech gate |
+| Zone | `swap_type` | District Name | Jobs | Icon |
+| --- | --- | --- | --- | --- |
+| `zone_sp_machine_food_energy` | `district_sp_machine_food_energy` | Photosynthetic Grid | Agri-drones + Technician drones | MZ food+energy |
+| `zone_sp_machine_food_minerals` | `district_sp_machine_food_minerals` | Geotrophic Belt | Agri-drones + Mining drones | MZ minerals+food |
 
 ### Non-Goals
 
