@@ -65,10 +65,19 @@ from the Hydroponic Fusion Chambers and Lithoflora Excavation Corps.
 
 ### Zone Summary
 
+**Food District Retrofits (`slot_food`):**
+
 | Zone | `swap_type` | District Name | Jobs | Icon |
 | --- | --- | --- | --- | --- |
 | `zone_sp_machine_food_energy` | `district_sp_machine_food_energy` | Photosynthetic Grid | Agri-drones + Technician drones | MZ food+energy |
 | `zone_sp_machine_food_minerals` | `district_sp_machine_food_minerals` | Geotrophic Belt | Agri-drones + Mining drones | MZ minerals+food |
+
+**Mineral District Retrofits (`slot_minerals`):**
+
+| Zone | `swap_type` | District Name | Jobs | Icon |
+| --- | --- | --- | --- | --- |
+| `zone_sp_machine_minerals_food` | `district_sp_machine_minerals_food` | Lithosynthesis Annex | Mining drones + Agri-drones | MZ minerals+food |
+| `zone_sp_machine_minerals_energy` | `district_sp_machine_minerals_energy` | Lithovoltaic Complex | Mining drones + Technician drones | MZ energy+minerals |
 
 ### Non-Goals
 
