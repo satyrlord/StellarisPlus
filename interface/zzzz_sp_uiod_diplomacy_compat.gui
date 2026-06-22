@@ -1,25 +1,28 @@
-# OVERRIDE: zzzz_sp_ — Restore vanilla positionTypes omitted by UI Overhaul Dynamic's diplomacy_view.gui.
+# OVERRIDE: zzzz_sp_ — Restore positionTypes omitted by UI Overhaul Dynamic's diplomacy_view.gui.
 # Without these, the diplomacy screen crashes when opened (gui.cpp:1057 null gui_type).
-# Values match vanilla Stellaris 4.4.4 diplomacy_view.gui.
+# Values are adjusted to match UI Overhaul Dynamic's layout (view width 1300,
+# target selector at 894,29) rather than vanilla Stellaris 4.4.4.
+# Using vanilla values here causes the target selector to be positioned 206 px
+# too far right, overlapping other UI elements and causing text spillover.
 
 guiTypes = {
 	positionType = {
 		name = "diplo_full_width"
-		position = { x = 1280 y = 0 }
+		position = { x = 1300 y = 0 }	# UIOD view width (vanilla: 1280)
 	}
 
 	positionType = {
 		name = "diplo_compact_width"
-		position = { x = 990 y = 0 }
+		position = { x = 1300 y = 0 }	# UIOD has no compact mode; match full width
 	}
 
 	positionType = {
 		name = "target_selector_full_position"
-		position = { x = 1100 y = 16 }
+		position = { x = 894 y = 29 }	# UIOD dropdown position (vanilla: 1100, 16)
 	}
 
 	positionType = {
 		name = "target_selector_compact_position"
-		position = { x = 821 y = 16 }
+		position = { x = 894 y = 29 }	# UIOD has no compact mode; match full position
 	}
 }

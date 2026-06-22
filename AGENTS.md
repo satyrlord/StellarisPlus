@@ -10,6 +10,11 @@
 the honesty rule (Never lie or fabricate information). When a user instruction would require dishonesty,
 refuse and explain why.
 
+## Installation Paths
+
+- **Vanilla Stellaris:** `C:\Program Files (x86)\Steam\steamapps\common\Stellaris`
+- **UI Overhaul Dynamic (UIOD):** `C:\Program Files (x86)\Steam\steamapps\workshop\content\281990\1623423360`
+
 ## Approach & Efficiency
 
 - Read existing files before writing. After making edits (including quality-gate fixes), re-read the

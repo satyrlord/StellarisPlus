@@ -1,5 +1,19 @@
 # StellarisPlus -- Changelog
 
+Date: 2026-06-22
+
+- UI fix: Diplomacy proposal overlap and text spillover with UI Overhaul Dynamic
+  - Root cause: interface/zzzz_sp_uiod_diplomacy_compat.gui used vanilla Stellaris
+    4.4.4 positionType values (diplo_full_width=1280, target_selector_full_position=
+    1100,16) that conflict with UIOD's wider layout (view width 1300, dropdown at
+    894,29). The game code uses these positionTypes to dynamically reposition
+    elements, overriding UIOD's explicit positions and causing the target empire
+    selector to overlap the proposal text area.
+  - Updated all four positionType values to match UIOD's actual layout:
+    diplo_full_width 1280→1300, diplo_compact_width 990→1300,
+    target_selector_full_position (1100,16)→(894,29),
+    target_selector_compact_position (821,16)→(894,29).
+
 Date: 2026-06-21
 
 - Bug fix: Introspection Complex (zone_introspective_laboratory) had only 3 building
