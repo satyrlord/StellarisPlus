@@ -3533,7 +3533,6 @@ zone_sp_machine_minerals_food = {
 		mining_automation
 		farming
 		farming_automation
-		urban
 	}
 
 	swap_type = district_sp_machine_minerals_food
@@ -3579,7 +3578,6 @@ zone_sp_machine_minerals_energy = {
 		mining_automation
 		generator
 		generator_automation
-		urban
 	}
 
 	swap_type = district_sp_machine_minerals_energy

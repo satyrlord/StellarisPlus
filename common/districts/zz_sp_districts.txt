@@ -1354,10 +1354,6 @@ district_sp_machine_food_energy = {
 	potential = {
 		always = no
 	}
-
-	triggered_name = {
-		text = district_sp_machine_food_energy
-	}
 }
 
 district_sp_machine_food_minerals = {
@@ -1375,14 +1371,10 @@ district_sp_machine_food_minerals = {
 	potential = {
 		always = no
 	}
-
-	triggered_name = {
-		text = district_sp_machine_food_minerals
-	}
 }
 
 district_sp_machine_minerals_food = {
-	icon = district_mining
+	icon = district_farming
 	overlay_icon = GFX_MZ_resource_minerals_food_large
 
 	zone_slots = {
@@ -1396,14 +1388,10 @@ district_sp_machine_minerals_food = {
 	potential = {
 		always = no
 	}
-
-	triggered_name = {
-		text = district_sp_machine_minerals_food
-	}
 }
 
 district_sp_machine_minerals_energy = {
-	icon = district_mining
+	icon = district_generator
 	overlay_icon = GFX_MZ_resource_energy_mineral_large
 
 	zone_slots = {
@@ -1416,9 +1404,5 @@ district_sp_machine_minerals_energy = {
 
 	potential = {
 		always = no
-	}
-
-	triggered_name = {
-		text = district_sp_machine_minerals_energy
 	}
 }
