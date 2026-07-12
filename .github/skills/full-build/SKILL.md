@@ -1,6 +1,6 @@
 ---
 name: full-build
-description: 'Run the full StellarisPlus validation workflow end to end: execute the quality gate and fix all issues, run sptest for a manual test pass, wait for explicit user confirmation that testing is finished, then run the stellaris-log-fix skill and the stellaris-code-review skill and fix all true mod-owned errors. Use when user says "full build", "full validation", "run everything", "pre-release sweep", "end-to-end check", "build and review", or wants the complete test, log-fix, and code-review pipeline.'
+description: 'Full build: run the complete StellarisPlus validation workflow end to end — execute the quality gate and fix all issues, run sptest for a manual test pass, wait for explicit user confirmation that testing is finished, then run the stellaris-log-fix skill and the stellaris-code-review skill and fix all true mod-owned errors. Use when user says "full build", "full validation", "run everything", "pre-release sweep", "end-to-end check", "build and review", or wants the complete test, log-fix, and code-review pipeline.'
 argument-hint: >-
    Optionally specify focus areas or constraints, such as a feature to
    watch during manual testing or folders that changed.

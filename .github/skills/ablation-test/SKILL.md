@@ -1,6 +1,6 @@
 ---
 name: ablation-test
-description: 'Run a disciplined ablation test to isolate the true root cause of a hard bug. Use when a fix is unclear, multiple changes were made, the bug is intermittent, or the user asks which change actually fixed it, what was unnecessary, or for a minimal fix.'
+description: 'Ablation test: isolate the true root cause of a hard bug by systematically removing change sets until only the minimal fix remains. Use when a fix is unclear, multiple changes were made, the bug is intermittent, or the user asks which change actually fixed it, what was unnecessary, or for a minimal fix.'
 argument-hint: >-
   Optionally include the bug symptom, current changed files, and test constraints (restart needed, runtime cost, etc.)
 ---

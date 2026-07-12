@@ -1,6 +1,6 @@
 ---
 name: scan-updates
-description: 'Scans integrated Workshop mods from credits.md, checks Steam for newer upstream update dates, updates only outdated mods, and validates/fixes quality gate issues after each update. Use when user says "scan updates", "check mod updates", "find outdated integrated mods", "refresh integrated mods", "update all outdated mods", or asks to compare credits.md entries against current Steam Workshop dates.'
+description: 'Scan updates: check integrated Workshop mods from credits.md against Steam for newer upstream update dates, update only outdated mods, and validate/fix quality gate issues after each update. Use when user says "scan updates", "check mod updates", "find outdated integrated mods", "refresh integrated mods", "update all outdated mods", or asks to compare credits.md entries against current Steam Workshop dates.'
 argument-hint: >-
   Optional: "all" (default) or comma-separated Workshop IDs to limit scan scope
 ---

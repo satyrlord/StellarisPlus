@@ -1,16 +1,15 @@
 ---
 name: stellaris-code-review
 description: >
-  Run a strict, comprehensive review of StellarisPlus changes covering
-  Paradox Script correctness, load-order safety, localisation integrity,
-  GFX/GUI consistency, cross-file references, and documentation quality.
-  Use when the user asks for a code review, full code review, merge-readiness
-  check, pre-release audit, comprehensive quality sweep, review changes,
-  check script, validate mod, review mod, review project, or script review.
+  Review StellarisPlus changes covering Paradox Script correctness, load-order
+  safety, localisation integrity, GFX/GUI consistency, cross-file references,
+  and documentation quality. Use when the user asks for a code review, full
+  code review, merge-readiness check, pre-release audit, comprehensive quality
+  sweep, review changes, check script, validate mod, review mod, review
+  project, or script review.
 argument-hint: >
   Optionally specify files, folders, or focus areas (e.g. "only events",
   "just the new traditions", "only localisation")
-disable-model-invocation: true
 ---
 
 # Stellaris Code Review
@@ -50,14 +49,8 @@ Use `.github/skills/stellaris-code-review/references/paradox-script-rules.md`
 for syntax, scope, and parser rules. Use
 `.github/skills/stellaris-code-review/references/REFERENCE.md` for the
 full strict-review policy, structural quality rules, and approval bar.
-
-- Use this reference order to keep decisions linear:
-
-  | Step | Reference | Use for |
-  | ---- | --------- | ------- |
-  | 1 | `references/paradox-script-rules.md` | Syntax, scope, and parser rules |
-  | 2 | `doc/mod_load_reference.md` | Override behavior and LIOS/FIOS/DUPL/MERGE safety |
-  | 3 | `doc/mod_merge_order_report.md` | Only when reviewing duplicated or merged local files |
+Use `references/file-type-checks.md` for per-file-type review checklists
+during Phase 1.2.
 
 - **Evidence-first**: cross-check assumptions against actual
   vanilla/DLC/mod files; do not assume missing references or override
@@ -117,54 +110,9 @@ override or consolidation.
 ### 1.2 Review each changed file
 
 Read full file. Use diff to focus, but validate surrounding context.
-
-**Gameplay scripts** (`common/**/*.txt`):
-
-1. Brace balance (`{` == `}`)
-2. Scope correctness (no invalid chains like `owner = { owner = { } }`)
-3. No effects in trigger blocks (`potential`, `allow`, `limit`, `any_*`)
-4. `@variable` refs defined in `scripted_variables`; check for shadowing
-5. `inline_script` calls: params match template `$PARAM$`; `script =` resolves
-6. Filename prefix matches intent per `doc/mod_load_reference.md`
-7. Modifier symmetry: add has corresponding remove path
-8. Conditional logic: `if` has `limit`, `else_if` before `else`, no
-   `else_if` after `else`
-9. Non-localisation script files (`.txt`, `.gfx`, `.gui`, `.asset`)
-  must be UTF-8 without BOM; a BOM can cause the first parsed key to
-  be rejected
-10. When changes touch zones, zone slots, traditions, buildings, or
-   districts, cross-check `doc/mod_mechanics_reference.md` for linked
-   constraints and constants before flagging or approving the change
-
-**Events** (`events/*.txt`): all above plus:
-
-- `namespace = <name>` declared
-- IDs follow `<namespace>.<number>`, unique within file
-- Event type matches scope context
-- Options have `name` key with localisation
-- `is_triggered_only = yes` events referenced somewhere
-
-**Localisation** (`.yml`):
-
-- Language header present (`l_english:`)
-- Keys use `:0` format, no duplicates
-- `$key$` refs point to existing keys; `[Scope.Method]` uses valid methods
-- UTF-8 with BOM
-
-**GFX** (`.gfx`):
-
-- `GFX_` prefix on names; `textureFile` (capital F) paths exist; no
-  duplicate names
-
-**GUI** (`.gui`):
-
-- Sprite refs exist in `.gfx`; `@` constants defined before use;
-  brace balance
-- For `topbar_*.gui` and zone or slot UI files, cross-check
-  `doc/mod_ui_reference.md` and `doc/mod_mechanics_reference.md` for
-  BPV slot-count consistency and fallback behavior
-- Check for GUI template name collisions on LIOS surfaces such as
-  `topbar_traditions_view.gui`
+Apply the per-file-type checklists in
+`references/file-type-checks.md` — gameplay scripts, events,
+localisation, GFX, and GUI each have their own checklist.
 
 ### 1.3 Cross-file consistency (changed files)
 
