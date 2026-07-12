@@ -3,10 +3,9 @@ name: stellaris-code-review
 description: >
   Review StellarisPlus changes covering Paradox Script correctness, load-order
   safety, localisation integrity, GFX/GUI consistency, cross-file references,
-  and documentation quality. Use when the user asks for a code review, full
-  code review, merge-readiness check, pre-release audit, comprehensive quality
-  sweep, review changes, check script, validate mod, review mod, review
-  project, or script review.
+  and documentation quality. Use when the user asks for a code review,
+  review changes, validate mod, pre-release audit, or
+  merge-readiness check.
 argument-hint: >
   Optionally specify files, folders, or focus areas (e.g. "only events",
   "just the new traditions", "only localisation")
@@ -55,15 +54,6 @@ during Phase 1.2.
 - **Evidence-first**: cross-check assumptions against actual
   vanilla/DLC/mod files; do not assume missing references or override
   validity without concrete evidence.
-
-## Use When
-
-- the user asks for review, code review, full code review, PR review, or merge readiness
-- a change touches multiple layers (script + localisation + GFX + docs)
-- a new feature is complete and needs final validation before shipping
-- an integrated mod update needs comprehensive conflict review
-- load-order strategy changes need verification across all affected files
-- user asks for script review, mod validation, or uncommitted-change audit
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: update-mod
-description: 'Update an already-integrated Stellaris mod in StellarisPlus to its latest Workshop version. Backs up the new upstream, diffs against the current integration, applies new features and bug fixes, and resolves conflicts. Use when user says "update mod", "refresh mod", "sync mod", "upgrade mod", "re-sync mod", "pull latest mod", "update Workshop mod", "update integrated mod", "check for mod updates", or wants to bring an already-absorbed mod up to date with its latest Workshop release.'
+description: 'Update an already-integrated Stellaris mod in StellarisPlus to its latest Workshop version. Backs up the new upstream, diffs against the current integration, applies new features and bug fixes, and resolves conflicts. Use when user says "update mod", "refresh mod", "sync mod", or "check for mod updates".'
 argument-hint: >-
    Workshop ID or mod name to update (must already be in credits.md)
 ---
@@ -20,29 +20,19 @@ cleanup.
 
 ---
 
-## Naming Conventions
+## Shared Rules
 
-- Follow existing load-order prefixes from
-  `doc/mod_load_reference.md` when adding new files.
-- Preserve the mod's existing key names; do not rename without
-  updating all references.
+Follow `absorb-mod`'s Naming Conventions, Error Handling, Testing,
+and Security rules with these delta additions and overrides:
 
-## Error Handling
+### Error Handling (delta)
 
 - Major `supported_version` jump: warn user; expect broader changes
   and testing needs.
 - Workshop folder unchanged: report no upstream changes detected.
 - Multiple mods to update: process one at a time.
 
-## Testing
-
-- Run `& "tools/stellarisplus-quality-gate.ps1"` after applying
-  updates.
-- Cross-reference check: new script refs have localisation keys, GFX
-  sprites, inline_script templates, and on_action event hooks.
-- Run `merge-local-files` only after quality gate is green.
-
-## Security
+### Security (delta)
 
 - Update `credits.md` if mod name or author changed.
 

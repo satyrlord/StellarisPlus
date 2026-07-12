@@ -25,8 +25,6 @@ This workflow is for cases where:
 
 - **One variable at a time**: each run should answer one question.
 - **High-signal states**: test with sharply reduced change sets.
-- **Reversible workflow**: preserve all work before slicing changes.
-- **Evidence over theory**: trust ablation outcomes, not assumptions.
 - **Stop when minimal fix is proven**: avoid overfitting extra edits.
 
 ---

@@ -93,13 +93,3 @@ classify-and-fix workflow.
 |---|-------|------|--------|
 
 Group skipped errors by category with counts.
-
----
-
-## Decision Rules
-
-| Situation | Rule |
-| --------- | ---- |
-| Vanilla error, no mod override | Skip unless user asks to create override |
-| Ambiguous ownership | Check if file exists in workspace before fixing |
-| Cascading errors | Fix at root cause, not each symptom |

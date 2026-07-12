@@ -85,8 +85,6 @@ Process only `OUTDATED` mods, one at a time:
    question and pause that mod only.
 5. Continue to next outdated mod.
 
-Never batch-update multiple mods in one merge pass.
-
 ---
 
 ## Required Output

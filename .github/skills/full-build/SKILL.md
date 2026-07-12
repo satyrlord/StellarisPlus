@@ -24,9 +24,8 @@ iterating until all true mod-owned findings are resolved.
 ## Error Handling
 
 - Only fix issues owned by this workspace or integrated mods credited
-  in `credits.md`.
-- Never speculate about vanilla or DLC behavior; verify against
-  official files.
+  in `credits.md`. For detailed ownership rules, see the error-handling
+  sections in `stellaris-code-review` and `stellaris-log-fix`.
 - Treat cascading findings as root-cause problems. Fix the source,
   then re-run checks.
 - If a reported issue is external noise, document it briefly and move

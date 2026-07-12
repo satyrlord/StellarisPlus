@@ -19,6 +19,9 @@ refuse and explain why.
 
 - Read existing files before writing. After making edits (including quality-gate fixes), re-read the
 changed files to verify correctness before proceeding. Do not re-read files that you know have not changed.
+- When deciding which skill or tool to invoke for a task, consult `.github/skills/SKILLS.md` first —
+  it is a thin router that maps user requests to the correct skill. If the request matches a trigger
+  phrase in the quick-lookup table, invoke that skill.
 - After each code change, scan VS Code Problems for all open/changed files and fix any reported
 warnings or errors before proceeding to the next task. Do not leave known problems unresolved.
 - During the `/stellaris-log-fix` and code review workflows, fix all errors encountered regardless
