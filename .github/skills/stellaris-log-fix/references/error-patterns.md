@@ -41,8 +41,7 @@ Skip without editing when any of the following are true.
 
 | Pattern | Reason |
 | --- | --- |
-| `Could not find relic with key` from GPM compatibility triggers and the logged path is not present in this workspace | External compatibility noise |
-| Missing vanilla asset or localisation with no workspace override | Not owned by StellarisPlus |
+| Compatibility probe whose path is absent from this workspace and all credited integrations | External compatibility noise |
 | `game.log` galaxy generation warnings with no workspace file | Non-actionable runtime noise |
 
 ## High-Confidence Fix Rules
@@ -55,14 +54,3 @@ Fix directly when any of the following are true.
 | Workspace entity or mesh name appears in the log | Read the owning `.asset` or `.gfx` and repair the reference |
 | Tradition or decision block is effectless or uses stale scope logic | Compare with upstream or vanilla pattern, then restore a valid form |
 | Parser cascade follows an encoding issue | Fix encoding first, then reassess remaining errors |
-
-## Notes From Current Repository
-
-- Non-localisation script files should be UTF-8 without BOM.
-- Localisation `.yml` files should remain UTF-8 with BOM.
-- Some merged Plentiful Traditions content contains stale definitions.
-  Prefer removing invalid dead logic over forcing obsolete triggers to
-  compile.
-- GPM relic compatibility spam has repeatedly appeared in logs from
-  paths not present in this workspace. Treat that as external noise
-  unless the user explicitly wants local compatibility overrides.

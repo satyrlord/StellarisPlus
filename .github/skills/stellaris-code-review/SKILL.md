@@ -4,9 +4,6 @@ description: >
   Review StellarisPlus changes for merge readiness across Paradox Script,
   load-order, localisation, GFX/GUI, references, and documentation. The default
   branch is read-only; repair findings only with explicit authorization.
-argument-hint: >
-  Optionally specify files, folders, or focus areas (e.g. "only events",
-  "just the new traditions", "only localisation")
 ---
 
 # Stellaris Code Review
@@ -29,8 +26,9 @@ judging the implementation.
    - `doc/mod_defines_reference.md` — file type and encoding rules
 3. `doc/changelog.md` — recent changes in affected areas
 4. `credits.md` — integrated mod attribution for affected systems
-5. changed implementation files and their cross-file dependencies
-6. changed tests and nearby tests
+5. changed implementation files and their direct dependencies: definitions or
+   consumers connected by one explicit reference edge
+6. tests that name a changed identifier or exercise the affected system
 
 Use `.github/skills/stellaris-code-review/references/paradox-script-rules.md`
 for syntax, scope, and parser rules. Use
@@ -42,6 +40,10 @@ during Phase 1.2.
 - **Evidence-first**: cross-check assumptions against actual
   vanilla/DLC/mod files; do not assume missing references or override
   validity without concrete evidence.
+
+Reading is complete only when every in-scope file, direct reference edge, and
+affected-system test is accounted for, and every unavailable source is recorded
+as a verification gap.
 
 ---
 
@@ -66,9 +68,8 @@ Use git status to list changed files. Categorize:
 
 Skip `backup/`, `tmp/`.
 
-Optionally scan `doc/changelog.md` for recent entries affecting the
-files under review so you have intent context before flagging a risky
-override or consolidation.
+Phase 1.1 is complete only when every `git status` path is categorized or
+excluded by the rule above.
 
 ### 1.2 Review each changed file
 
@@ -76,6 +77,9 @@ Read full file. Use diff to focus, but validate surrounding context.
 Apply the per-file-type checklists in
 `references/file-type-checks.md` — gameplay scripts, events,
 localisation, GFX, and GUI each have their own checklist.
+
+Phase 1.2 is complete only when every changed file is read in full and every
+applicable file-local check has a passing result or a reported finding.
 
 ### 1.3 Cross-file consistency (changed files)
 
@@ -86,15 +90,19 @@ localisation, GFX, and GUI each have their own checklist.
 5. New/changed `@` variables used somewhere; removed ones not still
    referenced.
 
+Phase 1.3 is complete only when every applicable edge above resolves or is
+reported as a finding.
+
 ---
 
 ## Phase 2 — Cross-Cutting Validation
 
-Apply every relevant checklist in `references/file-type-checks.md` and every
-applicable syntax, scope, load-order, localisation, GFX/GUI, and inline-script
-rule in `references/paradox-script-rules.md`. Trace each changed definition to
-its consumers and each changed reference to its definition. Phase 2 is complete
-only when every changed file type and cross-file edge is accounted for.
+Do not repeat Phase 1's file-local checklists. Trace each changed definition to
+its direct consumers and each changed reference to its definition. For filename,
+prefix, or override judgments, apply `doc/mod_load_reference.md`; for parser,
+scope, and inline-script semantics, apply
+`references/paradox-script-rules.md`. Phase 2 is complete only when every direct
+cross-file edge and load-order-sensitive path is accounted for.
 
 ---
 
@@ -149,6 +157,10 @@ the manual reference rules have been applied to areas the gate cannot prove.
 | **Medium** | Missing changelog entry, missing override comment, style inconsistency |
 | **Low** | Documentation clarity, non-blocking code style nits |
 
+Phase 4 is complete only when every confirmed finding and verification gap
+appears once in the report, statistics reconcile with the tables, and each
+finding includes evidence and the smallest concrete repair.
+
 ---
 
 ## Decision Rules
@@ -172,13 +184,6 @@ edit vanilla, DLC, external-noise, `backup/`, or `tmp/` files.
 
 ## Completion Criteria
 
-The review is complete only when:
-
-1. every in-scope changed file and direct dependency is reviewed against every
-   applicable disclosed rule;
-2. every quality-gate finding is classified with evidence;
-3. confirmed defects and verification gaps are reported separately with
-   severity and the smallest concrete repair;
-4. the report accounts for files reviewed, files scanned, and all severities;
-5. in the repair branch, every true mod-owned finding is fixed or explicitly
-   blocked and two consecutive quality-gate runs are clean.
+The review is complete only when the reading criterion and every applicable
+phase criterion are satisfied. The repair branch must also satisfy the Mutation
+Contract.

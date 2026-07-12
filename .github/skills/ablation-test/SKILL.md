@@ -1,8 +1,6 @@
 ---
 name: ablation-test
 description: 'Ablation test a hard bug to prove the smallest causal change set. Use when competing changes may explain a fix, results are intermittent, or the user needs a minimal proven repair.'
-argument-hint: >-
-  Optionally include the bug symptom, current changed files, and test constraints (restart needed, runtime cost, etc.)
 ---
 
 # Ablation Test
@@ -46,6 +44,10 @@ git stash show -u --name-status $ablationStash
 Compare the stash manifest with the recorded working-tree manifest. Stop if any
 path is missing. Never replace the captured object ID with a moving stash
 selector after creation.
+
+The snapshot is complete only when the immutable object ID resolves and its
+manifest accounts for every tracked and untracked path recorded in the
+preconditions.
 
 ### 2) Build a minimal candidate set
 
@@ -99,6 +101,10 @@ the user's approval. Verify `git status --short` against the original manifest.
 Retain the stash by default; offer its exact object ID and let the user decide
 whether to drop it.
 
+Finalization is complete only when `git status --short` matches the original
+manifest except for the approved minimal fix, and the retained stash object is
+identified and resolves.
+
 ## Output Requirements
 
 After ablation, report:
@@ -107,6 +113,8 @@ After ablation, report:
 2. **Minimal required fix set**
 3. **Changes proven unnecessary**
 4. **Confidence level** and any residual uncertainty
+5. **Test evidence** for the failing and passing states, plus the retained stash
+   object ID
 
 Use concise evidence statements (test state -> result).
 
@@ -119,5 +127,4 @@ The ablation is complete only when:
    inseparable status;
 3. removing any claimed-required change makes the test fail;
 4. the original worktree and all unrelated changes are accounted for;
-5. the final report names the retained stash object, minimal fix, excluded
-   changes, test evidence, and residual uncertainty.
+5. the final report satisfies every Output Requirement.

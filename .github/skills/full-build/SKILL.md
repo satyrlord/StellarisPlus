@@ -1,9 +1,6 @@
 ---
 name: full-build
 description: 'Full build the complete StellarisPlus release-validation sequence: quality gate, confirmed manual test, runtime log repair, and repair-authorized code review.'
-argument-hint: >-
-   Optionally specify focus areas or constraints, such as a feature to
-   watch during manual testing or folders that changed.
 ---
 
 # Full Build
@@ -40,9 +37,10 @@ Create a TODO list for the run and preserve stage order.
    - Validator findings: 0 errors, 0 warnings.
    - Pyright: 0 issues.
    - Markdownlint: 0 issues.
-   - Problems view: no relevant errors.
+   - When Problems integration is available, no relevant Problems remain.
 
-Do not proceed to Stage 2 while Stage 1 is still failing.
+Stage 1 is complete only when the quality gate is green and every available
+diagnostic is clean. Do not proceed to Stage 2 while this criterion is failing.
 
 ### Stage 2 -- Manual Test Run (User Stop Gate)
 
@@ -60,11 +58,16 @@ Do not proceed to Stage 2 while Stage 1 is still failing.
 This stage is mandatory. Do not continue automatically just because
 the game process exited.
 
+Stage 2 is complete only when the user explicitly confirms the manual session
+ended and the test result is recorded.
+
 ### Stage 3 -- Runtime Log Fix
 
 1. Load and follow the `stellaris-log-fix` skill:
    `.github/skills/stellaris-log-fix/SKILL.md`
 2. Continue until no actionable mod-owned runtime errors remain.
+
+Stage 3 is complete only when the invoked skill's completion criterion is met.
 
 ### Stage 4 -- Code Review and Cleanup
 
@@ -72,40 +75,28 @@ the game process exited.
    `.github/skills/stellaris-code-review/SKILL.md`
 2. Invoke its repair branch; this full-build request supplies explicit repair
    authorization for true mod-owned findings.
-3. Review findings severity-first.
-4. Fix all true-positive mod-owned errors and warnings.
-5. Repeat until code review finds no remaining unresolved mod-owned
-   errors or warnings.
 
----
+Stage 4 is complete only when the repair branch's completion criterion is met.
 
-## Decision Rules
+### Stage 5 -- Final Verification and Report
 
-| Situation | Rule |
-| --------- | ---- |
-| Stage order | Preserve strictly; do not skip ahead |
-| After Stage 2 | Explicit user confirmation required |
-| Vanilla/DLC behavior | Verify against official files; never speculate |
-| Issue ownership | Only fix workspace-owned or credited mod issues |
-| External noise | Document briefly and move on |
-| User intent needed | Stop and ask one concise question |
+1. Run the canonical quality gate twice consecutively without intervening
+   changes; both runs must be clean.
+2. Re-read every file changed during the full build.
+3. Report files changed, findings fixed, manual-test result, and any external
+   noise or explicitly blocked item. Verify vanilla or DLC claims against the
+   installed official files; ask one concise question when user intent is the
+   only remaining blocker.
+
+Stage 5 is complete only when both final runs are clean, every changed file has
+been re-read, and the report accounts for every stage and blocker.
 
 ---
 
 ## Completion Criteria
 
-The full build is complete only when all of the following are true:
-
-1. The quality gate is green.
-2. The user explicitly confirmed completion of the manual test session and its
-   result is recorded.
-3. Runtime logs were collected and all actionable mod-owned errors
-   were fixed.
-4. Code review produced no remaining true mod-owned errors or
-   warnings.
-5. Two consecutive final quality-gate runs are clean.
-6. The final report lists files changed, findings fixed, and any
-   residual external noise or deferred items.
+The full build is complete only when every stage criterion is satisfied in
+order and Stage 5 reports no unresolved true mod-owned finding.
 
 ---
 

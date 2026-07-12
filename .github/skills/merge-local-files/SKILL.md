@@ -1,9 +1,6 @@
 ---
 name: merge-local-files
 description: 'Merge local StellarisPlus files without changing load-order behavior. Use to classify folders by LIOS/FIOS/DUPL/MERGE and consolidate only proven-safe candidates.'
-argument-hint: >-
-  Optional: folder path to scope (e.g. "common/buildings"). Omit
-  the argument to scan the whole mod.
 ---
 
 # Merge Local Files
@@ -14,30 +11,9 @@ Consolidate redundant files within StellarisPlus into fewer files per
 folder. No vanilla override logic is changed. Use this to reduce file
 count and simplify the mod's structure after absorbing external mods.
 
-- Reference: `doc/mod_load_reference.md`,
-  `doc/mod_merge_order_report.md`.
-
----
-
-## Code Style
-
-- Preserve original whitespace and CRLF line endings.
-- Do not modify content inside blocks.
-- FIOS `scripted_variables/`: `~~` prefixed files are fallback
-  defaults. Keep them separate; do not merge them with non-`~~` files.
-
-## Error Handling
-
-- Pre-merge check: `git status --short`. Warn if dirty; do not proceed
-  without user acceptance.
-- Never merge files that are exact-path vanilla overrides (engine uses
-  mod copy only on exact filename match).
-
-## Testing
-
-- Run `& "tools/stellarisplus-quality-gate.ps1"` after merging.
-- Flag duplicate top-level keys in merged files (informational, not
-  blocking).
+- Load `doc/mod_load_reference.md` before classifying any folder or filename.
+- Load `doc/mod_merge_order_report.md` when discovering existing consolidated
+  files and update it after an approved merge.
 
 ---
 
@@ -45,7 +21,8 @@ count and simplify the mod's structure after absorbing external mods.
 
 ### Phase 1 -- Scan and Classify
 
-1. **Enumerate** all files by folder (scope defaults to full mod).
+1. **Enumerate** all files by folder (scope defaults to full mod). This step is
+   complete when every in-scope file belongs to exactly one folder inventory.
 2. **Classify** each folder's load strategy per
    `doc/mod_load_reference.md`:
 
@@ -56,11 +33,17 @@ count and simplify the mod's structure after absorbing external mods.
    | MERGE | Yes (additive) | Any name (e.g. `zz_sp_on_actions.txt`) |
    | DUPL | **No** -- skip | `inline_scripts/`, `name_lists/`, `strategic_resources/`, `traits/` keep exact filenames |
 
-3. **Identify merge candidates** -- a folder qualifies only if:
+   This step is complete when every inventoried folder has one evidenced
+   strategy classification.
+
+3. **Identify merge candidates** by applying the authoritative
+   [Non-Candidates](#non-candidates) rules. A folder qualifies only if:
    - Strategy is LIOS, FIOS, or MERGE.
    - File count > 1.
-   - No file is an exact-path vanilla override.
    - All files belong to this mod.
+
+Phase 1 is complete only when every scanned folder is classified as a candidate
+or non-candidate with evidence.
 
 ### Phase 2 -- Report
 
@@ -74,26 +57,37 @@ Present to user before executing:
 
 Wait for user approval.
 
+Phase 2 is complete only when all three report sections account for every
+Phase 1 disposition and the user explicitly approves the candidate set.
+
 ### Phase 3 -- Execute
 
-1. **Pre-merge check**: `git status --short`.
+1. **Pre-merge check**: run `git status --short`. Continue only when the
+   worktree is clean or the user explicitly accepts the recorded dirty state.
 2. **For each candidate folder**:
    - Read all source files.
    - Concatenate with `# === merged from <filename> ===` separators.
    - LIOS: sort ascending, last-winning content at end.
    - FIOS: sort ascending, first-winning content at top.
    - MERGE: preserve the original deterministic file order.
-   - Write merged file. Delete source files only after successful
-     write.
-   - Verify file count: `(Get-ChildItem -File -Path "<folder>").Count`
+   - Write and re-read the merged file. Delete source files only after every
+     source segment is represented exactly once in the output and the output
+     preserves encoding, CRLF line endings, and source order.
+   - Verify the resulting file inventory with
+     `(Get-ChildItem -File -Path "<folder>").Count`.
 3. **Update `doc/mod_merge_order_report.md`** with new consolidated
    filenames.
+
+Phase 3 is complete only when every approved candidate passes the integrity
+check before deletion and the merge-order report names every resulting file.
 
 ### Phase 4 -- Validation
 
 1. **Duplicate key scan**: flag duplicate top-level keys in merged
    files (informational, not blocking).
-2. **Quality gate**: `& "tools/stellarisplus-quality-gate.ps1"`
+2. **Quality gate**: run `& "tools/stellarisplus-quality-gate.ps1"`, repair
+   findings, re-read changed files, and repeat until two consecutive runs are
+   clean.
 3. **Summary**:
 
    ```text
@@ -101,9 +95,12 @@ Wait for user approval.
    Duplicate keys: <list or "none"> | Quality gate: pass/fail
    ```
 
+Phase 4 is complete only when duplicate-key dispositions are recorded, both
+final gate runs are clean, and the summary counts reconcile with Phase 3.
+
 ---
 
-## Files That Must Never Be Merged
+## Non-Candidates
 
 - Files whose path exactly matches a vanilla file (engine uses mod
   copy only on exact filename match).
@@ -111,6 +108,8 @@ Wait for user approval.
   precursor hook).
 - `common/inline_scripts/` (always DUPL; filename = call target).
 - `events/` files shadowing vanilla event IDs.
+- FIOS `scripted_variables/` files with a `~~` fallback prefix; keep them
+  separate from non-`~~` files.
 
 When in doubt, check vanilla installation before treating a file as
 renameable.
@@ -119,8 +118,5 @@ renameable.
 
 ## Completion Criteria
 
-The merge is complete only when every scanned folder is classified and reported;
-every executed candidate preserves source order, encoding, line endings, and
-load strategy; every source file is represented exactly once in the merged
-output before deletion; the merge-order report is current; changed files have
-been re-read; and two consecutive quality-gate runs are clean.
+The merge is complete only when every phase criterion is satisfied and the
+final summary accounts for every scanned folder and approved candidate.

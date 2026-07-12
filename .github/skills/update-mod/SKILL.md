@@ -1,40 +1,25 @@
 ---
 name: update-mod
 description: 'Update one already-integrated Stellaris mod from its current Workshop files while preserving StellarisPlus customizations and the original absorption backup.'
-argument-hint: >-
-   Workshop ID or mod name to update (must already be in credits.md)
 ---
 
 # Update Integrated Mod
 
 ## Purpose & Scope
 
-Update an already-absorbed mod (listed in `credits.md`) to its latest
-Workshop version. Covers backup, diff analysis, merge, validation, and
-cleanup.
+Update an already-absorbed mod in `credits.md` from its current Workshop
+content while preserving StellarisPlus customizations and the immutable
+absorption backup.
 
-- Reference docs: `doc/mod_load_reference.md`,
-  `doc/mod_defines_reference.md`, `doc/mod_mechanics_reference.md`.
+- Load `doc/mod_load_reference.md` before rename or prefix decisions.
+- Load `doc/mod_defines_reference.md` for unfamiliar incoming file types and
+  `doc/mod_mechanics_reference.md` when a changed variable or system is
+  documented there.
+- When a concurrent edit needs conflict resolution, load
+  `.github/skills/absorb-mod/references/conflict-patterns.md` and apply the
+  matching pattern.
 - If the mod is not in `credits.md`, redirect to the **absorb-mod**
   skill.
-
----
-
-## Shared Rules
-
-Follow `absorb-mod`'s current load-order, conflict-resolution, validation,
-attribution, and backup-preservation rules with these delta additions:
-
-### Error Handling (delta)
-
-- Major `supported_version` jump: warn user; expect broader changes
-  and testing needs.
-- Workshop folder unchanged: report no upstream changes detected.
-- Multiple mods to update: process one at a time.
-
-### Security (delta)
-
-- Update `credits.md` if mod name or author changed.
 
 ---
 
@@ -63,21 +48,34 @@ attribution, and backup-preservation rules with these delta additions:
    Copy-Item -Path (Join-Path $workshopDir '*') -Destination $snapshot -Recurse
    ```
 
+4. **Resolve baselines**:
+   - ORIGINAL = `backup/<id>/`, the immutable absorption and undo baseline.
+   - BASELINE = `backup/_update-mod/<id>/`, the last successfully integrated
+     upstream snapshot. Initialize it from ORIGINAL on the first update; never
+     use it for undo.
+   - UPSTREAM = the unique temporary snapshot.
+   - OURS = the workspace root.
+
+Phase 1 is complete only when all four roots exist, ORIGINAL is unchanged, and
+the UPSTREAM and BASELINE inventories are readable.
+
 ### Phase 2 -- Diff Analysis
 
-1. **Build inventories**: UPSTREAM = the unique `tmp/update-mod/` snapshot,
-   BASELINE = `backup/<id>/`, OURS = workspace
-   root. Skip `descriptor.mod`, `thumbnail.*`, `.mod` files.
-2. **Classify changes**:
+1. **Build inventories** for BASELINE, UPSTREAM, and OURS. Treat absence as a
+   file state and skip `descriptor.mod`, `thumbnail.*`, and `.mod` files.
+2. **Classify each path with a three-way comparison**:
 
    | Comparison | Classification | Action |
-   | ---------- | -------------- | ------ |
-   | Only in UPSTREAM | New upstream content | Add |
-   | Only in OURS | Our custom addition | Keep |
-   | Both identical | Up to date | Skip |
-   | Both differ | Needs merge | Analyze |
+   | --- | --- | --- |
+   | `UPSTREAM == BASELINE` and `OURS == BASELINE` | Unchanged | Skip |
+   | `UPSTREAM == BASELINE` and `OURS != BASELINE` | Local-only change | Retain OURS |
+   | `UPSTREAM != BASELINE` and `OURS == BASELINE` | Upstream-only change | Apply UPSTREAM, including deletion |
+   | `UPSTREAM == OURS` and both differ from BASELINE | Same change already present | Retain once |
+   | All other differing states | Concurrent change | Analyze and merge |
 
-3. **Analyze differing files**:
+3. Detect renames by content similarity before classifying an upstream
+   delete-plus-add pair.
+4. **Analyze concurrent files**:
    - **Binary assets**: replace with upstream, unless we have a
      `zzzz_stellarisplus_` version (keep ours).
    - **Scripts**: block-level diff. New upstream blocks: add. Our-only
@@ -87,61 +85,68 @@ attribution, and backup-preservation rules with these delta additions:
      keep ours (flag for review).
    - **GFX/GUI**: same as scripts -- block-level merge.
 
-4. **Present diff summary** to user, wait for confirmation.
+5. If `supported_version` crosses a major Stellaris version, include every
+   upstream path in the summary and require an explicit manual-test scope before
+   applying changes.
+6. **Present diff summary** with every path and classification; wait for user
+   confirmation.
+
+Phase 2 is complete only when every in-scope path has one evidenced
+classification and the user approves the apply set and required test scope.
 
 ### Phase 3 -- Apply Updates
 
-1. **Add new files** from upstream.
-2. **Merge differing files** per type (same strategies as Phase 2.3).
+1. Apply upstream-only additions, edits, renames, and deletions.
+2. Merge concurrent files per type using the approved Phase 2 strategy.
 3. **Resolve variable conflicts** -- if upstream changed a variable
    documented in `doc/mod_mechanics_reference.md` as intentionally
    ours, keep ours. Otherwise update.
 
+Phase 3 is complete only when every approved path is applied or explicitly
+blocked and no local-only customization is lost.
+
 ### Phase 4 -- Validation
 
-1. Run `& "tools/stellarisplus-quality-gate.ps1"` and fix all issues.
-2. **Cross-reference check**: new script refs have localisation keys,
+1. **Cross-reference check**: new script refs have localisation keys,
    GFX sprites, inline_script templates, and on_action event hooks.
-3. **Load-order check**: verify new or renamed files follow
+2. **Load-order check**: verify new or renamed files follow
    `doc/mod_load_reference.md` prefix conventions.
-4. **Run `merge-local-files`** only after quality gate is green. Fix
-   any issues it introduces.
+3. Run the quality gate and repair every finding before invoking
+   `merge-local-files` for approved consolidation.
+4. Re-read every changed file, then run the quality gate until two consecutive
+   runs are clean.
+
+Phase 4 is complete only when reference and load-order checks pass, every
+changed file has been re-read, and both final gate runs are clean.
 
 ### Phase 5 -- Finalize
 
-1. **Clean up the temporary snapshot** only after the final report accounts for
-   it. Preserve `backup/<id>/` without exception unless the user separately
-   requests and confirms deletion.
-2. **Update `credits.md`** if mod name or author changed.
-3. Run `& "tools/stellarisplus-refresh-credits-dates.ps1"` to refresh
+1. **Update `credits.md`** if mod name or author changed.
+2. Run `& "tools/stellarisplus-refresh-credits-dates.ps1"` to refresh
    `Last updated` dates from git history.
-4. **Report summary**:
+3. After Phase 4 succeeds, copy UPSTREAM to a separate baseline staging path
+   and prove its inventory equals UPSTREAM. Replace BASELINE only after that
+   proof; preserve the prior BASELINE until the staged copy is verified.
+   Preserve ORIGINAL without exception unless the user separately requests and
+   confirms deletion.
+4. Remove the temporary snapshot and verify that its path no longer exists.
+5. **Report summary**:
 
    | Metric | Count |
    | ------ | ----- |
-   | Files added / merged / unchanged | X / X / X |
+   | Upstream applied / concurrent merged / local retained | X / X / X |
+   | Renames / deletions / rejected | X / X / X |
+   | Unchanged | X |
    | Conflicts resolved | X |
    | Validation errors fixed | X |
    | merge-local-files: folders merged / files removed | X / X |
 
----
-
-## Decision Rules
-
-| Situation | Rule |
-| --------- | ---- |
-| Upstream restructured files | Detect renames (similar content, different paths); treat as rename, not add+delete |
-| Update touches SP core vars (`@BPV_CITY_SLOT`, etc.) | Always keep SP values and adapt upstream changes |
-| Major `supported_version` jump | Warn user; expect broader changes and testing |
-| Multiple mods to update | Process one at a time |
-| Workshop folder unchanged | Report no upstream changes detected |
+Phase 5 is complete only when credits metadata is current, BASELINE exactly
+matches the verified UPSTREAM inventory, the temporary snapshot is removed, and
+the report accounts for every classification and validation result.
 
 ## Completion Criteria
 
-The update is complete only when every upstream change relative to the preserved
-baseline is classified; every added, merged, retained, and rejected change is
-accounted for; StellarisPlus customizations and load-order behavior are
-preserved; cross-file references and credits metadata are current; changed
-files have been re-read; and two consecutive quality-gate runs are clean. A
-no-change result is complete only when the live Workshop snapshot and baseline
-are proven identical for all in-scope files.
+The update is complete only when every phase criterion is satisfied. A
+no-change result is complete only when UPSTREAM equals the rolling BASELINE for
+every in-scope path; ORIGINAL is never used as the no-change comparator.

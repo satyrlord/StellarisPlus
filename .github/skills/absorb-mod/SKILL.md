@@ -1,20 +1,20 @@
 ---
 name: absorb-mod
-description: 'Absorb or remove an external Stellaris mod in StellarisPlus. Use for a new full-mod integration or for undoing a previously credited absorption.'
-argument-hint: >-
-   Workshop ID, folder path, or zip path to absorb; or mod name/ID to undo
+description: 'Absorb a complete external Stellaris mod into StellarisPlus. Use the disclosed removal branch when reversing a credited absorption.'
 ---
 
 # Absorb Mod
 
 ## Purpose & Scope
 
-Integrate an external Stellaris mod into StellarisPlus, or undo a
-previous absorption. Covers the full lifecycle: locate, backup,
-analyze, merge, validate, and credit.
+Integrate an external Stellaris mod into StellarisPlus. For removal requests,
+load [`references/undo-absorption.md`](references/undo-absorption.md) and follow
+that branch instead of the absorption workflow below.
 
-- Reference docs: `doc/mod_load_reference.md`,
-  `doc/mod_defines_reference.md`, `doc/mod_mechanics_reference.md`.
+- Load `doc/mod_load_reference.md` before conflict or prefix decisions.
+- Load `doc/mod_defines_reference.md` when incoming content introduces an
+  unfamiliar file type, and `doc/mod_mechanics_reference.md` when it changes a
+  documented gameplay system.
 - Always absorb the **entire** mod. Partial absorption is not allowed
   (creates broken cross-references).
 
@@ -32,11 +32,17 @@ analyze, merge, validate, and credit.
    | Folder path | As-is |
    | Zip file | Extract to `$env:TEMP`, find `descriptor.mod` inside |
 
-2. **Backup** to `backup/<id>/`.
+2. **Parse `descriptor.mod`** and extract `name`, `tags`,
+   `supported_version`, and `remote_file_id`.
+3. **Resolve the Workshop ID** from the explicit input or
+   `remote_file_id`. Stop and ask for the ID when neither source provides one;
+   do not invent a backup or credits identifier.
+4. **Backup** to `backup/<id>/`.
    Stop if that path exists; never overwrite an absorption baseline without
    explicit user confirmation and a separately preserved copy.
-3. **Parse `descriptor.mod`**: extract `name`, `tags`,
-   `supported_version`, `remote_file_id`.
+
+Phase 1 is complete only when the source, descriptor metadata, and Workshop ID
+are verified and the immutable absorption backup contains the complete source.
 
 ### Phase 2 -- Inventory and Analysis
 
@@ -71,6 +77,10 @@ analyze, merge, validate, and credit.
    definitions (same name, different value).
 5. **Report** conflict table to user and wait for approval.
 
+Phase 2 is complete only when every source file has a manifest category, every
+conflict and variable shadow has a disposition, and the user approves the
+integration plan.
+
 ### Phase 3 -- Integration
 
 After user confirms:
@@ -86,7 +96,8 @@ After user confirms:
      and warn.
    - **GUI** (`.gui`): merge widget trees; new widgets at correct
      nesting; modified widgets merge properties (keep our
-     positioning). Flag major hierarchy restructures for visual check.
+     positioning). Record every major hierarchy restructure for Phase 4 visual
+     verification.
    - **Assets** (`gfx/`, `sound/`): copy directly; if exists, ask
      user which to keep.
 3. **Adjust load order** -- rename prefixes if needed per
@@ -94,16 +105,26 @@ After user confirms:
 4. **Resolve variable conflicts** -- present shadowed vars to user;
    user picks value.
 
+Phase 3 is complete only when every manifest entry is copied, merged, or
+intentionally skipped and every approved conflict decision is applied.
+
 ### Phase 4 -- Validation
 
-1. Run `& "tools/stellarisplus-quality-gate.ps1"` and fix all issues.
-2. **Cross-reference check**: verify script-to-localisation,
+1. **Cross-reference check**: verify script-to-localisation,
    script-to-GFX, GFX-to-DDS, inline_script calls, event refs in
    on_actions.
-3. **Multi-language localisation**: if incoming mod has only English,
+2. **Multi-language localisation**: if incoming mod has only English,
    copy English strings as fallback to `l_braz_por`, `l_french`,
    `l_german`, `l_polish`, `l_russian`, `l_simp_chinese`,
    `l_spanish`.
+3. **Visual verification**: when Phase 3 changed a GUI hierarchy, perform the
+   relevant in-game visual check. If the environment cannot run it, record the
+   check as blocked and obtain explicit user acceptance before completion.
+4. Re-read every changed file and run the quality gate until two consecutive
+   runs are clean.
+
+Phase 4 is complete only when cross-references, localisation fallbacks, visual
+checks, changed-file rereads, and both final gate runs are accounted for.
 
 ### Phase 5 -- Finalize
 
@@ -120,45 +141,12 @@ After user confirms:
    | Files copied / merged / skipped | X / X / X |
    | Conflicts resolved | X |
    | Validation errors fixed | X |
-   | merge-local-files: folders merged / files removed | X / X |
 
-## Undo Absorption
-
-Reverses a previously absorbed mod. Triggered by "undo absorb",
-"remove mod", etc.
-
-1. **Identify mod** -- match Workshop ID or name against `credits.md`;
-   confirm `backup/<id>/` exists.
-2. **Build removal manifest** using backup as reference:
-
-   | Situation | Action |
-   | --------- | ------ |
-   | Direct-copy, unchanged since absorption | Delete |
-   | Direct-copy, modified since | Flag for review |
-   | Content merged into shared file | Extract and remove absorbed content |
-   | Binary asset unique to absorbed mod | Delete |
-   | Shared with another absorbed mod | Keep (flag) |
-
-3. Present manifest to user, wait for confirmation.
-4. **Remove direct-copy files** and empty parent dirs.
-5. **Unmerge shared files** -- remove blocks/keys matching backup;
-   validate brace balance after each.
-6. **Clean up references** -- fix or remove broken localisation keys,
-   GFX sprites, event hooks, orphaned variables.
-7. **Update `credits.md`** -- remove entry.
-8. **Optionally remove `backup/<id>/`** (ask user).
-9. Run `& "tools/stellarisplus-quality-gate.ps1"`, fix issues, report
-   summary.
+Phase 5 is complete only when attribution metadata is current and the report
+counts reconcile with the Phase 2 manifest and Phase 4 evidence.
 
 ## Completion Criteria
 
-Absorption is complete only when every source file is recorded as copied,
-merged, or intentionally skipped; every detected conflict and cross-file
-reference is resolved; attribution and date metadata are current; changed files
-have been re-read; and two consecutive quality-gate runs are clean.
-
-Undo is complete only when every item in the removal manifest is removed,
-retained, or explicitly deferred; no absorbed-only reference remains; credits
-are accurate; changed files have been re-read; and two consecutive
-quality-gate runs are clean. Preserve `backup/<id>/` unless the user explicitly
-authorizes its deletion.
+Absorption is complete only when every phase criterion is satisfied and the
+final report accounts for every source file, conflict, reference, validation
+result, and attribution change.

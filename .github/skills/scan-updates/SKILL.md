@@ -1,20 +1,17 @@
 ---
 name: scan-updates
-description: 'Scan integrated Workshop mods for upstream updates and update only proven-outdated entries. Use for a current Steam-versus-credits.md update sweep.'
-argument-hint: >-
-  Optional: "all" (default) or comma-separated Workshop IDs to limit scan scope
+description: 'Scan integrated Workshop mods against live Steam metadata and update only entries proven outdated.'
 ---
 
 # Scan Integrated Mod Updates
 
 ## Purpose & Scope
 
-Detect which already-integrated Workshop mods are outdated versus Steam,
-then update only those mods one-by-one with validation after each update.
+Detect which already-integrated Workshop mods are outdated versus Steam, then
+invoke `update-mod` only for entries proven OUTDATED.
 
 - Requires integrated mods to already exist in `credits.md`.
 - Uses `credits.md` as the source of truth for managed Workshop IDs.
-- Runs updates sequentially (never parallel) to keep merges auditable.
 
 ---
 
@@ -55,36 +52,41 @@ For each parsed mod record:
 1. Fetch the Workshop page listed in `workshop_url`.
 2. Extract the page's **Updated** date (not Created date).
 3. Normalize to `YYYY-MM-DD` in local timezone.
-4. If page extraction fails, query live published-file metadata by ID and use
-   its upstream update timestamp. If neither live source is accessible, do not
-   infer a date from the local Workshop folder.
+4. If page extraction fails, retry at most three times with exponential backoff,
+   then query live published-file metadata by ID and use its upstream update
+   timestamp. If neither live source is accessible, do not infer a date from the
+   local Workshop folder.
 5. Compare:
    - If `steam_updated_date` > `local_last_updated`: mark **OUTDATED**.
-   - Else: mark **CURRENT**.
+   - If the dates are equal: mark **CURRENT**.
+   - If the Steam date is older: mark **CURRENT** and report the anomaly.
 
 If Steam date cannot be resolved after both methods, mark **UNKNOWN**
 and do not auto-update.
+
+The date check is complete only when every valid in-scope ID is CURRENT,
+OUTDATED, or UNKNOWN with the live evidence or failure record that produced the
+classification.
 
 ---
 
 ## Update Execution Workflow
 
-Process only `OUTDATED` mods, one at a time:
+Process only `OUTDATED` mods, one at a time; when more than ten are outdated,
+use deterministic Workshop-ID order and report progress after each:
 
 1. Load and follow `.github/skills/update-mod/SKILL.md` for the Workshop ID.
-2. After update completes, run:
+2. Record the invoked skill's two final quality-gate runs instead of duplicating
+   its validation workflow.
+3. If `update-mod` reports no upstream changes, mark the entry checked and do
+   not force a merge.
+4. If a gate failure belongs to unrelated user work that cannot be repaired
+   without expanding scope, mark the update BLOCKED and ask one concise user
+   question; never report that update complete with a failing gate.
+5. Continue only after the current ID is complete or explicitly blocked.
 
-   ```powershell
-   & "tools/stellarisplus-quality-gate.ps1"
-   ```
-
-3. If quality gate reports issues:
-   - Fix all mod-owned errors introduced or exposed by the update.
-   - Re-run quality gate.
-   - Repeat until green or blocked by ambiguous ownership.
-4. If blocked by ambiguous/conflicting intent, ask one concise user
-   question and pause that mod only.
-5. Continue to next outdated mod.
+Update execution is complete only when every OUTDATED ID has an `update-mod`
+completion record or an evidenced BLOCKED disposition.
 
 ---
 
@@ -113,35 +115,9 @@ Also list:
 - mods with unresolved Steam dates (`UNKNOWN`)
 - any manual decisions still needed
 
----
-
-## Decision Rules
-
-| Situation | Rule |
-| --------- | ---- |
-| `steam_updated_date == local_last_updated` | Treat as CURRENT (no update) |
-| Steam updated date is older than local | Treat as CURRENT and report anomaly |
-| Steam page unavailable (429/5xx) | Retry with backoff, then fallback method |
-| `update-mod` says no upstream changes | Mark as checked; do not force merge |
-| Quality gate fails on pre-existing unrelated issues | Fix only issues in touched files; report remainder |
-| More than 10 outdated mods | Process in deterministic ID order, reporting progress after each |
-
----
-
-## Safety & Consistency
-
-- Do not modify unrelated files while resolving update fallout.
-- Preserve StellarisPlus load-order and naming conventions from
-  `doc/mod_load_reference.md`.
-- Keep `credits.md` accurate; if update changes mod identity metadata,
-  refresh the affected entry.
-- Use a single focused pass per mod: update -> quality gate -> fixes -> recheck.
-
 ## Completion Criteria
 
-The scan is complete only when every in-scope valid credits entry is classified
-as CURRENT, OUTDATED, or UNKNOWN from live metadata; malformed and UNKNOWN
-entries are reported without mutation; every OUTDATED entry is updated or
-explicitly blocked; each completed update has two consecutive clean
-quality-gate runs; credits metadata is current; and all three required output
-tables account for every in-scope ID.
+The scan is complete only when the date-check and update-execution criteria are
+satisfied; malformed and UNKNOWN entries are reported without mutation;
+credits metadata is current; and all three required output tables account for
+every in-scope ID and both gate runs for each completed update.

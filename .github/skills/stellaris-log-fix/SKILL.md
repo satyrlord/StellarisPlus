@@ -1,8 +1,6 @@
 ---
 name: stellaris-log-fix
 description: 'Log fix explicitly requested Stellaris runtime diagnostics by collecting or analyzing logs and repairing mod-owned errors. Do not collect logs when the user only describes a symptom; ask first.'
-argument-hint: >-
-   Optionally describe specific errors or symptoms to focus on
 ---
 
 # Stellaris Log Fix
@@ -14,25 +12,6 @@ auto-fix mod-owned issues. Use after a test run when the user asks to
 check logs or fix errors.
 
 - Logs are collected into `tmp/_logs_inbox/`.
-
----
-
-## Error Handling
-
-- **Ownership rule**: only fix errors referencing files in this
-  workspace or assets from integrated mods in `credits.md` (Workshop
-  content at
-  `C:\Program Files (x86)\Steam\steamapps\workshop\content\281990\<id>\`).
-- **Vanilla error, no mod override**: skip unless user asks to create
-  override.
-- **Ambiguous ownership**: check if file exists in workspace before
-  fixing.
-- **Cascading errors**: fix at root cause, not each symptom.
-
-## Testing
-
-- Run `& "tools/stellarisplus-quality-gate.ps1"` after all fixes.
-- Track each fix in TODO list.
 
 ---
 
@@ -53,37 +32,38 @@ Copies `error.log`, `game.log`, `debug.log`, `setup.log`,
 Run `spcollect` only when the user explicitly asks for that command. Do not omit
 `-NoLaunch` unless the user explicitly requests a launched test cycle.
 
+Step 1 is complete only when the selected log files exist, are readable, and
+their supplied or collected origin is recorded.
+
 ### 2. Parse error log
 
-Parse `tmp/_logs_inbox/error.log` -- group multi-line entries.
-Load `.github\skills\stellaris-log-fix\references\error-patterns.md`
-for classification rules.
+Parse the complete error log selected in Step 1 and group multi-line entries.
+Load `.github\skills\stellaris-log-fix\references\error-patterns.md`; it is the
+sole authority for ownership, categories, skip rules, and fix strategies.
+
+Step 2 is complete only when every physical log line belongs to one parsed
+entry or is explicitly recorded as unparsed.
 
 ### 3. Classify each error
 
-| Category | Action |
-| -------- | ------ |
-| Intentional Override | Skip |
-| External Mod Noise | Skip |
-| Duplicate Texture (INFO) | Report only |
-| Missing Sound Category | Auto-fix |
-| Script Error | Auto-fix |
-| Missing Localisation | Auto-fix |
-| Missing GFX/Sprite | Auto-fix |
-| Missing File/Asset | Investigate and report |
+Apply the reference's ownership rule first, then assign each parsed entry one
+category and disposition. Step 3 is complete only when every entry has both.
 
 ### 4. Fix each mod-owned error
 
-- Read referenced file with 20+ lines context around the error.
-- Script errors: fix scope, syntax, conditions.
-- Missing localisation: add key to `localisation/*_l_english.yml`.
-- Missing GFX: add sprite to appropriate `.gfx` in `interface/`.
+Apply the reference's matching fix strategy to the root cause, not cascading
+symptoms. Read the complete owning file before editing and re-read it after the
+change. Step 4 is complete only when every mod-owned root cause is repaired with
+evidence or explicitly blocked.
 
 ### 5. Scan game log
 
-Scan `tmp/_logs_inbox/game.log` for `Error`, `Warning`, `FAIL`,
+Scan the game log selected in Step 1 for `Error`, `Warning`, `FAIL`,
 `assert` (skip galaxy generation noise). Apply the same
 classify-and-fix workflow.
+
+Step 5 is complete only when every relevant game-log entry has the same
+ownership, category, disposition, and root-cause accounting as Step 3.
 
 ### 6. Run quality gate
 
@@ -101,10 +81,11 @@ Problems diagnostics, and repeat until two consecutive runs are clean.
 
 Group skipped errors by category with counts.
 
+Step 7 is complete only when every parsed error and relevant game-log entry
+appears once in the table or one skipped-category count, and unresolved entries
+include evidence and a blocker.
+
 ## Completion Criteria
 
-Log fix is complete only when every collected error and relevant game-log
-warning is classified by ownership and disposition; every true mod-owned root
-cause is fixed or explicitly blocked; changed files have been re-read; two
-consecutive quality-gate runs are clean; and the report accounts for fixed,
-skipped, external, duplicate, and unresolved entries with evidence.
+Log fix is complete only when every step criterion is satisfied and the final
+report reconciles with the parsed entry count and both clean gate runs.

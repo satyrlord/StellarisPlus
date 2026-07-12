@@ -1,25 +1,18 @@
 # Per-File-Type Review Checklists
 
-Use these during Phase 1.2 of the code review. Read the full file; use diff to
-focus, but validate surrounding context.
+Use these file-local checks during Phase 1.2. Apply parser and scope semantics
+from `paradox-script-rules.md`, encoding rules from
+`doc/mod_defines_reference.md`, and filename/load-order rules from
+`doc/mod_load_reference.md`; those meanings are not duplicated here.
 
 ## Gameplay scripts (`common/**/*.txt`)
 
-1. Brace balance (`{` == `}`)
-2. Scope correctness (no invalid chains like `owner = { owner = { } }`)
-3. No effects in trigger blocks (`potential`, `allow`, `limit`, `any_*`)
-4. `@variable` refs defined in `scripted_variables`; check for shadowing
-5. `inline_script` calls: params match template `$PARAM$`; `script =` resolves
-6. Filename prefix matches intent per `doc/mod_load_reference.md`
-7. Modifier symmetry: add has corresponding remove path
-8. Conditional logic: `if` has `limit`, `else_if` before `else`, no
-   `else_if` after `else`
-9. Non-localisation script files (`.txt`, `.gfx`, `.gui`, `.asset`)
-  must be UTF-8 without BOM; a BOM can cause the first parsed key to
-  be rejected
-10. When changes touch zones, zone slots, traditions, buildings, or
+1. `@variable` references resolve and intentional shadowing is documented.
+2. `inline_script` calls resolve and provide the template parameters.
+3. Reversible modifiers and effects have matching remove paths.
+4. When changes touch zones, zone slots, traditions, buildings, or
    districts, cross-check `doc/mod_mechanics_reference.md` for linked
-   constraints and constants before flagging or approving the change
+   constraints and constants before flagging or approving the change.
 
 ## Events (`events/*.txt`)
 
@@ -36,7 +29,7 @@ All gameplay script checks above, plus:
 - Language header present (`l_english:`)
 - Keys use `:0` format, no duplicates
 - `$key$` refs point to existing keys; `[Scope.Method]` uses valid methods
-- UTF-8 with BOM
+- Encoding matches `doc/mod_defines_reference.md`.
 
 ## GFX (`.gfx`)
 
