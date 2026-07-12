@@ -2093,7 +2093,7 @@ zone_MZ_elite = {
     potential = { # colony scope
         hidden_trigger = { exists = owner }
         OR = {
-            NOT = { planet = { has_planet_flag = toxic_knights_habitat } }
+            NOT = { has_planet_flag = toxic_knights_habitat }
             owner = { NOT = { has_origin = origin_toxic_knights } }
         }
         owner = {
@@ -2106,7 +2106,7 @@ zone_MZ_elite = {
     unlock = { # colony scope
         hidden_trigger = { exists = owner }
         OR = {
-            NOT = { planet = { has_planet_flag = toxic_knights_habitat } }
+            NOT = { has_planet_flag = toxic_knights_habitat }
             owner = { NOT = { has_origin = origin_toxic_knights } }
         }
         owner = {

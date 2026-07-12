@@ -823,7 +823,15 @@ country_event = {
 			}
 			give_technology = { tech = tech_automated_exploration message = no }
 			else = {
-				give_technology = { tech = tech_archeology_lab message = no }
+				if = {
+					limit = {
+						has_ancrel = yes
+					}
+					give_technology = { tech = tech_archeology_lab_ancrel message = no }
+				}
+				else = {
+					give_technology = { tech = tech_archeology_lab message = no }
+				}
 			}
 		}
 	

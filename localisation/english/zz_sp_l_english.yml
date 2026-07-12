@@ -21,7 +21,7 @@
 
  # Machine Empire Mineral District Retrofit — District Stubs
  district_sp_machine_minerals_food: "Lithosynthesis Annex"
- district_sp_machine_minerals_food_plural: "Mining Districts
+ district_sp_machine_minerals_food_plural: "Mining Districts"
  district_sp_machine_minerals_food_desc: "Mineral extraction tunnels have been expanded into lithosynthetic growing chambers, where mineral-rich substrates are converted into organic biomass."
  district_sp_machine_minerals_energy: "Lithovoltaic Complex"
  district_sp_machine_minerals_energy_plural: "Mining Districts"
