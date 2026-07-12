@@ -1,11 +1,9 @@
 ---
 name: writing-great-skills
 description: >
-  Reference for writing and editing skills well — the vocabulary and principles
-  that make a skill predictable. Use when the user asks about writing a skill,
-  editing a skill, improving a skill, skill design, skill conventions, skill
-  vocabulary, or wants to understand leading words, completion criteria,
-  progressive disclosure, or other skill-writing concepts.
+  Reference for predictable skill design and editing. Use when evaluating or
+  changing invocation, information hierarchy, completion criteria, progressive
+  disclosure, leading words, or pruning.
 ---
 
 # Writing Great Skills
@@ -127,3 +125,10 @@ Use these to diagnose issues the user may be having with the skill.
 - **No-op** — a line the model already obeys by default, so you pay load to say nothing. The test: does it change behaviour versus the
   default? A weak leading word (_be thorough_ when the agent is already thorough-ish) is a no-op; the fix is a stronger word
   (_relentless_), not a different technique.
+
+## Application criterion
+
+When using this reference to evaluate or edit a skill, the work is complete only
+when every applicable invocation, hierarchy, co-location, completion, pruning,
+and failure-mode rule has been applied, and every retained line has one
+authoritative home and changes behavior relative to the model's default.

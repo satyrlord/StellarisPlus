@@ -13,16 +13,6 @@ Change one variable per run and preserve the user's original working state. Use
 [`EXAMPLES.md`](EXAMPLES.md) only when a concrete ablation pattern or test-log
 template would help.
 
----
-
-## Core Principles
-
-- **One variable at a time**: each run should answer one question.
-- **High-signal states**: test with sharply reduced change sets.
-- **Stop when minimal fix is proven**: avoid overfitting extra edits.
-
----
-
 ## Preconditions
 
 Before running ablations:
@@ -54,7 +44,8 @@ git stash show -u --name-status $ablationStash
 ```
 
 Compare the stash manifest with the recorded working-tree manifest. Stop if any
-path is missing. Never address the snapshot as `stash@{0}` after creation.
+path is missing. Never replace the captured object ID with a moving stash
+selector after creation.
 
 ### 2) Build a minimal candidate set
 
@@ -108,32 +99,6 @@ the user's approval. Verify `git status --short` against the original manifest.
 Retain the stash by default; offer its exact object ID and let the user decide
 whether to drop it.
 
----
-
-## Interpretation Rules
-
-- **PASS with tiny set** -> other edits are likely unnecessary.
-- **FAIL with tiny set** -> at least one excluded group is required.
-- **PASS only with one file type restored** -> root cause is in that
-  layer (for example, texture asset corruption vs script logic).
-- **Conflicting results** -> rerun from clean baseline; control for
-  caching, stale runtime state, and restart requirements.
-
----
-
-## Practical Patterns
-
-- Start with **3-file hypothesis set**, then reduce to **1-file** or
-  **1-layer** set.
-- Prefer grouping by subsystem:
-  - assets (`gfx/`, binaries)
-  - script/data (`common/`)
-  - UI registration (`interface/`)
-  - text/localisation (`localisation/`)
-- When binary assets are involved, run hash checks early.
-
----
-
 ## Output Requirements
 
 After ablation, report:
@@ -156,13 +121,3 @@ The ablation is complete only when:
 4. the original worktree and all unrelated changes are accounted for;
 5. the final report names the retained stash object, minimal fix, excluded
    changes, test evidence, and residual uncertainty.
-
----
-
-## Common Pitfalls
-
-- Testing too many variables at once.
-- Forgetting untracked files in stash/recovery.
-- Assuming text/script caused an asset bug (or vice versa).
-- Drawing conclusions without restarting when runtime caches apply.
-- Keeping speculative edits after root cause is proven.

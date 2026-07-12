@@ -15,29 +15,7 @@ skill is an orchestrator -- it sequences the quality gate, manual
 testing, log analysis, and code review, enforcing stop points and
 iterating until all true mod-owned findings are resolved.
 
-- Does not replace the underlying quality-gate, log-fix, or
-  code-review logic.
-- Sequences them, enforces stop points, and keeps iterating.
-
----
-
-## Error Handling
-
-- Only fix issues owned by this workspace or integrated mods credited
-  in `credits.md`. For detailed ownership rules, see the error-handling
-  sections in `stellaris-code-review` and `stellaris-log-fix`.
-- Treat cascading findings as root-cause problems. Fix the source,
-  then re-run checks.
-- If a reported issue is external noise, document it briefly and move
-  on.
-- If a blocker requires user intent, stop and ask one concise question.
-
-## Testing
-
-- Create a TODO list for the run.
-- After Stage 2, explicit user confirmation is required before log
-  analysis.
-- Preserve stage order. Do not skip ahead.
+Create a TODO list for the run and preserve stage order.
 
 ---
 
@@ -109,7 +87,6 @@ the game process exited.
 | After Stage 2 | Explicit user confirmation required |
 | Vanilla/DLC behavior | Verify against official files; never speculate |
 | Issue ownership | Only fix workspace-owned or credited mod issues |
-| Cascading errors | Fix root cause first, then re-run |
 | External noise | Document briefly and move on |
 | User intent needed | Stop and ask one concise question |
 

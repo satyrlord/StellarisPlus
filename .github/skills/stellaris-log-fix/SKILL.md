@@ -13,7 +13,6 @@ Collect Stellaris runtime logs, classify errors by ownership, and
 auto-fix mod-owned issues. Use after a test run when the user asks to
 check logs or fix errors.
 
-- Error classification rules: `references/error-patterns.md`.
 - Logs are collected into `tmp/_logs_inbox/`.
 
 ---

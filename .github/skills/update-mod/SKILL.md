@@ -22,8 +22,8 @@ cleanup.
 
 ## Shared Rules
 
-Follow `absorb-mod`'s Naming Conventions, Error Handling, Testing,
-and Security rules with these delta additions and overrides:
+Follow `absorb-mod`'s current load-order, conflict-resolution, validation,
+attribution, and backup-preservation rules with these delta additions:
 
 ### Error Handling (delta)
 

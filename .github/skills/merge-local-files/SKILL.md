@@ -82,7 +82,7 @@ Wait for user approval.
    - Concatenate with `# === merged from <filename> ===` separators.
    - LIOS: sort ascending, last-winning content at end.
    - FIOS: sort ascending, first-winning content at top.
-    - MERGE: preserve the original deterministic file order.
+   - MERGE: preserve the original deterministic file order.
    - Write merged file. Delete source files only after successful
      write.
    - Verify file count: `(Get-ChildItem -File -Path "<folder>").Count`
