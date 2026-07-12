@@ -3,8 +3,12 @@
 Date: 2026-07-12
 
 - Runtime log fixes for Stellaris 4.4.6:
-  - Fixed `zone_MZ_elite` checking `has_planet_flag` from colony scope by
-    switching to the zone's planet scope in both `potential` and `unlock`.
+  - Fixed `zone_MZ_elite` checking a planet-only flag from ship scope by using
+    the current zone API's `has_carrier_flag` in both `potential` and `unlock`.
+  - Restored the integrated CANS ship-name limit under `unchecked_defines/`,
+    where Stellaris reads `NInterface.SHIP_NAME_SIZE_MAX`.
+  - Replaced four literal sequential army names with their existing
+    localisation keys and added the two leader-name keys seen in the log.
   - Restored the Arkship header, focus button, management window, and tabs in
     `interface/zz_planet_view.gui`, preserving the BPVR layout while matching
     the current vanilla/UI Overhaul Dynamic `planet_view` child contract.

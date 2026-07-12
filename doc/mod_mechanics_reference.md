@@ -214,4 +214,4 @@ define override.
 
 Content files:
 
-- `common/defines/zz_longer_ship_names.txt` -- Ship name length define
+- `unchecked_defines/zz_sp_longer_ship_names.txt` -- Ship name length define

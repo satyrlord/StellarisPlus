@@ -95,7 +95,7 @@ REP5 = {
 		}
 
 		slave_army = {
-			sequential_name = "Chain Gang %R%"
+			sequential_name = REP5_xxSLAVEARMY_SEQ
 		}
 
 		clone_army = {

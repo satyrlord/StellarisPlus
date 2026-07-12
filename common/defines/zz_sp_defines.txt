@@ -1,3 +1,5 @@
+# OVERRIDE: zz_sp_ — consolidates late-loading define overrides, common/defines
+
 # === merged from hrth_defines.txt ===
 # Hyper Relays Thinner Hyperlanes Change
 NGraphics = {
@@ -50,12 +52,6 @@ NGraphics = {
 	}
 	NAI = {
 		NUM_TRADITIONS_FOR_EDICTS = 150			# AI delay for Unity edicts, tuned for StellarisPlus's expanded tradition count
-	}
-# === merged from zz_longer_ship_names.txt ===
-	NInterface = {
-
-		SHIP_NAME_SIZE_MAX						= 50	# Max number of letters in ship names
-
 	}
 # === merged from zzzz_bpv_zone_slots_override.txt ===
 NGameplay = {

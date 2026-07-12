@@ -1,0 +1,5 @@
+# OVERRIDE: zz_sp_ — raises the ship-name limit for integrated CANS namelists, unchecked_defines/00_interface.txt
+
+NInterface = {
+	SHIP_NAME_SIZE_MAX = 50
+}
