@@ -1,9 +1,15 @@
 ---
 name: stellaris-code-review
-description: 'Code review for Paradox Script in Stellaris mods. Validates syntax, scope correctness, localisation, GFX/GUI integrity, load-order safety, and cross-file consistency. Use when user says "code review", "review code", "review changes", "check script", "validate mod", "review mod", "review project", "script review", or wants to inspect uncommitted changes or audit the full project.'
-argument-hint: >-
-   Optionally specify files, folders, or focus areas (e.g., "only
-   localisation", "just the events")
+description: >
+  Run a strict, comprehensive review of StellarisPlus changes covering
+  Paradox Script correctness, load-order safety, localisation integrity,
+  GFX/GUI consistency, cross-file references, and documentation quality.
+  Use when the user asks for a code review, full code review, merge-readiness
+  check, pre-release audit, comprehensive quality sweep, review changes,
+  check script, validate mod, review mod, review project, or script review.
+argument-hint: >
+  Optionally specify files, folders, or focus areas (e.g. "only events",
+  "just the new traditions", "only localisation")
 disable-model-invocation: true
 ---
 
@@ -11,40 +17,62 @@ disable-model-invocation: true
 
 ## Purpose & Scope
 
-Two-phase review for Paradox Script in Stellaris mods: Phase 1 = deep
-review of uncommitted changes; Phase 2 = broad project audit.
+Comprehensive review covering every layer of a StellarisPlus change:
+Paradox Script, load order, localisation, GFX/GUI, cross-file references,
+documentation, and credits. Four phases: uncommitted-change deep review,
+cross-cutting validation, project-wide audit, and final report.
 
 This review is strict and merge-readiness oriented: surface concrete
 defects and ship risk first, then design-quality issues.
 
 ## Goal
 
-Review the change like a strict senior teammate: find real defects and
+Review the change like a strict senior modder: find real defects and
 ship-risk first, then identify design quality issues that should be
-fixed before merge.
+fixed before release. Confirm intended behavior from task text, docs
+under `doc/`, existing mod files, and vanilla/DLC references before
+judging the implementation.
 
 ## Read First
 
 1. `AGENTS.md`
-2. the relevant source-of-truth docs under `docs/`
-3. changed tests and nearby tests
-4. changed implementation files
+2. the relevant source-of-truth docs under `doc/`:
+   - `doc/mod_load_reference.md` — load order and prefix rules
+   - `doc/mod_mechanics_reference.md` — gameplay system contracts
+   - `doc/mod_ui_reference.md` — UI and GFX conventions
+   - `doc/mod_defines_reference.md` — file type and encoding rules
+3. `doc/changelog.md` — recent changes in affected areas
+4. `credits.md` — integrated mod attribution for affected systems
+5. changed implementation files and their cross-file dependencies
+6. changed tests and nearby tests
 
-Use `.github/references/security-checklist.md` and
-`.github/references/performance-checklist.md` when the slice touches
-trust boundaries or hot paths.
+Use `.github/skills/stellaris-code-review/references/paradox-script-rules.md`
+for syntax, scope, and parser rules. Use
+`.github/skills/stellaris-code-review/references/REFERENCE.md` for the
+full strict-review policy, structural quality rules, and approval bar.
 
-For Stellaris-script reviews, continue to use the Stellaris reference
-order below to keep script and load-order decisions linear.
+- Use this reference order to keep decisions linear:
+
+  | Step | Reference | Use for |
+  | ---- | --------- | ------- |
+  | 1 | `references/paradox-script-rules.md` | Syntax, scope, and parser rules |
+  | 2 | `doc/mod_load_reference.md` | Override behavior and LIOS/FIOS/DUPL/MERGE safety |
+  | 3 | `doc/mod_merge_order_report.md` | Only when reviewing duplicated or merged local files |
+
+- **Evidence-first**: cross-check assumptions against actual
+  vanilla/DLC/mod files; do not assume missing references or override
+  validity without concrete evidence.
 
 ## Use When
 
-- the user asks for review, code review, PR review, or merge readiness
-- a change touches parsers, file paths, settings, bridge payloads, or
-  process launch paths
-- import, extraction, playback, or UI responsiveness may have regressed
-- user asks for script review, mod validation, or uncommitted-change
-  audit in this repository
+- the user asks for review, code review, full code review, PR review, or merge readiness
+- a change touches multiple layers (script + localisation + GFX + docs)
+- a new feature is complete and needs final validation before shipping
+- an integrated mod update needs comprehensive conflict review
+- load-order strategy changes need verification across all affected files
+- user asks for script review, mod validation, or uncommitted-change audit
+
+---
 
 ## Review Workflow
 
@@ -59,78 +87,13 @@ order below to keep script and load-order decisions linear.
 4. Escalate findings by severity and include the smallest concrete fix.
 5. Report verification gaps separately from confirmed defects.
 
-- Use this reference order to keep decisions linear:
-
-  | Step | Reference | Use for |
-  | ---- | --------- | ------- |
-  | 1 | `.github\skills\stellaris-code-review\references\paradox-script-rules.md` | Syntax, scope, and parser rules |
-  | 2 | `doc/mod_load_reference.md` | Override behavior and LIOS/FIOS/DUPL/MERGE safety |
-  | 3 | `doc/mod_merge_order_report.md` | Only when reviewing duplicated or merged local files |
-
-- **Evidence-first**: cross-check assumptions against actual
-  vanilla/DLC/mod files; do not assume missing references or override
-  validity without concrete evidence.
-
-## Output Contract
-
-Return findings first, highest severity first, then open questions and
-residual risk. If no findings remain, say `No findings` and call out
-any test gap.
-
-## Quick Finding Example
-
-```markdown
-## Findings
-
-### High
-- `MixJam/Import/Foo.cs`: parser accepts unchecked offset and can read
-  past bounds for malformed input; validate length before read and
-  return a user-readable import warning.
-```
-
-## Deep Review Reference
-
-Use [REFERENCE.md](references/REFERENCE.md) for the full strict-review policy,
-structural quality rules, approval bar, and expanded prompts.
-
 ---
 
-## Naming Conventions
-
-- Filename prefixes must match load-order intent per
-  `doc/mod_load_reference.md`.
-- `_replace` files must contain vanilla objects.
-- Override prefixes (`zz_`, `zzzz_`) must be commented or documented.
-
-## Code Style
-
-- Brace balance: `{` count must equal `}` count.
-- No effects in trigger blocks (`potential`, `allow`, `limit`,
-  `any_*`).
-- `if` must have `limit`; `else_if` before `else`; no `else_if`
-  after `else`.
-- Modifier symmetry: `add` has a corresponding `remove` path.
-
-## Error Handling
-
-- Never review `backup/` files.
-- Do not flag whitespace-only changes unless they break Paradox
-  parsing.
-- 20+ files changed: summarize list first, ask user.
-
-## Testing
-
-- Run `& "tools/stellarisplus-quality-gate.ps1"` as the automated
-  validation baseline.
-- Check `get_errors` for VS Code Problems.
-
----
-
-## Phase 1 -- Uncommitted Changes (Deep)
+## Phase 1 — Uncommitted Changes (Deep)
 
 ### 1.1 Gather changed files
 
-Use `get_changed_files` + `git status --short`. Categorize:
+Use git status to list changed files. Categorize:
 
 | Pattern | Category |
 | ------- | -------- |
@@ -214,9 +177,62 @@ Read full file. Use diff to focus, but validate surrounding context.
 
 ---
 
-## Phase 2 -- Project-Wide Audit (Broad)
+## Phase 2 — Cross-Cutting Validation
 
-### 2.0 Run automated validation
+After script review passes, validate the layers that connect scripts to
+the rest of the mod:
+
+### 2.1 Localisation Audit
+
+- Every script-referenced localisation key must resolve to a `.yml` file
+  in `localisation/`.
+- No duplicate keys across localisation files.
+- All `.yml` files: UTF-8 with BOM, correct language headers, `:0`
+  formatting.
+
+### 2.2 GFX / GUI Audit
+
+- Every `GFX_` sprite reference in `.gui` or `.gfx` files must resolve.
+- `textureFile` paths (capital F) in `.gfx` files must point to existing
+  DDS assets.
+- `.gfx`/`.gui`/`.asset` files: UTF-8 without BOM.
+
+### 2.3 Cross-File Reference Audit
+
+- Event IDs in `events/` must match `on_actions/` registrations.
+- `inline_script` calls must match existing script paths and use correct
+  `$PARAM$` names.
+- `@scripted_variables` must be declared before use and not shadowed.
+- Technology, tradition, building, and district keys referenced across
+  files must resolve.
+
+### 2.4 Load-Order Audit
+
+- Filename prefixes must match the intended load-order strategy per
+  `doc/mod_load_reference.md`.
+- Override files (`_replace`, `zz_sp_`, `zzzz_`) must target real vanilla
+  or mod objects.
+- No accidental LIOS files in FIOS-only folders (and vice versa).
+- `common/on_actions/` MERGE folder: verify no duplicate event
+  registrations from accidentally importing the same source block twice.
+- Load order notes: `events/` is FIOS, not LIOS; `solar_system_initializers/`
+  is FIOS; `localisation/replace/` is the guaranteed override path for
+  localisation.
+
+### 2.5 Documentation Audit
+
+- `doc/changelog.md` must have an entry for each user-facing change under
+  the current version heading.
+- Override files must have a top-of-file `# OVERRIDE:` comment.
+- New integrated mod content must be credited in `credits.md`.
+- Reference docs (`doc/mod_mechanics_reference.md`, etc.) must reflect
+  new or changed contracts.
+
+---
+
+## Phase 3 — Project-Wide Audit (Broad)
+
+### 3.0 Run automated validation
 
 ```powershell
 & "tools/stellarisplus-quality-gate.ps1"
@@ -240,7 +256,7 @@ patterns:
 - Scoped-flag suffix duplicates can be expected depending on usage
 - Multiline quoted inline-script payloads can be valid
 
-### 2.1-2.4 Manual checks
+### 3.1-3.4 Manual checks
 
 - **Variables**: review shadowed vars flagged by script; intentional
   overrides via load-order are OK if documented.
@@ -253,13 +269,10 @@ patterns:
   prefixes (`zz_`, `zzzz_`) are commented; no prefix collisions;
   verify folder behavior in `doc/mod_load_reference.md` before calling
   something broken.
-- **Load order notes**: `events/` is FIOS, not LIOS; `solar_system_initializers/`
-  is FIOS; `localisation/replace/` is the guaranteed override path for
-  localisation.
 
 ---
 
-## Phase 3 -- Report
+## Phase 4 — Report
 
 ```markdown
 ## Code Review Summary
@@ -267,19 +280,25 @@ patterns:
 ### Phase 1: Uncommitted Changes
 | # | File | Severity | Finding | Recommendation |
 
-### Phase 2: Project-Wide
+### Phase 2: Cross-Cutting Validation
+| # | Category | Severity | Finding | Recommendation |
+
+### Phase 3: Project-Wide
 | # | Category | Severity | Finding | Recommendation |
 
 ### Statistics
 - Files reviewed / scanned: N / N
-- Errors / Warnings / Info: N / N / N
+- Critical / High / Medium / Low: N / N / N / N
 ```
 
-| Severity | Meaning |
-| -------- | ------- |
-| Error | Runtime failure or broken gameplay |
-| Warning | Likely unintended, may cause subtle issues |
-| Info | Style/cleanup opportunity |
+### Finding Severity
+
+| Severity | Criteria |
+| -------- | -------- |
+| **Critical** | Crash risk, save corruption, load-order reversal, missing required dependency |
+| **High** | Broken localisation key, orphan GFX reference, wrong encoding, duplicate event firing |
+| **Medium** | Missing changelog entry, missing override comment, style inconsistency |
+| **Low** | Documentation clarity, non-blocking code style nits |
 
 ---
 
@@ -292,3 +311,35 @@ patterns:
 | 20+ files changed | Summarize list first, ask user |
 | `backup/` files | Never review |
 | Whitespace-only changes | Do not flag unless they break parsing |
+
+## Error Handling
+
+- Only fix issues owned by this workspace or integrated mods credited in
+  `credits.md`.
+- Never speculate about vanilla or DLC behavior; verify against official
+  files.
+- Treat cascading findings as root-cause problems. Fix the source, then
+  re-run checks.
+- Skip `backup/` and `tmp/` files.
+- If a finding requires user intent, stop and ask one concise question.
+
+## Testing
+
+- Create a TODO list for the review.
+- Run the quality gate after all fixes: `& "tools/stellarisplus-quality-gate.ps1"`
+- Re-read changed files after edits to verify correctness.
+- Check `get_errors` for VS Code Problems.
+
+## Quick Finding Example
+
+```markdown
+## Findings
+
+### Critical
+- `common/buildings/zz_sp_buildings.txt`: override targets non-existent
+  vanilla building `building_xxx`; verify target key or remove override.
+
+### High
+- `events/my_events.txt`: event `myns.10` missing `name` key in option;
+  add `name = myns.10.a` with localisation entry.
+```

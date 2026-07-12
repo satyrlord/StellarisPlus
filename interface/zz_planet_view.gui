@@ -1,3 +1,5 @@
+# OVERRIDE: zz_sp_ — BPVR planet view with Stellaris 4.4 Arkship compatibility, vanilla interface/planet_view.gui
+
 # population tab
 @pop_category_width = 1177
 # sidebar
@@ -207,6 +209,48 @@ guiTypes = {
 			}
 		}
 		# Header
+		# Arkship Header Part
+		containerWindowType = {
+			name = "arkship_portrait_window"
+			size = { width = @portrait_window_width height = 100%% }
+			position = { x = 0 y = 0 }
+			clipping = no
+			background = {
+				name = "arkship_portrait_window"
+				spriteType = "GFX_invisible"
+				alwaysTransparent = yes
+			}
+			containerWindowType = {
+				name = "arkship_blueprint_background"
+				size = { width = 850 height = 630 }
+				position = { x = 0 y = 115 }
+				background = {
+					name = "blueprint"
+					spriteType = "GFX_arkship_blueprint_background"
+					alwaysTransparent = yes
+				}
+			}
+			iconType = {
+				name = "arkship_header_background"
+				spriteType = "GFX_arkship_planetview_header_civilian"
+				position = { x = 0 y = 0 }
+				alwaysTransparent = yes
+			}
+			containerWindowType = {
+				name = "planet_top_bar"
+				position = { x = 0 y = -10 }
+				background = {
+					name = "planet_top_bar"
+					spriteType = "GFX_arkship_banner"
+					alwaysTransparent = yes
+				}
+			}
+			buttonType = {
+				name = "flag"
+				quadTextureSprite = "GFX_empire_flag_64"
+				position = { x = 3 y = -10 }
+			}
+		}
 		buttonType = {
 			name = "colony_rename_button"
 			quadTextureSprite = "GFX_invisible"
@@ -225,6 +269,13 @@ guiTypes = {
 			format = left
 			vertical_alignment = center
 			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "arkship_focus_on"
+			position = { x = -239 y = 4 }
+			orientation = upper_right
+			quadTextureSprite = "GFX_button_open_fleet_arkship"
+			pdx_tooltip = "FOCUS_ON_FLEET"
 		}
 		# Header Buttons
 		containerWindowType = {
@@ -2716,6 +2767,12 @@ guiTypes = {
 				}
 			}
 		}
+		# Arkship -------------------- ARKSHIP MANAGEMENT ------------------------->
+		containerWindowType = {
+			name = "arkship_window"
+			size = { width = 500 height = 400 }
+			position = { x = 0 y = 200 }
+		}
 		# Armies -------------------- COMBAT SCREEN ------------------------->
 		containerWindowType = {
 			name = "armies_window"
@@ -3820,6 +3877,35 @@ guiTypes = {
 			shortcut = "c"
 			oversound = "no_sound"
 			pdx_tooltip = "POPULATION_BUTTON"
+		}
+		# Arkship Tab
+		buttonType = {
+			name = "arkship_tab"
+			quadTextureSprite = "GFX_ui_tab_2_long_inactive"
+			position = { x = 505 y = 0 }
+			orientation = lower_left
+			buttonFont = "font_text_16"
+			buttonText = "ARKSHIP_CONTROLS"
+			borderSize = { x = 20 y = 0 }
+			multiline = yes
+			clicksound = "tab_click"
+			shortcut = "v"
+			oversound = "no_sound"
+			pdx_tooltip = "ARKSHIP_CONTROLS_BUTTON"
+		}
+		buttonType = {
+			name = "arkship_tab_active"
+			quadTextureSprite = "GFX_ui_tab_2_long_active"
+			position = { x = 505 y = 0 }
+			orientation = lower_left
+			buttonFont = "font_text_16"
+			buttonText = "ARKSHIP_CONTROLS"
+			borderSize = { x = 20 y = 0 }
+			multiline = yes
+			clicksound = "tab_click"
+			shortcut = "v"
+			oversound = "no_sound"
+			pdx_tooltip = "ARKSHIP_CONTROLS_BUTTON"
 		}
 		# Ground Combat Tab
 		buttonType = {

@@ -1,4 +1,6 @@
 
+# OVERRIDE: zz_sp_ — fixes and extends vanilla zones, common/zones
+
 zone_introspective_laboratory = {
 	icon = "GFX_district_introspective_lab"
 	base_buildtime = @zone_buildtime
@@ -2093,7 +2095,7 @@ zone_MZ_elite = {
     potential = { # colony scope
         hidden_trigger = { exists = owner }
         OR = {
-            NOT = { has_planet_flag = toxic_knights_habitat }
+            planet = { NOT = { has_planet_flag = toxic_knights_habitat } }
             owner = { NOT = { has_origin = origin_toxic_knights } }
         }
         owner = {
@@ -2106,7 +2108,7 @@ zone_MZ_elite = {
     unlock = { # colony scope
         hidden_trigger = { exists = owner }
         OR = {
-            NOT = { has_planet_flag = toxic_knights_habitat }
+            planet = { NOT = { has_planet_flag = toxic_knights_habitat } }
             owner = { NOT = { has_origin = origin_toxic_knights } }
         }
         owner = {
