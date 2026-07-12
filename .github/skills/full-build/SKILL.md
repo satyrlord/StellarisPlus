@@ -1,6 +1,6 @@
 ---
 name: full-build
-description: 'Full build: run the complete StellarisPlus validation workflow end to end — execute the quality gate and fix all issues, run sptest for a manual test pass, wait for explicit user confirmation that testing is finished, then run the stellaris-log-fix skill and the stellaris-code-review skill and fix all true mod-owned errors. Use when user says "full build", "full validation", "run everything", "pre-release sweep", "end-to-end check", "build and review", or wants the complete test, log-fix, and code-review pipeline.'
+description: 'Full build the complete StellarisPlus release-validation sequence: quality gate, confirmed manual test, runtime log repair, and repair-authorized code review.'
 argument-hint: >-
    Optionally specify focus areas or constraints, such as a feature to
    watch during manual testing or folders that changed.
@@ -51,7 +51,8 @@ iterating until all true mod-owned findings are resolved.
    & "tools/stellarisplus-quality-gate.ps1"
    ```
 
-2. Check the Problems view with `get_errors`.
+2. Check the Problems view when that integration is available; otherwise report
+   that the quality gate is the available diagnostic baseline.
 3. Classify findings:
    - True mod-owned issue: fix it.
    - External noise or false positive: verify before dismissing.
@@ -91,9 +92,11 @@ the game process exited.
 
 1. Load and follow the `stellaris-code-review` skill:
    `.github/skills/stellaris-code-review/SKILL.md`
-2. Review findings severity-first.
-3. Fix all true-positive mod-owned errors and warnings.
-4. Repeat until code review finds no remaining unresolved mod-owned
+2. Invoke its repair branch; this full-build request supplies explicit repair
+   authorization for true mod-owned findings.
+3. Review findings severity-first.
+4. Fix all true-positive mod-owned errors and warnings.
+5. Repeat until code review finds no remaining unresolved mod-owned
    errors or warnings.
 
 ---
@@ -117,11 +120,14 @@ the game process exited.
 The full build is complete only when all of the following are true:
 
 1. The quality gate is green.
-2. Runtime logs were collected and all actionable mod-owned errors
+2. The user explicitly confirmed completion of the manual test session and its
+   result is recorded.
+3. Runtime logs were collected and all actionable mod-owned errors
    were fixed.
-3. Code review produced no remaining true mod-owned errors or
+4. Code review produced no remaining true mod-owned errors or
    warnings.
-4. The final report lists files changed, findings fixed, and any
+5. Two consecutive final quality-gate runs are clean.
+6. The final report lists files changed, findings fixed, and any
    residual external noise or deferred items.
 
 ---

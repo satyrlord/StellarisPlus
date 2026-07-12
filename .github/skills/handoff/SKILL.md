@@ -1,22 +1,23 @@
 ---
 name: handoff
-description: 'Handoff: create a concise continuation document for another agent and store it under tmp/. Use when the user asks to hand off current progress, preserve session context, prepare the next agent run, or when another local workflow explicitly requires a handoff artifact.'
+description: 'Handoff current work to another agent in a concise tmp/ artifact. Use when the user or another local skill requires resumable session context.'
 argument-hint: "What will the next session be used for?"
 ---
 
 # Handoff
 
-## Purpose & Scope
+## Steps
 
-Write a handoff document summarising the current conversation so a fresh agent
-can continue the work. Save under `tmp/` at the repository root (not the OS
-`/tmp` directory).
+1. Inspect the current task, worktree, plans, verification evidence, and durable
+   artifacts. Distinguish confirmed facts from hypotheses and unfinished work.
+2. Write a concise handoff under repository-root `tmp/`, not OS `/tmp`.
+3. Link existing PRDs, plans, ADRs, issues, commits, diffs, and evidence instead
+   of copying their contents.
+4. Re-read the handoff and verify every path, command, blocker, and suggested
+   skill against the current repository.
 
-Include a "suggested skills" section in the document, which suggests skills that
-the agent should invoke.
-
-Do not duplicate content already captured in other artifacts (PRDs, plans, ADRs,
-issues, commits, diffs). Reference them by path or URL instead.
+Include a suggested-skills section containing only skills present in
+`.github/skills/SKILLS.md`.
 
 Redact any sensitive information, such as API keys, passwords, or personally
 identifiable information.
@@ -30,8 +31,16 @@ Minimal structure example:
 
 ```markdown
 # Session Handoff
-- Scope: legacy mix parity mismatch for one song
-- Current state: diff list captured, root cause still unconfirmed
-- Next step: validate sample reference resolver mapping for affected product
-- Suggested skills: debugging-and-error-recovery, planning-and-task-breakdown
+
+- Scope: isolate a runtime regression in a Stellaris script
+- Current state: failing log signature captured; root cause unconfirmed
+- Next step: reproduce the failure with one candidate change set
+- Suggested skills: ablation-test, stellaris-log-fix
 ```
+
+## Completion Criteria
+
+The handoff is complete only when a fresh agent can identify the exact scope,
+confirmed state, remaining work, next executable step, validation commands,
+blockers, and relevant existing artifacts without relying on this conversation;
+all paths and suggested skills resolve; and sensitive information is absent.

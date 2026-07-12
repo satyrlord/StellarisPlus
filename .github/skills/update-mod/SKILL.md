@@ -1,6 +1,6 @@
 ---
 name: update-mod
-description: 'Update an already-integrated Stellaris mod in StellarisPlus to its latest Workshop version. Backs up the new upstream, diffs against the current integration, applies new features and bug fixes, and resolves conflicts. Use when user says "update mod", "refresh mod", "sync mod", or "check for mod updates".'
+description: 'Update one already-integrated Stellaris mod from its current Workshop files while preserving StellarisPlus customizations and the original absorption backup.'
 argument-hint: >-
    Workshop ID or mod name to update (must already be in credits.md)
 ---
@@ -53,15 +53,20 @@ and Security rules with these delta additions and overrides:
 2. **Locate latest** at
    `C:\Program Files (x86)\Steam\steamapps\workshop\content\281990\<id>`.
    Verify content exists.
-3. **Copy to `backup/<id>/`** (temporary working cache):
+3. **Snapshot current upstream** to a unique
+   `tmp/update-mod/<id>/<timestamp>/` working directory. Never overwrite or
+   delete `backup/<id>/`; it is the absorption and undo baseline.
 
    ```powershell
-   Copy-Item -Path "$workshopDir\*" -Destination "backup\<id>" -Recurse -Force
+   $snapshot = "tmp\update-mod\<id>\<timestamp>"
+   New-Item -ItemType Directory -Path $snapshot
+   Copy-Item -Path (Join-Path $workshopDir '*') -Destination $snapshot -Recurse
    ```
 
 ### Phase 2 -- Diff Analysis
 
-1. **Build inventories**: UPSTREAM = `backup/<id>/`, OURS = workspace
+1. **Build inventories**: UPSTREAM = the unique `tmp/update-mod/` snapshot,
+   BASELINE = `backup/<id>/`, OURS = workspace
    root. Skip `descriptor.mod`, `thumbnail.*`, `.mod` files.
 2. **Classify changes**:
 
@@ -104,7 +109,9 @@ and Security rules with these delta additions and overrides:
 
 ### Phase 5 -- Finalize
 
-1. **Clean up backup**: `Remove-Item -Path "backup\<id>" -Recurse -Force`
+1. **Clean up the temporary snapshot** only after the final report accounts for
+   it. Preserve `backup/<id>/` without exception unless the user separately
+   requests and confirms deletion.
 2. **Update `credits.md`** if mod name or author changed.
 3. Run `& "tools/stellarisplus-refresh-credits-dates.ps1"` to refresh
    `Last updated` dates from git history.
@@ -128,3 +135,13 @@ and Security rules with these delta additions and overrides:
 | Major `supported_version` jump | Warn user; expect broader changes and testing |
 | Multiple mods to update | Process one at a time |
 | Workshop folder unchanged | Report no upstream changes detected |
+
+## Completion Criteria
+
+The update is complete only when every upstream change relative to the preserved
+baseline is classified; every added, merged, retained, and rejected change is
+accounted for; StellarisPlus customizations and load-order behavior are
+preserved; cross-file references and credits metadata are current; changed
+files have been re-read; and two consecutive quality-gate runs are clean. A
+no-change result is complete only when the live Workshop snapshot and baseline
+are proven identical for all in-scope files.

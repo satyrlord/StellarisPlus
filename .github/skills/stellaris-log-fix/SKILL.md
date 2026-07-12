@@ -1,6 +1,6 @@
 ---
 name: stellaris-log-fix
-description: 'Log fix: collect Stellaris runtime logs, analyze errors, and automatically fix mod issues. Use when user says ''fix errors'', ''check logs'', ''analyze logs'', ''spcollect'', ''log fix'', ''runtime errors'', ''error log'', or wants to debug Stellaris mod issues after a test run.'
+description: 'Log fix explicitly requested Stellaris runtime diagnostics by collecting or analyzing logs and repairing mod-owned errors. Do not collect logs when the user only describes a symptom; ask first.'
 argument-hint: >-
    Optionally describe specific errors or symptoms to focus on
 ---
@@ -39,15 +39,20 @@ check logs or fix errors.
 
 ## Log Fix Workflow
 
-### 1. Collect logs
+### 1. Establish log source
+
+If the user supplied logs, analyze those files without recollecting. Otherwise,
+collect only when the user explicitly requested log collection, `spcollect`, or
+this log-fix workflow:
 
 ```powershell
-& "tools/stellarisplus-collect-logs.ps1" -NoLaunch
+& "tools/stellarisplus-collect-logs.ps1" -NoLaunch -IncludeException
 ```
 
 Copies `error.log`, `game.log`, `debug.log`, `setup.log`,
 `system.log`, `time.log` into `tmp/_logs_inbox/`.
-Omit `-NoLaunch` if user wants a full test cycle.
+Run `spcollect` only when the user explicitly asks for that command. Do not omit
+`-NoLaunch` unless the user explicitly requests a launched test cycle.
 
 ### 2. Parse error log
 
@@ -87,9 +92,20 @@ classify-and-fix workflow.
 & "tools/stellarisplus-quality-gate.ps1"
 ```
 
+Fix all reported mod-owned issues, re-read every changed file, check available
+Problems diagnostics, and repeat until two consecutive runs are clean.
+
 ### 7. Report summary
 
 | # | Error | File | Action |
 |---|-------|------|--------|
 
 Group skipped errors by category with counts.
+
+## Completion Criteria
+
+Log fix is complete only when every collected error and relevant game-log
+warning is classified by ownership and disposition; every true mod-owned root
+cause is fixed or explicitly blocked; changed files have been re-read; two
+consecutive quality-gate runs are clean; and the report accounts for fixed,
+skipped, external, duplicate, and unresolved entries with evidence.

@@ -1,6 +1,6 @@
 ---
 name: absorb-mod
-description: 'Absorb an external Stellaris mod into StellarisPlus by backing it up, analyzing its contents, integrating files, resolving conflicts, and validating the result. Also supports undoing a previous absorption. Use when user says "absorb mod", "integrate mod", "merge mod", "undo absorb", or "remove mod".'
+description: 'Absorb or remove an external Stellaris mod in StellarisPlus. Use for a new full-mod integration or for undoing a previously credited absorption.'
 argument-hint: >-
    Workshop ID, folder path, or zip path to absorb; or mod name/ID to undo
 ---
@@ -20,38 +20,6 @@ analyze, merge, validate, and credit.
 
 ---
 
-## Naming Conventions
-
-- Merged files follow load-order prefix rules from
-  `doc/mod_load_reference.md`.
-- Prefer `zz_sp_` prefix (LIOS) for files that must override vanilla.
-- Prefer `00_sp_` prefix (FIOS) for files that must win first.
-- Preserve incoming mod's key names inside blocks; do not rename
-  without updating all references.
-
-## Error Handling
-
-- Never overwrite an existing backup without user confirmation.
-- Version mismatch (`supported_version`): warn user about potentially
-  outdated scripting.
-- Ambiguous conflict ownership: stop and ask one concise question.
-
-## Testing
-
-- Run `& "tools/stellarisplus-quality-gate.ps1"` after integration.
-- Cross-reference check: verify script-to-localisation, script-to-GFX,
-  GFX-to-DDS, inline_script calls, and event refs in on_actions.
-- Run `merge-local-files` only after quality gate is green.
-
-## Security
-
-- Add the absorbed mod to `credits.md` with name, Workshop ID, source
-  path, and author. Extend `tools/credits_date_probes.json` when needed,
-  then run `tools/stellarisplus-refresh-credits-dates.ps1`.
-- Update `descriptor.mod` only to add new `tags` if applicable.
-
----
-
 ## Absorption Workflow
 
 ### Phase 1 -- Locate and Backup
@@ -65,6 +33,8 @@ analyze, merge, validate, and credit.
    | Zip file | Extract to `$env:TEMP`, find `descriptor.mod` inside |
 
 2. **Backup** to `backup/<id>/`.
+   Stop if that path exists; never overwrite an absorption baseline without
+   explicit user confirmation and a separately preserved copy.
 3. **Parse `descriptor.mod`**: extract `name`, `tags`,
    `supported_version`, `remote_file_id`.
 
@@ -83,6 +53,10 @@ analyze, merge, validate, and credit.
 
 2. **Detect conflicts** -- for each file, check if the same relative
    path exists in workspace:
+
+   When any conflict is found, load
+   [`references/conflict-patterns.md`](references/conflict-patterns.md) and
+   apply the matching resolution pattern.
 
    | Conflict | Action |
    | -------- | ------ |
@@ -148,19 +122,6 @@ After user confirms:
    | Validation errors fixed | X |
    | merge-local-files: folders merged / files removed | X / X |
 
----
-
-## Decision Rules
-
-| Situation | Rule |
-| --------- | ---- |
-| Both mods override same vanilla file | Merge both change-sets carefully |
-| Incoming contradicts SP design (slot counts, BPV) | Flag for user decision |
-| Version mismatch (`supported_version`) | Warn user about outdated scripting |
-| Large mod (hundreds of files) | Summarize conflicts, offer detailed breakdown |
-
----
-
 ## Undo Absorption
 
 Reverses a previously absorbed mod. Triggered by "undo absorb",
@@ -188,3 +149,16 @@ Reverses a previously absorbed mod. Triggered by "undo absorb",
 8. **Optionally remove `backup/<id>/`** (ask user).
 9. Run `& "tools/stellarisplus-quality-gate.ps1"`, fix issues, report
    summary.
+
+## Completion Criteria
+
+Absorption is complete only when every source file is recorded as copied,
+merged, or intentionally skipped; every detected conflict and cross-file
+reference is resolved; attribution and date metadata are current; changed files
+have been re-read; and two consecutive quality-gate runs are clean.
+
+Undo is complete only when every item in the removal manifest is removed,
+retained, or explicitly deferred; no absorbed-only reference remains; credits
+are accurate; changed files have been re-read; and two consecutive
+quality-gate runs are clean. Preserve `backup/<id>/` unless the user explicitly
+authorizes its deletion.

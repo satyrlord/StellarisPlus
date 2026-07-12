@@ -3,15 +3,6 @@
 Use this reference when the review needs the strict maintainability standard in
 full detail.
 
-## Core Prompt
-
-> Perform a deep code quality audit of the current branch's changes.
-> Rethink how to structure and implement the changes to improve code quality
-> without changing behavior.
-> Improve abstractions, modularity, legibility, and reduce spaghetti growth.
-> Be ambitious when there is a clear path to simpler structure.
-> Be thorough and rigorous.
-
 ## Non-Negotiable Standards
 
 1. Be ambitious about structural simplification; prefer deleting complexity over
@@ -20,9 +11,9 @@ full detail.
    smell unless strongly justified.
 3. Do not normalize ad-hoc branching or scattered special cases.
 4. Prefer direct and maintainable code over magical or brittle abstractions.
-5. Push for clean type and boundary contracts when they affect maintainability.
-6. Keep logic in canonical layers and reuse existing helpers.
-7. Flag avoidable orchestration complexity and non-atomic update flows.
+5. Keep gameplay, UI, localisation, and compatibility ownership in their
+   canonical files and reuse existing scripted helpers.
+6. Flag cross-file changes that cannot be applied or removed atomically.
 
 ## Primary Review Questions
 
@@ -34,8 +25,9 @@ full detail.
 - Did the diff bloat a file or component past healthy size?
 - Does the implementation rely on incidental control flow?
 - Is an abstraction earning its keep or acting as indirection noise?
-- Did the diff muddy invariants with casts, optionality, or loose object shapes?
-- Is orchestration more sequential or less atomic than needed?
+- Did the diff muddy invariants through scattered variables, duplicated keys,
+  or implicit load-order dependencies?
+- Can the feature be added and removed without leaving cross-file residue?
 
 ## Aggressive Flags
 
@@ -48,8 +40,8 @@ Escalate when you see:
 - feature logic leaking into general-purpose modules
 - thin wrappers or identity abstractions adding no leverage
 - duplicate helpers where a canonical one already exists
-- avoidable sequential async orchestration
-- partial updates that leave state hard to reason about
+- partial cross-file updates that leave script, localisation, or GFX state
+  inconsistent
 
 ## Preferred Remedies
 
@@ -59,9 +51,8 @@ Escalate when you see:
 - collapse duplicate branches into one explicit flow
 - extract focused helpers or pure functions
 - split oversized files into focused modules
-- make type boundaries explicit to simplify control flow
-- parallelize independent work when it also clarifies orchestration
-- restructure related updates into more atomic flows
+- make script and file-ownership boundaries explicit
+- restructure related cross-file changes into an atomic, reversible set
 
 ## Output Expectations
 
@@ -70,7 +61,7 @@ Prioritize findings in this order:
 1. structural regressions
 2. missed simplification opportunities
 3. branching and spaghetti growth
-4. boundary and type-contract clarity issues
+4. scope, ownership, and cross-file contract clarity issues
 5. file-size and decomposition concerns
 6. modularity and abstraction quality
 7. legibility and maintainability
@@ -86,7 +77,7 @@ Do not approve solely because behavior seems correct. Approval requires:
 - no unjustified file-size explosion
 - no obvious spaghetti growth
 - no hacky abstraction that worsens reasoning
-- no avoidable wrapper/cast/optionality churn obscuring design
+- no avoidable helper or compatibility-shim churn obscuring design
 - no clear architecture-boundary leak or helper duplication
 
 Treat these as presumptive blockers unless justified clearly by the author.

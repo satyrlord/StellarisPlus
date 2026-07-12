@@ -1,23 +1,17 @@
 ---
 name: ablation-test
-description: 'Ablation test: isolate the true root cause of a hard bug by systematically removing change sets until only the minimal fix remains. Use when a fix is unclear, multiple changes were made, the bug is intermittent, or the user asks which change actually fixed it, what was unnecessary, or for a minimal fix.'
+description: 'Ablation test a hard bug to prove the smallest causal change set. Use when competing changes may explain a fix, results are intermittent, or the user needs a minimal proven repair.'
 argument-hint: >-
   Optionally include the bug symptom, current changed files, and test constraints (restart needed, runtime cost, etc.)
 ---
 
 # Ablation Test
 
-## Purpose & Scope
+## Contract
 
-Use this skill to discover which exact change (or smallest change set)
-actually fixes a bug when the path to a fix is uncertain.
-
-This workflow is for cases where:
-
-- many edits were made before success
-- hypotheses keep changing
-- logs do not clearly identify root cause
-- you need a minimal, proven final fix
+Change one variable per run and preserve the user's original working state. Use
+[`EXAMPLES.md`](EXAMPLES.md) only when a concrete ablation pattern or test-log
+template would help.
 
 ---
 
@@ -33,11 +27,16 @@ This workflow is for cases where:
 
 Before running ablations:
 
-1. Confirm bug is reproducible (or verify known pass/fail state).
-2. Gather current changed-file list (`git status --short`).
-3. Group changes by hypothesis (assets, scripts, UI, localisation, etc.).
-4. Note expensive test constraints (full restart required, long setup,
-   save-file prerequisites).
+1. Establish an observable PASS/FAIL test and reproduce the baseline state.
+2. Record `git status --short`, the current branch and commit, all existing
+   stashes, and untracked files.
+3. Group changes by one causal hypothesis each.
+4. Obtain explicit user approval before stashing, restoring, resetting,
+   deleting, or dropping any working state.
+
+Preconditions are complete only when the baseline is reproducible, every
+candidate change belongs to a hypothesis group, and the original state has a
+verified recovery path.
 
 ---
 
@@ -45,27 +44,33 @@ Before running ablations:
 
 ### 1) Snapshot all current work
 
-Create a named stash with untracked files:
+After approval, create a uniquely named stash with untracked files and capture
+its immutable object ID immediately:
 
 ```powershell
 git stash push -u -m "ablation-<bug>-full-wip"
+$ablationStash = git rev-parse refs/stash
+git stash show -u --name-status $ablationStash
 ```
 
-This is your safety net for restoring any subset.
+Compare the stash manifest with the recorded working-tree manifest. Stop if any
+path is missing. Never address the snapshot as `stash@{0}` after creation.
 
 ### 2) Build a minimal candidate set
 
-Restore only the smallest likely fix group from the stash:
+Restore only the smallest likely fix group from the captured object ID:
 
 ```powershell
 # tracked paths
-git restore --source="stash@{0}" -- "<path-a>" "<path-b>"
+git restore --source="$ablationStash" -- "<path-a>" "<path-b>"
 
 # untracked paths (from stash third parent)
-git checkout "stash@{0}^3" -- "<new-file-a>" "<new-file-b>"
+git restore --source="$ablationStash^3" -- "<new-file-a>" "<new-file-b>"
 ```
 
-Run the target test and record result as **PASS** or **FAIL**.
+Run the target test and record the exact included paths, environment, restart
+state, and PASS/FAIL result. This step is complete only when the run changes one
+hypothesis dimension and is reproducible.
 
 ### 3) Narrow further by ablation
 
@@ -81,6 +86,9 @@ If FAIL:
 - retest
 - continue until PASS, then narrow again
 
+Continue until removing any remaining candidate makes the test fail, or until
+the evidence shows that the candidates interact and cannot be separated.
+
 ### 4) Validate hidden dependencies
 
 When relevant, prove asset integrity and not just file presence:
@@ -89,10 +97,16 @@ When relevant, prove asset integrity and not just file presence:
 - check load-order-sensitive files
 - check if issue only appears after full process restart
 
-### 5) Finalize minimal fix
+Hidden-dependency validation is complete only when caching, restart needs,
+generated files, and load-order effects relevant to the symptom have been
+controlled or explicitly recorded as residual uncertainty.
 
-Keep only proven required changes in working tree.
-Drop temporary ablation stash once confidence is high.
+### 5) Restore and finalize
+
+Restore the exact original working state, then apply only the proven fix with
+the user's approval. Verify `git status --short` against the original manifest.
+Retain the stash by default; offer its exact object ID and let the user decide
+whether to drop it.
 
 ---
 
@@ -120,33 +134,6 @@ Drop temporary ablation stash once confidence is high.
 
 ---
 
-## Command Snippets
-
-```powershell
-# show current change scope
-git status --short
-
-# inspect latest stashes
-git stash list --max-count=5
-
-# list files inside a stash snapshot
-git stash show -u --name-only "stash@{0}"
-
-# restore one file from stash
-git restore --source="stash@{0}" -- "path/to/file"
-
-# restore untracked file from stash
-git checkout "stash@{0}^3" -- "path/to/new-file"
-
-# remove a candidate file back to HEAD
-git restore --source=HEAD --staged --worktree -- "path/to/file"
-
-# drop finished ablation stash
-git stash drop "stash@{0}"
-```
-
----
-
 ## Output Requirements
 
 After ablation, report:
@@ -157,6 +144,18 @@ After ablation, report:
 4. **Confidence level** and any residual uncertainty
 
 Use concise evidence statements (test state -> result).
+
+## Completion Criteria
+
+The ablation is complete only when:
+
+1. the same test distinguishes the failing and passing states;
+2. every candidate group has evidence showing required, unnecessary, or
+   inseparable status;
+3. removing any claimed-required change makes the test fail;
+4. the original worktree and all unrelated changes are accounted for;
+5. the final report names the retained stash object, minimal fix, excluded
+   changes, test evidence, and residual uncertainty.
 
 ---
 

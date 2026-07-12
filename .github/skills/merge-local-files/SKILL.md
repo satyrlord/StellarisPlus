@@ -1,6 +1,6 @@
 ---
 name: merge-local-files
-description: 'Merge local files: analyze the StellarisPlus mod''s own files, produce a safe-merge report by folder (LIOS/FIOS/DUPL/MERGE), and then consolidate redundant files into fewer files without changing load-order behaviour or game functionality. Use when user says "merge local files", "consolidate files", or "reduce file count".'
+description: 'Merge local StellarisPlus files without changing load-order behavior. Use to classify folders by LIOS/FIOS/DUPL/MERGE and consolidate only proven-safe candidates.'
 argument-hint: >-
   Optional: folder path to scope (e.g. "common/buildings"). Omit
   the argument to scan the whole mod.
@@ -18,15 +18,6 @@ count and simplify the mod's structure after absorbing external mods.
   `doc/mod_merge_order_report.md`.
 
 ---
-
-## Naming Conventions
-
-- LIOS merged files: must sort **last** -- use `zz_sp_<topic>.txt`.
-- FIOS merged files: must sort **first** -- use `00_sp_<topic>.txt`;
-  preserve content order inside merged file.
-- MERGE merged files: any name (e.g. `zz_sp_on_actions.txt`).
-- Separator comment between merged sections:
-  `# === merged from <original_filename> ===`
 
 ## Code Style
 
@@ -91,7 +82,7 @@ Wait for user approval.
    - Concatenate with `# === merged from <filename> ===` separators.
    - LIOS: sort ascending, last-winning content at end.
    - FIOS: sort ascending, first-winning content at top.
-   - MERGE: any order.
+    - MERGE: preserve the original deterministic file order.
    - Write merged file. Delete source files only after successful
      write.
    - Verify file count: `(Get-ChildItem -File -Path "<folder>").Count`
@@ -126,13 +117,10 @@ renameable.
 
 ---
 
-## Quick Decision Matrix
+## Completion Criteria
 
-```text
-1) If folder has 0 or 1 file: skip.
-2) If strategy is DUPL: skip (exact filename required).
-3) If strategy is LIOS: merge, and use a filename that sorts LAST.
-4) If strategy is FIOS: merge, and use a filename that sorts FIRST;
-   preserve content order.
-5) If strategy is MERGE: merge as additive content.
-```
+The merge is complete only when every scanned folder is classified and reported;
+every executed candidate preserves source order, encoding, line endings, and
+load strategy; every source file is represented exactly once in the merged
+output before deletion; the merge-order report is current; changed files have
+been re-read; and two consecutive quality-gate runs are clean.

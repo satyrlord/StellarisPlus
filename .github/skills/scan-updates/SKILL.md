@@ -1,6 +1,6 @@
 ---
 name: scan-updates
-description: 'Scan updates: check integrated Workshop mods from credits.md against Steam for newer upstream update dates, update only outdated mods, and validate/fix quality gate issues after each update. Use when user says "scan updates", "check mod updates", "find outdated integrated mods", "refresh integrated mods", "update all outdated mods", or asks to compare credits.md entries against current Steam Workshop dates.'
+description: 'Scan integrated Workshop mods for upstream updates and update only proven-outdated entries. Use for a current Steam-versus-credits.md update sweep.'
 argument-hint: >-
   Optional: "all" (default) or comma-separated Workshop IDs to limit scan scope
 ---
@@ -55,8 +55,9 @@ For each parsed mod record:
 1. Fetch the Workshop page listed in `workshop_url`.
 2. Extract the page's **Updated** date (not Created date).
 3. Normalize to `YYYY-MM-DD` in local timezone.
-4. If page extraction fails, query by published file ID and use
-   upstream update timestamp.
+4. If page extraction fails, query live published-file metadata by ID and use
+   its upstream update timestamp. If neither live source is accessible, do not
+   infer a date from the local Workshop folder.
 5. Compare:
    - If `steam_updated_date` > `local_last_updated`: mark **OUTDATED**.
    - Else: mark **CURRENT**.
@@ -70,7 +71,7 @@ and do not auto-update.
 
 Process only `OUTDATED` mods, one at a time:
 
-1. Invoke `/update-mod "<workshop-id>"`.
+1. Load and follow `.github/skills/update-mod/SKILL.md` for the Workshop ID.
 2. After update completes, run:
 
    ```powershell
@@ -135,3 +136,12 @@ Also list:
 - Keep `credits.md` accurate; if update changes mod identity metadata,
   refresh the affected entry.
 - Use a single focused pass per mod: update -> quality gate -> fixes -> recheck.
+
+## Completion Criteria
+
+The scan is complete only when every in-scope valid credits entry is classified
+as CURRENT, OUTDATED, or UNKNOWN from live metadata; malformed and UNKNOWN
+entries are reported without mutation; every OUTDATED entry is updated or
+explicitly blocked; each completed update has two consecutive clean
+quality-gate runs; credits metadata is current; and all three required output
+tables account for every in-scope ID.
