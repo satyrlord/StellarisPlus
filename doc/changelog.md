@@ -1,5 +1,21 @@
 # StellarisPlus -- Changelog
 
+Date: 2026-07-28
+
+- Runtime log fixes for Orphaned Matrix and integrated namelists:
+  - Replaced stale custom archaeology visibility calls with direct country-scope
+    origin checks, eliminating repeated invalid `from.planet` context switches.
+  - Changed both `situation_delve_old_codex` starts to target `capital_scope`.
+  - Replaced the Introspection Complex planet-flag calls with the carrier-flag
+    API across event creation and recovery, zones, buildings, inline job logic,
+    and cleanup.
+  - Added the 121 integrated leader-name localisation keys reported by the
+    current runtime log.
+  - Documented the `zz_sp_` archaeological-site and building merge overrides in
+    their file headers.
+  - Replaced the raw `NO_POSSIBLE_OPTION` preview on Subterfuge asset costs with
+    an explicit tooltip while preserving vanilla asset-selection behavior.
+
 Date: 2026-07-12
 
 - Runtime log fixes for Stellaris 4.4.6:

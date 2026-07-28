@@ -1,3 +1,4 @@
+# OVERRIDE: zz_sp_ — Hide the invalid vanilla Subterfuge asset random-list preview, target common/scripted_effects/espionage_event_effects.txt
 # === merged from 00_eotf_chain_markers.txt ===
 # Burial world + chain system flags (capital moves do not move the chain).
 # Referenced from eotf.191 and eotf.190.
@@ -353,7 +354,7 @@ orphan_matrix_destroy_introspective_lab = {
 	}
 	
 	remove_deposit = d_introspective_lab
-	planet = { remove_planet_flag = d_introspective_lab }
+	remove_carrier_flag = d_introspective_lab
 	
 	add_zone = {
 		district = district_nexus
@@ -1057,5 +1058,72 @@ grant_fe_building = {
 		localization = MESSAGE_FALLEN_EMPIRE_BUILDING_GAINED
 		target = root
 		days = 30
+	}
+}
+
+# The vanilla effect exposes locked_random_list while building option tooltips,
+# which renders the untranslated NO_POSSIBLE_OPTION engine fallback. Keep the
+# same eligible assets and weights, but preview only the explicit asset cost.
+destroy_espionage_asset_subterfuge = {
+	custom_tooltip = sp_destroy_espionage_asset_subterfuge_tooltip
+	hidden_effect = {
+		locked_random_list = {
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_bureaucrat } }
+				destroy_espionage_asset = asset_bureaucrat
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_clerk } }
+				destroy_espionage_asset = asset_clerk
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_economist } }
+				destroy_espionage_asset = asset_economist
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_scientist } }
+				destroy_espionage_asset = asset_scientist
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_junior_officer } }
+				destroy_espionage_asset = asset_junior_officer
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_ephapse_relay } }
+				destroy_espionage_asset = asset_ephapse_relay
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_labor_drone } }
+				destroy_espionage_asset = asset_labor_drone
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_research_drone } }
+				destroy_espionage_asset = asset_research_drone
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_warrior_drone } }
+				destroy_espionage_asset = asset_warrior_drone
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_coordination_system } }
+				destroy_espionage_asset = asset_coordination_system
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_engagement_protocol } }
+				destroy_espionage_asset = asset_engagement_protocol
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_logistics_system } }
+				destroy_espionage_asset = asset_logistics_system
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_research_database } }
+				destroy_espionage_asset = asset_research_database
+			}
+			1 = {
+				modifier = { factor = 0 NOT = { has_espionage_asset = asset_war_algorithm } }
+				destroy_espionage_asset = asset_war_algorithm
+			}
+		}
 	}
 }

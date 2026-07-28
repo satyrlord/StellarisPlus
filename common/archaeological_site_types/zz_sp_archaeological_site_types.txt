@@ -1,3 +1,5 @@
+# OVERRIDE: zz_sp_ — merges origin-specific archaeological sites, common/archaeological_site_types
+
 # === merged from 00_eotf_arc_sites.txt ===
 # Echoes of the Fallen — homeworld dig (Ancient Legacy)
 
@@ -20,10 +22,7 @@ eotf_site_homeworld = {
 	}
 
 	visible = {
-		default_site_visible_trigger = yes
-		owner = {
-			has_origin = origin_ancient_legacy
-		}
+		has_origin = origin_ancient_legacy
 	}
 
 	on_roll_failed = {
@@ -66,10 +65,7 @@ eotf_site_divine_hulk = {
 	}
 
 	visible = {
-		default_site_visible_trigger = yes
-		owner = {
-			has_origin = origin_divine_hulk
-		}
+		has_origin = origin_divine_hulk
 	}
 
 	on_roll_failed = {
@@ -120,11 +116,8 @@ ancient_buried_vault_digsite = {
 	}
 
 	visible = {
-		default_site_visible_trigger = yes
-		owner = {
-			is_machine_empire = yes
-			has_origin = origin_orphan_matrix
-		}
+		is_machine_empire = yes
+		has_origin = origin_orphan_matrix
 	}
 
 	stage = {
@@ -166,11 +159,8 @@ om_ancient_ecu_digsite = {
 	}
 
 	visible = {
-		default_site_visible_trigger = yes
-		owner = {
-			is_machine_empire = yes
-			has_origin = origin_orphan_matrix
-		}
+		is_machine_empire = yes
+		has_origin = origin_orphan_matrix
 	}
 	
 	stage = {

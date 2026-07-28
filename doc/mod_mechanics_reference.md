@@ -205,6 +205,21 @@ Content files:
 - `localisation/english/permanent_decisions_l_english.yml` --
   Localisation
 
+## Integrated Mod: Orphaned Matrix
+
+Orphaned Matrix origin sites use country-scope `visible` triggers with direct
+origin checks. They do not call `default_site_visible_trigger`, because the
+origin sites are created on an owned capital or owned relic world and should
+only be visible to the matching origin country.
+
+The Introspection Complex chain uses these scope contracts:
+
+- `start_situation` targets `capital_scope` from the country event.
+- The Introspection Complex marker uses the carrier-flag API consistently:
+  `set_carrier_flag`, `has_carrier_flag`, and `remove_carrier_flag`.
+- Event, zone, building, and inline-job checks operate on the colony carrier and
+  do not use nested `planet` context switches.
+
 ---
 
 ## Integrated Mod: Longer Ship Names

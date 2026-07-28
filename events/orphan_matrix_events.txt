@@ -797,7 +797,7 @@ country_event = {
 		hidden_effect = {
 			start_situation = {
 				type = situation_delve_old_codex
-				target = home_planet
+				target = capital_scope
 				effect = {
 					set_situation_approach = situation_delve_old_codex_regular
 				}
@@ -805,7 +805,7 @@ country_event = {
 			
 			capital_scope = {
 				add_deposit = d_introspective_lab
-				planet = { set_planet_flag = d_introspective_lab }
+				set_carrier_flag = d_introspective_lab
 				
 				add_zone = {
 					district = district_nexus
@@ -831,7 +831,7 @@ country_event = {
 		hidden_effect = {
 			start_situation = {
 				type = situation_delve_old_codex
-				target = home_planet
+				target = capital_scope
 				effect = {
 					set_situation_approach = situation_delve_old_codex_regular
 				}
@@ -839,7 +839,7 @@ country_event = {
 			
 			capital_scope = {
 				add_deposit = d_introspective_lab
-				planet = { set_planet_flag = d_introspective_lab }
+				set_carrier_flag = d_introspective_lab
 			}
 			
 			set_timed_country_flag = { flag = situation_not_boring_yet days = 14400 }
@@ -4849,14 +4849,14 @@ event = {
 		every_playable_country = {
 			limit = {
 				any_planet_within_border = {
-					has_planet_flag = d_introspective_lab
+					has_carrier_flag = d_introspective_lab
 					NOT = { has_deposit = d_introspective_lab }
 				}
 			}
 			
 			random_planet_within_border = {
 				limit = {
-					has_planet_flag = d_introspective_lab
+					has_carrier_flag = d_introspective_lab
 					NOT = { has_deposit = d_introspective_lab }
 				}
 				

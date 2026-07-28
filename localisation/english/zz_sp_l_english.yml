@@ -26,3 +26,6 @@
  district_sp_machine_minerals_energy: "Lithovoltaic Complex"
  district_sp_machine_minerals_energy_plural: "Mining Districts"
  district_sp_machine_minerals_energy_desc: "Deep-crust thermal gradients are harvested by lithovoltaic arrays, converting geothermal energy into usable power alongside ongoing mining operations."
+
+ # Espionage tooltip repair
+ sp_destroy_espionage_asset_subterfuge_tooltip:0 "Consumes one §YSubterfuge Asset§!."
