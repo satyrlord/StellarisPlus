@@ -1,5 +1,22 @@
 # StellarisPlus -- Changelog
 
+Date: 2026-10-04
+
+- Stellaris 4.5 compatibility fixes for stale copies of vanilla files:
+  - `common/scripted_variables/07_scripted_variables_machine_age.txt`: refreshed
+    from the updated Plentiful Traditions copy, restoring the 18
+    `@arc_furnace_*` variables that 4.5 vanilla deposits, overclock types,
+    megastructures and static modifiers use. `@max_tradition_trees = 24` is
+    kept.
+  - `common/strategic_resources/00_strategic_resources.txt`: refreshed from the
+    updated Plentiful Traditions copy, restoring the `integrity` resource that
+    4.5 vanilla references and picking up the 4.5 market-gate documentation,
+    `culling_conversion_value` and nomad mining prerequisites.
+  - Removed `common/inline_scripts/colony_types/colony_type_planet_modifier.txt`,
+    a StellarisPlus-added override that no mod file called. Vanilla 4.5
+    colony-type files call the inline script, so it now resolves to the vanilla
+    version (15% instead of 10%).
+
 Date: 2026-07-28
 
 - Runtime log fixes for Orphaned Matrix and integrated namelists:

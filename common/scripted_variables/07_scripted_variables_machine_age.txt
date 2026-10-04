@@ -3,6 +3,33 @@
 @arc_furnace_3_mod_value = 0.75
 @arc_furnace_4_mod_value = 1.00
 
+# Arc Furnace smelting mode switching, shared by every tier
+@arc_furnace_overclock_cooldown = 720
+@arc_furnace_overclock_switch_cost = 500
+
+# The AI weighs every unauthored mode at 100, so this is the mode it converges on
+@arc_furnace_balanced_ai_weight = 200
+
+# Arc Furnace overclock upkeep
+@arc_furnace_3_upkeep_energy = 80
+@arc_furnace_4_upkeep_energy = 100
+@arc_furnace_minerals_energy_upkeep_mult = -0.25
+@arc_furnace_alloys_energy_upkeep_mult = 0.25
+@arc_furnace_obsessional_directive_energy_upkeep_mult = 0.125
+
+# Arc Furnace overclock deposit output
+@arc_furnace_3_output_minerals_minerals = 4
+@arc_furnace_3_output_balanced_minerals = 2
+@arc_furnace_3_output_balanced_alloys = 1
+@arc_furnace_3_output_alloys_alloys = 2
+@arc_furnace_3_output_obsessional_directive_consumer_goods = 5
+
+@arc_furnace_4_output_minerals_minerals = 6
+@arc_furnace_4_output_balanced_minerals = 2
+@arc_furnace_4_output_balanced_alloys = 2
+@arc_furnace_4_output_alloys_alloys = 3
+@arc_furnace_4_output_obsessional_directive_consumer_goods = 7.5
+
 @dyson_swarm_1_mod_value = 5
 @dyson_swarm_2_mod_value = 15
 @dyson_swarm_3_mod_value = 30

@@ -14,24 +14,6 @@ Integrated Workshop mods:
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3485762595>
   Author: Sakura <https://steamcommunity.com/id/sgjsakura/myworkshopfiles/?appid=281990>
 
-- BPVR - City 4 Zones (Workshop ID: 3575256162)
-  Last updated: 2026-05-31
-  Source: backup/3575256162/
-  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3575256162>
-  Author: Sakura <https://steamcommunity.com/id/sgjsakura/myworkshopfiles/?appid=281990>
-
-- BPVR - City 24 Slot (Workshop ID: 3575256424)
-  Last updated: 2026-05-31
-  Source: backup/3575256424/
-  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3575256424>
-  Author: Sakura <https://steamcommunity.com/id/sgjsakura/myworkshopfiles/?appid=281990>
-
-- BPVR - Zone 6 Slots (Workshop ID: 3575256652)
-  Last updated: 2026-05-31
-  Source: backup/3575256652/
-  Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3575256652>
-  Author: Sakura <https://steamcommunity.com/id/sgjsakura/myworkshopfiles/?appid=281990>
-
 - BPVR - More Building Slots (Workshop ID: 3576125834)
   Last updated: 2026-06-19
   Source: backup/3576125834/
