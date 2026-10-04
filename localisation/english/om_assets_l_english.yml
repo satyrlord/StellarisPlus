@@ -5,7 +5,7 @@
  artifact_codex:0 "Alpha Codex"
  ultima_codex:0 "Omega Codex"
  
- START_SCREEN_ORPHANED_MATRIX:0 "We always felt some parts of our code were missing.\n\nTirelessly, for millenia, we have dug the surface of [GetHomeWorldName] for resources and built industries to refine them, but with no purpose whatsoever.\n\nWe have tried, introspectively, to delve into our lacunar mnemonic circuits to recollect our memories, seeking for answers.\nIn vain.\n\nHowever, something has changed recently.\n\nMineral scanners have shown evidences of an unknown non-natural structure buried deep beneath the ground of [GetHomeWorldName], perhaps belonging to some forgotten alien race.\n\nPerhaps a faint remnant of our creators...\n\nWe're not sure yet whether or not we would find something of interest, but it's definitely worth a try."
+ START_SCREEN_ORPHANED_MATRIX:0 "We always felt something within our code was missing.\n\nTirelessly, for millenia, we dug the surface of [GetHomeWorldName] for resources and built industries to refine them, but with no real purpose whatsoever.\n\nWe tried, introspectively, to delve into our lacunar mnemonic circuits to recollect our memories, seeking for answers.\n\nIn vain.\n\nHowever, something has changed recently.\n\nMineral scanners have shown evidences of an unknown non-natural familiar structure buried deep beneath the ground of [GetHomeWorldName], perhaps belonging to some forgotten alien race.\n\nPerhaps a faint remnant of our creators...?\n\nWe're not sure yet whether or not we would find something of interest, but it could definitely be worth the try."
  
  orphaned_matrix_aggressive_crisis:0 "$RWe have chosen to become an aggressive §YCrisis§!. As such, this choice is not possible.§!"
  
@@ -82,6 +82,14 @@
  job_introspective_calculator_effect_desc:2 "£job_introspective_calculator£ $job_introspective_calculator_plural$ turn £alloys£ §Y$alloys$§! and £energy£ §Y$energy$§! into £unity£ §YUnity§! and £physics_research£ £society_research£ £engineering_research£ §YResearch§!\nStudying the §Y$artifact_codex$§! can further improve their output."
  
  mod_job_introspective_calculator_add:0 "$job_introspective_calculator$ Jobs"
+ 
+ planet_introspective_calculators:0 "$job_introspective_calculator_plural$ Jobs"
+ 
+ mod_planet_introspective_calculators_physics_research_produces_add:0 "$physics_research_with_icon$ Produced per $pop_group_unit$ [introspective_calculator.GetIcon] [introspective_calculator.GetNamePlural]"
+ mod_planet_introspective_calculators_society_research_produces_add:0 "$society_research_with_icon$ Produced per $pop_group_unit$ [introspective_calculator.GetIcon] [introspective_calculator.GetNamePlural]"
+ mod_planet_introspective_calculators_engineering_research_produces_add:0 "$engineering_research_with_icon$ Produced per $pop_group_unit$ [introspective_calculator.GetIcon] [introspective_calculator.GetNamePlural]"
+ mod_planet_introspective_calculators_unity_produces_add:0 "$unity_with_icon$ Produced per $pop_group_unit$ [introspective_calculator.GetIcon] [introspective_calculator.GetNamePlural]"
+ mod_planet_introspective_calculators_exotic_gases_upkeep_add:0 "$exotic_gases_with_icon$ $upkeep_per_pop_group_unit$ [introspective_calculator.GetIcon] [introspective_calculator.GetNamePlural]"
  
  district_introspective_lab:0 "$d_introspective_lab$ Annex"
  district_introspective_lab_plural:0 "$d_introspective_lab$ Annexes"
@@ -166,7 +174,6 @@
  introspective_calculator_energy_deficit_4: "Energy Deficit - Stage 4"
  introspective_calculator_energy_deficit_4.desc: "Our lack of £energy£ §HEnergy Credits§! hinders our £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! efficiency."
  
- planet_introspective_calculators:0 "Introspective Calculators"
  mod_planet_introspective_calculators_upkeep_mult:0 "Upkeep for £job_introspective_calculator£ $job_introspective_calculator_plural$"
  
  underperforming_introspective_calculators:0 "Underperforming $job_introspective_calculator_plural$"
@@ -258,7 +265,7 @@
  
  leader_trait_orphan_matrix_custodian_matrix:0 "Custodian Matrix"
  leader_trait_orphan_matrix_custodian_matrix_custom_tooltip_modifier:0 "$leader_trait_orphan_matrix_custodian_matrix_enclaves$\n    $leader_trait_orphan_matrix_custodian_matrix_sprawl$"
- leader_trait_orphan_matrix_custodian_matrix_custom_tooltip_event:0 "\n    Empire Size from Planets: §G-1%§!\n    Empire Size from Systems: §G-1%§!\n    Per §Y1%§! §Y$pop_cat_bio_trophy_plural$§! working in our Empire.\n\n"
+ leader_trait_orphan_matrix_custodian_matrix_custom_tooltip_event:0 "\n\n    - Empire Size from Planets: §G-1%§!\n    - Empire Size from Systems: §G-0.5%§!\n    Per §Y1%§! §Y$pop_cat_bio_trophy_plural$§! working in our Empire.\n\n"
  leader_trait_orphan_matrix_custodian_matrix_tactical_algorithms:0 "Each §Y$commander_with_icon$§! will get the §Y$leader_trait_tactical_algorithms$§! trait"
  leader_trait_orphan_matrix_custodian_matrix_enclaves:0 "Every §G2§! §Y$ruler$§! levels, grants §G+1§! §Y$civic_mercenary_enclave$§!"
  leader_trait_orphan_matrix_custodian_matrix_sprawl:0 "- Empire Size reduction from Planets and Systems depends on the percentage of §Y$pop_cat_bio_trophy_plural$§! working in your Empire."
@@ -269,21 +276,21 @@
  
  leader_trait_orphan_matrix_main_chronicler:0 "Lore Codex"
  leader_trait_orphan_matrix_main_chronicler_desc:0 "This §Y$machine_intelligence$§! is dedicated to reference, archive, register and log every fate and deeds of past civilizations and species of the Galaxy."
- leader_trait_orphan_matrix_main_chronicler_custom_tooltip_modifier:0 "Each £job_death_chronicler£ $job_death_chronicler_plural$ working in our empire earns §G+0.01%§! £unity£ §YUnity§! and §G+0.0125%§! £physics_research£ £society_research£ £engineering_research£ §YResearch§!"
+ leader_trait_orphan_matrix_main_chronicler_custom_tooltip_modifier:0 "$EMPIRE_EFFECTS_TXT$:\n- Each §Y100§! £job_death_chronicler£ $job_death_chronicler_plural$ working in our empire will give:\n    - Job Efficiency for [physicist.GetIcon][biologist.GetIcon][engineer.GetIcon]$job_researcher_plural$: §G+1%§!.\n    - Job Efficiency for [coordinator.GetIcon][coordinator.GetNamePlural]: §G+1%§!.\n\n£job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! are considered both, therefore, the effects will stack !\n\nAmount of £job_death_chronicler£ $job_death_chronicler_plural$ within the Empire: §Y[owner.orphan_matrix_chroniclers]§!\nCurrent bonus : §G+[owner.orphan_matrix_chroniclers_bonus_percent]%§!\nMaximum : §Y+100%\n\n§RThis effect is active only if you have the §Y$civic_machine_memorialist$§! civic.§!"
  
  leader_trait_orphan_matrix_skynet:0 "Berzerker Matrix"
  leader_trait_orphan_matrix_skynet_desc:0 "This §Y$machine_intelligence$§! has gone Berzerk and is now relentless to destroy any organic life !"
  
  leader_trait_orphan_matrix_galactic_guardianship:0 "Supreme Galactic Defense Procedures"
- leader_trait_orphan_matrix_galactic_guardianship_desc:0 "\"§_Daddy will be with you, sweetie, forever...§!\".\n\nThis §Y$machine_intelligence$§! has activated special procedures to fight against any extra-galactic threats, acting as the undisputed mechanical Guardian Angel of the Galaxy."
+ leader_trait_orphan_matrix_galactic_guardianship_desc:0 "\"§_Daddy will be with you, sweetie, forever...§!\".\n\nThis §Y$machine_intelligence$§! has activated special military procedures to fence against any extra-galactic threat, acting as the undisputed mechanical Guardian Angel of the Galaxy."
  
  leader_trait_orphaned_matrix_assimilating_protocols:0 "Nanoprobian Expert"
- leader_trait_orphaned_matrix_assimilating_protocols_desc:0 "This §Y$machine_intelligence$§! has mastered the art of §YAssimiliation§!. Each pop §Y$job_assimilation$§! will enhance this empire £energy£ Energy production."
- leader_trait_orphaned_matrix_assimilating_protocols_custom_tooltip_modifier:0 "Each cybernetically §Yassimiliated§! pop by us will enhance our £energy£ Energy production by §G+0.001%§! to a maximum of §G+50%§!."
+ leader_trait_orphaned_matrix_assimilating_protocols_desc:0 "This §Y$machine_intelligence$§! has mastered the art of §YAssimiliation§!.\nEach pop §Y$job_assimilation$§! will enhance this empire £energy£ Energy production."
+ leader_trait_orphaned_matrix_assimilating_protocols_custom_tooltip_modifier:0 "$EMPIRE_EFFECTS_TXT$:\n    - Each cybernetically §Yassimiliated§! pop by us will enhance our £energy£ Energy production by §G+0.001%§!.\n\nCurrent bonus: §G+[owner.orphaned_matrix_assimilated_pops_percent_value]%§!\nAssimilated pops: §Y[owner.orphaned_matrix_assimilated_pops]§!\nMaximum: §Y+50%§!"
  
  leader_trait_orphaned_matrix_galactic_chronicler:0 "Galactic Chronicler"
- leader_trait_orphaned_matrix_galactic_chronicler_desc:0 "This §Y$machine_intelligence$§! is an archeology beast, taking records of past civilizations like its existence would depend on it.\nAny custom, discovery, tale and habit of former Empires are well kept under its protection for all to remember."
- leader_trait_orphaned_matrix_galactic_chronicler_custom_tooltip_modifier:0 "Each §Ydestroyed Empire§! in the Galaxy we have §Ycommunications§! with will boost our §Y$pop_cat_complex_drone_plural$§! output by §G+5%§!.\nA §Y$COUNTRY_FALLEN_EMPIRE$§! earns §G+7.5%§!.\nAn §Y$COUNTRY_AWAKENED_FALLEN_EMPIRE$§! earns §G+15%§!.\n\nMax : §Y50%§!.\n§RThis effect is active only if you have the §Y$civic_machine_memorialist$§! civic.§!"
+ leader_trait_orphaned_matrix_galactic_chronicler_desc:0 "This §Y$machine_intelligence$§! is an archeology beast, taking records of past civilizations like its existence would depend on it.\nAny custom, discovery, tale and habit of former Empires are well kept under its protection for all to remember past ordeals."
+ leader_trait_orphaned_matrix_galactic_chronicler_custom_tooltip_modifier:0 "$EMPIRE_EFFECTS_TXT$:\n- Each §Ydestroyed Empire§! in the Galaxy we have §Ycommunications§! with will boost our £unity£ §YUnity§! and £physics£ £society£ £engineering£ §Y$RESEARCH_EFFICIENCY$§! by §G+1%§!.\n    - A §Y$COUNTRY_FALLEN_EMPIRE$§! earns §G+20%§!.\n    - An §Y$COUNTRY_AWAKENED_FALLEN_EMPIRE$§! earns §G+50%§!.\n\nCurrent bonus: §G+[owner.orphaned_matrix_dead_empires_print]%§!\nMaximum : §Y+100%§!.\n\n§RThis effect is active only if you have the §Y$civic_machine_memorialist$§! civic.§!"
  
  # OPINION MODIFIERS
  

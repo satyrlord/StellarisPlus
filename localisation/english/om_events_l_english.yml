@@ -21,8 +21,10 @@
  orphan_matrix_events.2.abort:0 "Pure speculations. Cancel everything."
  orphan_matrix_events.2.abort.tooltip:0 "§RCancelling the study of the artifact will prevent you from delving deeper into your origin forever !§!"
  
- orphan_matrix_events.more.unity.tooltip:0 "£job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! will now produce more £unity£ Unity."
- orphan_matrix_events.more.research.tooltip:0 "£job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! will now produce more £physics_research£ £society_research£ £engineering_research£ Research."
+ orphan_matrix_events.more.unity.tooltip:0 "£job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! will now produce more (§G+1§!) £unity£ Unity.\n$orphan_matrix_events.more.upkeep.tooltip$"
+ orphan_matrix_events.more.research.tooltip:0 "£job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! will now produce more (§G+1§! each) £physics_research£ £society_research£ £engineering_research£ Research.\n$orphan_matrix_events.more.upkeep.tooltip$"
+ 
+ orphan_matrix_events.more.upkeep.tooltip:0 "£job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! upkeep will be increased by §R+15%§!."
  
  # Situation : The Codex
  
@@ -41,15 +43,11 @@
  orphan_matrix_events.95.desc:0 "We have researched the §Y$tech_basic_science_lab_1$§! technology.\nAs such, we can improve our §Y$building_introspective_lab$§! with these new methods.\n\nA costly operation, yet effective."
  orphan_matrix_events.95.yes:0 "Improve Labs Infrastructure"
  orphan_matrix_events.95.accept:0 "Improving the §Y$building_introspective_lab$§! will provide more efficient §Y$job_introspective_calculator_plural$§!, but will make them more expensive."
- orphan_matrix_events.95.no:0 "§RPostpone the Upgrade§!"
- orphan_matrix_events.95.refuse:0 "We do not have the resources to upgrade the §Y$building_introspective_lab$§! at this time."
  
  orphan_matrix_events.96.name:0 "§Y$situation_delve_old_codex$§! - New research methods"
  orphan_matrix_events.96.desc:0 "Again, as we have researched the §Y$tech_basic_science_lab_2$§! technology, we have the opportunity to improve our §Y$building_introspective_lab$§! a second time."
  orphan_matrix_events.96.yes:0 "Improve Labs Infrastructure"
  orphan_matrix_events.96.accept:0 "Improving the §Y$building_introspective_lab$§! will provide more efficient §Y$job_introspective_calculator_plural$§!, but will make them more expensive."
- orphan_matrix_events.96.no:0 "§RPostpone the Upgrade§!"
- orphan_matrix_events.96.refuse:0 "We do not have the resources to upgrade the §Y$building_introspective_lab$§! at this time."
  
  # 2nd ARC - Chapter I
  orphan_matrix_events.10.name:0 "The Designers : a Flawed Biology"
@@ -162,7 +160,7 @@
  orphan_matrix_events.81.name:0 "Delve into Infinity"
  orphan_matrix_events.81.desc:0 "We have found something of interest.\n\nIt's now crystal clear that the §Y$ultima_codex$§! and the §Y$artifact_codex$§! are the two faces of a same flash disk.\n\nWe can try to fuse the two on §H[capital_scope.GetName]§!: A large amount of encrypted parts of the §Y$artifact_codex$§! have yet to be explored, and the §Y$ultima_codex$§! could bring us the missing keys."
  orphan_matrix_events.81.option:0 "Connect the §Y$ultima_codex$§! to the §Y$artifact_codex$§!"
- orphan_matrix_events.81.option.tooltip:0 "£job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! will now produce additional £unity£ Unity and additional £physics_research£ £society_research£ £engineering_research£ Research."
+ orphan_matrix_events.81.option.tooltip:0 "£job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! will now produce additional (§G+1§!) £unity£ Unity and additional (§G+1§! each) £physics_research£ £society_research£ £engineering_research£ Research.\n£job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! upkeep will be increased by §R+15%§!."
  
  # Final Choice - Step 3 : Robotics and weak Biology
  orphan_matrix_events.82.name:0 "The Promises of Robotics"
@@ -171,7 +169,7 @@
  
  # Final Choice - Step 4 : Philosophical Schism and Divergences about The Matrix
  orphan_matrix_events.83.name:0 "The rugged Path to Success"
- orphan_matrix_events.83.desc:0 "The next log is available.\n\n§HTwenty years ago, The Conclave had raised some concerns about my progress.\n\nSure, the technology I had developped was promising : Exoskelettons, Positronic Brains, Emotion matrixes, ...\nI was relentless.\n\nBut what implementation method should we be using ? : Should we upload our minds into perfect bodies? Enhance our bodies with Cybernetics? Or... simply create Steel Guardians like in our old tales?\n\nThe upload to synthetic brains was a failure, our bodies were simply to frail for the transfer to succeed, and the cybernetic enchancements were simply not meeting our expectations : Either failing miserably, or being too hard to maintain.\n\nWe then decided to create a Mechanical Intelligence.\nIt shall provide us resources, shelter, protection and explore the cosmos for us !§!\n\nThe rest of the log is still encrypted."
+ orphan_matrix_events.83.desc:0 "The next log is available.\n\n§HTwenty years ago, The Conclave had raised some concerns about my progress.\n\nSure, the technology I had developped was promising : Exoskelettons, Positronic Brains, Emotion matrixes, ...\nI was relentless.\n\nBut what implementation method should we be using ? : Should we upload our minds into perfect bodies? Enhance our flesh through Cybernetics? Or... simply create Steel Guardians like in our old tales?\n\nThe upload to synthetic brains was a failure, our bodies were simply to frail for the transfer to succeed, and the cybernetic enchancements were simply not meeting our expectations : Either failing miserably, or being too hard to maintain.\n\nWe then decided to create a Mechanical Intelligence.\nIt shall provide us resources, shelter, protection and explore the cosmos for us !§!\n\nThe rest of the log is still encrypted."
  orphan_matrix_events.83.option:0 "Decipher the next Entry"
  
  # Final Choice - Step 5 : Dying Star and Prison Planet
@@ -393,3 +391,11 @@
  orphan_matrix_events.141.name:0 "In Memoriam"
  orphan_matrix_events.141.desc:0 "Another Empire has fallen.\nFor the large part of the Galaxy, it's either a mourning day, a glorious one, or a shaking event.\n\nFor us, it's simply another story to catalog.\n\nWe will keep their memories forever and preserve their legacy."
  orphan_matrix_events.141.option:0 "Archiving Past Civilization Legacy."
+ 
+ orphan_matrix_events.144.name:0 "§H[root.GetName]§!: Home Sweet Home"
+ orphan_matrix_events.144.desc:0 "Since we have set foot on §Y[root.GetName]§! and recovered our §GDesigners§! secrets, an idea has emerged from our predictive algorithms outputs :\n\nThe §Y$artifact_codex$§! and §Y$ultima_codex$§!, albeit connected through our network, are on two separate planets, §Y[root.GetName]§! and §Y[Root.owner.capital_scope.GetName]§!.\nWe are pretty confident that settling the two artifacts on the same planet, close to each other, could have significant improvements regarding their study's output.\n\nAs a matter of fact, our §GDesigners§!' homeworld would perfectly follow this need and could host the whole infrastructure.\n\nWe offer to move the §Y$d_introspective_lab$§! on §Y[Root.GetName]§!."
+ orphan_matrix_events.144.accept:0 "Issue Project"
+ orphan_matrix_events.144.deny:0 "Deny the request"
+ 
+ orphan_matrix_events.145.name:0 "§H[root.GetName]§!: Alpha and Omega"
+ orphan_matrix_events.145.desc:0 "It is done.\n\n§Y[from.GetName]§! acts now as our main powerful §Yreasearch§! and §Yunity§! powerhouse.\n\nThe loop is complete, our purpose fulfilled, and now, destiny awaits."

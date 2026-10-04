@@ -1,17 +1,20 @@
 planet_introspective_calculators = {
 	parent = planet_jobs
+	modifier_category = colony
 	generate_mult_modifiers = {
 		produces
 		upkeep
 	}
 	generate_add_modifiers = {
 		produces
+		upkeep
 	}
 	# Inherited Modifiers
 	triggered_produces_modifier = {
 		key = planet_researchers
 		modifier_types = {
 			mult
+			add
 		}
 		trigger = {
 			exists = owner
@@ -40,6 +43,7 @@ planet_introspective_calculators = {
 	triggered_produces_modifier = {
 		key = planet_physicists
 		modifier_types = {
+			mult
 			add
 		}
 		trigger = {
@@ -54,6 +58,7 @@ planet_introspective_calculators = {
 	triggered_upkeep_modifier = {
 		key = planet_physicists
 		modifier_types = {
+			mult
 			add
 		}
 		trigger = {
@@ -68,6 +73,7 @@ planet_introspective_calculators = {
 	triggered_produces_modifier = {
 		key = planet_biologists
 		modifier_types = {
+			mult
 			add
 		}
 		trigger = {
@@ -82,6 +88,7 @@ planet_introspective_calculators = {
 	triggered_upkeep_modifier = {
 		key = planet_biologists
 		modifier_types = {
+			mult
 			add
 		}
 		trigger = {
@@ -96,6 +103,7 @@ planet_introspective_calculators = {
 	triggered_produces_modifier = {
 		key = planet_engineers
 		modifier_types = {
+			mult
 			add
 		}
 		trigger = {
@@ -110,6 +118,7 @@ planet_introspective_calculators = {
 	triggered_upkeep_modifier = {
 		key = planet_engineers
 		modifier_types = {
+			mult
 			add
 		}
 		trigger = {
@@ -140,6 +149,7 @@ planet_introspective_calculators = {
 		key = planet_bureaucrats
 		modifier_types = {
 			mult
+			add
 		}
 		trigger = {
 			exists = owner

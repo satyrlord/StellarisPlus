@@ -19,7 +19,7 @@ decision_erect_shield_relic_world = {
 			has_country_flag = orphan_matrix_assimilator
 		}
 		has_modifier = irradiated_relic
-		has_planet_flag = orphan_matrix_assimilator_project_accepted
+		has_carrier_flag = orphan_matrix_assimilator_project_accepted
 	}
 
 	allow = {}
@@ -58,7 +58,7 @@ decision_erect_designers_memorial = {
 			has_origin = origin_orphan_matrix
 			has_country_flag = orphan_matrix_chroniclers
 		}
-		has_planet_flag = can_build_memorial
+		has_carrier_flag = can_build_memorial
 		NOT = { has_deposit = d_designers_memorial }
 	}
 

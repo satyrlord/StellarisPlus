@@ -21,8 +21,10 @@
  orphan_matrix_events.2.abort:0 "Pures spéculations. Annulez tout."
  orphan_matrix_events.2.abort.tooltip:0 "§RAbandonner l'étude de l'artfact vous empêchera de progresser dans la recherche de vos origines pour toujours !§!"
  
- orphan_matrix_events.more.unity.tooltip:0 "Les £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! produiront désormais plus d'£unity£."
- orphan_matrix_events.more.research.tooltip:0 "Les £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! produiront désormais plus de £physics_research£ £society_research£ £engineering_research£."
+ orphan_matrix_events.more.unity.tooltip:0 "Les £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! produiront désormais plus d'£unity£ (§Y+1§!).\n$orphan_matrix_events.more.upkeep.tooltip$"
+ orphan_matrix_events.more.research.tooltip:0 "Les £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! produiront désormais plus de £physics_research£ £society_research£ £engineering_research£ (§Y+1§! de chaque).\n$orphan_matrix_events.more.upkeep.tooltip$"
+ 
+ orphan_matrix_events.more.upkeep.tooltip:0 "Entretien des £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! augmenté de §R+15%§!."
  
  # Situation : The Codex
  
@@ -41,15 +43,11 @@
  orphan_matrix_events.95.desc:0 "Recherche §Y$tech_basic_science_lab_1$§! terminée.\nNous pouvons désormais améliorer notre §Y$building_introspective_lab$s§! avec ces nouvelles méthodes.\n\nUne coûteuse opération, bien qu'efficace."
  orphan_matrix_events.95.yes:0 "Amélioration de l'Infrastructure de Recherche"
  orphan_matrix_events.95.accept:0 "En améliorant le §Y$building_introspective_lab$§!, nous bénéficieront de §Y$job_introspective_calculator_plural$§! plus efficaces, mais ces derniers coûteront plus cher en entretien."
- orphan_matrix_events.95.no:0 "§RPostpone the Upgrade§!"
- orphan_matrix_events.95.refuse:0 "We do not have the resources to upgrade the §Y$building_introspective_lab$§! at this time."
  
  orphan_matrix_events.96.name:0 "§Y$situation_delve_old_codex$§! - New research methods"
  orphan_matrix_events.96.desc:0 "Recherche §Y$tech_basic_science_lab_2$§! terminée.\n Nous avons de nouveau l'opportunité d'améliorer notre §Y$building_introspective_lab$§!."
  orphan_matrix_events.96.yes:0 "Amélioration de l'Infrastructure de Recherche"
  orphan_matrix_events.96.accept:0 "En améliorant le §Y$building_introspective_lab$§!, nous bénéficieront de §Y$job_introspective_calculator_plural$§! plus efficaces, mais ces derniers coûteront plus cher en entretien."
- orphan_matrix_events.96.no:0 "§RPostpone the Upgrade§!"
- orphan_matrix_events.96.refuse:0 "We do not have the resources to upgrade the §Y$building_introspective_lab$§! at this time."
  
  # 2nd ARC - Chapter I
  orphan_matrix_events.10.name:0 "Les Concepteurs : Une Biologie Imparfaite"
@@ -162,7 +160,7 @@
  orphan_matrix_events.81.name:0 "Plongée dans l'Infini"
  orphan_matrix_events.81.desc:0 "Nous avons trouvé quelque chose d'intéressant.\n\nIl est désormais clair que le §Y$ultima_codex$§! et le §Y$artifact_codex$§! sont les deux faces d'un même disque flash.\n\nNous pouvons essayer de fusionner les deux sur §H[capital_scope.GetName]§! : Une énorme partie toujours cryptée du §Y$artifact_codex$§! n'a pas encore été explorée, et le §Y$ultima_codex$§! pourrait nous apporter les clés manquantes."
  orphan_matrix_events.81.option:0 "Connexion du §Y$ultima_codex$§! et du §Y$artifact_codex$§!"
- orphan_matrix_events.81.option.tooltip:0 "Les £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! vont maintenant produire plus d'£unity£ Unité plus de £physics_research£ £society_research£ £engineering_research£ Recherche."
+ orphan_matrix_events.81.option.tooltip:0 "Les £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! vont maintenant produire plus d'£unity£ Unité plus de £physics_research£ £society_research£ £engineering_research£ Recherche.\nL'entretien des £job_introspective_calculator£ §Y$job_introspective_calculator_plural$§! sera augmenté de §R+15%§!."
  
  # Final Choice - Step 3 : Robotics and weak Biology
  orphan_matrix_events.82.name:0 "Les Promesses de la Robotique"
@@ -171,7 +169,7 @@
  
  # Final Choice - Step 4 : Philosophical Schism and Divergences about The Matrix
  orphan_matrix_events.83.name:0 "La voie rugueuse vers le Succès"
- orphan_matrix_events.83.desc:0 "La suite du journal est disponible.\n\n§HIl y a vingt ans, le Conclave avait émis quelques inquiétudes quant à mes progrès.\n\nBien sûr, la technologie que j'avais développée était prometteuse : Exosquelettes, Cerveaux Positroniques, Matrices émotionnelles, ...\nJ'étais inarrêtable.\n\nMais quelle méthode de mise en oeuvre devrions-nous utiliser ? : Devrions-nous télécharger nos esprits dans des corps parfaits ? Tenter d'améliorer nos corps avec la Cybernétique ? Ou... simplement créer des Gardiens de Fer comme dans nos vieux contes ?\n\nLe téléchargement vers des cerveaux synthétiques fût un lamentable échec, nos corps étaient tout simplement trop fragiles pour que le transfert ne réussisse, et les améliorations cybernétiques ne répondaient tout simplement pas à nos attentes : Soit elles échouaient lamentablement, soient elles étaient trop difficile à maintenir ou trop coûteuses.\n\nNous avons alors décidé de créer une Intelligence Mécanique.\nElle nous fournira des ressources, un abri, une protection et explorera le cosmos pour nous !§!\n\nLe reste du journal est toujours crypté."
+ orphan_matrix_events.83.desc:0 "La suite du journal est disponible.\n\n§HIl y a vingt ans, le Conclave avait émis quelques inquiétudes quant à mes progrès.\n\nBien sûr, la technologie que j'avais développée était prometteuse : Exosquelettes, Cerveaux Positroniques, Matrices émotionnelles, ...\nJ'étais inarrêtable.\n\nMais quelle méthode de mise en oeuvre devrions-nous utiliser ? : Devrions-nous télécharger nos esprits dans des corps parfaits ? Tenter d'améliorer notre chair à travers la Cybernétique ? Ou... simplement créer des Gardiens de Fer comme dans nos vieux contes ?\n\nLe téléchargement vers des cerveaux positroniques fût un lamentable échec, nos corps étaient simplement trop fragiles pour que le transfert ne réussisse, tandis que les améliorations cybernétiques ne répondaient tout bonnement pas à nos attentes : Soit elles échouaient lamentablement, soient elles étaient trop difficile à maintenir, soit trop coûteuses.\n\nNous avons alors décidé de créer une Intelligence Mécanique.\nElle nous fournira des ressources, un abri, une protection et explorera le cosmos pour nous !§!\n\nLe reste du journal est toujours crypté."
  orphan_matrix_events.83.option:0 "Décryptage de l'entrée suivante"
  
  # Final Choice - Step 5 : Dying Star and Prison Planet
@@ -269,7 +267,7 @@
  orphan_matrix_events.8693.b:0 "Aménagement RIP v75"
  
  orphan_matrix_events.8694.name:0 "§YInstallation du Patch§! : Erreur Matérielle"
- orphan_matrix_events.8694.desc:0 "Un échec matériel a été détécté pendant la procédure d'installation du §Hpatch§!.\n\nNous pouvons remplacer les actifs impactés, ou retirer les ressources de la batterie de calculWe could try to replace the existing infrastructure and get delayed, or just remove it from the cluster, preventing the resources it bears to be allocated to the costly installation of the §GDesigners§! patch."
+ orphan_matrix_events.8694.desc:0 "Un échec matériel a été détécté pendant la procédure d'installation du §Hpatch§!.\n\nNous pouvons remplacer les actifs impactés, ou retirer les ressources de la batterie de calcul, ce qui empêcherait ces dernières d'être utilisées pour l'installation coûteuse du §Hpatch§! des §GConcepteurs§!."
  orphan_matrix_events.8694.a:0 "Remplacement du matériel déféctueux"
  orphan_matrix_events.8694.b:0 "Désengagement des actifs corrompus"
  
@@ -393,3 +391,11 @@
  orphan_matrix_events.141.name:0 "In Memoriam"
  orphan_matrix_events.141.desc:0 "Un autre Empire est tombé.\nPour la plupart, c'est un jour funeste, une victoire à célébrer, ou encore un évènement grave qui va rebattre les cartes de leurs éphèmères existences.\n\nPour nous, il s'agit simplement d'une nouvelle Histoire à cataloguer.\n\nNous garderons leur mémoire pour toujours et nous préserverons leur héritage."
  orphan_matrix_events.141.option:0 "Nous appliquerons leurs méthodes."
+ 
+ orphan_matrix_events.144.name:0 "§H[root.GetName]§! : Bienvenue à la Maison"
+ orphan_matrix_events.144.desc:0 "Depuis que nous avons posé le pied sur §Y[root.GetName]§! et récupéré les secrets de nos §GConcepteurs§!, une idée a émergé des résultats de nos algorithmes prédictifs :\n\nLes §Y$artifact_codex$§! et §Y$ultima_codex$§!, bien que connectés par notre réseau, se trouvent sur deux planètes distinctes, §Y[root.GetName]§! et §Y[Root.owner.capital_scope.GetName]§!.\nNous sommes convaincus que le regroupement des deux artefacts sur une même planète, à proximité l'un de l'autre, pourrait améliorer significativement les résultats de leurs recherches.\n\nDe fait, la planète d'origine de nos §GConcepteurs§! répondrait parfaitement à ce besoin et pourrait accueillir toute l'infrastructure.\n\nNous proposons de déplacer le §Y$d_introspective_lab$§! sur §Y[Root.GetName]§!."
+ orphan_matrix_events.144.accept:0 "Lancement du Projet"
+ orphan_matrix_events.144.deny:0 "Requête rejettée"
+ 
+ orphan_matrix_events.145.name:0 "§H[root.GetName]§!: L'Alpha et l'Omega"
+ orphan_matrix_events.145.desc:0 "C'est fait.\n\n§Y[from.GetName]§! est désormais notre centre névralgique de §Yrecherche§! et d'§Yunité§! dans la Galaxie.\n\nLa boucle est bouclée, notre vocation est accomplie, et notre destin sera limpide."

@@ -272,8 +272,8 @@ situation_delve_old_codex = {
 		}
 		
 		modifier = {
-			country_energy_produces_mult = -0.1
-			all_technology_research_speed = 0.05
+			planet_introspective_calculators_upkeep_mult = 0.05
+			pop_introspective_calculator_bonus_workforce_mult = 0.05
 		}
 	}
 	approach = {
@@ -286,8 +286,8 @@ situation_delve_old_codex = {
 		}
 		
 		resources = {
-	   		category = situations
-	   		cost = { influence = 100 }
+   			category = situations
+   			cost = { influence = 100 }
 		}
 
 		on_select = {
@@ -295,9 +295,8 @@ situation_delve_old_codex = {
 		}
 		
 		modifier = {
-			country_energy_produces_mult = -0.25
-			country_unity_produces_mult = 0.1
-			all_technology_research_speed = 0.1
+			planet_introspective_calculators_upkeep_mult = 0.1
+			pop_introspective_calculator_bonus_workforce_mult = 0.1
 		}
 	}
 	
@@ -315,9 +314,8 @@ situation_delve_old_codex = {
 		}
 		
 		modifier = {
-			country_energy_produces_mult = -0.1
-			country_unity_produces_mult = 0.1
-			all_technology_research_speed = 0.1
+			planet_introspective_calculators_upkeep_mult = -0.1
+			bureaucrat_jobs_bonus_workforce_mult = -0.1
 		}
 	}
 	
@@ -384,13 +382,13 @@ situation_apply_patch = {
 		stage_1 = {
 			icon = GFX_situation_stage_1
 			icon_background = GFX_situation_stage_frame_blue
-			end = 25
+			end = 50
 			custom_tooltip = stage_apply_patch
 		}
 		stage_2 = {
 			icon = GFX_situation_stage_2
 			icon_background = GFX_situation_stage_frame_blue
-			end = 50
+			end = 100
 			on_first_enter = {
 				situation_event = { id = orphan_matrix_events.861 }
 			}
@@ -399,7 +397,7 @@ situation_apply_patch = {
 		stage_3 = {
 			icon = GFX_situation_stage_3
 			icon_background = GFX_situation_stage_frame_blue
-			end = 75
+			end = 150
 			on_first_enter = {
 				situation_event = { id = orphan_matrix_events.862 }
 			}
@@ -408,7 +406,7 @@ situation_apply_patch = {
 		stage_4 = {
 			icon = GFX_situation_stage_4
 			icon_background = GFX_situation_stage_frame_blue
-			end = 100
+			end = 200
 			on_first_enter = {
 				situation_event = { id = orphan_matrix_events.863 }
 			}
@@ -417,7 +415,7 @@ situation_apply_patch = {
 		stage_5 = {
 			icon = GFX_situation_stage_5
 			icon_background = GFX_situation_stage_frame_blue
-			end = 125
+			end = 250
 			on_first_enter = {
 				situation_event = { id = orphan_matrix_events.864 }
 			}
@@ -426,7 +424,7 @@ situation_apply_patch = {
 		stage_6 = {
 			icon = GFX_situation_stage_6
 			icon_background = GFX_situation_stage_frame_blue
-			end = 150
+			end = 300
 			on_first_enter = {
 				situation_event = { id = orphan_matrix_events.865 }
 			}
@@ -435,7 +433,7 @@ situation_apply_patch = {
 		stage_7 = {
 			icon = GFX_situation_stage_7
 			icon_background = GFX_situation_stage_frame_blue
-			end = 175
+			end = 350
 			on_first_enter = {
 				situation_event = { id = orphan_matrix_events.866 }
 			}
@@ -444,7 +442,7 @@ situation_apply_patch = {
 		stage_8 = {
 			icon = GFX_situation_stage_8
 			icon_background = GFX_situation_stage_frame_blue
-			end = 200
+			end = 400
 			on_first_enter = {
 				situation_event = { id = orphan_matrix_events.867 }
 			}
@@ -453,7 +451,7 @@ situation_apply_patch = {
 		stage_9 = {
 			icon = GFX_situation_stage_9
 			icon_background = GFX_situation_stage_frame_blue
-			end = 225
+			end = 450
 			on_first_enter = {
 				situation_event = { id = orphan_matrix_events.868 }
 			}
@@ -481,7 +479,7 @@ situation_apply_patch = {
 			orphan_matrix_events.96
 	    }
 		random_events = {
-			100 = 0
+			2000 = 0
 			10 = orphan_matrix_events.8691
 			10 = orphan_matrix_events.8692
 			10 = orphan_matrix_events.8693

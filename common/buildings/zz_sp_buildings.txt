@@ -11,6 +11,8 @@
 @building_introspective_lab_maintenance_2 = 18
 @building_introspective_lab_maintenance_exotic_gases_1 = 2
 @building_introspective_lab_maintenance_exotic_gases_2 = 4
+@building_introspective_calculators_rare_resources_1 = 0.25
+@building_introspective_calculators_rare_resources_2 = 0.5
 
 building_introspective_lab = {
 	base_buildtime = @b3_time
@@ -42,9 +44,11 @@ building_introspective_lab = {
 	}
 
 	planet_modifier = {
-		job_introspective_calculator_add = 100
-		pop_introspective_calculator_bonus_workforce_mult = 0.1
-		planet_introspective_calculators_upkeep_mult = 0.05
+		job_introspective_calculator_add = 200
+		planet_introspective_calculators_physics_research_produces_add = 0.1
+		planet_introspective_calculators_society_research_produces_add = 0.1
+		planet_introspective_calculators_engineering_research_produces_add = 0.1
+		planet_introspective_calculators_unity_produces_add = 0.25
 	}
 
 	resources = {
@@ -114,9 +118,12 @@ building_introspective_lab_2 = {
 	}
 
 	planet_modifier = {
-		job_introspective_calculator_add = 100
-		pop_introspective_calculator_bonus_workforce_mult = 0.2
-		planet_introspective_calculators_upkeep_mult = 0.1
+		job_introspective_calculator_add = 200
+		planet_introspective_calculators_physics_research_produces_add = 0.2
+		planet_introspective_calculators_society_research_produces_add = 0.2
+		planet_introspective_calculators_engineering_research_produces_add = 0.2
+		planet_introspective_calculators_unity_produces_add = 0.5
+		planet_introspective_calculators_exotic_gases_upkeep_add = 0.25
 	}
 
 	resources = {
@@ -192,9 +199,13 @@ building_introspective_lab_3 = {
 	}
 
 	planet_modifier = {
-		job_introspective_calculator_add = 100
-		pop_introspective_calculator_bonus_workforce_mult = 0.3
-		planet_introspective_calculators_upkeep_mult = 0.15
+		job_introspective_calculator_add = 200
+		pop_introspective_calculator_bonus_workforce_mult = 0.1
+		planet_introspective_calculators_physics_research_produces_add = 0.2
+		planet_introspective_calculators_society_research_produces_add = 0.2
+		planet_introspective_calculators_engineering_research_produces_add = 0.2
+		planet_introspective_calculators_unity_produces_add = 0.5
+		planet_introspective_calculators_exotic_gases_upkeep_add = 0.25
 	}
 
 	resources = {

@@ -27,7 +27,7 @@ introspective_calculator = {
 	}
 	
 	country_modifier = {
-		codex_quest_progress_add = 0.05
+		codex_quest_progress_add = 0.025
 	}
 
 	resources = {
@@ -47,11 +47,13 @@ introspective_calculator = {
 		upkeep = {
 			alloys = 1
 			energy = 4
+			mult = value:introspective_calculator_upkeep_modifier
 		}
 	}
 
 	weight = {
 		weight = @complex_drone_job_weight
+		mult = value:job_total_output_modifier|JOB|evaluator|RESOURCE|unity|
 		modifier = {
 			factor = 0.9
 			exists = owner

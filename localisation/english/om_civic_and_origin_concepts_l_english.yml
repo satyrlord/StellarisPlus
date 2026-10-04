@@ -1,3 +1,6 @@
 ﻿l_english:
  concept_ancient_buried_vault: "$ancient_buried_vault_digsite$"
  concept_ancient_buried_vault_desc: "§L$ancient_buried_vault_digsite_intro$§!"
+ 
+ concept_leader_trait_archaeologist: "$leader_trait_archaeologist$"
+ concept_leader_trait_archaeologist_desc: "£scientist£ §Y['concept_science_ship']§! Effects:\n    - $MOD_SHIP_ARCHAEOLOGICAL_SITE_EXCAVATION_SPEED_MULT$: §G+20%§!\n\n§L$leader_trait_archaeologist_desc$§!"

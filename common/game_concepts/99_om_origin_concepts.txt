@@ -1,3 +1,7 @@
 concept_ancient_buried_vault = {
 	icon = "gfx/interface/archaeology/icon_archaeology.dds"
 }
+
+concept_leader_trait_archaeologist = {
+	icon = "gfx/interface/archaeology/icon_archaeology.dds"
+}

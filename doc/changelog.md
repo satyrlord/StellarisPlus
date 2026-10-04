@@ -2,6 +2,41 @@
 
 Date: 2026-10-04
 
+- Orphaned Matrix Origin updated to the 2026-08-17 upstream (v4.5 checked):
+  - Taken from upstream where the integrated copy was unchanged: traits, concepts,
+    system initializer, digsite events, four `.gfx` files, English and French
+    localisation (merged), and two new modifier icons. Added the new Introspection
+    Complex upgrade events (`orphan_matrix_events.143`-`.145`) and the upstream
+    rebalance of the Introspection Complex buildings, Delve the Old Codex situation
+    and decisions.
+  - Merged into the `zz_sp_` files: buildings, decisions, situations, economic
+    categories (`modifier_category = colony`), civics (adds
+    `ship_archaeological_site_clues_add`), the `introspective_calculator` job
+    (`job_total_output_modifier`, new upkeep modifier) and the script values.
+    The event file kept the local fixes (country-scope `orphan_matrix_events.1`
+    trigger, `capital_scope` situation targets, carrier flags) and now uses
+    upstream's `create_pop_group` loop in `orphan_matrix_events.102`.
+  - Restored logic lost to earlier cleanups. Commit a3d4f22 had deleted the real
+    Orphaned Matrix script values and e02cdb4 replaced them with `base = 1`
+    placeholders, so the research and unity level bonuses, the memorialist,
+    custodian and dead-empire output scaling, assimilator energy and the
+    Introspection Complex job count were all inert. They now match upstream.
+    Commit 6fd39f2 had removed the `on_entering_system_first_time`
+    (`orphan_matrix_events.52`) and `on_country_destroyed`
+    (`orphan_matrix_events.140`) hooks; both are back in
+    `common/on_actions/zz_sp_on_actions.txt`.
+  - `common/static_modifiers/zz_sp_static_modifiers.txt` now keeps only the five job
+    workforce modifiers Orphaned Matrix changes (researcher, physicist, biologist,
+    engineer, bureaucrat), rebuilt from vanilla 4.5 plus
+    `pop_introspective_calculator_bonus_workforce_mult`. The other copies of
+    vanilla's `24_static_modifiers_jobs.txt` were stale 4.4 duplicates and were
+    dropped so vanilla 4.5 applies (it adds ark harvester, cruise passenger and
+    evaluator entries).
+  - Kept local: the archaeology site `potential` and `visible` triggers (country
+    scope, verified against the 4.4.6 log), the superset `has_precursor_intro`
+    trigger, the origin event picture, and the Introspection Complex slot count.
+  - Fixed upstream's French localisation, which defined
+    `orphan_matrix_events.95.accept` twice (the second is `.96.accept`).
 - Added `map/setup_scenarios/{tiny,small,medium,large,huge}.txt` from Plentiful
   Traditions. They are identical to vanilla 4.5 except for higher
   `fallen_empire_max` and `marauder_empire_max` (tiny 2/2, small 4/4, medium 6/4,

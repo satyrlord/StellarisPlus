@@ -144,10 +144,6 @@ situation_event = {
 		owner = {
 			NOT = { has_country_flag = lab_1_upgrade_offered }
 			has_technology = tech_basic_science_lab_2
-			resource_stockpile_compare = {
-				resource = exotic_gases
-				value > 60
-			}
 		}
 	}
 	
@@ -155,70 +151,12 @@ situation_event = {
 		owner = {
 			set_country_flag = alpha_codex_paused
 			set_country_flag = lab_1_upgrade_offered
-			capital_scope = {
-				set_variable = {
-					which = num_introspective_labs
-					value = 0
-				}
-				
-				export_trigger_value_to_variable = {
-					trigger = num_buildings
-					parameters = {
-						type = building_introspective_lab
-					}
-					variable = num_introspective_labs
-				}
-			}
-			
-			set_variable = {
-				which = introspective_labs_upgrade_1_gases
-				value = 5
-			}
-			
-			multiply_variable = {
-				which = introspective_labs_upgrade_1_gases
-				value = capital_scope.num_introspective_labs
-			}
-			
-			set_variable = {
-				which = introspective_labs_upgrade_1_minerals
-				value = 200
-			}
-			
-			multiply_variable = {
-				which = introspective_labs_upgrade_1_minerals
-				value = capital_scope.num_introspective_labs
-			}
 		}
 	}
 	
 	option = {
 		name = orphan_matrix_events.95.yes
 		custom_tooltip = orphan_matrix_events.95.accept
-		
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = minerals
-					value > introspective_labs_upgrade_1_minerals
-				}
-				resource_stockpile_compare = {
-					resource = exotic_gases
-					value > introspective_labs_upgrade_1_gases
-				}
-			}
-		}
-		
-		owner = {
-			add_resource = {
-				exotic_gases = 5
-				mult = capital_scope.num_introspective_labs
-			}
-			add_resource = {
-				minerals = 200
-				mult = capital_scope.num_introspective_labs
-			}
-		}
 		
 		hidden_effect = {
 			owner = { set_country_flag = lab_1_upgrade_accepted }
@@ -248,11 +186,6 @@ situation_event = {
 		}
 	}
 	
-	option = {
-		name = orphan_matrix_events.95.no
-		custom_tooltip = orphan_matrix_events.95.refuse
-	}
-	
 	after = {
 		hidden_effect = {
 			owner = { remove_country_flag = alpha_codex_paused }
@@ -276,10 +209,6 @@ situation_event = {
 			NOT = { has_country_flag = lab_2_upgrade_offered }
 			has_technology = tech_basic_science_lab_3
 			has_country_flag = lab_1_upgrade_accepted
-			resource_stockpile_compare = {
-				resource = exotic_gases
-				value > 60
-			}
 		}
 	}
 	
@@ -287,70 +216,12 @@ situation_event = {
 		owner = {
 			set_country_flag = alpha_codex_paused
 			set_country_flag = lab_2_upgrade_offered
-			capital_scope = {
-				set_variable = {
-					which = num_introspective_labs
-					value = 0
-				}
-				
-				export_trigger_value_to_variable = {
-					trigger = num_buildings
-					parameters = {
-						type = building_introspective_lab
-					}
-					variable = num_introspective_labs
-				}
-			}
-			
-			set_variable = {
-				which = introspective_labs_upgrade_2_gases
-				value = 10
-			}
-			
-			multiply_variable = {
-				which = introspective_labs_upgrade_2_gases
-				value = capital_scope.num_introspective_labs
-			}
-			
-			set_variable = {
-				which = introspective_labs_upgrade_2_minerals
-				value = 400
-			}
-			
-			multiply_variable = {
-				which = introspective_labs_upgrade_2_minerals
-				value = capital_scope.num_introspective_labs
-			}
 		}
 	}
 	
 	option = {
 		name = orphan_matrix_events.96.yes
 		custom_tooltip = orphan_matrix_events.96.accept
-		
-		allow = {
-			owner = {
-				resource_stockpile_compare = {
-					resource = minerals
-					value > introspective_labs_upgrade_2_minerals
-				}
-				resource_stockpile_compare = {
-					resource = exotic_gases
-					value > introspective_labs_upgrade_2_gases
-				}
-			}
-		}
-		
-		owner = {
-			add_resource = {
-				exotic_gases = 5
-				mult = capital_scope.num_introspective_labs
-			}
-			add_resource = {
-				minerals = 200
-				mult = capital_scope.num_introspective_labs
-			}
-		}
 		
 		hidden_effect = {
 			if = {
@@ -376,11 +247,6 @@ situation_event = {
 				}
 			}
 		}
-	}
-	
-	option = {
-		name = orphan_matrix_events.96.no
-		custom_tooltip = orphan_matrix_events.96.refuse
 	}
 	
 	after = {
@@ -500,17 +366,17 @@ situation_event = {
 		random_list = {
 			20 = {
 				owner = {
-					set_country_flag = orphan_matrix_reward_reward_engineering
+					set_country_flag = orphan_matrix_reward_engineering
 				}
 			}
 			20 = {
 				owner = {
-					set_country_flag = orphan_matrix_reward_reward_physics
+					set_country_flag = orphan_matrix_reward_physics
 				}
 			}
 			20 = {
 				owner = {
-					set_country_flag = orphan_matrix_reward_reward_society
+					set_country_flag = orphan_matrix_reward_society
 				}
 			}
 			20 = {
@@ -519,17 +385,17 @@ situation_event = {
 					has_ancrel = no
 				}
 				owner = {
-					set_country_flag = orphan_matrix_reward_reward_artifacts
+					set_country_flag = orphan_matrix_reward_artifacts
 				}
 			}
 			10 = {
 				owner = {
-					set_country_flag = orphan_matrix_reward_reward_alloys
+					set_country_flag = orphan_matrix_reward_alloys
 				}
 			}
 			10 = {
 				owner = {
-					set_country_flag = orphan_matrix_reward_reward_situation_progress
+					set_country_flag = orphan_matrix_reward_situation_progress
 				}
 			}
 		}
@@ -538,7 +404,7 @@ situation_event = {
 	option = {
 		name = EXCELLENT
 		trigger = {
-			owner = { has_country_flag = orphan_matrix_reward_reward_engineering }
+			owner = { has_country_flag = orphan_matrix_reward_engineering }
 		}
 		owner = {
 			add_monthly_resource_mult = {
@@ -550,7 +416,7 @@ situation_event = {
 		}
 		hidden_effect = {
 			owner = {
-				remove_country_flag = orphan_matrix_reward_reward_engineering
+				remove_country_flag = orphan_matrix_reward_engineering
 			}
 		}
 	}
@@ -558,7 +424,7 @@ situation_event = {
 	option = {
 		name = EXCELLENT
 		trigger = {
-			owner = { has_country_flag = orphan_matrix_reward_reward_physics }
+			owner = { has_country_flag = orphan_matrix_reward_physics }
 		}
 		owner = {
 			add_monthly_resource_mult = {
@@ -568,17 +434,17 @@ situation_event = {
 				max = @tier1materialmax
 			}
 			hidden_effect = {
-			owner = {
-				remove_country_flag = orphan_matrix_reward_reward_physics
+				owner = {
+					remove_country_flag = orphan_matrix_reward_physics
+				}
 			}
-		}
 		}
 	}
 
 	option = {
 		name = EXCELLENT
 		trigger = {
-			owner = { has_country_flag = orphan_matrix_reward_reward_society }
+			owner = { has_country_flag = orphan_matrix_reward_society }
 		}
 		owner = {
 			add_monthly_resource_mult = {
@@ -588,17 +454,17 @@ situation_event = {
 				max = @tier1materialmax
 			}
 			hidden_effect = {
-			owner = {
-				remove_country_flag = orphan_matrix_reward_reward_society
+				owner = {
+					remove_country_flag = orphan_matrix_reward_society
+				}
 			}
-		}
 		}
 	}
 
 	option = {
 		name = EXCELLENT
 		trigger = {
-			owner = { has_country_flag = orphan_matrix_reward_reward_alloys }
+			owner = { has_country_flag = orphan_matrix_reward_alloys }
 		}
 		owner = {
 			add_monthly_resource_mult = {
@@ -609,7 +475,7 @@ situation_event = {
 			}
 			hidden_effect = {
 				owner = {
-					remove_country_flag = orphan_matrix_reward_reward_alloys
+					remove_country_flag = orphan_matrix_reward_alloys
 				}
 			}
 		}
@@ -618,12 +484,12 @@ situation_event = {
 	option = {
 		name = EXCELLENT
 		trigger = {
-			owner = { has_country_flag = orphan_matrix_reward_reward_artifacts }
+			owner = { has_country_flag = orphan_matrix_reward_artifacts }
 		}
 		small_artifact_reward = yes
 		hidden_effect = {
 			owner = {
-				remove_country_flag = orphan_matrix_reward_reward_artifacts
+				remove_country_flag = orphan_matrix_reward_artifacts
 			}
 		}
 	}
@@ -631,12 +497,12 @@ situation_event = {
 	option = {
 		name = EXCELLENT
 		trigger = {
-			owner = { has_country_flag = orphan_matrix_reward_reward_situation_progress }
+			owner = { has_country_flag = orphan_matrix_reward_situation_progress }
 		}
 		add_situation_progress = 2
 		hidden_effect = {
 			owner = {
-				remove_country_flag = orphan_matrix_reward_reward_situation_progress
+				remove_country_flag = orphan_matrix_reward_situation_progress
 			}
 		}
 	}
@@ -744,6 +610,39 @@ event = {
 			}
 			
 			country_event = { id = orphan_matrix_events.1 days = 30 }
+			
+			# Create new Archaeologist leader and kill the previous ones
+			every_owned_leader = {
+				limit = {
+					leader_class = scientist
+					is_councilor = no
+				}
+				
+				kill_leader = { show_notification = no }
+			}
+			
+			create_leader = {
+				class = scientist
+				name = random
+				species = owner_main_species
+				skill = 1
+				randomize_traits = no
+				traits = {
+					1 = leader_trait_archaeologist
+				}
+			}
+			
+			last_created_leader = {
+				save_event_target_as = archeo_chad
+			}
+			
+			# Assign Leader to Science ship
+			random_owned_fleet = {
+				limit = {
+					is_ship_class = shipclass_science_ship
+				}
+				assign_leader = event_target:archeo_chad
+			}
 		}
 	}
 }
@@ -1273,11 +1172,11 @@ event = {
 			event_target:orphan_matrix_precursor_homesystem = {
 				random_system_planet = {
 					limit = { is_planet_class = pc_relic }
-					set_planet_flag = orphan_matrix_relic_world@event_target:current_orphan_matrix
+					set_carrier_flag = orphan_matrix_relic_world@event_target:current_orphan_matrix
 				}
 				random_system_planet = {
-					limit = { has_planet_flag = ruined_furnace_planet }
-					set_planet_flag = ruined_furnace_planet@event_target:current_orphan_matrix
+					limit = { has_carrier_flag = ruined_furnace_planet }
+					set_carrier_flag = ruined_furnace_planet@event_target:current_orphan_matrix
 				}
 				every_system_planet = {
 					prevent_anomaly = yes
@@ -1389,14 +1288,14 @@ ship_event = {
 	trigger = {
 		owner = { has_origin = origin_orphan_matrix }
 		From = {
-			has_planet_flag = ruined_furnace_planet@root.owner
-			NOT = { has_planet_flag = already_scanned }
+			has_carrier_flag = ruined_furnace_planet@root.owner
+			NOT = { has_carrier_flag = already_scanned }
 		}
 		# From.solar_system = { has_star_flag = orphan_matrix_relic_system@root.owner }
 	}
 	
 	immediate = {
-		From = { set_planet_flag = already_scanned }
+		From = { set_carrier_flag = already_scanned }
 	}
 	
 	option = {
@@ -1471,7 +1370,7 @@ country_event = {
 		From = { is_megastructure_type = orbital_arc_furnace_restored }
 		FromFrom = {
 			any_system_planet = {
-				has_planet_flag = ruined_furnace_planet@root
+				has_carrier_flag = ruined_furnace_planet@root
 			}
 		}
 	}
@@ -1479,8 +1378,8 @@ country_event = {
 	immediate = {
 		FromFrom = {
 			random_system_planet = {
-				limit = { has_planet_flag = ruined_furnace_planet@root }
-				remove_planet_flag = ruined_furnace_planet@root
+				limit = { has_carrier_flag = ruined_furnace_planet@root }
+				remove_carrier_flag = ruined_furnace_planet@root
 			}
 			every_ambient_object = {
 				destroy_ambient_object = this
@@ -1535,7 +1434,7 @@ ship_event = {
 	
 	trigger = {
 		from = {
-			has_planet_flag = orphan_matrix_relic_world@ROOT.owner
+			has_carrier_flag = orphan_matrix_relic_world@ROOT.owner
 		}
 		owner = {
 			is_machine_empire = yes
@@ -1545,7 +1444,7 @@ ship_event = {
 	
 	immediate = {
 		from = {
-			remove_planet_flag = orphan_matrix_relic_planet@ROOT.owner
+			remove_carrier_flag = orphan_matrix_relic_planet@ROOT.owner
 		}
 	}
 	
@@ -1570,7 +1469,7 @@ country_event = {
 	
 	immediate = {
 		random_planet_within_border = {
-			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			limit = { has_carrier_flag = orphan_matrix_relic_world@root }
 			save_event_target_as = orphan_matrix_relic_world@root
 		}
 		event_target:orphan_matrix_relic_world@root = {
@@ -1603,7 +1502,7 @@ country_event = {
 	
 	immediate = {
 		random_planet_within_border = {
-			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			limit = { has_carrier_flag = orphan_matrix_relic_world@root }
 			save_event_target_as = orphan_matrix_relic_world@root
 		}
 		event_target:orphan_matrix_relic_world@root = {
@@ -1641,7 +1540,7 @@ country_event = {
 	
 	immediate = {
 		random_planet_within_border = {
-			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			limit = { has_carrier_flag = orphan_matrix_relic_world@root }
 			save_event_target_as = orphan_matrix_relic_world@root
 		}
 		event_target:orphan_matrix_relic_world@root = {
@@ -1670,7 +1569,7 @@ country_event = {
 	
 	immediate = {
 		random_planet_within_border = {
-			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			limit = { has_carrier_flag = orphan_matrix_relic_world@root }
 			save_event_target_as = orphan_matrix_relic_world@root
 		}
 		event_target:orphan_matrix_relic_world@root = {
@@ -1699,7 +1598,7 @@ country_event = {
 	
 	immediate = {
 		random_planet_within_border = {
-			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			limit = { has_carrier_flag = orphan_matrix_relic_world@root }
 			save_event_target_as = orphan_matrix_relic_world@root
 		}
 		event_target:orphan_matrix_relic_world@root = {
@@ -1728,7 +1627,7 @@ country_event = {
 	
 	immediate = {
 		random_planet_within_border = {
-			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			limit = { has_carrier_flag = orphan_matrix_relic_world@root }
 			save_event_target_as = orphan_matrix_relic_world@root
 		}
 		event_target:orphan_matrix_relic_world@root = {
@@ -3478,7 +3377,7 @@ country_event = {
 		# Effects before choice
 		
 		random_planet_within_border = {
-			limit = { has_planet_flag = orphan_matrix_relic_world@root }
+			limit = { has_carrier_flag = orphan_matrix_relic_world@root }
 			save_event_target_as = orphan_matrix_relic_world@root
 		}
 		event_target:orphan_matrix_relic_world@root = {
@@ -3937,7 +3836,7 @@ country_event = {
 			
 			# Preparing the variable for the Ruler
 			set_variable = {
-				which = orphaned_matrix_chroniclers
+				which = orphan_matrix_chroniclers
 				value = 0
 			}
 		}
@@ -4011,9 +3910,7 @@ country_event = {
 
 	is_triggered_only = yes
 	
-	immediate = {
-		
-	}
+	immediate = {}
 	
 	option = {
 		trigger = {
@@ -4097,7 +3994,7 @@ country_event = {
 		
 		hidden_effect = {
 			random_planet_within_border = {
-				limit = { has_planet_flag = orphan_matrix_relic_world@root }
+				limit = { has_carrier_flag = orphan_matrix_relic_world@root }
 				save_event_target_as = orphan_matrix_relic_world@root
 			}
 		}
@@ -4271,7 +4168,7 @@ event = {
 				any_planet_within_border = {
 					has_deposit = d_ancient_cryo_chamber
 					exists = owner
-					has_planet_flag = orphan_matrix_relic_world@owner
+					has_carrier_flag = orphan_matrix_relic_world@owner
 				}
 			}
 			
@@ -4296,7 +4193,7 @@ country_event = {
 	immediate = {
 		random_planet_within_border = {
 			limit = {
-				has_planet_flag = orphan_matrix_relic_world@root
+				has_carrier_flag = orphan_matrix_relic_world@root
 			}
 			save_event_target_as = orphan_matrix_relic_world@root
 		}
@@ -4331,7 +4228,7 @@ country_event = {
 	immediate = {
 		random_planet_within_border = {
 			limit = {
-				has_planet_flag = orphan_matrix_relic_world@root
+				has_carrier_flag = orphan_matrix_relic_world@root
 			}
 			save_event_target_as = orphan_matrix_relic_world@root
 		}
@@ -4416,9 +4313,20 @@ country_event = {
 			remove_country_flag = cryo_vats_project_ongoing
 			set_country_flag = cryo_vats_project_done
 			
-			event_target:current_orphan_matrix_relic_world = {
-				create_pop_group = {
-					species = event_target:designer_species
+			hidden_effect = {
+				while = {
+					count = 20
+					create_pop_group = {
+						species = event_target:designer_species
+						ethos = {
+							ethic = ethic_fanatic_materialist
+							ethic = ethic_egalitarian
+						}
+					}
+					
+					event_target:current_orphan_matrix_relic_world = {
+						check_planet_employment = yes
+					}
 				}
 			}
 			
@@ -4442,9 +4350,20 @@ country_event = {
 			remove_country_flag = cryo_vats_project_ongoing
 			set_country_flag = cryo_vats_project_done
 			
-			event_target:current_orphan_matrix_relic_world = {
-				create_pop_group = {
-					species = event_target:designer_species
+			hidden_effect = {
+				while = {
+					count = 20
+					create_pop_group = {
+						species = event_target:designer_species
+						ethos = {
+							ethic = ethic_fanatic_materialist
+							ethic = ethic_egalitarian
+						}
+					}
+					
+					event_target:current_orphan_matrix_relic_world = {
+						check_planet_employment = yes
+					}
 				}
 			}
 			
@@ -4502,7 +4421,7 @@ event = {
 					is_planet_class = pc_city
 					NOT = { has_deposit = d_great_sanctuary }
 					exists = owner
-					has_planet_flag = orphan_matrix_relic_world@owner
+					has_carrier_flag = orphan_matrix_relic_world@owner
 				}
 			}
 			
@@ -4511,7 +4430,7 @@ event = {
 					is_planet_class = pc_city
 					NOT = { has_deposit = d_great_sanctuary }
 					exists = owner
-					has_planet_flag = orphan_matrix_relic_world@owner
+					has_carrier_flag = orphan_matrix_relic_world@owner
 				}
 				save_event_target_as = orphan_matrix_relic_world@root
 			}
@@ -4545,7 +4464,7 @@ country_event = {
 				is_planet_class = pc_city
 				NOT = { has_deposit = d_great_sanctuary }
 				exists = owner
-				has_planet_flag = orphan_matrix_relic_world@owner
+				has_carrier_flag = orphan_matrix_relic_world@owner
 			}
 			
 			save_event_target_as = orphan_matrix_relic_world@root
@@ -4650,8 +4569,8 @@ event = {
 					NOT = { has_modifier = pm_shield_assimilator }
 					has_modifier = irradiated_relic
 					exists = owner
-					has_planet_flag = orphan_matrix_relic_world@owner
-					NOT = { has_planet_flag = orphan_matrix_assimilator_project_presented }
+					has_carrier_flag = orphan_matrix_relic_world@owner
+					NOT = { has_carrier_flag = orphan_matrix_assimilator_project_presented }
 				}
 			}
 			
@@ -4661,12 +4580,12 @@ event = {
 					NOT = { has_modifier = pm_shield_assimilator }
 					has_modifier = irradiated_relic
 					exists = owner
-					has_planet_flag = orphan_matrix_relic_world@owner
-					NOT = { has_planet_flag = orphan_matrix_assimilator_project_presented }
+					has_carrier_flag = orphan_matrix_relic_world@owner
+					NOT = { has_carrier_flag = orphan_matrix_assimilator_project_presented }
 				}
 				
 				save_event_target_as = orphan_matrix_relic_world@owner
-				set_planet_flag = orphan_matrix_assimilator_project_presented
+				set_carrier_flag = orphan_matrix_assimilator_project_presented
 			}
 			event_target:orphan_matrix_relic_world@owner = {
 				save_event_target_as = current_orphan_matrix_relic_world
@@ -4704,8 +4623,8 @@ planet_event = {
 		custom_tooltip = orphan_matrix_events.108.option.tooltip
 		
 		hidden_effect = {
-			remove_planet_flag = orphan_matrix_assimilator_project_presented
-			set_planet_flag = orphan_matrix_assimilator_project_accepted
+			remove_carrier_flag = orphan_matrix_assimilator_project_presented
+			set_carrier_flag = orphan_matrix_assimilator_project_accepted
 		}
 	}
 }
@@ -4722,7 +4641,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		remove_planet_flag = orphan_matrix_assimilator_project_accepted
+		remove_carrier_flag = orphan_matrix_assimilator_project_accepted
 	}
 	
 	option = {
@@ -4759,7 +4678,7 @@ event = {
 					is_planet_class = pc_relic
 					NOT = { has_deposit = d_designers_memorial }
 					exists = owner
-					has_planet_flag = orphan_matrix_relic_world@owner
+					has_carrier_flag = orphan_matrix_relic_world@owner
 				}
 			}
 			
@@ -4768,7 +4687,7 @@ event = {
 					is_planet_class = pc_relic
 					NOT = { has_deposit = d_designers_memorial }
 					exists = owner
-					has_planet_flag = orphan_matrix_relic_world@owner
+					has_carrier_flag = orphan_matrix_relic_world@owner
 				}
 				
 				save_event_target_as = orphan_matrix_relic_world@owner
@@ -4806,7 +4725,7 @@ planet_event = {
 		custom_tooltip = orphan_matrix_events.111.option.tooltip
 		
 		hidden_effect = {
-			set_planet_flag = can_build_memorial
+			set_carrier_flag = can_build_memorial
 		}
 	}
 }
@@ -4822,7 +4741,9 @@ planet_event = {
 
 	is_triggered_only = yes
 	
-	immediate = {}
+	immediate = {
+		planet_event = { id = orphan_matrix_events.143 days = 360 random = 360 }
+	}
 	
 	option = {
 		trigger = {
@@ -4926,8 +4847,6 @@ event = {
 					has_trait = trait_cybernetic
 				}
 				
-				log = "Target"
-				
 				set_pop_group_flag = assimilated_by@PREV
 				
 				export_trigger_value_to_variable = {
@@ -4939,6 +4858,17 @@ event = {
 					change_variable = {
 						which = orphaned_matrix_assimilated_pops
 						value = PREV.pop_amount_for_this_group
+					}
+					
+					# Get a % value to display on the trait
+					set_variable = {
+						which = orphaned_matrix_assimilated_pops_percent_value
+						value = orphaned_matrix_assimilated_pops
+					}
+					
+					divide_variable = {
+						which = orphaned_matrix_assimilated_pops_percent_value
+						value = 1000
 					}
 				}
 			}
@@ -4988,7 +4918,8 @@ country_event = {
 
 # Memorialist Path
 # Count dead countries
-# This will enhance complex drones output of the orphaned matrix
+# This = destroyed country
+# From = optional, destroyer (country)
 country_event = {
 	id = orphan_matrix_events.140
 	hide_window = yes
@@ -5008,7 +4939,6 @@ country_event = {
 				limit = {
 					has_origin = origin_orphan_matrix
 					has_country_flag = orphan_matrix_chroniclers
-					has_valid_civic = civic_machine_memorialist
 					has_communications = root
 					NOT = { is_same_value = root }
 					ROOT = {
@@ -5021,26 +4951,26 @@ country_event = {
 				if = {
 					limit = { root = { is_country_type = awakened_fallen_empire } }
 					root = {
-						set_variable = {
+						change_variable = {
 							which = reward
-							value = 3
+							value = 5
 						}
 					}
 				}
 				else_if = {
 					limit = { root = { is_country_type = fallen_empire } }
 					root = {
-						set_variable = {
+						change_variable = {
 							which = reward
-							value = 1.5
+							value = 2
 						}
 					}
 				}
 				else = {
 					root = {
-						set_variable = {
+						change_variable = {
 							which = reward
-							value = 1
+							value = 0.1
 						}
 					}
 				}
@@ -5060,6 +4990,44 @@ country_event = {
 						which = orphaned_matrix_dead_empires
 						value = root.reward
 					}
+				}
+				
+				# Rounding up to 10 top
+				if = {
+					limit = {
+						check_variable = {
+							which = orphaned_matrix_dead_empires
+							value >= 10
+						}
+					}
+					
+					set_variable = {
+						which = orphaned_matrix_dead_empires
+						value = 10
+					}
+				}
+				
+				# Memorialist?
+				if = {
+					limit = {
+						NOT = { has_valid_civic = civic_machine_memorialist }
+					}
+					
+					set_variable = {
+						which = orphaned_matrix_dead_empires
+						value = 0
+					}
+				}
+				
+				# Printing....
+				set_variable = {
+					which = orphaned_matrix_dead_empires_print
+					value = orphaned_matrix_dead_empires
+				}
+				
+				multiply_variable = {
+					which = orphaned_matrix_dead_empires_print
+					value = 10
 				}
 				
 				if = {
@@ -5147,14 +5115,162 @@ event = {
 						variable = orphan_matrix_chroniclers_planet
 					}
 					
-					owner = {						
+					owner = {
 						change_variable = {
 							which = orphan_matrix_chroniclers
 							value = PREV.orphan_matrix_chroniclers_planet
 						}
 					}
 				}
+				
+				# We setup the % value to display in the trait here
+				set_variable = {
+					which = orphan_matrix_chroniclers_bonus_percent
+					value = orphan_matrix_chroniclers
+				}
+				
+				divide_variable = {
+					which = orphan_matrix_chroniclers_bonus_percent
+					value = 100
+				}
+				
+				set_variable = {
+					which = orphan_matrix_chroniclers_malus_percent
+					value = orphan_matrix_chroniclers
+				}
+				
+				divide_variable = {
+					which = orphan_matrix_chroniclers_malus_percent
+					value = 200
+				}
 			}
 		}
+	}
+}
+
+# We ask Memorialists whether they'd like to merge the artifacts on their Relic World
+planet_event = {
+	id = orphan_matrix_events.143
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				has_carrier_flag = orphan_matrix_relic_world@owner
+				exists = owner
+				owner = {
+					is_machine_empire = yes
+					has_origin = origin_orphan_matrix
+					has_country_flag = orphan_matrix_chroniclers
+					has_valid_civic = civic_machine_memorialist
+					NOT = { has_country_flag = orphan_matrix_chroniclers_project_presented_2 }
+					any_planet_within_border = {
+						has_deposit = d_introspective_lab
+					}
+				}
+			}
+			
+			owner = {
+				set_country_flag = orphan_matrix_chroniclers_project_presented_2
+			}
+			
+			planet_event = { id = orphan_matrix_events.144 }
+		}
+		
+		else = {
+			# Try again later, unless no empire has the origin.. This is to prevent memory leaks
+			if = {
+				limit = {
+					any_country = {
+						has_origin = origin_orphan_matrix
+					}
+				}
+				
+				planet_event = { id = orphan_matrix_events.143 days = 360 }
+			}
+		}
+	}
+}
+
+# Proper event to put everything on the Relic World
+planet_event = {
+	id = orphan_matrix_events.144
+	title = orphan_matrix_events.144.name
+	desc = orphan_matrix_events.144.desc
+	picture = GFX_evt_relic_world_building
+	show_sound = event_death_cult
+	is_triggered_only = yes
+	location = root
+	
+	immediate = {}
+	
+	# Accept
+	option = {
+		name = orphan_matrix_events.144.accept
+		
+		allow = {
+			has_carrier_flag = orphan_matrix_relic_world@owner
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_origin = origin_orphan_matrix
+				has_country_flag = orphan_matrix_chroniclers
+				has_valid_civic = civic_machine_memorialist
+				any_planet_within_border = {
+					has_deposit = d_introspective_lab
+				}
+			}
+		}
+		
+		owner = {
+			every_planet_within_border = {
+				limit = {
+					has_deposit = d_introspective_lab
+				}
+				
+				orphan_matrix_destroy_introspective_lab = yes
+			}
+		}
+		
+		add_deposit = d_introspective_lab
+		set_carrier_flag = d_introspective_lab
+		
+		add_zone = {
+			district = district_nexus
+			zone = zone_introspective_laboratory
+			zone_slot = 1
+			replace = yes
+		}
+		
+		owner = {
+			country_event = { id = orphan_matrix_events.145 days = 5 }
+		}
+	}
+	
+	# Deny
+	option = {
+		name = orphan_matrix_events.144.deny
+		
+		hidden_effect = {
+			owner = { remove_country_flag = orphan_matrix_chroniclers_project_presented_2 }
+		}
+	}
+}
+
+# Done
+country_event = {
+	id = orphan_matrix_events.145
+	title = orphan_matrix_events.145.name
+	desc = orphan_matrix_events.145.desc
+	picture = GFX_evt_astral_rift_backrooms
+	show_sound = event_dyson_sphere_build_complete
+	is_triggered_only = yes
+	location = from
+	
+	immediate = {}
+	
+	option = {
+		name = EXCELLENT
 	}
 }

@@ -114,7 +114,7 @@ leader_trait_orphan_matrix_great_assimilator = {
 		planet_pop_assembly_mult = 0.2
 		BIOLOGICAL_species_trait_points_add = 1
 		modify_species_cost_mult = -0.2
-		empire_size_penalty_mult = -0.3
+		empire_size_penalty_mult = -0.15
 	}
 
 	leader_class = all
@@ -136,15 +136,27 @@ leader_trait_orphan_matrix_main_chronicler = {
 	triggered_councilor_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_valid_civic = civic_machine_memorialist }
 		}
-		planet_jobs_unity_produces_mult = @memorialists_bonus_unity
-		planet_jobs_physics_research_produces_mult = @memorialists_bonus_research
-		planet_jobs_society_research_produces_mult = @memorialists_bonus_research
-		planet_jobs_engineering_research_produces_mult = @memorialists_bonus_research
+		researcher_jobs_bonus_workforce_mult = 0.1
+		bureaucrat_jobs_bonus_workforce_mult = 0.1
 		mult = owner.value:orphan_matrix_memorialists_number_modifier
 	}
 	
-	custom_tooltip_with_modifiers = leader_trait_orphan_matrix_main_chronicler_custom_tooltip_modifier
+	triggered_councilor_modifier = {
+		potential = {
+			always = no
+			# exists = owner
+			# owner = { has_valid_civic = civic_machine_memorialist }
+		}
+		planet_physicists_energy_upkeep_add = 0.05
+		planet_biologists_energy_upkeep_add = 0.05
+		planet_engineers_energy_upkeep_add = 0.05
+		planet_bureaucrats_energy_upkeep_add = 0.05
+		mult = owner.value:orphan_matrix_memorialists_number_modifier
+	}
+	
+	custom_tooltip = leader_trait_orphan_matrix_main_chronicler_custom_tooltip_modifier
 
 	leader_class = all
 
@@ -169,7 +181,7 @@ leader_trait_orphan_matrix_skynet = {
 				is_catalytic_empire = no
 			}
 		}
-		planet_jobs_minerals_produces_mult = 0.3
+		miner_jobs_bonus_workforce_mult = 0.3
 	}
 	
 	triggered_councilor_modifier = {
@@ -179,12 +191,12 @@ leader_trait_orphan_matrix_skynet = {
 				is_catalytic_empire = yes
 			}
 		}
-		planet_jobs_minerals_produces_mult = 0.2
-		planet_jobs_food_produces_mult = 0.1
+		miner_jobs_bonus_workforce_mult = 0.2
+		farmer_jobs_bonus_workforce_mult = 0.1
 	}
 	
 	councilor_modifier = {
-		planet_jobs_alloys_produces_mult = 0.1
+		foundry_jobs_bonus_workforce_mult = 0.1
 		country_naval_cap_mult = 0.2
 		starbase_shipyard_build_speed_mult = 0.4
 	}
@@ -245,7 +257,7 @@ leader_trait_orphaned_matrix_assimilating_protocols = {
 		mult = owner.value:orphaned_matrix_assimilator_matrix_energy_output_modifier
 	}
 	
-	custom_tooltip_with_modifiers = leader_trait_orphaned_matrix_assimilating_protocols_custom_tooltip_modifier
+	custom_tooltip = leader_trait_orphaned_matrix_assimilating_protocols_custom_tooltip_modifier
 
 	leader_class = all
 
@@ -268,11 +280,12 @@ leader_trait_orphaned_matrix_galactic_chronicler = {
 			exists = owner
 			owner = { has_valid_civic = civic_machine_memorialist }
 		}
-		planet_jobs_complex_drone_produces_mult = 0.05
+		all_technology_research_speed = 0.1
+		country_unity_produces_mult = 0.1
 		mult = owner.value:orphaned_matrix_dead_empires_output_modifier
 	}
 	
-	custom_tooltip_with_modifiers = leader_trait_orphaned_matrix_galactic_chronicler_custom_tooltip_modifier
+	custom_tooltip = leader_trait_orphaned_matrix_galactic_chronicler_custom_tooltip_modifier
 	
 	leader_class = all
 	

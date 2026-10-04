@@ -48,12 +48,14 @@ origin_orphan_matrix = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_orphan_matrix.dds"
 	picture = origin_orphan_matrix
-
+	
 	playable = {
+		# host_has_dlc = "Synthetic Dawn Story Pack" -> DEPRECATED since SD has been merged to base game
 		has_ancrel = yes
 	}
 
 	possible = {
+		is_nomadic = no
 		authority = { value = auth_machine_intelligence }
 		civics = {
 			NOR = {
@@ -65,7 +67,11 @@ origin_orphan_matrix = {
 			}
 		}
 	}
-
+	
+	modifier = {
+		ship_archaeological_site_clues_add = 1
+	}
+	
 	random_weight = {
 		base = 100
 	}
