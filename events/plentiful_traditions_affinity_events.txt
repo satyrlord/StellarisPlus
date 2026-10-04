@@ -13,20 +13,25 @@ event = {
 			if = {
 				limit = {
 					is_at_war = no
-					NOT = {
-						has_modifier = modifier_plentiful_traditions_empathetic
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = modifier_plentiful_traditions_empathetic
+						}
 					}
 				}
 				add_modifier = {
 					modifier = "modifier_plentiful_traditions_empathetic"
 				}
-			}
-			if = {
-				limit = {
-					is_at_war = yes
-					has_modifier = modifier_plentiful_traditions_empathetic
+				else = {
+					if = {
+						limit = {
+							has_modifier = modifier_plentiful_traditions_empathetic
+						}
+					}
+					remove_modifier = "modifier_plentiful_traditions_empathetic"
 				}
-				remove_modifier = "modifier_plentiful_traditions_empathetic"
 			}
 		}
 	}
@@ -42,7 +47,7 @@ event = {
 			limit = {
 				has_tradition = tr_plentiful_affinity_finish
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				if = {
 					limit = { num_species < 3 }
 					if = {
@@ -340,8 +345,8 @@ event = {
 						remove_modifier = "modifier_plentiful_traditions_united5"
 					}
 					if = {
-						limit = { has_modifier = modifier_plentiful_traditions_united6 }
-						remove_modifier = "modifier_plentiful_traditions_united6"
+						limit = { has_modifier = modifier_plentiful_traditions_united7 }
+						remove_modifier = "modifier_plentiful_traditions_united7"
 					}
 					if = {
 						limit = { has_modifier = modifier_plentiful_traditions_united8 }
@@ -554,20 +559,25 @@ event = {
 			if = {
 				limit = {
 					is_at_war = no
-					NOT = {
-						has_modifier = modifier_plentiful_traditions_pathfinder
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = modifier_plentiful_traditions_pathfinder
+						}
 					}
 				}
 				add_modifier = {
 					modifier = "modifier_plentiful_traditions_pathfinder"
 				}
-			}
-			if = {
-				limit = {
-					is_at_war = yes
-					has_modifier = modifier_plentiful_traditions_pathfinder
+				else = {
+					if = {
+						limit = {
+							has_modifier = modifier_plentiful_traditions_pathfinder
+						}
+					}
+					remove_modifier = "modifier_plentiful_traditions_pathfinder"
 				}
-				remove_modifier = "modifier_plentiful_traditions_pathfinder"
 			}
 		}
 	}

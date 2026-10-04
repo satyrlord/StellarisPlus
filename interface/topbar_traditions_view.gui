@@ -1,6 +1,5 @@
 @entries_row1_y = 10
 @entries_row2_y = 60
-@selection_entries_row1_y = 63
 @entries_column1 = 11
 @entries_column2 = 325
 @entries_column3 = 639
@@ -20,6 +19,12 @@
 @entries_row13_y = 2117
 @entries_row14_y = 2304
 @entries_row15_y = 2491
+
+@entries_column1 = 5
+@entries_column2 = 319
+@entries_column3 = 634
+@entries_column4 = 948
+@entries_column5 = 1262
 
 @entry_h = 260
 @entry_h_narrow = 180
@@ -85,7 +90,6 @@ guiTypes = {
 	positionType = { name = "ap_38"	position = { x = 1015 y = 101 } }
 	positionType = { name = "ap_39"	position = { x = 1073 y = 101 } }
 	positionType = { name = "ap_40"	position = { x = 1131 y = 101 } }
-	
 	
 	positionType = { name = "ap_41"	position = { x = 0 y = 150 } }
 	positionType = { name = "ap_42"	position = { x = 58 y = 150 } }
@@ -265,7 +269,7 @@ guiTypes = {
 				min_width = 2560
 				position = { x = 25 y = 5 }
 			}
-			maxWidth = 200
+			maxWidth = 300
 			maxHeight = 50
 			fixedSize = yes
 			format = left
@@ -313,7 +317,7 @@ guiTypes = {
 		buttonType = {
 			name = "tab_crisis"
 			quadTextureSprite = "GFX_tab_2_inactive"
-			position = { x = 109 y = @tabHeight }
+			position = { x = 238 y = @tabHeight }
 			orientation = lower_left
 			font = "cg_16b"
 			buttonText = "CRISIS_TAB"
@@ -325,7 +329,7 @@ guiTypes = {
 		buttonType = {
 			name = "tab_crisis_active"
 			quadTextureSprite = "GFX_tab_2_active"
-			position = { x = 109 y = @tabHeight }
+			position = { x = 238 y = @tabHeight }
 			orientation = lower_left
 			font = "cg_16b"
 			buttonText = "CRISIS_TAB"
@@ -439,7 +443,7 @@ guiTypes = {
 
 			}
 			containerWindowType = {
-				name = "ascension_perks_sidebar"
+				name = "ascension_perks"
 				size = { width = 275 height = @ascension_perks_height }
 				position = { x = -10 y = 35 }
 				orientation = upper_right
@@ -485,7 +489,8 @@ guiTypes = {
 
 				background = {
 					name = "bg"
-					quadTextureSprite = "GFX_nemesis_path_bg"
+					spriteType = "GFX_nemesis_path_bg"
+					alwaysTransparent = yes
 				}
 
 				containerWindowType = {
@@ -1645,7 +1650,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "tradition_category_gridbox_container"
-			position = { x = 10 y = @selection_entries_row1_y }
+			position = { x = 10 y = @entries_row1_y }
 			size = { width = 1262 height = 606 }
 			dynamic_extra_height = @dynamic_extra
 			dynamic_extra_height_max = @dynamic_extra_max
@@ -1696,7 +1701,7 @@ guiTypes = {
 		background = {
 			name = "level_entry_bg"
 			quadTextureSprite = "GFX_nemesis_path_level_boxes"
-			frame = 2
+			frame = 1
 		}
 
 		instantTextBoxType = {

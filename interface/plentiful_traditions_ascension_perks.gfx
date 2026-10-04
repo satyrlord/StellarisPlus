@@ -254,4 +254,12 @@ spriteTypes = {
 	}
 }
 
+spriteTypes = {
+	spriteType = {
+		name = "GFX_ap_plentiful_traditions_blood_and_iron"
+		texturefile = "gfx/interface/icons/ascension_perks/ap_plentiful_traditions_blood_and_iron.dds"
+		alwaystransparent = yes
+	}
+}
+
 

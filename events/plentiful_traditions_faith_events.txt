@@ -1,13 +1,22 @@
 namespace = plentiful_traditions_faith
 
 event = {
-	# Fixed by uberwaffe
 	id = plentiful_traditions_faith.1
 	hide_window = yes
 	is_triggered_only = yes
 	
 	trigger = {
-		is_scope_type = planet
+		owner = {
+			has_tradition = tr_plentiful_faith_4
+		}
+		NOR = {
+			has_planet_flag = plentiful_faith_1
+			has_carrier_flag = plentiful_faith_1
+		}
+		OR = {
+			has_building = building_holotemple
+			has_building = building_system_conflux
+		}
 	}
 	
 	immediate = {
@@ -31,10 +40,12 @@ event = {
 			}
 			set_planet_flag = plentiful_faith_1
 		}
+		set_planet_flag = plentiful_faith_1
+		set_carrier_flag = plentiful_faith_1
 	}
 }
 
-planet_event = {
+event = {
 	id = plentiful_traditions_faith.2
 	hide_window = yes
 	is_triggered_only = yes

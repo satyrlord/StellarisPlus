@@ -20,11 +20,19 @@
 # 		my_unique_target_modifier = 1
 # 	}
 # 	loyalty_change = value					# How much the subject's loyalty will change when a new agreement with this term starts
+# 	ai_acceptance = {
+#		overlord = 1						# Willingness of AI overlord to accept this term
+#		subject = 1							# Willingness of AI subject to accept this term
+#	}
 # 	triggered_loyalty_change = {			# How much the subject's loyalty will additionally change when a new agreement with this term starts, if "trigger" is true
 # 		trigger = {
 # 			agreement_scope_trigger
 # 		}
 # 		loyalty_change = value
+#		ai_acceptance = {
+#			overlord = 1
+#			subject = 1
+#		}
 # 	}
 # 	extra_term_text_subject = <LOC_KEY> 	# What should be shown in the "extra terms" panel for the subject if this term value is active (default is to not show it)
 # 											# This loc key can use $SUBJECT$ and $OVERLORD$ to show the name of the relevant empire, and $MODIFIER$ to show the modifiers applying to the subject
@@ -37,12 +45,10 @@
 #	resource = <resource> (food/alloys/...)
 # }
 
-
-
 subject_holdings_limit_0 = {
 	term = subject_holdings_limit
 	target_modifier = {
-		planet_max_subject_holding_buildings_add = 0
+		subject_holding_target_max_buildings_add = 0
 	}
 	potential = {
 		NOT = { 
@@ -54,7 +60,7 @@ subject_holdings_limit_0 = {
 subject_holdings_limit_0_plentiful_traditions = {
 	term = subject_holdings_limit
 	target_modifier = {
-		planet_max_subject_holding_buildings_add = 1
+		subject_holding_target_max_buildings_add = 0
 	}
 	potential = {
 		owner = { has_tradition = tr_plentiful_dedication_4 }
@@ -64,15 +70,25 @@ subject_holdings_limit_0_plentiful_traditions = {
 subject_holdings_limit_1 = {
 	term = subject_holdings_limit
 	loyalty_change = -5
+	ai_acceptance = {
+		overlord = 30
+		subject = -25
+	}
 	target_modifier = {
 		monthly_loyalty = -0.4
-		planet_max_subject_holding_buildings_add = 1
+		subject_holding_target_max_buildings_add = 1
 	}
 	possible = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_tributary
 			NOT = {
 				agreement_preset = preset_tributary
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_luminarium
+			NOT = {
+				agreement_preset = preset_luminarium
 			}
 		}
 	}
@@ -86,15 +102,25 @@ subject_holdings_limit_1 = {
 subject_holdings_limit_1_plentiful_traditions = {
 	term = subject_holdings_limit
 	loyalty_change = -5
+	ai_acceptance = {
+		overlord = 30
+		subject = -25
+	}
 	target_modifier = {
 		monthly_loyalty = -0.4
-		planet_max_subject_holding_buildings_add = 2
+		subject_holding_target_max_buildings_add = 1
 	}
 	possible = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_tributary
 			NOT = {
 				agreement_preset = preset_tributary
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_luminarium
+			NOT = {
+				agreement_preset = preset_luminarium
 			}
 		}
 	}
@@ -106,15 +132,25 @@ subject_holdings_limit_1_plentiful_traditions = {
 subject_holdings_limit_2 = {
 	term = subject_holdings_limit
 	loyalty_change = -15
+	ai_acceptance = {
+		overlord = 90
+		subject = -75
+	}
 	target_modifier = {
 		monthly_loyalty = -1
-		planet_max_subject_holding_buildings_add = 2
+		subject_holding_target_max_buildings_add = 2
 	}
 	possible = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_tributary
 			NOT = {
 				agreement_preset = preset_tributary
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_luminarium
+			NOT = {
+				agreement_preset = preset_luminarium
 			}
 		}
 	}
@@ -129,15 +165,25 @@ subject_holdings_limit_2 = {
 subject_holdings_limit_2_plentiful_traditions = {
 	term = subject_holdings_limit
 	loyalty_change = -15
+	ai_acceptance = {
+		overlord = 90
+		subject = -75
+	}
 	target_modifier = {
 		monthly_loyalty = -1
-		planet_max_subject_holding_buildings_add = 3
+		subject_holding_target_max_buildings_add = 2
 	}
 	possible = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_tributary
 			NOT = {
 				agreement_preset = preset_tributary
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_luminarium
+			NOT = {
+				agreement_preset = preset_luminarium
 			}
 		}
 	}
@@ -150,9 +196,13 @@ subject_holdings_limit_2_plentiful_traditions = {
 subject_holdings_limit_3 = {
 	term = subject_holdings_limit
 	loyalty_change = -30
+	ai_acceptance = {
+		overlord = 180
+		subject = -150
+	}
 	target_modifier = {
 		monthly_loyalty = -2
-		planet_max_subject_holding_buildings_add = 3
+		subject_holding_target_max_buildings_add = 3
 	}
 	possible = {
 		custom_tooltip = {
@@ -164,8 +214,14 @@ subject_holdings_limit_3 = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_galcom_resolution
 			OR = {
-				NOT = { owner = { is_galactic_community_member = yes } }
+				owner = { is_galactic_community_member = no }
 				NOT = { is_active_resolution = resolution_bureaucraticsurveillance_personal_oversight }
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_luminarium
+			NOT = {
+				agreement_preset = preset_luminarium
 			}
 		}
 	}
@@ -180,9 +236,13 @@ subject_holdings_limit_3 = {
 subject_holdings_limit_3_plentiful_traditions = {
 	term = subject_holdings_limit
 	loyalty_change = -30
+	ai_acceptance = {
+		overlord = 180
+		subject = -150
+	}
 	target_modifier = {
 		monthly_loyalty = -2
-		planet_max_subject_holding_buildings_add = 4
+		subject_holding_target_max_buildings_add = 3
 	}
 	possible = {
 		custom_tooltip = {
@@ -194,8 +254,14 @@ subject_holdings_limit_3_plentiful_traditions = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_galcom_resolution
 			OR = {
-				NOT = { owner = { is_galactic_community_member = yes } }
+				owner = { is_galactic_community_member = no }
 				NOT = { is_active_resolution = resolution_bureaucraticsurveillance_personal_oversight }
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_luminarium
+			NOT = {
+				agreement_preset = preset_luminarium
 			}
 		}
 	}
@@ -208,9 +274,13 @@ subject_holdings_limit_3_plentiful_traditions = {
 subject_holdings_limit_4 = {
 	term = subject_holdings_limit
 	loyalty_change = -50
+	ai_acceptance = {
+		overlord = 300
+		subject = -250
+	}
 	target_modifier = {
 		monthly_loyalty = -4
-		planet_max_subject_holding_buildings_add = 4
+		subject_holding_target_max_buildings_add = 4
 	}
 	possible = {
 		custom_tooltip = {
@@ -222,8 +292,17 @@ subject_holdings_limit_4 = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_galcom_resolution
 			OR = {
-				NOT = { owner = { is_galactic_community_member = yes } }
-				NOT = { is_active_resolution = resolution_bureaucraticsurveillance_borderless_authority }
+				owner = { is_galactic_community_member = no }
+				NOR = {
+					is_active_resolution = resolution_bureaucraticsurveillance_borderless_authority
+					is_active_resolution = resolution_bureaucraticsurveillance_personal_oversight
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_luminarium
+			NOT = {
+				agreement_preset = preset_luminarium
 			}
 		}
 	}
@@ -238,9 +317,13 @@ subject_holdings_limit_4 = {
 subject_holdings_limit_4_plentiful_traditions = {
 	term = subject_holdings_limit
 	loyalty_change = -50
+	ai_acceptance = {
+		overlord = 300
+		subject = -250
+	}
 	target_modifier = {
 		monthly_loyalty = -4
-		planet_max_subject_holding_buildings_add = 5
+		subject_holding_target_max_buildings_add = 4
 	}
 	possible = {
 		custom_tooltip = {
@@ -252,8 +335,17 @@ subject_holdings_limit_4_plentiful_traditions = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_galcom_resolution
 			OR = {
-				NOT = { owner = { is_galactic_community_member = yes } }
-				NOT = { is_active_resolution = resolution_bureaucraticsurveillance_borderless_authority }
+				owner = { is_galactic_community_member = no }
+				NOR = {
+					is_active_resolution = resolution_bureaucraticsurveillance_borderless_authority
+					is_active_resolution = resolution_bureaucraticsurveillance_personal_oversight
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_luminarium
+			NOT = {
+				agreement_preset = preset_luminarium
 			}
 		}
 	}
@@ -262,4 +354,3 @@ subject_holdings_limit_4_plentiful_traditions = {
 		owner = { has_tradition = tr_plentiful_dedication_4 }
 	}
 }
-

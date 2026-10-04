@@ -23,6 +23,11 @@ orbital_fracking_cannon = {
 		}
 	}
 	
+	orbit_modifier = {
+		planet_jobs_minerals_produces_mult = 0.05
+		station_gatherers_minerals_produces_mult = 0.1
+	}
+	
 	system_modifier = {
 		planet_jobs_minerals_produces_mult = 0.05
 		station_gatherers_minerals_produces_mult = 0.1
@@ -56,6 +61,11 @@ orbital_trading_beacon = {
 #		}
 	}
 	
+	orbit_modifier = {
+		planet_jobs_energy_produces_mult = 0.05
+		station_gatherers_energy_produces_mult = 0.1
+	}
+	
 	system_modifier = {
 		planet_jobs_energy_produces_mult = 0.05
 		station_gatherers_energy_produces_mult = 0.1
@@ -85,6 +95,11 @@ orbital_fertilizer_array = {
 		upkeep = {
 			energy = 1.5
 		}
+	}
+	
+	orbit_modifier = {
+		planet_jobs_food_produces_mult = 0.05
+		station_gatherers_food_produces_mult = 0.1
 	}
 	
 	system_modifier = {
@@ -118,6 +133,11 @@ orbital_refinery_station = {
 			minerals = 5
 			energy = 5
 		}
+	}
+	
+	orbit_modifier = {
+		planet_jobs_alloys_produces_mult = 0.05
+		station_gatherers_alloys_produces_mult = 0.1
 	}
 	
 	system_modifier = {
@@ -154,6 +174,11 @@ orbital_craftwork_headquarters = {
 		}
 	}
 	
+	orbit_modifier = {
+		planet_jobs_consumer_goods_produces_mult = 0.05
+		station_gatherers_consumer_goods_produces_mult = 0.1
+	}
+	
 	system_modifier = {
 		planet_jobs_consumer_goods_produces_mult = 0.05
 		station_gatherers_consumer_goods_produces_mult = 0.1
@@ -185,6 +210,10 @@ orbital_cosmic_rays_shield = {
 			food = 5
 			energy = 5
 		}
+	}
+	
+	orbit_modifier = {
+		founder_species_growth_mult = 0.05
 	}
 	
 	system_modifier = {

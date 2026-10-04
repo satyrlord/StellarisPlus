@@ -35,6 +35,7 @@ district_hab_housing = {
 
 	convert_to = {
 		district_mindlink
+		district_ark_city
 	}
 
 	resources = {
@@ -72,6 +73,7 @@ district_hab_housing = {
 		modifier = {
 			job_production_overseer_add = 100
 		}
+		mult = owner.value:hab_void_dweller_jobs
 	}
 
 	inline_script = {
@@ -226,6 +228,7 @@ district_hab_energy = {
 	base_buildtime = @hab_time
 	is_uncapped = {	always = no }
 	overlay_icon = GFX_district_energy
+	shared_capacity_modifier = district_hab_energy
 
 	zone_slots = {
 		slot_habitat_energy
@@ -240,6 +243,7 @@ district_hab_energy = {
 	}
 
 	convert_to = {
+		district_ark_generator
 	}
 
 	planet_modifier = {
@@ -261,24 +265,13 @@ district_hab_energy = {
 		planet_housing_add = 300
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_tankbound_empire = yes }
-		}
-		modifier = {
-			job_technician_automated_workforce_mult = 1.0
-			job_production_overseer_add = 100
-		}
-	}
-
 	inline_script = {
 		script = jobs/habitat_technicians_add
 		AMOUNT = @habitat_rural_district_jobs
 	}
 
 	on_built = {
-		planet_event = {
+		carrier_event = {
 			id = megastructures.200		# Spawn an energy orbital
 		}
 	}
@@ -286,12 +279,22 @@ district_hab_energy = {
 	inline_script = {
 		script = districts/district_triggered_name_generator
 	}
+
+	prerequisites = {
+		tech_power_plant_1
+	}
+
+	show_tech_unlock_if = {
+		is_nomadic = no
+		is_wilderness_empire = no
+	}
 }
 
 district_hab_mining = {
 	base_buildtime = @hab_time
 	is_uncapped = {	always = no }
 	overlay_icon = GFX_district_minerals
+	shared_capacity_modifier = district_hab_mining
 
 	zone_slots = {
 		slot_habitat_minerals
@@ -299,6 +302,11 @@ district_hab_mining = {
 
 	show_on_uncolonized = {
 		uses_district_set = habitat
+	}
+
+	convert_to = {
+		district_ark_military
+		district_ark_forever_cruise
 	}
 
 	potential = {
@@ -320,24 +328,13 @@ district_hab_mining = {
 		planet_housing_add = 300
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_tankbound_empire = yes }
-		}
-		modifier = {
-			job_miner_automated_workforce_mult = 1.0
-			job_production_overseer_add = 100
-		}
-	}
-
 	inline_script = {
 		script = jobs/habitat_miners_add
 		AMOUNT = @habitat_rural_district_jobs
 	}
 
 	on_built = {
-		planet_event = {
+		carrier_event = {
 			id = megastructures.210		# Spawn a mining orbital
 		}
 	}
@@ -346,6 +343,14 @@ district_hab_mining = {
 		script = districts/district_triggered_name_mining
 	}
 
+	prerequisites = {
+		tech_mechanized_mining
+	}
+
+	show_tech_unlock_if = {
+		is_nomadic = no
+		is_wilderness_empire = no
+	}
 	
 #### plentiful traditions
 	triggered_planet_modifier = {
@@ -405,6 +410,7 @@ district_hab_science = {
 	base_buildtime = @hab_time
 	is_uncapped = {	always = no }
 	overlay_icon = GFX_district_research
+	shared_capacity_modifier = district_hab_science
 
 	zone_slots = {
 		slot_habitat_research
@@ -420,6 +426,11 @@ district_hab_science = {
 
 	prerequisites = {
 		tech_basic_science_lab_1
+	}
+
+	show_tech_unlock_if = {
+		is_nomadic = no
+		is_wilderness_empire = no
 	}
 
 	allow = {
@@ -455,7 +466,7 @@ district_hab_science = {
 	}
 
 	on_built = {
-		planet_event = {
+		carrier_event = {
 			id = megastructures.220		# Spawn a research orbital
 		}
 	}

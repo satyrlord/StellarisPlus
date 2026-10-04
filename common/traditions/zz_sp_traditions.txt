@@ -2846,6 +2846,7 @@ tr_plentiful_mysticism_adopt = {
 	modifier = {
 		species_leader_exp_gain = 0.2
 	}
+	name = tr_plentiful_mysticism_finish_machine
 	
 	tradition_swap = {
 		name = tr_plentiful_mysticism_adopt_machine

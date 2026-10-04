@@ -19,8 +19,46 @@ planet_event = {
 	}
 }
 
+carrier_event = {
+    id = plentiful_traditions_adaptive_foundry_pedict.101
+    
+    hide_window = yes
+    is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_cooldown"
+			days = 60
+		}
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_1"
+			days = -1
+		}
+#		remove_modifier = "modifier_plentiful_traditions_adaptive_foundry_0"
+	}
+}
+
 planet_event = {
     id = plentiful_traditions_adaptive_foundry_pedict.2
+    
+    hide_window = yes
+    is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_cooldown"
+			days = 60
+		}
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_2"
+			days = -1
+		}
+		remove_modifier = "modifier_plentiful_traditions_adaptive_foundry_1"
+	}
+}
+
+carrier_event = {
+    id = plentiful_traditions_adaptive_foundry_pedict.102
     
     hide_window = yes
     is_triggered_only = yes
@@ -57,8 +95,46 @@ planet_event = {
 	}
 }
 
+carrier_event = {
+    id = plentiful_traditions_adaptive_foundry_pedict.103
+    
+    hide_window = yes
+    is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_cooldown"
+			days = 60
+		}
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_3"
+			days = -1
+		}
+		remove_modifier = "modifier_plentiful_traditions_adaptive_foundry_2"
+	}
+}
+
 planet_event = {
     id = plentiful_traditions_adaptive_foundry_pedict.4
+    
+    hide_window = yes
+    is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_cooldown"
+			days = 60
+		}
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_4"
+			days = -1
+		}
+		remove_modifier = "modifier_plentiful_traditions_adaptive_foundry_3"
+	}
+}
+
+carrier_event = {
+    id = plentiful_traditions_adaptive_foundry_pedict.104
     
     hide_window = yes
     is_triggered_only = yes
@@ -95,8 +171,46 @@ planet_event = {
 	}
 }
 
+carrier_event = {
+    id = plentiful_traditions_adaptive_foundry_pedict.105
+    
+    hide_window = yes
+    is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_cooldown"
+			days = 60
+		}
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_5"
+			days = -1
+		}
+		remove_modifier = "modifier_plentiful_traditions_adaptive_foundry_4"
+	}
+}
+
 planet_event = {
     id = plentiful_traditions_adaptive_foundry_pedict.6
+    
+    hide_window = yes
+    is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_cooldown"
+			days = 60
+		}
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_6"
+			days = -1
+		}
+		remove_modifier = "modifier_plentiful_traditions_adaptive_foundry_5"
+	}
+}
+
+carrier_event = {
+    id = plentiful_traditions_adaptive_foundry_pedict.106
     
     hide_window = yes
     is_triggered_only = yes
@@ -133,8 +247,46 @@ planet_event = {
 	}
 }
 
+carrier_event = {
+    id = plentiful_traditions_adaptive_foundry_pedict.107
+    
+    hide_window = yes
+    is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_cooldown"
+			days = 60
+		}
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_7"
+			days = -1
+		}
+		remove_modifier = "modifier_plentiful_traditions_adaptive_foundry_6"
+	}
+}
+
 planet_event = {
     id = plentiful_traditions_adaptive_foundry_pedict.8
+    
+    hide_window = yes
+    is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_cooldown"
+			days = 60
+		}
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_8"
+			days = -1
+		}
+		remove_modifier = "modifier_plentiful_traditions_adaptive_foundry_7"
+	}
+}
+
+carrier_event = {
+    id = plentiful_traditions_adaptive_foundry_pedict.108
     
     hide_window = yes
     is_triggered_only = yes
@@ -171,8 +323,46 @@ planet_event = {
 	}
 }
 
+carrier_event = {
+    id = plentiful_traditions_adaptive_foundry_pedict.109
+    
+    hide_window = yes
+    is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_cooldown"
+			days = 60
+		}
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_9"
+			days = -1
+		}
+		remove_modifier = "modifier_plentiful_traditions_adaptive_foundry_8"
+	}
+}
+
 planet_event = {
     id = plentiful_traditions_adaptive_foundry_pedict.10
+    
+    hide_window = yes
+    is_triggered_only = yes
+
+	immediate = {
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_cooldown"
+			days = 60
+		}
+		add_modifier = {
+			modifier = "modifier_plentiful_traditions_adaptive_foundry_10"
+			days = -1
+		}
+		remove_modifier = "modifier_plentiful_traditions_adaptive_foundry_9"
+	}
+}
+
+carrier_event = {
+    id = plentiful_traditions_adaptive_foundry_pedict.110
     
     hide_window = yes
     is_triggered_only = yes

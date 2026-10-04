@@ -8,7 +8,7 @@ district_city = {
 	default_starting_district = yes
 	overlay_icon = GFX_district_government
 
-	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
 
 	show_on_uncolonized = {
 		exists = from
@@ -37,6 +37,7 @@ district_city = {
 							is_country_type = primitive
 							is_hive_empire = no
 						}
+						is_country_type = mechanocalibrator
 					}
 				}
 			}
@@ -58,11 +59,14 @@ district_city = {
 				has_menace_perk = menp_behemoth_mind_meld
 			}
 		}
-
 	}
 
 	allow = {
-		is_special_colony_type = no
+		hidden_trigger = { is_special_colony_type = no }
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -78,6 +82,7 @@ district_city = {
 		district_crashed_slaver_ship
 		district_resort
 		district_slave
+		district_ark_city
 	}
 
 	resources = {
@@ -276,6 +281,7 @@ district_city = {
 }
 
 district_crashed_slaver_ship = {
+	shared_capacity_modifier = district_crashed_slaver_ship
 	is_uncapped = {	always = no }
 	can_demolish = no
 	exempt_from_ai_planet_specialization = yes
@@ -309,8 +315,16 @@ district_crashed_slaver_ship = {
 	}
 
 	allow = {
-		NOT = { has_modifier = resort_colony }
-		NOT = { has_modifier = slave_colony }
+		hidden_trigger = {
+			NAND = {
+				has_modifier = resort_colony
+				has_modifier = slave_colony
+			}
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -322,6 +336,7 @@ district_crashed_slaver_ship = {
 		district_hive
 		district_craglands
 		district_mindlink
+		district_ark_city
 	}
 
 	resources = {
@@ -455,7 +470,13 @@ district_resort = {
 	}
 
 	allow = {
-		NOT = { has_modifier = slave_colony }
+		hidden_trigger = {
+			NOT = { has_modifier = slave_colony }
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -617,6 +638,10 @@ district_resort_1 = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	resources = {
@@ -696,6 +721,10 @@ district_resort_2 = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	resources = {
@@ -775,6 +804,10 @@ district_resort_3 = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	resources = {
@@ -837,7 +870,7 @@ district_prison = {
 	icon = district_city
 	overlay_icon = GFX_district_government
 
-	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
 
 	show_on_uncolonized = {
 		exists = from
@@ -852,7 +885,13 @@ district_prison = {
 	}
 
 	allow = {
-		has_modifier = penal_colony
+		hidden_trigger = {
+			has_modifier = penal_colony
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -925,17 +964,9 @@ district_prison = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_gestalt = no
-				is_fallen_empire_spiritualist = no
-			}
-		}
-		modifier = {
-			job_enforcer_add = @base_district_jobs
-		}
+	inline_script = {
+		script = jobs/enforcers_add
+		AMOUNT = @base_district_jobs
 	}
 
 	triggered_planet_modifier = {
@@ -1048,7 +1079,7 @@ district_slave = {
 	icon = district_city
 	overlay_icon = GFX_district_government
 
-	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
 
 	show_on_uncolonized = {
 		exists = from
@@ -1063,7 +1094,13 @@ district_slave = {
 	}
 
 	allow = {
-		has_modifier = slave_colony
+		hidden_trigger = {
+			has_modifier = slave_colony
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -1265,7 +1302,7 @@ district_hive = {
 	exempt_from_ai_planet_specialization = yes
 	overlay_icon = GFX_district_government
 
-	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
 
 	show_on_uncolonized = {
 		exists = from
@@ -1284,7 +1321,10 @@ district_hive = {
 	potential = {
 		exists = owner
 		owner = {
-			is_hive_empire = yes
+			OR = {
+				is_hive_empire = yes
+				is_country_type = swarm
+			}
 			is_wilderness_empire = no
 		}
 		OR = {
@@ -1303,7 +1343,13 @@ district_hive = {
 	}
 
 	allow = {
-		NOT = { has_modifier = resort_colony }
+		hidden_trigger = {
+			NOT = { has_modifier = resort_colony }
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -1314,6 +1360,7 @@ district_hive = {
 		district_city
 		district_craglands
 		district_mindlink
+		district_ark_city
 	}
 
 	resources = {
@@ -1503,6 +1550,10 @@ district_hive_1 = {
 	}
 
 	allow = {
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -1510,6 +1561,7 @@ district_hive_1 = {
 		district_nexus_1
 		district_generator
 		district_photosynthesis_fields
+		district_ark_generator
 	}
 
 	resources = {
@@ -1683,8 +1735,8 @@ district_hive_2 = {
 
 	allow = {
 		custom_tooltip = {
-			fail_text = zone_city_02_prereq
-			has_upgraded_capital = yes
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
 		}
 	}
 
@@ -1693,6 +1745,8 @@ district_hive_2 = {
 		district_nexus_2
 		district_mining
 		district_hollow_mountains
+		district_ark_military
+		district_ark_forever_cruise
 	}
 
 	resources = {
@@ -1865,8 +1919,8 @@ district_hive_3 = {
 
 	allow = {
 		custom_tooltip = {
-			fail_text = zone_city_02_prereq
-			has_upgraded_capital = yes
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
 		}
 	}
 
@@ -1875,6 +1929,7 @@ district_hive_3 = {
 		district_nexus_3
 		district_farming
 		district_orchard_forests
+		district_ark_basic
 	}
 
 	resources = {
@@ -2032,7 +2087,7 @@ district_nexus = {
 	exempt_from_ai_planet_specialization = yes
 	overlay_icon = GFX_district_government
 
-	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
 
 	show_on_uncolonized = {
 		exists = from
@@ -2051,7 +2106,10 @@ district_nexus = {
 	potential = {
 		exists = owner
 		owner = {
-			is_machine_empire = yes
+			OR = {
+				is_machine_empire = yes
+				is_country_type = ai_empire
+			}
 		}
 		OR = {
 			uses_district_set = standard
@@ -2069,7 +2127,13 @@ district_nexus = {
 	}
 
 	allow = {
-		NOT = { has_modifier = resort_colony }
+		hidden_trigger = {
+			NOT = { has_modifier = resort_colony }
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -2080,6 +2144,7 @@ district_nexus = {
 		district_hive
 		district_craglands
 		district_mindlink
+		district_ark_city
 	}
 
 	resources = {
@@ -2265,6 +2330,7 @@ district_nexus_1 = {
 		district_hive_1
 		district_generator
 		district_photosynthesis_fields
+		district_ark_generator
 	}
 
 	resources = {
@@ -2448,18 +2514,13 @@ district_nexus_2 = {
 		uses_district_set = machine_world
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = zone_city_02_prereq
-			has_upgraded_capital = yes
-		}
-	}
-
 	conversion_ratio = 1
 	convert_to = {
 		district_hive_2
 		district_mining
 		district_hollow_mountains
+		district_ark_military
+		district_ark_forever_cruise
 	}
 
 	resources = {
@@ -2643,18 +2704,12 @@ district_nexus_3 = {
 		uses_district_set = machine_world
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = zone_city_02_prereq
-			has_upgraded_capital = yes
-		}
-	}
-
 	conversion_ratio = 1
 	convert_to = {
 		district_hive_3
 		district_farming
 		district_orchard_forests
+		district_ark_basic
 	}
 
 	resources = {
@@ -2825,10 +2880,14 @@ district_prison_industrial = {
 	icon = district_industrial
 	overlay_icon = GFX_district_mixed_industry
 
-	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
 
 	prerequisites = {
 		tech_basic_industry
+	}
+
+	show_tech_unlock_if = {
+		always = no
 	}
 
 	show_on_uncolonized = {
@@ -2976,10 +3035,14 @@ district_battle_thrall = {
 
 	overlay_icon = GFX_district_fortress
 
-	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
+inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_city_01 SLOT2 = slot_city_02 SLOT3 = slot_city_02 SLOT4 = slot_city_02 SLOT5 = slot_city_02 SLOT6 = slot_city_02 SLOT7 = slot_city_02 SLOT8 = slot_city_02 SLOT9 = slot_city_02 SLOT10 = slot_city_02 }
 
 	prerequisites = {
 		tech_basic_industry
+	}
+
+	show_tech_unlock_if = {
+		always = no
 	}
 
 	show_on_uncolonized = {
@@ -2992,7 +3055,13 @@ district_battle_thrall = {
 	}
 
 	allow = {
-		has_modifier = slave_colony
+		hidden_trigger = {
+			has_modifier = slave_colony
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1
@@ -3146,7 +3215,13 @@ district_srw_commercial = {
 	}
 
 	allow = {
-		NOT = { has_modifier = resort_colony }
+		hidden_trigger = {
+			NOT = { has_modifier = resort_colony }
+		}
+		custom_tooltip = {
+			fail_text = arcology_project_construction_fail_tt
+			NOT = { has_carrier_flag = arcology_project_construction }
+		}
 	}
 
 	conversion_ratio = 1

@@ -11,9 +11,10 @@ event = {
 			limit = {
 				has_tradition = tr_plentiful_robotics_2
 			}
-			every_owned_planet = {
+			every_owned_colony = {
 				if = {
 					limit = {
+						NOT = { has_planet_flag = blockchain_1 }
 						count_owned_pop_amount = {
 							limit = {
 								OR = {
@@ -22,96 +23,133 @@ event = {
 								}
 								#is_growing = no
 							}
-							count > 9
+							count > 900
 						}
 					}
 					if = {
 						limit = {
-							has_modifier = modifier_plentiful_traditions_blockchain_1
-						}
-						remove_modifier = "modifier_plentiful_traditions_blockchain_1"
-					}
-					if = {
-						limit = {
-							has_modifier = modifier_plentiful_traditions_blockchain_2
-						}
-						remove_modifier = "modifier_plentiful_traditions_blockchain_2"
-					}
-					if = {
-						limit = {
-							has_modifier = modifier_plentiful_traditions_blockchain_3
-						}
-						remove_modifier = "modifier_plentiful_traditions_blockchain_3"
-					}
-					if = {
-						limit = {
-							has_modifier = modifier_plentiful_traditions_blockchain_4
-						}
-						remove_modifier = "modifier_plentiful_traditions_blockchain_4"
-					}
-					if = {
-						limit = {
-							count_owned_pop_amount = {
-								limit = {
-									OR = {
-										has_trait = trait_machine_unit
-										has_trait = trait_mechanical
-									}
-								}
-								count > 119
-							}
-						}
-						add_modifier = {
-							modifier = "modifier_plentiful_traditions_blockchain_4"
-						}
-					}
-					else_if = {
-						limit = {
-							count_owned_pop_amount = {
-								limit = {
-									OR = {
-										has_trait = trait_machine_unit
-										has_trait = trait_mechanical
-									}
-								}
-								count > 49
-							}
-						}
-						add_modifier = {
-							modifier = "modifier_plentiful_traditions_blockchain_3"
-						}
-					}
-					else_if = {
-						limit = {
-							count_owned_pop_amount = {
-								limit = {
-									OR = {
-										has_trait = trait_machine_unit
-										has_trait = trait_mechanical
-									}
-								}
-								count > 24
-							}
-						}
-						add_modifier = {
-							modifier = "modifier_plentiful_traditions_blockchain_2"
-						}
-					}
-					else_if = {
-						limit = {
-							count_owned_pop_amount = {
-								limit = {
-									OR = {
-										has_trait = trait_machine_unit
-										has_trait = trait_mechanical
-									}
-								}
-								count > 9
+							Not = {
+								has_modifier = modifier_plentiful_traditions_blockchain_1
 							}
 						}
 						add_modifier = {
 							modifier = "modifier_plentiful_traditions_blockchain_1"
 						}
+						set_planet_flag = blockchain_1
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_planet_flag = blockchain_2 }
+						count_owned_pop_amount = {
+							limit = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+								#is_growing = no
+							}
+							count > 2490
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = modifier_plentiful_traditions_blockchain_2
+							}
+						}
+						add_modifier = {
+							modifier = "modifier_plentiful_traditions_blockchain_2"
+						}
+						set_planet_flag = blockchain_2
+						if = {
+							limit = {
+								has_modifier = modifier_plentiful_traditions_blockchain_1
+							}
+						}
+						remove_modifier = "modifier_plentiful_traditions_blockchain_1"
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_planet_flag = blockchain_3 }
+						count_owned_pop_amount = {
+							limit = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+								#is_growing = no
+							}
+							count > 4990
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = modifier_plentiful_traditions_blockchain_3
+							}
+						}
+						add_modifier = {
+							modifier = "modifier_plentiful_traditions_blockchain_3"
+						}
+						set_planet_flag = blockchain_3
+						if = {
+							limit = {
+								has_modifier = modifier_plentiful_traditions_blockchain_1
+							}
+						}
+						remove_modifier = "modifier_plentiful_traditions_blockchain_1"
+						if = {
+							limit = {
+								has_modifier = modifier_plentiful_traditions_blockchain_2
+							}
+						}
+						remove_modifier = "modifier_plentiful_traditions_blockchain_2"
+					}
+				}
+				if = {
+					limit = {
+						NOT = { has_planet_flag = blockchain_4 }
+						count_owned_pop_amount = {
+							limit = {
+								OR = {
+									has_trait = trait_machine_unit
+									has_trait = trait_mechanical
+								}
+								#is_growing = no
+							}
+							count > 11990
+						}
+					}
+					if = {
+						limit = {
+							Not = {
+								has_modifier = modifier_plentiful_traditions_blockchain_4
+							}
+						}
+						add_modifier = {
+							modifier = "modifier_plentiful_traditions_blockchain_4"
+						}
+						set_planet_flag = blockchain_4
+						if = {
+							limit = {
+								has_modifier = modifier_plentiful_traditions_blockchain_1
+							}
+						}
+						remove_modifier = "modifier_plentiful_traditions_blockchain_1"
+						if = {
+							limit = {
+								has_modifier = modifier_plentiful_traditions_blockchain_2
+							}
+						}
+						remove_modifier = "modifier_plentiful_traditions_blockchain_2"
+						if = {
+							limit = {
+								has_modifier = modifier_plentiful_traditions_blockchain_3
+							}
+						}
+						remove_modifier = "modifier_plentiful_traditions_blockchain_3"
 					}
 				}
 			}

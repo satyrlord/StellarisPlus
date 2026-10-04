@@ -1,7 +1,7 @@
 ﻿l_german:
 
 ASCENSION_PERKS_NEW:0 "Perks"
-PLENTIFUL_TRADITIONS_VERSION:0 "Plentiful Traditions §GV4.2.1§! von §EBirdy§!, angepasst durch §MAbominus§!"
+PLENTIFUL_TRADITIONS_VERSION:0 "Plentiful Traditions §GV4.4§! von §EBirdy§!, angepasst durch §MAbominus§!"
 
 plentiful_traditions_announcement.3.name:0 "Plentiful Traditions - Update"
 plentiful_traditions_announcement.3.desc:0 "The old and no longer supported version of this mod is now available on the workshop and called Plentiful Traditions OLD, meant for §RStellaris 1.6§! savegames. For people who willingly play §GStellaris 1.8§! and upwards, ignore this message.\n\n§YEND OF TRANSMISSION§!"
@@ -1396,8 +1396,13 @@ ap_plentiful_traditions_vast_slave_procreation_desc:0 "Durch die Verbindung von 
 tooltip_plentiful_traditions_vast_slave_procreation:0 "Die Baukosten und Unterhaltskosten von £building£ §Y$building_clone_vats$§! reduzieren sich auf Planeten, auf denen bereits £building£ §Y$building_slave_processing$§!/§Y$building_plentiful_traditions_advanced_slave_processing$§! existieren. Zusätzlich werden durch die Existenz beider Gebäude die §Y$MOD_PLANET_POP_ASSEMBLY_ORGANIC_ADD$§! erhöht."
 ap_plentiful_traditions_gateway_system:0 "Gateway System"
 ap_plentiful_traditions_gateway_system_desc:0 "Wir sind endlich in der Lage, unsere Expansion durch Gateways abzusichern. Wir sollten in jedem System ein Gateway haben!"
-tooltip_plentiful_traditions_gateway_system:0 "Wir sind endlich in der Lage, unsere Expansion durch Gateways abzusichern. Wir sollten in jedem System ein Gateway haben!
-
+tooltip_plentiful_traditions_gateway_system:0 "Wir sind endlich in der Lage, unsere Expansion durch Gateways abzusichern. Wir sollten in jedem System ein Gateway haben!"
+ap_plentiful_traditions_blood_and_iron:0 "Blut und Eisen"
+ap_plentiful_traditions_blood_and_iron_desc:0 "Nicht auf unseren Liberalismus sieht unsere Bevölkerung, sondern auf unsere Macht. Unsere Grenzen sind durch interplanetare Verträge zu einem gesunden Staatsleben nicht günstig. Nicht durch Reden und Majoritätsbeschlüsse werden die großen Fragen der Zeit entschieden, diesen Fehler werden wir nicht nochmal machen, sondern durch EISEN UND BLUT!"
+tooltip_plentiful_traditions_blood_and_iron:0 "Schluss mit dem Schabernack!"
+ap_plentiful_traditions_blood_and_iron_gestalt:0 "Blut und Eisen"
+ap_plentiful_traditions_blood_and_iron_gestalt_desc:0 "Nicht auf unseren Liberalismus sieht unsere Bevölkerung, sondern auf unsere Macht. Unsere Grenzen sind durch interplanetare Verträge zu einem gesunden Staatsleben nicht günstig. Nicht durch Reden und Majoritätsbeschlüsse werden die großen Fragen der Zeit entschieden, diesen Fehler werden wir nicht nochmal machen, sondern durch EISEN UND BLUT!"
+tooltip_plentiful_traditions_blood_and_iron_gestalt:0 "Schluss mit dem Schabernack!"
 
 ################################################################
 # PLENTIFUL PERKS - Technology
@@ -1769,14 +1774,13 @@ tech_plentiful_traditions_perks_22_desc:0 "Unser Volk hat sich perfekt organisie
 
 ap_plentiful_traditions_lebensraum_enlargement:0 "Lebensraum"
 ap_plentiful_traditions_lebensraum_enlargement_desc:0 "Lebensraum im Osten... äh, im Weltall. Habitate können erweitert werden um neuen Lebensraum zu generieren."
+
+tooltip_plentiful_traditions_lebensraum_enlargement:0 "Habitate sind Lebenszweck. Allerdings sind unser bisherigen Habitate zu klein, daher wird jetzt angebaut. Zusätzlich kosten Habitate nun weniger £influence §YEinfluss§!. Wir brauchen diesen LEBENSRAUM!!!"
+plentiful_traditions_lebensraum_enlargement:0 "§YUnser Volk braucht LEBENSRAUM!§!"
+plentiful_traditions_lebensraum_enlargement_desc:1 "Dieser Erlass erlaubt es uns, das aus allen Näten platzende Habitat zu erweitern, um mehr Lebensraum zu generieren.\nSpirituelle Reiche müssen genügend Evolutionsdruck haben.\n"
+
 modifier_plentiful_traditions_lebensraum_enlargement_cooldown:0 "Fertigungsanlagen heruntergefahren"
 modifier_plentiful_traditions_lebensraum_enlargement_cooldown_desc:1 "Unsere Arbeiter benötigt eine Verschnaufpause."
-tooltip_plentiful_traditions_lebensraum_enlargement:0 "Habitate sind Lebenszweck. Allerdings sind unser bisherigen Habitate zu klein, nun können wir durch den Einsatz von Robotern (oder wenn der Platz komplett ausgefüllt ist (12 POPs)) dieses Habitate erweitern. Zusätzlich kosten Habitate nun weniger £influence  §YEinfluss§!. Wir brauchen diesen LEBENSRAUM!!!"
-plentiful_traditions_lebensraum_enlargement:0 "§YUnser Volk braucht LEBENSRAUM!§!"
-plentiful_traditions_lebensraum_enlargement_desc:1 "Dieser Erlass erlaubt es uns, das aus allen Näten platzende Habitat zu erweitern, um mehr Lebensraum zu generieren.\nSpirituelle Reiche müssen genügend Evolutionsdruck haben.\nMit Roboter-Pops kann man bereits vorher das Habitat um Lebensraum erweitern.\n"
-plentiful_traditions_lebensraum_enlargement_not_max_size:0 "Dieses Habitat kann nicht erweitert werden, es hat die maximale Größe (25) erreiche. GOTT SCHÜTZE DEN KAISER!"
-plentiful_traditions_lebensraum_enlargement_full_or_robot:0 "Der Evolutionsdruck ist noch nicht groß genug (weniger als 12 POPs bzw. nicht alle Felder sind bewohnt) oder hat keine Roboter vor Ort. Als Sprititualist ist man schon echt am Arsch, oder? GOTT SCHÜTZE DEN KAISER!"
-plentiful_traditions_lebensraum_enlargement_plus_one:0 "Durch die Erweiterung des Habitats wird neuer Lebensraum geschaffen. Die Arbeiter benötigen anschließend allerdings etwas Zeit, um weiterzuarbeiten."
 modifier_plentiful_traditions_open_habitat:0 "Offenes Habitat"
 modifier_plentiful_traditions_open_habitat_desc:1 "Dieses Habitat hat keine Atmosphäre, daher können nur Roboter ebendieses erweitern."
 

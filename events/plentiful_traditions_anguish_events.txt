@@ -13,20 +13,25 @@ event = {
 			if = {
 				limit = {
 					is_at_war = yes
-					NOT = {
-						has_modifier = modifier_plentiful_traditions_enraged
+				}
+				if = {
+					limit = {
+						Not = {
+							has_modifier = modifier_plentiful_traditions_enraged
+						}
 					}
 				}
 				add_modifier = {
 					modifier = "modifier_plentiful_traditions_enraged"
 				}
-			}
-			if = {
-				limit = {
-					is_at_war = no
-					has_modifier = modifier_plentiful_traditions_enraged
+				else = {
+					if = {
+						limit = {
+							has_modifier = modifier_plentiful_traditions_enraged
+						}
+					}
+					remove_modifier = "modifier_plentiful_traditions_enraged"
 				}
-				remove_modifier = "modifier_plentiful_traditions_enraged"
 			}
 		}
 	}
@@ -34,6 +39,36 @@ event = {
 
 planet_event = {
 	id = plentiful_traditions_anguish.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			has_tradition = tr_plentiful_anguish_finish
+		}
+		FROMFROM = {
+			is_robot_pop = no
+			NOT = {
+				is_same_species = owner_species
+			}
+		}
+		is_controlled_by = FROM
+	}
+	
+	immediate = {
+		FROM = {
+			add_monthly_resource_mult = {
+				resource = influence
+				value = 1
+				min = 1
+				max = 1
+			}
+		}
+	}
+}
+
+carrier_event = {
+	id = plentiful_traditions_anguish.102
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -78,7 +113,7 @@ event = {
 			limit = {
 				has_tradition = tr_plentiful_anguish_adopt
 				has_technology = tech_doctrine_fleet_size_1
-				NOT = {
+				Not = {
 					has_modifier = modifier_plentiful_traditions_doctrine1
 					has_modifier = modifier_plentiful_traditions_doctrine2
 					has_modifier = modifier_plentiful_traditions_doctrine3
@@ -98,7 +133,7 @@ event = {
 			limit = {
 				has_tradition = tr_plentiful_anguish_adopt
 				has_technology = tech_doctrine_fleet_size_2
-				NOT = {
+				Not = {
 					has_modifier = modifier_plentiful_traditions_doctrine2
 					has_modifier = modifier_plentiful_traditions_doctrine3
 					has_modifier = modifier_plentiful_traditions_doctrine4
@@ -115,14 +150,14 @@ event = {
 				limit = {
 					has_modifier = modifier_plentiful_traditions_doctrine1
 				}
-				remove_modifier = "modifier_plentiful_traditions_doctrine1"
 			}
+			remove_modifier = "modifier_plentiful_traditions_doctrine1"
 		}
 		every_country = {
 			limit = {
 				has_tradition = tr_plentiful_anguish_adopt
 				has_technology = tech_doctrine_fleet_size_3
-				NOT = {
+				Not = {
 					has_modifier = modifier_plentiful_traditions_doctrine3
 					has_modifier = modifier_plentiful_traditions_doctrine4
 					has_modifier = modifier_plentiful_traditions_doctrine5
@@ -137,14 +172,14 @@ event = {
 				limit = {
 					has_modifier = modifier_plentiful_traditions_doctrine2
 				}
-				remove_modifier = "modifier_plentiful_traditions_doctrine2"
 			}
+			remove_modifier = "modifier_plentiful_traditions_doctrine2"
 		}
 		every_country = {
 			limit = {
 				has_tradition = tr_plentiful_anguish_adopt
 				has_technology = tech_doctrine_fleet_size_4
-				NOT = {
+				Not = {
 					has_modifier = modifier_plentiful_traditions_doctrine4
 					has_modifier = modifier_plentiful_traditions_doctrine5
 					has_technology = tech_doctrine_fleet_size_5
@@ -157,14 +192,14 @@ event = {
 				limit = {
 					has_modifier = modifier_plentiful_traditions_doctrine3
 				}
-				remove_modifier = "modifier_plentiful_traditions_doctrine3"
 			}
+			remove_modifier = "modifier_plentiful_traditions_doctrine3"
 		}
 		every_country = {
 			limit = {
 				has_tradition = tr_plentiful_anguish_adopt
 				has_technology = tech_doctrine_fleet_size_5
-				NOT = {
+				Not = {
 					has_modifier = modifier_plentiful_traditions_doctrine5
 				}
 			}
@@ -175,8 +210,8 @@ event = {
 				limit = {
 					has_modifier = modifier_plentiful_traditions_doctrine4
 				}
-				remove_modifier = "modifier_plentiful_traditions_doctrine4"
 			}
+			remove_modifier = "modifier_plentiful_traditions_doctrine4"
 		}
 	}
 }

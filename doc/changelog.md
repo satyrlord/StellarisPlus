@@ -2,6 +2,41 @@
 
 Date: 2026-10-04
 
+- Plentiful Traditions updated to the 2026-10-04 upstream (v4.5):
+  - Taken from upstream where the integrated copy was unchanged: eight event
+    files, the agreement term values, the ascension-perk and persiancats sprite
+    files, the topbar arrow GUI, and 15 tradition tree icons (30x30, replacing
+    oversized 306x218 images). Added the missing Blood and Iron perk icon.
+  - Clean three-way merges: starbase modules, war events, English and German
+    localisation. Faith events now use the carrier-flag API; kept the local
+    topbar GUI change, the `experimentalism` event removal and the pop-group
+    `transformation` events.
+  - Vanilla-path copies refreshed for 4.5: `01_pop_assembly_buildings`,
+    `08_unity_buildings` and the four `common/districts/*_districts.txt` files.
+    The BPV `districts/BPV_district_slots` lines (7 urban, 3 ringworld) were
+    re-applied over upstream's `zone_slots`; local necrophage tooltips and the
+    `job_bureaucrat_add` fixes were kept; the clone vats perk now uses
+    `ap_organo_machine_interfacing_assimilator`.
+  - Removed the three `has_district = district_*_uncapped` checks in
+    `zz_sp_decisions.txt`; upstream folded those districts into the base
+    districts with `is_uncapped`.
+  - Block-level updates in the merged `zz_sp_*` files: 24 decisions, 6 buildings,
+    3 tradition categories, 1 tradition and 1 trigger, plus new `carrier_event`
+    variants `.101`-`.110` in `events/plentiful_traditions_adaptive_foundry_events.txt`
+    (event `.9`, missing upstream, was kept).
+  - `common/pop_jobs/zz_sp_gestalt_jobs.txt` reduced to the `replicator` job:
+    4.5 vanilla now provides the toxic-bath jobs. Removed the two unused
+    bath-attendant triggers.
+  - Trimmed 92 sprites from `interface/zz_plentiful_traditions_traditions.gfx`
+    that the updated `plentiful_traditions_persiancats.gfx` now defines, and
+    restored the `GFX_tradition_hex_bg_plentiful_malice` name that upstream
+    renamed by mistake.
+  - Not applied: upstream's new malice and mutagenesis events (they use
+    `every_owned_pop`, `any_owned_pop` and `has_job`, which do not exist in 4.5),
+    the galaxy setup caps, and the unused Vest system.
+  - `on_actions`: added `faith.1`, `faith.2` and `transformation_pedict.11`
+    hooks.
+
 - Scion Origin Expanded updated to upstream 1.3.1 (upstream commit 1cfedf4):
   - `events/soe_events.txt`, `common/scripted_variables/soe_scripted_variables.txt`
     and `localisation/english/soe_l_english.yml` replaced with the upstream

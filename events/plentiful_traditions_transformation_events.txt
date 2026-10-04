@@ -865,7 +865,7 @@ planet_event = {
 				POP_GROUP = this
 				PLANET = owner.capital_scope
 			}
-		}
+		 }
 		destroy_colony = yes
 	}
 

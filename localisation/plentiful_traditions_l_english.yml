@@ -1,7 +1,7 @@
 ﻿l_english:
 
 ASCENSION_PERKS_NEW:0 "Perks"
-PLENTIFUL_TRADITIONS_VERSION:0 "Plentiful Traditions §GV4.2.1§! by §EBirdy§!, modified by §MAbominus§!"
+PLENTIFUL_TRADITIONS_VERSION:0 "Plentiful Traditions §GV4.4§! by §EBirdy§!, modified by §MAbominus§!"
 
 plentiful_traditions_announcement.3.name:0 "Plentiful Traditions - Update"
 plentiful_traditions_announcement.3.desc:0 "The old and no longer supported version of this mod is now available on the workshop and called Plentiful Traditions OLD, meant for §RStellaris 1.6§! savegames. For people who willingly play §GStellaris 1.8§! and upwards, ignore this message.\n\n§YEND OF TRANSMISSION§!"
@@ -1396,7 +1396,12 @@ tooltip_plentiful_traditions_vast_slave_procreation:0 "The construction and main
 ap_plentiful_traditions_gateway_system:0 "Gateway System"
 ap_plentiful_traditions_gateway_system_desc:0 "We are finally in a position to secure our expansion through gateways. We should have a gateway in every system!"
 tooltip_plentiful_traditions_gateway_system:0 "We are finally in a position to secure our expansion through gateways. We should have a gateway in every system!"
-
+ap_plentiful_traditions_blood_and_iron:0 "Blut und Eisen"
+ap_plentiful_traditions_blood_and_iron_desc:0 "Nicht auf unseren Liberalismus sieht unsere Bevölkerung, sondern auf unsere Macht. Unsere Grenzen sind durch interplanetare Verträge zu einem gesunden Staatsleben nicht günstig. Nicht durch Reden und Majoritätsbeschlüsse werden die großen Fragen der Zeit entschieden, diesen Fehler werden wir nicht nochmal machen, sondern durch EISEN UND BLUT!"
+tooltip_plentiful_traditions_blood_and_iron:0 "Schluss mit dem Schabernack!"
+ap_plentiful_traditions_blood_and_iron_gestalt:0 "Blut und Eisen"
+ap_plentiful_traditions_blood_and_iron_gestalt_desc:0 "Nicht auf unseren Liberalismus sieht unsere Bevölkerung, sondern auf unsere Macht. Unsere Grenzen sind durch interplanetare Verträge zu einem gesunden Staatsleben nicht günstig. Nicht durch Reden und Majoritätsbeschlüsse werden die großen Fragen der Zeit entschieden, diesen Fehler werden wir nicht nochmal machen, sondern durch EISEN UND BLUT!"
+tooltip_plentiful_traditions_blood_and_iron_gestalt:0 "Schluss mit dem Schabernack!"
 
 ################################################################
 # PLENTIFUL PERKS - Technology
@@ -1406,6 +1411,8 @@ tech_plentiful_traditions_metaverse_ecosystem:0 "Metaverse Ecosystem"
 tech_plentiful_traditions_metaverse_ecosystem_desc:0 "Blockchain technology within the Metaverse ecosystem allows our constructs to adopt new §Yblueprints§! that increase value even further."
 tech_ap_plentiful_traditions_tomb_life:0 "Tomb World - Adaption"
 tech_ap_plentiful_traditions_tomb_life_desc:0 "Due to the permanent use of harmful radiation, we can now perfectly adapt species to these living conditions."
+tech_ap_plentiful_traditions_tech_starbase:0 "Starbase Engineering"
+tech_ap_plentiful_traditions_tech_starbase_desc:0 "Advanced starbase construction techniques allow for more efficient orbital infrastructure."
 
 ################################################################
 # PLENTIFUL PERKS - Traits
@@ -1766,16 +1773,12 @@ tech_plentiful_traditions_perks_21_desc:0 "Our people are perfectly organized, n
 tech_plentiful_traditions_perks_22:0 "Ascension through curator"
 tech_plentiful_traditions_perks_22_desc:0 "Our people are perfectly organized, now we can strive for the new." 
 
-ap_plentiful_traditions_lebensraum_enlargement:0 "Expanding of Lebensraum"
-ap_plentiful_traditions_lebensraum_enlargement_desc:0 "Living space in the east... um, in the void. Habitats can be expanded to generate new tiles."
+ap_plentiful_traditions_lebensraum_enlargement:0 "Expanding of living space"
+ap_plentiful_traditions_lebensraum_enlargement_desc:0 "Living space in the east... um, in the void. Habitats can be expanded to generate new space for our people."
+tooltip_plentiful_traditions_lebensraum_enlargement:0 "Habitats are the purpose of life. However, our present habitats are too small, but now we are going to expand them. Also the habitats cost less £influence §YInfluence§!. We need this space!!!"
+
 modifier_plentiful_traditions_lebensraum_enlargement_cooldown:0 "Construction Cooldown"
 modifier_plentiful_traditions_lebensraum_enlargement_cooldown_desc:1 "Our workes need a small break."
-tooltip_plentiful_traditions_lebensraum_enlargement:0 "Habitats are the purpose of life. However, our present habitats are too small, now we can extend those by using robots (or when the tiles are completely filled out (12 POPs)). Also the habitats cost less £influence  §YInfluence§!. We need this LEBENSRAUM!!!"
-plentiful_traditions_lebensraum_enlargement:0 "§YWe need breathing room!§!"
-plentiful_traditions_lebensraum_enlargement_desc:1 "This editct allows us to expand the habitat that is bursting from all seams to create more tiles.\nSpiritual empires must have enough evolutionary pressure.\nWith robotic pops you can already expand the habitat to generate more living space.\n"
-plentiful_traditions_lebensraum_enlargement_not_max_size:0 "This habitat can not be expanded, it has the maximum size (25). GOTT SCHÜTZE DEN KAISER!"
-plentiful_traditions_lebensraum_enlargement_full_or_robot:0 "The evolutionary pressure is not big enough yet (less than 12 POPs or not every tiles has a pop) or has no robots on site. As a spritualist you are really fucked, aren't you? GOTT SCHÜTZE DEN KAISER!"
-plentiful_traditions_lebensraum_enlargement_plus_one:0 "The extension of the habitat will create a new tile. However, after that the workers need some time to rest before they can resume work."
 modifier_plentiful_traditions_open_habitat:0 "Open habitat"
 modifier_plentiful_traditions_open_habitat_desc:1 "This habitat has no atmosphere, so only robots can work on it."
 
@@ -2081,38 +2084,38 @@ d_plentiful_traditions_planet_minerals2_desc:0 "We have uncovered interesting £
 d_plentiful_traditions_planet_minerals1:0 "Small mineral fields"
 d_plentiful_traditions_planet_minerals1_desc:0 "We have uncovered small £minerals §Ymineral fields§!."
 
-d_plentiful_traditions_planet_energy5:0 "Exorbitant Energiefelder"
-d_plentiful_traditions_planet_energy5_desc:0 "We have uncovered exorbitant £energy §YEnergiefelder§!."
-d_plentiful_traditions_planet_energy4:0 "Huge Energiefelder"
-d_plentiful_traditions_planet_energy4_desc:0 "We have uncovered huge £energy §YEnergiefelder§!."
-d_plentiful_traditions_planet_energy3:0 "Large Energiefelder"
-d_plentiful_traditions_planet_energy3_desc:0 "We have uncovered large £energy §YEnergiefelder§!."
-d_plentiful_traditions_planet_energy2:0 "Interesting Energiefelder"
-d_plentiful_traditions_planet_energy2_desc:0 "We have uncovered interesting £energy §YEnergiefelder§!."
-d_plentiful_traditions_planet_energy1:0 "Small Energiefelder"
-d_plentiful_traditions_planet_energy1_desc:0 "We have uncovered small £energy §YEnergiefelder§!."
+d_plentiful_traditions_planet_energy5:0 "Exorbitant Energy Fields"
+d_plentiful_traditions_planet_energy5_desc:0 "We have uncovered exorbitant £energy §YEnergy Fields§!."
+d_plentiful_traditions_planet_energy4:0 "Huge Energy Fields"
+d_plentiful_traditions_planet_energy4_desc:0 "We have uncovered huge £energy §YEnergy Fields§!."
+d_plentiful_traditions_planet_energy3:0 "Large Energy Fields"
+d_plentiful_traditions_planet_energy3_desc:0 "We have uncovered large £energy §YEnergy Fields§!."
+d_plentiful_traditions_planet_energy2:0 "Interesting Energy Fields"
+d_plentiful_traditions_planet_energy2_desc:0 "We have uncovered interesting £energy §YEnergy Fields§!."
+d_plentiful_traditions_planet_energy1:0 "Small Energy Fields"
+d_plentiful_traditions_planet_energy1_desc:0 "We have uncovered small £energy §YEnergy Fields§!."
 
-d_plentiful_traditions_planet_food5:0 "Exorbitant food suppliers"
+d_plentiful_traditions_planet_food5:0 "Exorbitant Food Suppliers"
 d_plentiful_traditions_planet_food5_desc:0 "We have new exorbitant §Ybreeding fields§! for £food §Yfood§!."
-d_plentiful_traditions_planet_food4:0 "Huge Nahrungslieferanten"
+d_plentiful_traditions_planet_food4:0 "Huge Food Suppliers"
 d_plentiful_traditions_planet_food4_desc:0 "We have new huge §Ybreeding fields§! for £food §Yfood§!."
-d_plentiful_traditions_planet_food3:0 "Large Nahrungslieferanten"
+d_plentiful_traditions_planet_food3:0 "Large Food Suppliers"
 d_plentiful_traditions_planet_food3_desc:0 "We have new §Ybreeding fields§! for £food §Yfood§!."
-d_plentiful_traditions_planet_food2:0 "Interesting Nahrungslieferanten"
+d_plentiful_traditions_planet_food2:0 "Interesting Food Suppliers"
 d_plentiful_traditions_planet_food2_desc:0 "We have new interesting §Ybreeding fields§! for £food §Yfood§!."
-d_plentiful_traditions_planet_food1:0 "Small Nahrungslieferanten"
+d_plentiful_traditions_planet_food1:0 "Small Food Suppliers"
 d_plentiful_traditions_planet_food1_desc:0 "We have new small §Ybreeding fields§! for £food §Yfood§!."
 
-d_plentiful_traditions_planet_unity5:0 "Exorbitante Monuments of unity"
-d_plentiful_traditions_planet_unity5_desc:0 "We have uncovered exorbitant £unity §YMonuments of unity§!."
-d_plentiful_traditions_planet_unity4:0 "Huge Monuments of unity"
-d_plentiful_traditions_planet_unity4_desc:0 "We have uncovered huge £unity §YMonuments of unity§!."
-d_plentiful_traditions_planet_unity3:0 "Large Monuments of unity"
-d_plentiful_traditions_planet_unity3_desc:0 "We have uncovered large £unity §YMonuments of unity§!."
-d_plentiful_traditions_planet_unity2:0 "Interesting Monuments of unity"
-d_plentiful_traditions_planet_unity2_desc:0 "We have uncovered interesting £unity §YMonuments of unity§!."
-d_plentiful_traditions_planet_unity1:0 "Small Monuments of unity"
-d_plentiful_traditions_planet_unity1_desc:0 "We have uncovered small £unity §YMonuments of unity§!."
+d_plentiful_traditions_planet_unity5:0 "Exorbitant Monuments of Unity"
+d_plentiful_traditions_planet_unity5_desc:0 "We have uncovered exorbitant £unity §YMonuments of Unity§!."
+d_plentiful_traditions_planet_unity4:0 "Huge Monuments of Unity"
+d_plentiful_traditions_planet_unity4_desc:0 "We have uncovered huge £unity §YMonuments of Unity§!."
+d_plentiful_traditions_planet_unity3:0 "Large Monuments of Unity"
+d_plentiful_traditions_planet_unity3_desc:0 "We have uncovered large £unity §YMonuments of Unity§!."
+d_plentiful_traditions_planet_unity2:0 "Interesting Monuments of Unity"
+d_plentiful_traditions_planet_unity2_desc:0 "We have uncovered interesting £unity §YMonuments of Unity§!."
+d_plentiful_traditions_planet_unity1:0 "Small Monuments of Unity"
+d_plentiful_traditions_planet_unity1_desc:0 "We have uncovered small £unity §YMonuments of Unity§!."
 
 
 d_plentiful_traditions_planet_bunker:0 "Planetary Bunker System"
@@ -2244,3 +2247,20 @@ council_agenda_agenda_tr_plentiful_transformation_name: "Terraformis Universalis
 council_agenda_agenda_tr_plentiful_transformation_desc: "So many planets are waiting for a proper terrafoming."
 agenda_tr_plentiful_transformation_finish: "$agenda_ref$: $council_agenda_agenda_tr_plentiful_transformation_name$"
 agenda_tr_plentiful_transformation_finish_desc: "$council_agenda_agenda_tr_plentiful_transformation_desc$"
+
+################################################################
+# PLENTIFUL TRADITIONS - Jobs
+################################################################
+
+job_gardener_desc:0 "This pop tends to the gardens, providing unity and stability."
+job_culture_worker_effect_desc:0 "£job_culture_worker£ $job_culture_worker$ jobs"
+job_synapse_drone_effect_desc:0 "£job_synapse_drone£ $job_synapse_drone$ jobs"
+job_coordinator_effect_desc:0 "£job_coordinator£ $job_coordinator$ jobs"
+
+################################################################
+# PLENTIFUL TRADITIONS - Modifier Localisation
+################################################################
+
+mod_pop_cat_slave_happiness:0 "Slave Happiness"
+mod_pop_cat_slave_political_power:0 "Slave Political Power"
+mod_planet_jobs_organic_battery_energy_produces_add:0 "Organic Battery Energy Output"
