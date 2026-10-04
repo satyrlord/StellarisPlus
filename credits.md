@@ -9,13 +9,13 @@ and subsequent content changes).
 Integrated Workshop mods:
 
 - BPV Reborn - Zone Single Row Mode (Workshop ID: 3485762595)
-  Last updated: 2026-06-19
+  Last updated: 2026-06-21
   Source: backup/3485762595/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3485762595>
   Author: Sakura <https://steamcommunity.com/id/sgjsakura/myworkshopfiles/?appid=281990>
 
 - BPVR - More Building Slots (Workshop ID: 3576125834)
-  Last updated: 2026-06-19
+  Last updated: 2026-06-21
   Source: backup/3576125834/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3576125834>
   Author: Sakura <https://steamcommunity.com/id/sgjsakura/myworkshopfiles/?appid=281990>
@@ -58,13 +58,13 @@ Integrated Workshop mods:
   Author: Drassi <https://steamcommunity.com/profiles/76561198016849029/myworkshopfiles/?appid=281990>
 
 - Plentiful Traditions 4.2.x (Workshop ID: 1311725711)
-  Last updated: 2026-05-31
+  Last updated: 2026-10-04
   Source: backup/1311725711/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=1311725711>
   Author: Abominus [GER] <https://steamcommunity.com/id/SI-Abominus/myworkshopfiles/?appid=281990>
 
 - More Zones (district specializations) (Workshop ID: 3513435391)
-  Last updated: 2026-05-31
+  Last updated: 2026-07-28
   Source: backup/3513435391/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3513435391>
   Author: Nobody <https://steamcommunity.com/id/absolute_nobody/myworkshopfiles/?appid=281990>
@@ -76,7 +76,7 @@ Integrated Workshop mods:
   Author: Kasako
 
 - Cybrxkhan's Assortment of Namelists for Stellaris (Workshop ID: 682691478)
-  Last updated: 2026-06-19
+  Last updated: 2026-07-12
   Source: backup/682691478/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=682691478>
   Author: cybrxkhan <https://steamcommunity.com/profiles/76561198030765209/myworkshopfiles/?appid=281990>
@@ -100,7 +100,7 @@ Integrated Workshop mods:
   Author: (see Workshop page)
 
 - Scion Origin Expanded (Workshop ID: 3733766940)
-  Last updated: 2026-06-05
+  Last updated: 2026-10-04
   Source: backup/3733766940/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3733766940>
   Author: (see Workshop page)
@@ -118,13 +118,13 @@ Integrated Workshop mods:
   Author: (see Workshop page)
 
 - Orphaned Matrix Origin (Workshop ID: 3160178733)
-  Last updated: 2026-06-19
+  Last updated: 2026-06-21
   Source: backup/3160178733/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3160178733>
   Author: Zefnar <https://steamcommunity.com/profiles/76561198047900754/myworkshopfiles/?appid=281990>
 
 - Echoes of the Fallen (Workshop ID: 3696989150)
-  Last updated: 2026-05-31
+  Last updated: 2026-06-19
   Source: backup/3696989150/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3696989150>
   Author: (see Workshop page)

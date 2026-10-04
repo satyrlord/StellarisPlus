@@ -36,7 +36,6 @@ on_monthly_pulse_country = {
 		soe.98
 		soe.123
 		soe.124
-		plentiful_traditions_malice.4
 		simple_tradition.7
 	}
 }
@@ -194,7 +193,6 @@ on_yearly_pulse = {
 	events = {
 		plentiful_traditions_fixer.1
 		plentiful_traditions_technology.1
-		# plentiful_traditions_malice.6
 	}
 }
 # === merged from MZ_on_actions.txt ===
@@ -213,7 +211,6 @@ on_buildable_pop_created = {
 
 on_purge_complete = {
 	events = {
-		plentiful_traditions_mutagenesis.1
 		plentiful_traditions_anguish.2
 	}
 }
@@ -222,19 +219,6 @@ on_leader_level_up = {
 	events = {
 		plentiful_traditions_experimentalism.4
 		plentiful_traditions_experimentalism.5
-	}
-}
-
-on_pop_enslaved = {
-	events = {
-		plentiful_traditions_malice.1
-		plentiful_traditions_malice.3
-	}
-}
-
-on_pop_emancipated = {
-	events = {
-		plentiful_traditions_malice.2
 	}
 }
 

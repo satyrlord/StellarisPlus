@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 WORKSHOP_ID_RE = re.compile(r"Workshop ID:\s*(\d+)")
-LAST_UPDATED_RE = re.compile(r"^(\s*)Last updated:\s*\d{4}-\d{2}-\d{2}\s*$")
+LAST_UPDATED_RE = re.compile(r"^(\s*)Last updated:\s*(\d{4}-\d{2}-\d{2})\s*$")
 
 
 def git(repo_root: Path, *args: str) -> str:
@@ -107,7 +107,8 @@ def parse_entries(text: str) -> tuple[str, list[dict]]:
 		if line.strip() == "":
 			continue
 		if LAST_UPDATED_RE.match(line):
-			current["detail_lines"].append({"kind": "last_updated", "indent": LAST_UPDATED_RE.match(line).group(1)})
+			match = LAST_UPDATED_RE.match(line)
+			current["detail_lines"].append({"kind": "last_updated", "indent": match.group(1), "date": match.group(2)})
 		else:
 			current["detail_lines"].append(line)
 	if current is not None:
@@ -199,6 +200,8 @@ def main() -> int:
 			if isinstance(item, dict) and item.get("kind") == "last_updated":
 				old_date = item.get("date", "")
 				break
+		# Dates only move forward: a stale git probe must not make a verified entry look outdated.
+		new_date = max_date(old_date, new_date)
 		if old_date != new_date:
 			changes.append((workshop_id, old_date or "(missing)", new_date))
 		set_last_updated(entry, new_date)

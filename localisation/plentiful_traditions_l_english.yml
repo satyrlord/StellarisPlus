@@ -441,13 +441,17 @@ tradition_plentiful_malice:0 "Malice"
 tradition_plentiful_malice_desc:0 "Fear. Such fertile ground for the seeds of torment. Let us feast on others' suffering."
 tr_plentiful_malice_adopt:0 "Malice Traditions"
 #tr_plentiful_malice_adopt_desc:0 "$tradition_plentiful_malice_desc$\n\n$tr_plentiful_malice_adopt_effect$\n\n$tr_plentiful_malice_finish_effect$"
-tr_plentiful_malice_adopt_desc:0 "§Y$MOD_COUNTRY_INSULT_EFFICIENCY$§! increased by §G+50%§!. The §YSlaves§! within our empire have their £happiness §Y$MOD_POP_HAPPINESS$§! increased by §G+5%§! and the mineral cost of their §Y$CONSUMER_GOODS$§! decreased by §G-20%§!."
+tr_plentiful_malice_adopt_desc:0 "§Y$MOD_COUNTRY_INSULT_EFFICIENCY$§! increased by §G+50%§!."
 
 tr_plentiful_malice_finish:0 "Malice Traditions Finished"
-tr_plentiful_malice_finish_desc:1 "§HUnlocks Edict:§! §YMalicious Intent§!. This edict increasing our §Y$mod_damage_vs_country_type_fallen_empire_mult$§! and §Y$mod_damage_vs_country_type_awakened_fallen_empire_mult$§! by §G+15%§!.\n\n§HUnlocks Spaceport Module:§! $sm_orbital_refinery_station$, a spaceport module that adds to the planets and gathers £alloys §YAlloys§! production.\n\n"
+tr_plentiful_malice_finish_desc:1 "§HUnlocks Edict:§! §YMalicious Intent§!. This edict increases our §Y$mod_damage_vs_country_type_fallen_empire_mult$§! and §Y$mod_damage_vs_country_type_awakened_fallen_empire_mult$§! by §G+15%§!.
+
+§HUnlocks Spaceport Module:§! $sm_orbital_refinery_station$, a spaceport module that produces £alloys §YAlloys§!, increases the Alloys produced by planet jobs by §G+5%§! and by station gatherers by §G+10%§! in its orbit and system.
+
+"
  
 tr_plentiful_malice_1:0 "Despair"
-tr_plentiful_malice_1_desc:0 "§Y$mod_pop_cat_slave_happiness$§! increased by §G20%§!."
+tr_plentiful_malice_1_desc:0 "§Y$mod_pop_slave_happiness$§! increased by §G+20%§!. §Y$mod_pop_slave_political_power$§! decreased by §R-25%§!."
 tr_plentiful_malice_1_delayed:0 "Even our slaves are without hope. How exhilarating!"
  
 tr_plentiful_malice_2:0 "Iniquity"
@@ -455,15 +459,17 @@ tr_plentiful_malice_2_desc:0 "§Y$MOD_SPY_NETWORK_LEVELS_ADD$§! increased by §
 tr_plentiful_malice_2_delayed:0 "The screams of our rivals will be heard loudly, even in space."
  
 tr_plentiful_malice_3:0 "Dread"
-tr_plentiful_malice_3_desc:0 "§Y$mod_planet_jobs_slave_produces_mult$§! increased by §G+10%§!."
+tr_plentiful_malice_3_desc:0 "§Y$mod_pop_slave_bonus_workforce_mult$§! increased by §G+10%§!."
 tr_plentiful_malice_3_delayed:0 "Our slaves seem to be working themselves to death, but why? Death is only a waste of good suffering."
  
 tr_plentiful_malice_4:0 "Wrath"
-tr_plentiful_malice_4_desc:0 "§Y$MOD_COUNTRY_MAX_RIVALRIES$§! increased by §G+4§!. Additionally, the §Y$mod_planet_jobs_slave_minerals_produces_mult$§! increases by §G+15%§!."
+tr_plentiful_malice_4_desc:0 "§Y$MOD_COUNTRY_MAX_RIVALRIES$§! increased by §G+4§!. Additionally, the §Y$mod_planet_miners_minerals_produces_mult$§! increases by §G+15%§!."
 tr_plentiful_malice_4_delayed:0 "We'll read their pain slowly, page by page. Much enemy, much honor. While our government is driven to increase the number of our enemies, the mines continue to drive the slaves to collect more £minerals §Yminerals§!."
  
 tr_plentiful_malice_5:0 "Spite"
-tr_plentiful_malice_5_desc:2 "§YSlaves§! on recently conquered planets no longer get the £happiness  §Y$MOD_POP_HAPPINESS$§! reducing §Y$pop_recently_conquered$§! modifier. Additionally, we have access to the §Y$building_plentiful_traditions_advanced_slave_processing$§!. \n\nRequires technology £society£ §M$tech_neural_implants$§!."
+tr_plentiful_malice_5_desc:2 "We have access to the §Y$building_plentiful_traditions_advanced_slave_processing$§!.
+
+Requires technology £society£ §M$tech_neural_implants$§!."
 tr_plentiful_malice_5_delayed:0 "Malovolent actions, interrupted occasionally by spite."
 
 sm_orbital_refinery_station:0 "Refinery Station"
@@ -471,7 +477,6 @@ sm_orbital_refinery_station:0 "Refinery Station"
 tech_plentiful_traditions_orbital_r_s:0 "Refinery Station"
 tech_plentiful_traditions_orbital_r_s_desc:0 "In this ore processing plant, essential measures are carried out to transform ore into alloys."
 
-modifier_plentiful_traditions_slave1:0 "No Way Out"
 edict_plentiful_traditions_malicious_intent:0 "Malicious Intent"
 edict_plentiful_traditions_malicious_intent_desc:1 "This Edict increases our resolve with which we will reveal the weakness of our greatest enemies."
 edict_plentiful_traditions_malicious_intent_desc:1 "This Edict increases our resolve with which we will reveal the weakness of our greatest enemies."
@@ -505,11 +510,7 @@ tank_army_plural:0 "Armoured warfares"
 tank_army_desc:0 "An army that can strike quickly and surround the enemy in giant pincer movements consists almost entirely of mechanised troops, ideally main battle tanks combined with infantry fighting vehicles and fast auxiliaries."
 tank_army_troop_limit_tooltip:0 "Only people with exceptional skills are allowed to fight in the armoured force, which means that we can only use a limited number of these armies at the same time."
 
-plentiful_traditions_malice_activate:0 "§HMalice:§! Slave Complex activated"
-plentiful_traditions_malice_activate_desc:1 "The slaves of this planet are adapted to their purpose (subspecies). Existing traits will be added or removed according to the new requirements."
 
-plentiful_traditions_malice_deactivate:0 "§HMalice:§! Slave Complex deactivated"
-plentiful_traditions_malice_deactivate_desc:1 "The slaves of this planet are again subordinated to their natural order (subspecies removed)."
 
 #####################
 # ASPIRATION
@@ -1384,9 +1385,6 @@ tooltip_plentiful_traditions_total_assimilation:1 "$ap_total_assimilation_desc$"
 total_assimilation:1 "We can transform other species to our primary species (as long as they don't serve as a food source).\n\n n addition, our capital buildings on the §Yhomeworld§! and in §Y$pc_hive$§!-worlds are given a §P$job_queen$§! and the opportunity to create two §T$building_cocoon_assembly_plant$§!-buildings each"
 ap_plentiful_traditions_mutagenesis_universalis:0 "Mutagenesis Universalis"
 ap_plentiful_traditions_mutagenesis_universalis_desc:0 "The Kobali were a humanoid species from the Delta Quadrant. Their method of reproduction was unique and their most distinctive feature was that they increased their population by reanimating the deceased corpses of other species and altering their DNA to turn them into other Kobali."
-tooltip_plentiful_traditions_mutagenesis_universalis:0 "A new planetary decision is now possible on one's own worlds, allowing population shares to be gradually exchanged for the primary species."
-allow_decision_plentiful_traditions_mutagenesis_transformation:0 "§HNew decision:§! Mutagenesis Universalis"
-describe_decision_plentiful_traditions_mutagenesis_transformation:0 "§EThis is a decision that can exchange part of our non-primary population for our people, ideally only when they die.§!"
 ap_plentiful_traditions_stormtroopers:0 "Shock Troops"
 ap_plentiful_traditions_stormtroopers_desc:0 "Shock troops or assault troops are formations created to lead an attack. They are often better trained and equipped than other infantry, and expected to take heavy casualties even in successful operations. "Shock troop" is a calque, a loose translation of the German word Stoßtrupp. Military units that contain assault troops are typically organized for mobility with the intention that they will penetrate enemy defences and attack into the enemy's vulnerable rear areas. Any specialized, elite unit formed to fight an engagement via overwhelming assault (usually) would be considered shock troops, as opposed to "special forces" or commando-style units (intended mostly for covert operations). Both types of units could fight behind enemy lines, by surprise if required, however."
 tooltip_plentiful_traditions_stormtroopers:0 "We can now build a limited number of shock troops (or Cylons for machine empires) and armoured troops on our homeworld."
@@ -1551,12 +1549,6 @@ decision_plentiful_perks_feeding_desc:1 "On this planet, the cocoon spinners are
 decision_plentiful_perks_coocon_extraction:0 "§HNew Decisiong:§! New sisters"
 decision_plentiful_perks_coocon_extraction_desc:1 "Now we can finally devote ourselves to the goal that we always had in mind: to assimilate the lower biological life to ours."
 
-modifier_mutagenesis_transformation:0 "Mutagenesis Universalis"
-modifier_mutagenesis_transformation_desc:1 "This is a decision that can exchange part of our non-primary population for our people, ideally only when they die."
-plentiful_traditions_mutagenesis_transformation:0 "§HMutagenesis Universalis§!"
-plentiful_traditions_mutagenesis_transformation_desc:1 "This is a decision that can exchange part of our non-primary population for our people, ideally only when they die."
-end_plentiful_traditions_mutagenesis_transformation:0 "§HMutagenesis Universalis end.§!"
-end_plentiful_traditions_mutagenesis_transformation_desc:1 "The repopulation campaign will end (for the time being)."
 
 
 ################################################################

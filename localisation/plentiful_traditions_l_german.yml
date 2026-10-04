@@ -441,13 +441,18 @@ tradition_plentiful_malice:0 "Niedertracht"
 tradition_plentiful_malice_desc:0 "Angst. Solch fruchtbaren Boden für die Samen der Qual. Lasst uns auf das Leiden anderer anstoßen."
 tr_plentiful_malice_adopt:0 "Traditionen der Niedertracht"
 #tr_plentiful_malice_adopt_desc:0 "$tradition_plentiful_malice_desc$\n\n$tr_plentiful_malice_adopt_effect$\n\n$tr_plentiful_malice_finish_effect$"
-tr_plentiful_malice_adopt_effect:0 "§Y$MOD_COUNTRY_INSULT_EFFICIENCY$§! erhöht um §G+50%§!. Die £happiness §Y$MOD_POP_HAPPINESS$§! der §YSlaven§! innerhalb unseres Imperiums erhöht sich um §G+5%§! und die Mineralkosten ihrer §Y$CONSUMER_GOODS$§! verringern sich um §G-20%§!."
+tr_plentiful_malice_adopt_desc:0 "§Y$MOD_COUNTRY_INSULT_EFFICIENCY$§! erhöht um §G+50%§!."
 
 tr_plentiful_malice_finish:0 "Traditionen der Niedertracht vollendet"
-tr_plentiful_malice_finish_desc:1 "§HNeuer Erlass:§! §YBösartige Absicht§!. Dieser erhöht den §Y$mod_damage_vs_country_type_fallen_empire_mult$§! und den §Y$mod_damage_vs_country_type_awakened_fallen_empire_mult$§! um §G+15%§!.\n\n§HFreischaltung des Raumhafen Moduls:§!\n$sm_orbital_refinery_station$, ein Raumhafenmodul, dass die £alloys  §YLegierungsproduktion§! der Planeten und Bergbaustationen des Systems  erhöht..\n\n"
+tr_plentiful_malice_finish_desc:1 "§HNeuer Erlass:§! §YBösartige Absicht§!. Dieser erhöht den §Y$mod_damage_vs_country_type_fallen_empire_mult$§! und den §Y$mod_damage_vs_country_type_awakened_fallen_empire_mult$§! um §G+15%§!.
+
+§HFreischaltung des Raumhafen Moduls:§!
+$sm_orbital_refinery_station$, ein Raumhafenmodul, das £alloys §YLegierungen§! produziert und die Legierungsproduktion von Planetenjobs um §G+5%§! sowie von Sammelstationen um §G+10%§! in seiner Umlaufbahn und seinem System erhöht.
+
+"
  
 tr_plentiful_malice_1:0 "Verzweiflung"
-tr_plentiful_malice_1_desc:0 "§Y$mod_pop_cat_slave_happiness$§! erhöht um §G20%§!."
+tr_plentiful_malice_1_desc:0 "§Y$mod_pop_slave_happiness$§! erhöht um §G+20%§!. §Y$mod_pop_slave_political_power$§! verringert um §R-25%§!."
 tr_plentiful_malice_1_delayed:1 "Auch unsere Sklaven sind ohne Hoffnung. Wie aufregend!"
  
 tr_plentiful_malice_2:0 "Ungerechtigkeit"
@@ -455,15 +460,17 @@ tr_plentiful_malice_2_desc:0 "§Y$MOD_SPY_NETWORK_LEVELS_ADD$§! erhöht um §G+
 tr_plentiful_malice_2_delayed:1 "Die Schreie unserer Rivalen werden laut zu hören sein, auch im unendlichen Raum des Alls."
  
 tr_plentiful_malice_3:0 "Furcht"
-tr_plentiful_malice_3_desc:0 "§Y$mod_planet_jobs_slave_produces_mult$§! erhöht um §G+10%§!."
+tr_plentiful_malice_3_desc:0 "§Y$mod_pop_slave_bonus_workforce_mult$§! erhöht um §G+10%§!."
 tr_plentiful_malice_3_delayed:1 "Unsere Sklaven scheinen sich selbst zu töten, aber warum? Der Tod ist nur eine Verschwendung von Leid."
  
 tr_plentiful_malice_4:0 "Zorn"
-tr_plentiful_malice_4_desc:0 "§Y$MOD_COUNTRY_MAX_RIVALRIES$§! erhöht um §G+4§!. Zusätzlich ist die §Y$mod_planet_jobs_slave_minerals_produces_mult$§! um §G+15%§! erhöht."
+tr_plentiful_malice_4_desc:0 "§Y$MOD_COUNTRY_MAX_RIVALRIES$§! erhöht um §G+4§!. Zusätzlich ist die §Y$mod_planet_miners_minerals_produces_mult$§! um §G+15%§! erhöht."
 tr_plentiful_malice_4_delayed:1 "Viel Feind, viel Ehr. Während unsere Regierung getrieben ist, die Zahl unserer Feinde zu vergrößern, werden in den Minen die Sklaven weiter angetrieben, noch mehr £minerals §YMineralien§! zu sammeln."
  
 tr_plentiful_malice_5:0 "Boshaftigkeit"
-tr_plentiful_malice_5_desc:2 "Die £happiness §Y$MOD_POP_HAPPINESS$§! von §YSlaven§! auf kürzlich eroberten Planeten ist nicht mehr vom Zustand §Y$pop_recently_conquered$§! negativ betroffen. Zusätzlich haben wir Zugriff auf ein §Y$building_plentiful_traditions_advanced_slave_processing$§!. \n\nBenötigt Technologie £society£ §M$tech_neural_implants$§!."
+tr_plentiful_malice_5_desc:2 "Wir haben Zugriff auf ein §Y$building_plentiful_traditions_advanced_slave_processing$§!.
+
+Benötigt Technologie £society£ §M$tech_neural_implants$§!."
 tr_plentiful_malice_5_delayed:1 "Bösartige Handlungen, gelegentlich unterbrochen von Boshaftigkeit."
 
 sm_orbital_refinery_station:0 "Erzverarbeitungsanlage"
@@ -471,7 +478,6 @@ sm_orbital_refinery_station:0 "Erzverarbeitungsanlage"
 tech_plentiful_traditions_orbital_r_s:0 "Erzverarbeitungsanlage"
 tech_plentiful_traditions_orbital_r_s_desc:0 "In dieser Erzverarbeitungsanlage werden wesentliche Maßnahmen durchgeführt, um Erz in Legierungen zu verwandeln."
 
-modifier_plentiful_traditions_slave1:0 "Kein Ausweg"
 edict_plentiful_traditions_malicious_intent:0 "Bösartige Absicht"
 edict_plentiful_traditions_malicious_intent_desc:1 "Dieser Erlass erhöht unsere Entschlossenheit, mit der wir die Schwäche unserer größten Feinde offenbaren werden."
 
@@ -504,11 +510,7 @@ tank_army_plural:0 "Panzertruppen"
 tank_army_desc:0 "Eine Armee, die schnell zuschlägt und den Gegner in gigantischen Zangenbewegungen umschließen kann, besteht fast vollständig aus mechanisierten Truppen, idealerweise Hauptkampfpanzer in Verbindung mit Schützenpanzern und schnellen Hilfstruppen."
 tank_army_troop_limit_tooltip:0 "Nur Personen mit außergewöhnlichen Fähigkeiten dürfen in der Panzertruppe kämpfen, was bedeutet, dass wir nur eine begrenzte Anzahl dieser Armeen gleichzeitig einsetzen können."
 
-plentiful_traditions_malice_activate:0 "§HNiedertracht:§! Sklavenkomplex aktiviert"
-plentiful_traditions_malice_activate_desc:1 "Die Sklaven dieses Planeten werden ihrer Bestimmung angepasst (Subspezies). Bestehende Traits werden entsprechend der neuen Bedarfe hergestellt bzw. reduziert."
 
-plentiful_traditions_malice_deactivate:0 "§HNiedertracht:§! Sklavenkomplex deaktiviert"
-plentiful_traditions_malice_deactivate_desc:1 "Die Sklaven dieses Planeten werden wieder ihrer natürlichen Ordnung unterstellt (Subspezies aufgelöst)."
 
 #####################
 # ASPIRATION
@@ -1385,9 +1387,6 @@ tooltip_plentiful_traditions_total_assimilation:1 "$ap_total_assimilation_desc$"
 total_assimilation:1 "Wir können weitere Spezies der unseren hinzufügen (solange sie nicht als Nahrungsquelle dienen).\n\n Zusätzlich erhalten unsere Kapitalgebäude auf der §YHeimatwelt§! und in §Y$pc_hive$§!-Welten eine §P$job_queen$§! und die Möglichkeit, jeweils zwei §T$building_cocoon_assembly_plant$§!-Gebäude zu erstellen."
 ap_plentiful_traditions_mutagenesis_universalis:0 "Mutagenesis Universalis"
 ap_plentiful_traditions_mutagenesis_universalis_desc:0 "Die Kobali waren eine humanoide Spezies aus dem Delta-Quadranten. Ihre Fortpflanzungsmethode war einzigartig und ihr markantestes Merkmal: Sie vermehrten ihre Population, indem sie die verstorbenen Leichen anderer Spezies wiederbelebten und deren DNA veränderten, um sie in andere Kobali zu verwandeln."
-tooltip_plentiful_traditions_mutagenesis_universalis:0 "Eine neue Planetare Entscheidung ist nun auf den eigenen Welten möglich, die es erlaubt, Bevölkerungsanteile nach und nach gegen die Primärspezies auszutauschen."
-allow_decision_plentiful_traditions_mutagenesis_transformation:0 "§HNeue Entscheidung:§! Mutagenesis Universalis"
-describe_decision_plentiful_traditions_mutagenesis_transformation:0 "§EDies ist eine Entscheidung, die einen Teil unserer Nicht-Primärbevölkerung gegen unser Volk austauschen kann, idealerweise erst, wenn sie sterben.§!"
 ap_plentiful_traditions_stormtroopers:0 "Sturmtruppen"
 ap_plentiful_traditions_stormtroopers_desc:0 "Stoßtrupp ist eine Angriffsformation der Infanterie, die durch Umgliederung eines Infanteriezuges in eine Sturmgruppe und eine Deckungsgruppe gebildet wird. Entwickelt wurde sie durch die Sturmbataillone, als Angriffsform gegen Feindkräfte in offenen Feldbefestigungen. Heute wird diese Formation insbesondere im Orts- und Häuserkampf sowie im Waldkampf gegen einen Feind in Feldstellungen eingesetzt. Der Kampf im Stoßtruppverfahren erfordert eine intensive Ausbildung und hohe körperliche Leistungsfähigkeit aller eingesetzten Soldaten. Neben dem drillmäßigen Beherrschen von Standardsituationen muss jeder Soldat in der Lage sein, in die nächsthöhere Führungsebene zu wechseln, falls sein militärischer Führer während des Feuerkampfes ausfällt. Die Führer der einzelnen Sturmtrupps sind häufig Mannschaften."
 tooltip_plentiful_traditions_stormtroopers:0 "Wir können auf unserer Heimatwelt nun eine begrenzte Anzahl an Stoßtrupps (oder Cylonen für Maschinenimperien) und Panzertruppen bauen."
@@ -1550,12 +1549,6 @@ decision_plentiful_perks_feeding_desc:1 "Auf diesem Planeten werden den Kokon-Sp
 decision_plentiful_perks_coocon_extraction:0 "§HNeue Entscheidung:§! Neue Schwestern"
 decision_plentiful_perks_coocon_extraction_desc:1 "Nun können wir uns endlich dem Ziel widmen, das wir immer vor Augen hatten: Das niedere biologische Leben zu unserem assimilieren."
 
-modifier_mutagenesis_transformation:0 "Mutagenesis Universalis"
-modifier_mutagenesis_transformation_desc:1 "Dies ist eine Entscheidung, die einen Teil unserer Nicht-Primärbevölkerung gegen unser Volk austauschen kann, idealerweise erst, wenn sie sterben."
-plentiful_traditions_mutagenesis_transformation:0 "§HMutagenesis Universalis§!"
-plentiful_traditions_mutagenesis_transformation_desc:1 "Dies ist eine Entscheidung, die einen Teil unserer Nicht-Primärbevölkerung gegen unser Volk austauschen kann, idealerweise erst, wenn sie sterben."
-end_plentiful_traditions_mutagenesis_transformation:0 "§HNeue Entscheidung:§! Mutagenesis Universalis beenden"
-end_plentiful_traditions_mutagenesis_transformation_desc:1 "Die Kampagne zur Umvolkung wird (vorerst) beendet."
 
 
 ################################################################

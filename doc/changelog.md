@@ -2,6 +2,44 @@
 
 Date: 2026-10-04
 
+- Added `map/setup_scenarios/{tiny,small,medium,large,huge}.txt` from Plentiful
+  Traditions. They are identical to vanilla 4.5 except for higher
+  `fallen_empire_max` and `marauder_empire_max` (tiny 2/2, small 4/4, medium 6/4,
+  large 8/6, huge 8/6; vanilla 1/1, 2/2, 3/2, 4/3, 6/3).
+- Removed all Malice and Mutagenesis events (`plentiful_traditions_malice.*`,
+  `plentiful_traditions_mutagenesis.*`) and everything that existed only for them:
+  - Deleted `events/plentiful_traditions_malice_events.txt` and
+    `events/plentiful_traditions_mutagenesis.txt`.
+  - Removed their `on_actions` hooks (`on_monthly_pulse_country`, `on_purge_complete`,
+    and the `on_pop_enslaved` and `on_pop_emancipated` blocks, which only held them).
+  - Removed the `plentiful_traditions_mutagenesis_transformation` decision pair, the
+    `modifier_mutagenesis_transformation` and `modifier_plentiful_traditions_slave1`
+    static modifiers, the unused `pm_mutagenesis_transformation.dds` icon and their
+    localisation keys in all seven languages.
+  - The Malice and Mutagenesis traditions, categories, agendas and the Mutagenesis
+    Universalis ascension perk are kept; they run on their own modifiers.
+- Malice tradition descriptions now match what the script does (all seven languages):
+  - Adoption lists only the +50% insult efficiency (the slave happiness and consumer
+    goods bonuses came from the removed events).
+  - Spite no longer promises the removed recently-conquered effect.
+- Reworked Malice traditions that had lost their slave-specific effects (the old
+  `pop_cat_slave_*` and `planet_jobs_slave_*` modifiers are gone in 4.x), using
+  modifiers vanilla 4.5 still uses:
+  - Despair: slave happiness +20% and slave political power -25% (was an empty node).
+  - Dread: slave job efficiency +10% (`pop_slave_bonus_workforce_mult`) instead of
+    +10% on every planet job.
+  - Wrath: miners' minerals +15% (`planet_miners_minerals_produces_mult`) instead of
+    every mineral job; rivalries +4 unchanged.
+  - Finish text lists the refinery module's real effects (alloys, planet jobs +5%,
+    station gatherers +10%).
+  - German adoption text moved from the unused `_adopt_effect` key to `_adopt_desc`;
+    removed the unused "Slave Complex activated/deactivated" keys.
+- `common/defines/zz_sp_defines.txt`: added `MAX_PLANET_SUBJECT_HOLDING_BUILDING_SLOTS = 5`
+  (vanilla 4) from the updated Plentiful Traditions defines, which its
+  subject-holdings agreement terms expect.
+- `tools/stellarisplus-refresh-credits-dates.py`: the script now reads the existing
+  `Last updated` date, so `--check` no longer reports every entry as stale, and it
+  never moves a date backwards.
 - Plentiful Traditions updated to the 2026-10-04 upstream (v4.5):
   - Taken from upstream where the integrated copy was unchanged: eight event
     files, the agreement term values, the ascension-perk and persiancats sprite

@@ -35,6 +35,8 @@ NGraphics = {
 
 # === merged from plentiful_traditions_defines.txt ===
 	NGameplay = {
+		MAX_PLANET_SUBJECT_HOLDING_BUILDING_SLOTS = 5	# vanilla 4; Plentiful Traditions' subject-holdings agreement terms expect 5
+
 		ASCENSION_PERKS_SLOTS = 48
 
 		EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.002	# Per empire size above base #0.006
