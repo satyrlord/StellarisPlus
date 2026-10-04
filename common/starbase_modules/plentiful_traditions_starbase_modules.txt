@@ -25,7 +25,6 @@ orbital_fracking_cannon = {
 	
 	orbit_modifier = {
 		planet_jobs_minerals_produces_mult = 0.05
-		station_gatherers_minerals_produces_mult = 0.1
 	}
 	
 	system_modifier = {
@@ -63,7 +62,6 @@ orbital_trading_beacon = {
 	
 	orbit_modifier = {
 		planet_jobs_energy_produces_mult = 0.05
-		station_gatherers_energy_produces_mult = 0.1
 	}
 	
 	system_modifier = {
@@ -99,7 +97,6 @@ orbital_fertilizer_array = {
 	
 	orbit_modifier = {
 		planet_jobs_food_produces_mult = 0.05
-		station_gatherers_food_produces_mult = 0.1
 	}
 	
 	system_modifier = {
@@ -137,7 +134,6 @@ orbital_refinery_station = {
 	
 	orbit_modifier = {
 		planet_jobs_alloys_produces_mult = 0.05
-		station_gatherers_alloys_produces_mult = 0.1
 	}
 	
 	system_modifier = {
@@ -176,7 +172,6 @@ orbital_craftwork_headquarters = {
 	
 	orbit_modifier = {
 		planet_jobs_consumer_goods_produces_mult = 0.05
-		station_gatherers_consumer_goods_produces_mult = 0.1
 	}
 	
 	system_modifier = {

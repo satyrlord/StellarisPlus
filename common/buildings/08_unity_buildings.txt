@@ -658,18 +658,6 @@ building_bureaucratic_3 = {
 		job_politician_add = @building_static_jobs_low
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner.federation
-			owner = {
-				federation = {
-					has_tradition = tr_plentiful_aspiration_3
-				}
-			}
-		}
-		job_politician_add = @building_static_jobs_low
-	}
-
 	prerequisites = {
 		"tech_galactic_bureaucracy"
 	}

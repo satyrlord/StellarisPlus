@@ -444,14 +444,10 @@ tr_plentiful_malice_adopt:0 "Malice Traditions"
 tr_plentiful_malice_adopt_desc:0 "§Y$MOD_COUNTRY_INSULT_EFFICIENCY$§! increased by §G+50%§!."
 
 tr_plentiful_malice_finish:0 "Malice Traditions Finished"
-tr_plentiful_malice_finish_desc:1 "§HUnlocks Edict:§! §YMalicious Intent§!. This edict increases our §Y$mod_damage_vs_country_type_fallen_empire_mult$§! and §Y$mod_damage_vs_country_type_awakened_fallen_empire_mult$§! by §G+15%§!.
-
-§HUnlocks Spaceport Module:§! $sm_orbital_refinery_station$, a spaceport module that produces £alloys §YAlloys§!, increases the Alloys produced by planet jobs by §G+5%§! and by station gatherers by §G+10%§! in its orbit and system.
-
-"
+tr_plentiful_malice_finish_desc:1 "§HUnlocks Edict:§! §YMalicious Intent§!. This edict increases our §Y$mod_damage_vs_country_type_fallen_empire_mult$§! and §Y$mod_damage_vs_country_type_awakened_fallen_empire_mult$§! by §G+15%§!.\n\n§HUnlocks Spaceport Module:§! $sm_orbital_refinery_station$, a spaceport module that produces £alloys §YAlloys§!, increases the Alloys produced by planet jobs by §G+5%§! in its orbit and system, and by station gatherers by §G+10%§! in its system.\n\n"
  
 tr_plentiful_malice_1:0 "Despair"
-tr_plentiful_malice_1_desc:0 "§Y$mod_pop_slave_happiness$§! increased by §G+20%§!. §Y$mod_pop_slave_political_power$§! decreased by §R-25%§!."
+tr_plentiful_malice_1_desc:0 "Our slaves are resigned to their fate: they are happier, but have no voice."
 tr_plentiful_malice_1_delayed:0 "Even our slaves are without hope. How exhilarating!"
  
 tr_plentiful_malice_2:0 "Iniquity"
@@ -459,7 +455,7 @@ tr_plentiful_malice_2_desc:0 "§Y$MOD_SPY_NETWORK_LEVELS_ADD$§! increased by §
 tr_plentiful_malice_2_delayed:0 "The screams of our rivals will be heard loudly, even in space."
  
 tr_plentiful_malice_3:0 "Dread"
-tr_plentiful_malice_3_desc:0 "§Y$mod_pop_slave_bonus_workforce_mult$§! increased by §G+10%§!."
+tr_plentiful_malice_3_desc:0 "Fear drives our slaves to work harder."
 tr_plentiful_malice_3_delayed:0 "Our slaves seem to be working themselves to death, but why? Death is only a waste of good suffering."
  
 tr_plentiful_malice_4:0 "Wrath"
@@ -467,9 +463,7 @@ tr_plentiful_malice_4_desc:0 "§Y$MOD_COUNTRY_MAX_RIVALRIES$§! increased by §G
 tr_plentiful_malice_4_delayed:0 "We'll read their pain slowly, page by page. Much enemy, much honor. While our government is driven to increase the number of our enemies, the mines continue to drive the slaves to collect more £minerals §Yminerals§!."
  
 tr_plentiful_malice_5:0 "Spite"
-tr_plentiful_malice_5_desc:2 "We have access to the §Y$building_plentiful_traditions_advanced_slave_processing$§!.
-
-Requires technology £society£ §M$tech_neural_implants$§!."
+tr_plentiful_malice_5_desc:2 "We have access to the §Y$building_plentiful_traditions_advanced_slave_processing$§!.\n\nRequires technology £society£ §M$tech_neural_implants$§!."
 tr_plentiful_malice_5_delayed:0 "Malovolent actions, interrupted occasionally by spite."
 
 sm_orbital_refinery_station:0 "Refinery Station"

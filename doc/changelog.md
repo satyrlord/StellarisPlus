@@ -2,6 +2,32 @@
 
 Date: 2026-10-04
 
+- Runtime log fixes from the first Stellaris 4.5.1 launch (1,612 `error.log` entries, 191 mod-owned and fixed):
+  - Technology: removed 35 `ai_update_type` lines from the Echoes of the Fallen fallen-empire tech
+    overrides in `common/technology/zz_sp_technology.txt` (not valid in 4.5) and restored the
+    `ai_weight` that `tech_dark_matter_deflector` lost from vanilla.
+  - Traditions: removed the stray `name` key in `tr_plentiful_mysticism_adopt`, the three
+    category-level `tradition_swap` blocks (4.5 only allows them inside traditions, and they pointed at
+    categories that do not exist), and gave Malice nodes 1 and 3 a `custom_tooltip_with_modifiers`
+    because their pop-category-only modifiers were reported as "Missing effects".
+  - Plentiful Traditions decisions and events: removed the `carrier_event` calls to
+    `plentiful_traditions_transformation_pedict.101-106,150`, which upstream never defines; repaired the
+    harvest chain (`event` is not an effect, now `planet_event`) and dropped its carrier duplicates, which
+    would have fired the destructive follow-up twice; turned `plentiful_traditions_aspiration.2` (a global
+    monthly event) from a planet event into a plain event; removed 20 empty `if`/`else_if` blocks
+    from the affinity, anguish, experimentalism and robotics events (no behaviour change).
+  - Starbase modules: removed the five `station_gatherers_*_produces_mult` entries from `orbit_modifier`
+    (not allowed there in 4.5; the `system_modifier` entries remain) and corrected the Malice finish text.
+  - `ap_plentiful_traditions_slave_complex` and `_slave_nation` are not defined by any perk, which
+    logged 90 errors. The checks were replaced by `always = no` and the four building modifiers that
+    could never fire were removed.
+  - `08_unity_buildings.txt`: removed a `has_tradition` check in federation scope (invalid in 4.5).
+  - Localisation: repaired `tr_plentiful_malice_finish_desc` and `_5_desc` in all seven languages (my
+    earlier rewrite had stored real line breaks instead of the escape sequence) and removed nine namelist keys that
+    contain spaces.
+  - Orphaned Matrix: `orphan_matrix_events.145` now uses the existing `GFX_evt_astral_rift_corridors`.
+  - Planet view: `pop_job_info` in `interface/zz_planet_view.gui` is now UI Overhaul Dynamic's 4.5
+    version, adding `pop_factions` and `wanted_factions` (and the shifted rows).
 - BPV Reborn Zone Single Row updated to the 2026-08-24 upstream in `interface/zz_planet_view.gui`
   (three-way merge against the absorbed copy; upstream is tagged v4.4.*, so this is untested on 4.5):
   - Took upstream's Arkship header, Arkship panel and management window, which adds

@@ -12,26 +12,7 @@ planet_event = {
 	
 	option = {
 		name = plentiful_traditions_harvest_pedict.1.a
-		hidden_effect = { event = { id = plentiful_traditions_harvest_pedict.4 days = 10 } }
-	}
-	option = {
-		name = plentiful_traditions_harvest_pedict.1.d
-	}
-}
-
-carrier_event = {
-    id = plentiful_traditions_harvest_pedict.101
-	title = "plentiful_traditions_harvest_pedict.1.title"
-	desc = "plentiful_traditions_harvest_pedict.1.desc"
-	picture = GFX_evt_molten
-	show_sound = event_solar_fusion
-	location = ROOT
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = plentiful_traditions_harvest_pedict.1.a
-		hidden_effect = { event = { id = plentiful_traditions_harvest_pedict.4 days = 10 } }
+		hidden_effect = { planet_event = { id = plentiful_traditions_harvest_pedict.4 days = 10 } }
 	}
 	option = {
 		name = plentiful_traditions_harvest_pedict.1.d
@@ -50,26 +31,7 @@ planet_event = {
 	
 	option = {
 		name = plentiful_traditions_harvest_pedict.1.b
-		hidden_effect = { event = { id = plentiful_traditions_harvest_pedict.5 days = 10 } }
-	}
-	option = {
-		name = plentiful_traditions_harvest_pedict.1.d
-	}
-}
-
-carrier_event = {
-    id = plentiful_traditions_harvest_pedict.102
-	title = "plentiful_traditions_harvest_pedict.1.title"
-	desc = "plentiful_traditions_harvest_pedict.1.desc"
-	picture = GFX_evt_molten
-	show_sound = event_solar_fusion
-	location = ROOT
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = plentiful_traditions_harvest_pedict.1.b
-		hidden_effect = { event = { id = plentiful_traditions_harvest_pedict.5 days = 10 } }
+		hidden_effect = { planet_event = { id = plentiful_traditions_harvest_pedict.5 days = 10 } }
 	}
 	option = {
 		name = plentiful_traditions_harvest_pedict.1.d
@@ -88,26 +50,7 @@ planet_event = {
 	
 	option = {
 		name = plentiful_traditions_harvest_pedict.1.c
-		hidden_effect = { event = { id = plentiful_traditions_harvest_pedict.6 days = 10 } }
-	}
-	option = {
-		name = plentiful_traditions_harvest_pedict.1.d
-	}
-}
-
-carrier_event = {
-    id = plentiful_traditions_harvest_pedict.103
-	title = "plentiful_traditions_harvest_pedict.1.title"
-	desc = "plentiful_traditions_harvest_pedict.1.desc"
-	picture = GFX_evt_molten
-	show_sound = event_solar_fusion
-	location = ROOT
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = plentiful_traditions_harvest_pedict.1.c
-		hidden_effect = { event = { id = plentiful_traditions_harvest_pedict.6 days = 10 } }
+		hidden_effect = { planet_event = { id = plentiful_traditions_harvest_pedict.6 days = 10 } }
 	}
 	option = {
 		name = plentiful_traditions_harvest_pedict.1.d

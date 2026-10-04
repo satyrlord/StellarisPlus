@@ -335,13 +335,13 @@ can_take_servant_job = {
 is_slave_complex_possible = {
 	is_domestic_robot = no	
 	is_enslaved = yes
-	owner = { has_ascension_perk = ap_plentiful_traditions_slave_complex }	
+	always = no # ap_plentiful_traditions_slave_complex is not defined by any perk	
 	NOT = { has_slavery_type = { type = slavery_livestock } }
 	NOT = { has_slavery_type = { type = slavery_matrix } }	
 }
 
 is_pt_slaver = {
-	has_ascension_perk = ap_plentiful_traditions_slave_nation
+	always = no # ap_plentiful_traditions_slave_nation is not defined by any perk
 }
 
 specialist_job_check_trigger = {

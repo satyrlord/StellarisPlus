@@ -838,9 +838,6 @@ plentiful_traditions_harvest_erupt = {
 			planet_event = {
 				id = plentiful_traditions_harvest_pedict.3
 			}
-			carrier_event = {
-				id = plentiful_traditions_harvest_pedict.103
-			}
 			break = yes
 		}
 		if = {
@@ -848,18 +845,12 @@ plentiful_traditions_harvest_erupt = {
 			planet_event = {
 				id = plentiful_traditions_harvest_pedict.2
 			}
-			carrier_event = {
-				id = plentiful_traditions_harvest_pedict.102
-			}
 			break = yes
 		}
 		if = {
 			limit = { planet_size < 99 }
 			planet_event = {
 				id = plentiful_traditions_harvest_pedict.1
-			}
-			carrier_event = {
-				id = plentiful_traditions_harvest_pedict.101
 			}
 			break = yes
 		}
@@ -1462,9 +1453,6 @@ plentiful_traditions_energy_to_minerals = {
 		planet_event = {
 			id = plentiful_traditions_transformation_pedict.1
 		}
-		carrier_event = {
-				id = plentiful_traditions_transformation_pedict.101
-		}
 
 	}	
 
@@ -1512,9 +1500,6 @@ plentiful_traditions_energy_to_food = {
 		planet_event = {
 			id = plentiful_traditions_transformation_pedict.2
 		}
-		carrier_event = {
-				id = plentiful_traditions_transformation_pedict.102
-		}
 	}	
 
 	allow = {
@@ -1560,9 +1545,6 @@ plentiful_traditions_minerals_to_energy = {
 	effect = {
 		planet_event = {
 			id = plentiful_traditions_transformation_pedict.3
-		}
-		carrier_event = {
-				id = plentiful_traditions_transformation_pedict.103
 		}
 	}	
 
@@ -1610,9 +1592,6 @@ plentiful_traditions_minerals_to_food = {
 		planet_event = {
 			id = plentiful_traditions_transformation_pedict.4
 		}
-		carrier_event = {
-				id = plentiful_traditions_transformation_pedict.104
-		}
 	}	
 
 	allow = {
@@ -1658,9 +1637,6 @@ plentiful_traditions_food_to_minerals = {
 	effect = {
 		planet_event = {
 			id = plentiful_traditions_transformation_pedict.5
-		}
-		carrier_event = {
-				id = plentiful_traditions_transformation_pedict.105
 		}
 	}	
 
@@ -1708,9 +1684,6 @@ plentiful_traditions_food_to_energy = {
 		planet_event = {
 			id = plentiful_traditions_transformation_pedict.6
 		}
-		carrier_event = {
-				id = plentiful_traditions_transformation_pedict.106
-		}
 	}	
 
 	allow = {
@@ -1753,9 +1726,6 @@ plentiful_traditions_colony_destroyed = {
 		custom_tooltip = decision_colony_destroyed_effects
 		planet_event = {
 			id = plentiful_traditions_transformation_pedict.50
-		}
-		carrier_event = {
-				id = plentiful_traditions_transformation_pedict.150
 		}
 	}	
 

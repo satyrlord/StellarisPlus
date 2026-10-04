@@ -14,22 +14,10 @@ event = {
 				limit = {
 					is_at_war = no
 				}
-				if = {
-					limit = {
-						Not = {
-							has_modifier = modifier_plentiful_traditions_empathetic
-						}
-					}
-				}
 				add_modifier = {
 					modifier = "modifier_plentiful_traditions_empathetic"
 				}
 				else = {
-					if = {
-						limit = {
-							has_modifier = modifier_plentiful_traditions_empathetic
-						}
-					}
 					remove_modifier = "modifier_plentiful_traditions_empathetic"
 				}
 			}
@@ -560,22 +548,10 @@ event = {
 				limit = {
 					is_at_war = no
 				}
-				if = {
-					limit = {
-						Not = {
-							has_modifier = modifier_plentiful_traditions_pathfinder
-						}
-					}
-				}
 				add_modifier = {
 					modifier = "modifier_plentiful_traditions_pathfinder"
 				}
 				else = {
-					if = {
-						limit = {
-							has_modifier = modifier_plentiful_traditions_pathfinder
-						}
-					}
 					remove_modifier = "modifier_plentiful_traditions_pathfinder"
 				}
 			}

@@ -17,22 +17,10 @@ event = {
 				limit = {
 					is_at_war = no
 				}
-				if = {
-					limit = {
-						NOT = {
-							has_modifier = modifier_plentiful_traditions_undertaking_positive
-						}
-					}
-				}
 				add_modifier = {
 					modifier = "modifier_plentiful_traditions_undertaking_positive"
 				}
 				else = {
-					if = {
-						limit = {
-							has_modifier = modifier_plentiful_traditions_undertaking_positive
-						}
-					}
 					remove_modifier = "modifier_plentiful_traditions_undertaking_positive"
 				}
 			}
@@ -45,22 +33,10 @@ event = {
 				limit = {
 					is_at_war = yes
 				}
-				if = {
-					limit = {
-						Not = {
-							has_modifier = modifier_plentiful_traditions_undertaking_negative
-						}
-					}
-				}
 				add_modifier = {
 					modifier = "modifier_plentiful_traditions_undertaking_negative"
 				}
 				else = {
-					if = {
-						limit = {
-							has_modifier = modifier_plentiful_traditions_undertaking_negative
-						}
-					}
 					remove_modifier = "modifier_plentiful_traditions_undertaking_negative"
 				}
 			}

@@ -241,7 +241,7 @@ namespace = plentiful_traditions_aspiration
 #	}
 #}
 
-planet_event = {
+event = {
 	id = plentiful_traditions_aspiration.2
 	hide_window = yes
 	is_triggered_only = yes

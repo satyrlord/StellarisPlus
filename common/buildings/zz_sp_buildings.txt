@@ -1341,16 +1341,6 @@ triggered_planet_modifier = {
 	job_fe_archivist_add = 300
 }
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_plentiful_traditions_slave_complex }
-			has_global_flag = plentiful_perks_active
-		}
-		modifier = {
-			job_guinea_pigs_add = 200
-		}
-	}
 
 	country_modifier = {
 		country_scientist_cap_add = 1
@@ -1480,16 +1470,6 @@ triggered_planet_modifier = {
 }
 
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_plentiful_traditions_slave_complex }
-			has_global_flag = plentiful_perks_active
-		}
-		modifier = {
-			job_guinea_pigs_add = 100
-		}
-	}
 	
 	show_tech_unlock_if = { 
 		OR = {			
@@ -1608,16 +1588,6 @@ triggered_planet_modifier = {
 	#job_fe_archivist_add = 500
 }
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_plentiful_traditions_slave_complex }
-			has_global_flag = plentiful_perks_active
-		}
-		modifier = {
-			job_guinea_pigs_add = 100
-		}
-	}
 	
 	show_tech_unlock_if = { 
 		owner = {
@@ -1731,16 +1701,6 @@ triggered_planet_modifier = {
 	#job_fe_archivist_add = 500
 }
 	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_plentiful_traditions_slave_complex }
-			has_global_flag = plentiful_perks_active
-		}
-		modifier = {
-			job_guinea_pigs_add = 100
-		}
-	}
 	
 	show_tech_unlock_if = { 
 		owner = {
