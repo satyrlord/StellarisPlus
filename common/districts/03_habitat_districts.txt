@@ -13,11 +13,7 @@ district_hab_housing = {
 	exempt_from_ai_planet_specialization = yes
 	overlay_icon = GFX_district_government
 
-	zone_slots = {
-		slot_city_government
-		slot_habitat_01
-		slot_habitat_02
-	}
+	inline_script = { script = districts/BPV_district_slots GOVERNMENT = slot_city_government SLOT1 = slot_habitat_01 SLOT2 = slot_habitat_02 SLOT3 = slot_habitat_02 SLOT4 = slot_habitat_02 SLOT5 = slot_habitat_02 SLOT6 = slot_habitat_02 SLOT7 = slot_habitat_02 SLOT8 = slot_habitat_02 SLOT9 = slot_habitat_02 SLOT10 = slot_habitat_02 }
 
 	show_on_uncolonized = {
 		uses_district_set = habitat

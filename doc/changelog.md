@@ -2,6 +2,34 @@
 
 Date: 2026-10-04
 
+- BPV Reborn Zone Single Row updated to the 2026-08-24 upstream in `interface/zz_planet_view.gui`
+  (three-way merge against the absorbed copy; upstream is tagged v4.4.*, so this is untested on 4.5):
+  - Took upstream's Arkship header, Arkship panel and management window, which adds
+    `ARKSHIP_CONTROLS` (a child of UI Overhaul Dynamic's 4.5 `planet_view`) and a 4-column
+    slot layout. The old panel's `orbitals_background` is gone; UI Overhaul Dynamic does
+    not define it.
+  - Kept the local district-card positions that use `@district_card_title_x`,
+    `@district_card_title_y`, `@district_card_triggered_name_y` and
+    `@district_card_build_button_x`.
+  - New from upstream without conflict: the `decision_progress` bar,
+    `cancel_decisions_button`, the `holding_type_entry` and `holding_per_country_entry`
+    windows, `sidebar_list_height` 830 to 870 and `district_rows` 10 to 12. The
+    `@portrait_window_*` variables are now defined locally with the same values as
+    UI Overhaul Dynamic.
+  - Still missing against UI Overhaul Dynamic's window: `pop_factions` and `wanted_factions`.
+  - Not taken: `zzzz_bpvr_giga_gui_birch_districts_uiod.gui` (compatibility layer for a mod
+    that is not loaded here).
+- Restored BPV zone-slot support that had been lost from two districts, using the
+  same `districts/BPV_district_slots` line the BPVR More Building Slots upstream applies:
+  - `district_resort` in `common/districts/00_urban_districts.txt` (lost when the
+    absorbed BPV district files were replaced by the Plentiful Traditions copies).
+  - `district_hab_housing` in `common/districts/03_habitat_districts.txt` (same cause,
+    2026-03-22).
+  - Not restored: `district_crashed_slaver_ship`, which upstream no longer gives BPV
+    slots (it has a single zone).
+  - Re-indented the 10 `inline_script` slot lines in `00_urban_districts.txt` and
+    `04_ringworld_districts.txt` that the Plentiful Traditions update had left
+    flush-left.
 - Orphaned Matrix Origin updated to the 2026-08-17 upstream (v4.5 checked):
   - Taken from upstream where the integrated copy was unchanged: traits, concepts,
     system initializer, digsite events, four `.gfx` files, English and French
