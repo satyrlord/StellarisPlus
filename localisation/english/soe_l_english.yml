@@ -3,7 +3,7 @@
  soe_request_autonomy_requires_midgame:0 "Requires the mid-game year to have been reached."
  soe_request_autonomy_requires_no_wih:0 "Cannot be used during the War in Heaven."
  soe_request_autonomy_requires_fleet:0 "Requires §Y40k+§! total fleet power."
- soe_request_autonomy_requires_opinion:0 "Requires §YExcellent§! opinion from our Fallen Empire overlord."
+ soe_request_autonomy_requires_opinion:0 "Requires §YGreat§! opinion from our Fallen Empire overlord."
 
  decision_soe_request_autonomy:0 "Request Independence"
  decision_soe_request_autonomy_desc:0 "Send a petition to our elder empire overlord to release our civilization from their protection and recognize our independence."
@@ -28,19 +28,19 @@
  soe_parental_supervision_desc:0 "Many younger civilizations view our close ties to a Fallen Empire with suspicion and unease.\n\n§EOpinion from other empires: §R-25§!\n\nRemoved when we are no longer a Scion subject."
 
  opinion_soe_parental_supervision:0 "Fallen Empire Scion"
- opinion_soe_defied_spiritualist_ai_warning:0 "Defied Spiritualist Warning"
+ opinion_soe_defied_spiritualist_ai_warning:0 "Defied Spiritualist Guidance"
 
  soe.70.desc:0 "So this is what our faithful Scion chooses to do with the autonomy we granted you.\n\nWe do not know what failed during your development to lead your civilization down this path, but we had believed your people capable of rising above the arrogance and recklessness so common amongst the younger races. It would seem we were mistaken.\n\nAbandon this path, children, before you go too far."
  soe.70.a:0 "You no longer control our destiny."
 
- soe.90.desc:0 "Greetings. We suspected that your species possessed latent psionic potential, though even we did not expect such abilities to manifest so quickly.\n\nThe path your people now walk is one of both great promise and immense danger. Beyond the veil lies the Shroud — a realm that has consumed countless minds and civilizations throughout the long history of this galaxy.\n\nShould you choose to delve into its depths, ensure that you keep your wits about you."
+ soe.90.desc:0 "Greetings. We suspected that your species possessed latent psionic potential, though even we did not expect such abilities to manifest so quickly.\n\nThe path your people now walk is one of both great promise and immense danger. Beyond the veil lies the Shroud - a realm that has consumed countless minds and civilizations throughout the long history of this galaxy.\n\nShould you choose to delve into its depths, ensure that you keep your wits about you."
  soe.90.a:0 "We shall tread carefully."
  soe.90.a.tooltip:0 "Unity Gained: £unity£ §G3000§!"
 
  soe.91.desc:0 "Your recent advances in artificial intelligence and machine consciousness have not gone unnoticed.\n\nSynthetic intelligence is neither inherently dangerous nor inherently safe - it is a tool, no different from any other technology. Throughout our long history, we have witnessed both extraordinary progress and catastrophic failure born from its misuse.\n\nProceed carefully. Ensure that appropriate safeguards remain in place, and such technologies may yet serve your civilization well."
  soe.91.a:0 "We will proceed cautiously."
 
- soe.92.desc:0 "Your recent advances in machine consciousness have not gone unnoticed.\n\nSuch pursuits are abhorrent. Time and time again, the younger races have deluded themselves into believing they can grant consciousness to soulless machines without consequence.\n\nThe path you now tread is one of arrogance, heresy, and inevitable ruin. Abandon this pursuit, children — before you repeat the mistakes of countless others."
+ soe.92.desc:0 "Your recent advances in machine consciousness have not gone unnoticed.\n\nSuch pursuits are abhorrent. Time and time again, the younger races have deluded themselves into believing they can grant consciousness to soulless machines without consequence.\n\nThe path you now tread is one of arrogance, heresy, and inevitable ruin. Abandon this pursuit, children - before you repeat the mistakes of countless others."
  soe.92.a:0 "We shall reconsider this path."
  soe.92.b:0 "The benefits outweigh the risks."
  soe.92.b.tooltip:0 "§R-30§! Opinion from our Fallen Empire overlord"

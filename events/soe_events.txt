@@ -216,11 +216,11 @@ country_event = {
 	is_triggered_only = yes
 
 	picture_event_data = {
-		portrait = overlord
-		planet_background = overlord
-		graphical_culture = overlord
-		city_level = overlord
-		room = overlord.ruler
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master.ruler
 	}
 
 	immediate = {
@@ -244,11 +244,11 @@ country_event = {
 	is_triggered_only = yes
 
 	picture_event_data = {
-		portrait = overlord
-		planet_background = overlord
-		graphical_culture = overlord
-		city_level = overlord
-		room = overlord.ruler
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master.ruler
 	}
 
 	immediate = {
@@ -303,7 +303,7 @@ country_event = {
 	}
 }
 
-# Spiritualist FE overlord — Mind Over Matter ascension perk (delivery)
+# Spiritualist FE overlord — Psionics tradition adopted
 country_event = {
 	id = soe.90
 	title = TRANSMISSION
@@ -316,11 +316,11 @@ country_event = {
 	}
 
 	picture_event_data = {
-		portrait = overlord
-		planet_background = overlord
-		graphical_culture = overlord
-		city_level = overlord
-		room = overlord.ruler
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master.ruler
 	}
 
 	immediate = {
@@ -351,11 +351,11 @@ country_event = {
 	}
 
 	picture_event_data = {
-		portrait = overlord
-		planet_background = overlord
-		graphical_culture = overlord
-		city_level = overlord
-		room = overlord.ruler
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master.ruler
 	}
 
 	immediate = {
@@ -385,11 +385,11 @@ country_event = {
 	}
 
 	picture_event_data = {
-		portrait = overlord
-		planet_background = overlord
-		graphical_culture = overlord
-		city_level = overlord
-		room = overlord.ruler
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master.ruler
 	}
 
 	immediate = {
@@ -499,11 +499,11 @@ country_event = {
 	is_triggered_only = yes
 
 	picture_event_data = {
-		portrait = overlord
-		planet_background = overlord
-		graphical_culture = overlord
-		city_level = overlord
-		room = overlord.ruler
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master.ruler
 	}
 
 	immediate = {
@@ -526,11 +526,11 @@ country_event = {
 	is_triggered_only = yes
 
 	picture_event_data = {
-		portrait = overlord
-		planet_background = overlord
-		graphical_culture = overlord
-		city_level = overlord
-		room = overlord.ruler
+		portrait = event_target:scion_master
+		planet_background = event_target:scion_master
+		graphical_culture = event_target:scion_master
+		city_level = event_target:scion_master
+		room = event_target:scion_master.ruler
 	}
 
 	immediate = {
@@ -553,7 +553,6 @@ country_event = {
 # Overlord awakening
 #############################
 
-# on_country_type_changed — Root = country that changed type
 country_event = {
 	id = soe.100
 	hide_window = yes
@@ -901,57 +900,49 @@ country_event = {
 			limit = {
 				any_playable_country = {
 					soe_is_active_scion = yes
-					has_country_flag = soe_former_overlord@root
+					exists = overlord
+					overlord = {
+						has_country_flag = scion_master
+						is_country_type = awakened_fallen_empire
+						NOT = { is_same_value = root }
+					}
 				}
 			}
-			save_event_target_as = soe_wih_destroyed_overlord
-			soe_notify_scion_wih_fell_backup = yes
-		}
-		else = {
 			soe_notify_scion_wih_won = yes
 		}
 	}
 }
 
-# on_monthly_pulse — triggered by on_monthly_pulse_country; fallback for soe.100/soe.120 misfire
+# Monthly fallback — WiH annexation ends via end_war_effect / wg on_accept (no on_war_ended)
 country_event = {
 	id = soe.123
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		soe_eligible_for_wih_start_transmission = yes
+		soe_eligible_for_wih_won_transmission_backup = yes
 	}
 
 	immediate = {
-		set_country_flag = soe_wih_started_transmission_scheduled
-		set_country_flag = soe_wih_transmission_start
-		country_event = { id = soe.130 days = @soe_wih_start_transmission_delay_days }
+		soe_notify_scion_wih_won = yes
 	}
 }
 
+# Monthly fallback — overlord destroyed/annexed during WiH
 country_event = {
 	id = soe.124
 	hide_window = yes
 	is_triggered_only = yes
 
 	trigger = {
-		has_origin = origin_scion
-		is_ai = no
-		NOT = { has_country_flag = soe_overlord_awakening_transmission_fired }
-		exists = overlord
-		overlord = {
-			soe_is_awakened_scion_master = yes
-			soe_eligible_for_overlord_awakening_transmission = yes
-		}
+		soe_eligible_for_wih_fell_transmission_backup = yes
 	}
 
 	immediate = {
-		soe_fire_overlord_awakening_transmission = yes
+		soe_notify_scion_wih_fell_backup = yes
 	}
 }
 
-# WiH transmission — shared by start/won/fell variants
 country_event = {
 	id = soe.130
 	title = TRANSMISSION
@@ -959,18 +950,11 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		exists = overlord
-		overlord = {
-			soe_is_awakened_scion_master = yes
+		OR = {
+			soe_eligible_for_wih_start_transmission_delivery = yes
+			soe_eligible_for_wih_won_transmission_delivery = yes
+			soe_eligible_for_wih_fell_transmission_delivery = yes
 		}
-	}
-
-	picture_event_data = {
-		portrait = event_target:soe_overlord
-		planet_background = event_target:soe_overlord
-		graphical_culture = event_target:soe_overlord
-		city_level = event_target:soe_overlord
-		room = event_target:soe_overlord.ruler
 	}
 
 	desc = {
@@ -1003,14 +987,41 @@ country_event = {
 		}
 	}
 
+	picture_event_data = {
+		portrait = event_target:soe_overlord
+		planet_background = event_target:soe_overlord
+		graphical_culture = event_target:soe_overlord
+		city_level = event_target:soe_overlord
+		room = event_target:soe_overlord.ruler
+	}
+
 	immediate = {
-		soe_save_overlord_portrait_target = yes
+		if = {
+			limit = { has_country_flag = soe_wih_transmission_start }
+			set_country_flag = soe_wih_started_transmission_fired
+			soe_save_scion_master_portrait = yes
+			event_target:scion_master = { save_event_target_as = soe_overlord }
+		}
+		if = {
+			limit = { has_country_flag = soe_wih_transmission_won }
+			set_country_flag = soe_wih_overlord_won_transmission_fired
+			soe_save_scion_master_portrait = yes
+			event_target:scion_master = { save_event_target_as = soe_overlord }
+		}
+		if = {
+			limit = { has_country_flag = soe_wih_transmission_fell }
+			set_country_flag = soe_wih_overlord_fell_transmission_fired
+			soe_save_overlord_portrait_target = yes
+		}
 	}
 
 	option = {
 		name = soe.130.a
 		trigger = {
 			has_country_flag = soe_wih_transmission_start
+		}
+		hidden_effect = {
+			remove_country_flag = soe_wih_transmission_start
 		}
 	}
 
@@ -1019,12 +1030,18 @@ country_event = {
 		trigger = {
 			has_country_flag = soe_wih_transmission_start
 		}
+		hidden_effect = {
+			remove_country_flag = soe_wih_transmission_start
+		}
 	}
 
 	option = {
 		name = soe.130.a.won
 		trigger = {
 			has_country_flag = soe_wih_transmission_won
+		}
+		hidden_effect = {
+			remove_country_flag = soe_wih_transmission_won
 		}
 	}
 
@@ -1034,6 +1051,10 @@ country_event = {
 			has_country_flag = soe_wih_transmission_fell
 			has_country_flag = soe_wih_fell_overlord_mat
 		}
+		hidden_effect = {
+			remove_country_flag = soe_wih_transmission_fell
+			remove_country_flag = soe_wih_fell_overlord_mat
+		}
 	}
 
 	option = {
@@ -1041,6 +1062,10 @@ country_event = {
 		trigger = {
 			has_country_flag = soe_wih_transmission_fell
 			has_country_flag = soe_wih_fell_overlord_spi
+		}
+		hidden_effect = {
+			remove_country_flag = soe_wih_transmission_fell
+			remove_country_flag = soe_wih_fell_overlord_spi
 		}
 	}
 }

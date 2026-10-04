@@ -55,6 +55,7 @@ soe_eligible_for_tech_gift = {
 	soe_is_active_scion = yes
 	NOT = { has_country_flag = soe_gave_expanded_tech }
 	mid_game_years_passed >= @soe_tech_gift_midgame_years
+	has_technology = tech_mine_dark_matter
 	soe_has_fe_rare_tech_option = yes
 }
 
@@ -94,9 +95,10 @@ soe_eligible_for_mind_over_matter_transmission = {
 	has_origin = origin_scion
 	is_ai = no
 	soe_is_active_scion = yes
-	has_ascension_perk = ap_mind_over_matter
+	has_tradition = tr_psionics_adopt
 	soe_spiritualist_fe_overlord = yes
 	NOT = { has_country_flag = soe_mind_over_matter_transmission_fired }
+	NOT = { has_country_flag = soe_mind_over_matter_transmission_scheduled }
 }
 
 soe_materialist_fe_overlord = {
@@ -154,7 +156,7 @@ soe_eligible_for_mind_over_matter_transmission_delivery = {
 	has_origin = origin_scion
 	is_ai = no
 	soe_is_active_scion = yes
-	has_ascension_perk = ap_mind_over_matter
+	has_tradition = tr_psionics_adopt
 	soe_spiritualist_fe_overlord = yes
 }
 
@@ -201,25 +203,87 @@ soe_is_wih_active = {
 
 soe_is_wih_war = {
 	OR = {
-		any_war = {
-			using_war_goal = { type = wg_war_in_heaven owner = attacker }
-		}
-		any_war = {
-			using_war_goal = { type = wg_war_in_heaven owner = defender }
-		}
+		using_war_goal = { type = wg_war_in_heaven owner = attacker }
+		using_war_goal = { type = wg_war_in_heaven owner = defender }
 	}
 }
 
 soe_eligible_for_wih_start_transmission = {
-	has_origin = origin_scion
-	is_ai = no
 	soe_is_active_scion = yes
 	NOT = { has_country_flag = soe_wih_started_transmission_scheduled }
-	NOT = { has_country_flag = soe_wih_transmission_start }
+	soe_is_wih_active = yes
+	from = { soe_is_wih_war = yes }
 	exists = overlord
 	overlord = {
-		soe_is_awakened_scion_master = yes
-		soe_is_wih_war = yes
+		is_country_type = awakened_fallen_empire
+		has_country_flag = scion_master
+	}
+}
+
+soe_eligible_for_wih_start_transmission_delivery = {
+	has_country_flag = soe_wih_transmission_start
+	soe_is_active_scion = yes
+	soe_overlord_is_fallen_empire = yes
+	has_global_flag = war_in_heaven_ongoing
+	NOT = { has_country_flag = soe_wih_started_transmission_fired }
+}
+
+soe_eligible_for_wih_won_transmission_delivery = {
+	has_country_flag = soe_wih_transmission_won
+	soe_is_active_scion = yes
+	soe_overlord_is_fallen_empire = yes
+	NOT = { has_country_flag = soe_wih_overlord_won_transmission_fired }
+}
+
+# Fallback when WiH ends via total-war annexation (end_war_effect / on_accept — no on_war_ended)
+soe_eligible_for_wih_won_transmission_backup = {
+	has_global_flag = war_in_heaven_ended
+	soe_is_active_scion = yes
+	NOT = { has_country_flag = soe_wih_overlord_won_transmission_fired }
+	NOT = { has_country_flag = soe_wih_transmission_won }
+	exists = overlord
+	overlord = {
+		has_country_flag = scion_master
+		is_country_type = awakened_fallen_empire
+	}
+	NOT = {
+		any_country = {
+			is_country_type = awakened_fallen_empire
+			NOT = { has_country_flag = scion_master }
+		}
+	}
+}
+
+soe_eligible_for_wih_fell_transmission_delivery = {
+	has_country_flag = soe_wih_transmission_fell
+	has_origin = origin_scion
+	is_ai = no
+	NOT = { has_country_flag = soe_autonomy_granted }
+	NOT = { has_country_flag = soe_wih_overlord_fell_transmission_fired }
+	OR = {
+		has_country_flag = soe_wih_fell_overlord_mat
+		has_country_flag = soe_wih_fell_overlord_spi
+	}
+}
+
+# Fallback when overlord is destroyed/annexed before notify ran or delivery was blocked
+soe_eligible_for_wih_fell_transmission_backup = {
+	has_origin = origin_scion
+	is_ai = no
+	has_country_flag = soe_wih_started_transmission_fired
+	NOT = { has_country_flag = soe_autonomy_granted }
+	NOT = { has_country_flag = soe_wih_overlord_fell_transmission_fired }
+	NOT = { has_country_flag = soe_wih_transmission_fell }
+	NOT = { has_country_flag = soe_wih_transmission_won }
+	soe_is_wih_active = yes
+	NOT = {
+		any_country = {
+			has_country_flag = scion_master
+			OR = {
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+			}
+		}
 	}
 }
 

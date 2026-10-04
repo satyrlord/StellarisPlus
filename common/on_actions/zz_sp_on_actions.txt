@@ -80,12 +80,6 @@ on_tradition_picked = {
 	}
 }
 
-on_ascension_perk_picked = {
-	events = {
-		soe.90
-	}
-}
-
 on_country_type_changed = {
 	events = {
 		soe.100

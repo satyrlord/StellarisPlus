@@ -2429,7 +2429,7 @@ decision_soe_request_autonomy = {
 				overlord = {
 					opinion_level = {
 						who = prev
-						level >= excellent
+						level >= good
 					}
 				}
 			}

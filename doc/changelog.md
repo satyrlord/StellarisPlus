@@ -2,6 +2,20 @@
 
 Date: 2026-10-04
 
+- Scion Origin Expanded updated to upstream 1.3.1 (upstream commit 1cfedf4):
+  - `events/soe_events.txt`, `common/scripted_variables/soe_scripted_variables.txt`
+    and `localisation/english/soe_l_english.yml` replaced with the upstream
+    versions: War in Heaven transmission rework, gift balance changes
+    (fleet gift 10 to 20 years, tech gift 40 to 45) and text fixes.
+  - Merged blocks updated in `zz_sp_scripted_triggers.txt` (Mind over Matter
+    now keys on `tr_psionics_adopt`, War in Heaven checks) with five new
+    `soe_eligible_for_wih_*` triggers, and `decision_soe_request_autonomy` now
+    needs Good opinion instead of Excellent.
+  - Removed the `on_ascension_perk_picked` hook from `zz_sp_on_actions.txt`;
+    `soe.90` is now fired from the tradition event chain.
+  - Kept the existing `textureFile` casing in
+    `interface/soe_origin_eventpictures.gfx`.
+
 - Stellaris 4.5 compatibility fixes for stale copies of vanilla files:
   - `common/scripted_variables/07_scripted_variables_machine_age.txt`: refreshed
     from the updated Plentiful Traditions copy, restoring the 18
