@@ -2,6 +2,26 @@
 
 Date: 2026-10-04
 
+- BPVR More Building Slots 1.2.0 (read-only dry run, then a minimal port): added `common/inline_scripts/zones/` with the 28 vanilla
+  `shared_*_zone` scripts, each a vanilla 4.5 copy whose only change is `zone_building_slots_add = @BPV_ZONE_SLOT` (was `3`).
+  Everything else in 1.2.0 was deliberately not taken: our 24/6/4 presets, 10-slot district template, district and zone BPV lines are
+    unchanged; its subject-holding agreements use a modifier that does not exist in 4.5 and its district, zone and capital-building
+    copies are partly pre-4.5.
+- Combat computer overrides (`common/component_templates/zz_sp_component_templates.txt`, a `zz_sp_` override of vanilla `00_utilities_roles.txt` and `00_biogenesis_utilities.txt`):
+  - The vanilla 4.5 auto-design bug (`COMBAT_COMPUTER_DEFAULT` has no `upgrades_to` chain) is still present, so the fix stays.
+    The 14 "Component template key used multiple times" log lines are this intended override.
+  - Restored two 4.5 `potential` conditions our copies had lost: `NOT = { is_ship_size = paladin_ship }` on
+    `COMBAT_COMPUTER_DEFAULT` and `is_arkship_ship = no` on the seven bio combat computers.
+- Namelist localisation: added the ten leader-name keys the 4.5.1 log reported as missing (Chikako, Eija,
+  Getrelaudia, Kallio, Martutasios, Mazi, Mozgu, Thraevan, Ukkaissehs, Yamawaki).
+- Economic categories rebased onto vanilla 4.5 in `common/economic_categories/zz_sp_economic_categories.txt` (`zz_sp_` override of vanilla 00/01/02 files):
+  - 38 of the 41 vanilla-overriding categories were stale pre-4.5 copies (36 of them Plentiful Traditions' own)
+    that silently replaced the 4.5 parents, `modifier_category` lines and triggered modifiers; for example
+    `starbases` had lost its outpost cost modifier and `planet_telepaths` its inherited modifiers.
+  - Each is now the vanilla 4.5 definition plus only our additive `generate_add_modifiers` and
+    `generate_mult_modifiers` entries, so every modifier name the mod already used still exists. Six of them
+    (`planet_soldiers`, `planet_telepaths`, `planet_districts_cities`, `planet_entertainers`, `rivalries`,
+    `station_observers`) turned out to need no additions and now equal vanilla exactly.
 - Runtime log fixes from the first Stellaris 4.5.1 launch (1,612 `error.log` entries, 191 mod-owned and fixed):
   - Technology: removed 35 `ai_update_type` lines from the Echoes of the Fallen fallen-empire tech
     overrides in `common/technology/zz_sp_technology.txt` (not valid in 4.5) and restored the

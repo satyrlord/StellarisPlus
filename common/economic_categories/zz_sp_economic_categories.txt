@@ -164,15 +164,16 @@ planet_introspective_calculators = {
 # === merged from ~MZ_economic_categories_overrides.txt ===
 # === merged from ~MZ_economic_categories_overrides.txt ===
 planet_soldiers = {
-	parent = planet_jobs_worker
-	generate_add_modifiers = {
-		produces
-		upkeep
-	}
+	parent = planet_jobs_specialist
 	generate_mult_modifiers = {
 		produces
 		upkeep
 	}
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	modifier_category = colony
 }
 # === merged from category_fix.txt ===
 stations = {
@@ -183,28 +184,22 @@ stations = {
 
 	generate_mult_modifiers = {
 		produces
-		cost
 		upkeep
+		cost
 	}
+
+	parent = country
 	generate_add_modifiers = {
 		produces
 		cost
 		upkeep
 	}
-
-	parent = country
-	modifier_category = deposit #it applies to the planet
 }
 
 station_gatherers = {
 	parent = stations
 
 	generate_mult_modifiers = {
-		produces
-		cost
-		upkeep
-	}
-    generate_add_modifiers = {
 		produces
 		cost
 		upkeep
@@ -217,12 +212,7 @@ station_researchers = {
 
 	generate_mult_modifiers = {
 		produces
-        cost
-		upkeep
-	}
-    generate_add_modifiers = {
-		produces
-        cost
+		cost
 		upkeep
 	}
 	modifier_category = deposit #it applies to the planet
@@ -230,15 +220,16 @@ station_researchers = {
 
 planet_researchers = {
 	icon = "job_researcher"
-	parent = planet_jobs_productive
-	generate_add_modifiers = {
-		produces
-        upkeep
-	}
+	parent = planet_jobs_specialist
 	generate_mult_modifiers = {
 		produces
 		upkeep
 	}
+	generate_add_modifiers = {
+		upkeep
+		produces
+	}
+	modifier_category = colony
 }
 # === merged from plentiful_common_categories.txt ===
 country = {
@@ -248,7 +239,7 @@ country = {
 		produces
 		cost
 	}
-
+	#modifier category: economic_unit is fine
 	generate_add_modifiers = {
 		produces
 	}
@@ -260,7 +251,8 @@ country_base = {
 	generate_add_modifiers = {
 		produces
 	}
-	generate_mult_modifiers = {			
+	modifier_category = country
+	generate_mult_modifiers = {
 		produces
 	}
 }
@@ -273,9 +265,9 @@ edicts = {
 		food
 	}
 	generate_mult_modifiers = {
-		produces 
 		cost
 		upkeep
+		produces
 	}
 	modifier_category = country
 	add_unscaled_value_to_tooltip = yes
@@ -289,13 +281,11 @@ edicts = {
 rare_edicts = {
 	use_for_ai_budget = no
 	parent = edicts
-	use_for_ai_budget = yes
-	generate_mult_modifiers = {
-		produces 
+	generate_add_modifiers = {
+		produces
 		cost
 	}
-
-	generate_add_modifiers = {
+	generate_mult_modifiers = {
 		produces
 		cost
 	}
@@ -309,12 +299,11 @@ ship_edicts = {
 campaigns = {
 	use_for_ai_budget = no
 	parent = edicts
-	generate_mult_modifiers = {
-		produces 
+	generate_add_modifiers = {
+		produces
 		cost
 	}
-
-	generate_add_modifiers = {
+	generate_mult_modifiers = {
 		produces
 		cost
 	}
@@ -323,12 +312,11 @@ campaigns = {
 decisions = {
 	use_for_ai_budget = yes
 	parent = country
-	generate_mult_modifiers = {
-		produces 
+	generate_add_modifiers = {
+		produces
 		cost
 	}
-
-	generate_add_modifiers = {
+	generate_mult_modifiers = {
 		produces
 		cost
 	}
@@ -342,11 +330,11 @@ megastructures = {
 	}
 	parent = country
 	generate_mult_modifiers = {
-		produces 
 		cost
 		upkeep
+		produces
 	}
-
+	modifier_category = megastructure
 	generate_add_modifiers = {
 		produces
 		cost
@@ -355,22 +343,18 @@ megastructures = {
 
 megastructures_habitat = {
 	use_for_ai_budget = yes
-	ai_use_parent_for_resources_upkeep = {
-		energy
-		consumer_goods
-	}
 	parent = megastructures
 	generate_mult_modifiers = {
-		produces 
 		cost
+		upkeep
+		produces
 	}
-
+	modifier_category = megastructure
 	generate_add_modifiers = {
 		produces
 		cost
 		upkeep
 	}
-	modifier_category = megastructure
 }
 
 megastructures_grand_archive = {
@@ -383,18 +367,17 @@ megastructures_grand_archive = {
 }
 
 megastructures_gateways = {
-	parent = megastructures
 	use_for_ai_budget = yes
 	parent = megastructures
 	generate_mult_modifiers = {
-		produces
 		cost
+		produces
 	}
+	modifier_category = megastructure
 	generate_add_modifiers = {
 		upkeep
 		produces
 	}
-	modifier_category = megastructure
 }
 
 megastructures_hyper_relay = {
@@ -448,12 +431,33 @@ planet_organic_battery = {
 
 planet_telepaths = {
 	parent = planet_enforcers
-	generate_mult_modifiers = {
-		produces
-	}
-
+	modifier_category = colony
 	generate_add_modifiers = {
 		produces
+	}
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+	triggered_produces_modifier = {
+		key = planet_enforcers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
+	}
+	triggered_upkeep_modifier = {
+		key = planet_enforcers
+		modifier_types = {
+			add
+		}
+		trigger = {
+			always = yes
+		}
+		use_parent_icon = yes
 	}
 }
 
@@ -482,17 +486,17 @@ planets = {
 	use_for_ai_budget = yes
 	ai_use_parent_for_resources_upkeep = {
 		energy
+		consumer_goods
 	}
-	generate_mult_modifiers = {
-		produces
-	}	
 
 	hidden = yes
+	generate_mult_modifiers = {
+		produces
+	}
 }
 
 planet_buildings_strongholds = {
 	parent = planet_buildings
-
 	generate_mult_modifiers = {
 		cost
 	}
@@ -500,73 +504,66 @@ planet_buildings_strongholds = {
 
 planet_districts_cities = {
 	parent = planet_districts
-
-	generate_add_modifiers = {
-		produces
-	}
-
 	generate_mult_modifiers = {
 		cost
+	}
+	generate_add_modifiers = {
+		produces
 	}
 }
 
 planet_districts_industrial = {
 	parent = planet_districts
-
 	generate_mult_modifiers = {
 		cost
 	}
 }
 
 planet_districts_hab_energy = {
-	parent = planet_districts
-
+	parent = planet_districts_hab
 	generate_mult_modifiers = {
 		cost
 	}
 }
 
 planet_districts_hab_industrial = {
-	parent = planet_districts
+	parent = planet_districts_hab
 	generate_mult_modifiers = {
 		cost
 	}
 }
 
 planet_districts_hab_research = {
-	parent = planet_districts
-
+	parent = planet_districts_hab
 	generate_mult_modifiers = {
 		cost
 	}
 }
 
 planet_districts_hab_mining = {
-	parent = planet_districts
-
+	parent = planet_districts_hab
 	generate_mult_modifiers = {
 		cost
 	}
 }
 
 planet_districts_hab_trade = {
-	parent = planet_districts
-
+	parent = planet_districts_hab
 	generate_mult_modifiers = {
 		cost
 	}
 }
 
 planet_districts_hab_leisure = {
-	parent = planet_districts
-
+	parent = planet_districts_hab
 	generate_mult_modifiers = {
 		cost
 	}
 }
 
 planet_technician = {
-	parent = planet_jobs_productive
+	icon = "job_technician"
+	parent = planet_jobs_worker
 	generate_add_modifiers = {
 		produces
 		upkeep
@@ -575,13 +572,11 @@ planet_technician = {
 		produces
 		upkeep
 	}
+	modifier_category = colony
 }
 
 planet_culture_workers = {
-	parent = planet_jobs_productive
-	generate_mult_modifiers = {
-
-	}
+	parent = planet_bureaucrats
 	generate_add_modifiers = {
 		produces
 		upkeep
@@ -589,9 +584,7 @@ planet_culture_workers = {
 }
 
 planet_synapse_drones = {
-	parent = planet_jobs_productive
-	generate_mult_modifiers = {
-	}
+	parent = planet_bureaucrats
 	generate_add_modifiers = {
 		produces
 		upkeep
@@ -599,34 +592,42 @@ planet_synapse_drones = {
 }
 
 planet_entertainers = {
-	parent = planet_jobs
+	parent = planet_jobs_specialist
 	generate_add_modifiers = {
 		produces
+		upkeep
 	}
-}
-
-planet_doctors = {
-	parent = planet_jobs
-	generate_add_modifiers = {
+	generate_mult_modifiers = {
 		produces
 		upkeep
 	}
 }
 
+planet_doctors = {
+	parent = planet_jobs_specialist
+	generate_add_modifiers = {
+		produces
+		upkeep
+	}
+	generate_mult_modifiers = {
+		upkeep
+	#	produces
+	}
+	modifier_category = colony
+}
+
 rivalries = {
 	parent = diplomacy
-	generate_mult_modifiers = {
+	generate_add_modifiers = {
 		produces
 	}
-
-	generate_add_modifiers = {
+	generate_mult_modifiers = {
 		produces
 	}
 }
 
 ship_components = {
 	parent = ships
-	
 	generate_mult_modifiers = {
 		cost
 	}
@@ -634,21 +635,24 @@ ship_components = {
 
 station_observers = {
 	parent = stations
-	
+
 	generate_add_modifiers = {
+		produces
+	}
+	generate_mult_modifiers = {
 		produces
 	}
 }
 
 station_observer_missions = {
 	parent = station_observers
-	
 	generate_mult_modifiers = {
 		produces
 	}
 }
 
 starbases = {
+	parent = country
 	use_for_ai_budget = yes
 
 	generate_mult_modifiers = {
@@ -657,9 +661,24 @@ starbases = {
 	}
 	ai_use_parent_for_resources_upkeep = {
 		energy
+		trade
+		food
 	}
 
-	parent = country
+	triggered_cost_modifier = {
+		key = starbase_outpost
+		modifier_types = {
+			mult
+		}
+
+		trigger = {
+			is_scope_valid = yes #When called from ship designer the design is not valid yet.
+			OR = {
+				is_ship_size = starbase_outpost
+				is_ship_size = orbital_ring_tier_1
+			}
+		}
+	}
 }
 
 starbase_stations = {
@@ -695,7 +714,7 @@ starbase_stations = {
 }
 
 leader_generals = {
-	parent = leaders
+	parent = leader_commanders
 	generate_mult_modifiers = {
 		cost
 		upkeep
@@ -703,7 +722,7 @@ leader_generals = {
 }
 
 leader_governors = {
-	parent = leaders
+	parent = leader_officials
 	generate_mult_modifiers = {
 		cost
 		upkeep

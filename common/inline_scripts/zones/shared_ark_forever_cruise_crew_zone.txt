@@ -1,0 +1,65 @@
+# OVERRIDE: vanilla 4.5 copy; only zone_building_slots_add uses @BPV_ZONE_SLOT (BPVR More Building Slots).
+base_buildtime = @zone_buildtime
+
+potential = { # planet scope
+	hidden_trigger = {
+		owner? = {
+			is_wilderness_empire = no
+			has_origin = origin_forever_cruise
+			NOT = { has_country_flag = forever_cruise_over }
+		}
+	}
+}
+
+unlock = { # planet scope
+	hidden_trigger = {
+		owner? = {
+			is_wilderness_empire = no
+		}
+	}
+}
+
+resources = {
+	category = planet_zones
+	inline_script = {
+		script = buildings/nomadic_cost_switcher
+		REGULAR_RESOURCE = minerals
+		NOMADIC_RESOURCE = alloys
+		COST = @zone_cost
+		NOMADIC_COST_MULT = 0.5
+	}
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		owner? = {
+			is_gestalt = no
+		}
+	}
+	job_cruise_crew_overseer_add = 50
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		owner? = {
+			is_gestalt = yes
+		}
+	}
+	job_cruise_crew_overseer_drone_add = 50
+}
+
+included_building_sets = {
+	entertainment
+	ark_forever_cruise_crew
+	industrial
+}
+
+convert_to = {
+	zone_trade
+}
+
+planet_modifier = {
+	zone_building_slots_add = @BPV_ZONE_SLOT
+}
+
+ai_priority = 5

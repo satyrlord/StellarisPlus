@@ -26,6 +26,7 @@ utility_component_template = {
 			is_ship_class = shipclass_entropy_conduit
 			is_ship_size = juggernaut
 		}
+		NOT = { is_ship_size = paladin_ship }
 	}
 
 	show_tech_unlock_if = {
@@ -251,6 +252,7 @@ utility_component_template = {
 	upgrade_path = default
 	hidden = yes
 	potential = {
+		is_arkship_ship = no
 		from = {
 			country_uses_bio_ships = yes
 		}
@@ -286,6 +288,7 @@ utility_component_template = {
 	ship_behavior = "swarm"
 	upgrade_path = swarm
 	potential = {
+		is_arkship_ship = no
 		from = {
 			country_uses_bio_ships = yes
 		}
@@ -321,6 +324,7 @@ utility_component_template = {
 	ship_behavior = "picket"
 	upgrade_path = picket
 	potential = {
+		is_arkship_ship = no
 		from = {
 			country_uses_bio_ships = yes
 		}
@@ -356,6 +360,7 @@ utility_component_template = {
 	ship_behavior = "line"
 	upgrade_path = line
 	potential = {
+		is_arkship_ship = no
 		from = {
 			country_uses_bio_ships = yes
 		}
@@ -391,6 +396,7 @@ utility_component_template = {
 	ship_behavior = "artillery"
 	upgrade_path = artillery
 	potential = {
+		is_arkship_ship = no
 		from = {
 			country_uses_bio_ships = yes
 		}
@@ -426,6 +432,7 @@ utility_component_template = {
 	ship_behavior = "swarm"
 	upgrade_path = debuffer
 	potential = {
+		is_arkship_ship = no
 		from = {
 			country_uses_bio_ships = yes
 		}
@@ -461,6 +468,7 @@ utility_component_template = {
 	ship_behavior = "swarm"
 	upgrade_path = buffer
 	potential = {
+		is_arkship_ship = no
 		from = {
 			country_uses_bio_ships = yes
 		}
