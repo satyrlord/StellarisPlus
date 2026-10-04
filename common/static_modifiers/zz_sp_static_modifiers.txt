@@ -206,13 +206,6 @@ bureaucrat_jobs_bonus_workforce_mult = {
 	pop_introspective_calculator_bonus_workforce_mult = 1
 }
 
-everyone_but_dystopian_specialist_workforce_mult = {
-	custom_tooltip = everyone_but_dystopian_specialist_workforce_tt
-	pop_cat_worker_bonus_workforce_mult = 1
-	pop_cat_specialist_bonus_workforce_mult = 1
-	pop_cat_ruler_bonus_workforce_mult = 1
-}
-
 # === merged from orphan_matrix_modifiers.txt ===
 @stage_1_workforce_penalty = -0.33
 @stage_2_workforce_penalty = -0.50

@@ -82,7 +82,7 @@ Integrated Workshop mods:
   Author: cybrxkhan <https://steamcommunity.com/profiles/76561198030765209/myworkshopfiles/?appid=281990>
 
 - Hyper Relay - Thinner Hyperlanes (Workshop ID: 2951278683)
-  Last updated: 2026-06-19
+  Last updated: 2026-10-04
   Source: backup/2951278683/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=2951278683>
   Author: (see Workshop page)
@@ -118,7 +118,7 @@ Integrated Workshop mods:
   Author: (see Workshop page)
 
 - Orphaned Matrix Origin (Workshop ID: 3160178733)
-  Last updated: 2026-06-21
+  Last updated: 2026-10-04
   Source: backup/3160178733/
   Workshop: <https://steamcommunity.com/sharedfiles/filedetails/?id=3160178733>
   Author: Zefnar <https://steamcommunity.com/profiles/76561198047900754/myworkshopfiles/?appid=281990>

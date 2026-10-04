@@ -32,6 +32,9 @@ Date: 2026-10-04
     vanilla's `24_static_modifiers_jobs.txt` were stale 4.4 duplicates and were
     dropped so vanilla 4.5 applies (it adds ark harvester, cruise passenger and
     evaluator entries).
+  - Removed the unused `everyone_but_dystopian_specialist_workforce_mult` static
+    modifier (an old Orphaned Matrix copy that upstream and vanilla 4.5 no longer have)
+    and its compatibility localisation.
   - Kept local: the archaeology site `potential` and `visible` triggers (country
     scope, verified against the 4.4.6 log), the superset `has_precursor_intro`
     trigger, the origin event picture, and the Introspection Complex slot count.
@@ -72,6 +75,10 @@ Date: 2026-10-04
 - `common/defines/zz_sp_defines.txt`: added `MAX_PLANET_SUBJECT_HOLDING_BUILDING_SLOTS = 5`
   (vanilla 4) from the updated Plentiful Traditions defines, which its
   subject-holdings agreement terms expect.
+- `tools/credits_date_probes.json`: the Orphaned Matrix probe also matches "Orphan Matrix",
+  the spelling used in commit messages. Hyper Relay's credits date was set to 2026-10-04
+  after confirming its only game file (`HYPERLANE_THICKNESS_RELAY = 1.4`) already matches
+  the 2026-09-24 upstream; the refresh script never moves a date backwards, so it stays.
 - `tools/stellarisplus-refresh-credits-dates.py`: the script now reads the existing
   `Last updated` date, so `--check` no longer reports every entry as stale, and it
   never moves a date backwards.
