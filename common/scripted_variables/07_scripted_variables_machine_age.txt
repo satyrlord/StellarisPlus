@@ -48,3 +48,16 @@
 
 # Sanctuary of Toil - base resource production per worker job
 @sanctuary_of_toil_job_produces = 0.375
+
+# Dictatorial Alignment - effects by the ruler's leader class, and the shared base
+@cyber_collectivist_official_worker_output = 0.15
+@cyber_collectivist_commander_ship_fire_rate = 0.10
+@cyber_collectivist_commander_soldier_stability = 1
+@cyber_collectivist_scientist_research_speed = 0.10
+@cyber_collectivist_stability = 3
+@cyber_collectivist_edicts_upkeep = -0.25
+@cyber_collectivist_amenities_usage = 0.15
+@cyber_focus_ruler_workforce = 0.15
+@cyber_focus_specialist_workforce = 0.075
+@cyber_focus_worker_workforce = 0.10
+@cyber_focus_everyone_workforce = 0.05

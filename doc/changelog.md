@@ -1,5 +1,15 @@
 # StellarisPlus -- Changelog
 
+Date: 2026-10-09
+
+- Stellaris 4.5.2 compatibility, from the 2026-10-09 runtime log (1,512 `error.log` entries; the 191 fixed in the previous pass are gone):
+  - `common/scripted_variables/07_scripted_variables_machine_age.txt` (same-path override of vanilla) was rebased onto 4.5.2. It lacked the
+    eleven `@cyber_collectivist_*` and `@cyber_focus_*` variables 4.5.2 added, which broke vanilla's `00_authorities.txt` (15 "Malformed token"
+    errors). Our only change, `@max_tradition_trees = 24`, is kept.
+  - `common/buildings/01_pop_assembly_buildings.txt` (same-path override): `building_clone_vats` now uses vanilla 4.5.2's three
+    `output/bonus_pop_growth` inline scripts in place of the old paired modifiers. The Plentiful Traditions cost, upkeep and perk blocks are unchanged.
+  - Namelist localisation: added 47 more leader-name keys the log reported as missing. Three names containing spaces cannot be keys and were skipped.
+
 Date: 2026-10-04
 
 - BPVR More Building Slots 1.2.0 (read-only dry run, then a minimal port): added `common/inline_scripts/zones/` with the 28 vanilla
